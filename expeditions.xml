@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<expeditions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="expeditions.xsd">
+  <!--
+  Naming Conventions for the uniquename:
+  [Tier]_EXP_[GROUPTYPE]_[FACTION]_[NAME]
+  Tier: tier of this expedition (has to match selected expediton category)
+  Exp: place holder for when we add other expeditions, that aren't royal ones (like faction specific expeditions)
+  Grouptype: grouptype of this expedition (has to match selected expediton category)
+    STD - Standard (Solo, 1 person)
+    VET - Veteran (Group, 5 persons)
+    ELT - Elite (Raid, 10 persons)
+  Faction: Faction of the mobs used in this expedition (Heretic, Keeper, Undead, Morgana)
+  Name: unique name that shortly describes the expedition
+  -->
+  <!-- EXPEDITIONS TESTS FOR CODERS (don't remove) -->
+  <expedition uniquename="T1_TEST" cluster="MALTE" category="TEST" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXPEDITION_TITLE_TEST" introtext="@EXPEDITION_INTRO_TEST" extrotext="@EXPEDITION_EXTRO_TEST">
+      <step>
+        <killmob mobid="T3_MOB_DEMON_IMP_VETERAN" count="1" />
+      </step>
+      <step>
+        <killmob mobid="T3_MOB_DEMON_IMP_VETERAN" count="1" />
+      </step>
+    </mission>
+  </expedition>
+  <expedition uniquename="T2_TEST" cluster="MALTE" category="TEST2" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXPEDITION_TITLE_TEST" introtext="@EXPEDITION_INTRO_TEST" extrotext="@EXPEDITION_EXTRO_TEST">
+      <step>
+        <killmob mobid="T3_MOB_DEMON_IMP_VETERAN" count="2"/>
+      </step>
+      <step>
+        <killmob mobid="T3_MOB_DEMON_IMP_VETERAN" count="2"/>
+      </step>
+    </mission>
+  </expedition>
+  <expedition uniquename="T3_TEST" cluster="MALTE" category="TEST3" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXPEDITION_TITLE_TEST" introtext="@EXPEDITION_INTRO_TEST" extrotext="@EXPEDITION_EXTRO_TEST">
+      <step>
+        <killmob mobid="T3_MOB_DEMON_IMP_VETERAN" count="3"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <!-- STANDARD EXPEDITIONS -->
+
+  <expedition uniquename="T3_EXP_STD_HERETIC_MINE" cluster="Mine-SOLO_EXP_DL_T3_HER" category="T3_STANDARD" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T3_EXP_STD_HERETIC_MINE" introtext="@EXP_INTRO_T3_EXP_STD_HERETIC_MINE" extrotext="@EXP_EXTRO_T3_EXP_STD_HERETIC_MINE">
+      <step>
+        <killmob mobid="T3_MOB_EXP_HERETIC_ARCHER" count="5"/>
+        <killmob mobid="T3_MOB_EXP_HERETIC_MAGE" count="6"/>
+        <killmob mobid="T3_MOB_EXP_HERETIC_OVERSEER_BOSS" count="1" />
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T4_EXP_STD_UNDEAD_RECRUITMENT" cluster="RecruitmentOfTheDead-SOLO_EXP_SW_T4_UND" category="T4_STANDARD" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T4_EXP_STD_UNDEAD_RECRUITMENT" introtext="@EXP_INTRO_T4_EXP_STD_UNDEAD_RECRUITMENT" extrotext="@EXP_EXTRO_T4_EXP_STD_UNDEAD_RECRUITMENT">
+      <step>
+        <killmob mobid="T4_MOB_EXP_UNDEAD_TRASH_SKELETON" count="40"/>
+        <killmob mobid="T4_MOB_EXP_UNDEAD_MAGE" count="5"/>
+        <killmob mobid="T4_MOB_EXP_UNDEAD_MAGE_BOSS" count="1" />
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T4_EXP_STD_HERETIC_FISHYBUSINESS" cluster="FishyBusiness-SOLO_EXP_DL_T4_HER" category="T4_STANDARD" timeout="3600">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T4_EXP_STD_HERETIC_FISHYBUSINESS" introtext="@EXP_INTRO_T4_EXP_STD_HERETIC_FISHYBUSINESS" extrotext="@EXP_EXTRO_T4_EXP_STD_HERETIC_FISHYBUSINESS">
+      <step>
+        <killmob mobid="T4_MOB_EXP_HERETIC_TANK" count="5"/>
+        <killmob mobid="T4_MOB_EXP_HERETIC_GIBSON_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <!-- VETERAN EXPEDITIONS -->
+  <expedition uniquename="T4_EXP_VET_UNDEAD_RECRUITMENT" cluster="RecruitmentOfTheDead-GROUP_EXP_SW_T4_UND" category="T4_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T4_EXP_VET_UNDEAD_RECRUITMENT" introtext="@EXP_INTRO_T4_EXP_VET_UNDEAD_RECRUITMENT" extrotext="@EXP_EXTRO_T4_EXP_VET_UNDEAD_RECRUITMENT">
+      <step>
+        <killmob mobid="T4_MOB_EXP_UNDEAD_SOLDIER_VETERAN" count="8"/>
+        <killmob mobid="T4_MOB_EXP_UNDEAD_MAGE_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T4_EXP_VET_HERETIC_FISHYBUSINESS" cluster="FishyBusiness-GROUP_EXP_DL_T4_HER" category="T4_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T4_EXP_VET_HERETIC_FISHYBUSINESS" introtext="@EXP_INTRO_T4_EXP_VET_HERETIC_FISHYBUSINESS" extrotext="@EXP_EXTRO_T4_EXP_VET_HERETIC_FISHYBUSINESS">
+      <step>
+        <killmob mobid="T4_MOB_EXP_HERETIC_TANK_VETERAN" count="5"/>
+        <killmob mobid="T4_MOB_EXP_HERETIC_GIBSON_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T5_EXP_VET_KEEPER_STONEWARS" cluster="StoneWars-GROUP_EXP_HL_T5_KPR" category="T5_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T5_EXP_VET_KEEPER_STONEWARS" introtext="@EXP_INTRO_T5_EXP_VET_KEEPER_STONEWARS" extrotext="@EXP_EXTRO_T5_EXP_VET_KEEPER_STONEWARS">
+      <step>
+        <killmob mobid="T5_MOB_EXP_KEEPER_AXE_THROWER_VETERAN" count="5"/>
+        <killmob mobid="T5_MOB_EXP_KEEPER_CHIEFTAIN_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T5_EXP_VET_HERETIC_LUMBERCAMP" cluster="LumberCampGROUP_EXP_FR_T5_HER" category="T5_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T5_EXP_VET_HERETIC_LUMBERCAMP" introtext="@EXP_INTRO_T5_EXP_VET_HERETIC_LUMBERCAMP" extrotext="@EXP_EXTRO_T5_EXP_VET_HERETIC_LUMBERCAMP">
+      <step>
+        <killmob mobid="T5_MOB_EXP_HERETIC_MAGE_VETERAN" count="5"/>
+        <killmob mobid="T5_MOB_EXP_HERETIC_BALLISTA_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T5_EXP_VET_UNDEAD_SEWERSCRYPT" cluster="SewersMaintenance-GROUP_EXP_DL_T5_UND" category="T5_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T5_EXP_VET_UNDEAD_SEWERSCRYPT" introtext="@EXP_INTRO_T5_EXP_VET_UNDEAD_SEWERSCRYPT" extrotext="@EXP_EXTRO_T5_EXP_VET_UNDEAD_SEWERSCRYPT">
+      <step>
+        <killmob mobid="T5_MOB_EXP_UNDEAD_PULLER_VETERAN" count="3"/>
+        <killmob mobid="T5_MOB_EXP_UNDEAD_GHOUL_VETERAN_MINIBOSS" count="2"/>
+        <killmob mobid="T5_MOB_EXP_UNDEAD_GHOUL_BOSS_VETERAN" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T6_EXP_VET_KEEPER_MUSHROOM" cluster="MushroomCave-GROUP_EXP_DL_T6_KPR" category="T6_VETERAN" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T6_EXP_VET_KEEPER_MUSHROOM" introtext="@EXP_INTRO_T6_EXP_VET_KEEPER_MUSHROOM" extrotext="@EXP_EXTRO_T6_EXP_VET_KEEPER_MUSHROOM">
+      <step>
+        <killmob mobid="T6_MOB_EXP_KEEPER_BERSERK_VETERAN" count="8"/>
+        <killmob mobid="T6_MOB_EXP_KEEPER_SEER_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T6_EXP_VET_MORGANA_TRHEESISTERS" cluster="ThreeSisters_EXP_MN_T6_MOR" category="TEST" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T6_EXP_VET_MORGANA_THREESISTERS" introtext="@EXP_INTRO_T6_EXP_VET_MORGANA_THREESISTERS" extrotext="@EXP_EXTRO_T6_EXP_VET_MORGANA_THREESISTERS">
+      <step>
+        <killmob mobid="T6_MOB_EXP_MORGANA_SOLDIER_VETERAN" count="10"/>
+        <killmob mobid="T6_MOB_EXP_MORGANA_INFESTOR_VETERAN" count="4"/>
+        <killmob mobid="T6_MOB_EXP_MORGANA_CULTIST_VETERAN_BOSS_A" count="1"/>
+        <killmob mobid="T6_MOB_EXP_MORGANA_CULTIST_VETERAN_BOSS_B" count="1"/>
+        <killmob mobid="T6_MOB_EXP_MORGANA_CULTIST_VETERAN_BOSS_C" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+
+  <expedition uniquename="T6_EXP_VET_HERETIC_FISTFULOFSILVER" cluster="FistfulOfSilver_EXP_ST_T6_HER" category="TEST" timeout="7200">
+    <narrator namegenerator="ROYALARMY_T2" uiavatar="ROYALAGENTMILITARYLVL3" />
+    <mission title="@EXP_TITLE_T6_EXP_VET_HERETIC_FISTFULOFSILVER" introtext="@EXP_INTRO_T6_EXP_VET_HERETIC_FISTFULOFSILVER" extrotext="@EXP_EXTRO_T6_EXP_VET_HERETIC_FISTFULOFSILVER">
+      <step>
+        <killmob mobid="T6_MOB_EXP_HERETIC_THIEF_VETERAN" count="9"/>
+        <killmob mobid="T6_MOB_EXP_HERETIC_GRENADE_VETERAN_MINIBOSS" count="1"/>
+        <killmob mobid="T6_MOB_EXP_HERETIC_BRAWLER_VETERAN_MINIBOSS" count="1"/>
+        <killmob mobid="T6_MOB_EXP_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1"/>
+      </step>
+    </mission>
+  </expedition>
+</expeditions>

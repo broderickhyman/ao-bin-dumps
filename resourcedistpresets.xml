@@ -1,0 +1,5787 @@
+<presets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="resourcedistpresets.xsd">
+
+  <!-- HOW-TO:
+ 
+  Biome, Type and PvpRules accept lists of parameters now, like this:
+ 
+  <preset name="T4_SWAMP" tier="4" biome="Swamp,Steppe,Swamp" type="City,StartTown,World" pvprules="PvpDisabled,PvpForced,PvpAllowed", continent="Royal,Outlands", clusterquality="High,Medium,Low">
+  
+  type defaults to "World" if not specified
+  pvprules defaults to "PvpDisabled,PvpForced,PvpAllowed" if not specified
+
+ -->
+  <preset name="Debug" tier="1" biome="Default" type="Debug">
+    <high>
+      <mobcamp tier="1" amount="1" />
+    </high>
+    <medium>
+    </medium>
+    <low>
+    </low>
+  </preset>
+
+  <preset name="T3_FR_ROY_WLD" tier="3" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="3" amount="133" />
+      <rock tier="3" amount="66" />
+      <wood tier="3" amount="200" />
+    </high>
+    <medium>
+      <hide tier="2" amount="133" />
+      <rock tier="2" amount="66" />
+      <wood tier="2" amount="200" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_ROY_WLD" tier="3" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="3" amount="133" />
+      <rock tier="3" amount="200" />
+      <wood tier="3" amount="66" />
+    </high>
+    <medium>
+      <ore tier="2" amount="133" />
+      <rock tier="2" amount="200" />
+      <wood tier="2" amount="66" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_ROY_WLD" tier="3" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="3" amount="66" />
+      <ore tier="3" amount="200" />
+      <rock tier="3" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="66" />
+      <ore tier="2" amount="200" />
+      <rock tier="2" amount="133" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_ROY_WLD" tier="3" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="3" amount="133" />
+      <hide tier="3" amount="200" />
+      <ore tier="3" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="133" />
+      <hide tier="2" amount="200" />
+      <ore tier="2" amount="66" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_ROY_WLD" tier="3" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="3" amount="200" />
+      <hide tier="3" amount="66" />
+      <wood tier="3" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="200" />
+      <hide tier="2" amount="66" />
+      <wood tier="2" amount="133" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_ROY_HBS" tier="3" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="3" amount="133" />
+      <rock tier="3" amount="66" />
+      <wood tier="3" amount="200" />
+    </high>
+    <medium>
+      <hide tier="2" amount="133" />
+      <rock tier="2" amount="66" />
+      <wood tier="2" amount="200" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_ROY_HBS" tier="3" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="3" amount="133" />
+      <rock tier="3" amount="200" />
+      <wood tier="3" amount="66" />
+    </high>
+    <medium>
+      <ore tier="2" amount="133" />
+      <rock tier="2" amount="200" />
+      <wood tier="2" amount="66" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_ROY_HBS" tier="3" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="3" amount="66" />
+      <ore tier="3" amount="200" />
+      <rock tier="3" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="66" />
+      <ore tier="2" amount="200" />
+      <rock tier="2" amount="133" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_ROY_HBS" tier="3" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="3" amount="133" />
+      <hide tier="3" amount="200" />
+      <ore tier="3" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="133" />
+      <hide tier="2" amount="200" />
+      <ore tier="2" amount="66" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_ROY_HBS" tier="3" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="3" amount="200" />
+      <hide tier="3" amount="66" />
+      <wood tier="3" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="2" amount="200" />
+      <hide tier="2" amount="66" />
+      <wood tier="2" amount="133" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_ROY_PGX" tier="3" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <hide tier="3" amount="26" />
+      <rock tier="3" amount="13" />
+      <wood tier="3" amount="40" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_ROY_PGX" tier="3" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <ore tier="3" amount="26" />
+      <rock tier="3" amount="40" />
+      <wood tier="3" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_ROY_PGX" tier="3" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="3" amount="13" />
+      <ore tier="3" amount="40" />
+      <rock tier="3" amount="26" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_ROY_PGX" tier="3" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="3" amount="26" />
+      <hide tier="3" amount="40" />
+      <ore tier="3" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_ROY_PGX" tier="3" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="3" amount="40" />
+      <hide tier="3" amount="13" />
+      <wood tier="3" amount="26" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_WLD_HIG" tier="3" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_WLD_HIG" tier="3" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_WLD_HIG" tier="3" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_WLD_HIG" tier="3" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_WLD_HIG" tier="3" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_HBS_HIG" tier="3" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_HBS_HIG" tier="3" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_HBS_HIG" tier="3" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_HBS_HIG" tier="3" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_HBS_HIG" tier="3" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_PGX_HIG" tier="3" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_PGX_HIG" tier="3" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_PGX_HIG" tier="3" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_PGX_HIG" tier="3" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_PGX_HIG" tier="3" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_WLD_MED" tier="3" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_WLD_MED" tier="3" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_WLD_MED" tier="3" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_WLD_MED" tier="3" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_WLD_MED" tier="3" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_HBS_MED" tier="3" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_HBS_MED" tier="3" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_HBS_MED" tier="3" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_HBS_MED" tier="3" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_HBS_MED" tier="3" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_PGX_MED" tier="3" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_PGX_MED" tier="3" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_PGX_MED" tier="3" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_PGX_MED" tier="3" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_PGX_MED" tier="3" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_FR_OUT_WLD_LOW" tier="3" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T3_HL_OUT_WLD_LOW" tier="3" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T3_MT_OUT_WLD_LOW" tier="3" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T3_ST_OUT_WLD_LOW" tier="3" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T3_SW_OUT_WLD_LOW" tier="3" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T3_FR_OUT_HBS_LOW" tier="3" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T3_HL_OUT_HBS_LOW" tier="3" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T3_MT_OUT_HBS_LOW" tier="3" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T3_ST_OUT_HBS_LOW" tier="3" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T3_SW_OUT_HBS_LOW" tier="3" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T3_FR_OUT_PGX_LOW" tier="3" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_HL_OUT_PGX_LOW" tier="3" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_MT_OUT_PGX_LOW" tier="3" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_ST_OUT_PGX_LOW" tier="3" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T3_SW_OUT_PGX_LOW" tier="3" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="3" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_ROY_WLD" tier="4" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </high>
+    <medium>
+      <hide tier="3" amount="133" />
+      <rock tier="3" amount="66" />
+      <wood tier="3" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="2" amount="133" />
+      <rock tier="2" amount="66" />
+      <wood tier="2" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_ROY_WLD" tier="4" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </high>
+    <medium>
+      <ore tier="3" amount="133" />
+      <rock tier="3" amount="200" />
+      <wood tier="3" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="2" amount="133" />
+      <rock tier="2" amount="200" />
+      <wood tier="2" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_MT_ROY_WLD" tier="4" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="66" />
+      <ore tier="3" amount="200" />
+      <rock tier="3" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="66" />
+      <ore tier="2" amount="200" />
+      <rock tier="2" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_ST_ROY_WLD" tier="4" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="133" />
+      <hide tier="3" amount="200" />
+      <ore tier="3" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="133" />
+      <hide tier="2" amount="200" />
+      <ore tier="2" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_SW_ROY_WLD" tier="4" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="200" />
+      <hide tier="3" amount="66" />
+      <wood tier="3" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="200" />
+      <hide tier="2" amount="66" />
+      <wood tier="2" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_FR_ROY_HBS" tier="4" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </high>
+    <medium>
+      <hide tier="3" amount="133" />
+      <rock tier="3" amount="66" />
+      <wood tier="3" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="2" amount="133" />
+      <rock tier="2" amount="66" />
+      <wood tier="2" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_ROY_HBS" tier="4" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </high>
+    <medium>
+      <ore tier="3" amount="133" />
+      <rock tier="3" amount="200" />
+      <wood tier="3" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="2" amount="133" />
+      <rock tier="2" amount="200" />
+      <wood tier="2" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_MT_ROY_HBS" tier="4" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="66" />
+      <ore tier="3" amount="200" />
+      <rock tier="3" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="66" />
+      <ore tier="2" amount="200" />
+      <rock tier="2" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_ST_ROY_HBS" tier="4" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="133" />
+      <hide tier="3" amount="200" />
+      <ore tier="3" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="133" />
+      <hide tier="2" amount="200" />
+      <ore tier="2" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_SW_ROY_HBS" tier="4" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="3" amount="200" />
+      <hide tier="3" amount="66" />
+      <wood tier="3" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="2" amount="200" />
+      <hide tier="2" amount="66" />
+      <wood tier="2" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_FR_ROY_PGX" tier="4" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <hide tier="3" amount="26" />
+      <rock tier="3" amount="13" />
+      <wood tier="3" amount="40" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_ROY_PGX" tier="4" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <ore tier="3" amount="26" />
+      <rock tier="3" amount="40" />
+      <wood tier="3" amount="13" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_ROY_PGX" tier="4" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="3" amount="13" />
+      <ore tier="3" amount="40" />
+      <rock tier="3" amount="26" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_ROY_PGX" tier="4" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="3" amount="26" />
+      <hide tier="3" amount="40" />
+      <ore tier="3" amount="13" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_ROY_PGX" tier="4" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="3" amount="40" />
+      <hide tier="3" amount="13" />
+      <wood tier="3" amount="26" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_OUT_WLD_HIG" tier="4" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_OUT_WLD_HIG" tier="4" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_OUT_WLD_HIG" tier="4" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_OUT_WLD_HIG" tier="4" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_OUT_WLD_HIG" tier="4" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_OUT_HBS_HIG" tier="4" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_OUT_HBS_HIG" tier="4" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_OUT_HBS_HIG" tier="4" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_OUT_HBS_HIG" tier="4" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_OUT_HBS_HIG" tier="4" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_OUT_PGX_HIG" tier="4" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_OUT_PGX_HIG" tier="4" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_OUT_PGX_HIG" tier="4" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_OUT_PGX_HIG" tier="4" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_OUT_PGX_HIG" tier="4" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_OUT_WLD_MED" tier="4" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_OUT_WLD_MED" tier="4" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T4_MT_OUT_WLD_MED" tier="4" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T4_ST_OUT_WLD_MED" tier="4" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T4_SW_OUT_WLD_MED" tier="4" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T4_FR_OUT_HBS_MED" tier="4" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_OUT_HBS_MED" tier="4" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T4_MT_OUT_HBS_MED" tier="4" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T4_ST_OUT_HBS_MED" tier="4" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T4_SW_OUT_HBS_MED" tier="4" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T4_FR_OUT_PGX_MED" tier="4" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_OUT_PGX_MED" tier="4" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_OUT_PGX_MED" tier="4" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_OUT_PGX_MED" tier="4" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_OUT_PGX_MED" tier="4" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_FR_OUT_WLD_LOW" tier="4" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_OUT_WLD_LOW" tier="4" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_MT_OUT_WLD_LOW" tier="4" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_ST_OUT_WLD_LOW" tier="4" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_SW_OUT_WLD_LOW" tier="4" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_FR_OUT_HBS_LOW" tier="4" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T4_HL_OUT_HBS_LOW" tier="4" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_MT_OUT_HBS_LOW" tier="4" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_ST_OUT_HBS_LOW" tier="4" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T4_SW_OUT_HBS_LOW" tier="4" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T4_FR_OUT_PGX_LOW" tier="4" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_HL_OUT_PGX_LOW" tier="4" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_MT_OUT_PGX_LOW" tier="4" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_ST_OUT_PGX_LOW" tier="4" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T4_SW_OUT_PGX_LOW" tier="4" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="4" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_FR_ROY_WLD" tier="5" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="3" amount="86" />
+      <rock tier="3" amount="43" />
+      <wood tier="3" amount="130" />
+    </low>
+  </preset>
+  <preset name="T5_HL_ROY_WLD" tier="5" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="3" amount="86" />
+      <rock tier="3" amount="130" />
+      <wood tier="3" amount="43" />
+    </low>
+  </preset>
+  <preset name="T5_MT_ROY_WLD" tier="5" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="43" />
+      <ore tier="3" amount="130" />
+      <rock tier="3" amount="86" />
+    </low>
+  </preset>
+  <preset name="T5_ST_ROY_WLD" tier="5" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="86" />
+      <hide tier="3" amount="130" />
+      <ore tier="3" amount="43" />
+    </low>
+  </preset>
+  <preset name="T5_SW_ROY_WLD" tier="5" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="130" />
+      <hide tier="3" amount="43" />
+      <wood tier="3" amount="86" />
+    </low>
+  </preset>
+  <preset name="T5_FR_ROY_HBS" tier="5" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="3" amount="86" />
+      <rock tier="3" amount="43" />
+      <wood tier="3" amount="130" />
+    </low>
+  </preset>
+  <preset name="T5_HL_ROY_HBS" tier="5" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="3" amount="86" />
+      <rock tier="3" amount="130" />
+      <wood tier="3" amount="43" />
+    </low>
+  </preset>
+  <preset name="T5_MT_ROY_HBS" tier="5" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="43" />
+      <ore tier="3" amount="130" />
+      <rock tier="3" amount="86" />
+    </low>
+  </preset>
+  <preset name="T5_ST_ROY_HBS" tier="5" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="86" />
+      <hide tier="3" amount="130" />
+      <ore tier="3" amount="43" />
+    </low>
+  </preset>
+  <preset name="T5_SW_ROY_HBS" tier="5" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="130" />
+      <hide tier="3" amount="43" />
+      <wood tier="3" amount="86" />
+    </low>
+  </preset>
+  <preset name="T5_FR_ROY_PGX" tier="5" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="3" amount="13" />
+      <rock tier="3" amount="6" />
+      <wood tier="3" amount="20" />
+    </low>
+  </preset>
+  <preset name="T5_HL_ROY_PGX" tier="5" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="3" amount="13" />
+      <rock tier="3" amount="20" />
+      <wood tier="3" amount="6" />
+    </low>
+  </preset>
+  <preset name="T5_MT_ROY_PGX" tier="5" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="6" />
+      <ore tier="3" amount="20" />
+      <rock tier="3" amount="13" />
+    </low>
+  </preset>
+  <preset name="T5_ST_ROY_PGX" tier="5" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="13" />
+      <hide tier="3" amount="20" />
+      <ore tier="3" amount="6" />
+    </low>
+  </preset>
+  <preset name="T5_SW_ROY_PGX" tier="5" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="3" amount="20" />
+      <hide tier="3" amount="6" />
+      <wood tier="3" amount="13" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_WLD_HIG" tier="5" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_WLD_HIG" tier="5" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_WLD_HIG" tier="5" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_WLD_HIG" tier="5" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_WLD_HIG" tier="5" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_HBS_HIG" tier="5" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+    </high>
+    <medium>
+      <hide tier="4" amount="150" />
+      <rock tier="4" amount="75" />
+      <wood tier="4" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="116" />
+      <rock tier="4" amount="58" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_HBS_HIG" tier="5" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+    </high>
+    <medium>
+      <ore tier="4" amount="150" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="116" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_HBS_HIG" tier="5" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="75" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="58" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_HBS_HIG" tier="5" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="150" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="116" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="58" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_HBS_HIG" tier="5" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="75" />
+      <wood tier="4" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="58" />
+      <wood tier="4" amount="116" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_PGX_HIG" tier="5" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_HL_OUT_PGX_HIG" tier="5" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_MT_OUT_PGX_HIG" tier="5" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_ST_OUT_PGX_HIG" tier="5" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_SW_OUT_PGX_HIG" tier="5" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_FR_OUT_WLD_MED" tier="5" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_WLD_MED" tier="5" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_WLD_MED" tier="5" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_WLD_MED" tier="5" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_WLD_MED" tier="5" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_HBS_MED" tier="5" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_HBS_MED" tier="5" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_HBS_MED" tier="5" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_HBS_MED" tier="5" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_HBS_MED" tier="5" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_PGX_MED" tier="5" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_HL_OUT_PGX_MED" tier="5" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_MT_OUT_PGX_MED" tier="5" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_ST_OUT_PGX_MED" tier="5" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_SW_OUT_PGX_MED" tier="5" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T5_FR_OUT_WLD_LOW" tier="5" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_WLD_LOW" tier="5" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_WLD_LOW" tier="5" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_WLD_LOW" tier="5" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_WLD_LOW" tier="5" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_HBS_LOW" tier="5" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_HBS_LOW" tier="5" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_HBS_LOW" tier="5" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_HBS_LOW" tier="5" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_HBS_LOW" tier="5" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T5_FR_OUT_PGX_LOW" tier="5" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="13" />
+      <rock tier="7" amount="6" />
+      <wood tier="7" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </low>
+  </preset>
+  <preset name="T5_HL_OUT_PGX_LOW" tier="5" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="13" />
+      <rock tier="7" amount="20" />
+      <wood tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T5_MT_OUT_PGX_LOW" tier="5" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="6" />
+      <ore tier="7" amount="20" />
+      <rock tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T5_ST_OUT_PGX_LOW" tier="5" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="13" />
+      <hide tier="7" amount="20" />
+      <ore tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T5_SW_OUT_PGX_LOW" tier="5" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="20" />
+      <hide tier="7" amount="6" />
+      <wood tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="5" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T6_FR_ROY_WLD" tier="6" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_ROY_WLD" tier="6" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_MT_ROY_WLD" tier="6" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_ST_ROY_WLD" tier="6" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_SW_ROY_WLD" tier="6" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_FR_ROY_HBS" tier="6" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_ROY_HBS" tier="6" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_MT_ROY_HBS" tier="6" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_ST_ROY_HBS" tier="6" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_SW_ROY_HBS" tier="6" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_FR_ROY_PGX" tier="6" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_HL_ROY_PGX" tier="6" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_MT_ROY_PGX" tier="6" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_ST_ROY_PGX" tier="6" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_SW_ROY_PGX" tier="6" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_FR_OUT_WLD_HIG" tier="6" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_WLD_HIG" tier="6" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_WLD_HIG" tier="6" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_WLD_HIG" tier="6" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_WLD_HIG" tier="6" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_HBS_HIG" tier="6" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_HBS_HIG" tier="6" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_HBS_HIG" tier="6" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_HBS_HIG" tier="6" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_HBS_HIG" tier="6" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_PGX_HIG" tier="6" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_HL_OUT_PGX_HIG" tier="6" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_MT_OUT_PGX_HIG" tier="6" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_ST_OUT_PGX_HIG" tier="6" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_SW_OUT_PGX_HIG" tier="6" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_FR_OUT_WLD_MED" tier="6" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_WLD_MED" tier="6" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_WLD_MED" tier="6" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_WLD_MED" tier="6" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_WLD_MED" tier="6" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_HBS_MED" tier="6" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_HBS_MED" tier="6" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_HBS_MED" tier="6" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_HBS_MED" tier="6" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_HBS_MED" tier="6" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_PGX_MED" tier="6" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="13" />
+      <rock tier="7" amount="6" />
+      <wood tier="7" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_PGX_MED" tier="6" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="13" />
+      <rock tier="7" amount="20" />
+      <wood tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_PGX_MED" tier="6" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="6" />
+      <ore tier="7" amount="20" />
+      <rock tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_PGX_MED" tier="6" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="13" />
+      <hide tier="7" amount="20" />
+      <ore tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_PGX_MED" tier="6" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="20" />
+      <hide tier="7" amount="6" />
+      <wood tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_WLD_LOW" tier="6" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_WLD_LOW" tier="6" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_WLD_LOW" tier="6" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_WLD_LOW" tier="6" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_WLD_LOW" tier="6" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_HBS_LOW" tier="6" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T6_HL_OUT_HBS_LOW" tier="6" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T6_MT_OUT_HBS_LOW" tier="6" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T6_ST_OUT_HBS_LOW" tier="6" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T6_SW_OUT_HBS_LOW" tier="6" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="6" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T6_FR_OUT_PGX_LOW" tier="6" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_HL_OUT_PGX_LOW" tier="6" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_MT_OUT_PGX_LOW" tier="6" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_ST_OUT_PGX_LOW" tier="6" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T6_SW_OUT_PGX_LOW" tier="6" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <wood tier="7" amount="26" />
+      <mobcamp tier="6" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_FR_ROY_WLD" tier="7" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_ROY_WLD" tier="7" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T7_MT_ROY_WLD" tier="7" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T7_ST_ROY_WLD" tier="7" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T7_SW_ROY_WLD" tier="7" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T7_FR_ROY_HBS" tier="7" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_ROY_HBS" tier="7" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T7_MT_ROY_HBS" tier="7" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T7_ST_ROY_HBS" tier="7" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T7_SW_ROY_HBS" tier="7" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T7_FR_ROY_PGX" tier="7" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_HL_ROY_PGX" tier="7" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_MT_ROY_PGX" tier="7" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_ST_ROY_PGX" tier="7" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_SW_ROY_PGX" tier="7" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_FR_OUT_WLD_HIG" tier="7" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_WLD_HIG" tier="7" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_WLD_HIG" tier="7" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_WLD_HIG" tier="7" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_WLD_HIG" tier="7" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_HBS_HIG" tier="7" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="7" amount="46" />
+      <rock tier="7" amount="23" />
+      <wood tier="7" amount="70" />
+      <hide tier="6" amount="52" />
+      <rock tier="6" amount="26" />
+      <wood tier="6" amount="130" />
+    </high>
+    <medium>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="86" />
+      <rock tier="5" amount="43" />
+      <wood tier="5" amount="130" />
+      <hide tier="6" amount="64" />
+      <rock tier="6" amount="32" />
+      <wood tier="6" amount="70" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_HBS_HIG" tier="7" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="7" amount="46" />
+      <rock tier="7" amount="70" />
+      <wood tier="7" amount="23" />
+      <ore tier="6" amount="52" />
+      <rock tier="6" amount="130" />
+      <wood tier="6" amount="26" />
+    </high>
+    <medium>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="86" />
+      <rock tier="5" amount="130" />
+      <wood tier="5" amount="43" />
+      <ore tier="6" amount="64" />
+      <rock tier="6" amount="70" />
+      <wood tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_HBS_HIG" tier="7" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="23" />
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="46" />
+      <fiber tier="6" amount="26" />
+      <ore tier="6" amount="130" />
+      <rock tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="43" />
+      <ore tier="5" amount="130" />
+      <rock tier="5" amount="86" />
+      <fiber tier="6" amount="32" />
+      <ore tier="6" amount="70" />
+      <rock tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_HBS_HIG" tier="7" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="46" />
+      <hide tier="7" amount="70" />
+      <ore tier="7" amount="23" />
+      <fiber tier="6" amount="52" />
+      <hide tier="6" amount="130" />
+      <ore tier="6" amount="26" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="86" />
+      <hide tier="5" amount="130" />
+      <ore tier="5" amount="43" />
+      <fiber tier="6" amount="64" />
+      <hide tier="6" amount="70" />
+      <ore tier="6" amount="32" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_HBS_HIG" tier="7" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="23" />
+      <wood tier="7" amount="46" />
+      <fiber tier="6" amount="130" />
+      <hide tier="6" amount="26" />
+      <wood tier="6" amount="52" />
+    </high>
+    <medium>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="130" />
+      <hide tier="5" amount="43" />
+      <wood tier="5" amount="86" />
+      <fiber tier="6" amount="70" />
+      <hide tier="6" amount="32" />
+      <wood tier="6" amount="64" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_PGX_HIG" tier="7" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="7" amount="13" />
+      <rock tier="7" amount="6" />
+      <wood tier="7" amount="20" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <hide tier="5" amount="13" />
+      <rock tier="5" amount="6" />
+      <wood tier="5" amount="20" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_PGX_HIG" tier="7" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="7" amount="13" />
+      <rock tier="7" amount="20" />
+      <wood tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <ore tier="5" amount="13" />
+      <rock tier="5" amount="20" />
+      <wood tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_PGX_HIG" tier="7" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="6" />
+      <ore tier="7" amount="20" />
+      <rock tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="6" />
+      <ore tier="5" amount="20" />
+      <rock tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_PGX_HIG" tier="7" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="13" />
+      <hide tier="7" amount="20" />
+      <ore tier="7" amount="6" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="13" />
+      <hide tier="5" amount="20" />
+      <ore tier="5" amount="6" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_PGX_HIG" tier="7" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="20" />
+      <hide tier="7" amount="6" />
+      <wood tier="7" amount="13" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="5" amount="20" />
+      <hide tier="5" amount="6" />
+      <wood tier="5" amount="13" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_WLD_MED" tier="7" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_WLD_MED" tier="7" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_WLD_MED" tier="7" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_WLD_MED" tier="7" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_WLD_MED" tier="7" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_HBS_MED" tier="7" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_HBS_MED" tier="7" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_HBS_MED" tier="7" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_HBS_MED" tier="7" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_HBS_MED" tier="7" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_PGX_MED" tier="7" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_HL_OUT_PGX_MED" tier="7" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_MT_OUT_PGX_MED" tier="7" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_ST_OUT_PGX_MED" tier="7" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_SW_OUT_PGX_MED" tier="7" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <wood tier="7" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_FR_OUT_WLD_LOW" tier="7" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_WLD_LOW" tier="7" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_WLD_LOW" tier="7" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_WLD_LOW" tier="7" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_WLD_LOW" tier="7" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_HBS_LOW" tier="7" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T7_HL_OUT_HBS_LOW" tier="7" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_MT_OUT_HBS_LOW" tier="7" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_ST_OUT_HBS_LOW" tier="7" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T7_SW_OUT_HBS_LOW" tier="7" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="7" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T7_FR_OUT_PGX_LOW" tier="7" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_HL_OUT_PGX_LOW" tier="7" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_MT_OUT_PGX_LOW" tier="7" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_ST_OUT_PGX_LOW" tier="7" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T7_SW_OUT_PGX_LOW" tier="7" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <wood tier="7" amount="26" />
+      <mobcamp tier="7" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_FR_ROY_WLD" tier="8" biome="Forest" type="World" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_ROY_WLD" tier="8" biome="Highlands" type="World" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T8_MT_ROY_WLD" tier="8" biome="Mountains" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T8_ST_ROY_WLD" tier="8" biome="Steppe" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T8_SW_ROY_WLD" tier="8" biome="Swamp" type="World" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T8_FR_ROY_HBS" tier="8" biome="Forest" type="HomeBase" continent="Royal">
+    <high>
+      <hide tier="6" amount="133" />
+      <rock tier="6" amount="66" />
+      <wood tier="6" amount="200" />
+    </high>
+    <medium>
+      <hide tier="5" amount="133" />
+      <rock tier="5" amount="66" />
+      <wood tier="5" amount="200" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <hide tier="4" amount="133" />
+      <rock tier="4" amount="66" />
+      <wood tier="4" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_ROY_HBS" tier="8" biome="Highlands" type="HomeBase" continent="Royal">
+    <high>
+      <ore tier="6" amount="133" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="66" />
+    </high>
+    <medium>
+      <ore tier="5" amount="133" />
+      <rock tier="5" amount="200" />
+      <wood tier="5" amount="66" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <ore tier="4" amount="133" />
+      <rock tier="4" amount="200" />
+      <wood tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T8_MT_ROY_HBS" tier="8" biome="Mountains" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="66" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="66" />
+      <ore tier="5" amount="200" />
+      <rock tier="5" amount="133" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="66" />
+      <ore tier="4" amount="200" />
+      <rock tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T8_ST_ROY_HBS" tier="8" biome="Steppe" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="133" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="66" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="133" />
+      <hide tier="5" amount="200" />
+      <ore tier="5" amount="66" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="133" />
+      <hide tier="4" amount="200" />
+      <ore tier="4" amount="66" />
+    </low>
+  </preset>
+  <preset name="T8_SW_ROY_HBS" tier="8" biome="Swamp" type="HomeBase" continent="Royal">
+    <high>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="66" />
+      <wood tier="6" amount="133" />
+    </high>
+    <medium>
+      <fiber tier="5" amount="200" />
+      <hide tier="5" amount="66" />
+      <wood tier="5" amount="133" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low>
+      <fiber tier="4" amount="200" />
+      <hide tier="4" amount="66" />
+      <wood tier="4" amount="133" />
+    </low>
+  </preset>
+  <preset name="T8_FR_ROY_PGX" tier="8" biome="Forest" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <hide tier="5" amount="26" />
+      <rock tier="5" amount="13" />
+      <wood tier="5" amount="40" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_HL_ROY_PGX" tier="8" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <ore tier="5" amount="26" />
+      <rock tier="5" amount="40" />
+      <wood tier="5" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_MT_ROY_PGX" tier="8" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="13" />
+      <ore tier="5" amount="40" />
+      <rock tier="5" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_ST_ROY_PGX" tier="8" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="26" />
+      <hide tier="5" amount="40" />
+      <ore tier="5" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_SW_ROY_PGX" tier="8" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Royal">
+    <high></high>
+    <medium>
+      <fiber tier="5" amount="40" />
+      <hide tier="5" amount="13" />
+      <wood tier="5" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_FR_OUT_WLD_HIG" tier="8" biome="Forest" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_WLD_HIG" tier="8" biome="Highlands" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_WLD_HIG" tier="8" biome="Mountains" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_WLD_HIG" tier="8" biome="Steppe" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_WLD_HIG" tier="8" biome="Swamp" type="World" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_HBS_HIG" tier="8" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_HBS_HIG" tier="8" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_HBS_HIG" tier="8" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_HBS_HIG" tier="8" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_HBS_HIG" tier="8" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="High">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_PGX_HIG" tier="8" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_HL_OUT_PGX_HIG" tier="8" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_MT_OUT_PGX_HIG" tier="8" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_ST_OUT_PGX_HIG" tier="8" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_SW_OUT_PGX_HIG" tier="8" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="High">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <wood tier="7" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_FR_OUT_WLD_MED" tier="8" biome="Forest" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_WLD_MED" tier="8" biome="Highlands" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_WLD_MED" tier="8" biome="Mountains" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_WLD_MED" tier="8" biome="Steppe" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_WLD_MED" tier="8" biome="Swamp" type="World" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_HBS_MED" tier="8" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_HBS_MED" tier="8" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_HBS_MED" tier="8" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_HBS_MED" tier="8" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_HBS_MED" tier="8" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Medium">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_PGX_MED" tier="8" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_HL_OUT_PGX_MED" tier="8" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_MT_OUT_PGX_MED" tier="8" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_ST_OUT_PGX_MED" tier="8" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_SW_OUT_PGX_MED" tier="8" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Medium">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <wood tier="7" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_FR_OUT_WLD_LOW" tier="8" biome="Forest" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_WLD_LOW" tier="8" biome="Highlands" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_WLD_LOW" tier="8" biome="Mountains" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_WLD_LOW" tier="8" biome="Steppe" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_WLD_LOW" tier="8" biome="Swamp" type="World" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_HBS_LOW" tier="8" biome="Forest" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <hide tier="7" amount="70" />
+      <rock tier="7" amount="35" />
+      <wood tier="7" amount="105" />
+      <hide tier="6" amount="30" />
+      <rock tier="6" amount="15" />
+      <wood tier="6" amount="95" />
+    </high>
+    <medium>
+      <hide tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </medium>
+    <low>
+      <hide tier="6" amount="150" />
+      <rock tier="6" amount="75" />
+      <wood tier="6" amount="200" />
+    </low>
+  </preset>
+  <preset name="T8_HL_OUT_HBS_LOW" tier="8" biome="Highlands" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <ore tier="7" amount="70" />
+      <rock tier="7" amount="105" />
+      <wood tier="7" amount="35" />
+      <ore tier="6" amount="30" />
+      <rock tier="6" amount="95" />
+      <wood tier="6" amount="15" />
+    </high>
+    <medium>
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </medium>
+    <low>
+      <ore tier="6" amount="150" />
+      <rock tier="6" amount="200" />
+      <wood tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_MT_OUT_HBS_LOW" tier="8" biome="Mountains" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="35" />
+      <ore tier="7" amount="105" />
+      <rock tier="7" amount="70" />
+      <fiber tier="6" amount="15" />
+      <ore tier="6" amount="95" />
+      <rock tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <rock tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="75" />
+      <ore tier="6" amount="200" />
+      <rock tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_ST_OUT_HBS_LOW" tier="8" biome="Steppe" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="70" />
+      <hide tier="7" amount="105" />
+      <ore tier="7" amount="35" />
+      <fiber tier="6" amount="30" />
+      <hide tier="6" amount="95" />
+      <ore tier="6" amount="15" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <ore tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="150" />
+      <hide tier="6" amount="200" />
+      <ore tier="6" amount="75" />
+    </low>
+  </preset>
+  <preset name="T8_SW_OUT_HBS_LOW" tier="8" biome="Swamp" type="HomeBase" continent="Outlands" clusterquality="Low">
+    <high>
+      <fiber tier="7" amount="105" />
+      <hide tier="7" amount="35" />
+      <wood tier="7" amount="70" />
+      <fiber tier="6" amount="95" />
+      <hide tier="6" amount="15" />
+      <wood tier="6" amount="30" />
+    </high>
+    <medium>
+      <fiber tier="7" amount="0" />
+      <hide tier="7" amount="0" />
+      <wood tier="7" amount="0" />
+      <mobcamp tier="8" amount="12" />
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </medium>
+    <low>
+      <fiber tier="6" amount="200" />
+      <hide tier="6" amount="75" />
+      <wood tier="6" amount="150" />
+    </low>
+  </preset>
+  <preset name="T8_FR_OUT_PGX_LOW" tier="8" biome="Forest" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <hide tier="7" amount="26" />
+      <rock tier="7" amount="13" />
+      <wood tier="7" amount="40" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_HL_OUT_PGX_LOW" tier="8" biome="Highlands" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <ore tier="7" amount="26" />
+      <rock tier="7" amount="40" />
+      <wood tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_MT_OUT_PGX_LOW" tier="8" biome="Mountains" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="13" />
+      <ore tier="7" amount="40" />
+      <rock tier="7" amount="26" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_ST_OUT_PGX_LOW" tier="8" biome="Steppe" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="26" />
+      <hide tier="7" amount="40" />
+      <ore tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+  <preset name="T8_SW_OUT_PGX_LOW" tier="8" biome="Swamp" type="PassageOverground,PassageUnderground" continent="Outlands" clusterquality="Low">
+    <high></high>
+    <medium>
+      <fiber tier="7" amount="40" />
+      <hide tier="7" amount="13" />
+      <mobcamp tier="8" amount="12" />
+    </medium>
+    <low></low>
+  </preset>
+</presets>
