@@ -1,147 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <territorytypes upkeepwarningchecktimespaninhours="24" upkeepwarningintervalinmin="60" upkeeptimerinmin="1440">
-    <territorytype
-      name="NORMAL"
-	  claimcost="3000000" 
-	  upkeepcost="10800" 
+  <territorytype
+    name="NORMAL"
+    claimcost="3000000"
+    upkeepcost="10800"
 	  
-	  maxdefensepoints="3" 
-	  defensepointschangeafterprimetime="1"
+    maxdefensepoints="3"
+    defensepointschangeafterprimetime="1"
 	  
     maxdefensebonus="30"
-	  mindefensebonus="0" 	  
+    mindefensebonus="0"
     defensebonuschangeafterprimetime="-15"
     defensebonuschangeafterloosingabattle="15"
 
-      vaultsize="64" 
-      battlevaultsize="64" 
-      weightlimit="10000.0" 
-      nutritionstorage="194400"
-      secondspernutrition="4.444444444"
-      claimnutrition="20000.0"
-      conquernutrition ="20000.0">          
-        <MatchSettings winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" respawntimeseconds="10" matchtimerespawnmultiplier="1" maxplayerperteam="5" conquercost="100000" ticketreductionorbclaim="0" ticketreductionbydeath="4" attackerticketdefault="150" defenderticketdefault="150" battledurationinminutes="25" battlerounddurationinseconds="60" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2" orbclaimtimeinseconds="10" orblcaimfx="FX/ClientPrefabs/fx_beam_capture_gvg_blue">
-        <OrbReductionLookUp orbdifference="0" ticketreduction="0" />
-        <OrbReductionLookUp orbdifference="1" ticketreduction="10" />
-        <OrbReductionLookUp orbdifference="2" ticketreduction="10" />
-        <OrbReductionLookUp orbdifference="3" ticketreduction="20" />
-        <OrbReductionLookUp orbdifference="4" ticketreduction="20" />
-        <!--
-        <Orb engageattackrange="15.0" disengageattackrange="15.0" attackinterval="1.5" attackdamage="0.2" attackdistancedelay="24.0">
-          <FriendlyFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileBlue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileRed" impact="Prefabs/SpellEffects/MeleeHit" />
-        </Orb>
-        -->
-        <Warcamp engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7">
-          <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue"   impact="Prefabs/SpellEffects/MeleeHit"  />
-          <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit" />
-        </Warcamp>
-        <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" > 
-            <TimeSlot id="1" time="17:00" />
-            <TimeSlot id="2" time="18:00" />
-            <TimeSlot id="3" time="19:00" />
-            <TimeSlot id="4" time="20:00" />
-        </TimeSlots>
-        </MatchSettings>
-    </territorytype>
-    
-    <territorytype
-      name="WATCHTOWER"
-	  claimcost="1000000" 
-	  upkeepcost="3600" 
-	  
-	  maxdefensepoints="1" 
-	  defensepointschangeafterprimetime="1"
-	  
-	  maxdefensebonus="0" 
-	  mindefensebonus="0" 	  
-	  defensebonuschangeafterprimetime="0"	
-	  defensebonuschangeafterloosingabattle="0"
-	 
-      vaultsize="64" 
-      battlevaultsize="64" 
-      weightlimit="10000.0"
-      nutritionstorage="19440"
-      secondspernutrition="44.44444444"
-      claimnutrition="2000"
-      conquernutrition="2000"       
-      > 
-        <Tower engageattackrange="15.0" disengageattackrange="25.0" attackinterval="0.5" attackdamage="0.05" attackdistancedelay="24.0">
-          <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
-        </Tower>
-        <GuardSettings respawntimeseconds="1200" />
-        <MatchSettings winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" respawntimeseconds="10" matchtimerespawnmultiplier="1" maxplayerperteam="5" conquercost="100000" ticketreductionorbclaim="0" ticketreductionbydeath="4" attackerticketdefault="150" defenderticketdefault="150" battledurationinminutes="25" battlerounddurationinseconds="60" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2" orbclaimtimeinseconds="10" orblcaimfx="FX/ClientPrefabs/fx_beam_capture_gvg_blue">
-        <OrbReductionLookUp orbdifference="0" ticketreduction="0" />
-        <OrbReductionLookUp orbdifference="1" ticketreduction="10" />
-        <OrbReductionLookUp orbdifference="2" ticketreduction="10" />
-        <OrbReductionLookUp orbdifference="3" ticketreduction="20" />
-        <OrbReductionLookUp orbdifference="4" ticketreduction="20" />
-        <!--
-        <Orb engageattackrange="15.0" disengageattackrange="15.0" attackinterval="1.5" attackdamage="0.2" attackdistancedelay="24.0">
-          <FriendlyFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileBlue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileRed" impact="Prefabs/SpellEffects/MeleeHit" />
-        </Orb>
-        -->
-        <Warcamp engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7">
-          <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
-        </Warcamp>
-        <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" > 
-            <TimeSlot id="1" time="17:00" />
-            <TimeSlot id="2" time="18:00" />
-            <TimeSlot id="3" time="19:00" />
-            <TimeSlot id="4" time="20:00" />
-        </TimeSlots>
-        </MatchSettings>
-    </territorytype>  
-    
-    <territorytype
-      name="CITY"
-	  claimcost="1000000" 
-	  upkeepcost="3600" 
-	  mintimebetweenmatchesperconnectioninmin="720" 
+    vaultsize="64"
+    battlevaultsize="64"
+    weightlimit="10000.0"
+    nutritionstorage="194400"
+    secondspernutrition="4.444444444"
+    claimnutrition="20000.0"
+    conquernutrition ="20000.0">
+    <MatchSettings matchtype="MATCH_GVG" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+      <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
+        <TimeSlot id="1" time="17:00" />
+        <TimeSlot id="2" time="18:00" />
+        <TimeSlot id="3" time="19:00" />
+        <TimeSlot id="4" time="20:00" />
+      </TimeSlots>
+    </MatchSettings>
+  </territorytype>
 
-	  maxdefensepoints="1" 
-	  defensepointschangeafterprimetime="1"
+  <territorytype
+    name="WATCHTOWER"
+    claimcost="1000000"
+    upkeepcost="3600"
 	  
-	  maxdefensebonus="0" 
-	  mindefensebonus="0" 	  
-	  defensebonuschangeafterprimetime="-10"	
-	  defensebonuschangeafterloosingabattle="10"
+    maxdefensepoints="1"
+    defensepointschangeafterprimetime="1"
 	  
-      vaultsize="64" 
-      battlevaultsize="64" 
-      weightlimit="10000.0"
-      nutritionstorage="19440"
-      secondspernutrition="44.44444444"
-      claimnutrition="2000"
-      conquernutrition="2000"       
-      >  
-        <MatchSettings winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" respawntimeseconds="10" matchtimerespawnmultiplier="1" maxplayerperteam="20" conquercost="100000" ticketreductionorbclaim="0" ticketreductionbydeath="1" attackerticketdefault="200" defenderticketdefault="200" battledurationinminutes="25" battlerounddurationinseconds="120" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2" orbclaimtimeinseconds="10" orblcaimfx="FX/ClientPrefabs/fx_beam_capture_gvg_blue">
-        <OrbReductionLookUp orbdifference="0" ticketreduction="0" />
-        <OrbReductionLookUp orbdifference="1" ticketreduction="20" />
-        <OrbReductionLookUp orbdifference="2" ticketreduction="20" />
-        <OrbReductionLookUp orbdifference="3" ticketreduction="40" />
-        <OrbReductionLookUp orbdifference="4" ticketreduction="40" />
-        <OrbReductionLookUp orbdifference="5" ticketreduction="60" />
-        <!--
-        <Orb engageattackrange="15.0" disengageattackrange="15.0" attackinterval="1.5" attackdamage="0.2" attackdistancedelay="24.0">
-          <FriendlyFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileBlue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileRed" impact="Prefabs/SpellEffects/MeleeHit" />
-        </Orb>
-        -->
-        <Warcamp engageattackrange="20.0" disengageattackrange="20.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7">
-          <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
-          <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
-        </Warcamp>
-        <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" > 
-            <TimeSlot id="1" time="17:00" />
-            <TimeSlot id="2" time="18:00" />
-            <TimeSlot id="3" time="19:00" />
-            <TimeSlot id="4" time="20:00" />
-        </TimeSlots>    
-        </MatchSettings>
-    </territorytype>   
-  </territorytypes>  
+    maxdefensebonus="0"
+    mindefensebonus="0"
+    defensebonuschangeafterprimetime="0"
+    defensebonuschangeafterloosingabattle="0"
+	 
+    vaultsize="64"
+    battlevaultsize="64"
+    weightlimit="10000.0"
+    nutritionstorage="19440"
+    secondspernutrition="44.44444444"
+    claimnutrition="2000"
+    conquernutrition="2000">
+    <Tower engageattackrange="15.0" disengageattackrange="25.0" attackinterval="0.5" attackdamage="0.05" attackdistancedelay="24.0">
+      <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
+      <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+    </Tower>
+    <GuardSettings respawntimeseconds="1200" />
+    <MatchSettings matchtype="MATCH_GVG" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+      <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
+        <TimeSlot id="1" time="17:00" />
+        <TimeSlot id="2" time="18:00" />
+        <TimeSlot id="3" time="19:00" />
+        <TimeSlot id="4" time="20:00" />
+      </TimeSlots>
+    </MatchSettings>
+  </territorytype>
+
+  <territorytype
+    name="CITY"
+    claimcost="1000000"
+    upkeepcost="3600"
+    mintimebetweenmatchesperconnectioninmin="720"
+
+    maxdefensepoints="1"
+    defensepointschangeafterprimetime="1"
+	  
+    maxdefensebonus="0"
+    mindefensebonus="0"
+    defensebonuschangeafterprimetime="-10"
+    defensebonuschangeafterloosingabattle="10"
+	  
+    vaultsize="64"
+    battlevaultsize="64"
+    weightlimit="10000.0"
+    nutritionstorage="19440"
+    secondspernutrition="44.44444444"
+    claimnutrition="2000"
+    conquernutrition="2000">
+    <MatchSettings matchtype="MATCH_GVG_CITY" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+      <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
+        <TimeSlot id="1" time="17:00" />
+        <TimeSlot id="2" time="18:00" />
+        <TimeSlot id="3" time="19:00" />
+        <TimeSlot id="4" time="20:00" />
+      </TimeSlots>
+    </MatchSettings>
+  </territorytype>
+</territorytypes>
 

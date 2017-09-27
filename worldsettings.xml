@@ -17,7 +17,7 @@
 			craftefficiencybonus="0.0"
 			buildingcraftcapacityregenfactor="1"
       itempowersoftcap="700"
-      itempowerscalingfactor="0.7"        
+      itempowerscalingfactor="0.2"        
       animalgrowthfactor="1"
       cropyieldfactor="1"
       clusterdangerbonustype="safe"
@@ -38,7 +38,7 @@
 	    craftefficiencybonus="0.20"
 	    buildingcraftcapacityregenfactor="1"
       itempowersoftcap="800"
-      itempowerscalingfactor="0.7"    
+      itempowerscalingfactor="0.2"    
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="yellow"
@@ -123,7 +123,7 @@
 			craftefficiencybonus="0.20"
 			buildingcraftcapacityregenfactor="1"
       itempowersoftcap="800"
-      itempowerscalingfactor="0.7"
+      itempowerscalingfactor="0.2"
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="hell_yellow"
@@ -144,7 +144,7 @@
 			craftefficiencybonus="0.20"
 			buildingcraftcapacityregenfactor="1"
       itempowersoftcap="700"
-      itempowerscalingfactor="0.7"
+      itempowerscalingfactor="0.2"
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="hell_green"
@@ -260,7 +260,7 @@
       />
     
     <archetype
-      name = "EXPEDITION"
+      name = "T3_EXPEDITION"
       uipvptype="Safe"
       pvpwarningtype="safe"
       pvprule="PvpDisabled"
@@ -273,15 +273,104 @@
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="0"
-      itempowerscalingfactor="0"
+      itempowersoftcap="600"
+      itempowerscalingfactor="0.5"
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	  allowtrade="false"
+	    allowtrade="false"
     />
+    <archetype
+      name = "T4_EXPEDITION"
+      uipvptype="Safe"
+      pvpwarningtype="safe"
+      pvprule="PvpDisabled"
+      playersarelethal="false"
+      mobsarelethal="true"
+      showpvpplayeronminimap="false"
+      showfriendlycount="true"
+      showhostilecount="false"
+      logoutseconds="120"
+      spellcooldownsonenteringseconds="0"
+      craftefficiencybonus="0.0"
+      buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="800"
+      itempowerscalingfactor="0.5"
+      animalgrowthfactor="1"
+      cropyieldfactor="1"
+      requiredreputationtoenter="-50000"
+      clusterdangerbonustype="expedition"
+	    allowtrade="false"
+    />
+    <archetype
+      name = "T5_EXPEDITION"
+      uipvptype="Safe"
+      pvpwarningtype="safe"
+      pvprule="PvpDisabled"
+      playersarelethal="false"
+      mobsarelethal="true"
+      showpvpplayeronminimap="false"
+      showfriendlycount="true"
+      showhostilecount="false"
+      logoutseconds="120"
+      spellcooldownsonenteringseconds="0"
+      craftefficiencybonus="0.0"
+      buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="900"
+      itempowerscalingfactor="0.5"
+      animalgrowthfactor="1"
+      cropyieldfactor="1"
+      requiredreputationtoenter="-50000"
+      clusterdangerbonustype="expedition"
+	    allowtrade="false"
+    />
+    <archetype
+      name = "T6_EXPEDITION"
+      uipvptype="Safe"
+      pvpwarningtype="safe"
+      pvprule="PvpDisabled"
+      playersarelethal="false"
+      mobsarelethal="true"
+      showpvpplayeronminimap="false"
+      showfriendlycount="true"
+      showhostilecount="false"
+      logoutseconds="120"
+      spellcooldownsonenteringseconds="0"
+      craftefficiencybonus="0.0"
+      buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="1000"
+      itempowerscalingfactor="0.5"
+      animalgrowthfactor="1"
+      cropyieldfactor="1"
+      requiredreputationtoenter="-50000"
+      clusterdangerbonustype="expedition"
+	    allowtrade="false"
+    />
+	
+	<archetype
+      name = "ARENA"
+      uipvptype="Limited"
+      pvpwarningtype="safe"
+      pvprule="PvpAllowed"
+      playersarelethal="false"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
+      showfriendlycount="false"
+      showhostilecount="false"
+      spellcooldownsonenteringseconds="0"
+	    craftefficiencybonus="0.20"
+	    buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="800"
+      itempowerscalingfactor="0.2"    
+      animalgrowthfactor="0.5"
+      cropyieldfactor="2"
+      clusterdangerbonustype="yellow"
+      knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
+      requiredreputationtoenter="-50000"
+      />
   </archetypes>
+
 
   <hellgatemobtypes>    
     <hellgatemobs>
@@ -450,9 +539,9 @@
       archetype="GREEN"
 			editorcolor="0, 255, 0"
 			furnitureobjectsallowed="true"
-      hellgatemobminimapvisible="true"
-      hellgateclustermessage="true"
-      isdungeon="false"
+	    hellgatemobminimapvisible="true"
+	    hellgateclustermessage="true"
+			isdungeon="false"
       allowmounts="true">
       <resourcespawns defaulttimefactor="1.0">
         <resourcetier tier="1" timefactor="1.0"/>
@@ -821,8 +910,8 @@
       <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
     </clustertype>    
 
-    <clustertype name="EXPEDITION_STANDARD"
-       archetype="EXPEDITION"
+    <clustertype name="T3_EXPEDITION_STANDARD"
+       archetype="T3_EXPEDITION"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"                 
        isplayercity="false"
@@ -833,9 +922,45 @@
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
     </clustertype>
+    <clustertype name="T4_EXPEDITION_STANDARD"
+       archetype="T4_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="true"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
+    <clustertype name="T5_EXPEDITION_STANDARD"
+       archetype="T5_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="true"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
+    <clustertype name="T6_EXPEDITION_STANDARD"
+       archetype="T6_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="true"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
 
-    <clustertype name="EXPEDITION_SURFACE"
-       archetype="EXPEDITION"
+    <clustertype name="T3_EXPEDITION_SURFACE"
+       archetype="T3_EXPEDITION"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -846,8 +971,58 @@
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
     </clustertype>
+    <clustertype name="T4_EXPEDITION_SURFACE"
+       archetype="T4_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="false"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
+    <clustertype name="T5_EXPEDITION_SURFACE"
+       archetype="T5_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="false"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
+    <clustertype name="T6_EXPEDITION_SURFACE"
+       archetype="T6_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="false"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+    </clustertype>
+    <!-- ARENA -->
+    <clustertype name="ARENA_STANDARD"
+        archetype="ARENA"
+        editorcolor="255, 255, 0"
+        furnitureobjectsallowed="false"
+        hellgatemobminimapvisible="true"
+        hellgateclustermessage="true"
+        isdungeon="false"
+        allowmounts="false">
+      <mobspawns defaulttimefactor="1.0"/>
+      <resourcespawns defaulttimefactor="9999.0"/>
+    </clustertype>
   </clustertypes>
-
+  
+ 
+  
   <!-- ISLANDS -->
   <islands>
     <island name="PLAYER_ISLAND" >
@@ -964,7 +1139,7 @@
 			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_entrance"
 			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_exit"
 			bosswarningtext="@HELLCLUSTER_TREASURE_WARNING"
-			bossspawndelayinminafterminibossdeath="2"
+			bossspawndelayinminafterminibossdeath="1"
 			bossspawnicon="relic_a"
 			teleportonknockdown="true"
       

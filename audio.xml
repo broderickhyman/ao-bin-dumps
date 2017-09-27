@@ -397,7 +397,13 @@
     <MobFaction name="heretic"/>
     <MobType name="heretic_ballista"/>
     <ArmorType name="cloth"/>
-  </WwiseSwitchInfo>  
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_HERETIC_BALLISTA_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="heretic"/>
+    <MobType name="heretic_ballista_boss"/>
+    <ArmorType name="cloth"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_HERETIC_GIBSON">
     <CharType name="mob"/>
     <MobFaction name="heretic"/>
@@ -434,6 +440,22 @@
     <MobType name="heretic_tank"/>
     <Size name="medium"/>
     <ArmorType name="plate"/>
+    <WeaponType name="swoosh_medium"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_HERETIC_WOODGATHERER">
+    <CharType name="mob"/>
+    <MobFaction name="heretic"/>
+    <MobType name="heretic_woodgatherer"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="swoosh_medium"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_HERETIC_LUMBERJACK_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="heretic"/>
+    <MobType name="heretic_lumberjack_boss"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
     <WeaponType name="swoosh_medium"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_HERETIC_STOOGE">
@@ -574,7 +596,20 @@
     <Size name="incorporeal_medium"/>
     <ArmorType name="incorporeal"/>
     <WeaponType name="claw_shade"/>
-  </WwiseSwitchInfo>  
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_SARCOPHAGUS">
+    <CharType name="mob"/>
+    <MobFaction name="undead"/>
+    <MobType name="undead_sarcophagus"/>
+    <Size name="rock_big"/>
+    <ArmorType name="rock"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_URN">
+    <CharType name="mob"/>
+    <MobFaction name="undead"/>
+    <Size name="rock_medium"/>
+    <ArmorType name="rock"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_UNDEAD_NECROMANCER">
     <CharType name="mob"/>
     <MobFaction name="undead"/>
@@ -632,7 +667,15 @@
     <Size name="huge"/>
     <ArmorType name="incorporeal"/>
   </WwiseSwitchInfo>
-
+  <WwiseSwitchInfo name="MOB_DEMON_GATEKEEPER">
+    <CharType name="mob"/>
+    <MobFaction name="demon"/>
+    <MobType name="demon_gatekeeper"/>
+    <Size name="big"/>
+    <ArmorType name="hide"/>
+	<WeaponType name="claw_hide_big"/>
+  </WwiseSwitchInfo>
+  
   <!--KEEPERS-->
   <WwiseSwitchInfo name="MOB_KEEPER_BERSERK">
     <CharType name="mob"/>
@@ -678,7 +721,7 @@
     <CharType name="mob"/>
     <MobFaction name="keeper"/>
     <MobType name="keeper_unproven_male"/>
-    <Size name="medium"/>
+    <Size name="big"/>
     <ArmorType name="no"/>
     <WeaponType name="swoosh_medium"/>
   </WwiseSwitchInfo>
@@ -686,7 +729,7 @@
     <CharType name="mob"/>
     <MobFaction name="keeper"/>
     <MobType name="keeper_druid"/>
-    <Size name="medium"/>
+    <Size name="big"/>
     <ArmorType name="cloth"/>
     <WeaponType name="nature"/>
   </WwiseSwitchInfo>
@@ -694,7 +737,7 @@
     <CharType name="mob"/>
     <MobFaction name="keeper"/>
     <MobType name="keeper_seer"/>
-    <Size name="medium"/>
+    <Size name="big"/>
     <ArmorType name="cloth"/>
     <WeaponType name="staff_swoosh_big"/>
   </WwiseSwitchInfo>
@@ -940,6 +983,10 @@
     <OnCastStart name="Play_melee_swoosh_medium" />
     <OnSpellHit name="Play_melee_impact_rock_big" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MEDIUMCAST_GEYSER_IMPACT">
+    <OnCastStart name="Play_melee_swoosh_medium" />
+    <OnSpellHit name="Play_melee_impact_geyser" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MEDIUMIMPACT">
     <OnSpellHit name="Play_melee_impact_medium" >
       <ImpactType/>
@@ -969,6 +1016,9 @@
     <OnSpellHit name="Play_melee_impact_rock_medium" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_BIG_ROCK_IMPACT_NO_WEAPON_IMPACT">
+    <OnSpellHit name="Play_melee_impact_rock_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_BLOODY">
     <OnSpellHit name="Play_melee_impact_bloody" >
@@ -1044,6 +1094,12 @@
     <OnChannelingEnd name="Stop_melee_forest_of_spears_loop" />
     <OnChannelingInterrupted name="Stop_melee_forest_of_spears_loop" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWIRL">
+    <OnChannelingStart name="Play_melee_swirl_loop" />
+    <OnChannelingEnd name="Stop_melee_swirl_loop" />
+    <OnChannelingInterrupted name="Stop_melee_swirl_loop" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="MELEE_CARTWHEEL">
     <OnCastFinished name="Play_cartwheel" />
   </WwiseEventInfo>
@@ -1070,6 +1126,10 @@
   <WwiseEventInfo name="SPELL_ARROW_AUTOFIRE">
     <OnChannelingHit name="Play_arrow_cast_medium" />
     <OnSpellHit name="Play_arrow_impact_medium" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARROW_RAIN">
+    <OnCastFinished name="Play_arrow_rain_of_arrows" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_MAGIC_ARROW">
@@ -1259,6 +1319,12 @@
 
 
   <!-- Spells for Mobs -->
+  <WwiseEventInfo name="SPELL_GUARDS_SUMMON">
+    <!--
+    <OnChannelingHit name="" />
+    <OnSpellHit name=""/>
+    -->
+  </WwiseEventInfo>
   <!--Guardians-->
   <WwiseEventInfo name="SPELL_GUARDIAN_GIANT_ROAR">
     <OnCastStart name="Play_keeper_giant_roar" />
@@ -1266,7 +1332,7 @@
   <!-- Hide-->
   <WwiseEventInfo name="SPELL_HIDE_WOLF_HOWL">
     <OnCastStart name="Play_cast_wolf_howl"/>
-  </WwiseEventInfo>
+  </WwiseEventInfo> 
   
   <!-- Heretics-->
   <WwiseEventInfo name="SPELL_HERETIC_ARCHER_KNOCKBACK">
@@ -1300,6 +1366,7 @@
   <WwiseEventInfo name="SPELL_KEEPER_BERSERKER_ENRAGE">
     <OnSpellHit name="Play_berserker_enrage" />
   </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_KEEPER_GIANT_ROAR">
     <OnSpellHit name="Play_keeper_giant_roar" />
   </WwiseEventInfo>
@@ -1307,6 +1374,7 @@
     <OnCastStart name="Play_melee_swoosh_big" />
     <OnSpellHit name="Play_melee_impact_big" />
   </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_ROAR">
     <OnSpellHit name="Play_keeper_chieftain_roar" />
   </WwiseEventInfo>
@@ -1319,20 +1387,43 @@
   <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_SCYTHE">
     <OnCastFinished name="Play_melee_scythe" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_HEAL">
+    <OnSpellHit name="Play_undead_sarcophagus_heal"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_BLIZZARD">
+    <OnCastStart name="Play_undead_sarcophagus_blizzard_vo"/>
+    <OnCastFinished name="Play_frost_cast_big" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_FROSTBOMB">
+    <OnCastStart name="Play_undead_sarcophagus_frostbomb_vo"/>
+    <OnCastFinished name="Play_frost_cast_medium" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_DISASSEMBLE">
+    <OnCastFinished name="Play_undead_sarcophagus_explode"/>
+  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_UNDEAD_NECROMANCER_SUMMON">
     <OnCastStart name="Play_undead_necromancer_summening" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_NECROMANCER_PHASECHANGE">
     <OnCastStart name="Play_undead_necromancer_phasechange" />
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_UNDEAD_GOVERNOR_ENRAGE">
-    <!--
-    <OnCastStart name="Play_undead_governor_enrage" />
-    -->
-  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_UNDEAD_GOVERNOR_FORCED_MOVEMENT">
     <!--
     <OnCastStart name="Play_undead_governor_forced_movement" />
+    -->
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BARF">
+    <!--
+    <OnCastStart name="" />
+    -->
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_HURL">
+    <!--
+    <OnCastStart name="" />
     -->
   </WwiseEventInfo>
 
@@ -1980,6 +2071,10 @@
   <WwiseGlobalEnvironmentEffect name="dungeon_hell">
     <ClusterTypes name="Dungeon"/>
     <MobFaction name="Hell"/>
+  </WwiseGlobalEnvironmentEffect>
+  
+  <WwiseGlobalEnvironmentEffect name="arena">
+    <ClusterTypes name="Arena"/>    
   </WwiseGlobalEnvironmentEffect>
     
   <!--***********************************************************-->

@@ -24,6 +24,10 @@
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.5 0" />
     <Socket socketname="mainhand" bonename="RightHandHardPoint" />
     <Socket socketname="offhand" bonename="LeftHandHardPoint" />
+    <Socket socketname="mainhand_02" bonename="RightFingers" />
+    <!-- used for farming fx -->
+    <Socket socketname="offhand_02" bonename="LeftFingers" />
+    <!-- used for farming fx -->
     <Socket socketname="offhand_norotation" bonename="LeftArm_3" />
     <Socket socketname="offhandprojectile" bonename="LeftHandHardPoint" />
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" />
@@ -232,6 +236,13 @@
     <Socket socketname="punchimpact" bonename="Skeleton_Root" positionOffset="0.02 0.1 2.18" />
   </SocketInfo>
   <!-- UNDEAD -->
+  <SocketInfo name="MOB_UNDEAD_CHEST_URN">
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="damage" bonename="Skeleton_Root" positionOffset="0 0.8 0" />    
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 1 0" />    
+    <Socket socketname="urn" bonename="Urn" />
+  </SocketInfo>
   <SocketInfo name="MOB_UNDEAD_SHADE">
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
@@ -269,12 +280,25 @@
     <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
     <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
   </SocketInfo>
+  <SocketInfo name="MOB_UNDEAD_KNIGHT">
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.55 0" />
+    <Socket socketname="arm_left" bonename="LeftArm_2" positionOffset="-0.04 0.03 -0.02" />
+    <Socket socketname="arm_right" bonename="RightArm_2" positionOffset="0.04 -0.03 0.02" />
+    <Socket socketname="upper_arm_left" bonename="LeftArm_1" />
+    <Socket socketname="upper_arm_right" bonename="RightArm_1" rotationOffset="0 0 180" />
+    <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
+    <Socket socketname="leg_left" bonename="LeftLeg_1" positionOffset="-0.42 0 0.04" />
+    <Socket socketname="leg_right" bonename="RightLeg_1" positionOffset="0.42 0 -0.04" />
+    <Socket socketname="torso" bonename="Chest" positionOffset="0.06 0.1 0" />
+  </SocketInfo>
   <SocketInfo name="MOB_UNDEAD_MAGE">
     <Socket socketname="damage" bonename="Spine_2" positionOffset="0 -0.26 0" rotationOffset="90 0 90" />
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.6 0" />
-    <Socket socketname="mainhand" bonename="RightArm_3" />
-    <Socket socketname="offhand" bonename="LeftArm_3" />
+    <Socket socketname="mainhand" bonename="RightArm_3" positionOffset="0.1 0.17 0" rotationOffset="0 -90 0" />
+    <Socket socketname="offhand" bonename="LeftArm_3" positionOffset="-0.1 -0.17 0" rotationOffset="0 90 0" />
     <Socket socketname="mainhandprojectile" bonename="RightArm_3" positionOffset="0 0.15 0" rotationOffset="270 0 0" />
     <Socket socketname="offhandprojectile" bonename="LeftArm_3" positionOffset="0 -0.15 0" rotationOffset="90 0 0" />
     <Socket socketname="root" bonename="Skeleton_Root" />
@@ -312,9 +336,9 @@
     <Socket socketname="damage" bonename="Spine_2" positionOffset="0 -0.26 0" rotationOffset="90 0 90" />
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" scaling="1.25" />
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.6 0" />
-    <Socket socketname="mainhand" bonename="RtHandHardPoint" positionOffset="-0.1110032 1.258003 0.03500211" rotationOffset="358.3872 179.6689 359.1466" />
+    <Socket socketname="mainhand" bonename="RightArm_3" positionOffset="0 0.15 0" rotationOffset="270 0 0" />
     <Socket socketname="offhand" bonename="LeftArm_3" positionOffset="-0.162 -0.23 0.433" rotationOffset="13.78948 340.7224 330.2692" />
-    <Socket socketname="mainhandprojectile" bonename="RightArm_3" positionOffset="0 0.15 0" rotationOffset="270 0 0" />
+    <Socket socketname="mainhandprojectile" bonename="RtHandHardPoint" positionOffset="-0.1110032 1.258003 0.03500211" rotationOffset="358.3872 179.6689 359.1466" />
     <Socket socketname="offhandprojectile" bonename="LeftArm_3" positionOffset="0 -0.15 0" rotationOffset="90 0 0" />
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="lefteye" bonename="Neck_Head" positionOffset="-0.1110866 -0.1273112 -0.04186737" rotationOffset="56 270 0" />
@@ -330,8 +354,10 @@
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.55 0" />
-    <Socket socketname="head" bonename="Neck_Head" positionOffset="-0.24 0.1125 0.5354" rotationOffset="26.28916 85.40974 -173.7568" />
-    <Socket socketname="torso" bonename="Spine_3" positionOffset="-0.4 0 0" />
+    <Socket socketname="head" bonename="Neck_Head" />
+    <Socket socketname="arm_left" bonename="LeftArm_2" />
+    <Socket socketname="arm_right" bonename="RightArm_2" rotationOffset="0 0 180" />
+    <Socket socketname="torso" bonename="Spine_3" />
     <Socket socketname="mainweapon" bonename="RightHandHardPoint" rotationOffset="0 90 -180" />
   </SocketInfo>
   <SocketInfo name="MOB_UNDEAD_HARVESTER">
@@ -348,6 +374,8 @@
     <Socket socketname="trail_mainattack" bonename="RightHandHardPoint" positionOffset="0 -0.51 -1.001331" />
     <Socket socketname="attackimpact" bonename="skeleton" positionOffset="0 0 3.57" rotationOffset="-90 0 0" />
     <Socket socketname="sickle" bonename="LeftHandHardPoint" positionOffset="0 -0.18 1.3" />
+    <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
+    <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
   </SocketInfo>
   <SocketInfo name="MOB_UNDEAD_GENERAL">
     <Socket socketname="damage" bonename="Spine_2" positionOffset="0 -0.26 0" rotationOffset="90 0 90" />
@@ -372,6 +400,25 @@
     <Socket socketname="head" bonename="Head" positionOffset="0.15 -0.2 0" />
     <Socket socketname="jaw" bonename="Jaw" positionOffset="-0.21 -0.18 0" />
     <Socket socketname="spit" bonename="Head" positionOffset="0 -0.7 0" />
+  </SocketInfo>
+  <SocketInfo name="MOB_UNDEAD_SARCOPHAGUS">
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="head" bonename="Head" />
+    <Socket socketname="chest" bonename="Chest" />
+    <Socket socketname="spine" bonename="Spine_1" />
+    <Socket socketname="pelvis" bonename="Pelvis" />
+    <Socket socketname="left_arm_lower" bonename="LeftArm_2" />
+    <Socket socketname="left_arm_upper" bonename="LeftArm_1" />
+    <Socket socketname="left_hand" bonename="LeftArm_3" />
+    <Socket socketname="right_arm_lower" bonename="RightArm_2" />
+    <Socket socketname="right_arm_upper" bonename="RightArm_1" />
+    <Socket socketname="right_hand" bonename="RightArm_3" />
+    <Socket socketname="mainhandprojectile" bonename="RightArm_3" />
+    <Socket socketname="damage" bonename="Skeleton_Root" positionOffset="0 0.5 0" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="root_fx" bonename="Skeleton_Root" positionOffset="0 1.98 0.17" />
+    <Socket socketname="statue_base" bonename="Statue_Base" />
+    <Socket socketname="statue_upper" bonename="Statue_Upper" />
   </SocketInfo>
   <!-- MORGANA -->
   <SocketInfo name="MOB_MORGANA_KNIGHT">
@@ -437,16 +484,43 @@
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.12 0 0" rotationOffset="0 90 0" />
   </SocketInfo>
-  <SocketInfo name="MOB_MORGANA_CULTIST_BOSS">
+  <SocketInfo name="MOB_MORGANA_CULTIST_BOSS_01">
     <Socket socketname="damage" bonename="Spine_2" rotationOffset="90 0 90" />
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.3 0" />
     <Socket socketname="mainhand" bonename="RightHandHardPoint" />
     <Socket socketname="offhand" bonename="LeftHandHardPoint" />
     <Socket socketname="root" bonename="Skeleton_Root" />
-    <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.12 0 0" rotationOffset="0 90 0" />
+    <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0.93 0 0" rotationOffset="0 90 0" />
     <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
     <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
+  </SocketInfo>
+  <SocketInfo name="MOB_MORGANA_CULTIST_BOSS_02">
+    <Socket socketname="damage" bonename="Spine_2" rotationOffset="90 0 90" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.3 0" />
+    <Socket socketname="mainhand" bonename="RightArm_3" positionOffset="0.12 0.05 0" rotationOffset="-90 0 0" />
+    <Socket socketname="offhand" bonename="LeftHandHardPoint" />
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0.51 -0.33 0" rotationOffset="0 90 0" />
+    <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
+    <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
+    <Socket socketname="spawnpoint1" bonename="Skeleton_Root" positionOffset="1.731 0.1 1.731" />
+    <Socket socketname="spawnpoint2" bonename="Skeleton_Root" positionOffset="-1.731 0.1 1.731" />
+  </SocketInfo>
+  <SocketInfo name="MOB_MORGANA_CULTIST_BOSS_03">
+    <Socket socketname="damage" bonename="Spine_2" rotationOffset="90 0 90" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 2.3 0" />
+    <Socket socketname="mainhand" bonename="RightHandHardPoint" />
+    <Socket socketname="offhand" bonename="LeftHandHardPoint" />
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0 0.21 -0.1" rotationOffset="-50 110 0" />
+    <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
+    <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
+    <Socket socketname="offhandprojectile" bonename="LeftHandHardPoint" positionOffset="0 -0.21 0.1" rotationOffset="75.5 -128 0" />
+    <Socket socketname="mainhand_claw" bonename="RightArm_2" rotationOffset="0 90 -90" />
+    <Socket socketname="offhand_claw" bonename="LeftArm_2" rotationOffset="0 -90 -90" />
   </SocketInfo>
   <!-- HERETICS -->
   <SocketInfo name="MOB_HERETIC_ARCHER">
@@ -1221,6 +1295,20 @@
     <Socket socketname="foot_03" bonename="mount|LeftLeg_3" positionOffset="-0.15 0.12 0" rotationOffset="0 -90 0" />
     <Socket socketname="foot_04" bonename="mount|RightLeg_3" positionOffset="0.15 -0.12 0" rotationOffset="0 90 0" />
   </SocketInfo>
+  <SocketInfo name="MOUNT_PIG">
+    <Socket socketname="root_mount" bonename="mount|Skeleton_Root" />
+    <Socket socketname="foot_01" bonename="mount|LeftArm_3" positionOffset="-0 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_02" bonename="mount|RightArm_3" positionOffset="00 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_03" bonename="mount|LeftLegToeBase" positionOffset="0 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_04" bonename="mount|RightLegToeBase" positionOffset="0 0 0" rotationOffset="0 0 0" />
+  </SocketInfo>
+  <SocketInfo name="MOUNT_RAM">
+    <Socket socketname="root_mount" bonename="mount|Skeleton_Root" />
+    <Socket socketname="foot_01" bonename="mount|LeftArm_3" positionOffset="0 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_02" bonename="mount|RightArm_3" positionOffset="0 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_03" bonename="mount|LeftLegToeBase" positionOffset="0 0 0" rotationOffset="0 0 0" />
+    <Socket socketname="foot_04" bonename="mount|RightLegToeBase" positionOffset="0 0 0" rotationOffset="0 0 0" />
+  </SocketInfo>
   <!--*************************************************************************************************************************************************************-->
   <!--SPELLEFFECTAREAS-->
   <!--*************************************************************************************************************************************************************-->
@@ -1233,6 +1321,8 @@
     <Socket socketname="left" bonename="left" positionOffset="0 2 0" />
     <Socket socketname="right" bonename="right" positionOffset="0 2 0" />
     <Socket socketname="heretic_ballista" bonename="center" positionOffset="0 1.5 0" />
+    <Socket socketname="axethrowerCenter" bonename="center" positionOffset="0 2 0" rotationOffset="0 0 90" />
+    <Socket socketname="axethrowerCenterReverse" bonename="center" positionOffset="0 2 0" rotationOffset="0 0 -90" />
   </SocketInfo>
   <SocketInfo name="SEA_RECT">
     <Socket socketname="center" bonename="center" positionOffset="0 2 0" />
@@ -1246,12 +1336,14 @@
     <Socket socketname="TotemLaser" bonename="backleft" positionOffset="0.5 1.5 0" />
     <Socket socketname="backcenter" bonename="backcenter" positionOffset="0 2 0" />
     <Socket socketname="backcenterLaser" bonename="backcenter" positionOffset="0 2 1" />
+    <Socket socketname="backcenterLaser2" bonename="backcenter" positionOffset="0 1 0" />
     <Socket socketname="backcenterGround" bonename="backcenter" />
     <Socket socketname="backright" bonename="backright" positionOffset="0 2 0" />
     <Socket socketname="DemonBeamBack" bonename="backleft" positionOffset="0.5 0.2 0" />
     <Socket socketname="DemonBeamFront" bonename="frontleft" positionOffset="0.5 0.2 0" />
     <Socket socketname="BeamFront" bonename="backleft" positionOffset="0.5 1 0" />
     <Socket socketname="BeamBack" bonename="frontleft" positionOffset="0.5 1 0" />
+    <Socket socketname="SplittingClaw" bonename="frontcenter" positionOffset="0 0 0" rotationOffset="0 0 90" />
   </SocketInfo>
   <SocketInfo name="SEA_ARC">
     <Socket socketname="center" bonename="center" positionOffset="0 2 0" />

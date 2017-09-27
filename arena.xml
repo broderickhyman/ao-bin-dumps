@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<arena xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="arena.xsd">
+
+  <arenaregistrationtypes>
+    <arenaregistrationtype name="unranked_1" elocategory="unranked"    category="unranked" groupsize="1"/>
+    <arenaregistrationtype name="unranked_2" elocategory="unranked"    category="unranked" groupsize="2"/>
+    <arenaregistrationtype name="unranked_3" elocategory="unranked"    category="unranked" groupsize="3"/>
+    <arenaregistrationtype name="unranked_4" elocategory="unranked"    category="unranked" groupsize="4"/>
+    <arenaregistrationtype name="unranked_5" elocategory="unranked"    category="unranked" groupsize="5"/>
+    <!--
+    <arenaregistrationtype name="ranked_1"   elocategory="ranked_1"    category="ranked"   groupsize="1"/>
+    <arenaregistrationtype name="ranked_2"   elocategory="ranked_2"    category="ranked"   groupsize="2"/>
+    <arenaregistrationtype name="ranked_3"   elocategory="ranked_3"    category="ranked"   groupsize="3"/>
+    <arenaregistrationtype name="ranked_5"   elocategory="ranked_5"    category="ranked"   groupsize="5"/>
+    -->
+  </arenaregistrationtypes>
+
+  <arenacategories>
+    <arenacategory name="unranked" ruleset="stdgvg" cluster="ARENA-STANDARD" matchtype="MATCH_ARENA" displayname="@ARENA_UNRANKED"
+                   startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                   elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                   scoreperelodiff="5" scorepersecond="2" scorefirsthealer="100" scoregroupbalance="100"
+                   minitempoweraverage="700">
+
+      <neededitemroles>
+        <role itemroleid="ARENA_HEAL" min="1" max="1" />
+      </neededitemroles>
+
+      <groupcompositions>
+        <groupcomposition size="2" allowedallies="" allowedenemies="2;1,1"/>
+      </groupcompositions>
+
+      <rewards rewardsperday="3">
+        <itemreward itemid="QUESTITEM_TOKEN_ARENA_UNRANKED" enchantmentlevel="0" count="3"/>
+      </rewards>
+
+    </arenacategory>
+    <!--
+    <arenacategory name="ranked" ruleset="stdgvg" cluster="ARENA-STANDARD" matchtype="MATCH_ARENA" displayname="@ARENA_UNRANKED_MAPTEST"
+                   startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                   elopersecond="20" eloradiusbase="20" minpotentials="2" maxpotentials="200"
+                   scoreperelodiff="5" scorepersecond="2" scorefirsthealer="100"
+                   minitempoweraverage="200">
+      <neededitemroles>
+        <role itemroleid="ARENA_HEAL" min="1" max="1" />
+      </neededitemroles>
+
+      <groupcompositions>
+        <groupcomposition size="2" allowedallies="3;2,1;1,1,1" allowedenemies="3,2;2,2,1"/>
+        <groupcomposition size="3" allowedallies="2;1,1" allowedenemies="4,1;3,2;2,2,1"/>
+        <groupcomposition size="4" allowedallies="1" allowedenemies="4;1"/>
+        <groupcomposition size="5" allowedallies="" allowedenemies="5"/>
+      </groupcompositions>
+
+      <rewards rewardsperday="3">
+        <itemreward itemid="QUESTITEM_TOKEN_ARENA_UNRANKED" enchantmentlevel="0" count="3"/>
+      </rewards>
+
+    </arenacategory>
+    -->
+  </arenacategories>
+
+  <arenarules>
+    <!--
+    <arenaruleset name="2v2" teamsize="2" scorefactor="1.0"/>
+    -->
+    <arenaruleset name="stdgvg" teamsize="5" scorefactor="1.0"/>
+  </arenarules>
+  
+</arena>
