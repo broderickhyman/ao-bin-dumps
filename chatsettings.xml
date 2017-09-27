@@ -3,10 +3,8 @@
 
   <!-- Setting for the Chat UI -->
   <ChatUi maxtabs="10" selectedtab="0" maxmuted="10" maxtabnamelength="10">
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="false" showchannelnames="true">
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="false" showchannelnames="true" maininputchannel="global">
       <Channel id="global" />
-      <Channel id="trade" />
-      <Channel id="recruit" />
       <Channel id="local" />
       <Channel id="say" />
       <Channel id="emote" />
@@ -14,13 +12,20 @@
       <Channel id="alliance" />
       <Channel id="lookingforgroup" />
       <Channel id="party" />
+	    <Channel id="duell" />	  
       <Channel id="personal" />
       <Channel id="killplayer" />
       <Channel id="system" />
     </DefaultTab>
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="false" showchannelnames="true">
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="false" showchannelnames="true" maininputchannel="help">
       <Channel id="help" />
       <Channel id="personal" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_RECRUIT" showtimestamps="false" showchannelnames="true" maininputchannel="recruit">
+      <Channel id="recruit" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_TRADE" showtimestamps="false" showchannelnames="true" maininputchannel="trade">
+      <Channel id="trade" />
     </DefaultTab>
     <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_COMBAT" showtimestamps="true" showchannelnames="false">
       <Channel id="takedamage" />
@@ -34,15 +39,15 @@
     </DefaultTab>
 
     <!-- Special Tabs that will be auto created -->
-    <GuildTab showtimestamps="true" showchannelnames="false">
+    <GuildTab showtimestamps="true" showchannelnames="false" maininputchannel="guild">
       <Channel id="guild" />
       <Channel id="personal" />
     </GuildTab>
-    <AllianceTab showtimestamps="true" showchannelnames="false">
+    <AllianceTab showtimestamps="true" showchannelnames="false" maininputchannel="alliance">
       <Channel id="alliance" />
       <Channel id="personal" />
     </AllianceTab>
-    <PartyTab showtimestamps="true" showchannelnames="false">
+    <PartyTab showtimestamps="true" showchannelnames="false" maininputchannel="party">
       <Channel id="party" />
       <Channel id="personal" />
     </PartyTab>    
