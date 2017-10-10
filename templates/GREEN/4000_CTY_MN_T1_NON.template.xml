@@ -1,5 +1,25 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Master/City/4000_CTY_MN_T1_NON.unity" unityguid="427c4e1d8bb832640b1a492d5d3b1e91" editorBoundsMin="0 0" editorBoundsMax="0 0" colBoundsMin="-305 -305" colBoundsMax="297 605">
   <criticalscenemembers>
+    <criticalscenemember id="actionbuilding_01" type="actionbuilding" layerId="Layer_01">
+      <tile name="MOUNTAIN_GREEN_MARKETPLACE" pos="-12 0 38" roty="108">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="actionbuilding_03" type="actionbuilding" layerId="Layer_01">
+      <tile name="MOUNTAIN_GREEN_T1_BANK" pos="-8 0 0" roty="270">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_05" type="exit" layerId="Layer_02">
+      <tile name="MOUNTAIN_GREEN_MARKETPLACE_ENTRANCE" pos="-15 0 35" roty="90">
+        <exit size="10 12.5" spawnpos="13 5" faction="None" kind="Cluster" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_06" type="exit" layerId="Layer_02">
+      <tile name="MOUNTAIN_GREEN_T1_BANK_ENTRANCE" pos="-10 0 0">
+        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="actionbuilding_02" type="actionbuilding" layerId="">
       <tile name="MOUNTAIN_GREEN_T8_MELDBUILDING" pos="44 0 12" roty="180">
         <actionbuilding />
@@ -83,16 +103,6 @@
             <guard pos="-5.110537 87.36638" />
           </guards>
         </exit>
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_05" type="exit" layerId="">
-      <tile name="MOUNTAIN_GREEN_MARKETPLACE_ENTRANCE" pos="-15 0 35" roty="90">
-        <exit size="10 12.5" spawnpos="13 5" faction="None" kind="Cluster" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_06" type="exit" layerId="">
-      <tile name="MOUNTAIN_GREEN_T1_BANK_ENTRANCE" pos="-10 0 0">
-        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="realestate_01" type="realestate" layerId="">
@@ -497,6 +507,52 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="included">
+        <criticaltile name="MOUNTAIN_GREEN_MARKETPLACE" pos="-12 0 38" roty="108" id="actionbuilding_01" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-12 0 37" roty="108">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <criticaltile name="MOUNTAIN_GREEN_T1_BANK" pos="-8 0 0" roty="270" id="actionbuilding_03" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-8 0 0" roty="270">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="MOUNTAIN_GREEN_FILL_CITY_LANTERN_B" pos="-9.5 0 -9.5" roty="180" />
+        <tile name="MOUNTAIN_GREEN_FILL_CITY_LANTERN_B" pos="-15.5 0 5.5" roty="180" />
+        <tile name="MOUNTAIN_GREEN_FILL_CITY_LANTERN_B" pos="1.5 0 2.5" roty="180" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-20 0 0" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-20 0 -10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-10 0 -10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="0 0 0" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="0 0 -10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="0 0 10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-20 0 10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-10 0 10" />
+        <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-10 0 0" />
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="separated">
+        <criticaltile name="MOUNTAIN_GREEN_MARKETPLACE_ENTRANCE" pos="-15 0 35" roty="90" id="exit_05" type="exit">
+          <exit size="10 12.5" spawnpos="13 5" faction="None" kind="Cluster" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-15 0 36" roty="90">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <criticaltile name="MOUNTAIN_GREEN_T1_BANK_ENTRANCE" pos="-10 0 0" id="exit_06" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-10 0 0">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="MOUNTAIN_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-14.5 0 26.5" />
+        <tile name="MOUNTAIN_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-7.5 0 31.5" roty="318" />
+      </layer>
+    </layergroup>
     <tile name="MOUNTAIN_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-150 12 370" roty="270" />
     <tile name="MOUNTAIN_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-130 12 470" />
     <tile name="MOUNTAIN_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-170 12 360" roty="180" />
@@ -6630,8 +6686,6 @@
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_PATCH_A" pos="-30 0 19" roty="231.58" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-140 -16 -40" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_16M_CORNER" pos="-180 12 -40" />
-    <tile name="MOUNTAIN_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-14.5 0 26.5" />
-    <tile name="MOUNTAIN_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-7.5 0 31.5" roty="317.97" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-10 0 40" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_SMALL_STRAIGHT_B" pos="5 20 -135.5" />
     <tile name="MOUNTAIN_GREEN_FILL_CITY_LANTERN_A" pos="-80.5 -12 24.5" roty="210" />
@@ -6682,18 +6736,6 @@
         </guards>
       </exit>
     </criticaltile>
-    <criticaltile name="MOUNTAIN_GREEN_MARKETPLACE_ENTRANCE" pos="-15 0 35" roty="90" id="exit_05" type="exit">
-      <exit size="10 12.5" spawnpos="13 5" faction="None" kind="Cluster" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-15 0 36" roty="90">
-      <minimapmarker type="Marketplace" />
-    </tile>
-    <criticaltile name="MOUNTAIN_GREEN_T1_BANK_ENTRANCE" pos="-10 0 0" id="exit_06" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-10 0 0">
-      <minimapmarker type="Bank" />
-    </tile>
     <criticaltile name="RealEstate" pos="-45 12 -65" id="realestate_01" type="realestate">
       <realestate size="20 20" platepos="-34.5 12 -65" doorpos="-35 14.5 -61" doorsize="1 7 2" overridesaleprice="-1" plateorientation="SouthEast" locationquality="A" />
     </criticaltile>

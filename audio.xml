@@ -523,6 +523,14 @@
     <ArmorType name="leather"/>
     <WeaponType name="bolt_swoosh"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MORGANA_BAT">
+    <CharType name="mob"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_bat"/>
+    <Size name="wing_small"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="bite_small"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MORGANA_BLOODHOUND">
     <CharType name="mob"/>
     <MobFaction name="hide"/>
@@ -1339,7 +1347,24 @@
     <OnCastFinished name="Play_arrow_cast_medium"/>
     <OnSpellHit name="Play_fire_impact_medium" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_HERETIC_BALLISTA_ATTACK">
+    <OnCastStart name="Play_ballista_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_BALLISTA_BOSS_MINE">
+    <OnCastFinished name="Play_ballista_boss_mine_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_BALLISTA_BOSS_CONE">
+    <OnCastStart name="Play_ballista_boss_cone_vo" />
+  	<OnCastFinished name="Play_fire_cast_medium" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_BALLISTA_BOSS_MORTAR">
+    <OnCastFinished name="Play_ballista_boss_mortar_vo" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_HERETIC_MORTAR">
     <OnCastFinished name="Play_mortar_shoot" />
   </WwiseEventInfo>

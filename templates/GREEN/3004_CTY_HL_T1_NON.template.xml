@@ -1,5 +1,25 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Master/City/3004_CTY_HL_T1_NON.unity" unityguid="6321e1303a3a20b4e90e80434409e6a5" editorBoundsMin="0 0" editorBoundsMax="0 0" colBoundsMin="-305 -305" colBoundsMax="295 605">
   <criticalscenemembers>
+    <criticalscenemember id="actionbuilding_01" type="actionbuilding" layerId="Layer_01">
+      <tile name="HIGHLAND_GREEN_MARKETPLACE" pos="-23 0 4" roty="81">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="actionbuilding_03" type="actionbuilding" layerId="Layer_01">
+      <tile name="HIGHLAND_GREEN_T1_BANK" pos="-4 0 -16">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_05" type="exit" layerId="Layer_02">
+      <tile name="HIGHLAND_GREEN_MARKETPLACE_ENTRANCE" pos="-24.5 -1 4.5">
+        <exit size="10 10" spawnpos="7.900759 -8.191306" faction="None" kind="Cluster" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_06" type="exit" layerId="Layer_02">
+      <tile name="HIGHLAND_GREEN_T1_BANK_ENTRANCE" pos="0 0 -10">
+        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="islandaccesspoint_01" type="islandaccesspoint" layerId="">
       <tile name="HIGHLAND_GREEN_ISLAND_SELLER" pos="-29 0 -31" roty="90">
         <islandaccesspoint />
@@ -83,16 +103,6 @@
             <guard pos="21.11109 -32.90076" />
           </guards>
         </exit>
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_05" type="exit" layerId="">
-      <tile name="HIGHLAND_GREEN_MARKETPLACE_ENTRANCE" pos="-24.5 -1 4.5">
-        <exit size="10 10" spawnpos="7.900759 -8.191306" faction="None" kind="Cluster" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_06" type="exit" layerId="">
-      <tile name="HIGHLAND_GREEN_T1_BANK_ENTRANCE" pos="0 0 -10">
-        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="realestate_01" type="realestate" layerId="">
@@ -497,6 +507,47 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="market_bank_separation">
+      <layer id="Layer_01" name="included">
+        <criticaltile name="HIGHLAND_GREEN_MARKETPLACE" pos="-23 0 4" roty="81" id="actionbuilding_01" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-22 0 4" roty="81">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <criticaltile name="HIGHLAND_GREEN_T1_BANK" pos="-4 0 -16" id="actionbuilding_03" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-4 0 -16">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="HIGHLAND_GREEN_VEG_MOSS_GREEN_SMALL_A" pos="-5.5 0 -19.5" />
+        <tile name="HIGHLAND_GREEN_VEG_MOSS_GREEN_SMALL_A" pos="-2.5 0 -11.5" />
+        <tile name="HIGHLAND_GREEN_VEG_MOSS_BROWN_SMALL_A" pos="-7.5 0 -16.5" />
+        <tile name="HIGHLAND_GREEN_VEG_MOSS_BROWN_SMALL_A" pos="-6.5 0 -12.5" />
+        <tile name="HIGHLAND_GREEN_VEG_MOSS_GREEN_A" pos="-0.5 0 -17.5" />
+        <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 0 -10" />
+        <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 0 0" />
+      </layer>
+      <layer id="Layer_02" name="separated">
+        <criticaltile name="HIGHLAND_GREEN_MARKETPLACE_ENTRANCE" pos="-24.5 -1 4.5" id="exit_05" type="exit">
+          <exit size="10 10" spawnpos="7.900759 -8.191306" faction="None" kind="Cluster" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-25.5 -1 4.5">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <criticaltile name="HIGHLAND_GREEN_T1_BANK_ENTRANCE" pos="0 0 -10" id="exit_06" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="0 0 -10">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-16.5 0 2.5" roty="302" />
+        <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-22.5 0 -3.5" roty="322" />
+        <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 -13 -10" roty="90" />
+        <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 -13 0" roty="90" />
+      </layer>
+    </layergroup>
     <tile name="HIGHLAND_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-150 12 370" roty="270" />
     <tile name="HIGHLAND_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-130 12 470" />
     <tile name="HIGHLAND_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-170 12 360" roty="180" />
@@ -2581,7 +2632,6 @@
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_INNERCORNER_PLACE_A" pos="-10 0 10" />
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="-10 0 0" />
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 0 10" roty="90" />
-    <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 -13 -10" roty="90" />
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="-10 0 -10" />
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="-20 0 -10" />
     <tile name="HIGHLAND_GREEN_ROAD_ROAD_RAMP_A" pos="10 -4 -50" roty="90" />
@@ -7417,10 +7467,7 @@
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_STRAIGHT_A" pos="20 0 -10" roty="180" />
     <tile name="HIGHLAND_GREEN_VEG_MOSS_BROWN_SMALL_A" pos="-81.5 16 24.5" roty="163" />
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_STRAIGHT_B" pos="20 0 -20" roty="180" />
-    <tile name="HIGHLAND_GREEN_ROAD_ROAD_PLACE_A" pos="0 -13 0" roty="90" />
-    <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-16.5 0 2.5" roty="302" />
     <tile name="HIGHLAND_GREEN_CASTLE_BRIDGE_WOODEN_DIAGONAL_A_WIDE" pos="-84 16 33" roty="180" />
-    <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="-22.5 0 -3.5" roty="322" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_LANTERN_A" pos="-75 16 31" roty="336" />
     <tile name="HIGHLAND_GREEN_RIVER_16M_STRAIGHT_B" pos="240 -44 -180" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_SIGN_PVP_AREA_A_ANIM" pos="-24.5 2 -7.5" roty="93.42" />
@@ -7475,18 +7522,6 @@
         </guards>
       </exit>
     </criticaltile>
-    <criticaltile name="HIGHLAND_GREEN_MARKETPLACE_ENTRANCE" pos="-24.5 -1 4.5" id="exit_05" type="exit">
-      <exit size="10 10" spawnpos="7.900759 -8.191306" faction="None" kind="Cluster" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-25.5 -1 4.5">
-      <minimapmarker type="Marketplace" />
-    </tile>
-    <criticaltile name="HIGHLAND_GREEN_T1_BANK_ENTRANCE" pos="0 0 -10" id="exit_06" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="0 0 -10">
-      <minimapmarker type="Bank" />
-    </tile>
     <criticaltile name="RealEstate" pos="35 4 -15" id="realestate_01" type="realestate">
       <realestate size="20 20" platepos="35 4 -4.5" doorpos="31 6.5 -5" doorsize="2 7 1" overridesaleprice="-1" plateorientation="NorthEast" locationquality="A" />
     </criticaltile>
