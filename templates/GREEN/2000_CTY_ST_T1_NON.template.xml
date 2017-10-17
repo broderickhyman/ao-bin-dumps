@@ -1,5 +1,25 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Master/City/2000_CTY_ST_T1_NON.unity" unityguid="9b8d3ef6893fb5e4b815fadcc772bb87" editorBoundsMin="0 0" editorBoundsMax="0 0" colBoundsMin="-305 -315" colBoundsMax="308 605">
   <criticalscenemembers>
+    <criticalscenemember id="actionbuilding_01" type="actionbuilding" layerId="Layer_01">
+      <tile name="STEPPE_GREEN_MARKETPLACE" pos="-23 -4 13" roty="90">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="actionbuilding_04" type="actionbuilding" layerId="Layer_01">
+      <tile name="STEPPE_GREEN_T1_BANK" pos="-5 -4 -15">
+        <actionbuilding />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_05" type="exit" layerId="Layer_02">
+      <tile name="STEPPE_GREEN_MARKETPLACE_ENTRANCE" pos="-25 -4 15" roty="90">
+        <exit size="10 10" spawnpos="6.993252 6.630219" faction="None" kind="Cluster" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_06" type="exit" layerId="Layer_02">
+      <tile name="STEPPE_GREEN_T1_BANK_ENTRANCE" pos="0 -4 -11">
+        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="respawnpoint_01" type="respawnpoint" layerId="">
       <tile name="RespawnPoint" pos="-27 -4 -10">
         <respawnpoint type="RespawnAfterDeath" />
@@ -83,16 +103,6 @@
             <guard pos="-7.540833 38.76315" />
           </guards>
         </exit>
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_05" type="exit" layerId="">
-      <tile name="STEPPE_GREEN_MARKETPLACE_ENTRANCE" pos="-25 -4 15" roty="90">
-        <exit size="10 10" spawnpos="6.993252 6.630219" faction="None" kind="Cluster" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="exit_06" type="exit" layerId="">
-      <tile name="STEPPE_GREEN_T1_BANK_ENTRANCE" pos="0 -4 -11">
-        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="realestate_01" type="realestate" layerId="">
@@ -497,6 +507,47 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="market_bank_separation">
+      <layer id="Layer_01" name="included">
+        <tile name="STEPPE_GREEN_GROUND" pos="-20 -4 10" />
+        <tile name="STEPPE_GREEN_GROUND" pos="-30 -4 10" />
+        <tile name="STEPPE_GREEN_GROUND" pos="-20 -4 20" />
+        <criticaltile name="STEPPE_GREEN_MARKETPLACE" pos="-23 -4 13" roty="90" id="actionbuilding_01" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-22 -4 12" roty="90">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <tile name="STEPPE_GREEN_CITY_WALL_CORNER_A" pos="-30 -32 20" roty="270" />
+        <criticaltile name="STEPPE_GREEN_T1_BANK" pos="-5 -4 -15" id="actionbuilding_04" type="actionbuilding">
+          <actionbuilding />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-4 -4 -14">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="STEPPE_GREEN_FILL_ROCK_ROAD_B" pos="-11 -4 -7.5" roty="292" />
+        <tile name="STEPPE_GREEN_FILL_ROCK_ROAD_C" pos="1 -4 -13.5" roty="315" />
+        <tile name="STEPPE_GREEN_FILL_ROCK_ROAD_C" pos="-0.5 -4 -19" roty="348" />
+        <tile name="STEPPE_GREEN_FILL_ROCK_ROAD_A" pos="-5 -4 -26.5" roty="70" />
+        <tile name="STEPPE_GREEN_FILL_ROCK_ROAD_C" pos="-10 -4 -18.5" roty="90" />
+        <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="0 -4 -10" />
+      </layer>
+      <layer id="Layer_02" name="separated">
+        <criticaltile name="STEPPE_GREEN_MARKETPLACE_ENTRANCE" pos="-25 -4 15" roty="90" id="exit_05" type="exit">
+          <exit size="10 10" spawnpos="6.993252 6.630219" faction="None" kind="Cluster" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="-25 -4 16" roty="90">
+          <minimapmarker type="Marketplace" />
+        </tile>
+        <criticaltile name="STEPPE_GREEN_T1_BANK_ENTRANCE" pos="0 -4 -11" id="exit_06" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
+        </criticaltile>
+        <tile name="MiniMapMarker" pos="0 -4 -11">
+          <minimapmarker type="Bank" />
+        </tile>
+        <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="0 -12 -10" roty="270" />
+      </layer>
+    </layergroup>
     <tile name="STEPPE_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-150 12 370" roty="270" />
     <tile name="STEPPE_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-130 12 470" />
     <tile name="STEPPE_GREEN_CITY_4M_STAIRS_SINGLE_A" pos="-170 12 360" roty="180" />
@@ -7319,7 +7370,6 @@
     <tile name="STEPPE_GREEN_ROAD_ROAD_INNERCORNER_PLACE_A" pos="-40 -4 -110" roty="90" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_INNERCORNER_PLACE_A" pos="-10 -4 -30" roty="270" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_INNERCORNER_PLACE_A" pos="10 -4 -30" roty="180" />
-    <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="0 -12 -10" roty="270" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="-10 -4 -10" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="-10 -4 -20" roty="180" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_PLACE_A" pos="0 -4 -20" />
@@ -9798,18 +9848,6 @@
         </guards>
       </exit>
     </criticaltile>
-    <criticaltile name="STEPPE_GREEN_MARKETPLACE_ENTRANCE" pos="-25 -4 15" roty="90" id="exit_05" type="exit">
-      <exit size="10 10" spawnpos="6.993252 6.630219" faction="None" kind="Cluster" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-25 -4 16" roty="90">
-      <minimapmarker type="Marketplace" />
-    </tile>
-    <criticaltile name="STEPPE_GREEN_T1_BANK_ENTRANCE" pos="0 -4 -11" id="exit_06" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="0 -4 -11">
-      <minimapmarker type="Bank" />
-    </tile>
     <criticaltile name="RealEstate" pos="-25 -4 -75" id="realestate_01" type="realestate">
       <realestate size="20 20" platepos="-35.5 -4 -75" doorpos="-35 -1.5 -78" doorsize="1 7 2" overridesaleprice="-1" plateorientation="NorthWest" locationquality="A" />
     </criticaltile>
