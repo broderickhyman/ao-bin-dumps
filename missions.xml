@@ -2,7 +2,32 @@
 <missions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missions.xsd">
   <!-- MISSIONS -->
   <!--TestVersion 0.1-->
+  <!-- EVENTS -->
+  <!-- HALLOWEEN -->
+  <mission uniquename="MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB" faction="ROYALARMY" title="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_TITLE" offertext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_OFFERTEXT" progresstext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="0" tags="halloween" offertimeout="0" missiontimeout="10800" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_COMPLETIONTEXT" >
+    <!-- GOTO_CRAFTER -->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="20"/>
+      </dynamiccluster>
+      <dynamicagent name ="HEAD">
+        <distancefromagent mindistance="0" maxdistance="20"/>
+        <agenttag tag="HALLOWEEN_AGENT_B"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="HEAD" />
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="QUESTITEM_TOKEN_EVENT_HALLOWEEN_2017" count="50"/>
+    </rewards>
+  </mission>
 
+
+
+  <!-- TUTORIAL -->
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="commander" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_COMPLETIONTEXT" >
     <!-- GOTO_CRAFTER -->
     <variables>
