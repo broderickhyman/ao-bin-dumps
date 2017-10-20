@@ -2988,11 +2988,11 @@
     <spellimmunity target="all" time="60" spellname="SPAWN_INVULNERABILITY" expireafterdistance="150" />
     <spellimmunity target="all" time="60" spellname="SPAWN_BUFFIMMUNITY" expireafterdistance="150" />
   </activespell>
-  <activespell uniquename="ENABLEPVP" damagecancelscasting="true" target="all" category="instant" castingtime="15.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uiatlas="RefSpellAtlas" neutraleffect="true" buffpriority="10">
+  <activespell uniquename="ENABLEPVP" damagecancelscasting="true" target="all" category="instant" castingtime="15.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uiatlas="RefSpellAtlas" neutraleffect="true" buffpriority="10" ignorecasttimereductionbonus="true">
     <changepvpstance />
     <applyspell spell="CANNOTDISABLEPVP" target="self" />
   </activespell>
-  <activespell uniquename="DISABLEPVP" damagecancelscasting="true" target="all" category="instant" castingtime="15.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uiatlas="RefSpellAtlas" neutraleffect="true" buffpriority="10">
+  <activespell uniquename="DISABLEPVP" damagecancelscasting="true" target="all" category="instant" castingtime="15.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uiatlas="RefSpellAtlas" neutraleffect="true" buffpriority="10" ignorecasttimereductionbonus="true">
     <changepvpstance />
   </activespell>
   <activespell uniquename="CANNOTDISABLEPVP" uisprite="CRIMEDEBUFF_YELLOW" target="all" category="crimedebuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uiatlas="RefSpellAtlas" neutraleffect="true" buffpriority="10">
@@ -3892,7 +3892,7 @@
     <buffovertime target="self" type="magicattackdamagebonus" value="0.05" time="3600" />
   </activespell>
   <!--######################################-->
-  <!--########## Christmas Vanity ##########-->
+  <!--############### Vanity ###############-->
   <!--######################################-->
   <activespell uniquename="VANITY_CONSUMABLE_FIREWORKS_BLUE" target="ground" category="buff" castingtime="0.5" recastdelay="0" energyusage="10" castrange="3" showgizmo="false" uitype="damage" uiatlas="RefSpellAtlas" castanimation="cast_heal">
     <spellvfx target="ground" event="OnCastStart" prefab="FX/ClientPrefabs/fx_vanity_fireworks_blue" socket="floor" duration="8" />
@@ -3918,6 +3918,10 @@
     <spellvfx target="self" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_vanity_snow_falling" duration="10" />
     <AudioInfo name="VANITY_XMAS_HEAD" />
   </activespell>
+  <activespell uniquename="VANITY_SKELETON_LAUGH" uisprite="TAUNT" target="self" castingtime="3.05" castrange="0" energyusage="0" recastdelay="10" category="instant" hitdelay="0" standtime="0" castanimation="laugh_halloween" uitype="buff" uiatlas="RefSpellAtlas" animmode="SingleAnim" ignorecasttimereductionbonus="true" >
+  </activespell>
+  
+  
   <!--######################################-->
   <!-- Test Spells -->
   <activespell uniquename="POISONCLOUD" target="ground" category="damage" castingtime="5" recastdelay="3" energyusage="10" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
@@ -15595,7 +15599,7 @@
     <buffovertime target="friendother" type="movespeedbonus" value="0.2" time="3.1" effectarearadius="3"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_critter_essence_smoke_body" socket="damage" constraintpreset="pointconstraint" size="2"/>
   </activespell>
-<activespell uniquename="MOB_UNDEAD_KNIGHT_SPLITTING_STRIKE" uisprite="WINDWALL" target="ground" castingtime="0" hitdelay="1.7" standtime="2" castrange="8" recastdelay="11" energyusage="10" category="damage" uitype="damage" uiatlas="RefSpellAtlas" castanimation="melee_highstrike" animmode="SingleAnim" assessment="negative">
+<activespell uniquename="MOB_UNDEAD_KNIGHT_SPLITTING_STRIKE" uisprite="WINDWALL" target="ground" castingtime="1.5" hitdelay="0.2" interruptiblebyspell="false" standtime="2" castrange="8" recastdelay="11" energyusage="10" category="damage" uitype="damage" uiatlas="RefSpellAtlas" castanimation="melee_highstrike" animmode="SingleAnim" assessment="negative">
     <spellindicationarea target="enemy" position="atcaster" visible="true">
       <area>
         <shape>
@@ -20063,6 +20067,52 @@
     <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" constraintpreset="default"/>
     <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_spell_flamepillar_02" socket="floor" size="0.7" constraintpreset="inworld" />
   </activespell>
+
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_SLOW" target="ground" castingtime="0" recastdelay="1" energyusage="0" castrange="15" category="instant" uitype="damage" uiatlas="RefSpellAtlas" assessment="negative" >
+    <spelleffectarea target="allplayers" effect="SPELLZONE_HALLOWEEN_EFFECT_SLOW" applyeffectonlyoncepertarget="false" position="attarget" time="0" visible="false" effectarearadius="3" removeonleave="true" />
+  </activespell>
+  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_SLOW" uisprite="INCINERATE" target="allplayers" castingtime="0" recastdelay="1" energyusage="0" castrange="1" category="instant" uitype="damage" uiatlas="RefSpellAtlas">
+    <!-- <attributechangeovertime target="allplayers" attribute="health" change="-1500" initialinterval="1" interval="2" count="100" effecttype="magic" /> -->
+    <buffovertime target="allplayers" type="movespeedbonus" value="-0.4" time="0" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true"/>
+    <!-- <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="floor" constraintpreset="pointconstraint"/> -->
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" constraintpreset="default"/>
+
+    <!-- <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_spell_flamepillar_02" socket="floor" size="0.7" constraintpreset="inworld" /> -->
+  </activespell>
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_FAST" target="ground" castingtime="0" recastdelay="1" energyusage="0" castrange="15" category="instant" uitype="damage" uiatlas="RefSpellAtlas" assessment="negative" >
+    <spelleffectarea target="allplayers" effect="SPELLZONE_HALLOWEEN_EFFECT_FAST" applyeffectonlyoncepertarget="false" position="attarget" time="0" visible="false" effectarearadius="3" removeonleave="false" />
+  </activespell>
+  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_FAST" uisprite="INCINERATE" target="allplayers" castingtime="0" recastdelay="1" energyusage="0" castrange="1" category="instant" uitype="damage" uiatlas="RefSpellAtlas">
+    <!-- <attributechangeovertime target="allplayers" attribute="health" change="-1500" initialinterval="1" interval="2" count="100" effecttype="magic" /> -->
+    <buffovertime target="allplayers" type="movespeedbonus" value="1.6" time="2" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true"/>
+    <!-- <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="floor" constraintpreset="pointconstraint"/> -->
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" constraintpreset="default"/>
+    <!-- <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_spell_flamepillar_02" socket="floor" size="0.7" constraintpreset="inworld" /> -->
+  </activespell>
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_POISON" target="ground" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
+    <spelleffectarea target="allplayers" effectarearadius="5" time="0" effect="SPELLZONE_HALLOWEEN_EFFECT_POISON" removeonleave="false" />
+  </activespell>
+  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_POISON" target="allplayers" uisprite="POISONEDKNIFE" castingtime="0.0" hitdelay="0" standtime="0.4" disruptionfactor="0.0" recastdelay="10" energyusage="0" castrange="30" uiatlas="RefSpellAtlas" uitype="damage" category="damage" >
+    <attributechangeovertime target="allplayers" attribute="health" change="-20" effecttype="magic" initialinterval="2" interval="2" count="10000" />
+	<buffovertime target="allplayers" type="hitpointsregeneration" value="-1000" time="3600" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_poison_nosound" socket="floor" constraintpreset="default"/>
+  </activespell>
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_CLEANSE" target="ground" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
+    <spelleffectarea target="allplayers" effectarearadius="5" time="0" effect="SPELLZONE_HALLOWEEN_EFFECT_CLEANSE" removeonleave="false" />
+  </activespell>
+  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_CLEANSE" target="friendall" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" castrange="9" energyusage="0" uisprite="PURGE_HOLY" uitype="buff" category="instant" castanimation="none" animmode="SingleAnim" uiatlas="RefSpellAtlas" spelleffectanimation="none" hidespelleffecticon="false" castablewhensilenced="true" castablewhenstunned="true" assessment="positive">
+    <spellimmunity target="friendall" time="2" spellname="ROOTFIELD_ROOT" />
+    <removeactiveeffects target="friendall" category="crowdcontrol" />
+    <removeactiveeffects target="friendall" category="debuff" />
+        <removeactiveeffects target="friendall" category="damage" />
+    <spellvfx target="target" socket="damage" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_cleanse" />
+  </activespell>
+
+
   <!--Quick Spell Tests-->
   <activespell uniquename="QUICK_TEST" target="ground" keepmovingaftercast="false" castingtime="1" recastdelay="3" energyusage="0" castrange="20" category="damage" uitype="damage" uiatlas="RefSpellAtlas" uisprite="BLACKHOLE">
     <applyspell target="self" spell="QUICK_TEST_SEA" />
@@ -20105,6 +20155,12 @@
   </activespell>
 
   <!--Sarcophagus Test-->
+  <activespell uniquename="MOB_EVENT_HALLOWEEN_CHEST_DEATH" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="0" category="instant" uitype="buff" uiatlas="RefSpellAtlas">
+    <spellvfx target="ground" event="OnCastFinished" prefab="FX/ClientPrefabs/fx_mob_chest_halloween_end_02" socket="root" constraintpreset="inworld" ignoresocketscale="true" timeoffset="0" fadeouttime="0"/>
+  </activespell>
+  <activespell uniquename="MOB_EVENT_HALLOWEEN_RESOURCE_DEATH" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="0" category="instant" uitype="buff" uiatlas="RefSpellAtlas">
+    <spellvfx target="ground" event="OnCastFinished" prefab="FX/ClientPrefabs/fx_mob_chest_halloween_end_01" socket="root" constraintpreset="inworld" ignoresocketscale="true" timeoffset="0" fadeouttime="0"/>
+  </activespell>
   <activespell uniquename="MOB_HERETIC_CHEST_DEATH" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="0" category="instant" uitype="buff" uiatlas="RefSpellAtlas">
     <spellvfx target="ground" event="OnCastFinished" prefab="FX/ClientPrefabs/fx_mob_chest_heretic_end" socket="root" constraintpreset="inworld" ignoresocketscale="true" timeoffset="0" fadeouttime="0"/>
   </activespell>
