@@ -601,8 +601,16 @@
   <WwiseSwitchInfo name="MOB_UNDEAD_GHOUL">
     <CharType name="mob"/>
     <MobFaction name="undead"/>
-    <MobType name="undead_soldier"/>
-    <Size name="small"/>
+    <MobType name="undead_ghoul"/>
+    <Size name="medium"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="claw_hide_small"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_GHOUL_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="undead"/>
+    <MobType name="undead_ghoul_boss"/>
+    <Size name="big"/>
     <ArmorType name="hide"/>
     <WeaponType name="claw_hide_small"/>
   </WwiseSwitchInfo>
@@ -1400,6 +1408,11 @@
   <WwiseEventInfo name="SPELL_HERETIC_GIBSON_KNOCKBACK">
     <OnSpellHit name="Play_gibson_knockback" />
   </WwiseEventInfo>
+ 
+  <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_WHIRLWIND_VO">
+  	<OnCastStart name="Play_lumberjack_boss_vo_whirlwind"/>
+    <OnCastFinished name="Play_melee_spin" />
+  </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_OVERSEER_FLAGELLATE">
     <OnCastFinished name="Play_melee_whip" />
@@ -1464,14 +1477,16 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BARF">
-    <!--
-    <OnCastStart name="" />
-    -->
+    <OnCastStart name="Play_undead_ghoul_barf" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_HURL">
-    <!--
-    <OnCastStart name="" />
-    -->
+    <OnCastStart name="Play_undead_ghoul_hurl" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BOSS_BARF">
+    <OnCastStart name="Play_undead_ghoul_boss_barf" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BOSS_HURL">
+    <OnCastStart name="Play_undead_ghoul_boss_hurl" />
   </WwiseEventInfo>
 
   <!-- WwiseSpellEventDefaults: Define Default events for spells depending on uitype set in activespell info-->
