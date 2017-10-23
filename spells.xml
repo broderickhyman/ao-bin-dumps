@@ -7790,7 +7790,6 @@
 
   
   <activespell uniquename="SPLITTINGSLASH" uisprite="GROUNDBREAKER" target="ground" castingtime="0" hitdelay="0.6" standtime="0.8" castrange="14" recastdelay="15" energyusage="12" category="damage" uitype="damage" uiatlas="RefSpellAtlas" castanimation="cast_melee" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" unlockedtoequip="false">
-       
     <spelleffectarea target="enemy" effect="NONE" time="1.3" visible="true" position="atcaster" skillshotindicatormax="14" skillshotindicatormin="14">
       <area>
         <shape>
@@ -7813,17 +7812,18 @@
     </spelleffectarea>
     <AudioInfo name="MELEE_MEDIUMCAST" />
   </activespell>
-
-  <activespell uniquename="SPLITTINGSLASH_EFFECT" uisprite="GROUNDBREAKER" target="enemy" castingtime="0" castrange="0" recastdelay="0" energyusage="0" category="crowdcontrol" uitype="damage" uiatlas="RefSpellAtlas" assessment="negative">
+  <activespell uniquename="SPLITTINGSLASH_EFFECT" uisprite="GROUNDBREAKER" target="enemy" castingtime="0" castrange="0" recastdelay="0" energyusage="0" category="damage" uitype="damage" uiatlas="RefSpellAtlas" assessment="negative">
+    <applyspell spell="SPLITTINGSLASH_EFFECT_CC" target="enemy" />
     <directattributechange target="enemy" attribute="health" change="-135.14" effecttype="physical" />
-    <root target="enemy" time="1.24" />
     <spellvfx target="target_notCaster" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="inWorldWithRotate"/>
-    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/RootEffectVfx" socket="floor"/>
     <AudioInfo name="MELEE_MEDIUMIMPACT" />
   </activespell>
+  <activespell uniquename="SPLITTINGSLASH_EFFECT_CC" uisprite="GROUNDBREAKER" target="enemy" castingtime="0" castrange="0" recastdelay="0" energyusage="0" category="crowdcontrol" uitype="damage" uiatlas="RefSpellAtlas" assessment="negative">
+    <root target="enemy" time="1.24" />
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/RootEffectVfx" socket="floor"/>
+  </activespell>  
   
-
-  <!-- Slot 3 -->
+  <!-- *** SLOT 3 *** -->
   <!-- Level 1 -->
   <activespell uniquename="MIGHTYBLOW" uisprite="WHIRLWIND_SWORD" target="enemy" castingtime="0.0" standtime="1.0" hitdelay="0.4" interruptiblebyspell="false" disruptionfactor="0.0" recastdelay="10" energyusage="14" castrange="3" showgizmo="false" uiatlas="RefSpellAtlas" uitype="damage" category="damage" castanimation="melee_Heavy2" animmode="SingleAnim" showrange="true" unlockedtoequip="true" assessment="positive">
     <buffovertime target="self" type="physicalarmor" value="0.36" time="3" />
@@ -14117,9 +14117,9 @@
       <applyspell spell="MOB_HERETIC_LUMBERJACK_WHIRLWIND_SLOW" target="self" />
       <applyspell spell="MOB_HERETIC_LUMBERJACK_WHIRLWIND_SPEED" target="self" />
       <applyspell spell="MOB_HERETIC_LUMBERJACK_WHIRLWIND_EFFECT" target="self" />
-      <spellvfx target="self" event="OnChannelingStart" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_spell_whirlwind" socket="floor" size="1" constraintpreset="pointconstraint" />
+      <spellvfx target="self" event="OnChannelingStart" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_spell_whirlwind_big" socket="floor" size="1" constraintpreset="pointconstraint" />
     </channelingspell>
-    <AudioInfo name="MELEE_SPIN" />
+    <AudioInfo name="SPELL_HERETIC_LUMBERJACK_WHIRLWIND_VO" />
   </activespell>
   <activespell uniquename="MOB_HERETIC_LUMBERJACK_WHIRLWIND_SLOW" uisprite="WHIRLWIND" target="self" castingtime="0.0" standtime="0.0" hitdelay="0.0" interruptiblebyspell="false" disruptionfactor="0.0" recastdelay="7" energyusage="0" castrange="3" showgizmo="false" uiatlas="RefSpellAtlas" uitype="damage" category="damage" castanimation="none">
     <buffovertime target="self" type="movespeedbonus" value="-0.7" time="1" ignorecrowdcontrolresistance="true"/>
@@ -15961,7 +15961,7 @@
         </shape>
       </area>
     </spelleffectarea>
-    <AudioInfo name="SPELL_UNDEAD_GHOUL_HURL"/>
+    <AudioInfo name="SPELL_UNDEAD_GHOUL_BOSS_HURL"/>
   </activespell>
   <activespell uniquename="MOB_UNDEAD_GHOUL_BOSS_BARF" hidespelleffecticon="true" uisprite="INTIMIDATINGSHOUT" target="ground" castingtime="0.8" interruptiblebyspell="false" standtime="3.5" castrange="20" recastdelay="14" energyusage="0" uiatlas="RefSpellAtlas" category="damage" uitype="damage" castanimation="cast_areadamage" animmode="SingleAnim">
     <spellindicationarea target="enemy" position="atcaster" visible="true">
@@ -16002,7 +16002,7 @@
       </area>
     </spelleffectarea>
     <dummy target="self" time="6" />
-    <AudioInfo name="SPELL_UNDEAD_GHOUL_BARF"/>
+    <AudioInfo name="SPELL_UNDEAD_GHOUL_BOSS_BARF"/>
   </activespell>
   <activespell uniquename="MOB_UNDEAD_GHOUL_BOSS_BARF_STANDARD" hidespelleffecticon="true" uisprite="INTIMIDATINGSHOUT" target="ground" castingtime="1.3" interruptiblebyspell="false" standtime="3.5" castrange="20" recastdelay="14" energyusage="0" uiatlas="RefSpellAtlas" category="damage" uitype="damage" castanimation="cast_areadamage">
     <spellindicationarea target="enemy" position="atcaster" visible="true">
@@ -16043,7 +16043,7 @@
       </area>
     </spelleffectarea>
     <dummy target="self" time="6" />
-    <AudioInfo name="SPELL_UNDEAD_GHOUL_BARF"/>
+    <AudioInfo name="SPELL_UNDEAD_GHOUL_BOSS_BARF"/>
   </activespell>
   <activespell uniquename="MOB_UNDEAD_GHOUL_BOSS_HURL_EFFECT" uisprite="INTIMIDATINGSHOUT" target="enemy" castingtime="1.6" castrange="2" recastdelay="1" energyusage="0" uiatlas="RefSpellAtlas" category="damage" uitype="damage">
     <attributechangeovertime target="enemy" attribute="health" change="-800" initialinterval="0.2" interval="1" count="4" effecttype="magic"/>
@@ -16105,6 +16105,7 @@
         </shape>
       </area>
     </spelleffectarea>
+    <AudioInfo name="SPELL_UNDEAD_GHOUL_BARF"/>
   </activespell>
   <activespell uniquename="MOB_UNDEAD_GHOUL_BARF_EFFECT" target="enemy" castingtime="1" hitdelay="0.2" castrange="2" recastdelay="1" energyusage="0" uiatlas="RefSpellAtlas" category="damage" uitype="damage">
     <directattributechange target="enemy" attribute="health" change="-600" effecttype="magic"/>
@@ -20095,10 +20096,18 @@
   <activespell uniquename="SPELLZONE_HALLOWEEN_POISON" target="ground" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
     <spelleffectarea target="allplayers" effectarearadius="5" time="0" effect="SPELLZONE_HALLOWEEN_EFFECT_POISON" removeonleave="false" />
   </activespell>
-  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_POISON" target="allplayers" uisprite="POISONEDKNIFE" castingtime="0.0" hitdelay="0" standtime="0.4" disruptionfactor="0.0" recastdelay="10" energyusage="0" castrange="30" uiatlas="RefSpellAtlas" uitype="damage" category="damage" >
-    <attributechangeovertime target="allplayers" attribute="health" change="-20" effecttype="magic" initialinterval="2" interval="2" count="10000" />
-	<buffovertime target="allplayers" type="hitpointsregeneration" value="-1000" time="3600" />
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_poison_nosound" socket="floor" constraintpreset="default"/>
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_POISON" uisprite="POISONEDKNIFE" target="allplayers" castingtime="0" recastdelay="1" energyusage="0" castrange="1" category="instant" uitype="damage" uiatlas="RefSpellAtlas">
+     <!-- <attributechangeovertime target="allplayers" attribute="health" change="-20" effecttype="physical" ignorearmor="true" initialinterval="2" interval="2" count="10000" /> -->
+     <pulsingspell spell="SPELLZONE_HALLOWEEN_POISON_PULSE" target="allplayers" initialinterval="1" interval="1" count="10000" />	   
+     <buffovertime target="allplayers" type="hitpointsregeneration" value="-100" time="3600" />
+     <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_poison_nosound" socket="floor" constraintpreset="default"/>
+  </activespell>
+
+  <activespell uniquename="SPELLZONE_HALLOWEEN_POISON_PULSE" uisprite="POISONEDKNIFE" target="allplayers" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
+    <directattributechange target="allplayers" attribute="health" change="-0.015" changetype="relative" ignorearmor="true" effecttype="physical" />
+    <directattributechange target="allplayers" attribute="health" change="-5" changetype="absolute" ignorearmor="true" effecttype="physical" />
+
   </activespell>
 
   <activespell uniquename="SPELLZONE_HALLOWEEN_CLEANSE" target="ground" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage" uiatlas="RefSpellAtlas">
@@ -20106,9 +20115,9 @@
   </activespell>
   <activespell uniquename="SPELLZONE_HALLOWEEN_EFFECT_CLEANSE" target="friendall" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" castrange="9" energyusage="0" uisprite="PURGE_HOLY" uitype="buff" category="instant" castanimation="none" animmode="SingleAnim" uiatlas="RefSpellAtlas" spelleffectanimation="none" hidespelleffecticon="false" castablewhensilenced="true" castablewhenstunned="true" assessment="positive">
     <spellimmunity target="friendall" time="2" spellname="ROOTFIELD_ROOT" />
-    <removeactiveeffects target="friendall" category="crowdcontrol" />
+    <removeactiveeffects target="friendall" category="instant" />
     <removeactiveeffects target="friendall" category="debuff" />
-        <removeactiveeffects target="friendall" category="damage" />
+    <removeactiveeffects target="friendall" category="damage" />
     <spellvfx target="target" socket="damage" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_cleanse" />
   </activespell>
 
