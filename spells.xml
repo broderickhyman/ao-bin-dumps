@@ -1219,7 +1219,7 @@
   </activespell>
 
   <passivespell uniquename="PASSIVE_HEAD_YIELD_ORE_T5" uisprite="EQUIPNEXTTOOL" uiatlas="RefSpellAtlas">
-    <pulsingspellpassive spell="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" count="0" interval="30" initialinterval="0"/>
+    <pulsingspellpassive spell="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" count="0" interval="30" initialinterval="0" bindtoitem="true" />
   </passivespell>
   <activespell uniquename="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" target="all" castingtime="0.0" uisprite="EQUIPNEXTTOOL" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uiatlas="RefSpellAtlas" category="instant" uitype="buff" maxcharges="10" neutraleffect="true" buffpriority="10">
     <resourcegatheringbuffovertime bufftype="gatheringyield" resourcetype="ORE" tier="5" time="0" target="self" value="0.005" />
@@ -5589,7 +5589,7 @@
   </activespell>
 
   <activespell uniquename="GROUNDDASH" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="10" energyusage="8" castrange="11" uitype="movement" uisprite="DASH" uiatlas="RefSpellAtlas" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
-    <dash movespeed="30" >
+    <dash movespeed="30" standtime="5">
       <IfOwnLoadPercentIsBelow value="150"/>
     </dash>
     <dummy target="self" time="1" effectarearadius="1" showarearadius="true" />
