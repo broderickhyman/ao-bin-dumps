@@ -22178,6 +22178,9 @@
           <condition type="SelfSpellActive" value="MOB_MORGANA_RAVEN_ALIVE" />
         </not>
       </spell>
+      <spell name="MOB_MORGANA_ROYALKNIGHT_CHANNEL_VO" target="anyfriend">
+        <condition type="TargetSpellActive" value="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER" />
+      </spell>
       <spell name="MOB_MORGANA_ROYALKNIGHT_CHANNEL" target="anyfriend">
         <condition type="TargetSpellActive" value="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER" />
       </spell>
@@ -22201,7 +22204,7 @@
         </not>
       </spell>
       <spell name="MOB_MORGANA_RAVEN_DEBUFF" target="anyenemy">
-        <condition type="FightDuration" value="3" />
+        <condition type="OwnHealthBelowPercentage" value="0.99" />
         <condition type="Chance" value="0.3" />
         <not>
           <or>
@@ -22211,7 +22214,7 @@
         </not>
       </spell>
       <spell name="MOB_MORGANA_RAVEN_DEBUFF" target="anyfriend">
-        <condition type="FightDuration" value="5" />
+        <condition type="OwnHealthBelowPercentage" value="0.99" />
         <condition type="Chance" value="0.3" />
         <not>
           <or>
@@ -22221,7 +22224,7 @@
         </not>
       </spell>
       <spell name="MOB_MORGANA_RAVEN_DEBUFF" target="self">
-        <condition type="FightDuration" value="5" />
+        <condition type="OwnHealthBelowPercentage" value="0.99" />
         <condition type="Chance" value="0.3" />
         <not>
           <or>
@@ -22245,7 +22248,7 @@
     <projectile startsocket="mainhandprojectile" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_bullet" flyspeed="15">
       <impactvfx prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" impactsocket="damage" constraintpreset="pointconstraint" />
     </projectile>
-    <AudioInfo name="MOB_MORGANA_CULTIST" />
+    <AudioInfo name="MOB_MORGANA_SISTERS_A" />
     <SocketPreset name="MOB_MORGANA_CULTIST_BOSS_01" />
     <AssetVfxPreset name="MOB_MINIBOSS" />
   </Mob>
@@ -22255,6 +22258,9 @@
         <not>
           <condition type="SelfSpellActive" value="MOB_MORGANA_MAGISTRA_ALIVE" />
         </not>
+      </spell>
+      <spell name="MOB_MORGANA_ROYALKNIGHT_ONDEATH_VO_B" target="self">
+      	<condition type="SelfSpellActive" value="MOB_MORGANA_ROYALKNIGHT_ONDEATH" />
       </spell>
       <spell name="MOB_MORGANA_ROYALKNIGHT_CHANNEL" target="anyfriend">
         <condition type="TargetSpellActive" value="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER" />
@@ -22282,7 +22288,7 @@
         </or>
       </spell>
       <spell name="MOB_MORGANA_MAGISTRA_SHIELD" target="anyfriend">
-        <condition type="FightDuration" value="5" />
+        <condition type="OwnHealthBelowPercentage" value="0.8" />
         <not>
           <condition type="SelfSpellActive" value="SPECIAL_GCD_2" />
         </not>
@@ -22305,7 +22311,7 @@
     <projectile startsocket="mainhandprojectile" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_bullet" flyspeed="15">
       <impactvfx prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" impactsocket="damage" constraintpreset="pointconstraint" />
     </projectile>
-    <AudioInfo name="MOB_MORGANA_CULTIST" />
+    <AudioInfo name="MOB_MORGANA_SISTERS_B" />
     <SocketPreset name="MOB_MORGANA_CULTIST_BOSS_02" />
     <AssetVfxPreset name="MOB_MINIBOSS" />
   </Mob>
@@ -22315,6 +22321,9 @@
         <not>
           <condition type="SelfSpellActive" value="MOB_MORGANA_FANG_ALIVE" />
         </not>
+      </spell>
+      <spell name="MOB_MORGANA_ROYALKNIGHT_ONDEATH_VO_C" target="self">
+      	<condition type="SelfSpellActive" value="MOB_MORGANA_ROYALKNIGHT_ONDEATH" />
       </spell>
       <spell name="MOB_MORGANA_ROYALKNIGHT_CHANNEL" target="anyfriend">
         <condition type="TargetSpellActive" value="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER" />
@@ -22347,7 +22356,7 @@
         </not>
       </spell>
       <spell name="MOB_MORGANA_FANG_SPLITTINGCLAW" target="anyenemy">
-        <condition type="FightDuration" value="11" />
+        <condition type="OwnHealthBelowPercentage" value="0.9" />
         <not>
           <condition type="IsTargetTopOfThreatList" value="1" />
         </not>
@@ -22379,7 +22388,7 @@
     <projectile startsocket="mainhandprojectile" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_bullet" flyspeed="15">
       <impactvfx prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" impactsocket="damage" constraintpreset="pointconstraint" />
     </projectile>
-    <AudioInfo name="MOB_MORGANA_CULTIST" />
+    <AudioInfo name="MOB_MORGANA_SISTERS_C" />
     <SocketPreset name="MOB_MORGANA_CULTIST_BOSS_03" />
     <AssetVfxPreset name="MOB_MINIBOSS" />
   </Mob>
@@ -22506,7 +22515,7 @@
         </not>
         <condition type="Chance" value="0.2" />
       </spell>
-      <spell name="MOB_MORGANA_KNIGHT_ENRAGE" target="self" saytext="@MOBSPEAK_MORGANA_KNIGHT_ENRAGE">
+      <spell name="MOB_MORGANA_ROYALKNIGHT_ENRAGE" target="self">
         <or>
           <condition type="FightDuration" value="60" />
           <condition type="OwnHealthBelowPercentage" value="0.3" />
@@ -22527,6 +22536,9 @@
         <condition type="TargetRangeBelow" value="5" />
       </spell>
     </Spells>
+    <DeathSpells>
+	  <spell name="MOB_MORGANA_ROYALKNIGHT_ONDEATH" target="self"/>
+    </DeathSpells>
     <Loot>
       <Harvestable type="SILVERCOINS_LOOT_VETERAN" tier="6" />
       <LootListReference name="LOOT_MORGANA_FURNITURE" chance="0.00009" />
@@ -22535,7 +22547,7 @@
       <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="0.057955" />
       <LootListReference name="EVENT_HALLOWEEN_2017_LOOT" chance="0.242133" />
     </Loot>
-    <AudioInfo name="MOB_MORGANA_KNIGHT" />
+    <AudioInfo name="MOB_MORGANA_ROYALKNIGHT" />
     <SocketPreset name="MOB_MORGANA_KNIGHT" />
   </Mob>
   <!--Sarcophagus and Urn-->
