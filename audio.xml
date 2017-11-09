@@ -532,6 +532,38 @@
     <ArmorType name="cloth"/>
     <WeaponType name="cursed"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MORGANA_SISTERS_A">
+    <CharType name="mob"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_sisters_a"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="cursed"/>
+  </WwiseSwitchInfo>
+    <WwiseSwitchInfo name="MOB_MORGANA_SISTERS_B">
+    <CharType name="mob"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_sisters_b"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="cursed"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MORGANA_SISTERS_C">
+    <CharType name="mob"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_sisters_c"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="swoosh_big"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MORGANA_ROYALKNIGHT">
+    <CharType name="mob"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_royalknight"/>
+    <Size name="big"/>
+    <ArmorType name="plate"/>
+    <WeaponType name="swoosh_medium"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MORGANA_DEMON_PRINCE">
     <CharType name="mob"/>
     <MobFaction name="morgana"/>
@@ -739,7 +771,7 @@
   <WwiseSwitchInfo name="MOB_KEEPER_MUSHROOMTHROWER">
     <CharType name="mob"/>
     <MobFaction name="keeper"/>
-    <MobType name="keeper_axethrower"/>
+    <MobType name="keeper_mushroom_thrower"/>
     <Size name="big"/>
     <ArmorType name="leather"/>
     <WeaponType name="axe_swoosh_thrown"/>
@@ -1441,6 +1473,32 @@
 
   <WwiseEventInfo name="SPELL_KEEPER_EARTHMOTHER_PHASE_CHANGE">
     <OnCastStart name="Play_mob_keeper_earthmother_phase_change_cast" />
+  </WwiseEventInfo>
+
+  <!-- Morgana-->
+  <WwiseEventInfo name="SPELL_MORGANA_SUMMON">
+    <OnCastStart name="Play_mob_morgana_summon"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_ROYALKNIGHT_ENRAGE">
+    <OnCastFinished name="Play_mob_morgana_sisters_royalknight_enrage"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_ROYALKNIGHT_ONDEATH_VO_B">
+    <OnCastFinished name="Play_mob_morgana_sisters_b_vo_statechange"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_ROYALKNIGHT_ONDEATH_VO_C">
+    <OnCastFinished name="Play_mob_morgana_sisters_c_vo_statechange"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_SISTERS_A_AGGRO_VO">
+    <OnCastStart name="Play_mob_morgana_sisters_a_vo_aggro"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_SISTERS_A_DEBUFF">
+    <OnCastStart name="Play_mob_morgana_sisters_a_ravenattack_vo"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_SISTERS_B_SHIELD">
+    <OnCastStart name="Play_mob_morgana_sisters_b_shield_start"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_MORGANA_SISTERS_C_SPLITTINGSTRIKE">
+    <OnCastStart name="Play_mob_morgana_sisters_c_clawspell"/>
   </WwiseEventInfo>
 
   <!-- Undead-->

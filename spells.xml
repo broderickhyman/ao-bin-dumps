@@ -1219,7 +1219,7 @@
   </activespell>
 
   <passivespell uniquename="PASSIVE_HEAD_YIELD_ORE_T5" uisprite="EQUIPNEXTTOOL" uiatlas="RefSpellAtlas">
-    <pulsingspellpassive spell="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" count="0" interval="30" initialinterval="0"/>
+    <pulsingspellpassive spell="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" count="0" interval="30" initialinterval="0" bindtoitem="true" />
   </passivespell>
   <activespell uniquename="PASSIVE_HEAD_YIELD_ORE_EFFECT_T5" target="all" castingtime="0.0" uisprite="EQUIPNEXTTOOL" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uiatlas="RefSpellAtlas" category="instant" uitype="buff" maxcharges="10" neutraleffect="true" buffpriority="10">
     <resourcegatheringbuffovertime bufftype="gatheringyield" resourcetype="ORE" tier="5" time="0" target="self" value="0.005" />
@@ -5589,7 +5589,7 @@
   </activespell>
 
   <activespell uniquename="GROUNDDASH" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="10" energyusage="8" castrange="11" uitype="movement" uisprite="DASH" uiatlas="RefSpellAtlas" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
-    <dash movespeed="30" >
+    <dash movespeed="30" standtime="5">
       <IfOwnLoadPercentIsBelow value="150"/>
     </dash>
     <dummy target="self" time="1" effectarearadius="1" showarearadius="true" />
@@ -19480,12 +19480,30 @@
     <buffovertime target="self" type="hitpointsmaxbonus" value="1" time="0" effectarearadius="30"/>
   </activespell>
   <!--Morgana Royal Knight-->
+  <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_ONDEATH" hidespelleffecticon="false" target="ground" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
+    <dummy target="allmobs" time="10" effectarearadius="30"/>
+  </activespell>
+  <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_ONDEATH_VO_B" target="self" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
+	<removeactivespell target="self" spell="MOB_MORGANA_ROYALKNIGHT_ONDEATH"/>
+    <AudioInfo name="SPELL_MORGANA_ROYALKNIGHT_ONDEATH_VO_B"/>
+  </activespell>
+  <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_ONDEATH_VO_C" target="self" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
+  	<removeactivespell target="self" spell="MOB_MORGANA_ROYALKNIGHT_ONDEATH"/>
+    <AudioInfo name="SPELL_MORGANA_ROYALKNIGHT_ONDEATH_VO_C"/>
+  </activespell>
+  <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_ENRAGE" target="self" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
+    <applyspell target="self" spell="MOB_MORGANA_KNIGHT_ENRAGE"/>
+    <AudioInfo name="SPELL_MORGANA_ROYALKNIGHT_ENRAGE"/>
+  </activespell>
   <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER" hidespelleffecticon="true" target="all" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
     <dummy target="all" time="0"/>
   </activespell>
   <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_ALIVE" hidespelleffecticon="true" target="self" castingtime="0" castrange="1" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
     <dummy target="allmobs" time="0" effectarearadius="30" />
     <applyspell target="self" spell="MOB_MORGANA_ROYALKNIGHT_IDENTIFIER"/>
+  </activespell>
+  <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_CHANNEL_VO" target="allmobs" castingtime="0" castrange="30" recastdelay="300" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
+  	<AudioInfo name="SPELL_MORGANA_SISTERS_A_AGGRO_VO"/>
   </activespell>
   <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_CHANNEL" uisprite="BEAM_ARCANE" target="allmobs" castingtime="0" castrange="30" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
     <channelingspell initialeffectinterval="0" effectinterval="3" effectcount="100" energyusage="0" disruptionfactor="0" >
@@ -19496,7 +19514,7 @@
         <target socket="damage" constraintpreset="pointconstraint"/>
       </beamvfx>
     </channelingspell>
-  </activespell>
+   </activespell>
   <activespell uniquename="MOB_MORGANA_ROYALKNIGHT_SHIELD" uisprite="BEAM_ARCANE" target="allmobs" castingtime="0" castrange="30" recastdelay="5" energyusage="0" uitype="buff" category="instant" uiatlas="RefSpellAtlas">
     <root target="self" time="3.1" ignoreabilitypowerscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
     <cannotattack target="self" time="3.1" ignoreabilitypowerscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
@@ -19611,6 +19629,7 @@
         </shape>
       </area>
     </spelleffectarea>
+    <AudioInfo name="SPELL_MORGANA_SISTERS_C_SPLITTINGSTRIKE"/>
   </activespell>
   <!--Magistra-->
   <activespell uniquename="MOB_MORGANA_MAGISTRA_ONDEAD" target="ground" castingtime="0" castrange="1" recastdelay="3" energyusage="0" category="instant" uitype="buff" uiatlas="RefSpellAtlas">
@@ -19623,7 +19642,7 @@
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_spell_arcane_projectile_start" socket="mainhandprojectile" duration="0.10" />
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_spell_arcane_projectile_loop" socket="mainhandprojectile" timeoffset="0.10" />
     <spellvfx target="self" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_arcane_projectile_end" socket="mainhandprojectile" duration="0.20" />
-    <AudioInfo name="SPELL_ARCANE_CAST_MEDIUM" />
+    <AudioInfo name="SPELL_MORGANA_SISTERS_B_SHIELD" />
   </activespell>
   <activespell uniquename="MOB_MORGANA_MAGISTRA_PULSE" hidespelleffecticon="true" target="allmobs" castingtime="0" castrange="1" recastdelay="8" energyusage="5" category="instant" uitype="buff" uiatlas="RefSpellAtlas" >
     <pulsingspell target="allmobs" spell="MOB_MORGANA_MAGISTRA_TRIGGER" initialinterval="0.1" interval="0.1" count="69" />
@@ -19688,6 +19707,7 @@
     <spellvfx target="self" socket="spawnpoint1" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_morgana_summon_imp" ignoresocketscale="true" timeoffset="1" constraintpreset="default" />
     <spellvfx target="self" socket="spawnpoint2" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_smokescreen" ignoresocketscale="true" size="1" constraintpreset="inworld" />
     <spellvfx target="self" socket="spawnpoint2" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_morgana_summon_imp" ignoresocketscale="true" timeoffset="1" constraintpreset="default" />
+    <AudioInfo name="SPELL_MORGANA_SUMMON"/>
   </activespell>
   <!--Raven-->
   <activespell uniquename="MOB_MORGANA_RAVEN_ONDEAD" target="ground" castingtime="0" castrange="1" recastdelay="3" energyusage="0" category="instant" uitype="buff" uiatlas="RefSpellAtlas">
@@ -19738,6 +19758,7 @@
     <buffovertime target="all" type="movespeedbonus" value="-0.3" time="6.5" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_combat_marker_red" size="4" ignoresocketscale="true" socket="floor" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_morgana_raven_tornado_01" size="2" ignoresocketscale="true" constraintpreset="pointconstraint" socket="floor" />
+    <AudioInfo name="SPELL_MORGANA_SISTERS_A_DEBUFF"/>
   </activespell>
   <activespell uniquename="MOB_MORGANA_RAVEN_PULSING_EFFECT" target="all" castingtime="2" recastdelay="1" energyusage="0" castrange="15" category="damage" uitype="damage" uiatlas="RefSpellAtlas">
     <directattributechange target="enemy" attribute="health" change="-300" effectarearadius="4">
