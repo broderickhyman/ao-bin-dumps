@@ -15,6 +15,7 @@
     territorybuff="GUILD_TERRITORY_BUFF"
   />
     <SiegeCamp vaultsize="64" battlevaultsize="64" weightlimit="10000.0" siegecampclaimtimeinsec="15" cooldowninmin="360" costfactor="2.5" />
+    <Territory territoryclaimtimeinsec="15" />
     <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0"/>
     <GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
     <Respawn autorespawntimerinsecs="600" />
@@ -59,15 +60,20 @@
     <SpellCooldowns onequipmentchange="10" onmount="5"/>
     <CrowdControlDiminishingReturns
       breaksondamagefactor="0.7"
-      diminishingreturnmax="0.5"
-      diminishingreturnsduration="8"
-      typefactorstun="0.12"
-      typefactorroot="0.06"
+      diminishingreturnmax="0.75"
+      typefactorstun="0.1"
+      typefactorroot="0.05"
       typefactorknockback="0.04"
-      typefactorsilence="0.06"
-      typefactorslow="0"
-      typefactorforcedmovement="0.12" />
-    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" />
+      typefactorsilence="0.05"
+      typefactorslow="0.08"
+      typefactorforcedmovement="0.1"
+      decreasetimestun="20"
+      decreasetimeroot="20"
+      decreasetimeknockback="20"
+      decreasetimesilence="20"
+      decreasetimeslow="20"
+      decreasetimeforcedmovement="20"/>
+    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" />
     <AoeEscalation defaulttargetcountthresholdmin="2" defaulttargetcountthresholdmax="11" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
@@ -94,7 +100,8 @@
     resistanceprogression="0.336554399"
     hitpointprogression="0.663445601"
     loadprogression="2.264101591"
-  />
+    ccdurationfactor="0.5"
+    />
     <ItemPowerProgression
     armorbase="100"
     ccrbase="100"
@@ -103,7 +110,8 @@
     hitpointsprogression="1.06"
     energyprogression="1.0918"
     armorprogression="1.03"
-    crowdcontrolresistanceprogression="1.1128">
+    crowdcontrolresistanceprogression="1.0564"
+    fishingspeedprogression="1.3">
       <armorshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0"/>
       <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0"/>
       <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0"/>
@@ -236,39 +244,40 @@
 
   <MobFocusFire maxlevel="10">
     <dangerstate dangerstate="normal" attackerthreshold="2"/>
+    <dangerstate dangerstate="roaming" attackerthreshold="2"/>
     <dangerstate dangerstate="veteran" attackerthreshold="7"/>
     <dangerstate dangerstate="elite" attackerthreshold="12"/>
   </MobFocusFire>
   <PlayerFocusFire lookbackseconds="10">
-    <attackers numbergreaterorequal="2" meleebuff="MELEE_FOCUSFIRE_2" rangedbuff="RANGED_FOCUSFIRE_2"/>
-    <attackers numbergreaterorequal="3" meleebuff="MELEE_FOCUSFIRE_3" rangedbuff="RANGED_FOCUSFIRE_3"/>
-    <attackers numbergreaterorequal="4" meleebuff="MELEE_FOCUSFIRE_4" rangedbuff="RANGED_FOCUSFIRE_4"/>
-    <attackers numbergreaterorequal="5" meleebuff="MELEE_FOCUSFIRE_5" rangedbuff="RANGED_FOCUSFIRE_5"/>
-    <attackers numbergreaterorequal="6" meleebuff="MELEE_FOCUSFIRE_6" rangedbuff="RANGED_FOCUSFIRE_6"/>
-    <attackers numbergreaterorequal="7" meleebuff="MELEE_FOCUSFIRE_7" rangedbuff="RANGED_FOCUSFIRE_7"/>
-    <attackers numbergreaterorequal="8" meleebuff="MELEE_FOCUSFIRE_8" rangedbuff="RANGED_FOCUSFIRE_8"/>
-    <attackers numbergreaterorequal="9" meleebuff="MELEE_FOCUSFIRE_9" rangedbuff="RANGED_FOCUSFIRE_9"/>
-    <attackers numbergreaterorequal="10" meleebuff="MELEE_FOCUSFIRE_10" rangedbuff="RANGED_FOCUSFIRE_10"/>
-    <attackers numbergreaterorequal="11" meleebuff="MELEE_FOCUSFIRE_11" rangedbuff="RANGED_FOCUSFIRE_11"/>
-    <attackers numbergreaterorequal="12" meleebuff="MELEE_FOCUSFIRE_12" rangedbuff="RANGED_FOCUSFIRE_12"/>
-    <attackers numbergreaterorequal="13" meleebuff="MELEE_FOCUSFIRE_13" rangedbuff="RANGED_FOCUSFIRE_13"/>
-    <attackers numbergreaterorequal="14" meleebuff="MELEE_FOCUSFIRE_14" rangedbuff="RANGED_FOCUSFIRE_14"/>
-    <attackers numbergreaterorequal="15" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_15"/>
-    <attackers numbergreaterorequal="16" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_16"/>
-    <attackers numbergreaterorequal="17" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_17"/>
-    <attackers numbergreaterorequal="18" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_18"/>
-    <attackers numbergreaterorequal="19" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_19"/>
-    <attackers numbergreaterorequal="20" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_20"/>
-    <attackers numbergreaterorequal="21" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_21"/>
-    <attackers numbergreaterorequal="22" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_22"/>
-    <attackers numbergreaterorequal="23" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_23"/>
-    <attackers numbergreaterorequal="24" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_24"/>
-    <attackers numbergreaterorequal="25" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_25"/>
-    <attackers numbergreaterorequal="26" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_26"/>
-    <attackers numbergreaterorequal="27" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_27"/>
-    <attackers numbergreaterorequal="28" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_28"/>
-    <attackers numbergreaterorequal="29" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_29"/>
-    <attackers numbergreaterorequal="30" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_30"/>
+    <attackers numbergreaterorequal="2" meleebuff="MELEE_FOCUSFIRE_2" rangedbuff="RANGED_FOCUSFIRE_2" mountedbuff="MELEE_FOCUSFIRE_2"/>
+    <attackers numbergreaterorequal="3" meleebuff="MELEE_FOCUSFIRE_3" rangedbuff="RANGED_FOCUSFIRE_3" mountedbuff="MELEE_FOCUSFIRE_3"/>
+    <attackers numbergreaterorequal="4" meleebuff="MELEE_FOCUSFIRE_4" rangedbuff="RANGED_FOCUSFIRE_4" mountedbuff="MELEE_FOCUSFIRE_4"/>
+    <attackers numbergreaterorequal="5" meleebuff="MELEE_FOCUSFIRE_5" rangedbuff="RANGED_FOCUSFIRE_5" mountedbuff="MELEE_FOCUSFIRE_5"/>
+    <attackers numbergreaterorequal="6" meleebuff="MELEE_FOCUSFIRE_6" rangedbuff="RANGED_FOCUSFIRE_6" mountedbuff="MELEE_FOCUSFIRE_6"/>
+    <attackers numbergreaterorequal="7" meleebuff="MELEE_FOCUSFIRE_7" rangedbuff="RANGED_FOCUSFIRE_7" mountedbuff="MELEE_FOCUSFIRE_7"/>
+    <attackers numbergreaterorequal="8" meleebuff="MELEE_FOCUSFIRE_8" rangedbuff="RANGED_FOCUSFIRE_8" mountedbuff="MELEE_FOCUSFIRE_8"/>
+    <attackers numbergreaterorequal="9" meleebuff="MELEE_FOCUSFIRE_9" rangedbuff="RANGED_FOCUSFIRE_9" mountedbuff="MELEE_FOCUSFIRE_9"/>
+    <attackers numbergreaterorequal="10" meleebuff="MELEE_FOCUSFIRE_10" rangedbuff="RANGED_FOCUSFIRE_10" mountedbuff="MELEE_FOCUSFIRE_10"/>
+    <attackers numbergreaterorequal="11" meleebuff="MELEE_FOCUSFIRE_11" rangedbuff="RANGED_FOCUSFIRE_11" mountedbuff="MELEE_FOCUSFIRE_11"/>
+    <attackers numbergreaterorequal="12" meleebuff="MELEE_FOCUSFIRE_12" rangedbuff="RANGED_FOCUSFIRE_12" mountedbuff="MELEE_FOCUSFIRE_12"/>
+    <attackers numbergreaterorequal="13" meleebuff="MELEE_FOCUSFIRE_13" rangedbuff="RANGED_FOCUSFIRE_13" mountedbuff="MELEE_FOCUSFIRE_13"/>
+    <attackers numbergreaterorequal="14" meleebuff="MELEE_FOCUSFIRE_14" rangedbuff="RANGED_FOCUSFIRE_14" mountedbuff="MELEE_FOCUSFIRE_14"/>
+    <attackers numbergreaterorequal="15" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_15" mountedbuff="MELEE_FOCUSFIRE_15"/>
+    <attackers numbergreaterorequal="16" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_16" mountedbuff="MELEE_FOCUSFIRE_16"/>
+    <attackers numbergreaterorequal="17" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_17" mountedbuff="MELEE_FOCUSFIRE_17"/>
+    <attackers numbergreaterorequal="18" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_18" mountedbuff="MELEE_FOCUSFIRE_18"/>
+    <attackers numbergreaterorequal="19" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_19" mountedbuff="MELEE_FOCUSFIRE_19"/>
+    <attackers numbergreaterorequal="20" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_20" mountedbuff="MELEE_FOCUSFIRE_20"/>
+    <attackers numbergreaterorequal="21" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_21" mountedbuff="MELEE_FOCUSFIRE_21"/>
+    <attackers numbergreaterorequal="22" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_22" mountedbuff="MELEE_FOCUSFIRE_22"/>
+    <attackers numbergreaterorequal="23" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_23" mountedbuff="MELEE_FOCUSFIRE_23"/>
+    <attackers numbergreaterorequal="24" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_24" mountedbuff="MELEE_FOCUSFIRE_24"/>
+    <attackers numbergreaterorequal="25" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_25" mountedbuff="MELEE_FOCUSFIRE_25"/>
+    <attackers numbergreaterorequal="26" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_26" mountedbuff="MELEE_FOCUSFIRE_26"/>
+    <attackers numbergreaterorequal="27" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_27" mountedbuff="MELEE_FOCUSFIRE_27"/>
+    <attackers numbergreaterorequal="28" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_28" mountedbuff="MELEE_FOCUSFIRE_28"/>
+    <attackers numbergreaterorequal="29" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_29" mountedbuff="MELEE_FOCUSFIRE_29"/>
+    <attackers numbergreaterorequal="30" meleebuff="MELEE_FOCUSFIRE_15" rangedbuff="RANGED_FOCUSFIRE_30" mountedbuff="MELEE_FOCUSFIRE_30"/>
   </PlayerFocusFire>
   <PlayerHealingSickness lookbackseconds="10">
     <attackers numbergreaterorequal="2" buff="HEALINGSICKNESS_2"/>
@@ -894,6 +903,13 @@
       <StatBonus attribute="learningpoints" change="200"/>
     </Reward>
   </PremiumLifeTimeRewards>
+  <GoldPurchasePackages>
+   <GoldPurchasePackage name="GOLDPACKAGE1" gold="750" price="4.95"/>
+   <GoldPurchasePackage name="GOLDPACKAGE2" gold="1750" price="9.95"/>
+   <GoldPurchasePackage name="GOLDPACKAGE3" gold="3750" price="19.95"/>
+   <GoldPurchasePackage name="GOLDPACKAGE4" gold="10000" price="49.95"/>
+   <GoldPurchasePackage name="GOLDPACKAGE5" gold="21000" price="99.95"/>
+  </GoldPurchasePackages>
   <ClusterDangerBonusTypes>
     <ClusterDangerBonus type="safe" icon="safe" famefactor="1.375" moblootfactor="1.25" mobsilverlootfactor="1.25"/>
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="1.5" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
@@ -912,6 +928,38 @@
     <ResetTimer utctime="10:00"/>
     </ExpeditionBonusRewardTimer>
   </Expedition>
+	<GvgSeason>
+		<!-- Castles are worth 3x a territory in the equivalent area per day 
+				 the first cycle always starts when scoring starts for the specific cluster-->
+		<castlescoring minutespercycle="1440">
+		  <pointsvalues clustertype="OPENPVP_BLACK_1">
+			  <clustertier tier="6" pointspercycle="576" />
+		  </pointsvalues>
+		  <pointsvalues clustertype="OPENPVP_BLACK_2">
+			  <clustertier tier="7" pointspercycle="864" />
+		  </pointsvalues>
+		  <pointsvalues clustertype="OPENPVP_BLACK_3">
+			  <clustertier tier="8" pointspercycle="1152" />
+		  </pointsvalues>
+		</castlescoring>   
+  </GvgSeason>
   <PersonalStatement characterlimit="270" />
   <FeaturedFeature utcdate="2017-10-17T10:15:00" />
+  <GuildIslandVault size="500" maxtabs="15" weightlimit="1000000.0">
+    <TabCost count="0" cost="0" />
+    <TabCost count="1" cost="200000" />
+    <TabCost count="2" cost="500000" />
+    <TabCost count="3" cost="1000000" />
+	<TabCost count="4" cost="2000000" />
+    <TabCost count="5" cost="4000000" />
+    <TabCost count="6" cost="6000000" />
+    <TabCost count="7" cost="7500000" />
+	<TabCost count="8" cost="9000000" />
+    <TabCost count="9" cost="10000000" />
+    <TabCost count="10" cost="10000000" />
+	<TabCost count="11" cost="10000000" />
+    <TabCost count="12" cost="10000000" />
+    <TabCost count="13" cost="10000000" />
+    <TabCost count="14" cost="10000000" />
+  </GuildIslandVault>
 </AO-GameData>

@@ -2,7 +2,7 @@
   <criticalscenemembers>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="Exit" pos="-0.5 -8 42.5" roty="270">
-        <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="-5.500003 57.50006" />
             <guard pos="4.499997 57.50006" />
@@ -12,7 +12,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_02" type="exit" layerId="">
       <tile name="Exit" pos="-41.5 -3 89.5">
-        <exit size="15 15" spawnpos="20 0.5" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="20 0.5" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="-21.5 95" />
             <guard pos="-21.5 85" />
@@ -25,11 +25,14 @@
         <actionbuilding />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-1.58 -28 42.15" />
+    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
     <tile name="CAM_fx_env_undead_dust" pos="-0.5 0 -0.5" />
     <criticaltile name="Exit" pos="-0.5 -8 42.5" roty="270" id="exit_01" type="exit">
-      <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="-5.500003 57.50006" />
           <guard pos="4.499997 57.50006" />
@@ -37,7 +40,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="-41.5 -3 89.5" id="exit_02" type="exit">
-      <exit size="15 15" spawnpos="20 0.5" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="20 0.5" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="-21.5 95" />
           <guard pos="-21.5 85" />
@@ -1128,7 +1131,7 @@
     <tile name="FOREST_GREEN_MOR_CASTLE_GATE_ENTRANCE_DOOR_A" pos="-46 -25 -30" roty="180" />
     <tile name="FOREST_GREEN_MOR_CASTLE_GATE_ENTRANCE_DOOR_A" pos="-36 -36 -30" roty="180" />
     <tile name="FOREST_GREEN_MOR_CASTLE_ROOF_B" pos="-30 3 -30" roty="0" scale="3 1 3" />
-    <tile name="FOREST_GREEN_MOR_CASTLE_ROOF_B" pos="-30 3 30" roty="0" scale="3 1 3" />
+    <tile name="FOREST_GREEN_MOR_CASTLE_ROOF_B" pos="-30 3 30" scale="3 1 3" />
     <tile name="FOREST_GREEN_MOR_CASTLE_ROOF_B" pos="30 3 30" roty="0" scale="3 1 3" />
     <tile name="FOREST_GREEN_MOR_CASTLE_ROOF_B" pos="30 3 -30" scale="3 1 3" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_B" pos="-34 -45 34" />
@@ -1483,5 +1486,6 @@
     <tile name="FOREST_GREEN_GROUND_30x30" pos="-130 -20 20" />
     <tile name="FOREST_GREEN_GROUND_30x30" pos="-130 -20 -40" />
     <tile name="FOREST_GREEN_GROUND_30x30" pos="-130 -20 -10" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-1.58 -28 42.15" id="fishingzone_01" type="fishingzone" />
   </tiles>
 </template>

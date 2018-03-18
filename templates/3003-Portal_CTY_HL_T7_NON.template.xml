@@ -7,7 +7,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_02" type="exit" layerId="">
       <tile name="ExitTrigger_10x10_EXIT" pos="34 2 10" roty="180">
-        <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster">
+        <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="18.59482 6.909266" />
             <guard pos="18.61809 12.94375" />
@@ -17,7 +17,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_03" type="exit" layerId="">
       <tile name="ExitTrigger_10x10_EXIT" pos="9 3 25">
-        <exit size="10 10" spawnpos="7.861795 -0.1260986" faction="None" kind="Cluster">
+        <exit size="10 10" spawnpos="7.861795 -0.1260986" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="21.8618 27.8739" />
             <guard pos="21.83852 21.83942" />
@@ -27,13 +27,28 @@
     </criticalscenemember>
     <criticalscenemember id="exit_04" type="exit" layerId="">
       <tile name="ExitTrigger_10x10_EXIT" pos="9 3 -5">
-        <exit size="10 10" spawnpos="7.064829 1.337309" faction="None" kind="Cluster">
+        <exit size="10 10" spawnpos="7.064829 1.337309" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="21.06483 -0.662691" />
             <guard pos="21.04156 -6.697173" />
           </guards>
         </exit>
       </tile>
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="32.1 0 -22.8" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_02" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-16.5 0 -29.7" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_03" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-48.1 0 11.8" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_04" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-22.4 0 49.9" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_05" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="26.2 0 44.8" />
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
@@ -63,6 +78,26 @@
         <tile name="HIGHLAND_GREEN_VEG_MOSS_BROWN_SMALL_A" pos="49.5 0 13.5" />
         <tile name="HALLOWEEN_STAND_D" pos="-8 4 -4" roty="180" />
         <tile name="HALLOWEEN_PUMKIN_LIGHT_A" pos="-5 6 -1" roty="225" />
+      </layer>
+      <layer id="Layer_02" name="Christmas">
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="4 4 -9.5" roty="180" scale="0.9111745 0.9111745 0.9111745" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-4.5 4 25" roty="270" scale="0.9393556 0.9393551 0.9393556" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="5 4 29.5" scale="0.9393551 0.9393551 0.9393551" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="5 4 20.5" roty="180" scale="0.9393551 0.9393551 0.9393551" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="5 4 -0.5" scale="0.9393551 0.9393551 0.9393551" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-4.5 4 -5" roty="270" scale="0.9393556 0.9393551 0.9393556" />
+        <tile name="XMAS_FILL_CITY_BUSH_A" pos="12.5 6 15.5" />
+        <tile name="XMAS_FILL_CITY_BUSH_C" pos="-8.5 4 -2.5" roty="100" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="13.5 15 -5" roty="265.88" scale="1.521482 1.521482 1.521482" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="13.5 15 25" roty="276.44" scale="1.521482 1.521482 1.521482" />
+        <tile name="XMAS_FILL_CITY_LIGHT_A" pos="15.5 4 1.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_A" pos="21.5 4 18.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_A" pos="-7.5 4 -1.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="16.5 5 17.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="-16.5 6 1.5" roty="229" />
+        <tile name="XMAS_FILL_CITY_TREE_A" pos="-15 6 18" roty="162" />
+        <tile name="XMAS_FILL_CITY_TREE_B" pos="15.5 6 15.5" />
+        <tile name="XMAS_FILL_CITY_WREATH_B" pos="-4.5 2 -5.5" roty="270.93" />
       </layer>
     </layergroup>
     <criticaltile name="HIGHLAND_GREEN_PORTAL_ENTRANCE" pos="-22 6 10" id="portalentrance_01" type="portalentrance">
@@ -1110,7 +1145,7 @@
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="73 0 51" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_TOOLPILE_A" pos="7 4 18" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_TOOLPILE_C" pos="-5 4 19" />
-    <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_WOODPILE_A" pos="12 4 18" roty="192.6" />
+    <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_WOODPILE_A" pos="12 4 18" roty="193" />
     <tile name="HIGHLAND_GREEN_FILL_PILE_SIMPLE_B" pos="-7 4 23" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_PILE_SIMPLE_C" pos="64 0 46" />
     <tile name="HIGHLAND_GREEN_FILL_PILE_SIMPLE_C" pos="1 4 18" roty="270" />
@@ -1228,8 +1263,10 @@
     <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_A" pos="14.5 6 20.5" roty="270" />
     <tile name="HIGHLAND_GREEN_WATER_8M_river" pos="-20 -40 0" roty="270" />
     <tile name="HIGHLAND_GREEN_WATER_8M_river" pos="-20 -40 20" roty="270" />
+    <tile name="gvg_banner_hanging_01" pos="-20 9 17" roty="287" />
+    <tile name="gvg_banner_hanging_01" pos="-20 9 3" roty="253" />
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="34 2 10" roty="180" id="exit_02" type="exit">
-      <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster">
+      <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="18.59482 6.909266" />
           <guard pos="18.61809 12.94375" />
@@ -1237,7 +1274,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="9 3 25" id="exit_03" type="exit">
-      <exit size="10 10" spawnpos="7.861795 -0.1260986" faction="None" kind="Cluster">
+      <exit size="10 10" spawnpos="7.861795 -0.1260986" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="21.8618 27.8739" />
           <guard pos="21.83852 21.83942" />
@@ -1245,12 +1282,17 @@
       </exit>
     </criticaltile>
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="9 3 -5" id="exit_04" type="exit">
-      <exit size="10 10" spawnpos="7.064829 1.337309" faction="None" kind="Cluster">
+      <exit size="10 10" spawnpos="7.064829 1.337309" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="21.06483 -0.662691" />
           <guard pos="21.04156 -6.697173" />
         </guards>
       </exit>
     </criticaltile>
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="32.1 0 -22.8" id="fishingzone_01" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-16.5 0 -29.7" id="fishingzone_02" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-48.1 0 11.8" id="fishingzone_03" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-22.4 0 49.9" id="fishingzone_04" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="26.2 0 44.8" id="fishingzone_05" type="fishingzone" />
   </tiles>
 </template>

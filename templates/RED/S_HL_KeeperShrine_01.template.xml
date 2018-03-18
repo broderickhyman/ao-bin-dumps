@@ -1,6 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Slave/S_HL_KeeperShrine_01.unity" unityguid="505cda54d82eadc49b4d326b07c3935e" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="26 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Roaming_Layer" activationRule="X_X_X_Morgana|Undead|Heretic_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="8 4 -2" roty="270">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-5 4 -6">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="2.89 4 -0.57" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="8.56 4 -7.72" roty="129.69">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="8.25 4 9.03">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="-7.66 4 -3.15" roty="293.58">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="-7.6 4 4.3" roty="254">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="HIGHLAND_RED_GROUND" pos="-20 0 20" />
     <tile name="HIGHLAND_RED_GROUND" pos="0 4 -10" />
     <tile name="HIGHLAND_RED_GROUND" pos="-20 0 -20" />

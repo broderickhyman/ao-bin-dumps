@@ -1,6 +1,74 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Slave/S_ST_AbandonedCamp_01.unity" unityguid="ce925572e9bc0164eb5ca335aa585d63" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
+<template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Slave/S_ST_AbandonedCamp_01.unity" unityguid="ce925572e9bc0164eb5ca335aa585d63" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-27 -25" colBoundsMax="25 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="HER" activationRule="X_X_X_Heretic_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_ARCHER" pos="-22 0 3" roty="90">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_HERETIC_ARCHER">
+            <path>
+              <waypoint pos="-20 3" idle="3" pace="WALK" />
+              <waypoint pos="2.000008 3" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_MAGE" pos="5 0 4" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="5 0 1">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_THIEF" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="UND" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-10 0 5">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="15 0 5">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="5 0 3" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="HIDE_HIGH_NODE" pos="-11 0 -1" roty="57">
+          <resourcenode nodetype="high" resourcetype="hide" />
+        </tile>
+        <tile name="HIDE_HIGH_NODE" pos="15 0 -23" roty="314">
+          <resourcenode nodetype="high" resourcetype="hide" />
+        </tile>
+        <tile name="HIDE_LOW_NODE" pos="-20 0 11" roty="145">
+          <resourcenode nodetype="low" resourcetype="hide" />
+        </tile>
+        <tile name="HIDE_MEDIUM_NODE" pos="13 0 3" roty="306">
+          <resourcenode nodetype="medium" resourcetype="hide" />
+        </tile>
+        <tile name="HIDE_MEDIUM_NODE" pos="2 0 17" roty="123">
+          <resourcenode nodetype="medium" resourcetype="hide" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="MOR" activationRule="X_X_X_Morgana_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CROSSBOWMAN" pos="-22 0 3" roty="90">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_MORGANA_CROSSBOWMAN">
+            <path>
+              <waypoint pos="-20 3" idle="3" pace="WALK" />
+              <waypoint pos="2.000008 3" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CULTIST" pos="5 0 4" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_MORGANA_CULTIST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_SOLDIER" pos="5 0 1">
+          <mobspawnpoint spawnbehavior="ROAMING_MORGANA_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="STEPPE_RED_GROUND" pos="-20 0 -20" />
     <tile name="STEPPE_RED_GROUND" pos="20 0 20" />
     <tile name="STEPPE_RED_GROUND" pos="10 0 20" />
@@ -79,23 +147,8 @@
     <tile name="FIBER_MEDIUM_NODE" pos="-14.5 0 -10.5" roty="4">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-11 0 -1" roty="57">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_HIGH_NODE" pos="15 0 -23" roty="314">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
     <tile name="HIDE_LOW_NODE" pos="-11 0 -23" roty="123">
       <resourcenode nodetype="low" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_LOW_NODE" pos="-20 0 11" roty="145">
-      <resourcenode nodetype="low" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_MEDIUM_NODE" pos="13 0 3" roty="306">
-      <resourcenode nodetype="medium" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_MEDIUM_NODE" pos="2 0 17" roty="123">
-      <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
     <tile name="STEPPE_RED_HER_CAMP_TENT_A" pos="4 0 11" roty="270" />
     <tile name="STEPPE_RED_HER_CAMP_TENT_B" pos="6 0 -3" roty="248" />

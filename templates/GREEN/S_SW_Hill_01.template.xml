@@ -1,15 +1,66 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_Hill_01.unity" unityguid="c2ac21a68d9da4140b57f55f15db11d9" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
+<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_Hill_01.unity" unityguid="c2ac21a68d9da4140b57f55f15db11d9" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-26 -29" colBoundsMax="28 25">
   <criticalscenemembers />
   <tiles>
-    <tile name="HIDE_HIGH_NODE" pos="-17 0 -20" roty="244">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_LOW_NODE" pos="-24 0 -12" roty="118">
-      <resourcenode nodetype="low" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_MEDIUM_NODE" pos="-3 0 -21" roty="279">
-      <resourcenode nodetype="medium" resourcetype="hide" />
-    </tile>
+    <layergroup name="">
+      <layer id="Layer_01" name="Heretic" activationRule="X_X_X_Heretic_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_ARCHER" pos="3 0 -25">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_HERETIC_ARCHER">
+            <path>
+              <waypoint pos="3 -23" idle="3" pace="WALK" />
+              <waypoint pos="3 -6" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_MAGE" pos="3 4 0" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="0 4 -3" roty="90">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_THIEF" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="23 0 -3" roty="270">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_HERETIC_THIEF">
+            <path>
+              <waypoint pos="21 -3" idle="3" pace="WALK" />
+              <waypoint pos="5.999992 -3" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Keeper" activationRule="X_X_X_Keeper_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="Morgana" activationRule="X_X_X_Morgana_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="Undead" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-21 0 4">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="20 0 13">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="22 0 -2">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="13 0 -24">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-7 0 -22">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-18 0 -17">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-18 0 16">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="3 4 -2">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="FIBER_HIGH_NODE" pos="6.5 4 -8.5" roty="124">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
@@ -106,7 +157,6 @@
     <tile name="SWAMP_GREEN_T1_BUSH_C" pos="18.5 0 -7.5" roty="270" scale="0.9961704 0.9961704 0.9961704" />
     <tile name="SWAMP_GREEN_T1_BUSH_C" pos="-14.5 0 23.5" roty="180" />
     <tile name="SWAMP_GREEN_T1_BUSH_D" pos="-14.5 1 12.5" roty="124" scale="0.8559244 0.8559244 0.8559244" />
-    <tile name="SWAMP_GREEN_T1_BUSH_C" pos="2.5 4 -6.5" roty="167" scale="0.9528288 0.9528286 0.9528286" />
     <tile name="SWAMP_GREEN_T1_DECO_BUSH_B" pos="-1.5 13 -11.5" roty="253" scale="1.046612 1.046612 1.046612" />
     <tile name="SWAMP_GREEN_T1_BUSH_C" pos="-16.5 0 22.5" />
     <tile name="SWAMP_GREEN_T1_BUSH_C" pos="-17.5 0 -22.5" roty="115" scale="1.135622 1.135622 1.135622" />

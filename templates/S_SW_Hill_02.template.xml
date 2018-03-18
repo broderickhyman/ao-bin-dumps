@@ -1,6 +1,28 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_Hill_02.unity" unityguid="2a8fa46cb1e79274eb7bf0d524ebbf1e" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Heretic" activationRule="X_X_X_Heretic_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Keeper" activationRule="X_X_X_Keeper_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="Morgana" activationRule="X_X_X_Morgana_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="Undead" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="3 4 0">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="15 0 -15">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-10 0 20">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="-6.5 4 -9.5" />
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="-21.5 0 2.5" />
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="-17.5 0 11.5" />
@@ -62,12 +84,25 @@
     <compoundtile name="_SWAMP_GREEN_HILL_T1_TREE_PLAIN_A_COMP_01" pos="18 0 -18" />
     <compoundtile name="_SWAMP_GREEN_HILL_T1_TREE_PLAIN_B_COMP_01" pos="-19 0 -17" />
     <compoundtile name="_SWAMP_GREEN_HILL_T1_TREE_PLAIN_B_COMP_02" pos="-17 0 19" />
+    <tile name="SWAMP_GREEN_T1_BUSH_C" pos="7.5 4 -0.5" roty="117" />
+    <tile name="SWAMP_GREEN_T1_BUSH_C" pos="-13.5 3 -0.5" roty="27" />
+    <tile name="SWAMP_GREEN_T1_TREE_BAYOU_B" pos="18.5 0 -8.5" roty="180" />
+    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="10.5 4 1.5" roty="8" scale="1.14753 1.147529 1.147529" />
+    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_A" pos="8.5 3 2.5" roty="164" />
+    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_A" pos="10.5 3 -0.5" roty="18" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="5.5 4 2.5" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="11.5 4 3.5" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="7.5 4 -5.5" />
+    <tile name="SWAMP_GREEN_VEG_SOIL_B" pos="10.5 4 -1.5" roty="70" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_SMALL_CORNER_A" pos="14 4 4" roty="90" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_D" pos="-2 4 6.5" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_A" pos="9 4 -6.5" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_A" pos="4.5 0 -11" roty="90" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_A" pos="-6.5 1 11" roty="90" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_B" pos="16.5 4 -3" roty="90" />
+    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_CORNER_A" pos="5 0 -14" roty="270" />
+    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="20.5 0 1" />
+    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="13 0 -11.5" roty="270" />
     <tile name="SWAMP_GREEN_GROUND" pos="20 0 -20" />
     <tile name="SWAMP_GREEN_GROUND" pos="20 0 20" />
     <tile name="SWAMP_GREEN_GROUND" pos="10 0 -20" />
@@ -120,18 +155,8 @@
     <tile name="HIDE_MEDIUM_NODE" pos="5 0 21" roty="235">
       <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
-    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="5.5 4 2.5" />
-    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="11.5 4 3.5" />
-    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="10.5 4 1.5" roty="8" scale="1.14753 1.147529 1.147529" />
-    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="7.5 4 -5.5" />
-    <tile name="SWAMP_GREEN_VEG_SOIL_B" pos="10.5 4 -1.5" roty="70" />
-    <tile name="SWAMP_GREEN_T1_BUSH_C" pos="7.5 4 -0.5" roty="117" />
-    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_A" pos="8.5 3 2.5" roty="164" />
-    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_A" pos="10.5 3 -0.5" roty="18" />
-    <tile name="SWAMP_GREEN_T1_TREE_BAYOU_B" pos="18.5 0 -8.5" roty="180" />
-    <tile name="SWAMP_GREEN_T1_BUSH_C" pos="-13.5 3 -0.5" roty="27" />
-    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="20.5 0 1" />
-    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_CORNER_A" pos="5 0 -14" roty="270" />
-    <tile name="SWAMP_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="13 0 -11.5" roty="270" />
+    <tile name="ROAMING_MEDIUM_NODE" pos="12 4 -2">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
   </tiles>
 </template>

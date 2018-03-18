@@ -2,7 +2,7 @@
   <criticalscenemembers>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="Exit" pos="-219.5 -37 0.5" roty="0">
-        <exit size="15 15" spawnpos="10.87619 -3.72387E-07" faction="None" kind="DungeonSpecial">
+        <exit size="15 15" spawnpos="10.87619 -3.72387E-07" faction="None" kind="DungeonSpecial" roadtype="Primary">
           <guards>
             <guard pos="-208.6238 5.499998" />
             <guard pos="-208.6238 -4.500001" />
@@ -12,7 +12,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_02" type="exit" layerId="">
       <tile name="Exit" pos="213.5 -36 0.5" roty="180">
-        <exit size="15 15" spawnpos="13.35029 1.398603" faction="None" kind="DungeonSpecial">
+        <exit size="15 15" spawnpos="13.35029 1.398603" faction="None" kind="DungeonSpecial" roadtype="Primary">
           <guards>
             <guard pos="200.1497 -5.898603" />
             <guard pos="200.1497 3.876168" />
@@ -22,7 +22,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_03" type="exit" layerId="">
       <tile name="Exit" pos="-0.5 -47 90.5" roty="270">
-        <exit size="10 10" spawnpos="11.33709 -9.536743E-07" faction="None" kind="DungeonSpecial">
+        <exit size="10 10" spawnpos="11.33709 -9.536743E-07" faction="None" kind="DungeonSpecial" roadtype="Primary">
           <guards>
             <guard pos="-5.5 101.8371" />
             <guard pos="4.5 101.8371" />
@@ -32,7 +32,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_04" type="exit" layerId="">
       <tile name="Exit" pos="-0.5 -12 -66.5" roty="90">
-        <exit size="15 15" spawnpos="10.72413 -2.861023E-06" faction="None" kind="DungeonSpecial">
+        <exit size="15 15" spawnpos="10.72413 -2.861023E-06" faction="None" kind="DungeonSpecial" roadtype="Primary">
           <guards>
             <guard pos="4.499996 -79.65506" />
             <guard pos="-5.500004 -77.22413" />
@@ -42,7 +42,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_05" type="exit" layerId="">
       <tile name="FOREST_DEAD_UND_EXIT_STAIRCASE_20M_EXIT" pos="0 -21 7">
-        <exit size="10 10" spawnpos="0.09697723 -11.98203" faction="None" kind="Cluster" />
+        <exit size="10 10" spawnpos="0.09697723 -11.98203" faction="None" kind="Cluster" roadtype="Primary" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -13821,7 +13821,6 @@
     <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_A" pos="-35.5 -67 256" roty="90" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_D" pos="-36 -67 258" roty="90" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_A" pos="-142.5 -67 151.5" roty="270" />
-    <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_C" pos="-76 -67 178" roty="90" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_A" pos="-145 -67 147.5" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_A" pos="-76.5 -67 176.5" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_C" pos="-31 -67 255" roty="90" />
@@ -13857,7 +13856,7 @@
     <tile name="FOREST_DEAD_UND_CRYPT_URN_BROKEN_A" pos="25.5 -67 144.5" roty="90" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_D" pos="23.5 -67 143.5" rot="0 270 291.87" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_B" pos="22.5 -67 146.5" roty="90" />
-    <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_SMALL_A" pos="24.5 -67 143.5" roty="0" />
+    <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_SMALL_A" pos="24.5 -67 143.5" />
     <tile name="FOREST_DEAD_UND_CRYPT_URN_GROUP_D" pos="22 -67 145" roty="270" />
     <tile name="FOREST_DEAD_FILL_RUIN_DEBRIS_B_NO_COLLISION" pos="-121 -67 198" roty="90" />
     <tile name="FOREST_DEAD_FILL_RUIN_DEBRIS_B_NO_COLLISION" pos="138 -67 146" roty="180" />
@@ -18484,6 +18483,7 @@
     <tile name="FOREST_DEAD_FILL_RUIN_ROAD_CITY_B" pos="0 -99 70" />
     <tile name="FOREST_DEAD_FILL_RUIN_ROAD_CITY_B" pos="0 -99 180" />
     <tile name="FOREST_DEAD_FILL_RUIN_ROAD_CITY_B" pos="-90 -99 -270" />
+    <tile name="FOREST_DEAD_FILL_RUIN_ROAD_CITY_B" pos="-110 -99 -100" />
     <tile name="SpawnPoint_RANDOM_UNDEAD_MAGE_VETERAN_BOSS" pos="1.02 -29 242.34" roty="180">
       <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE_VETERAN_BOSS" />
     </tile>
@@ -18491,7 +18491,7 @@
       <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER_VETERAN_BOSS" />
     </tile>
     <criticaltile name="Exit" pos="-219.5 -37 0.5" roty="0" id="exit_01" type="exit">
-      <exit size="15 15" spawnpos="10.87619 -3.72387E-07" faction="None" kind="DungeonSpecial">
+      <exit size="15 15" spawnpos="10.87619 -3.72387E-07" faction="None" kind="DungeonSpecial" roadtype="Primary">
         <guards>
           <guard pos="-208.6238 5.499998" />
           <guard pos="-208.6238 -4.500001" />
@@ -18499,7 +18499,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="213.5 -36 0.5" roty="180" id="exit_02" type="exit">
-      <exit size="15 15" spawnpos="13.35029 1.398603" faction="None" kind="DungeonSpecial">
+      <exit size="15 15" spawnpos="13.35029 1.398603" faction="None" kind="DungeonSpecial" roadtype="Primary">
         <guards>
           <guard pos="200.1497 -5.898603" />
           <guard pos="200.1497 3.876168" />
@@ -18507,7 +18507,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="-0.5 -47 90.5" roty="270" id="exit_03" type="exit">
-      <exit size="10 10" spawnpos="11.33709 -9.536743E-07" faction="None" kind="DungeonSpecial">
+      <exit size="10 10" spawnpos="11.33709 -9.536743E-07" faction="None" kind="DungeonSpecial" roadtype="Primary">
         <guards>
           <guard pos="-5.5 101.8371" />
           <guard pos="4.5 101.8371" />
@@ -18515,7 +18515,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="-0.5 -12 -66.5" roty="90" id="exit_04" type="exit">
-      <exit size="15 15" spawnpos="10.72413 -2.861023E-06" faction="None" kind="DungeonSpecial">
+      <exit size="15 15" spawnpos="10.72413 -2.861023E-06" faction="None" kind="DungeonSpecial" roadtype="Primary">
         <guards>
           <guard pos="4.499996 -79.65506" />
           <guard pos="-5.500004 -77.22413" />
@@ -18523,7 +18523,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="FOREST_DEAD_UND_EXIT_STAIRCASE_20M_EXIT" pos="0 -21 7" id="exit_05" type="exit">
-      <exit size="10 10" spawnpos="0.09697723 -11.98203" faction="None" kind="Cluster" />
+      <exit size="10 10" spawnpos="0.09697723 -11.98203" faction="None" kind="Cluster" roadtype="Primary" />
     </criticaltile>
   </tiles>
 </template>

@@ -1,6 +1,47 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/S_FR_CrushedLumberjack_01.unity" unityguid="82071f29036e2e14891867b7a970cb21" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-26 -27" colBoundsMax="25 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="HER" activationRule="X_X_X_Heretic_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_ARCHER" pos="9.39 0 8.24">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_MAGE" pos="-3.39 0 1.25" roty="117.9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="13.72 0 -10.04">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_THIEF" />
+        </tile>
+        <tile name="FOREST_GREEN_HER_FILL_FLAG_A" pos="2.5 0 6.9" rot="351.02 77.14 3.24" />
+        <tile name="FOREST_GREEN_HER_FILL_SACK_PILE_D" pos="1.5 0 4.5" />
+        <tile name="FOREST_GREEN_HER_FILL_SLEEPINGMAT_B" pos="-4.5 0 -1.5" />
+        <tile name="FOREST_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="-10.5 0 -11.5" />
+        <tile name="FOREST_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="6.5 0 -10.5" roty="270" />
+        <tile name="FOREST_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="-4.5 0 6.5" roty="180" />
+        <tile name="FOREST_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="14.5 0 4.5" roty="90" />
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="UND" activationRule="X_X_X_Undead_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="1 0 -3">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="1 0 -3">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="MOR" activationRule="X_X_X_Morgana_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="1 0 -3">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="FOREST_GREEN_GROUND" pos="0 0 -20" />
     <tile name="FOREST_GREEN_GROUND" pos="-10 0 -20" />
     <tile name="FOREST_GREEN_GROUND" pos="10 0 0" />
@@ -72,12 +113,6 @@
     </tile>
     <tile name="WOOD_MEDIUM_NODE" pos="-24 0 -18" roty="205">
       <resourcenode nodetype="medium" resourcetype="wood" />
-    </tile>
-    <tile name="HIDE_HIGH_NODE" pos="1 0 -5" roty="220">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_HIGH_NODE" pos="5 0 -4" roty="259">
-      <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
     <tile name="HIDE_LOW_NODE" pos="-2 0 -23" roty="359">
       <resourcenode nodetype="low" resourcetype="hide" />

@@ -1,6 +1,47 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_LakeRuins_01.unity" unityguid="bcf40b5d15532aa44bdc92a2933c2c8c" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
-  <criticalscenemembers />
+<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_LakeRuins_01.unity" unityguid="bcf40b5d15532aa44bdc92a2933c2c8c" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -27" colBoundsMax="28 25">
+  <criticalscenemembers>
+    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_SQUARE" pos="4 0 -4" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_03" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="2 -1 -7" />
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="HER" activationRule="X_X_X_Heretic_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="KPR" activationRule="X_X_X_Keeper_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="MOR" activationRule="X_X_X_Morgana_X_X" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="UND" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-15.77 0 -5.02">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="22.59 0 -15.7">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="6.57 0 -21.67">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="5.25 0 19.07">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="-7.76 0 9.13">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="-9.05 0 -17.48">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="12.33 0 8.71">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="FIBER_HIGH_NODE" pos="3.5 0 -19.5">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
@@ -19,9 +60,6 @@
     <tile name="FIBER_MEDIUM_NODE" pos="-8.5 0 2.5">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-11 0 6" roty="281">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
     <tile name="HIDE_LOW_NODE" pos="18 0 -20" roty="180">
       <resourcenode nodetype="low" resourcetype="hide" />
     </tile>
@@ -37,6 +75,8 @@
     <tile name="WOOD_MEDIUM_NODE" pos="-20 0 -15">
       <resourcenode nodetype="medium" resourcetype="wood" />
     </tile>
+    <criticaltile name="FishingZone_FRESHWATER_BASE_SQUARE" pos="4 0 -4" id="fishingzone_01" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="2 -1 -7" id="fishingzone_03" type="fishingzone" />
     <tile name="SWAMP_RED_GROUND" pos="-20 0 20" />
     <tile name="SWAMP_RED_GROUND" pos="-20 0 -20" />
     <tile name="SWAMP_RED_GROUND" pos="20 0 20" />
@@ -46,8 +86,6 @@
     <tile name="SWAMP_RED_GROUND" pos="-20 0 10" />
     <tile name="SWAMP_RED_GROUND" pos="10 0 20" />
     <tile name="SWAMP_RED_GROUND" pos="-20 0 -10" />
-    <tile name="SWAMP_RED_RIVER_LAKE_ISLAND_A" pos="3 0 -2" />
-    <tile name="SWAMP_RED_RIVER_LAKE_ISLAND_A" pos="3 0 -6" roty="270" />
     <compoundtile name="_SWAMP_RED_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="20 0 -20" roty="180" />
     <tile name="SWAMP_RED_WATER_LAKE" pos="10 0 0" />
     <tile name="SWAMP_RED_WATER_LAKE" pos="0 0 -10" />
@@ -64,19 +102,10 @@
     <compoundtile name="_SWAMP_RED_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="20 0 0" roty="90" />
     <compoundtile name="_SWAMP_RED_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-10 0 0" roty="270" />
     <compoundtile name="_SWAMP_RED_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="0 0 -20" roty="180" />
-    <tile name="SWAMP_RED_FILL_RUIN_ARCH_BROKEN_A" pos="-6 0 -23" roty="270" />
-    <tile name="SWAMP_RED_FILL_RUIN_ARCH_DOUBLE_A" pos="16 0 -16" />
     <tile name="SWAMP_RED_FILL_RUIN_ARCH_DOUBLE_A" pos="-6 0 7" roty="180" />
-    <tile name="SWAMP_RED_FILL_RUIN_COLUMN_BROKEN_B" pos="22.5 0 1.5" />
-    <tile name="SWAMP_RED_FILL_RUIN_COLUMN_BROKEN_B" pos="3.5 0 -3.5" />
     <tile name="SWAMP_RED_FILL_RUIN_COLUMN_BROKEN_A" pos="-12.5 0 -12.5" />
-    <tile name="SWAMP_RED_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="0 -9 -10" roty="270" />
-    <tile name="SWAMP_RED_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="11 -9 0" roty="90" />
-    <tile name="SWAMP_RED_FILL_RUIN_WALL_INNERCORNER_ROUNDED_B" pos="0 -5 0" />
-    <tile name="SWAMP_RED_UND_GRAVE_C" pos="4 0 -6" />
-    <tile name="SWAMP_RED_FILL_RUIN_COLUMN_BROKEN_A" pos="22.5 0 13.5" />
-    <tile name="SWAMP_RED_UND_STONES_FALLEN_INNERCORNER_B" pos="10 -2 -12" roty="180" />
     <tile name="SWAMP_RED_FILL_RUIN_WALL_COLUMN_B" pos="14 0 13.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_RUIN_COLUMN_BROKEN_A" pos="22 0 2" />
     <tile name="SWAMP_RED_FILL_RUIN_WALL_SMALL_STRAIGHT_A" pos="-20.5 0 -6" roty="271" />
     <tile name="SWAMP_RED_FILL_RUIN_WALL_GATE_A" pos="5 0 13.5" roty="90" />
     <tile name="SWAMP_RED_T1_TREE_WATER_B" pos="-8.5 0 -13.5" roty="232.54" scale="1.119503 1.119503 1.119503" />
@@ -89,7 +118,6 @@
     <tile name="SWAMP_RED_T1_BUSH_B" pos="-3.5 0 -24.5" roty="151" scale="1.143621 1.143621 1.143621" />
     <tile name="SWAMP_RED_T1_BUSH_B" pos="8.5 0 17.5" roty="120" scale="0.901692 0.901692 0.901692" />
     <tile name="SWAMP_RED_T1_BUSH_B" pos="-2.5 0 11.5" roty="175" scale="0.9903136 0.9903136 0.9903134" />
-    <tile name="SWAMP_RED_T1_BUSH_C" pos="8.5 -1 4.5" roty="109" scale="0.9442827 0.9442828 0.9442827" />
     <tile name="SWAMP_RED_T1_BUSH_C" pos="9.5 10 13.5" roty="257" scale="1.147866 1.147867 1.147866" />
     <tile name="SWAMP_RED_T1_BUSH_C" pos="12.5 0 16.5" roty="46" scale="0.9682236 0.9682233 0.9682233" />
     <tile name="SWAMP_RED_T1_BUSH_D" pos="8.5 0 15.5" roty="20" scale="0.9944232 0.9944232 0.9944233" />
@@ -104,22 +132,10 @@
     <tile name="SWAMP_RED_T1_BUSH_D" pos="-12.5 0 -8.5" />
     <tile name="SWAMP_RED_T1_BUSH_A" pos="24.5 0 16.5" />
     <tile name="SWAMP_RED_T1_BUSH_D" pos="-13.5 0 0.5" />
-    <tile name="SWAMP_RED_VEG_WATER_LILY_C" pos="7.5 0 -6.5" />
     <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="-7.5 -1 -6.5" roty="141" scale="1.197456 1.197456 1.197456" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="4.5 -1 -8.5" roty="3.76" scale="0.8946891 0.8946894 0.8946891" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_A" pos="13.5 -1 -6.5" roty="357" scale="0.9249646 0.9249649 0.9249649" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="6.5 -1 4.5" roty="252" scale="1.156558 1.156558 1.156558" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_A" pos="5.5 -1 2.5" roty="144" scale="1.116791 1.116791 1.116791" />
     <tile name="SWAMP_RED_VEG_BLEND_HIGH_SMALL_A" pos="-20.5 0 -12.5" />
     <tile name="SWAMP_RED_VEG_BLEND_HIGH_SMALL_A" pos="1.5 0 -23.5" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="1.5 0 -8.5" roty="100" scale="0.894689 0.8946894 0.8946891" />
     <tile name="SWAMP_RED_VEG_BLEND_HIGH_SMALL_A" pos="22.5 0 -1.5" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="0.5 0 -0.5" roty="100" scale="0.894689 0.8946894 0.8946891" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="-0.5 -1 -2.5" roty="100" scale="0.8946889 0.8946894 0.8946891" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="6.5 -1 -1.5" roty="73.69" scale="0.8946888 0.8946894 0.8946891" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="4.5 -1 0.5" roty="33.67" scale="0.894689 0.8946894 0.8946893" />
-    <tile name="SWAMP_RED_VEG_WATER_REED_B" pos="3.5 1 -7.5" roty="50.97" scale="0.894689 0.8946894 0.8946891" />
-    <tile name="SWAMP_RED_VEG_UNDERWATER_PLANTS_A" pos="11.5 -4 0.5" />
     <tile name="SWAMP_RED_VEG_UNDERWATER_PLANTS_A" pos="-5.5 -4 -10.5" />
     <tile name="SWAMP_RED_VEG_SOIL_C" pos="-18.5 0 18.5" />
     <tile name="SWAMP_RED_VEG_SOIL_C" pos="-1.5 0 16.5" />

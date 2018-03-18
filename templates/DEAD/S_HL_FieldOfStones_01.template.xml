@@ -1,6 +1,38 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Slave/S_HL_FieldOfStones_01.unity" unityguid="9275398b5b59668459e15e2b4fa1f1ab" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Roaming_Layer" activationRule="X_X_X_Morgana|Undead|Heretic_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="-4 -4 6">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="20 0 -18">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="8 0 18">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="2.72 -4 -5.88" roty="329.98">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="-4.46 -4 -2.39" roty="90">
+          <mobspawnpoint spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="3.65 -4 0.47" roty="240">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="-6.51 -4 12.69" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="-7.32 -4 14.76" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="HIGHLAND_DEAD_GROUND" pos="-20 0 20" />
     <tile name="HIGHLAND_DEAD_GROUND" pos="0 -4 -10" />
     <tile name="HIGHLAND_DEAD_GROUND" pos="20 0 -20" />
@@ -31,8 +63,8 @@
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_A" pos="15.5 0 -17.5" roty="158" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_A" pos="-13.5 0 14.5" roty="20" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_B" pos="-21.5 0 -8.5" roty="50" />
+    <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_C" pos="21.5 -1 -0.5" roty="217" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_B" pos="-20.5 0 0.5" roty="24" />
-    <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_C" pos="21.5 -1 -0.5" roty="217.2" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_C" pos="2.5 0 16.5" roty="350.3" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_C" pos="-17.5 -4 -2.5" roty="220" />
     <tile name="HIGHLAND_DEAD_T1_TREE_FOREST_D" pos="0.5 0 19.5" roty="220.68" />
@@ -75,12 +107,9 @@
     <tile name="HIGHLAND_DEAD_KPR_FILL_STORAGE_PILE_C" pos="-7.5 -4 12" roty="270" />
     <tile name="HIGHLAND_DEAD_KPR_FIREBOWL_TRIPOD_GROUP_B_NO_EMISSIVE" pos="0 -4 -2" />
     <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_A" pos="18 0 18" />
-    <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_A" pos="-21 0 11" roty="287.79" />
+    <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_A" pos="-21 0 11" roty="288" />
     <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_B" pos="13 0 -21" roty="180" />
     <tile name="HIGHLAND_DEAD_FILL_RUIN_DEBRIS_A" pos="-4 -4 -18" roty="90" />
     <tile name="HIGHLAND_DEAD_FILL_RUIN_DEBRIS_A" pos="7 -4 9" />
-    <tile name="HIGHLAND_DEAD_FILL_RUIN_WALL_CHIMNEY_A" pos="-18 -4 -3" roty="270" />
-    <tile name="HIGHLAND_DEAD_FILL_RUIN_WALL_COLUMN_A" pos="13 -4 -8.5" />
-    <tile name="HIGHLAND_DEAD_FILL_RUIN_WALL_COLUMN_B" pos="-10.5 -4 12" roty="90" />
   </tiles>
 </template>
