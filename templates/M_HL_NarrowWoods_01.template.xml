@@ -1,6 +1,86 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Slave/M_HL_NarrowWoods_01.unity" unityguid="c1d7c2917c7dc554dbe06bef947824f3" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-80 -77" colBoundsMax="80 81">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Roaming_Layer" activationRule="X_X_X_Morgana|Undead|Heretic_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="18 0 -4">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="24 0 40">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="7 0 28">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-5 0 -7">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-21 0 -7">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-37 0 9">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="38 0 -13">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="2.21 0.03 -9.04" roty="110">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="2.081138 -8.546144" idle="6" pace="WALK" />
+              <waypoint pos="-11.5253 -11.22396" idle="6" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="26.51 0 -4.26" roty="129">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="12.37 0 42.9" roty="129">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="-37.3 0 17.17" roty="301">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="-9.79 0 -7.96" roty="230.4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="-14.4 0 -14.77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_AXE_THROWER" pos="-17.65 0 -7.61" roty="127">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="15.05 0 37.03" roty="30.86">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="-42.64 0 18.16" roty="39">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_BERSERK" pos="24.59 0 -8.61" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="-28.73 0.03 -15.84" roty="290">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="-28.60114 -16.33386" idle="6" pace="WALK" />
+              <waypoint pos="-14.9947 -13.65604" idle="6" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_KEEPER_UNPROVEN_FEMALE" pos="-15.52 0.03 3.81" roty="20">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="-16.01386 3.681138" idle="6" pace="WALK" />
+              <waypoint pos="-14.98828 -6.716698" idle="6" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="HIGHLAND_GREEN_GROUND" pos="20 0 70" roty="270" />
     <tile name="HIGHLAND_GREEN_GROUND" pos="-20 0 -50" roty="90" />
     <tile name="HIGHLAND_GREEN_GROUND" pos="0 0 0" roty="90" />
@@ -670,7 +750,6 @@
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="12.5 0 44.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-33.5 0 24.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="44.5 0 -51.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-7.5 0 -8.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-11.5 0 -1.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-22.5 0 -3.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-19.5 0 -16.5" roty="270" />
@@ -691,6 +770,7 @@
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="34.5 0 -68.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="27.5 0 -71.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="45.5 0 -68.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-7.5 0 -8.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="52.5 0 -71.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-72.5 0 -21.5" roty="270" />
     <tile name="HIGHLAND_GREEN_VEG_GRASS_B" pos="-72.5 0 -9.5" roty="270" />
@@ -1039,7 +1119,7 @@
     <tile name="ORE_HIGH_NODE" pos="-62 0 -63" roty="180">
       <resourcenode nodetype="high" resourcetype="ore" />
     </tile>
-    <tile name="ORE_HIGH_NODE" pos="8 0 73" roty="270">
+    <tile name="ORE_HIGH_NODE" pos="8 0 74" roty="270">
       <resourcenode nodetype="high" resourcetype="ore" />
     </tile>
     <tile name="ORE_HIGH_NODE" pos="-66 0 72">
@@ -1320,5 +1400,23 @@
     <tile name="SpawnPoint_Highland_MARMOT" pos="42.71 0 40.77" />
     <tile name="SpawnPoint_Highland_MARMOT" pos="54.64 0 40.68" />
     <tile name="SpawnPoint_Highland_MARMOT" pos="68.77 0 40.55" />
+    <tile name="ROAMING_MEDIUM_NODE" pos="-40 0 73">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="72 0 43">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="-40 0 34">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="42 0 -69">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="41 0 -40">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="50 0 40">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
   </tiles>
 </template>

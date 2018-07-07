@@ -2,34 +2,823 @@
 <missions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="missions.xsd">
   <!-- MISSIONS -->
   <!--TestVersion 0.1-->
-  <!-- EVENTS -->
-  <!-- HALLOWEEN -->
-  <mission uniquename="MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB" faction="ROYALARMY" title="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_TITLE" offertext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_OFFERTEXT" progresstext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="0" tags="halloween" offertimeout="0" missiontimeout="10800" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_EVENT_HALLOWEEN_AGENTA_GOTO_AGENTB_COMPLETIONTEXT" >
+  
+  
+  <!--Kay Tutorial-->
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="commander" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_COMPLETIONTEXT" >
     <!-- GOTO_CRAFTER -->
     <variables>
       <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="20"/>
+        <distancetocluster mindistance="0" maxdistance="0"/>
       </dynamiccluster>
-      <dynamicagent name ="HEAD">
-        <distancefromagent mindistance="0" maxdistance="20"/>
-        <agenttag tag="HALLOWEEN_AGENT_B"/>
+      <dynamicagent name ="CRAFTER">
+        <distancefromagent mindistance="0" maxdistance="0"/>
+        <agenttag tag="ROYALCRAFTER"/>
       </dynamicagent>
     </variables>
     <tasks>
       <completionstep>
-        <gotoagent agent="HEAD" />
+        <gotoagent agent="CRAFTER" />
       </completionstep>
     </tasks>
     <rewards>
-      <itemreward itemid="QUESTITEM_TOKEN_EVENT_HALLOWEEN_2017" count="250"/>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON"
+     faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_TITLE"
+     offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_OFFERTEXT"
+     progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_PROGRESSTEXT"
+     priority="1" minlevel="1" maxlevel="2" silverrequired="915"
+     tags="crafter"
+     offertimeout="0" missiontimeout="3600000" missionslotcooldown="0"
+     uicategory="GATHERING" onceonly="true"
+     previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER"
+selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C"
+           completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+      <dynamicagent name ="COMMANDER">
+        <distancefromagent mindistance="0" maxdistance="0"/>
+        <agenttag tag="ROYALCOMMANDER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission> 
+  
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
+   <!--test-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_PICK" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_PICK" />
+        <acquireitem itemid="T1_2H_TOOL_KNIFE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_KNIFE" />
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT" >
+    <!--test-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_AXE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_AXE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
+    <!--test-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_PICK" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_PICK"/>
+        <acquireitem itemid="T1_2H_TOOL_AXE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_AXE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_COMPLETIONTEXT">
+    <!--test-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <usefunction function="OpenWorldMap"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+  <!--SWORD QUEST-->
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - GOTO_Miner-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="MINER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALMINER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="MINER" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+  
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - Miner_ORE-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_ORE" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ORE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - Miner_METALBAR-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_METALBAR" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_METALBAR"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - GOTO_Hunter-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="2" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+        <dynamicagent name ="HUNTER">
+          <distancefromagent mindistance="0" maxdistance="2"/>
+          <agenttag tag="ROYALHUNTER"/>
+        </dynamicagent>
+     
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="HUNTER" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="hunter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - Hunter_Hide-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_HIDE" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_HIDE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="hunter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_COMPLETIONTEXT">
+    <!--Sword Quest - Hunter_LEATHER-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_LEATHER" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_LEATHER"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="hunter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_COMPLETIONTEXT">
+    <!--Sword Quest - Return to Town-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+      </dynamiccluster>
+      <dynamicagent name ="CRAFTER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALCRAFTER"/>
+      </dynamicagent>
+      
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="CRAFTER"/>
+      </completionstep>
+    </tasks>
+    <rewards>
     </rewards>
   </mission>
 
 
 
-  <!-- TUTORIAL -->
+
+
+
+
+  <!--BOW QUEST-->
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_COMPLETIONTEXT">
+    <!--Bow Quest - GOTO_Lumberjack-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="LUMBERJACK">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALLUMBERJACK"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="LUMBERJACK" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_COMPLETIONTEXT">
+    <!--Bow Quest - Lumberjack_Wood-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_WOOD" count="32" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_WOOD"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_COMPLETIONTEXT">
+    <!--Bow Quest - Lumberjack_Planks-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_PLANKS" count="32" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_PLANK"/>   
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_COMPLETIONTEXT">
+    <!--Bow Quest - Return to Town-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="2"/>
+        <presentresource resourceid="WOOD" tier="2"/>
+        <presentresource resourceid="ORE" tier="2"/>
+        <presentresource resourceid="FIBER" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="CRAFTER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALCRAFTER"/>
+      </dynamicagent>
+
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="CRAFTER"/>
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+
+  <!--STAFF QUEST-->
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - GOTO_Lumberjack-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="LUMBERJACK">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALLUMBERJACK"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="LUMBERJACK" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - Lumberjack_Wood-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_WOOD" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_WOOD"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - Lumberjack_Planks-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_PLANKS" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_PLANK"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="lumberjack" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - GOTO_Miner-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="2" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="MINER">
+        <distancefromagent mindistance="0" maxdistance="2"/>
+        <agenttag tag="ROYALMINER"/>
+      </dynamicagent>
+
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="MINER" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - Miner_Ore-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_ORE" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ORE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_COMPLETIONTEXT">
+    <!--Staff Quest - Miner_Metalbar-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_METALBAR" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_METALBAR"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="miner" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_COMPLETIONTEXT">
+    <!--Staff Quest - Go to Town-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="2"/>
+        <presentresource resourceid="WOOD" tier="2"/>
+        <presentresource resourceid="ORE" tier="2"/>
+        <presentresource resourceid="FIBER" tier="2"/>
+      </dynamiccluster>
+      <dynamicagent name ="CRAFTER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALCRAFTER"/>
+      </dynamicagent>
+
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="CRAFTER"/>
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+
+
+
+
+
+
+  <!--CRAFTING QUEST-->
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_COMPLETIONTEXT" >
+    <!--Crafting Quest - Craft Sword-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_MAIN_SWORD" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_MAIN_SWORD"/>   
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_COMPLETIONTEXT">
+    <!--Crafting Quest - Craft Bow-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_2H_BOW" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_2H_BOW"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_COMPLETIONTEXT">
+    <!--Crafting Quest - Craft Staff-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T2_MAIN_FIRESTAFF" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_MAIN_FIRESTAFF"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" requiresonlyonepreviousmission="true"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_COMPLETIONTEXT">
+    <!--Crafting Quest - Craft Armor + Offhand-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
+        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
+        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
+        <craftitem itemid="T2_OFF_SHIELD;T2_OFF_BOOK" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_OFF_HAND"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_CAPE" count="1"/>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_COMPLETIONTEXT">
+    <!--Crafting Quest - Craft Armor-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
+        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
+        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_CAPE" count="1"/>
+    </rewards>
+  </mission>
+
+  
+  <!-- FIGHTING QUEST -->
+  
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_COMPLETIONTEXT" >
+    <!--Fighting Quest - GOTO_Soldier-->
+    <variables>
+      <dynamicagent name ="SOLDIER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALSOLDIER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="SOLDIER" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="soldier" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_COMPLETIONTEXT">
+    <!--Fighting Quest - Collect Silver-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <gathersilver value="150" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_COLLECT_SILVER"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="soldier" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_NEW_COMPLETIONTEXT">
+    <!--Fighting Quest - Get Donkey-->
+    <variables>
+      <dynamicagent name ="COMMANDER">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALCOMMANDER"/>
+      </dynamicagent>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent agent="COMMANDER">
+          <item itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_TOKEN_TO_COMMANDER" />
+        </gotoagent>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_MOUNT_MULE" count="1"/>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="commander" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_COMPLETIONTEXT">
+    <!--Fighting Quest - Go Captain-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1"/>
+      </dynamiccluster> 
+      <dynamicagent name ="CAPTAIN">
+        <distancefromagent mindistance="1" maxdistance="1"/>
+        <agenttag tag="ROYALCAPTAIN"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="CAPTAIN" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="captain" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_COMPLETIONTEXT">
+    <!--Fighting Quest - T4 Reaver-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <unlockachievement achievement="PVE_T3" masterylevel="0"/>
+      </missionstep>
+      <completionstep>
+        <gotoagent />
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="QUESTITEM_TOKEN_ROYAL_T4" count="2"/>
+    </rewards>
+  </mission>
+
+
+
+  <!--DECISION OPTIONS-->
+  
+    <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_COMPLETIONTEXT">
+    <variables>
+      <dynamicagent name="AGENT_A">
+        <distancefromagent mindistance="0" maxdistance="0"/>
+        <agenttag tag ="ROYALCRAFTER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="AGENT_A"></gotoagent>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_MAIN_SWORD" count="1"/>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_COMPLETIONTEXT">
+    <variables>
+      <dynamicagent name="AGENT_A">
+        <distancefromagent mindistance="0" maxdistance="0"/>
+        <agenttag tag ="ROYALCOMMANDER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="AGENT_A"></gotoagent>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_2H_BOW" count="1"/>
+    </rewards>
+  </mission>
+
+  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_COMPLETIONTEXT">
+    <variables>
+      <dynamicagent name="AGENT_A">
+        <distancefromagent mindistance="0" maxdistance="0"/>
+        <agenttag tag ="ROYALSOLDIER"/>
+      </dynamicagent>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoagent agent="AGENT_A"></gotoagent>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <itemreward itemid="T2_MAIN_FIRESTAFF" count="1"/>
+    </rewards>
+  </mission>
+
+
+
+
+
+
+
+<!-- Old Tutorial
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="commander" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_COMPLETIONTEXT" >
-    <!-- GOTO_CRAFTER -->
+  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -78,7 +867,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission> 
   
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-   <!--test-->
+  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -98,7 +887,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT" >
-    <!--test-->
+    
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -117,7 +906,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -137,7 +926,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -156,7 +945,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_COMPLETIONTEXT">
-    <!--test-->
+ 
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -182,7 +971,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
 
  
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_COMPLETIONTEXT">
-    <!--test-->
+
   
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -203,7 +992,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -229,7 +1018,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
 
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_COMPLETIONTEXT" >
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -249,7 +1038,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_COMPLETIONTEXT" >
-    <!--test-->
+  
     <variables>
    <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -268,7 +1057,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -289,8 +1078,8 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_COMPLETIONTEXT" >
-    <!--test-->
-    <variables>
+  
+    
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0" />
       </dynamiccluster>
@@ -308,7 +1097,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0" />
@@ -327,7 +1116,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0" />
@@ -348,7 +1137,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
 
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" requiresonlyonepreviousmission="true"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_COMPLETIONTEXT">
-    <!--test-->
+  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -372,7 +1161,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_COMPLETIONTEXT">
-    <!--test-->
+    
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -395,7 +1184,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="crafter" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" requiresonlyonepreviousmission="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_COMPLETIONTEXT" >
-    <!--test-->
+    
     <variables>
       <dynamicagent name ="SOLDIER">
         <distancefromagent mindistance="0" maxdistance="0"/>
@@ -412,7 +1201,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="soldier" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_COMPLETIONTEXT">
-    <!--test-->
+   
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0" />
@@ -431,7 +1220,7 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
   </mission>
 
   <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="soldier" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousmissions="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_COMPLETIONTEXT">
-    <!--test-->
+  
     <variables>
       <dynamicagent name ="COMMANDER">
         <distancefromagent mindistance="0" maxdistance="0"/>
@@ -451,64 +1240,8 @@ selectmissions="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_
     <rewards>
       <itemreward itemid="T2_MOUNT_MULE" count="1"/>
     </rewards>
-  </mission>
+  </mission> -->
 
-
-
-  <!--DECISION OPTIONS-->
-  
-    <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_COMPLETIONTEXT">
-    <variables>
-      <dynamicagent name="AGENT_A">
-        <distancefromagent mindistance="0" maxdistance="0"/>
-        <agenttag tag ="ROYALCRAFTER"/>
-      </dynamicagent>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoagent agent="AGENT_A"></gotoagent>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <itemreward itemid="T2_MAIN_SWORD" count="1"/>
-    </rewards>
-  </mission>
-
-  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_TITEL" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_COMPLETIONTEXT">
-    <variables>
-      <dynamicagent name="AGENT_A">
-        <distancefromagent mindistance="0" maxdistance="0"/>
-        <agenttag tag ="ROYALCOMMANDER"/>
-      </dynamicagent>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoagent agent="AGENT_A"></gotoagent>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <itemreward itemid="T2_2H_BOW" count="1"/>
-    </rewards>
-  </mission>
-
-  <mission uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" faction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_PROGRESS" priority="4" minlevel="1" maxlevel="2" silverrequired="915" tags="unused" offertimeout="0" missiontimeout="3600000" missionslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_COMPLETIONTEXT">
-    <variables>
-      <dynamicagent name="AGENT_A">
-        <distancefromagent mindistance="0" maxdistance="0"/>
-        <agenttag tag ="ROYALSOLDIER"/>
-      </dynamicagent>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoagent agent="AGENT_A"></gotoagent>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <itemreward itemid="T2_MAIN_FIRESTAFF" count="1"/>
-    </rewards>
-  </mission>
-  
-  
   <!--Commented out for Update Galahad--><!--
   <mission uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_AKINDOMFORAHORSE" faction="ROYALARMY" title="@AKINDOMFORAHORSE" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="915" tags="start" offertimeout="0" missiontimeout="14400" missionslotcooldown="0" uicategory="FIGHTING" >
     

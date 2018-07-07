@@ -2,7 +2,7 @@
   <criticalscenemembers>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="Exit" pos="-0.5 -8 42.5" roty="270">
-        <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="-5.500003 57.50006" />
             <guard pos="4.499997 57.50006" />
@@ -12,7 +12,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_02" type="exit" layerId="">
       <tile name="Exit" pos="-40.5 -3 89.5">
-        <exit size="15 15" spawnpos="19.68338 1.295563" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="19.68338 1.295563" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="-20.81662 95.79556" />
             <guard pos="-20.81662 85.79556" />
@@ -22,7 +22,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_03" type="exit" layerId="">
       <tile name="Exit" pos="20.5 -8 118.5" roty="90">
-        <exit size="15 15" spawnpos="15.00012 1.907348E-06" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="15.00012 1.907348E-06" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="25.5 103.4999" />
             <guard pos="15.5 103.4526" />
@@ -32,7 +32,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_04" type="exit" layerId="">
       <tile name="Exit" pos="31.5 -3 80.5" roty="180">
-        <exit size="15 15" spawnpos="15.00007 1.311348E-06" faction="None" kind="Cluster">
+        <exit size="15 15" spawnpos="15.00007 1.311348E-06" faction="None" kind="Cluster" roadtype="Primary">
           <guards>
             <guard pos="16.49993 75.5" />
             <guard pos="16.49993 85.5" />
@@ -45,9 +45,12 @@
         <actionbuilding />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-1.58 -28 42.15" />
+    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
-    <layergroup name="">
+    <layergroup name="Season">
       <layer id="Layer_01" name="Halloween">
         <tile name="HALLOWEEN_BUNTING_B" pos="0 -6 26" roty="180" />
         <tile name="HALLOWEEN_BUNTING_B" pos="0 -6 55" />
@@ -113,11 +116,60 @@
         <tile name="HALLOWEEN_BUNTING_B" pos="-31 -7 105" />
         <tile name="HALLOWEEN_PUMKIN_LIGHT_A" pos="-28 -7 105" roty="45" />
       </layer>
+      <layer id="Layer_02" name="Christmas">
+        <tile name="XMAS_FILL_CITY_BANNER_A" pos="23.5 -4 86.5" />
+        <tile name="XMAS_FILL_CITY_BANNER_A" pos="-2.5 -8 66.5" roty="270" />
+        <tile name="XMAS_FILL_CITY_BANNER_B" pos="-34.5 -2 79.5" roty="270" scale="1.262001 1.262 1.262001" />
+        <tile name="XMAS_FILL_CITY_BANNER_B" pos="15.5 -1 104.5" />
+        <tile name="XMAS_FILL_CITY_BUNTING_C" pos="-34.5 5 90" roty="270" scale="0.7656189 0.7656184 0.7656196" />
+        <tile name="XMAS_FILL_CITY_BUNTING_C" pos="0 1 53.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_C" pos="20 -1 114.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_C" pos="33.5 9 79" roty="90" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-34.5 5 90" roty="270" scale="0.7656189 0.7656184 0.7656196" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="6.5 -9 48" roty="270" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="6.5 -9 33" roty="270" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-6.5 -9 48" roty="90" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-6.5 -9 33" roty="90" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="0 1 53.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="10 1 53.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-10 1 53.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="20 -1 114.5" scale="1.05 1.05 1.05" />
+        <tile name="XMAS_FILL_CITY_BUNTING_D" pos="33.5 9 79" roty="90" />
+        <tile name="XMAS_FILL_CITY_BUSH_A" pos="-8.5 -8 104.5" />
+        <tile name="XMAS_FILL_CITY_BUSH_A" pos="-10.5 -8 70.5" roty="63" />
+        <tile name="XMAS_FILL_CITY_BUSH_C" pos="7.5 -8 104.5" />
+        <tile name="XMAS_FILL_CITY_BUSH_C" pos="-29.5 -8 73.5" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="-10 4 104.5" roty="338" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="-7 4 107.5" roty="286" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="-12.5 4 108" roty="130" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="-9.5 4 110" roty="173" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="9 4 110.5" roty="173" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="6.5 4 108" roty="130" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="12.5 4 107" roty="286" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="10 4 104.5" roty="338" />
+        <tile name="XMAS_FILL_CITY_GROUNDPATCH_B" pos="-16.59 -8 99.49" />
+        <tile name="XMAS_FILL_CITY_GROUNDPATCH_B" pos="-21.5 -8 99.5" roty="270" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="-15.5 -8 102.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="-28.5 -8 71.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="-24.5 -8 101.5" roty="270" />
+        <tile name="XMAS_FILL_CITY_LIGHT_B" pos="-2.5 -8 68.5" />
+        <tile name="XMAS_FILL_CITY_LIGHT_C" pos="-31.5 2 65.5" scale="0.8017157 0.8017157 0.8017157" />
+        <tile name="XMAS_FILL_CITY_TREE_A" pos="-19 -8 100" />
+        <tile name="XMAS_FILL_CITY_TREE_B" pos="-4.5 -8 70.5" />
+        <tile name="XMAS_FILL_CITY_WREATH_B" pos="5.5 -9 40.5" roty="270" scale="1.295853 1.295853 1.295853" />
+        <tile name="XMAS_FILL_CITY_WREATH_B" pos="-0.5 0 104.5" scale="1.073118 1.073119 1.073119" />
+        <tile name="XMAS_FILL_CITY_WREATH_B" pos="-5.5 -9 40.5" roty="90" scale="1.295853 1.295853 1.295853" />
+        <tile name="XMAS_FILL_CITY_BANNER_B" pos="-34.5 -2 100.5" roty="270" scale="1.262 1.262 1.262" />
+        <tile name="XMAS_FILL_CITY_BUSH_C" pos="26.5 -3 85.5" rot="347 358 12" />
+        <tile name="XMAS_FILL_CITY_BUSH_C" pos="15.5 -8 68.5" roty="49.82" />
+        <tile name="XMAS_FILL_CITY_GINGERBREAD_A" pos="10.5 -3 68" roty="239.85" scale="1.09296 1.09296 1.09296" />
+        <tile name="XMAS_FILL_CITY_LIGHT_A" pos="11.5 -8 67.5" />
+      </layer>
     </layergroup>
     <tile name="Atmosphere_DNG_MOR_DL_NONE_Toplight" pos="0 0 0" />
     <tile name="CAM_fx_env_undead_dust" pos="-0.5 0 -0.5" />
     <criticaltile name="Exit" pos="-0.5 -8 42.5" roty="270" id="exit_01" type="exit">
-      <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="15.00006 9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="-5.500003 57.50006" />
           <guard pos="4.499997 57.50006" />
@@ -125,7 +177,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="-40.5 -3 89.5" id="exit_02" type="exit">
-      <exit size="15 15" spawnpos="19.68338 1.295563" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="19.68338 1.295563" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="-20.81662 95.79556" />
           <guard pos="-20.81662 85.79556" />
@@ -133,7 +185,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="20.5 -8 118.5" roty="90" id="exit_03" type="exit">
-      <exit size="15 15" spawnpos="15.00012 1.907348E-06" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="15.00012 1.907348E-06" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="25.5 103.4999" />
           <guard pos="15.5 103.4526" />
@@ -141,7 +193,7 @@
       </exit>
     </criticaltile>
     <criticaltile name="Exit" pos="31.5 -3 80.5" roty="180" id="exit_04" type="exit">
-      <exit size="15 15" spawnpos="15.00007 1.311348E-06" faction="None" kind="Cluster">
+      <exit size="15 15" spawnpos="15.00007 1.311348E-06" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="16.49993 75.5" />
           <guard pos="16.49993 85.5" />
@@ -263,8 +315,6 @@
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_INNERWALL_A_OPEN" pos="30 -46 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -48 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -48 10" roty="90" />
-    <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -48 10" roty="90" />
-    <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -48 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="40 -48 10" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -64 -10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="30 -64 -10" roty="90" />
@@ -441,7 +491,6 @@
     <tile name="HIGHLAND_GREEN_ROAD_CITY_SIDE_A" pos="20 -8 -10" roty="90" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_SIDE_A" pos="-20 -8 -20" roty="180" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A_OBJECT" pos="-30 -8 10" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_STRAIGHT_A" pos="-30 -8 0" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A_OBJECT" pos="-30 -8 -10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A_NO_COLLISION" pos="-40 -20 90" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_STRAIGHT_A" pos="-40 -4 0" />
@@ -908,10 +957,8 @@
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_INNERWALL_A_OPEN" pos="-40 -20 90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_INNERWALL_A_OPEN" pos="-50 -16 90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="-40 -24 110" />
-    <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="-40 -24 110" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="-40 -24 60" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_NO_INNERWALL_A" pos="-40 -24 70" />
-    <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_NO_BATTLEMENT_A" pos="-40 4 110" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_NO_BATTLEMENT_A" pos="-40 4 110" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_NO_BATTLEMENT_A" pos="-40 8 90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_NO_BATTLEMENT_A" pos="-40 -8 80" />
@@ -1160,7 +1207,6 @@
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="35 -22 70" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="2 -19 117" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="-33 -8 110" roty="90" />
-    <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="-33 -8 110" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="-33 -8 60" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_B" pos="-33 -8 70" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_SHORT_B" pos="-26 5 109.5" roty="270" />
@@ -1385,8 +1431,6 @@
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="40 -8 120" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="40 -8 130" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="30 -8 130" roty="90" />
-    <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="30 -8 140" roty="90" />
-    <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="40 -8 140" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="40 -8 140" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="30 -8 140" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="10 -8 140" roty="90" />
@@ -1438,5 +1482,6 @@
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_B" pos="0 -8 50" roty="270" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="-10 -8 80" roty="90" />
     <tile name="HIGHLAND_GREEN_MOR_CASTLE_ROOF_A" pos="60 -8 80" roty="90" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-1.58 -28 42.15" id="fishingzone_01" type="fishingzone" />
   </tiles>
 </template>

@@ -1,6 +1,96 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/M_SW_River_01.unity" unityguid="f28d197c7c2557949a025960047dda1f" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-75 -75" colBoundsMax="75 75">
-  <criticalscenemembers />
+<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/Unused/M_SW_River_01.unity" unityguid="f28d197c7c2557949a025960047dda1f" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-75 -75" colBoundsMax="75 75">
+  <criticalscenemembers>
+    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-30.6 0 -31.3" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_02" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="18.72 0 0.47" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_03" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-10.72 0 -16.41" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_04" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="12.67 0 -7.55" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_05" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-46.75 0 -17.87" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_06" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-16.75 0 -41.87" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_07" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-30.75 0 -48.87" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_08" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-20.6 0 -24.29" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="fishingzone_09" type="fishingzone" layerId="">
+      <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="-36.43 0 -25.35" />
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_02" name="HER" activationRule="X_X_X_Heretic_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_ARCHER" pos="30 0 8">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_HERETIC_ARCHER">
+            <path>
+              <waypoint pos="30 10" idle="3" pace="WALK" />
+              <waypoint pos="-9.957546 10.03031" idle="0" pace="WALK" />
+              <waypoint pos="-19.9743 0.01356173" idle="0" pace="WALK" />
+              <waypoint pos="-20 -5" idle="3" pace="WALK" />
+              <waypoint pos="-19.9743 0.01356173" idle="0" pace="WALK" />
+              <waypoint pos="-9.957546 10.03031" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_MAGE" pos="-18 0 -7" roty="315">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="-22 0 -7" roty="45">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_THIEF" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="KPR" activationRule="X_X_X_Keeper_X_X">
+        <tile name="HIDE_HIGH_NODE" pos="-11 0 29">
+          <resourcenode nodetype="high" resourcetype="hide" />
+        </tile>
+        <tile name="HIDE_HIGH_NODE" pos="-18 0 0">
+          <resourcenode nodetype="high" resourcetype="hide" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="MOR" activationRule="X_X_X_Morgana_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CROSSBOWMAN" pos="30 0 8">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_MORGANA_CROSSBOWMAN">
+            <path>
+              <waypoint pos="30 10" idle="3" pace="WALK" />
+              <waypoint pos="-9.957546 10.03031" idle="0" pace="WALK" />
+              <waypoint pos="-19.9743 0.01356173" idle="0" pace="WALK" />
+              <waypoint pos="-20 -5" idle="3" pace="WALK" />
+              <waypoint pos="-19.9743 0.01356173" idle="0" pace="WALK" />
+              <waypoint pos="-9.957546 10.03031" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CULTIST" pos="-18 0 -7" roty="315">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_MORGANA_CULTIST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_SOLDIER" pos="-22 0 -7" roty="45">
+          <mobspawnpoint spawnbehavior="ROAMING_MORGANA_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_05" name="UND" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="20 0 35" roty="90">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SWAMP_GREEN_UND_GRAVE_OPEN_A" pos="18 0 33" roty="180" />
+      </layer>
+    </layergroup>
     <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_A_COMP_01" pos="0 0 -10" roty="90" />
     <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="10 0 0" roty="270" />
     <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="-40 0 -50" roty="180" />
@@ -218,7 +308,7 @@
     <tile name="SWAMP_GREEN_WATER_LAKE" pos="-20 0 -50" />
     <tile name="SWAMP_GREEN_WALKWAY_WOODEN_DEADEND_A" pos="-20 0 -17" roty="270" />
     <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_A" pos="16 0 10" roty="180" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_B" pos="17 0 29.5" roty="180" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_COLUMN_B" pos="17 0 30" roty="180" />
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="0.5 0 19.5" />
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="-32.5 0 20.5" />
     <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="-46.5 0 43.5" />
@@ -334,6 +424,21 @@
     <tile name="SWAMP_GREEN_VEG_WATER_LILY_B" pos="-25.5 0 -42.5" roty="270" />
     <tile name="SWAMP_GREEN_VEG_WATER_LILY_B" pos="-26.5 0 -27.5" roty="295" />
     <tile name="SWAMP_GREEN_VEG_WATER_LILY_B" pos="-36.5 0 -38.5" roty="182" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-19.5 -1 -51.5" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-31.5 -1 -53.5" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-36.5 -1 -47.5" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-43.5 -1 -40.5" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-43.5 -1 -30.5" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-34.5 -1 -18.5" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-19.5 -1 -18.5" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-7.5 -1 -12.5" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-16.5 -1 -31.5" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-13.5 -1 -24.5" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-24.5 -1 -42.5" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-15.5 -1 -40.5" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="-26.5 -1 -26.5" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_FILL_BARREL_BROKEN_A" pos="-13.5 -1 -17.5" />
+    <tile name="SWAMP_GREEN_WATER_FILL_BOAT_BROKEN_A" pos="-26.5 -1 -18.5" />
     <tile name="SWAMP_GREEN_FILL_TREE_FALLEN_B" pos="-26 -1 -35" />
     <tile name="SWAMP_GREEN_FILL_TREE_TRUNK_A" pos="-9 0 -35" />
     <tile name="SWAMP_GREEN_T1_TREE_BAYOU_A" pos="-4.5 0 -51.5" />
@@ -568,7 +673,7 @@
     <tile name="FIBER_HIGH_NODE" pos="-13.5 0 -57.5">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="18.5 0 33.5">
+    <tile name="FIBER_HIGH_NODE" pos="16 0 38">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
     <tile name="FIBER_HIGH_NODE" pos="1.5 0 29.5">
@@ -724,13 +829,7 @@
     <tile name="HIDE_HIGH_NODE" pos="31 0 27">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-11 0 29">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
     <tile name="HIDE_HIGH_NODE" pos="4 0 -42">
-      <resourcenode nodetype="high" resourcetype="hide" />
-    </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-18 0 0">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
     <tile name="HIDE_MEDIUM_NODE" pos="49 0 -23">
@@ -868,5 +967,41 @@
     <tile name="WOOD_LOW_NODE" pos="69 0 -68">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="20 0 -32">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="35 0 10">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="-70 0 55">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="-70 0 -70">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="70 0 70">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="-29 0 40">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="42 0 -57">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="16 0 66">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="-71 0 -11">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-30.6 0 -31.3" id="fishingzone_01" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="18.72 0 0.47" id="fishingzone_02" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-10.72 0 -16.41" roty="90" id="fishingzone_03" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="12.67 0 -7.55" roty="90" id="fishingzone_04" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-46.75 0 -17.87" roty="90" id="fishingzone_05" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-16.75 0 -41.87" roty="90" id="fishingzone_06" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-30.75 0 -48.87" roty="90" id="fishingzone_07" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-20.6 0 -24.29" roty="90" id="fishingzone_08" type="fishingzone" />
+    <criticaltile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="-36.43 0 -25.35" id="fishingzone_09" type="fishingzone" />
   </tiles>
 </template>

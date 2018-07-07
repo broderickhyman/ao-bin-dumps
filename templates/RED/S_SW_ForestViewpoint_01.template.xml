@@ -1,6 +1,67 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_ForestViewpoint_01.unity" unityguid="c1ed4eb357bb71f4788ee812bed25eb5" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
+<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_ForestViewpoint_01.unity" unityguid="c1ed4eb357bb71f4788ee812bed25eb5" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="29 25">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Heretic">
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_ARCHER" pos="22 0 -2" roty="45">
+          <mobspawnpoint spawnbehavior="ROAMING_HERETIC_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_MAGE" pos="7 0 1" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_HERETIC_THIEF" pos="22 0 3" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_HERETIC_THIEF">
+            <path>
+              <waypoint pos="22 1" idle="3" pace="WALK" />
+              <waypoint pos="10 1" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Keeper" />
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_03" name="Morgana">
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CROSSBOWMAN" pos="22 0 -2" roty="45">
+          <mobspawnpoint spawnbehavior="ROAMING_MORGANA_CROSSBOWMAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_CULTIST" pos="7 0 1" roty="90">
+          <mobspawnpoint spawnbehavior="ROAMING_MORGANA_CULTIST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_MORGANA_SOLDIER" pos="24 0 1" roty="270">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_MORGANA_SOLDIER">
+            <path>
+              <waypoint pos="22 1" idle="3" pace="WALK" />
+              <waypoint pos="9.999992 1" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="Undead">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_GHOUL" pos="2 -1 -17">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_GHOUL" pos="-11.73 -1 -2.98">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_GHOUL" pos="-5 -1 10">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_GHOUL" pos="14.39 -1 15.07">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_GHOUL" pos="12.08 -1 -13.34">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="14.16 0.22 0.62">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SOLDIER" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="WOOD_HIGH_NODE" pos="-22 0 22" roty="291">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
@@ -43,7 +104,7 @@
     <tile name="HIDE_MEDIUM_NODE" pos="9 0 -24" roty="187">
       <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
-    <tile name="SWAMP_RED_FILL_PROP_WAGON_BROKEN_A" pos="9.5 0 8.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_PROP_WAGON_BROKEN_A" pos="10 -1 8" roty="270" />
     <tile name="SWAMP_RED_HER_FILL_POLE_LAMP_C" pos="-3.5 0 -4.5" />
     <tile name="SWAMP_RED_HER_FILL_POLE_LAMP_D" pos="5.5 8 0.5" roty="180" />
     <tile name="SWAMP_RED_HER_FILL_ROPE_FISH_A" pos="1.5 0 -4.5" roty="270" />

@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<territorytypes upkeepwarningchecktimespaninhours="24" upkeepwarningintervalinmin="60" upkeeptimerinmin="1440">
+<territorytypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="territorytypes.xsd" upkeepwarningchecktimespaninhours="24" upkeepwarningintervalinmin="60" upkeeptimerinmin="1440">
   <territorytype
     name="NORMAL"
     claimcost="3000000"
     upkeepcost="10800"
+	  allowprimetimesforevacuation="2"
 	  
     maxdefensepoints="3"
     defensepointschangeafterprimetime="1"
 	  
-    maxdefensebonus="30"
-    mindefensebonus="0"
-    defensebonuschangeafterprimetime="-15"
-    defensebonuschangeafterloosingabattle="15"
+    maxdefensebonus="5"
+    mindefensebonus="5"
+    defensebonuschangeafterprimetime="0"
+    defensebonuschangeafterloosingabattle="0"
 
     vaultsize="64"
-    battlevaultsize="64"
     weightlimit="10000.0"
+    battlevaultsize="64"
+    guildvaultsize="500"
+    guildvaultmaxtabs="15"
+    guildvaultweightlimit="1000000.0"
     nutritionstorage="194400"
     secondspernutrition="4.444444444"
     claimnutrition="20000.0"
     conquernutrition ="20000.0">
-    <MatchSettings matchtype="MATCH_GVG" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+
+	<GuildVaultTabCost count="0" cost="0" />
+    <GuildVaultTabCost count="1" cost="200000" />
+    <GuildVaultTabCost count="2" cost="500000" />
+    <GuildVaultTabCost count="3" cost="1000000" />
+	<GuildVaultTabCost count="4" cost="2000000" />
+    <GuildVaultTabCost count="5" cost="4000000" />
+    <GuildVaultTabCost count="6" cost="6000000" />
+    <GuildVaultTabCost count="7" cost="7500000" />
+	<GuildVaultTabCost count="8" cost="9000000" />
+    <GuildVaultTabCost count="9" cost="10000000" />
+    <GuildVaultTabCost count="10" cost="10000000" />
+	<GuildVaultTabCost count="11" cost="10000000" />
+    <GuildVaultTabCost count="12" cost="10000000" />
+    <GuildVaultTabCost count="13" cost="10000000" />
+    <GuildVaultTabCost count="14" cost="10000000" />
+	
+    <MatchSettings matchtype="MATCH_GVG" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="150" mindefenderticketsleftforbreakingplayerlock="150" conquercost="2000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
       <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
         <TimeSlot id="1" time="17:00" />
         <TimeSlot id="2" time="18:00" />
@@ -34,6 +55,7 @@
     name="WATCHTOWER"
     claimcost="1000000"
     upkeepcost="3600"
+	  allowprimetimesforevacuation="0"
 	  
     maxdefensepoints="1"
     defensepointschangeafterprimetime="1"
@@ -44,18 +66,52 @@
     defensebonuschangeafterloosingabattle="0"
 	 
     vaultsize="64"
-    battlevaultsize="64"
     weightlimit="10000.0"
+    battlevaultsize="64"
+    guildvaultsize="500"
+    guildvaultmaxtabs="5"
+    guildvaultweightlimit="1000000.0"
     nutritionstorage="19440"
     secondspernutrition="44.44444444"
     claimnutrition="2000"
     conquernutrition="2000">
+    <!-- PointboosterSettings set up how seasonal points FROM MAGES
+      OWNING:
+      baseratemultiplier = factor on base points from territory ownership
+      totalpointboosterratebonus = factor for points OWNING a booster (mage) WHILE ITS ACTIVE
+      MAGE KILLING:
+      pointboostertokendroprate = factor for tokens droped for killing a booster (mage)
+      pointboosterpointsdroprate = factor for points awarded for killing a booster (mage)
+      pointboosterpointsdropratetokenless = factor for points awarded for killing a booster (mage) BUT DONT GIVE TOKENS
+      earlyspawntoken = token type to spawn a rogue mage
+      earlyspawntokenrate = tokens to spawn a rogue mage
+    -->
+    <PointBoosterSettings
+      baseratemultiplier="0"
+      totalpointboosterratebonus="1" 
+      pointboostertokendroprate="1" 
+      pointboosterpointsdroprate="0" 
+      pointboosterpointsdropratetokenless="0"
+      earlyspawntoken="GVGTOKEN_GENERIC" 
+      earlyspawntokenrate="1">
+      <!--if "boosterpresent" boosters present then spawn next one in "spawndelayseconds" -->
+      <SpawnSettings boosterpresent="3" spawndelayseconds="43200"/>
+      <SpawnSettings boosterpresent="2" spawndelayseconds="21600"/>
+      <SpawnSettings boosterpresent="1" spawndelayseconds="14400"/>
+      <SpawnSettings boosterpresent="0" spawndelayseconds="10800"/>
+    </PointBoosterSettings>
+    <GuildVaultTabCost count="0" cost="0" />
+    <GuildVaultTabCost count="1" cost="500000" />
+    <GuildVaultTabCost count="2" cost="1000000" />
+    <GuildVaultTabCost count="3" cost="2500000" />
+    <GuildVaultTabCost count="4" cost="5000000" />
+
     <Tower engageattackrange="15.0" disengageattackrange="25.0" attackinterval="0.5" attackdamage="0.05" attackdistancedelay="24.0">
       <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
       <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
     </Tower>
     <GuardSettings respawntimeseconds="1200" />
-    <MatchSettings matchtype="MATCH_GVG" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+    <MatchSettings matchtype="MATCH_GVG" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="150" mindefenderticketsleftforbreakingplayerlock="150" conquercost="2000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
       <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
         <TimeSlot id="1" time="17:00" />
         <TimeSlot id="2" time="18:00" />
@@ -63,12 +119,41 @@
         <TimeSlot id="4" time="20:00" />
       </TimeSlots>
     </MatchSettings>
+    <!-- Red:B1:B2:B3 == 1:4:6:8; lowest has to be 86400/pointboosterspawndelayseconds/min(pointboostertokendroprate,pointboostertokendroprate) so you get at least 1 point/token when raiding -->
+    <PointsSettings>
+      <!--base points for territory ownership-->
+      <PointsValues clustertype="OPENPVP_RED">
+        <ClusterTier tier="5" points="96" />
+        <ClusterTier tier="6" points="96" />
+        <ClusterTier tier="7" points="96" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_1">
+        <ClusterTier tier="3" points="240" />
+        <ClusterTier tier="4" points="240" />
+        <ClusterTier tier="5" points="240" />
+        <ClusterTier tier="6" points="240" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_2">
+        <ClusterTier tier="4" points="288" />
+        <ClusterTier tier="5" points="288" />
+        <ClusterTier tier="6" points="288" />
+        <ClusterTier tier="7" points="288" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_3">
+        <ClusterTier tier="5" points="336" />
+        <ClusterTier tier="6" points="336" />
+        <ClusterTier tier="7" points="336" />
+        <ClusterTier tier="8" points="336" />
+      </PointsValues>
+    </PointsSettings>
   </territorytype>
 
   <territorytype
     name="CITY"
     claimcost="1000000"
     upkeepcost="3600"
+	  allowprimetimesforevacuation="0"
+
     mintimebetweenmatchesperconnectioninmin="720"
 
     maxdefensepoints="1"
@@ -80,13 +165,18 @@
     defensebonuschangeafterloosingabattle="10"
 	  
     vaultsize="64"
-    battlevaultsize="64"
     weightlimit="10000.0"
+    battlevaultsize="64"
+    guildvaultsize="64"
+    guildvaultmaxtabs="0"
+    guildvaultweightlimit="10000.0"
     nutritionstorage="19440"
     secondspernutrition="44.44444444"
     claimnutrition="2000"
     conquernutrition="2000">
-    <MatchSettings matchtype="MATCH_GVG_CITY" winningpayoutfactor="0.75" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftforbreakingplayerlock="150" conquercost="100000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+
+
+    <MatchSettings matchtype="MATCH_GVG_CITY" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="150" mindefenderticketsleftforbreakingplayerlock="150" conquercost="10000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
       <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
         <TimeSlot id="1" time="17:00" />
         <TimeSlot id="2" time="18:00" />

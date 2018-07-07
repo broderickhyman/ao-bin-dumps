@@ -1,6 +1,67 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Slave/S_HL_LostChapel_01.unity" unityguid="dfbbe90953c4883449c00f4644213b7b" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
+<template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Slave/S_HL_LostChapel_01.unity" unityguid="dfbbe90953c4883449c00f4644213b7b" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -27" colBoundsMax="29 29">
   <criticalscenemembers />
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Roaming_Layer" activationRule="X_X_X_Keeper|Morgana|Heretic_X_X">
+        <tile name="ROAMING_MEDIUM_NODE" pos="22 0 22">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-22 0 -21">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="-18 0 22">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="9 0 -22">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+        <tile name="ROAMING_MEDIUM_NODE" pos="5 4 6">
+          <resourcenode nodetype="medium" resourcetype="roamingmob" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="UND" activationRule="X_X_X_Undead_X_X">
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="17.95 0 23.41" roty="270">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="21.32 0 -21.79" roty="180">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-19.16 1.74 -17.03" roty="180">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SOLDIER" pos="-1.67 4 5.77" roty="270">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="ROAMING_UNDEAD_SOLDIER">
+            <path>
+              <waypoint pos="-0.3938028 6.128144" idle="3" pace="WALK" />
+              <waypoint pos="9.686584 5.430927" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="7.96 4 13.04">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="4.52 4 -5.3" roty="180">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="3.18 0 -20.21" roty="270">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-19.67 1.74 -14.96" roty="270">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="-11.6 0 21.37" roty="270">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="23.55 0 -1.27" roty="180">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_UNDEAD_SKELETON" pos="4.96 4 13.34" roty="270">
+          <mobspawnpoint spawnbehavior="ROAMING_UNDEAD_SKELETON" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="HIGHLAND_DEAD_GROUND" pos="-20 0 20" />
     <tile name="HIGHLAND_DEAD_GROUND" pos="-20 0 -10" />
     <tile name="HIGHLAND_DEAD_GROUND" pos="20 0 -20" />
@@ -86,7 +147,7 @@
     <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_A" pos="-2 1 21" />
     <tile name="HIGHLAND_DEAD_FILL_ROCK_MEDIUM_D_L_FORM" pos="20 0 15" roty="270" />
     <tile name="HIGHLAND_DEAD_FILL_RUIN_WALL_ARCH_B" pos="-2.5 4 5" roty="90" />
-    <tile name="WOOD_HIGH_NODE" pos="-21 0 21" roty="25">
+    <tile name="WOOD_HIGH_NODE" pos="-22 0 18" roty="25">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
     <tile name="WOOD_LOW_NODE" pos="-12 0 -17" roty="300">
@@ -110,7 +171,7 @@
     <tile name="ROCK_HIGH_NODE" pos="4 0 23" roty="86">
       <resourcenode nodetype="high" resourcetype="rock" />
     </tile>
-    <tile name="ROCK_LOW_NODE" pos="22 0 22" roty="263">
+    <tile name="ROCK_LOW_NODE" pos="21 0 -11" roty="263">
       <resourcenode nodetype="low" resourcetype="rock" />
     </tile>
     <tile name="ROCK_LOW_NODE" pos="-4 4 15" roty="298">

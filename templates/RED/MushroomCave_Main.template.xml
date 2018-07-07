@@ -1,4 +1,4 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Master/Expedition/MushroomCave_Main.unity" unityguid="7d33fd8a1978697428aa7b0e57dc4c19" editorBoundsMin="0 0" editorBoundsMax="0 0" colBoundsMin="-385 -55" colBoundsMax="165 495">
+<template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Master/Expedition/MushroomCave_Main.unity" unityguid="7d33fd8a1978697428aa7b0e57dc4c19" editorBoundsMin="-385 -55" editorBoundsMax="165 495" colBoundsMin="-385 -55" colBoundsMax="165 495">
   <criticalscenemembers>
     <criticalscenemember id="expeditionexit_01" type="expeditionexit" layerId="">
       <tile name="ExpeditionExit" pos="-247 -77 345">
@@ -23,6 +23,21 @@
     <criticalscenemember id="expeditionstartpoint_01" type="expeditionstartpoint" layerId="">
       <tile name="ExpeditionStartPoint" pos="45 -4 5">
         <expeditionstartpoint />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="expeditioncheckpoint_01" type="expeditioncheckpoint" layerId="">
+      <tile name="ExpeditionCheckPoint" pos="-145 -52 320" roty="45">
+        <expeditioncheckpoint maxcolliderdist="25.02" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="expeditioncheckpoint_02" type="expeditioncheckpoint" layerId="">
+      <tile name="ExpeditionCheckPoint" pos="-113 -28 182" roty="180">
+        <expeditioncheckpoint maxcolliderdist="20.63977" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="expeditioncheckpoint_03" type="expeditioncheckpoint" layerId="">
+      <tile name="ExpeditionCheckPoint" pos="-118 -16 52">
+        <expeditioncheckpoint maxcolliderdist="20.63977" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -348,6 +363,453 @@
         </tile>
         <tile name="SpawnPoint_T6_MOB_EXP_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-138 -44 260" roty="270">
           <mobspawnpoint behavior="GUARD" />
+        </tile>
+      </layer>
+      <layer id="Layer_02" name="T6_Hardcore">
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-142 -44 228" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-92 -36 200" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-90 200" idle="3" pace="WALK" />
+              <waypoint pos="-90 182" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-234 -68 300" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-112 -40 220" roty="330">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-95 -20 68">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-95 70" idle="3" pace="WALK" />
+              <waypoint pos="-90 74.99999" idle="0" pace="WALK" />
+              <waypoint pos="-90 105" idle="3" pace="WALK" />
+              <waypoint pos="-95 110" idle="0" pace="WALK" />
+              <waypoint pos="-125 110" idle="3" pace="WALK" />
+              <waypoint pos="-130 105" idle="0" pace="WALK" />
+              <waypoint pos="-130 74.99999" idle="3" pace="WALK" />
+              <waypoint pos="-125 70" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-110 -52 315" roty="225">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-50 -8 2" roty="180">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-50 -2.384186E-07" idle="2" pace="WALK" />
+              <waypoint pos="-30.19 -0.1500018" idle="2" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-110 -28 182" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-95 -12 6" roty="141">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-143 -44 260" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-88 -32 178" roty="315">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-112 -20 67" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 67" idle="3" pace="WALK" />
+              <waypoint pos="-110 52" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-230 -68 303" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_SPECIAL_SNIPER_VETERAN" pos="-103 -8 0" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-110 -40 218">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110.034 220.0437" idle="3" pace="WALK" />
+              <waypoint pos="-83 220" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-53 -8 -2" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-125 -52 315" roty="242">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-110 -24 150" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-180 -56 308">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-180 310" idle="3" pace="WALK" />
+              <waypoint pos="-180 328" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-97 -12 0" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-67 -12 0" roty="270">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-115 -8 0" roty="315">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN_MINIBOSS" pos="-114 -40 224" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-108 -52 311" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 311" idle="3" pace="WALK" />
+              <waypoint pos="-110 282" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-85 -36 200">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_SPECIAL_SNIPER_VETERAN" pos="-117 -48 323" roty="225">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-110 -48 340" roty="270">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-90 -20 73">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-90 75" idle="3" pace="WALK" />
+              <waypoint pos="-90 105" idle="0" pace="WALK" />
+              <waypoint pos="-95 110" idle="3" pace="WALK" />
+              <waypoint pos="-125 110" idle="0" pace="WALK" />
+              <waypoint pos="-130 105" idle="3" pace="WALK" />
+              <waypoint pos="-130 75" idle="0" pace="WALK" />
+              <waypoint pos="-125 70" idle="3" pace="WALK" />
+              <waypoint pos="-95 70" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-125 -16 112" roty="180">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-125 110" idle="3" pace="WALK" />
+              <waypoint pos="-130 105" idle="0" pace="WALK" />
+              <waypoint pos="-130 75.00002" idle="3" pace="WALK" />
+              <waypoint pos="-125 70.00003" idle="0" pace="WALK" />
+              <waypoint pos="-95.00002 70.00002" idle="3" pace="WALK" />
+              <waypoint pos="-90.00002 75.00002" idle="0" pace="WALK" />
+              <waypoint pos="-90.00002 105" idle="3" pace="WALK" />
+              <waypoint pos="-95.00002 110" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-162 -56 328">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-140 -52 327">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-142 -44 262" roty="144">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-93 -12 -2">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-93 0" idle="3" pace="WALK" />
+              <waypoint pos="-70 0" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-140 -44 263" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-183.94 -56 329.56" roty="274.67">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-230 -76 350" roty="6">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-176.55 -56 306.52" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-112 -16 113" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 113" idle="3" pace="WALK" />
+              <waypoint pos="-110 136" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-115 -40 220">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-95 -20 90" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-141 -52 330" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-143 330" idle="3" pace="WALK" />
+              <waypoint pos="-160 330" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-117 -52 300" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-53 -8 2" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-108 -16 107" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 107" idle="3" pace="WALK" />
+              <waypoint pos="-110 87" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-107 -24 137" roty="315">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-110 -20 73">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-110 -40 225" roty="270">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-142 -44 232" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-140 232" idle="3" pace="WALK" />
+              <waypoint pos="-140 258" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-113 -12 20" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-125 -20 90" roty="270">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_SPECIAL_SNIPER_VETERAN" pos="-110 -16 83" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-78 -36 205" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-80 205" idle="3" pace="WALK" />
+              <waypoint pos="-80 217" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-185 -56 315" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-114 -52 298">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-130 -16 107" roty="180">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-130 105" idle="3" pace="WALK" />
+              <waypoint pos="-130 75" idle="0" pace="WALK" />
+              <waypoint pos="-125 70" idle="3" pace="WALK" />
+              <waypoint pos="-95 70" idle="0" pace="WALK" />
+              <waypoint pos="-90 75" idle="3" pace="WALK" />
+              <waypoint pos="-90 105" idle="0" pace="WALK" />
+              <waypoint pos="-95 110" idle="3" pace="WALK" />
+              <waypoint pos="-125 110" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-182.86 -56 306.48" roty="225">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-108 -28 178" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 178" idle="3" pace="WALK" />
+              <waypoint pos="-110 153" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-180 -56 333" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-117 -48 267" roty="315">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-140 -52 332" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-114 -52 302" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-25 -8 0" roty="270">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-106 -48 280" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_CHEST_VETERAN" pos="-110 -8 -5">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_MUSHROOM_THROWER_VETERAN" pos="-238 -76 350" roty="325.27">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-162 -56 332" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_AXE_THROWER_VETERAN" pos="-80 -36 220" roty="216">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-112 -28 180" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_SPECIAL_SNIPER_VETERAN" pos="-107 -48 323" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_DRUID_VETERAN" pos="-230 -68 297">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_SEER_VETERAN_BOSS" pos="-234 -76 347" roty="180">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-114 -16 52" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-114 -16 48" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-80 -16 107" roty="315">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-80 -16 110" roty="225">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-108 -12 23" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 23" idle="3" pace="WALK" />
+              <waypoint pos="-110 48.00002" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-113 -24 137" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-106 -16 116" roty="225">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-114 -16 116" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-108 -28 182" roty="180">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-108 180" idle="3" pace="WALK" />
+              <waypoint pos="-91.99999 180" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-108 -48 278" roty="270">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-110 278" idle="3" pace="WALK" />
+              <waypoint pos="-110 270" idle="0" pace="WALK" />
+              <waypoint pos="-120 260" idle="0" pace="WALK" />
+              <waypoint pos="-138 260" idle="3" pace="WALK" />
+              <waypoint pos="-120 260" idle="0" pace="WALK" />
+              <waypoint pos="-110 270" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="25 -4 0" roty="90">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-10 -4 2" roty="135">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-10 -4 -2" roty="45">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-9 -4 0" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-7 0" idle="3" pace="WALK" />
+              <waypoint pos="20.00001 0" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-178 -56 332" roty="180">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-178 330" idle="3" pace="WALK" />
+              <waypoint pos="-164 330" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-227 -68 298">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-227 300" idle="3" pace="WALK" />
+              <waypoint pos="-205 300" idle="0" pace="WALK" />
+              <waypoint pos="-200 305" idle="0" pace="WALK" />
+              <waypoint pos="-200 315" idle="0" pace="WALK" />
+              <waypoint pos="-195 320" idle="0" pace="WALK" />
+              <waypoint pos="-185 320" idle="3" pace="WALK" />
+              <waypoint pos="-195 320" idle="0" pace="WALK" />
+              <waypoint pos="-200 315" idle="0" pace="WALK" />
+              <waypoint pos="-200 305" idle="0" pace="WALK" />
+              <waypoint pos="-205 300" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_MALE_VETERAN" pos="-236 -76 340" roty="90">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-234 340" idle="3" pace="WALK" />
+              <waypoint pos="-234 305" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_BERSERK_VETERAN" pos="-138 -44 228">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-138 230" idle="3" pace="WALK" />
+              <waypoint pos="-120 230" idle="0" pace="WALK" />
+              <waypoint pos="-117 227" idle="3" pace="WALK" />
+              <waypoint pos="-120 230" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-110 -40 222" roty="300">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_HRD_KEEPER_UNPROVEN_FEMALE_VETERAN" pos="-114 -52 313">
+          <mobspawnpoint behavior="PATROL">
+            <path>
+              <waypoint pos="-114 315" idle="3" pace="WALK" />
+              <waypoint pos="-120 315" idle="0" pace="WALK" />
+              <waypoint pos="-135 330" idle="0" pace="WALK" />
+              <waypoint pos="-138 330" idle="3" pace="WALK" />
+              <waypoint pos="-135 330" idle="0" pace="WALK" />
+              <waypoint pos="-120 315" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
     </layergroup>
@@ -3474,6 +3936,7 @@
     <tile name="FOREST_RED_WATER_river_DNG" pos="-290 -96 380" />
     <tile name="FOREST_RED_WATER_river_DNG" pos="-280 -96 390" />
     <tile name="FOREST_RED_WATER_river_DNG" pos="-280 -96 380" />
+    <tile name="FOREST_RED_DNG_GROUND" pos="160 -8 60" />
     <tile name="FOREST_RED_DNG_KPR_ROOT_CEILING_E_MUSHROOM_EXP" pos="-216.5 -76 349.5" roty="270" />
     <tile name="FOREST_RED_DNG_KPR_ROCK_FORMATION_LARGE_B_NO_COLLISION" pos="-204 -104 352" roty="70.65" />
     <tile name="FOREST_RED_DNG_KPR_FILL_SACK_MUSHROOMS_A_EXP" pos="-196.5 -60 324.5" roty="180" />
@@ -3637,7 +4100,7 @@
     <tile name="FOREST_RED_DNG_KPR_ROOT_CEILING_E_MUSHROOM" pos="-122.5 -24 129.5" roty="270" />
     <tile name="FOREST_RED_DNG_KPR_ROCK_MEDIUM_D_L_FORM_MUSHROOMS" pos="-121 -24 131" />
     <tile name="FOREST_RED_DNG_KPR_ROCK_MEDIUM_C_MUSHROOMS" pos="-95 -24 137" scale="1.474075 1.474075 1.474075" />
-    <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A_MUSHROOMS" pos="-124 -24 144" />
+    <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A_MUSHROOMS" pos="-125 -24 144" />
     <tile name="FOREST_RED_DNG_KPR_ROOT_WALL_A" pos="-0.5 -21 22.5" roty="270" />
     <tile name="FOREST_RED_DNG_KPR_ROOT_WALL_C" pos="-2.5 -20 -10.5" roty="270" />
     <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A" pos="25 -4 -8" />
@@ -4488,8 +4951,8 @@
     <tile name="FOREST_RED_DNG_KPR_COLUMN_MEDIUM_A" pos="-237 -100 400" roty="90" />
     <tile name="FOREST_RED_DNG_KPR_COLUMN_LARGE_A_NO_COLLISION" pos="-193 -80 340" />
     <tile name="FOREST_RED_DNG_KPR_FILL_LIANA_VERT_10M" pos="-108.5 -3 33.5" roty="270" />
-    <tile name="FOREST_RED_DNG_KPR_ROCK_MEDIUM_E_MUSHROOMS_EXP" pos="-207.5 -64 320.5" roty="90" />
-    <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A_MUSHROOMS_EXP" pos="-206 -60 322" />
+    <tile name="FOREST_RED_DNG_KPR_ROCK_MEDIUM_E_MUSHROOMS_EXP" pos="-207.5 -64 317.5" roty="90" />
+    <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A_MUSHROOMS_EXP" pos="-207 -60 320" />
     <tile name="FOREST_RED_DNG_KPR_ROCK_SMALL_A_MUSHROOMS_EXP" pos="-226 -76 324" roty="270" />
     <tile name="FOREST_RED_DNG_KPR_GATE_A" pos="-119 -12 34" />
     <tile name="FOREST_RED_DNG_PLATEAU_4M_STRAIGHT_A" pos="-180 -52 490" roty="180" />
@@ -4597,7 +5060,7 @@
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_C" pos="55.5 0 27.5" roty="180" />
     <tile name="FOREST_RED_KPR_FILL_STORAGE_PILE_A" pos="-118.5 -20 123" roty="270" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_C" pos="-77.5 -20 97.5" roty="270" />
-    <tile name="FOREST_RED_KPR_VEGETATION_PATCH_C" pos="-71.5 -16 106.5" roty="45" />
+    <tile name="FOREST_RED_KPR_VEGETATION_PATCH_C" pos="-72 -16 106" roty="45" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_C" pos="-116.5 -24 131.5" roty="90" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-105.5 -28 162.5" roty="102" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-91.5 -36 207.5" roty="116" />
@@ -4792,7 +5255,7 @@
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-145.5 -44 243.5" roty="104" />
     <tile name="FOREST_RED_KPR_ALTAR_TINY_A" pos="-125.5 -52 294.5" roty="270" />
     <tile name="FOREST_RED_KPR_DRUID_SNIPER_INDICATOR_GROUND_A" pos="-117 -48 323" roty="270" />
-    <tile name="FOREST_RED_KPR_OBELISK_LARGE_A" pos="-125 -52 297" roty="270" />
+    <tile name="FOREST_RED_KPR_OBELISK_LARGE_A" pos="-125 -52 298" roty="270" />
     <tile name="FOREST_RED_KPR_OBELISK_SMALL_A" pos="-140.5 -52 314.5" roty="180" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-107.5 -60 376.5" roty="186.13" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_B" pos="-253.5 -76 336.5" roty="135" />
@@ -4805,7 +5268,7 @@
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-134.5 -52 344.5" roty="90" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-115.5 -48 285.5" roty="90" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-155.5 -56 321.5" />
-    <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-124.5 -52 300.5" roty="113" />
+    <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-124.5 -52 301.5" roty="113" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-83.5 -60 314.5" roty="90" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-153.5 -64 306.5" roty="346.69" />
     <tile name="FOREST_RED_KPR_VEGETATION_PATCH_A" pos="-86.5 -60 367.5" roty="224.06" />
@@ -4864,7 +5327,7 @@
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_B" pos="-103.5 -12 22.5" roty="299.26" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_B" pos="-102.5 -12 22.5" rot="0 194 0" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_B" pos="-121.5 -12 20.5" roty="263.64" />
-    <tile name="FOREST_RED_KPR_FILL_SACK_MUSHROOMS_A" pos="-120.5 -16 50.5" roty="234" />
+    <tile name="FOREST_RED_KPR_FILL_SACK_MUSHROOMS_A" pos="-118.5 -16 47.5" roty="234" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_A" pos="-82.5 -8 -11.5" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_LARGE_B" pos="-103.5 -8 6.5" rot="1 178 1" scale="2.5 2.5 2.5" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_LARGE_B" pos="-118.5 -12 30.5" roty="148" scale="2.500001 2.5 2.500001" />
@@ -4980,6 +5443,9 @@
     <tile name="FOREST_RED_DNG_FILL_STALACTITE_E" pos="-149.5 -28 255.5" roty="270" scale="2.522551 2.522554 2.522555" />
     <tile name="FOREST_RED_DNG_FILL_STALACTITE_E" pos="11.5 12 6.5" roty="180" />
     <tile name="FOREST_RED_DNG_FILL_MUSHROOMS_LARGE_A_EXP" pos="-240.5 -76 352.5" roty="240" scale="2.5 2.5 2.5" />
+    <tile name="FOREST_RED_KPR_FIREBOWL_TRIPOD_A" pos="-115.5 -24 152.5" roty="180" />
+    <tile name="FOREST_RED_KPR_FIREBOWL_GROUP_B" pos="-117 -24 151" roty="98" />
+    <tile name="FOREST_RED_KPR_FIREBOWL_TRIPOD_A" pos="-123.5 -24 146.5" roty="103" />
     <tile name="AtmosphereBubble_EXP_KPR_DL_NONE_MushroomCave" pos="-216.2 0 367.8">
       <atmospherebubble layer="1" radius="204" blend="0.7990196" />
     </tile>
@@ -4999,6 +5465,15 @@
     </criticaltile>
     <criticaltile name="ExpeditionStartPoint" pos="45 -4 5" id="expeditionstartpoint_01" type="expeditionstartpoint">
       <expeditionstartpoint />
+    </criticaltile>
+    <criticaltile name="ExpeditionCheckPoint" pos="-145 -52 320" roty="45" id="expeditioncheckpoint_01" type="expeditioncheckpoint">
+      <expeditioncheckpoint maxcolliderdist="25.02" />
+    </criticaltile>
+    <criticaltile name="ExpeditionCheckPoint" pos="-113 -28 182" roty="180" id="expeditioncheckpoint_02" type="expeditioncheckpoint">
+      <expeditioncheckpoint maxcolliderdist="20.63977" />
+    </criticaltile>
+    <criticaltile name="ExpeditionCheckPoint" pos="-118 -16 52" id="expeditioncheckpoint_03" type="expeditioncheckpoint">
+      <expeditioncheckpoint maxcolliderdist="20.63977" />
     </criticaltile>
   </tiles>
 </template>

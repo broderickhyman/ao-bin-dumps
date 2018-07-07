@@ -101,24 +101,25 @@
       spellcooldownsonenteringseconds="15"
 			craftefficiencybonus="0.20"
 			buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="0"
-      itempowerscalingfactor="0"
+      itempowersoftcap="1000"
+      itempowerscalingfactor="0.5"
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="hell"
       requiredreputationtoenter="-50000"
+      ignoreguilds="true"
       />
     
     <archetype
       name = "HELL_YELLOW"
-      uipvptype="Limited"
-      pvpwarningtype="yellow"
+      uipvptype="Black"
+      pvpwarningtype="black"
       pvprule="PvpForced"
-      playersarelethal="false"
-      mobsarelethal="false"
+      playersarelethal="true"
+      mobsarelethal="true"
       showpvpplayeronminimap="false"
       showfriendlycount="false"
-      showhostilecount="true"
+      showhostilecount="false"
       spellcooldownsonenteringseconds="15"
 			craftefficiencybonus="0.20"
 			buildingcraftcapacityregenfactor="1"
@@ -128,6 +129,7 @@
       cropyieldfactor="2"
       clusterdangerbonustype="hell_yellow"
       requiredreputationtoenter="-50000"
+      ignoreguilds="true"
       />
     
     <archetype
@@ -149,6 +151,7 @@
       cropyieldfactor="2"
       clusterdangerbonustype="hell_green"
       requiredreputationtoenter="-50000"
+      ignoreguilds="true"
       />
     
     
@@ -347,6 +350,28 @@
       clusterdangerbonustype="expedition"
 	    allowtrade="false"
     />
+    <archetype
+      name = "HARDCORE_EXPEDITION"
+      uipvptype="Safe"
+      pvpwarningtype="safe"
+      pvprule="PvpDisabled"
+      playersarelethal="false"
+      mobsarelethal="true"
+      showpvpplayeronminimap="false"
+      showfriendlycount="true"
+      showhostilecount="false"
+      logoutseconds="120"
+      spellcooldownsonenteringseconds="0"
+      craftefficiencybonus="0.0"
+      buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="0"
+      itempowerscalingfactor="0"
+      animalgrowthfactor="1"
+      cropyieldfactor="1"
+      requiredreputationtoenter="-50000"
+      clusterdangerbonustype="expedition"
+	    allowtrade="false"
+    />
 	
 	<archetype
       name = "ARENA"
@@ -369,78 +394,41 @@
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
       requiredreputationtoenter="-50000"
       />
-
-       <archetype
-      name = "HALLOWEEN_NONPVP"
+    <archetype
+      name = "ARENA_CUSTOM"
       uipvptype="Limited"
-      pvpwarningtype="yellow"
+      pvpwarningtype="safe"
       pvprule="PvpAllowed"
       playersarelethal="false"
-      mobsarelethal="true"
-      showpvpplayeronminimap="true"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
       showfriendlycount="false"
-      showhostilecount="true"
-      spellcooldownsonenteringseconds="15"
-          craftefficiencybonus="0.20"
-          buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="700"
-      itempowerscalingfactor="0.2"    
+      showhostilecount="false"
+      spellcooldownsonenteringseconds="0"
+	    craftefficiencybonus="0.20"
+	    buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="0"
+      itempowerscalingfactor="0.2"
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="yellow"
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
       requiredreputationtoenter="-50000"
-      />
-
-    <archetype
-      name = "HALLOWEEN_PVP"
-      uipvptype="Full"
-      pvpwarningtype="red"
-      pvprule="PvpAllowed"
-      playersarelethal="true"
-      mobsarelethal="true"
-      showpvpplayeronminimap="true"
-      showfriendlycount="false"
-      showhostilecount="true"
-      spellcooldownsonenteringseconds="15"
-                  craftefficiencybonus="0.20"
-                  buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="700"
-      itempowerscalingfactor="0"
-      animalgrowthfactor="0.5"
-      cropyieldfactor="2"
-      clusterdangerbonustype="red"
-      requiredreputationtoenter="-50000"
-      />
-
-      <archetype
-      name = "HALLOWEEN_PVP_BLACK"
-      uipvptype="Full"
-      pvpwarningtype="black"
-      pvprule="PvpAllowed"
-      playersarelethal="true"
-      mobsarelethal="true"
-      showpvpplayeronminimap="true"
-      showfriendlycount="false"
-      showhostilecount="true"
-      spellcooldownsonenteringseconds="15"
-                  craftefficiencybonus="0.20"
-                  buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="700"
-      itempowerscalingfactor="0"
-      animalgrowthfactor="0.5"
-      cropyieldfactor="2"
-      clusterdangerbonustype="black"
-      requiredreputationtoenter="-50000"
-      />
-
-
+	    allowfactionflagging="false"
+	  />
   </archetypes>
 
+  <gvgitempowerscaling>
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="3" clustertype="OPENPVP_RED" />    
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="4" clustertype="OPENPVP_RED" />
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="5" clustertype="OPENPVP_RED" />
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="6" clustertype="OPENPVP_RED" />
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="7" clustertype="OPENPVP_RED" />
+    <customscaling itempowersoftcap="800" itempowerscalingfactor="0.2" tier="8" clustertype="OPENPVP_RED" />
+  </gvgitempowerscaling>
 
   <hellgatemobtypes>    
     <hellgatemobs>
-
       <hellgatemob name="T4_MOB_DEMON_GATEKEEPER" tier="3" faction="ANY" weight="100" clustertype="SAFEAREA" />
       <hellgatemob name="T4_MOB_DEMON_GATEKEEPER" tier="4" faction="ANY" weight="100" clustertype="SAFEAREA" />
       <hellgatemob name="T4_MOB_DEMON_GATEKEEPER" tier="5" faction="ANY" weight="100" clustertype="SAFEAREA" />
@@ -456,33 +444,35 @@
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_02" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_YELLOW" />
       
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_RED" />
 
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
+      <!--Low Outlands -->
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_1" />
 
+      <!--Mid Outlands -->
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_2" />
 
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
+      <!--High Outlands -->
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="3" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="4" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="5" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
       <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="6" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
-      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />            
-
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_SOLO" tier="7" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />
+      <hellgatemob name="T5_MOB_DEMON_GATEKEEPER_01" tier="8" faction="ANY" weight="100" clustertype="OPENPVP_BLACK_3" />    
     </hellgatemobs>
   </hellgatemobtypes>
 
@@ -518,6 +508,22 @@
       </resourcespawns>
       <mobspawns defaulttimefactor="0.0002"/>
 		</clustertype>
+
+    <clustertype name="TUTORIAL"
+      archetype="GREEN"
+			editorcolor="0, 255, 255"
+			furnitureobjectsallowed="false"
+	    hellgatemobminimapvisible="true"
+	    hellgateclustermessage="true"
+			isdungeon="false"
+      allowmounts="true"
+      isstartarea="true">
+      <resourcespawns defaulttimefactor="1.0">
+        <resourcetier tier="1" timefactor="0.1"/>
+        <resourcetier tier="2" timefactor="0.2"/>
+      </resourcespawns>
+      <mobspawns defaulttimefactor="0.05"/>
+    </clustertype>
 
     <clustertype name="CITY"
       archetype="CITY-GREEN"
@@ -987,6 +993,7 @@
        isdungeon="true"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T4_EXPEDITION_STANDARD"
        archetype="T4_EXPEDITION"
@@ -999,6 +1006,7 @@
        isdungeon="true"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T5_EXPEDITION_STANDARD"
        archetype="T5_EXPEDITION"
@@ -1011,6 +1019,7 @@
        isdungeon="true"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T6_EXPEDITION_STANDARD"
        archetype="T6_EXPEDITION"
@@ -1023,6 +1032,7 @@
        isdungeon="true"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
 
     <clustertype name="T3_EXPEDITION_SURFACE"
@@ -1036,6 +1046,7 @@
        isdungeon="false"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T4_EXPEDITION_SURFACE"
        archetype="T4_EXPEDITION"
@@ -1048,6 +1059,7 @@
        isdungeon="false"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T5_EXPEDITION_SURFACE"
        archetype="T5_EXPEDITION"
@@ -1060,6 +1072,7 @@
        isdungeon="false"
        allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <clustertype name="T6_EXPEDITION_SURFACE"
        archetype="T6_EXPEDITION"
@@ -1071,7 +1084,35 @@
 	     escapedungeonspellavailable="true"
        isdungeon="false"
        allowmounts="false">
+      <mobspawns defaulttimefactor="9999" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
+    </clustertype>
+    
+    <clustertype name="HARDCORE_EXPEDITION_STANDARD"
+       archetype="HARDCORE_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="true"
+       allowmounts="false">
       <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
+    </clustertype>
+    <clustertype name="HARDCORE_EXPEDITION_SURFACE"
+       archetype="HARDCORE_EXPEDITION"
+       editorcolor="255, 0, 255"
+       furnitureobjectsallowed="true"
+       isplayercity="false"
+       hellgatemobminimapvisible="true"
+       hellgateclustermessage="true"
+	     escapedungeonspellavailable="true"
+       isdungeon="false"
+       allowmounts="false">
+      <mobspawns defaulttimefactor="9999"  defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1"/>
+      <resourcespawns defaulttimefactor="9999"/>
     </clustertype>
     <!-- ARENA -->
     <clustertype name="ARENA_STANDARD"
@@ -1085,43 +1126,18 @@
       <mobspawns defaulttimefactor="1.0"/>
       <resourcespawns defaulttimefactor="9999.0"/>
     </clustertype>
-    <!-- Events -->
-    <clustertype name="HALLOWEEN_NONPVP_STANDARD"
-        archetype="HALLOWEEN_NONPVP"
-        editorcolor="255, 165, 0"
-        furnitureobjectsallowed="false"
-        hellgatemobminimapvisible="false"
-        hellgateclustermessage="false"
-        isdungeon="false"
-        allowmounts="false">
+    <!-- ARENA - CUSTOM MATCHES -->
+    <clustertype name="ARENA_CUSTOM"
+      archetype="ARENA_CUSTOM"
+      editorcolor="255, 255, 0"
+      furnitureobjectsallowed="false"
+      hellgatemobminimapvisible="true"
+      hellgateclustermessage="true"
+      isdungeon="false"
+      allowmounts="true">
       <mobspawns defaulttimefactor="1.0"/>
       <resourcespawns defaulttimefactor="9999.0"/>
     </clustertype>
-
-    <clustertype name="HALLOWEEN_PVP_STANDARD"
-        archetype="HALLOWEEN_PVP"
-        editorcolor="255, 165, 0"
-        furnitureobjectsallowed="false"
-        hellgatemobminimapvisible="false"
-        hellgateclustermessage="false"
-        isdungeon="false"
-        allowmounts="false">
-      <mobspawns defaulttimefactor="1.0"/>
-      <resourcespawns defaulttimefactor="9999.0"/>
-    </clustertype>
-
-    <clustertype name="HALLOWEEN_PVP_BLACK_STANDARD"
-        archetype="HALLOWEEN_PVP_BLACK"
-        editorcolor="238, 118, 0"
-        furnitureobjectsallowed="false"
-        hellgatemobminimapvisible="false"
-        hellgateclustermessage="false"
-        isdungeon="false"
-        allowmounts="false">
-      <mobspawns defaulttimefactor="1.0"/>
-      <resourcespawns defaulttimefactor="9999.0"/>
-    </clustertype>
-
   </clustertypes>
   
  
@@ -1148,12 +1164,13 @@
   </islands>
 
   <hellclusters>
+    <!--Full Loot Hell Gates-->
     <hellcluster
 			type="T5_HELLGATE_GROUP_01"
 			hellclusterlevel="HELLGATE-0003_HEL_DL_T5_NON_GROUP_01"
 			minimapicon="hellgatemob"
 			hellgatedeath="true"
-			gateentertitle="@HELLGATE_BAR_TITLE_RED"
+			gateentertitle="@HELLGATE_BAR_TITLE_GROUP"
 			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_red_entrance"
 			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_red_exit"      
 			bosswarningtext="@HELLCLUSTER_BOSS_WARNING"
@@ -1170,13 +1187,13 @@
 
 			hellgatemobdespawntime="29"
 
-			hellgatemobwavetimer="30"
-			hellgatemobspawnmaxamount="100"
+			hellgatemobwavetimer="15"
+			hellgatemobspawnmaxamount="83"
 			hellgatemindistance="1"
 
-			hellgatemobchargepool="100"
+			hellgatemobchargepool="50"
 			hellgatemobchargesadded="50"
-			hellgatemobchargetime="30"
+			hellgatemobchargetime="15"
 
 			hellclusterjointimelimit="45"
 			hellclusterconnectionchance="1"
@@ -1189,21 +1206,63 @@
 			enableenterwarningmessage="false"
 			showhellgatetimerwhenxminareleft="15"
 	  />
-    
+    <hellcluster
+			type="T4_HELLGATE_SINGLE_02"
+			hellclusterlevel="HELLGATE-0004_HEL_DL_T5_NON_GROUP_01"
+			minimapicon="hellgatemob_solo"
+			hellgatedeath="true"
+			gateentertitle="@HELLGATE_BAR_TITLE_SOLO"
+			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_entrance"
+			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_exit"
+			bosswarningtext="@HELLCLUSTER_TREASURE_WARNING"
+			bossspawndelayinminafterminibossdeath="2"
+			bossspawnicon="relic_a"
+			teleportonknockdown="false"
+      
+			hellgateplayerslots="2"
+			hellgatelimit="2"
+			hellgateentrancetimer="1"
+			hellclustertimelimit="30"
+			hellbosstimer="9999"
+			hellgateexitcooldowninsec="0"
+
+			hellgatemobdespawntime="29"
+
+			hellgatemobwavetimer="8"
+			hellgatemobspawnmaxamount="83"
+			hellgatemindistance="1"
+
+			hellgatemobchargepool="50"
+			hellgatemobchargesadded="50"
+			hellgatemobchargetime="8"
+
+			hellclusterjointimelimit="45"
+			hellclusterconnectionchance="1"
+			hellgatejointime="5.0"
+			hellgateleavetime="10.0"
+
+			hellgateexittimer="60"
+			hellclusterkillsonclosing="false"
+			allowloggingout="true"
+			enableenterwarningmessage="false"
+			showhellgatetimerwhenxminareleft="15"
+	  />
+
+    <!-- Knockdown Hell Gates-->
     <!-- enterwarningmessagestring = @HELLCLUSTER_ENTER_WARNING   -->
     
     <hellcluster
 			type="T5_HELLGATE_GROUP_02"
 			hellclusterlevel="HELLGATE-0002_HEL_DL_T5_NON_GROUP_01"
-			minimapicon="hellgatemob_solo"
+			minimapicon="hellgatemob"
 			hellgatedeath="true"
-			gateentertitle="@HELLGATE_BAR_TITLE_YELLOW"
-			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_entrance"
-			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_exit"
+			gateentertitle="@HELLGATE_BAR_TITLE_GROUP"
+			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_red_entrance"
+			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_red_exit"
 			bosswarningtext="@HELLCLUSTER_BOSS_WARNING"
 			bossspawndelayinminafterminibossdeath="2"
 			bossspawnicon="relic_a"
-			teleportonknockdown="true"
+			teleportonknockdown="false"
       
 			hellgateplayerslots="5"
 			hellgatelimit="2"
@@ -1236,13 +1295,13 @@
     <hellcluster
 			type="T4_HELLGATE_SINGLE_01"
 			hellclusterlevel="HELLGATE-0001_HEL_DL_T4_NON_GROUP_01"
-			minimapicon="hellgateportal_green"
+			minimapicon="hellgatemob_solo"
 			hellgatedeath="true"
-			gateentertitle="@HELLGATE_BAR_TITLE_GREEN"
+			gateentertitle="@HELLGATE_BAR_TITLE_SOLO"
 			gateprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_entrance"
 			exitprefab="Prefabs/ENV_PREFABS/SHARED/LANDSCAPE/HELLGATE/hellgate_yellow_exit"
 			bosswarningtext="@HELLCLUSTER_TREASURE_WARNING"
-			bossspawndelayinminafterminibossdeath="1"
+			bossspawndelayinminafterminibossdeath="2"
 			bossspawnicon="relic_a"
 			teleportonknockdown="true"
       
@@ -1271,38 +1330,37 @@
 			hellgateexittimer="60"
 			hellclusterkillsonclosing="false"
 			allowloggingout="true"
-			enableenterwarningmessage="true"             
+			enableenterwarningmessage="false"             
 			showhellgatetimerwhenxminareleft="15"
 	  />
-  
-
+    
   </hellclusters>
 
   <timeregions>
-    <timeregion name="US_05_00" starttime="05:00" timezone="-9"/>
-    <timeregion name="US_04_00" starttime="04:00" timezone="-8"/>
-    <timeregion name="US_03_00" starttime="03:00" timezone="-7"/>
-    <timeregion name="US_02_00" starttime="02:00" timezone="-6"/>
-    <timeregion name="US_01_00" starttime="01:00" timezone="-5"/>
-    <timeregion name="BR_00_00" starttime="00:00" timezone="-4"/>
-    <timeregion name="BR_23_00" starttime="23:00" timezone="-3"/>
-    <timeregion name="BR_22_00" starttime="22:00" timezone="-2"/>
-    <timeregion name="EU_21_00" starttime="21:00" timezone="-1"/>
-    <timeregion name="EU_20_00" starttime="20:00" timezone="0"/>
-    <timeregion name="EU_19_00" starttime="19:00" timezone="+1"/>
-    <timeregion name="EU_RU_18_00" starttime="18:00" timezone="+2"/>
-    <timeregion name="RU_17_00" starttime="17:00" timezone="+3"/>
-    <timeregion name="RU_16_00" starttime="16:00" timezone="+4"/>
-    <timeregion name="RU_15_00" starttime="15:00" timezone="+5"/>
-    <timeregion name="RU_14_00" starttime="14:00" timezone="+6"/>
+    <timeregion name="US_05_00" starttime="05:00" timezone="-9" siegecamptime="3:00"/>
+    <timeregion name="US_04_00" starttime="04:00" timezone="-8" siegecamptime="3:00"/>
+    <timeregion name="US_03_00" starttime="03:00" timezone="-7" siegecamptime="3:00"/>
+    <timeregion name="US_02_00" starttime="02:00" timezone="-6" siegecamptime="3:00"/>
+    <timeregion name="US_01_00" starttime="01:00" timezone="-5" siegecamptime="3:00"/>
+    <timeregion name="BR_00_00" starttime="00:00" timezone="-4" siegecamptime="3:00"/>
+    <timeregion name="BR_23_00" starttime="23:00" timezone="-3" siegecamptime="18:00"/>
+    <timeregion name="BR_22_00" starttime="22:00" timezone="-2" siegecamptime="18:00"/>
+    <timeregion name="EU_21_00" starttime="21:00" timezone="-1" siegecamptime="18:00"/>
+    <timeregion name="EU_20_00" starttime="20:00" timezone="0" siegecamptime="18:00"/>
+    <timeregion name="EU_19_00" starttime="19:00" timezone="+1" siegecamptime="18:00"/>
+    <timeregion name="EU_RU_18_00" starttime="18:00" timezone="+2" siegecamptime="18:00"/>
+    <timeregion name="RU_17_00" starttime="17:00" timezone="+3" siegecamptime="18:00"/>
+    <timeregion name="RU_16_00" starttime="16:00" timezone="+4" siegecamptime="18:00"/>
+    <timeregion name="RU_15_00" starttime="15:00" timezone="+5" siegecamptime="18:00"/>
+    <timeregion name="RU_14_00" starttime="14:00" timezone="+6" siegecamptime="3:00"/>
 
-    <timeregion name="RU_ASIA_13_00" starttime="13:00" timezone="+7"/>
-    <timeregion name="RU_ASIA_12_00" starttime="12:00" timezone="+8"/>
+    <timeregion name="RU_ASIA_13_00" starttime="13:00" timezone="+7" siegecamptime="3:00"/>
+    <timeregion name="RU_ASIA_12_00" starttime="12:00" timezone="+8" siegecamptime="3:00"/>
     <!--Can be removed probably-->
-    <timeregion name="AMERICA_EAST" starttime="12:00" timezone="+8"/>
-    <timeregion name="AMERICA_WEST" starttime="14:00" timezone="+5"/>
-    <timeregion name="EU" starttime="16:00" timezone="0"/>
-    <timeregion name="RUSSIA" starttime="18:00" timezone="+3" />
+    <timeregion name="AMERICA_EAST" starttime="12:00" timezone="+8" siegecamptime="18:00"/>
+    <timeregion name="AMERICA_WEST" starttime="14:00" timezone="+5" siegecamptime="18:00"/>
+    <timeregion name="EU" starttime="16:00" timezone="0" siegecamptime="18:00"/>
+    <timeregion name="RUSSIA" starttime="18:00" timezone="+3" siegecamptime="18:00"/>
   </timeregions>    
 
   <worldmap>
