@@ -1,167 +1,130 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/M_SW_MobCamp_Undead_01.unity" unityguid="4cd8ffe3474633448ba12da7c1dcef8c" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-76 -75" colBoundsMax="79 75">
+<template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/M_SW_MobCamp_Undead_01.unity" unityguid="4cd8ffe3474633448ba12da7c1dcef8c" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-76 -75" colBoundsMax="75 75">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_01">
+      <tile name="SWAMP_GREEN_UND_ENTRANCE_DUNGEON_A" pos="20 0 -20" roty="90">
+        <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_02">
       <tile name="SWAMP_GREEN_UND_ENTRANCE_DUNGEON_A" pos="20 0 -20" roty="90">
         <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fishingzone_01" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.5 0 42.6" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_02" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="46.5 0 45.4" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_03" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="1.7 0 46.2" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_04" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.9 0 1" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_05" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="42.2 0 -42.5" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_06" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="2.6 0 -5.6" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_07" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="49.7 0 -2.6" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_08" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-42.3 0 -45" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_09" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="4 0 -45.1" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_10" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-24.78 0 -9.32" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_11" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-8.25 0 14.44" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_12" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-58.93 0 -22.48" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_13" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-59.03 0 32.16" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_14" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="60.4 0 -21.3" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_15" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="24.5 0 -59.8" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_16" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="54 0 22.9" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_17" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-6.8 0 58.1" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_18" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="51.7 0 42" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_19" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="-59.1 0 21.1" />
-    </criticalscenemember>
-    <criticalscenemember id="fishingzone_20" type="fishingzone" layerId="">
-      <tile name="FishingZone_FRESHWATER_SPOT_TREASURE" pos="-58.23 0 52.44" />
-    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_01" name="GroupDungeon">
+        <criticaltile name="SWAMP_GREEN_UND_ENTRANCE_DUNGEON_A" pos="20 0 -20" roty="90" id="exit_02" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Undead_30x30_SW" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Undead_30x30_SW" />
+        </tile>
+      </layer>
+      <layer id="Layer_02" name="SoloDungeon">
+        <criticaltile name="SWAMP_GREEN_UND_ENTRANCE_DUNGEON_A" pos="20 0 -20" roty="90" id="exit_01" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Mobcamp_Undead_15x15_SW" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Mobcamp_Undead_15x15_SW" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Mobs">
       <layer id="a288f975-5702-4768-bc9a-95262de4bab1" name="T7">
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-37.73 0 23.42" roty="90" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="43 0 -14" roty="180">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-35.33 0 26.14" roty="90" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="40 0 -15.04" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-39.88 0 -31.33" roty="90" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-26.01 0 -25.24" roty="90">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-38.88 0 -35.33" roty="90" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-26.01 0 -30.9" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-16 0 47" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-18 0 -50" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-21.89 0 -45.65" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-14 0 45" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="12 0 44" roty="90">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="11 0 38.3" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="43 0 -16">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="40 0 -17.04">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-34.21 0 19.04" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-24.01 0 -25.24" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-31.81 0 21.76" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-24.01 0 -30.9" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="16 0 -43" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="13.48 0 -36.86" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="6.48 0 19.77" roty="180">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="15.29 0 25.64" roty="180">
           <mobspawnpoint behavior="PATROL">
             <path>
-              <waypoint pos="8.170802 20.4118" idle="0" pace="WALK" />
-              <waypoint pos="17.87778 24.67697" idle="0" pace="WALK" />
+              <waypoint pos="16.9808 26.2818" idle="0" pace="WALK" />
+              <waypoint pos="26.68777 30.54697" idle="0" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-48 0 -40" roty="180">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-41.39 0 -44.03" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-43 0 34">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="-39.06 0 34">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="8.61 0 15.87" roty="45">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-20 0 -52">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-23.89 0 -47.65">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-43 0 36" roty="180">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-39.06 0 36" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-22.48 0 18.75" roty="90">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-22.8 0 24.32" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="14 0 -43" roty="90">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="11.48 0 -36.86" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="11.7 0 14.11" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="9.92 0 19.86" roty="270">
           <mobspawnpoint behavior="PATROL">
             <path>
-              <waypoint pos="14.03067 12.17191" idle="0" pace="WALK" />
-              <waypoint pos="4.447652 23.10798" idle="0" pace="WALK" />
+              <waypoint pos="12.25068 17.92191" idle="0" pace="WALK" />
+              <waypoint pos="5.659997 29.81" idle="0" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-36.87 0 -27.64" roty="180" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-37.36 0 20.02" roty="45">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-35.87 0 -31.64" roty="180" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-34.96 0 22.74" roty="45">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="15 0 44" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="14 0 38.3" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-48 0 -42">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-41.39 0 -46.03">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-40 0 61">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-20.48 0 18.75" roty="270">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-20.8 0 24.32" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-39.5 0 -28.33" roty="135">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_MAGE" pos="-38.5 0 -32.33" roty="135">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="15 0 -45" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="14 0 49" roty="180" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="45 0 -15" roty="270" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_CHEST" pos="-39.23 0 18" roty="40">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="12.48 0 -38.86" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="13.46 0 41.94" roty="180" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_SOLDIER" pos="42 0 -16.04" roty="270" />
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_CHEST" pos="-36.34 0 21.08" roty="40">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_CHEST" pos="-41.55 0 -26.09" roty="130">
+        <tile name="SpawnPoint_T7_MOB_UNDEAD_CHEST" pos="-40.55 0 -30.09" roty="130">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_CHEST" pos="6.37 0 13.52" roty="46">
@@ -169,26 +132,26 @@
         </tile>
       </layer>
       <layer id="e336aea7-7536-4c5f-a556-a982c70a4f8f" name="T4">
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-37.73 0 23.42" roty="90" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="43 0 -14" roty="180">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-35.33 0 26.14" roty="90" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="40 0 -15.04" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-39.88 0 -31.33" roty="90" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-26.01 0 -25.24" roty="90">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-38.88 0 -35.33" roty="90" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-26.01 0 -30.9" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-16 0 47" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-18 0 -50" roty="270" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-21.89 0 -45.65" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-14 0 45" roty="270" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="12 0 44" roty="90" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="43 0 -16">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="11 0 38.3" roty="90" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="40 0 -17.04">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-34.21 0 19.04" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-24.01 0 -25.24" roty="270" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="16 0 -43" roty="270">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-31.81 0 21.76" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-24.01 0 -30.9" roty="270" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="13.48 0 -36.86" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="6.48 0 19.77" roty="180">
@@ -196,168 +159,168 @@
             <path />
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-48 0 -40" roty="180" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-43 0 34" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-41.39 0 -44.03" roty="180" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-39.06 0 34" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="8.61 0 15.87" roty="45">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-20 0 -52">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-23.89 0 -47.65">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-43 0 36" roty="180">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-39.06 0 36" roty="180">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-22.48 0 18.75" roty="90">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-22.8 0 24.32" roty="90">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="14 0 -43" roty="90" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="11.48 0 -36.86" roty="90" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="11.7 0 14.11" roty="270">
           <mobspawnpoint behavior="PATROL">
             <path />
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-36.87 0 -27.64" roty="180" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-37.36 0 20.02" roty="45">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="-35.87 0 -31.64" roty="180" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-34.96 0 22.74" roty="45">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="15 0 44" roty="270">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="14 0 38.3" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-48 0 -42">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-41.39 0 -46.03">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-40 0 61">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-20.48 0 18.75" roty="270">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-20.8 0 24.32" roty="270">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-39.5 0 -28.33" roty="135">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_MAGE" pos="-38.5 0 -32.33" roty="135">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="15 0 -45" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="14 0 49" roty="180" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="45 0 -15" roty="270" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="12.48 0 -38.86" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="13.46 0 41.94" roty="180" />
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_SKELETON" pos="42 0 -16.04" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_CHEST" pos="6.37 0 13.52" roty="46">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_CHEST" pos="-39.23 0 18" roty="40">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_CHEST" pos="-36.34 0 21.08" roty="40">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_CHEST" pos="-41.55 0 -26.09" roty="130">
+        <tile name="SpawnPoint_T4_MOB_UNDEAD_CHEST" pos="-40.55 0 -30.09" roty="130">
           <mobspawnpoint behavior="GUARD" />
         </tile>
       </layer>
     </layergroup>
-    <tile name="FIBER_HIGH_NODE" pos="49.5 0 -62.5" roty="219">
+    <tile name="FIBER_HIGH_NODE" pos="50.5 0 -65.5" roty="219">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="53.5 0 -59.5" roty="273">
+    <tile name="FIBER_HIGH_NODE" pos="52.5 0 -66.5" roty="273">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="70.5 0 -34.5" roty="92">
+    <tile name="FIBER_HIGH_NODE" pos="74.5 0 -37.5" roty="92">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="70.5 0 -6.5" roty="102">
+    <tile name="FIBER_HIGH_NODE" pos="65.5 0 38.5" roty="102">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="69.5 0 23.5" roty="301">
+    <tile name="FIBER_HIGH_NODE" pos="63.5 0 33.5" roty="301">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="62.5 0 46.5" roty="136">
+    <tile name="FIBER_HIGH_NODE" pos="64.5 0 50.5" roty="136">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="54.5 0 60.5" roty="279">
+    <tile name="FIBER_HIGH_NODE" pos="61.5 0 63.5" roty="279">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="-6.5 0 68.5" roty="277">
+    <tile name="FIBER_HIGH_NODE" pos="-4.5 0 74.5" roty="277">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="-45.5 0 59.5" roty="167">
+    <tile name="FIBER_HIGH_NODE" pos="-46.5 0 63.5" roty="167">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="-68.5 0 23.5" roty="16">
+    <tile name="FIBER_HIGH_NODE" pos="-73.5 0 19.5" roty="16">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_HIGH_NODE" pos="-68.5 0 16.5" roty="19">
+    <tile name="FIBER_HIGH_NODE" pos="-68.5 0 6.5" roty="19">
       <resourcenode nodetype="high" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-51.5 0 64.5" roty="78">
+    <tile name="FIBER_LOW_NODE" pos="-64.5 0 73.5" roty="78">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-57.5 0 68.5" roty="119">
+    <tile name="FIBER_LOW_NODE" pos="-59.5 0 73.5" roty="119">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-67.5 0 46.5" roty="219">
+    <tile name="FIBER_LOW_NODE" pos="-73.5 0 43.5" roty="219">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-68.5 0 39.5" roty="289">
+    <tile name="FIBER_LOW_NODE" pos="-74.5 0 36.5" roty="289">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-59.5 0 -11.5" roty="336">
+    <tile name="FIBER_LOW_NODE" pos="-68.5 0 -6.5" roty="336">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-58.5 0 -5.5" roty="18">
+    <tile name="FIBER_LOW_NODE" pos="-67.5 0 -0.5" roty="18">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-51.5 0 -68.5" roty="87">
+    <tile name="FIBER_LOW_NODE" pos="-51.5 0 -74.5" roty="87">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-46.5 0 -68.5" roty="108">
+    <tile name="FIBER_LOW_NODE" pos="-46.5 0 -74.5" roty="108">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-68.5 0 -53.5" roty="273">
+    <tile name="FIBER_LOW_NODE" pos="-74.5 0 -53.5" roty="273">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="-6.5 0 -70.5" roty="221">
+    <tile name="FIBER_LOW_NODE" pos="-8.5 0 -74.5" roty="221">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_LOW_NODE" pos="17.5 0 -68.5" roty="302">
+    <tile name="FIBER_LOW_NODE" pos="16.5 0 -73.5" roty="302">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="57.5 0 -56.5" roty="136">
+    <tile name="FIBER_MEDIUM_NODE" pos="62.5 0 -60.5" roty="136">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="61.5 0 -54.5" roty="62">
+    <tile name="FIBER_MEDIUM_NODE" pos="64.5 0 -54.5" roty="62">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="68.5 0 -38.5" roty="146">
+    <tile name="FIBER_MEDIUM_NODE" pos="72.5 0 -40.5" roty="146">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="69.5 0 -22.5" roty="105">
+    <tile name="FIBER_MEDIUM_NODE" pos="74.5 0 -20.5" roty="105">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="69.5 0 -15.5" roty="295">
+    <tile name="FIBER_MEDIUM_NODE" pos="73.5 0 -14.5" roty="295">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="70.5 0 3.5" roty="164">
+    <tile name="FIBER_MEDIUM_NODE" pos="65.5 0 45.5" roty="164">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="71.5 0 12.5" roty="187">
+    <tile name="FIBER_MEDIUM_NODE" pos="73.5 0 12.5" roty="187">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="61.5 0 41.5" roty="14">
+    <tile name="FIBER_MEDIUM_NODE" pos="66.5 0 23.5" roty="14">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="49.5 0 59.5" roty="206">
+    <tile name="FIBER_MEDIUM_NODE" pos="55.5 0 64.5" roty="206">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="-23.5 0 64.5" roty="164">
+    <tile name="FIBER_MEDIUM_NODE" pos="-26.5 0 65.5" roty="164">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="FIBER_MEDIUM_NODE" pos="40.5 0 -64.5" roty="7">
+    <tile name="FIBER_MEDIUM_NODE" pos="44.5 0 -67.5" roty="7">
       <resourcenode nodetype="medium" resourcetype="fiber" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-64 0 -70" roty="25">
+    <tile name="HIDE_HIGH_NODE" pos="-69 0 -74" roty="25">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-71 0 -63" roty="199">
+    <tile name="HIDE_HIGH_NODE" pos="-74 0 -66" roty="199">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-69 0 -10" roty="302">
+    <tile name="HIDE_HIGH_NODE" pos="-73 0 -8" roty="302">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_HIGH_NODE" pos="-64 0 1" roty="6">
+    <tile name="HIDE_HIGH_NODE" pos="-72 0 5" roty="6">
       <resourcenode nodetype="high" resourcetype="hide" />
     </tile>
     <tile name="HIDE_LOW_NODE" pos="53 0 -73" roty="244">
@@ -372,7 +335,7 @@
     <tile name="HIDE_LOW_NODE" pos="62 0 -63" roty="281">
       <resourcenode nodetype="low" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_MEDIUM_NODE" pos="61 0 59" roty="218">
+    <tile name="HIDE_MEDIUM_NODE" pos="66 0 61" roty="218">
       <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
     <tile name="HIDE_MEDIUM_NODE" pos="67 0 49" roty="206">
@@ -381,7 +344,7 @@
     <tile name="HIDE_MEDIUM_NODE" pos="66 0 68" roty="158">
       <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
-    <tile name="HIDE_MEDIUM_NODE" pos="73 0 37" roty="241">
+    <tile name="HIDE_MEDIUM_NODE" pos="73 0 48" roty="241">
       <resourcenode nodetype="medium" resourcetype="hide" />
     </tile>
     <tile name="WOOD_HIGH_NODE" pos="70 0 53" roty="211">
@@ -393,19 +356,19 @@
     <tile name="WOOD_HIGH_NODE" pos="72 0 66" roty="113">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_HIGH_NODE" pos="70 0 40" roty="275">
+    <tile name="WOOD_HIGH_NODE" pos="67 0 40" roty="275">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_HIGH_NODE" pos="46 0 72" roty="302">
+    <tile name="WOOD_HIGH_NODE" pos="50 0 73" roty="302">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_HIGH_NODE" pos="-49 0 71" roty="252">
+    <tile name="WOOD_HIGH_NODE" pos="-46 0 73" roty="252">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_HIGH_NODE" pos="-69 0 72" roty="229">
+    <tile name="WOOD_HIGH_NODE" pos="-72 0 73" roty="229">
       <resourcenode nodetype="high" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_LOW_NODE" pos="-20 0 72" roty="194">
+    <tile name="WOOD_LOW_NODE" pos="-20 0 73" roty="194">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
     <tile name="WOOD_LOW_NODE" pos="-32 0 72" roty="247">
@@ -414,10 +377,10 @@
     <tile name="WOOD_LOW_NODE" pos="-74 0 -3" roty="109">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_LOW_NODE" pos="-73 0 -17" roty="261">
+    <tile name="WOOD_LOW_NODE" pos="-73 0 -19" roty="261">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_LOW_NODE" pos="37 0 -71" roty="266">
+    <tile name="WOOD_LOW_NODE" pos="44 0 -73" roty="266">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
     <tile name="WOOD_LOW_NODE" pos="-72 0 -72" roty="249">
@@ -426,13 +389,13 @@
     <tile name="WOOD_LOW_NODE" pos="-58 0 -72" roty="188">
       <resourcenode nodetype="low" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_MEDIUM_NODE" pos="-66 0 8" roty="45">
+    <tile name="WOOD_MEDIUM_NODE" pos="-65 0 5" roty="45">
       <resourcenode nodetype="medium" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_MEDIUM_NODE" pos="-63 0 -8" roty="26">
+    <tile name="WOOD_MEDIUM_NODE" pos="-66 0 -4" roty="26">
       <resourcenode nodetype="medium" resourcetype="wood" />
     </tile>
-    <tile name="WOOD_MEDIUM_NODE" pos="-70 0 -48" roty="74">
+    <tile name="WOOD_MEDIUM_NODE" pos="-73 0 -48" roty="74">
       <resourcenode nodetype="medium" resourcetype="wood" />
     </tile>
     <tile name="WOOD_MEDIUM_NODE" pos="23 0 -72" roty="70">
@@ -450,7 +413,7 @@
     <tile name="SWAMP_GREEN_GROUND" pos="10 0 40" />
     <tile name="SWAMP_GREEN_GROUND" pos="40 0 -20" />
     <tile name="SWAMP_GREEN_GROUND" pos="10 0 -40" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="20 0 -50" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="20 0 -50" roty="270" />
     <tile name="SWAMP_GREEN_GROUND" pos="60 0 -70" />
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 -40" />
     <tile name="SWAMP_GREEN_GROUND" pos="-40 0 -40" />
@@ -463,214 +426,216 @@
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 30" />
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 40" />
     <tile name="SWAMP_GREEN_GROUND" pos="30 0 30" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="-20 0 -60" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="-20 0 -60" roty="270" />
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 -30" />
     <tile name="SWAMP_GREEN_GROUND" pos="70 0 50" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="-60 0 -10" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="-60 0 -10" roty="270" />
     <tile name="SWAMP_GREEN_GROUND" pos="60 0 70" />
     <tile name="SWAMP_GREEN_GROUND" pos="10 0 30" />
     <tile name="SWAMP_GREEN_GROUND" pos="20 0 30" />
     <tile name="SWAMP_GREEN_GROUND" pos="50 0 -70" />
     <tile name="SWAMP_GREEN_GROUND" pos="-70 0 0" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="0 0 10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="0 0 10" />
     <tile name="SWAMP_GREEN_GROUND" pos="-40 0 -30" />
     <tile name="SWAMP_GREEN_GROUND" pos="-40 0 40" />
     <tile name="SWAMP_GREEN_GROUND" pos="70 0 -60" />
-    <tile name="SWAMP_GREEN_GROUND" pos="-30 0 20" roty="0" />
+    <tile name="SWAMP_GREEN_GROUND" pos="-30 0 20" />
     <tile name="SWAMP_GREEN_GROUND" pos="30 0 20" />
     <tile name="SWAMP_GREEN_GROUND" pos="10 0 20" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="-20 0 10" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="-20 0 10" roty="270" />
     <tile name="SWAMP_GREEN_GROUND" pos="20 0 20" />
     <tile name="SWAMP_GREEN_GROUND" pos="-20 0 -30" />
     <tile name="SWAMP_GREEN_GROUND" pos="70 0 -70" />
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 -50" roty="0" />
     <tile name="SWAMP_GREEN_GROUND" pos="-40 0 -50" roty="0" />
     <tile name="SWAMP_GREEN_GROUND" pos="-30 0 70" roty="0" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="50 0 30" roty="180" />
-    <tile name="SWAMP_GREEN_GROUND" pos="-40 0 70" roty="0" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="-10 0 50" roty="180" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="-10 0 0" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="-10 0 -10" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="-50 0 0" roty="180" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="-50 0 -10" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="50 0 -30" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="60 0 30" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="50 0 0" roty="90" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_CORNER_A" pos="60 0 0" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-40 0 0" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-30 0 0" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-20 0 0" roty="270" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-40 0 -10" roty="90" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-30 0 -10" roty="90" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="-20 0 -10" roty="90" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="50 0 10" roty="180" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="50 0 20" roty="180" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="60 0 10" />
-    <tile name="SWAMP_GREEN_LAKE_WATER_DEEP_STRAIGHT_A" pos="60 0 20" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_B_COMP_01" pos="50 0 60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="-50 0 50" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="-10 0 -50" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="40 0 40" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="60 0 40" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="-10 0 20" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_C_COMP_01" pos="-60 0 10" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="-50 0 20" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="40 0 10" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="-50 0 -20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="0 0 50" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="40 0 0" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="60 0 -50" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="-50 0 60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_D_COMP_01" pos="0 0 -50" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="-50 0 -60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="40 0 -60" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="50 0 -10" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="-40 0 10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="-20 0 60" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="-10 0 -20" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_CORNER_E_COMP_01" pos="20 0 50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="-20 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="20 0 40" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="60 0 -60" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="-70 0 -70" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="50 0 70" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="20 0 -40" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="70 0 40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="-40 0 20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="-70 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="40 0 -10" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="40 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="-20 0 -50" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="70 0 -50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="-70 0 -10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="60 0 60" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="-50 0 70" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="-20 0 20" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_B_COMP_01" pos="-70 0 10" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="30 0 0" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-10 0 30" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="0 0 30" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="30 0 10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 -60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="0 0 -30" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-10 0 -30" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="10 0 50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-10 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-30 0 -20" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-60 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="10 0 10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-70 0 -50" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="70 0 -40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-50 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="50 0 -20" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-50 0 -40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="20 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_B_COMP_01" pos="-70 0 40" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="0 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-70 0 60" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-70 0 -30" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-40 0 -20" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="0 0 40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="10 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="70 0 10" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-50 0 -50" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-70 0 -60" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="30 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_C_COMP_01" pos="-20 0 50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="0 0 20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="10 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-50 0 -30" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-60 0 0" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="0 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="20 0 0" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-20 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="40 0 20" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-50 0 40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="0 0 -40" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-20 0 -20" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="70 0 20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="70 0 -10" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="30 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-30 0 60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_D_COMP_01" pos="-70 0 -40" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-30 0 10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-10 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="20 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-10 0 40" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="70 0 0" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="60 0 50" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="70 0 -30" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="30 0 40" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-70 0 30" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-30 0 -60" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="-70 0 -20" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="0 0 -20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-10 0 -40" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="20 0 10" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="40 0 70" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-70 0 50" roty="270" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-60 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="70 0 -20" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="10 0 -50" roty="0" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-50 0 30" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-30 0 -70" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-30 0 50" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="50 0 -60" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="-70 0 20" roty="270" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="50 0 40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="10 0 -60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="30 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 -40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="60 0 -10" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="10 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="40 0 -50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-10 0 10" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="20 0 -60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="50 0 -50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-10 0 -60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 -20" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 30" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="50 0 -40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-50 0 10" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="60 0 -40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="30 0 50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 -60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 20" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="60 0 -30" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="30 0 -50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="0 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="0 0 -60" />
-    <tile name="SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START" pos="70 0 30" roty="90" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="40 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="60 0 -20" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 -50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-10 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="20 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="40 0 -40" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="50 0 50" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="40 0 50" />
-    <tile name="SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_BRIDGE_START" pos="40 0 30" roty="270" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="30 0 -60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 60" />
-    <tile name="SWAMP_GREEN_WATER_LAKE" pos="-60 0 -30" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_A" pos="-40 0 -65" roty="90" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_A" pos="30 0 5" roty="270" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_A" pos="-40 0 55" roty="270" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_B" pos="-5 0 30" roty="180" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_LOW_10M_STRAIGHT_B" pos="-5 0 -30" />
-    <tile name="SWAMP_GREEN_RIVER_LAKE_CORNER_D" pos="0 0 0" roty="90" />
-    <criticaltile name="SWAMP_GREEN_UND_ENTRANCE_DUNGEON_A" pos="20 0 -20" roty="90" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
-    </criticaltile>
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_E_COMP_01" pos="10 0 0" roty="180" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_F_COMP_01" pos="0 0 -10" roty="90" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_STRAIGHT_A_COMP_01" pos="30 0 -40" />
-    <compoundtile name="_SWAMP_GREEN_RIVER_LAKE_INNERCORNER_A_COMP_01" pos="40 0 -30" />
+    <tile name="SWAMP_GREEN_GROUND" pos="-40 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="-10 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="50 0 -30" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_B_COMP_01" pos="50 0 60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="-50 0 50" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="-10 0 -50" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="40 0 40" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="60 0 20" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="-10 0 20" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_C_COMP_01" pos="-60 0 10" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="-50 0 20" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="40 0 10" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="-50 0 -20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="0 0 50" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="40 0 0" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="60 0 -50" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="-50 0 60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_D_COMP_01" pos="0 0 -50" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="-50 0 -60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="40 0 -60" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="50 0 -10" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="-40 0 10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="-20 0 60" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="-10 0 -20" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_CORNER_E_COMP_01" pos="20 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="-20 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="20 0 40" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="60 0 -60" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="-70 0 -70" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="50 0 70" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="20 0 -40" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="70 0 20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="-40 0 20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="-70 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="40 0 -10" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="40 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="-20 0 -50" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="70 0 -50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="-70 0 -10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="60 0 60" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="-50 0 70" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="-20 0 20" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_B_COMP_01" pos="-70 0 10" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-10 0 30" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="0 0 30" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 -60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-10 0 -30" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START_COMP_01" pos="-40 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="10 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-10 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-30 0 -20" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-60 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="10 0 10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-70 0 -50" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="70 0 -40" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-50 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="50 0 -20" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-50 0 -40" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="20 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_B_COMP_01" pos="-70 0 40" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="0 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-70 0 60" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-70 0 -30" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-40 0 -20" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="0 0 40" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="10 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="70 0 10" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-50 0 -50" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-70 0 -60" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="30 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="-20 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="0 0 20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="10 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-50 0 -30" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-60 0 0" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="0 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="20 0 0" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-20 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="40 0 20" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-50 0 40" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="0 0 -40" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-20 0 -20" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="70 0 -10" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="30 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-30 0 60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_D_COMP_01" pos="-70 0 -40" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-30 0 10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-10 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="20 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-10 0 40" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="70 0 0" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="60 0 50" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="70 0 -30" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="30 0 40" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-70 0 30" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-30 0 -60" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="-70 0 -20" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="0 0 -20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-10 0 -40" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="20 0 10" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="40 0 70" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-70 0 50" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-60 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="70 0 -20" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="10 0 -50" roty="0" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-50 0 30" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-30 0 -70" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-30 0 50" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="50 0 -60" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="-70 0 20" roty="270" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_E_COMP_01" pos="10 0 0" roty="180" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_F_COMP_01" pos="0 0 -10" roty="90" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_A_COMP_01" pos="30 0 -40" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_INNERCORNER_A_COMP_01" pos="40 0 -30" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="10 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="30 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 -40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 -10" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="10 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="40 0 -50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-10 0 10" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="20 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 -50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-10 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 -20" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 30" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 -40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-50 0 10" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 -40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="30 0 50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 20" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 -30" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="30 0 -50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="0 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="0 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="40 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 -20" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 -50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-10 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="20 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="40 0 -40" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="40 0 50" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="30 0 -60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 60" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-60 0 -30" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 0" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-10 0 -10" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-40 0 0" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-50 0 0" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-10 0 0" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-20 0 -10" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 30" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-20 0 0" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 10" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-30 0 0" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-50 0 -10" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 0" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-40 0 -10" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="-30 0 -10" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="60 0 10" />
+    <tile name="SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START" pos="40 0 30" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_river" pos="50 0 20" roty="180" />
+    <tile name="SWAMP_GREEN_RIVER_CORNER" pos="0 0 0" roty="90" />
+    <tile name="SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START" pos="30 0 0" roty="180" />
+    <tile name="SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START" pos="30 0 10" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="30 0 10" roty="270" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="30 0 0" roty="270" />
+    <tile name="SWAMP_GREEN_GROUND" pos="70 0 40" />
+    <tile name="SWAMP_GREEN_GROUND" pos="70 0 30" />
+    <compoundtile name="_SWAMP_GREEN_RIVER_STRAIGHT_C_COMP_01" pos="60 0 40" roty="90" />
+    <tile name="SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START" pos="60 0 30" roty="90" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-11 0 30" roty="180" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-1 0 30" roty="180" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-10 0 -30" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-40 0 50" roty="270" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-40 0 -59" roty="90" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-40 0 -69" roty="90" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="0 0 -30" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_B" pos="-40 0 60" roty="270" />
+    <tile name="SWAMP_GREEN_RIVER_STRAIGHT_A_BRIDGE_START" pos="0 0 -30" roty="90" />
     <tile name="SWAMP_GREEN_UND_BANNER_STANDING_A" pos="3.5 0 -24.5" />
     <tile name="SWAMP_GREEN_UND_BANNER_STANDING_A" pos="3.5 0 -36.5" />
     <tile name="SWAMP_GREEN_UND_BANNER_WALL_B" pos="53.5 9 -42.5" roty="180" />
@@ -803,55 +768,53 @@
     <tile name="SWAMP_GREEN_UND_GRAVE_C" pos="-29 0 39" roty="180" />
     <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-46 -3 -63" roty="90" />
     <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-34 -3 -63" roty="90" />
-    <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-45 -3 55" roty="270" />
-    <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-35 -3 55" roty="270" />
+    <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-45 0 64" roty="270" />
+    <tile name="SWAMP_GREEN_UND_STATUE_B" pos="-35 0 64" roty="270" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_A" pos="38 0 17" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_A" pos="49 0 -18" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="38 0 13.5" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-51 0 -41" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-25 0 -60" roty="90" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-46 0 -41" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-29 0 -56" roty="90" />
     <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-21 0 50" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="1 0 -19" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="10 0 -49" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="1 0 -41" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="30 0 1" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="30 0 9" roty="270" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="0 0 30" roty="180" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-9 0 29" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="23 0 53" roty="270" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-27 0 13" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-46 0 25" roty="180" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="-43 0 -25" roty="44" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="-14 0 -23" roty="134" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="4 0 -19" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="10 0 -45" roty="90" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="4 0 -39" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="30 0 -4" roty="90" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="30 0 15" roty="270" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="4 0 30" roty="180" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-14 0 30" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="27 0 54" roty="270" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-30 0 15" roty="90" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_A" pos="-45 0 29" roty="180" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="-43 0 -28" roty="44" />
     <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="-11 0 -47" roty="224" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="8 0 -7" roty="44" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="24 0 -43" roty="44" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="-40 0 -54" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="44 0 -21" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="-40 0 44" roty="180" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_COLUMN_A" pos="35.5 0 39.5" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="8 0 -8" roty="44" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_BROKEN_C" pos="21 0 -39" roty="44" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="-40 0 -50" roty="90" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="42 -1 -22" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_ARCH_DOUBLE_A" pos="-39 0 40" roty="180" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_COLUMN_A" pos="35 0 36" />
     <tile name="SWAMP_GREEN_FILL_RUIN_COLUMN_A" pos="10 -1 8" roty="90" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_LARGE_RIGHT_B" pos="8 0 44" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="-41 -6 15" roty="270" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_LARGE_RIGHT_B" pos="12 0 45" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="-41 -6 18" roty="270" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_C" pos="-26 0 34" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_STATUE_C" pos="-30 0 -19" roty="90" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_10M_STRAIGHT_A" pos="45 2 30" roty="180" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_20M_STRAIGHT_A" pos="60 2 30" roty="180" />
-    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_RAMP_2M_10_A" pos="74 0 31" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_STATUE_C" pos="-30 0 -24" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="49 -2 22" roty="233" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_RAMP_2M_10_A" pos="64 0 30" />
     <tile name="SWAMP_GREEN_WALKWAY_WOODEN_RAMP_2M_10_A" pos="35 0 30" roty="180" />
-    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="-47 -4 -23" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="-46 -4 -25" />
     <tile name="SWAMP_GREEN_FILL_HILL_BASE_E" pos="-38 0 14" />
     <tile name="SWAMP_GREEN_UND_CRYPT_FURNITURE_LECTERN_B" pos="4.5 0 11.5" roty="132" />
-    <tile name="SWAMP_GREEN_UND_CRYPT_FURNITURE_LECTERN_B" pos="-40.5 0 16.5" roty="132" />
-    <tile name="SWAMP_GREEN_UND_CRYPT_FURNITURE_LECTERN_B" pos="-43.5 0 -24.5" roty="222" />
+    <tile name="SWAMP_GREEN_UND_CRYPT_FURNITURE_LECTERN_B" pos="-37.61 0 19.58" roty="132" />
+    <tile name="SWAMP_GREEN_UND_CRYPT_FURNITURE_LECTERN_B" pos="-42.5 0 -28.5" roty="222" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="4 0 12" roty="270" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-40 0 16" roty="270" />
+    <tile name="SWAMP_GREEN_WALKWAY_WOODEN_20M_STRAIGHT_A" pos="50 2 30" roty="180" />
     <tile name="SWAMP_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-46 0 -24" />
     <tile name="SWAMP_GREEN_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="3 -3 11" roty="270" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="-40 -2 -12" roty="323" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="-9 -2 -13" roty="323" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="-50 -2 6" roty="233" />
-    <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="51 -2 19" roty="233" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="34 -2 -50" roty="53" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="45 -2 54" roty="323" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="52 -2 -37" roty="323" />
@@ -867,7 +830,26 @@
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="44 -2 8" roty="233" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="52 -2 -48" roty="90" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="-34 -4 -3" roty="143" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_COLUMN_SMALL_B" pos="-14.5 0 -25.5" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="0 -2 -2" roty="53" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_DEBRIS_A" pos="-15 0 -36" />
+    <tile name="SWAMP_GREEN_VEG_BLEND_HIGH_SMALL_A" pos="65.5 0 26.5" />
+    <tile name="SWAMP_GREEN_FILL_RUIN_PILLAR_B" pos="54 -6 16" scale="0.7909718 1 1" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="30.5 0 36.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="39.5 0 31.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="35.5 0 23.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="28.5 0 23.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="25.5 0 28.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="61.5 0 45.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_A" pos="29.5 0 32.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="39.5 0 36.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_WATER_LILY_A" pos="44.5 -1 33.5" roty="270" />
+    <tile name="SWAMP_GREEN_VEG_WATER_LILY_A" pos="58.5 -1 37.5" roty="90" />
+    <tile name="SWAMP_GREEN_VEG_WATER_LILY_A" pos="42.5 -1 19.5" roty="246.53" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ROCK_B" pos="51 -1 16" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ROCK_B" pos="47 -1 10" roty="270" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ROOT_D" pos="62 -1 14" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ROOT_D" pos="57 -1 18" roty="270" />
     <compoundtile name="_SWAMP_GREEN_HILL_T1_BUSHES_01" pos="6 0 42" />
     <compoundtile name="_SWAMP_GREEN_HILL_T1_BUSHES_02" pos="22 0 25" />
     <tile name="SWAMP_GREEN_T1_BUSH_A" pos="-25.5 0 -37.5" />
@@ -892,10 +874,10 @@
     <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="-46.5 0 -24.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="-35.5 0 -22.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="12.5 0 -4.5" />
-    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="23.5 0 -1.5" />
-    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="32.5 0 -7.5" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="23.5 0 -7.5" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="32.5 0 -9.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="8.5 0 -32.5" />
-    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="33.5 0 -2.5" />
+    <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="30.5 0 -12.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_B" pos="-46.5 0 37.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="4.5 0 -39.5" />
     <tile name="SWAMP_GREEN_VEG_GRASS_SMALL_C" pos="40.5 0 -19.5" />
@@ -912,10 +894,10 @@
     <tile name="SWAMP_GREEN_VEG_FLOWERS_WHITE_A" pos="27.5 0 -32.5" />
     <tile name="SWAMP_GREEN_VEG_SOIL_B" pos="47.5 0 -26.5" />
     <tile name="SWAMP_GREEN_VEG_SOIL_B" pos="-24.5 0 38.5" />
-    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="49.5 -1 46.5" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="49.5 -1 49.5" />
     <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="43.5 -1 43.5" roty="270" />
-    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="55.5 -1 39.5" roty="180" />
-    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="48.5 -1 40.5" roty="90" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="57.5 -1 40.5" roty="180" />
+    <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="44.5 -1 38.5" roty="90" />
     <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="53.5 -3 22.5" />
     <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="53.5 -3 27.5" roty="270" />
     <tile name="SWAMP_GREEN_WATER_FILL_ALGAE_B" pos="48.5 -3 25.5" roty="180" />
@@ -961,10 +943,9 @@
     <tile name="SWAMP_GREEN_WATER_FILL_BARREL_BROKEN_A" pos="-58.5 -1 53.5" />
     <tile name="SWAMP_GREEN_WATER_FILL_CRATE_BROKEN_A" pos="56.5 -1 -49.5" />
     <tile name="SWAMP_GREEN_WATER_FILL_CRATE_BROKEN_A" pos="-58.5 -1 -21.5" />
-    <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="52 -1 37" />
+    <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="45 -1 16" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="48 -1 53" roty="270" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="45 -1 48" roty="180" />
-    <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="57 -2 20" roty="270" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="61 -1 -5" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="51 -1 -52" />
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_DEBRIS_A" pos="53 -1 -44" roty="270" />
@@ -982,37 +963,25 @@
     <tile name="SWAMP_GREEN_WATER_FILL_RUIN_WALL_INNERCORNER_A_NO_COLL" pos="-58.5 -1 -57.5" roty="270" />
     <tile name="SWAMP_GREEN_T1_TREE_UNIVERSAL_SLIM_C" pos="-29.5 0 -39.5" />
     <compoundtile name="_SWAMP_GREEN_BAYOU_FILL_TREE_TRUNK_A_COMP_01" pos="16 0 32" />
-    <tile name="AtmosphereBubbleOutdoors_GREEN_SWAMP_UNDEAD" pos="1.7 0 -0.8">
-      <atmospherebubble layer="1" radius="75" blend="0.8" />
-    </tile>
-    <tile name="AtmosphereBubbleOutdoors_GREEN_SWAMP_UNDEAD" pos="-35.4 -1 -41">
-      <atmospherebubble layer="1" radius="40" blend="0.625" />
-    </tile>
-    <tile name="AtmosphereBubbleOutdoors_GREEN_SWAMP_UNDEAD" pos="-33.6 -1 39.5">
-      <atmospherebubble layer="1" radius="40" blend="0.625" />
-    </tile>
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.5 0 42.6" id="fishingzone_01" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="46.5 0 45.4" id="fishingzone_02" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="1.7 0 46.2" id="fishingzone_03" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.9 0 1" id="fishingzone_04" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="42.2 0 -42.5" id="fishingzone_05" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="2.6 0 -5.6" id="fishingzone_06" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="49.7 0 -2.6" id="fishingzone_07" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-42.3 0 -45" id="fishingzone_08" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_BASE_ROUND" pos="4 0 -45.1" id="fishingzone_09" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-24.78 0 -9.32" id="fishingzone_10" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-8.25 0 14.44" id="fishingzone_11" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-58.93 0 -22.48" id="fishingzone_12" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-59.03 0 32.16" id="fishingzone_13" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="60.4 0 -21.3" id="fishingzone_14" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="24.5 0 -59.8" id="fishingzone_15" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="54 0 22.9" id="fishingzone_16" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-6.8 0 58.1" id="fishingzone_17" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="51.7 0 42" id="fishingzone_18" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="-59.1 0 21.1" id="fishingzone_19" type="fishingzone" />
-    <criticaltile name="FishingZone_FRESHWATER_SPOT_TREASURE" pos="-58.23 0 52.44" id="fishingzone_20" type="fishingzone" />
-    <tile name="LevelMarker_Mobcamp_Undead_15x15_SW" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Undead_15x15_SW" />
-    </tile>
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.5 0 42.6" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="46.5 0 45.4" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="1.7 0 46.2" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-46.9 0 1" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="42.2 0 -42.5" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="2.6 0 -5.6" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="49.7 0 -2.6" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="-42.3 0 -45" />
+    <tile name="FishingZone_FRESHWATER_BASE_ROUND" pos="4 0 -45.1" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-24.78 0 -9.32" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-8.25 0 14.44" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-58.93 0 -22.48" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-59.03 0 32.16" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="60.4 0 -21.3" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="24.5 0 -59.8" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="54 0 22.9" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-6.8 0 58.1" />
+    <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="51.7 0 42" />
+    <tile name="FishingZone_FRESHWATER_SPOT_SWARM" pos="-59.1 0 21.1" />
+    <tile name="FishingZone_FRESHWATER_SPOT_TREASURE" pos="-58.23 0 52.44" />
   </tiles>
 </template>

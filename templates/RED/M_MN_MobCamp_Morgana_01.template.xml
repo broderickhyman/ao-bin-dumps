@@ -1,12 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/M_MN_MobCamp_Morgana_01.unity" unityguid="1c7c0f1c5bdc914418103db08de357be" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-76 -75" colBoundsMax="75 76">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_01">
+      <tile name="MOUNTAIN_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 4 40">
+        <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_02">
       <tile name="MOUNTAIN_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 4 40">
         <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_01" name="GroupDungeon">
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_MN" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_MN" />
+        </tile>
+        <criticaltile name="MOUNTAIN_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 4 40" id="exit_02" type="exit">
+          <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_02" name="SoloDungeon">
+        <criticaltile name="MOUNTAIN_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 4 40" id="exit_01" type="exit">
+          <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Mobcamp_Morgana_15x15_MN" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Mobcamp_Morgana_15x15_MN" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Mobs">
       <layer id="0008795e-82b7-4f29-8978-8ab79447ce2c" name="T8">
         <tile name="SpawnPoint_T8_MOB_MORGANA_CROSSBOWMAN" pos="19.3 0 -66.2">
@@ -264,9 +287,6 @@
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_C_COMP_01" pos="10 -28 70" roty="90" />
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_C_COMP_01" pos="50 -28 70" roty="90" />
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_A_COMP_01" pos="-50 -28 70" roty="90" />
-    <criticaltile name="MOUNTAIN_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 4 40" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
-    </criticaltile>
     <tile name="MOUNTAIN_RED_GROUND" pos="60 0 -60" roty="0" />
     <tile name="MOUNTAIN_RED_GROUND" pos="-60 0 -70" />
     <tile name="MOUNTAIN_RED_GROUND" pos="50 0 -20" />
@@ -410,14 +430,14 @@
     <tile name="MOUNTAIN_RED_PLATEAU_8M_CORNERTO_4M_LEFT" pos="-20 0 0" roty="180" />
     <tile name="MOUNTAIN_RED_PLATEAU_4M_STRAIGHT_C" pos="-30 0 -10" roty="90" />
     <tile name="MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_A_NO_COLLISION_OBJECT" pos="-40 -28 10" roty="270" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="10 4 30" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="10 4 40" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="10 4 50" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="0 4 30" roty="90" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="-10 4 30" roty="90" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="-10 4 40" roty="180" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="-10 4 50" roty="270" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJECT" pos="0 4 50" roty="270" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="10 4 30" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="10 4 40" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="10 4 50" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="0 4 30" roty="90" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="-10 4 30" roty="90" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="-10 4 40" roty="180" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="-10 4 50" roty="270" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_OBJ" pos="0 4 50" roty="270" />
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_D_COMP_01" pos="-50 -28 30" roty="180" />
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_D_COMP_01" pos="-70 -28 30" roty="0" />
     <compoundtile name="_MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_D_COMP_01" pos="60 -28 70" roty="90" />
@@ -645,28 +665,28 @@
     <tile name="MOUNTAIN_RED_MOR_STOCKADE_STRAIGHT_SMALL_B" pos="-5 0 -70.5" roty="90" />
     <tile name="MOUNTAIN_RED_MOR_STOCKADE_STRAIGHT_SMALL_B" pos="-4 0 -70.5" roty="90" />
     <tile name="MOUNTAIN_RED_MOR_STOCKADE_RIVER_A" pos="-47 0 -72.5" roty="270" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="30 0 -69" scale="2.655894 1 0.7877704" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="51 0 -69" scale="1.972504 1 0.7877704" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="61 0 -70" scale="1.972504 1 0.7877704" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-56 0 -68" scale="1.337787 1 1" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-64 0 -20" roty="90" scale="1.311284 1 0.6473315" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-65 0 -2" roty="90" scale="1.311284 1 0.6473314" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-64 0 -64" roty="90" scale="1.311284 1 0.6473317" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="68 0 -17" roty="270" scale="1.972505 1 0.7877709" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-39 0 -70" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="68 0 -40" roty="270" scale="1.972504 1 0.7877706" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-64 0 -31" roty="90" scale="1.311284 1 0.6473316" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="7 0 -71" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="68 0 -55" roty="270" scale="1.972504 1 0.7877704" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-63 0 -70" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-7 0 -71" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="8 4 -2" scale="2.640948 2.640949 2.640949" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-43 -32 14" rot="4 314 23" scale="6.334352 6.334352 6.334351" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-10 4 -5" roty="270" scale="2.139906 2.139906 2.139906" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="8 -1 10" scale="4.194577 4.194576 4.194576" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="-9 -1 6" scale="4.194577 4.194576 4.194576" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NO_COLLISION" pos="48 0 -70" />
-    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_C_FLAT_NO_COLLISION" pos="35 -28 49" scale="4.785691 4.785695 4.785695" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="30 0 -69" scale="2.655894 1 0.7877704" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="51 0 -69" scale="1.972504 1 0.7877704" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="61 0 -70" scale="1.972504 1 0.7877704" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-56 0 -68" scale="1.337787 1 1" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-64 0 -20" roty="90" scale="1.311284 1 0.6473315" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-65 0 -2" roty="90" scale="1.311284 1 0.6473314" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-64 0 -64" roty="90" scale="1.311284 1 0.6473317" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="68 0 -17" roty="270" scale="1.972505 1 0.7877709" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-39 0 -70" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="68 0 -40" roty="270" scale="1.972504 1 0.7877706" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-64 0 -31" roty="90" scale="1.311284 1 0.6473316" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="7 0 -71" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="68 0 -55" roty="270" scale="1.972504 1 0.7877704" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-63 0 -70" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-7 0 -71" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="8 4 -2" scale="2.640948 2.640949 2.640949" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-43 -32 14" rot="4 314 23" scale="6.334352 6.334352 6.334351" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-10 4 -5" roty="270" scale="2.139906 2.139906 2.139906" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="8 -1 10" scale="4.194577 4.194576 4.194576" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="-9 -1 6" scale="4.194577 4.194576 4.194576" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_D_NOCOL" pos="48 0 -70" />
+    <tile name="MOUNTAIN_RED_FILL_HILL_BASE_C_FLAT_NOCOL" pos="35 -28 49" scale="4.785691 4.785695 4.785695" />
     <compoundtile name="_MOUNTAIN_RED_CASTLE_WALL_STRAIGHT_A_COMP_01" pos="-40 -24 30" roty="180" />
     <compoundtile name="_MOUNTAIN_RED_CASTLE_WALL_STRAIGHT_A_COMP_01" pos="-50 -24 50" roty="270" />
     <compoundtile name="_MOUNTAIN_RED_CASTLE_WALL_STRAIGHT_A_COMP_01" pos="-40 -24 50" roty="270" />
@@ -700,10 +720,10 @@
     <compoundtile name="_MOUNTAIN_RED_CASTLE_DIAGONAL_B_COMP_01" pos="50 -24 50" roty="270" />
     <tile name="MOUNTAIN_RED_T1_BUSH_DRY_B" pos="60.5 1 4.5" rot="356.57 180.38 353.77" />
     <tile name="MOUNTAIN_RED_T1_BUSH_DRY_C" pos="67.5 0 10.5" roty="180" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NO_COLLISION" pos="0 7 -1" roty="270" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NO_COLLISION" pos="7 2 7" roty="270" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NO_COLLISION" pos="-11 1 9" roty="90" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_E_NO_COLLISION" pos="8 1 7" roty="180" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NOCOL" pos="0 7 -1" roty="270" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NOCOL" pos="7 2 7" roty="270" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_D_NOCOL" pos="-11 1 9" roty="90" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_E_NOCOL" pos="8 1 7" roty="180" />
     <compoundtile name="_MOUNTAIN_RED_FILL_ROCKS_CORNER_A_COMP_02_SNOW" pos="-15 4 -7" />
     <compoundtile name="_MOUNTAIN_RED_FILL_ROCKS_CORNER_A_COMP_01_SNOW" pos="-6 0 -29" />
     <compoundtile name="_MOUNTAIN_RED_FILL_ROCKS_FORMATION_B_COMP_01_SNOW" pos="2 4 1" roty="90" />
@@ -845,11 +865,11 @@
     <tile name="MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_A" pos="-60 -28 10" roty="270" />
     <tile name="MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_A" pos="-40 -28 70" roty="90" />
     <tile name="MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_A" pos="-50 -28 10" roty="270" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJECT" pos="20 4 50" roty="90" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJECT" pos="-30 4 50" roty="90" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJECT" pos="-20 4 50" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJECT" pos="-50 4 40" roty="270" />
-    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJECT" pos="50 4 50" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="20 4 50" roty="90" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="-30 4 50" roty="90" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="-20 4 50" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="-50 4 40" roty="270" />
+    <tile name="MOUNTAIN_RED_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="50 4 50" />
     <tile name="MOUNTAIN_RED_PLATEAU_4M_RAMP_ROAD" pos="40 0 -10" roty="90" />
     <tile name="MOUNTAIN_RED_PLATEAU_4M_RAMP_ROAD" pos="-40 0 -10" roty="90" />
     <compoundtile name="_MOUNTAIN_RED_CASTLE_BALCONY_A_COMP_01" pos="-60 -24 50" roty="180" />
@@ -861,8 +881,8 @@
     <compoundtile name="_MOUNTAIN_RED_CASTLE_WALL_ARCH_A_COMP_01" pos="-40 -24 20" roty="180" />
     <compoundtile name="_MOUNTAIN_RED_CASTLE_4M_STAIRS_A_SINGLE" pos="60 -20 30" />
     <tile name="MOUNTAIN_RED_CASTLE_WALL_STRAIGHT_TO_BRIDGE_A" pos="40 -24 10" roty="90" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_A_NO_COLLISION" pos="62 -28 60" roty="247" scale="1.34 1 1.66" />
-    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_A_NO_COLLISION" pos="-64 -28 50" roty="337" scale="1.34 1 1.66" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_A_NOCOL" pos="62 -28 60" roty="247" scale="1.34 1 1.66" />
+    <tile name="MOUNTAIN_RED_FILL_ROCK_ADD_FORMATION_A_NOCOL" pos="-64 -28 50" roty="337" scale="1.34 1 1.66" />
     <tile name="MOUNTAIN_RED_CASTLE_GATE_SMALL_A" pos="-40 4 -4.5" roty="270" />
     <tile name="MOUNTAIN_RED_CASTLE_GROUND_A" pos="60 8 40" />
     <tile name="MOUNTAIN_RED_CASTLE_GROUND_A" pos="50 4 10" roty="270" />
@@ -917,8 +937,5 @@
     <tile name="MOUNTAIN_RED_CASTLE_GROUND_A" pos="-60 -28 50" />
     <tile name="MOUNTAIN_RED_MOR_CAMPFIRE_A" pos="-49.5 0 4.5" roty="270" />
     <tile name="MOUNTAIN_RED_MOR_FILL_MAGE_BOOK_STATUE_SMALL_A" pos="3 -1 -23" roty="54" />
-    <tile name="LevelMarker_Mobcamp_Morgana_15x15_MN" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Morgana_15x15_MN" />
-    </tile>
   </tiles>
 </template>

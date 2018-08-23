@@ -553,100 +553,129 @@
     </OR>
   </Lootlist>
   <Lootlist name="T5_DEMON_BOSS_YELLOW_LOOT">
+    <Item type="T4_RUNE" weight="100" amount="1-3"/>
+    <OR chance="51.45"> <!-- 1/3 of the BZ HG chance -->
+      <LootListReference name="CHEST_T8_GEAR_LOOT" weight="0.04"/>
+      <LootListReference name="CHEST_T7_GEAR_LOOT" weight="0.2"/>
+      <LootListReference name="CHEST_T6_GEAR_LOOT" weight="1"/>
+      <LootListReference name="CHEST_T5_GEAR_LOOT" weight="1"/>
+      <LootListReference name="CHEST_T4_GEAR_LOOT" weight="1"/>
+    </OR>    
     <OR chance="0.7">
-      <OR weight="1">
+      <OR weight="1"> <!-- 1/2 chance for .2 and 1/4 chance for .3 artifacts, to ensure usually some artifacts get dropped, but still keep BZ HG loot significantly better-->
         <LootListReference name="MELD_4_1_ALL_LOOT" weight="10"/>
         <Item type="T4_RUNE" weight="10" amount="25-75"/>
+        <LootListReference name="MELD_4_2_ALL_LOOT" weight="2.5"/>
+        <Item type="T4_SOUL" weight="2.5" amount="25-75"/>         
+        <LootListReference name="MELD_4_3_ALL_LOOT" weight="0.25"/>
+        <Item type="T4_RELIC" weight="0.25" amount="25-75"/>        
       </OR>
       <OR weight="1">
         <LootListReference name="MELD_5_1_ALL_LOOT" weight="10"/>
         <Item type="T5_RUNE" weight="10" amount="25-75"/>
+        <LootListReference name="MELD_5_2_ALL_LOOT" weight="2.5"/>
+        <Item type="T5_SOUL" weight="2.5" amount="25-75"/>
+        <LootListReference name="MELD_5_3_ALL_LOOT" weight="0.25"/>
+        <Item type="T5_RELIC" weight="0.25" amount="25-75"/>
       </OR>
       <OR weight="1">
         <LootListReference name="MELD_6_1_ALL_LOOT" weight="10"/>
         <Item type="T6_RUNE" weight="10" amount="25-75"/>
+        <LootListReference name="MELD_6_2_ALL_LOOT" weight="2.5"/>
+        <Item type="T6_SOUL" weight="2.5" amount="25-75"/>
+        <LootListReference name="MELD_6_3_ALL_LOOT" weight="0.25"/>
+        <Item type="T6_RELIC" weight="0.25" amount="25-75"/>        
       </OR>
       <OR weight="0.2">
         <LootListReference name="MELD_7_1_ALL_LOOT" weight="10"/>
         <Item type="T7_RUNE" weight="10" amount="25-75"/>
+        <LootListReference name="MELD_7_2_ALL_LOOT" weight="2.5"/>
+        <Item type="T7_SOUL" weight="2.5" amount="25-75"/>
+        <LootListReference name="MELD_7_3_ALL_LOOT" weight="0.25"/>
+        <Item type="T7_RELIC" weight="0.25" amount="25-75"/>
       </OR>
       <OR weight="0.04">
         <LootListReference name="MELD_8_1_ALL_LOOT" weight="10"/>
         <Item type="T8_RUNE" weight="10" amount="25-75"/>
+        <LootListReference name="MELD_8_2_ALL_LOOT" weight="2.5"/>
+        <Item type="T8_SOUL" weight="2.5" amount="25-75"/>
+        <LootListReference name="MELD_8_3_ALL_LOOT" weight="0.25"/>
+        <Item type="T8_RELIC" weight="0.25" amount="25-75"/>
       </OR>
     </OR>
   </Lootlist>
   <Lootlist name="T5_DEMON_BOSS_LOOT">
-    <OR chance="1">
+    <LootListReference name="FAME_BOOKS_LOOT" chance="1"/> <!-- guaranteed 5v5 reward -->
+    <AND chance="5">
       <Item type="T4_RUNE" weight="100" amount="2-8"/>
-    </OR>
-    <AND chance="220.5">
-      <!-- Moved chances for chest loot BEFORE the tier selection to ensure not all loot is of the same Tier! - Robin -->
-      <OR chance="0.7">
+      <OR chance="154.35">
         <LootListReference name="CHEST_T8_GEAR_LOOT" weight="0.04"/>
         <LootListReference name="CHEST_T7_GEAR_LOOT" weight="0.2"/>
         <LootListReference name="CHEST_T6_GEAR_LOOT" weight="1"/>
         <LootListReference name="CHEST_T5_GEAR_LOOT" weight="1"/>
         <LootListReference name="CHEST_T4_GEAR_LOOT" weight="1"/>
       </OR>
+      <OR chance="0.7">
+        <OR weight="1">
+          <LootListReference name="MELD_4_1_ALL_LOOT" weight="10"/>
+          <Item type="T4_RUNE" weight="25" amount="1-51"/>
+          <LootListReference name="MELD_4_2_ALL_LOOT" weight="5"/>
+          <Item type="T4_SOUL" weight="5" amount="25-75"/>
+          <LootListReference name="MELD_4_3_ALL_LOOT" weight="1"/>
+          <Item type="T4_RELIC" weight="1" amount="25-75"/>
+        </OR>
+        <OR weight="1">
+          <LootListReference name="MELD_5_1_ALL_LOOT" weight="10"/>
+          <Item type="T5_RUNE" weight="25" amount="25-75"/>
+          <LootListReference name="MELD_5_2_ALL_LOOT" weight="5"/>
+          <Item type="T5_SOUL" weight="5" amount="25-75"/>
+          <LootListReference name="MELD_5_3_ALL_LOOT" weight="1"/>
+          <Item type="T5_RELIC" weight="1" amount="25-75"/>
+        </OR>
+        <OR weight="1">
+          <LootListReference name="MELD_6_1_ALL_LOOT" weight="25"/>
+          <Item type="T6_RUNE" weight="25" amount="25-75"/>
+          <LootListReference name="MELD_6_2_ALL_LOOT" weight="5"/>
+          <Item type="T6_SOUL" weight="5" amount="25-75"/>
+          <LootListReference name="MELD_6_3_ALL_LOOT" weight="1"/>
+          <Item type="T6_RELIC" weight="1" amount="25-75"/>
+        </OR>
+        <OR weight="0.2">
+          <LootListReference name="MELD_7_1_ALL_LOOT" weight="25"/>
+          <Item type="T7_RUNE" weight="25" amount="25-75"/>
+          <LootListReference name="MELD_7_2_ALL_LOOT" weight="5"/>
+          <Item type="T7_SOUL" weight="5" amount="25-75"/>
+          <LootListReference name="MELD_7_3_ALL_LOOT" weight="1"/>
+          <Item type="T7_RELIC" weight="1" amount="25-75"/>
+        </OR>
+        <OR weight="0.04">
+          <LootListReference name="MELD_8_1_ALL_LOOT" weight="25"/>
+          <Item type="T8_RUNE" weight="25" amount="25-75"/>
+          <LootListReference name="MELD_8_2_ALL_LOOT" weight="5"/>
+          <Item type="T8_SOUL" weight="5" amount="25-75"/>
+          <LootListReference name="MELD_8_3_ALL_LOOT" weight="1"/>
+          <Item type="T8_RELIC" weight="1" amount="25-75"/>
+        </OR>
+      </OR>
     </AND>
-    <OR chance="0.7">
-      <OR weight="1">
-        <LootListReference name="MELD_4_1_ALL_LOOT" weight="10"/>
-        <Item type="T4_RUNE" weight="25" amount="1-51"/>
-        <LootListReference name="MELD_4_2_ALL_LOOT" weight="5"/>
-        <Item type="T4_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_4_3_ALL_LOOT" weight="1"/>
-        <Item type="T4_RELIC" weight="1" amount="25-75"/>
-      </OR>
-      <OR weight="1">
-        <LootListReference name="MELD_5_1_ALL_LOOT" weight="10"/>
-        <Item type="T5_RUNE" weight="25" amount="25-75"/>
-        <LootListReference name="MELD_5_2_ALL_LOOT" weight="5"/>
-        <Item type="T5_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_5_3_ALL_LOOT" weight="1"/>
-        <Item type="T5_RELIC" weight="1" amount="25-75"/>
-      </OR>
-      <OR weight="1">
-        <LootListReference name="MELD_6_1_ALL_LOOT" weight="25"/>
-        <Item type="T6_RUNE" weight="25" amount="25-75"/>
-        <LootListReference name="MELD_6_2_ALL_LOOT" weight="5"/>
-        <Item type="T6_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_6_3_ALL_LOOT" weight="1"/>
-        <Item type="T6_RELIC" weight="1" amount="25-75"/>
-      </OR>
-      <OR weight="0.2">
-        <LootListReference name="MELD_7_1_ALL_LOOT" weight="25"/>
-        <Item type="T7_RUNE" weight="25" amount="25-75"/>
-        <LootListReference name="MELD_7_2_ALL_LOOT" weight="5"/>
-        <Item type="T7_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_7_2_ALL_LOOT" weight="1"/>
-        <Item type="T7_RELIC" weight="1" amount="25-75"/>
-      </OR>
-      <OR weight="0.04">
-        <LootListReference name="MELD_8_1_ALL_LOOT" weight="25"/>
-        <Item type="T8_RUNE" weight="25" amount="25-75"/>
-        <LootListReference name="MELD_8_2_ALL_LOOT" weight="5"/>
-        <Item type="T8_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_8_3_ALL_LOOT" weight="1"/>
-        <Item type="T8_RELIC" weight="1" amount="25-75"/>
-      </OR>
-    </OR>
   </Lootlist>
   <Lootlist name="T5_DEMON_BOSS_STANDARD_LOOT">
-    <OR chance="1">
-      <Item type="T4_RUNE" weight="100" amount="1-4"/>
+    <OR weight="1"> <!-- guaranteed 2v2 Reward -->
+      <LootListReference name="MELD_4_1_ALL_LOOT" weight="10"/>
+      <LootListReference name="MELD_5_1_ALL_LOOT" weight="9"/>
+      <LootListReference name="MELD_4_2_ALL_LOOT" weight="8"/>
+      <LootListReference name="MELD_6_1_ALL_LOOT" weight="7"/>
+      <LootListReference name="MELD_5_2_ALL_LOOT" weight="6"/>
+      <LootListReference name="MELD_7_1_ALL_LOOT" weight="5"/>
+      <LootListReference name="MELD_6_2_ALL_LOOT" weight="4"/>
     </OR>
-    <AND chance="22.05"> <!-- T5_DEMON_BOSS_LOOT has a chance of 88.2 -->
-      <!-- Moved chances for chest loot BEFORE the tier selection to ensure not all loot is of the same Tier! - Robin -->
-      <OR chance="0.7">
-        <LootListReference name="CHEST_T8_GEAR_LOOT" weight="0.04"/>
-        <LootListReference name="CHEST_T7_GEAR_LOOT" weight="0.2"/>
-        <LootListReference name="CHEST_T6_GEAR_LOOT" weight="1"/>
-        <LootListReference name="CHEST_T5_GEAR_LOOT" weight="1"/>
-        <LootListReference name="CHEST_T4_GEAR_LOOT" weight="1"/>
-      </OR>
-    </AND>
+    <OR chance="154.35">
+      <LootListReference name="CHEST_T8_GEAR_LOOT" weight="0.04"/>
+      <LootListReference name="CHEST_T7_GEAR_LOOT" weight="0.2"/>
+      <LootListReference name="CHEST_T6_GEAR_LOOT" weight="1"/>
+      <LootListReference name="CHEST_T5_GEAR_LOOT" weight="1"/>
+      <LootListReference name="CHEST_T4_GEAR_LOOT" weight="1"/>
+    </OR>
     <OR chance="0.7">
       <OR weight="1">
         <LootListReference name="MELD_4_1_ALL_LOOT" weight="10"/>
@@ -677,7 +706,7 @@
         <Item type="T7_RUNE" weight="25" amount="25-75"/>
         <LootListReference name="MELD_7_2_ALL_LOOT" weight="5"/>
         <Item type="T7_SOUL" weight="5" amount="25-75"/>
-        <LootListReference name="MELD_7_2_ALL_LOOT" weight="1"/>
+        <LootListReference name="MELD_7_3_ALL_LOOT" weight="1"/>
         <Item type="T7_RELIC" weight="1" amount="25-75"/>
       </OR>
       <OR weight="0.04">
@@ -8037,6 +8066,10 @@
         <Item type="T4_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T4_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8061,6 +8094,10 @@
         <Item type="T4_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T4_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8085,6 +8122,10 @@
         <Item type="T4_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />          
       </OR>
       <OR weight="1.36">
         <Item type="T4_ARMOR_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -8111,6 +8152,10 @@
         <Item type="T4_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T4_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8135,6 +8180,10 @@
         <Item type="T4_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />        
         <Item type="T4_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8159,6 +8208,10 @@
         <Item type="T4_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />        
       </OR>
       <OR weight="1.36">
         <Item type="T4_SHOES_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -8185,6 +8238,10 @@
         <Item type="T4_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T4_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8209,6 +8266,10 @@
         <Item type="T4_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T4_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8233,18 +8294,43 @@
         <Item type="T4_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T4_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T4_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T4_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T4_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T4_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T4_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />        
       </OR>
       <OR weight="1.36">
         <Item type="T4_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_CAPE" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_CAPE" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T4_CAPE" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        <Item type="T4_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T4_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T4_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T4_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T4_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T4_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T4_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T4_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T4_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T4_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T4_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T4_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T4_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T4_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T4_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T4_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T4_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T4_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T4_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T4_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
       </OR>
       <OR weight="1.36">
         <Item type="T4_BAG" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T4_BAG" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T4_BAG" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T4_BAG" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        
       </OR>
       <OR weight="0.36">
         <Item type="T4_MAIN_SWORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -8689,6 +8775,10 @@
         <Item type="T5_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T5_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8713,6 +8803,10 @@
         <Item type="T5_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T5_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8737,6 +8831,10 @@
         <Item type="T5_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T5_ARMOR_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -8763,6 +8861,10 @@
         <Item type="T5_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T5_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8787,6 +8889,10 @@
         <Item type="T5_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />   
         <Item type="T5_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8811,6 +8917,10 @@
         <Item type="T5_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T5_SHOES_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -8837,6 +8947,10 @@
         <Item type="T5_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />        
         <Item type="T5_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8861,6 +8975,10 @@
         <Item type="T5_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T5_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -8885,12 +9003,36 @@
         <Item type="T5_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T5_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T5_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T5_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T5_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T5_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T5_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T5_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T5_CAPE" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T5_CAPE" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T5_CAPE" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        <Item type="T5_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T5_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T5_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T5_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T5_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T5_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T5_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T5_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T5_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T5_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T5_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T5_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T5_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T5_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T5_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T5_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T5_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T5_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T5_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T5_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />        
       </OR>
       <OR weight="1.36">
         <Item type="T5_BAG" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -9341,6 +9483,10 @@
         <Item type="T6_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9365,6 +9511,10 @@
         <Item type="T6_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9389,6 +9539,10 @@
         <Item type="T6_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T6_ARMOR_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -9415,6 +9569,10 @@
         <Item type="T6_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9439,6 +9597,10 @@
         <Item type="T6_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9463,6 +9625,10 @@
         <Item type="T6_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T6_SHOES_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -9489,6 +9655,10 @@
         <Item type="T6_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9513,6 +9683,10 @@
         <Item type="T6_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T6_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -9537,12 +9711,36 @@
         <Item type="T6_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T6_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T6_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T6_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T6_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T6_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T6_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T6_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T6_CAPE" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T6_CAPE" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T6_CAPE" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        <Item type="T6_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T6_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T6_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T6_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T6_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T6_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T6_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T6_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T6_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T6_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T6_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T6_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T6_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T6_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T6_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
       </OR>
       <OR weight="1.36">
         <Item type="T6_BAG" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -9993,6 +10191,10 @@
         <Item type="T7_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10017,6 +10219,10 @@
         <Item type="T7_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10041,6 +10247,10 @@
         <Item type="T7_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T7_ARMOR_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -10067,6 +10277,10 @@
         <Item type="T7_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10091,6 +10305,10 @@
         <Item type="T7_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10115,6 +10333,10 @@
         <Item type="T7_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T7_SHOES_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -10141,6 +10363,10 @@
         <Item type="T7_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10165,6 +10391,10 @@
         <Item type="T7_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T7_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10189,12 +10419,36 @@
         <Item type="T7_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T7_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T7_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T7_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T7_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T7_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T7_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T7_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T7_CAPE" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T7_CAPE" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T7_CAPE" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        <Item type="T7_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T7_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T7_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T7_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T7_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T7_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T7_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T7_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T7_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T7_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T7_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T7_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T7_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T7_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T7_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T7_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T7_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T7_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T7_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T7_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
       </OR>
       <OR weight="1.36">
         <Item type="T7_BAG" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -10645,6 +10899,10 @@
         <Item type="T8_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_HEAD_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_HEAD_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_HEAD_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10669,6 +10927,10 @@
         <Item type="T8_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_HEAD_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_HEAD_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_HEAD_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10693,6 +10955,10 @@
         <Item type="T8_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_HEAD_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_HEAD_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T8_ARMOR_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -10719,6 +10985,10 @@
         <Item type="T8_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_ARMOR_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_ARMOR_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_ARMOR_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10743,6 +11013,10 @@
         <Item type="T8_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_ARMOR_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_ARMOR_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_ARMOR_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10767,6 +11041,10 @@
         <Item type="T8_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_ARMOR_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_ARMOR_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T8_SHOES_PLATE_SET2" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
@@ -10793,6 +11071,10 @@
         <Item type="T8_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_SHOES_PLATE_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_SHOES_PLATE_KEEPER" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_SHOES_LEATHER_SET3" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10817,6 +11099,10 @@
         <Item type="T8_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_SHOES_LEATHER_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_SHOES_LEATHER_UNDEAD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
         <Item type="T8_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_SHOES_CLOTH_SET1" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
@@ -10841,12 +11127,36 @@
         <Item type="T8_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="1" weight="64" />
         <Item type="T8_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="2" weight="16" />
         <Item type="T8_SHOES_CLOTH_HELL" amount="1" useblackmarket="true" enchantmentlevel="3" weight="4" />
+        <Item type="T8_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="0" weight="64" />
+        <Item type="T8_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="1" weight="16" />
+        <Item type="T8_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="2" weight="4" />
+        <Item type="T8_SHOES_CLOTH_MORGANA" amount="1" useblackmarket="true" enchantmentlevel="3" weight="1" />
       </OR>
       <OR weight="1.36">
         <Item type="T8_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />
         <Item type="T8_CAPE" amount="1" useblackmarket="true" enchantmentlevel="1" weight="1024" />
         <Item type="T8_CAPE" amount="1" useblackmarket="true" enchantmentlevel="2" weight="256" />
         <Item type="T8_CAPE" amount="1" useblackmarket="true" enchantmentlevel="3" weight="64" />
+        <Item type="T8_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T8_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T8_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T8_CAPEITEM_FW_BRIDGEWATCH" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T8_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T8_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T8_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T8_CAPEITEM_FW_FORTSTERLING" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T8_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T8_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T8_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T8_CAPEITEM_FW_LYMHURST" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T8_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T8_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T8_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T8_CAPEITEM_FW_MARTLOCK" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T8_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
+        <Item type="T8_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
+        <Item type="T8_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T8_CAPEITEM_FW_THETFORD" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
       </OR>
       <OR weight="1.36">
         <Item type="T8_BAG" amount="1" useblackmarket="true" enchantmentlevel="0" weight="4096" />

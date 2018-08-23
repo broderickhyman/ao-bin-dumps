@@ -13,7 +13,22 @@
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
-  />
+    />
+  
+	<transactionlimits>
+		<gold>
+			<day daynumber="0" goldamount="0" />
+			<day daynumber="1" goldamount="500" />
+			<day daynumber="5" goldamount="2500" />
+			<day daynumber="10" goldamount="5000" />
+		</gold>
+		<trial>
+			<day daynumber="0" trialkeyamount="3" />
+			<day daynumber="1" trialkeyamount="5" />
+			<day daynumber="5" trialkeyamount="10" />			
+		</trial>
+	</transactionlimits>
+	
     <SiegeCamp vaultsize="64" battlevaultsize="64" weightlimit="10000.0" siegecampclaimtimeinsec="15" cooldowninmin="360" costfactor="2.5" />
     <Territory territoryclaimtimeinsec="15" />
     <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0"/>
@@ -53,10 +68,16 @@
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN" />
     <StuckCommand cooldownseconds="86400" delayseconds="600" />
     <ClusterChange cooldownseconds="10"/>
-    <SpawnBuff cooldownseconds="60" buff_always="SPAWN_INVULNERABILITY" buf_nonlogin="SPAWN_SPEED" />
+    <SpawnBuff>
+      <buff name="SPAWN_INVULNERABILITY" onlywhenpvppossible="true" onlogin="true" inarena="false" ingvg="false"/>
+      <buff name="SPAWN_SPEED" onlywhenpvppossible="true" onlogin="false" inarena="false" ingvg="false"/>
+      <!-- order is important: immunity LAST (obvious, right?) -->
+      <buff name="SPAWN_BUFFIMMUNITY" onlywhenpvppossible="true" onlogin="true" inarena="false" ingvg="false"/>
+    </SpawnBuff>
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
     <InCombat activetimeoutseconds="30" passivetimeoutseconds="30"/>
     <FurnitureObjects placetimeseconds="3"/>
+    <FarmableObjects placetimeseconds="1"/>
     <SpellCooldowns onequipmentchange="10" onmount="5"/>
     <CrowdControlDiminishingReturns
       breaksondamagefactor="0.7"
@@ -102,20 +123,363 @@
     loadprogression="2.264101591"
     ccdurationfactor="0.5"
     />
-    <ItemPowerProgression
-    armorbase="100"
-    ccrbase="100"
-    attackdamageprogression="1.0918"
-    abilitypowerprogression="1.0918"
-    hitpointsprogression="1.06"
-    energyprogression="1.0918"
-    armorprogression="1.03"
-    crowdcontrolresistanceprogression="1.0564"
-    fishingspeedprogression="1.3">
-      <armorshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0"/>
-      <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0"/>
-      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0"/>
-      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0.0" shield="0.0" book="0" torch="0.0" cape="0.10"/>
+    <ItemPowerProgression>
+      <mainhand_1h
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0825"
+        abilitypowerprogression="1.0825"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <mainhand_2h
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1.16"
+        bonusdefensevsplayers="1.16"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1.16"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <offhand
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1.16"
+        bonusccdurationvsmobs="1.16"
+        bonusccdurationvsplayers="1.16"
+        bonusdamagevsmobs="1.16"
+        bonusdamagevsplayers="1.16"
+        bonusdefensevsmobs="1.16"
+        bonusdefensevsplayers="1.16"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1.16"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1.16"
+        magicspelldamagebonus="1.16"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1.16"
+        physicalspelldamagebonus="1.16"
+        threatbonus="1.16"
+        magiccasttimereduction="true"
+        magiccooldownreduction="true"/>
+
+      <head
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <armor
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <shoes
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <bag
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <cape
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <mount
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <potion
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <food
+        armorbase="100"
+        ccrbase="100"
+        attackdamageprogression="1.0918"
+        abilitypowerprogression="1.0918"
+        hitpointsprogression="1.06"
+        energyprogression="1.0918"
+        armorprogression="1.03"
+        crowdcontrolresistanceprogression="1.0564"
+        fishingspeedprogression="1.3"
+        attackrangebonus="1"
+        attackspeedbonus="1"
+        bonusccdurationvsmobs="1"
+        bonusccdurationvsplayers="1"
+        bonusdamagevsmobs="1"
+        bonusdamagevsplayers="1"
+        bonusdefensevsmobs="1"
+        bonusdefensevsplayers="1"
+        energycostreduction="1"
+        energyregenerationbonus="1"
+        healbonus="1"
+        healmodifier="1"
+        hitpointsregenerationbonus="1"
+        magicattackdamagebonus="1"
+        magicspelldamagebonus="1"
+        movespeedbonus="1"
+        physicalattackdamagebonus="1"
+        physicalspelldamagebonus="1"
+        threatbonus="1"
+        magiccasttimereduction="false"
+        magiccooldownreduction="false"/>
+
+      <armorshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
+      <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.36" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
+      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.5"/>
+      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0.0" shield="0.0" book="0.15" torch="0.0" cape="0.10" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.4" demonskull="0.0" totem="0.0"/>
     </ItemPowerProgression>
     <QualityLevels>
       <qualitylevel level="2" itempowerbonus="10"/>
@@ -124,7 +488,7 @@
       <qualitylevel level="5" itempowerbonus="100"/>
     </QualityLevels>
   </Items>
-  <Loot vanishtime="1800" mobprotection="120" dropvisibilitydelay="0.5"/>
+  <Loot vanishtime="1800" mobprotection="120" pvpprotection="120" dropvisibilitydelay="0.5"/>
   <ActiveBuffScaling>
     <attribute name="HitpointsMax" min="-0.5" max="unrestricted" absolutemin="1000"/>
     <attribute name="HitpointsMaxBonus" min="-0.5" max="unrestricted"/>
@@ -400,7 +764,7 @@
     </TaxValues>
     <Settings>
       <Entry name="autotradeinterval" value="1440" /> <!--in Minutes (1440 = 24 hours)-->
-      <Entry name="defaultexpiration" value="168" />  <!--in Hrs (168 = 7 days)-->
+      <Entry name="defaultexpiration" value="720" />  <!--in Hrs (168 = 7 days)-->
       <Entry name="finishedexpiration" value="720" />  <!--in Hrs (720 = 30 days)-->
       <Entry name="maxbuyordercount" value="9999" /> <!--in Hrs (720 = 30 days)-->
     </Settings>
@@ -441,7 +805,7 @@
   <SilverFreeCrafting maxTier="2"/>
   <CraftCapacityFreeCrafting maxTier="2"/>
   <ActionFocus costreductionconstant="1.00695555005672">
-    <CraftingEfficiency bonus="0.35" />
+    <CraftingEfficiency bonus="0.59" />
     <CraftingQuality bonus="50" />
   </ActionFocus>
   <LabourerSettings happinessperbarsegment="100" maxsafedistancefromhouse="1" maxsafedistancetimeout="3" maxbarsegments="9" maxyield="1.5"/>
@@ -813,24 +1177,24 @@
 
   -->
   <BuildBuilding>
-    <Resource tier="1" time="0.35" maxstack="30" />
-    <Resource tier="2" time="0.5" maxstack="30" />
-    <Resource tier="3" time="0.65" maxstack="30" />
-    <Resource tier="4" time="0.8" maxstack="30" />
-    <Resource tier="5" time="0.95" maxstack="30" />
-    <Resource tier="6" time="1.1" maxstack="30" />
-    <Resource tier="7" time="1.25" maxstack="30" />
-    <Resource tier="8" time="1.4" maxstack="30" />
+    <Resource tier="1" time="0.2" maxstack="30" />
+    <Resource tier="2" time="0.2" maxstack="30" />
+    <Resource tier="3" time="0.2" maxstack="30" />
+    <Resource tier="4" time="0.2" maxstack="30" />
+    <Resource tier="5" time="0.2" maxstack="30" />
+    <Resource tier="6" time="0.2" maxstack="30" />
+    <Resource tier="7" time="0.2" maxstack="30" />
+    <Resource tier="8" time="0.2" maxstack="30" />
   </BuildBuilding>
   <RepairBuilding>
-    <Resource tier="1" time="0.35" maxstack="30" />
-    <Resource tier="2" time="0.5" maxstack="30" />
-    <Resource tier="3" time="0.65" maxstack="30" />
-    <Resource tier="4" time="0.8" maxstack="30" />
-    <Resource tier="5" time="0.95" maxstack="30" />
-    <Resource tier="6" time="1.1" maxstack="30" />
-    <Resource tier="7" time="1.25" maxstack="30" />
-    <Resource tier="8" time="1.4" maxstack="30" />
+    <Resource tier="1" time="0.2" maxstack="30" />
+    <Resource tier="2" time="0.2" maxstack="30" />
+    <Resource tier="3" time="0.2" maxstack="30" />
+    <Resource tier="4" time="0.2" maxstack="30" />
+    <Resource tier="5" time="0.2" maxstack="30" />
+    <Resource tier="6" time="0.2" maxstack="30" />
+    <Resource tier="7" time="0.2" maxstack="30" />
+    <Resource tier="8" time="0.2" maxstack="30" />
   </RepairBuilding>
   <!-- ********************************************************************************************************************** -->
   <!--
@@ -886,6 +1250,13 @@
       <crafttimefactor tierdifference="1" factor="10" />
     </Item>
   </CraftItemModificator>
+  <ActionSplitSettings defaultcraftstacksize="40" defaultstudystacksize="40">
+    <SplitSetting craftingcategory="fiber" craftstacksize="200" studystacksize="200"/>
+    <SplitSetting craftingcategory="wood"  craftstacksize="200" studystacksize="200"/>
+    <SplitSetting craftingcategory="rock"  craftstacksize="200" studystacksize="200"/>
+    <SplitSetting craftingcategory="ore"   craftstacksize="200" studystacksize="200"/>
+    <SplitSetting craftingcategory="hide"  craftstacksize="200" studystacksize="200"/>
+  </ActionSplitSettings>
   <ChatSettings>
     <SayRadius value="30"/>
     <GlobalMessageCooldownInMs value="2000"/>
@@ -900,7 +1271,7 @@
   <PremiumLifeTimeRewards>
     <Reward days="30" title="@PREMIUM_STORE_BENEFIT_CONDITIONAL_FIRST_PURCHASE">
       <StatBonus attribute="craftingfocus" change="30000"/>
-      <StatBonus attribute="learningpoints" change="200"/>
+      <StatBonus attribute="learningpoints" change="350"/>
     </Reward>
   </PremiumLifeTimeRewards>
   <GoldPurchasePackages>
@@ -913,10 +1284,10 @@
   <ClusterDangerBonusTypes>
     <ClusterDangerBonus type="safe" icon="safe" famefactor="1.375" moblootfactor="1.25" mobsilverlootfactor="1.25"/>
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="1.5" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
-    <ClusterDangerBonus type="red"  icon="red" famefactor="2.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
-    <ClusterDangerBonus type="black"  icon="black" famefactor="3.0" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
+    <ClusterDangerBonus type="red"  icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
+    <ClusterDangerBonus type="black"  icon="black" famefactor="3.5" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
     <ClusterDangerBonus type="hell"  icon="black" famefactor="3.0" moblootfactor="5" mobsilverlootfactor="5"/>
-    <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="1.5" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
+    <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="2.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
     <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.375" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
     <ClusterDangerBonus type="expedition"  icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
   </ClusterDangerBonusTypes>
@@ -962,4 +1333,19 @@
     <TabCost count="13" cost="10000000" />
     <TabCost count="14" cost="10000000" />
   </GuildIslandVault>
+  <OverCharge
+    bonus="100"
+    duration="1800"   
+    warningtime="60"
+    trashchance="0.15"
+    durabilityloss="0.30"
+    overchargeitem="UNIQUE_GVGTOKEN_GENERIC"
+    overchargeitemcount="1"
+    buttonholdtime="1.00">
+    <startvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_start" socket="damage" constraintpreset="pointconstraint" />
+    <endvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_end" socket="floor" constraintpreset="pointconstraint" />
+    <itemtrashedvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_itemtrashed" socket="damage" constraintpreset="inworld" />
+    <endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
+  </OverCharge>
+  <AchievementProgressConversion silverConversionRatio="0.5" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
 </AO-GameData>

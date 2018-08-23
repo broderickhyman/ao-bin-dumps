@@ -1,12 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/M_MN_MobCamp_Keeper_01.unity" unityguid="31fd40db4690f704194a93f6672223fa" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-75 -79" colBoundsMax="80 75">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_01">
+      <tile name="MOUNTAIN_GREEN_KPR_ENTRANCE_DUNGEON_BASE_A" pos="-40 -24 40">
+        <exit size="7 7" spawnpos="0 0" faction="Keeper" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_02">
       <tile name="MOUNTAIN_GREEN_KPR_ENTRANCE_DUNGEON_BASE_A" pos="-40 -24 40">
         <exit size="7 7" spawnpos="0 0" faction="Keeper" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_01" name="GroupDungeon">
+        <criticaltile name="MOUNTAIN_GREEN_KPR_ENTRANCE_DUNGEON_BASE_A" pos="-40 -24 40" id="exit_02" type="exit">
+          <exit size="7 7" spawnpos="0 0" faction="Keeper" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Keeper_30x30_MN" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Keeper_30x30_MN" />
+        </tile>
+      </layer>
+      <layer id="Layer_02" name="SoloDungeon">
+        <criticaltile name="MOUNTAIN_GREEN_KPR_ENTRANCE_DUNGEON_BASE_A" pos="-40 -24 40" id="exit_01" type="exit">
+          <exit size="7 7" spawnpos="0 0" faction="Keeper" kind="DungeonStubSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Mobcamp_Keeper_15x15_MN" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Mobcamp_Keeper_15x15_MN" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="SpawnPoint_T5_MOB_KEEPER_AXE_THROWER" pos="-10 -12 -37">
       <mobspawnpoint behavior="GUARD" />
     </tile>
@@ -242,12 +265,6 @@
     <tile name="MOUNTAIN_GREEN_HILL_4M_BASE_STAIRS_A" pos="-20 -20 0" roty="180" />
     <tile name="MOUNTAIN_GREEN_HILL_4M_BASE_STAIRS_A" pos="-40 -24 20" roty="270" />
     <tile name="MOUNTAIN_GREEN_HILL_4M_BASE_STAIRS_A" pos="-20 -24 40" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_LEFT_A" pos="-55 -8 -35" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_LEFT_A" pos="65 -8 35" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_LEFT_A" pos="35 -8 -65" roty="270" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_RIGHT_A" pos="-35 -8 -65" roty="270" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_RIGHT_A" pos="35 -8 55" roty="90" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_8M_TO_HILL_RIGHT_A" pos="65 -8 -35" roty="180" />
     <tile name="MOUNTAIN_GREEN_ROAD_PATH_CORNER_A" pos="50 -8 -50" roty="180" />
     <tile name="MOUNTAIN_GREEN_ROAD_PATH_CORNER_A" pos="0 -20 40" roty="90" />
     <tile name="MOUNTAIN_GREEN_ROAD_PATH_CORNER_B" pos="-40 -20 0" roty="270" />
@@ -299,6 +316,12 @@
     <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_20X20_INNERCORNER_A" pos="-55 -8 -65" />
     <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_20X20_INNERCORNER_B" pos="65 -8 55" roty="180" />
     <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_20X20_INNERCORNER_B" pos="65 -8 -65" roty="270" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_LEFT_A" pos="-55 -8 -35" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_LEFT_A" pos="65 -8 35" roty="180" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_LEFT_A" pos="35 -8 -65" roty="270" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_RIGHT_A" pos="-35 -8 -65" roty="270" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_RIGHT_A" pos="35 -8 55" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HILL_8M_BASE_TO_PLATEAU_8M_RIGHT_A" pos="65 -8 -35" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="-57 -20 3" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="23 -8 38" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="31 -8 -23" roty="180" />
@@ -360,9 +383,6 @@
     <tile name="MOUNTAIN_GREEN_KPR_COCOON_C_NO_COLLISION" pos="-4 -26 -68" roty="270" />
     <tile name="MOUNTAIN_GREEN_KPR_COCOON_C_NO_COLLISION" pos="26 -24 -68" roty="270" />
     <tile name="MOUNTAIN_GREEN_KPR_COCOON_C_NO_COLLISION" pos="-54 -23 -34" />
-    <criticaltile name="MOUNTAIN_GREEN_KPR_ENTRANCE_DUNGEON_BASE_A" pos="-40 -24 40" id="exit_01" type="exit">
-      <exit size="7 7" spawnpos="0 0" faction="Keeper" kind="DungeonStubSolo" roadtype="Primary" />
-    </criticaltile>
     <tile name="MOUNTAIN_GREEN_KPR_FENCE_LARGE_A" pos="71 0 50" roty="90" />
     <tile name="MOUNTAIN_GREEN_KPR_FENCE_LARGE_A" pos="72 0 -42" roty="270" />
     <tile name="MOUNTAIN_GREEN_KPR_FENCE_LARGE_A" pos="52 0 -72" />
@@ -386,7 +406,7 @@
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="-18 -12 -31" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="-23 -8 -25" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="-38 -8 -22" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NO_COLLISION" pos="-66 0 -31" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NOCOL" pos="-66 0 -31" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B" pos="30 0 65" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B" pos="-7 -1 -70" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B" pos="71 0 33" roty="90" />
@@ -501,17 +521,17 @@
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="13 -20 58" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="-68 0 70" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A" pos="26 -12 18" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NO_COLLISION" pos="-66 -12 15" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NO_COLLISION" pos="-67 -16 38" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NOCOL" pos="-66 -12 15" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_A_NOCOL" pos="-67 -16 38" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B" pos="-72 0 -8" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B" pos="15 -20 33" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B_NO_COLLISION" pos="-66 -12 7" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B_NO_COLLISION" pos="-8 -12 66" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NO_COLLISION" pos="-17 -12 66" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NO_COLLISION" pos="-3 -12 68" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NO_COLLISION" pos="8 -8 68" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_A_NO_COLLISION" pos="-15 -20 26" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_A_NO_COLLISION" pos="-24 -20 15" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B_NOCOL" pos="-66 -12 7" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_B_NOCOL" pos="-8 -12 66" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NOCOL" pos="-17 -12 66" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NOCOL" pos="-3 -12 68" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_FLAT_C_NOCOL" pos="8 -8 68" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_A_NOCOL" pos="-15 -20 26" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_A_NOCOL" pos="-24 -20 15" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_B" pos="10 -13 -64" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_GATE_B" pos="65 -12 12" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A" pos="-25 -24 26" roty="270" />
@@ -526,7 +546,7 @@
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A" pos="61 -12 -5" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A" pos="60 -12 -17" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A" pos="15 -20 31" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A_NO_COLLISION" pos="-69 -16 55" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_A_NOCOL" pos="-69 -16 55" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="-18 -22 27" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="-36 -20 -15" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="-27 -24 58" roty="90" />
@@ -536,33 +556,33 @@
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="-65 -4 70" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="62 -12 -7" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B" pos="15 -20 36" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NO_COLLISION" pos="-65 -12 2" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NO_COLLISION" pos="-22 -12 65" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NO_COLLISION" pos="-11 -12 69" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NO_COLLISION" pos="1 -8 69" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_C_NO_COLLISION" pos="-17 -12 69" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NOCOL" pos="-65 -12 2" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NOCOL" pos="-22 -12 65" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NOCOL" pos="-11 -12 69" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_B_NOCOL" pos="1 -8 69" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_C_NOCOL" pos="-17 -12 69" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D" pos="-22 -24 27" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D" pos="-5 -20 23" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D" pos="-70 -4 -5" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D" pos="-70 -5 67" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NO_COLLISION" pos="-67 -12 0" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NO_COLLISION" pos="-64 -17 20" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NO_COLLISION" pos="-20 -12 70" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NO_COLLISION" pos="-70 -12 7" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NO_COLLISION" pos="-60 -16 69" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NO_COLLISION" pos="-70 -16 21" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NO_COLLISION" pos="-66 -8 -7" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NO_COLLISION" pos="-14 -12 70" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_F_NO_COLLISION" pos="-69 -16 40" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_F_NO_COLLISION" pos="-70 -16 1" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-70 -16 62" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-70 -16 20" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-70 -12 13" roty="180" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-68 -12 -2" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-20 -16 67" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-5 -12 70" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="0 -12 69" />
-    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="-40 -16 71" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NOCOL" pos="-67 -12 0" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NOCOL" pos="-64 -17 20" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NOCOL" pos="-20 -12 70" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_D_NOCOL" pos="-70 -12 7" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NOCOL" pos="-60 -16 69" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NOCOL" pos="-70 -16 21" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NOCOL" pos="-66 -8 -7" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_E_NOCOL" pos="-14 -12 70" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_F_NOCOL" pos="-69 -16 40" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_HIGH_F_NOCOL" pos="-70 -16 1" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-70 -16 62" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-70 -16 20" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-70 -12 13" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-68 -12 -2" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-20 -16 67" roty="90" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-5 -12 70" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="0 -12 69" />
+    <tile name="MOUNTAIN_GREEN_FILL_ROCK_ADD_PLATEAU_STRAIGHT_A_NOCOL" pos="-40 -16 71" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_HIGH_B" pos="9 -20 60.5" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_ROCK_HIGH_D" pos="6 -18 61" roty="270" />
     <tile name="MOUNTAIN_GREEN_KPR_ALTAR_MEDIUM_A" pos="28.5 -8 44.5" roty="322" />
@@ -1012,8 +1032,5 @@
     <tile name="MOUNTAIN_GREEN_KPR_ALTAR_LARGE_A" pos="-47.5 -20 -10" roty="0" />
     <tile name="MOUNTAIN_GREEN_KPR_ALTAR_MEDIUM_A" pos="11.5 -20 49.5" />
     <tile name="MOUNTAIN_GREEN_KPR_ALTAR_MEDIUM_A" pos="-51.5 -20 -7.5" roty="180" />
-    <tile name="LevelMarker_Mobcamp_Keeper_15x15_MN" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Keeper_15x15_MN" />
-    </tile>
   </tiles>
 </template>

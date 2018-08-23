@@ -1,12 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Slave/M_ST_MobCamp_Undead_01.unity" unityguid="079f6659acd4fc74fa9885f5682021ba" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-75 -75" colBoundsMax="75 75">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_03">
       <tile name="STEPPE_GREEN_UND_ENTRANCE_DUNGEON_A" pos="0 8 0">
         <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_04">
+      <tile name="STEPPE_GREEN_UND_ENTRANCE_DUNGEON_A" pos="0 8 0">
+        <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_03" name="SoloDungeon">
+        <criticaltile name="STEPPE_GREEN_UND_ENTRANCE_DUNGEON_A" pos="0 8 0" id="exit_01" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Mobcamp_Undead_15x15_ST" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Mobcamp_Undead_15x15_ST" />
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="GroupDungeon">
+        <criticaltile name="STEPPE_GREEN_UND_ENTRANCE_DUNGEON_A" pos="0 8 0" id="exit_02" type="exit">
+          <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Undead_30x30_ST" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Undead_30x30_ST" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Mobs">
       <layer id="Layer_01" name="T4">
         <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="60 0 -30" roty="270">
@@ -479,9 +502,6 @@
         </tile>
       </layer>
     </layergroup>
-    <criticaltile name="STEPPE_GREEN_UND_ENTRANCE_DUNGEON_A" pos="0 8 0" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
-    </criticaltile>
     <tile name="STEPPE_GREEN_GROUND" pos="70 0 -20" />
     <tile name="STEPPE_GREEN_GROUND" pos="30 0 -60" />
     <tile name="STEPPE_GREEN_GROUND" pos="40 0 30" />
@@ -703,13 +723,13 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_FLAT_D" pos="-15 8 -27" roty="270" scale="1.474075 0.5 1.474075" />
     <tile name="STEPPE_GREEN_FILL_ROCK_FLAT_D" pos="23 0 -34" roty="90" scale="1.474075 0.5 1.474075" />
     <tile name="STEPPE_GREEN_FILL_ROCK_FLAT_D" pos="15 8 -27" roty="270" scale="1.474075 0.5 1.474075" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_FORMATION_E_NO_COLLISION" pos="-35 0 -19" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_FORMATION_E_NOCOL" pos="-35 0 -19" />
     <tile name="STEPPE_GREEN_FILL_ROCK_FORMATION_F" pos="34 0 -20" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B" pos="32 -4 22" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B" pos="29 -4 -28" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NO_COLLISION" pos="-31 -4 23" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NO_COLLISION" pos="-18 -3 -33" roty="90" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NO_COLLISION" pos="20 -3 -34" roty="270" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NOCOL" pos="-31 -4 23" roty="180" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NOCOL" pos="-18 -3 -33" roty="90" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_GATE_B_NOCOL" pos="20 -3 -34" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="39 0 -14.5" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="12 4 30.5" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="12.5 4 33" roty="270" />
@@ -727,7 +747,7 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="22.5 0 -32" roty="90" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="12 1 -37.5" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="12.5 0 -40" roty="90" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A_NO_COLLISION" pos="20 4 -31" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A_NOCOL" pos="20 4 -31" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A_PLATEAU" pos="23 0 30.5" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B" pos="33 0 -28.5" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B" pos="13.5 0 37" roty="270" />
@@ -737,11 +757,11 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B" pos="-38 0 -14.5" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B" pos="-31 5 -15.5" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B" pos="10.5 3 -31" roty="90" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B_NO_COLLISION" pos="-30 3 -24" roty="90" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_B_NOCOL" pos="-30 3 -24" roty="90" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_C" pos="-39 0 11" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_C" pos="-18 0 -35" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_C" pos="20 4 -30" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_C_NO_COLLISION" pos="13 2 -35" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_C_NOCOL" pos="13 2 -35" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_D" pos="14 3 32" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_D" pos="17 3 31" roty="90" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_D" pos="-14 0 36" roty="90" />
@@ -751,8 +771,8 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_E" pos="-32 0 -21" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_E" pos="-15 0 -36" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_E" pos="14 1 -30" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_F_NO_COLLISION" pos="-36 0 13" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_F_NO_COLLISION" pos="-35 -2 18" roty="270" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_F_NOCOL" pos="-36 0 13" roty="180" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_F_NOCOL" pos="-35 -2 18" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_MEDIUM_A" pos="30 5 12" />
     <tile name="STEPPE_GREEN_FILL_ROCK_MEDIUM_A" pos="30 6 20" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_MEDIUM_A" pos="42 0 -18" roty="270" />
@@ -773,7 +793,7 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_CORNER_A" pos="-35 0 19.5" roty="270" />
     <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_CORNER_A" pos="14.5 0 -37" roty="180" />
     <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="29 2 -20.5" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="16 1 -34" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NOCOL" pos="16 1 -34" />
     <tile name="STEPPE_GREEN_FILL_ROCK_SMALL_B" pos="-42 0 -30.5" roty="121.6" scale="1 0.5 1" />
     <tile name="STEPPE_GREEN_UND_IRON_FENCE_SMALL_A" pos="-43 0 14.5" roty="90" />
     <tile name="STEPPE_GREEN_UND_IRON_FENCE_SMALL_A" pos="-44 0 -14.5" roty="270" />
@@ -961,8 +981,8 @@
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="35 0 21.5" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_A" pos="31.5 4 13" roty="90" />
     <tile name="STEPPE_GREEN_FILL_ROCK_HIGH_E" pos="36 0 14" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="34 0 18" roty="270" />
-    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NO_COLLISION" pos="16 0 34" roty="180" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NOCOL" pos="34 0 18" roty="270" />
+    <tile name="STEPPE_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A_NOCOL" pos="16 0 34" roty="180" />
     <tile name="STEPPE_GREEN_UND_CITY_LIGHT_LANTERN_A" pos="3.5 8 16.5" roty="90" />
     <tile name="STEPPE_GREEN_UND_CITY_LIGHT_LANTERN_A" pos="-3.5 8 -16.5" roty="270" />
     <tile name="STEPPE_GREEN_UND_CITY_LIGHT_LANTERN_B" pos="-3.5 0 53.5" roty="270" />
@@ -1243,8 +1263,5 @@
     <tile name="STEPPE_GREEN_FILL_HILL_BASE_D" pos="-62 0 -63" />
     <tile name="STEPPE_GREEN_FILL_RUIN_DEBRIS_B" pos="-63 0 -63" />
     <tile name="STEPPE_GREEN_FILL_RUIN_DEBRIS_B" pos="-61 0 -62" roty="270" />
-    <tile name="LevelMarker_Mobcamp_Undead_15x15_ST" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Undead_15x15_ST" />
-    </tile>
   </tiles>
 </template>

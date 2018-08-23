@@ -1,12 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/M_SW_MobCamp_Morgana_01.unity" unityguid="ff54da1ba89e7f349b5765b79c1bda0e" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-76 -75" colBoundsMax="75 75">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_03">
+      <tile name="SWAMP_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 16 40">
+        <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_04">
       <tile name="SWAMP_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 16 40">
         <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_03" name="GroupDungeon">
+        <criticaltile name="SWAMP_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 16 40" id="exit_02" type="exit">
+          <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_SW" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_SW" />
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="SoloDungeon">
+        <criticaltile name="SWAMP_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 16 40" id="exit_01" type="exit">
+          <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Mobcamp_Morgana_15x15_SW" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Mobcamp_Morgana_15x15_SW" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Mobs">
       <layer id="Layer_01" name="T6">
         <tile name="SpawnPoint_T6_MOB_MORGANA_BLOODHOUND" pos="40 0 40" roty="270" />
@@ -628,9 +651,6 @@
     <tile name="SWAMP_RED_GROUND" pos="20 8 0" roty="270" />
     <tile name="SWAMP_RED_GROUND" pos="10 8 -10" roty="90" />
     <tile name="SWAMP_RED_GROUND" pos="10 8 0" roty="180" />
-    <criticaltile name="SWAMP_RED_MOR_ENTRANCE_DUNGEON_A" pos="0 16 40" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -11" faction="Morgana" kind="DungeonStubSolo" roadtype="Primary" />
-    </criticaltile>
     <tile name="SWAMP_RED_MOR_STOCKADE_GATE_OPENED" pos="0 0 -66.5" roty="90" />
     <tile name="SWAMP_RED_MOR_STOCKADE_GATE_OPENED" pos="67.5 0 -10" />
     <tile name="SWAMP_RED_MOR_STOCKADE_GATE_OPENED" pos="-67.5 0 -10" roty="180" />
@@ -707,104 +727,104 @@
     <tile name="SWAMP_RED_MOR_WATCH_TOWER_A" pos="-44 0 47" />
     <tile name="SWAMP_RED_MOR_TENT_B" pos="15 0 -61" roty="180" />
     <tile name="SWAMP_RED_MOR_STOCKADE_CORNER_END" pos="65 0 47" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="28 -44 22" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="28.5 -44 30.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="28 -44 22" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="28.5 -44 30.5" roty="90" />
     <tile name="SWAMP_RED_MOR_WATCH_TOWER_A" pos="-65 0 -3" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="28.5 -44 41.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="28.5 -44 41.5" />
     <tile name="SWAMP_RED_MOR_STOCKADE_CORNER_END" pos="65 0 -64" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="27.5 -44 52.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="27.5 -44 56.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-16.5 -44 67.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-24.5 -45 59.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-26.5 -46 58.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-26.5 -42 46.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-25.5 -42 17.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="27.5 -44 52.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="27.5 -44 56.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-16.5 -44 67.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-24.5 -45 59.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-26.5 -46 58.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-26.5 -42 46.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-25.5 -42 17.5" roty="270" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G" pos="28 -26 25" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G" pos="28 -26 55" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="23.5 -22 56.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="17.5 -24 62.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="23.5 -22 56.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="17.5 -24 62.5" />
     <tile name="SWAMP_RED_MOR_STOCKADE_STRAIGHT_B" pos="67.5 0 20" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="17.5 -25 65.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="8.5 -25 67.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="-4.5 -23 67.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="-9.5 -25 67.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="-27.5 -24 52.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NO_COLLISION" pos="-27.5 -27 44.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="17.5 -25 65.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="8.5 -25 67.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="-4.5 -23 67.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="-9.5 -25 67.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="-27.5 -24 52.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G_NOCOL" pos="-27.5 -27 44.5" roty="180" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -32 16" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -32 28" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -32 34" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -33 39" roty="270" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -32 46" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I" pos="28 -33 49" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="25.5 -29 16.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="19.5 -33 64.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="19.5 -34 65.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="14.5 -32 66.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="12.5 -32 66.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-6.5 -32 67.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-12.5 -31 66.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-18.5 -31 63.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-26.5 -32 55.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-27.5 -32 50.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-26.5 -31 47.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-27.5 -32 35.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-27.5 -32 27.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-26.5 -31 20.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="25.5 8 19.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="25.5 8 32.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="25.5 -29 16.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="19.5 -33 64.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="19.5 -34 65.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="14.5 -32 66.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="12.5 -32 66.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-6.5 -32 67.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-12.5 -31 66.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-18.5 -31 63.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-26.5 -32 55.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-27.5 -32 50.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-26.5 -31 47.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-27.5 -32 35.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-27.5 -32 27.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-26.5 -31 20.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="25.5 8 19.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="25.5 8 32.5" roty="90" />
     <tile name="SWAMP_RED_MOR_TENT_A" pos="62 0 5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="24.5 8 37.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="24.5 8 37.5" roty="180" />
     <tile name="SWAMP_RED_MOR_TENT_A" pos="-15 0 -62" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="24.5 8 44.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="25.5 8 46.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="16.5 8 63.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="13.5 8 64.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="3.5 8 64.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-5.5 8 65.5" roty="315" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-9.5 8 64.5" roty="45" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-18.5 8 61.5" roty="315" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-23.5 8 56.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 53.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 43.5" roty="225" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 40.5" roty="315" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="24.5 8 44.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="25.5 8 46.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="16.5 8 63.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="13.5 8 64.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="3.5 8 64.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-5.5 8 65.5" roty="315" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-9.5 8 64.5" roty="45" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-18.5 8 61.5" roty="315" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-23.5 8 56.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 53.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 43.5" roty="225" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 40.5" roty="315" />
     <tile name="SWAMP_RED_MOR_TENT_C" pos="57 0 -61" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 28.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-25.5 8 33.5" roty="225" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 26.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="-24.5 8 20.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NO_COLLISION" pos="23.5 4 62.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="28.5 0 50.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-27.5 1 33.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-27.5 0 29.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-28.5 0 24.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-26.5 3 18.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-28.5 2 18.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 28.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-25.5 8 33.5" roty="225" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 26.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="-24.5 8 20.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_B_NOCOL" pos="23.5 4 62.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="28.5 0 50.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-27.5 1 33.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-27.5 0 29.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-28.5 0 24.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-26.5 3 18.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-28.5 2 18.5" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C" pos="24 4 59" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="24.5 7 23.5" roty="45" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="24.5 7 39.5" roty="45" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="24.5 7 53.5" roty="45" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="20.5 7 58.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="6.5 7 64.5" roty="315" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-2.5 7 64.5" roty="225" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-12.5 7 63.5" roty="225" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-15.5 7 62.5" roty="270" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-24.5 7 37.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-25.5 7 23.5" roty="45" scale="1.474075 1 1.474075" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="21.5 4 62.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NO_COLLISION" pos="-21.5 4 60.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="24.5 8 26.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="26.5 8 29.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="25.5 8 42.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="24.5 8 49.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="18.5 8 61.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="10.5 8 64.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-0.5 8 65.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-7.5 8 65.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-21.5 8 59.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-21.5 8 58.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-24.5 8 50.5" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-26.5 8 48.5" roty="270" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-25.5 8 30.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="24.5 7 23.5" roty="45" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="24.5 7 39.5" roty="45" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="24.5 7 53.5" roty="45" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="20.5 7 58.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="6.5 7 64.5" roty="315" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-2.5 7 64.5" roty="225" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-12.5 7 63.5" roty="225" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-15.5 7 62.5" roty="270" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-24.5 7 37.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-25.5 7 23.5" roty="45" scale="1.474075 1 1.474075" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="21.5 4 62.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C_NOCOL" pos="-21.5 4 60.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="24.5 8 26.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="26.5 8 29.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="25.5 8 42.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="24.5 8 49.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="18.5 8 61.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="10.5 8 64.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-0.5 8 65.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-7.5 8 65.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-21.5 8 59.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-21.5 8 58.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-24.5 8 50.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-26.5 8 48.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-25.5 8 30.5" roty="180" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="29 0 18.5" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="31 0 28.5" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="29 0 36.5" roty="90" />
@@ -845,12 +865,12 @@
     <tile name="SWAMP_RED_MOR_CASTLE_RAILING_STRAIGHT_B" pos="-20 16 40" roty="180" />
     <tile name="SWAMP_RED_MOR_CASTLE_RAILING_STRAIGHT_B" pos="-20 16 20" roty="180" />
     <tile name="SWAMP_RED_MOR_CASTLE_RAILING_STRAIGHT_B" pos="-10 16 10" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="26.5 -44 12.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="26.5 -44 12.5" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="29 0 11.5" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G" pos="29 -27 20" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NO_COLLISION" pos="-24.5 -42 13.5" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-25.5 2 13.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NO_COLLISION" pos="-27.5 -31 13.5" roty="270" />
+    <tile name="SWAMP_RED_FILL_ROCK_LARGE_C_NOCOL" pos="-24.5 -42 13.5" roty="180" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-25.5 2 13.5" roty="90" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_I_NOCOL" pos="-27.5 -31 13.5" roty="270" />
     <tile name="SWAMP_RED_FILL_FIGHTING_DUMMY_A" pos="-45.5 0 -63.5" roty="225" />
     <tile name="SWAMP_RED_FILL_FIGHTING_DUMMY_A" pos="-23.5 0 -63.5" roty="135" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_G" pos="21 -22 8" />
@@ -866,7 +886,7 @@
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_D_L_FORM" pos="-71 0 -43" roty="90" />
     <tile name="SWAMP_RED_FILL_ROCK_SMALL_D" pos="-25.5 4 10.5" roty="270" />
     <tile name="SWAMP_RED_FILL_ROCK_SMALL_D" pos="35.5 0 -70.5" roty="90" />
-    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NO_COLLISION" pos="-16.5 3 7.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_SMALL_D_NOCOL" pos="-16.5 3 7.5" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C" pos="24 8 11" roty="90" scale="1.474076 1 1.474076" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C" pos="-22 8 9" roty="180" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_C" pos="-19 0 68" roty="270" scale="1.474076 1 1.474076" />
@@ -876,7 +896,7 @@
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A" pos="17 8 5" roty="180" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A" pos="70 0 18" roty="180" />
     <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A" pos="-73 0 -42" roty="180" />
-    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NO_COLLISION" pos="-25.5 4 60.5" />
+    <tile name="SWAMP_RED_FILL_ROCK_MEDIUM_A_NOCOL" pos="-25.5 4 60.5" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="-29 0 10.5" roty="270" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="14.5 0 70" />
     <tile name="SWAMP_RED_FILL_ROCK_GATE_A" pos="37 0 -69.5" roty="90" />
@@ -1203,8 +1223,5 @@
     <tile name="SWAMP_RED_FILL_STORAGE_CRATE_SMALL_A" pos="-34.5 0 25.5" roty="342.03" />
     <tile name="SWAMP_RED_FILL_STORAGE_CRATE_SMALL_A" pos="34.5 0 15.5" roty="33" />
     <tile name="SWAMP_RED_FILL_STORAGE_CRATE_SMALL_A" pos="33.5 0 24.5" roty="352" />
-    <tile name="LevelMarker_Mobcamp_Undead_15x15_SW" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Undead_15x15_SW" />
-    </tile>
   </tiles>
 </template>

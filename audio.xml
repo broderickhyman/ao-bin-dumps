@@ -31,22 +31,6 @@
     <Gender name="female"/>
     <Size name="medium"/>
   </WwiseSwitchInfo>
-
-  <!--*************************************************************************************************************************************************************-->
-  <!--NPC-->
-  <!--*************************************************************************************************************************************************************-->
-
-  <WwiseSwitchInfo name="AGENT_STANDARD_MALE">
-    <CharType name="human"/>
-    <Gender name="male"/>
-    <Size name="medium"/>
-  </WwiseSwitchInfo>
-
-  <WwiseSwitchInfo name="EXPEDITION_AGENT_STANDARD_MALE">
-    <CharType name="human"/>
-    <Gender name="male"/>
-    <Size name="medium"/>
-  </WwiseSwitchInfo>
   
   <!--*************************************************************************************************************************************************************-->
   <!--MOUNTS-->
@@ -63,10 +47,6 @@
   <WwiseSwitchInfo name="MOUNT_HORSE_ARMORED">
     <CharType name="mount"/>
     <MountType name="horse_armored"/>
-  </WwiseSwitchInfo>
-  <WwiseSwitchInfo name="MOUNT_DONKEY">
-    <CharType name="mount"/>
-    <MountType name="donkey"/>    
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_OX">
     <CharType name="mount"/>
@@ -128,6 +108,34 @@
     <CharType name="mount"/>
     <MountType name="bat"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_TOAD">
+    <CharType name="mount"/>
+    <MountType name="toad"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_HOUND">
+    <CharType name="mount"/>
+    <MountType name="hound"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_TIGER">
+    <CharType name="mount"/>
+    <MountType name="tiger"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_MULE">
+    <CharType name="mount"/>
+    <MountType name="mule"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_RHINO">
+    <CharType name="mount"/>
+    <MountType name="rhino"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_WARFARE_RAM">
+    <CharType name="mount"/>
+    <MountType name="warfare_ram"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_WOLF_SPECTER">
+    <CharType name="mount"/>
+    <MountType name="wolf_specter"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -136,6 +144,52 @@
     <CharType name="mob"/>  
     <Size name="medium"/>  
     <ArmorType name="plate"/>
+  </WwiseSwitchInfo>
+  <!--CITY WARFARE-->
+  <!--Highland-->
+  <WwiseSwitchInfo name="MOB_CITY_HIGHLAND_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="territory"/>
+    <MobType name="commander_highland"/>
+    <Size name="big"/>
+    <ArmorType name="leather"/>
+    <WeaponType name="axe_swoosh_big"/>
+  </WwiseSwitchInfo>
+  <!--Forest-->
+  <WwiseSwitchInfo name="MOB_CITY_FOREST_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="territory"/>
+    <MobType name="commander_forest"/>
+    <Size name="medium"/>
+    <ArmorType name="leather"/>
+    <WeaponType name="arrow_swoosh_mob"/>
+  </WwiseSwitchInfo>
+  <!--Mountain-->
+  <WwiseSwitchInfo name="MOB_CITY_MOUNTAIN_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="territory"/>
+    <MobType name="commander_mountain"/>
+    <Size name="big"/>
+    <ArmorType name="plate"/>
+    <WeaponType name="swoosh_medium"/>
+  </WwiseSwitchInfo>
+  <!--Steppe-->
+  <WwiseSwitchInfo name="MOB_CITY_STEPPE_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="territory"/>
+    <MobType name="commander_steppe"/>
+    <Size name="medium"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="swoosh_medium"/>
+  </WwiseSwitchInfo>
+  <!--Swamp-->
+  <WwiseSwitchInfo name="MOB_CITY_SWAMP_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="territory"/>
+    <MobType name="commander_swamp"/>
+    <Size name="big"/>
+    <ArmorType name="cloth"/>
+    <WeaponType name="fire"/>
   </WwiseSwitchInfo>
   <!--CHESTS-->
   <WwiseSwitchInfo name="MOB_CHEST_STONE">
@@ -678,8 +732,8 @@
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MORGANA_BLOODHOUND">
     <CharType name="mob"/>
-    <MobFaction name="hide"/>
-    <MobType name="hide_direwolf"/>
+    <MobFaction name="morgana"/>
+    <MobType name="morgana_bloodhound"/>
     <Size name="medium"/>
     <ArmorType name="hide"/>
     <WeaponType name="bite_medium"/>
@@ -805,6 +859,22 @@
     <ArmorType name="bone_plate"/>
     <WeaponType name="sword_big"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_KNIGHT">
+    <CharType name="mob"/>
+    <MobFaction name="undead"/>
+    <MobType name="undead_knight"/>
+    <Size name="plate_medium"/>
+    <ArmorType name="plate"/>
+    <WeaponType name="sword_big"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_MAGE_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="undead"/>
+    <MobType name="undead_mage_boss"/>
+    <Size name="bone"/>
+    <ArmorType name="bone"/>
+    <WeaponType name="frost"/>
+  </WwiseSwitchInfo>  
 
   <!--DEMON-->
   <WwiseSwitchInfo name="MOB_DEMON_IMP">
@@ -1110,6 +1180,10 @@
   <WwiseSwitchInfo name="ITEM_STAFF_NATURE">
     <WeaponType name="nature"/>
   </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="ITEM_PORTAL_GUN">
+    <WeaponType name="portal_gun"/>
+  </WwiseSwitchInfo>
   
   <!--*************************************************************************************************************************************************************-->
   <!-- TOOLS -->
@@ -1324,16 +1398,22 @@
     <OnChannelingStart name="Play_melee_disembowel_loop" />
     <OnChannelingEnd name="Stop_melee_disembowel_loop" />
     <OnChannelingInterrupted name="Stop_melee_disembowel_loop" />
+    <OnChannelingCancelled name="Stop_melee_disembowel_loop" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_FORESTOFSPEARS">
     <OnChannelingStart name="Play_melee_forest_of_spears_loop" />
     <OnChannelingEnd name="Stop_melee_forest_of_spears_loop" />
     <OnChannelingInterrupted name="Stop_melee_forest_of_spears_loop" />
+    <OnChannelingCancelled name="Stop_melee_forest_of_spears_loop" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SPEARLUNGE">
+    <OnSpellHit name="Play_spear_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWIRL">
     <OnChannelingStart name="Play_melee_swirl_loop" />
     <OnChannelingEnd name="Stop_melee_swirl_loop" />
     <OnChannelingInterrupted name="Stop_melee_swirl_loop" />
+    <OnChannelingCancelled name="Stop_melee_swirl_loop" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CARTWHEEL">
@@ -1490,6 +1570,9 @@
   <WwiseEventInfo name="SPELL_LIGHTNING_CAST_BIG">
     <OnCastFinished name="Play_lightning_cast_big" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_LIGHTNING_CHAIN">
+    <OnCastFinished name="Play_lightningbolt_chain" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_NATURE_CAST_MEDIUM">
     <OnCastFinished name="Play_nature_cast_medium" />
@@ -1541,11 +1624,17 @@
     <OnChannelingStart name="Play_undead_invisiblility" />
     <OnChannelingEnd name="Play_undead_invisibility_end" />
     <OnChannelingInterrupted name="Play_undead_invisibility_end" />
+    <OnChannelingCancelled name="Play_undead_invisibility_end" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FEAR_HIT">
     <OnCastFinished name="Play_fear_impact" />
   </WwiseEventInfo>
-
+    <WwiseEventInfo name="SPELL_THROW_FISH" >
+    <OnCastFinished name="Play_throw_rotten_fish" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FISH_IMPACT" >
+    <OnCastFinished name="Play_rotten_fish_impact" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_GIANT" >
     <OnCastFinished name="Play_enlarge" />
@@ -1593,8 +1682,17 @@
     <OnCastFinished name="Play_dragon_spit" />    
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_MOUNT_DRAGON_SPIT_POISON" >
+    <OnCastStart name="Play_dragon_cast_poison" />
+    <OnCastFinished name="Play_dragon_spit" />      
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_POISON_IMPACT" >
     <OnCastFinished name="Play_poison_impact" />    
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TOADJUMP" >
+    <OnCastStart name="Play_mount_toad_jump" />
   </WwiseEventInfo>
 
 
@@ -1844,10 +1942,83 @@
   <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BOSS_HURL">
     <OnCastStart name="Play_undead_ghoul_boss_hurl" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_SUMMON">
+    <OnCastStart name="Play_undead_mageboss_summon" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_FREEZE">
+    <OnCastStart name="Play_undead_mageboss_freeze" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_AOE">
+    <OnCastStart name="Play_undead_mageboss_aoe_frost" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_KNIGHT_SPLITTINGSTRIKE">
+    <OnCastStart name="Play_undead_knight_splittingstrike" />
+  </WwiseEventInfo>
+
+    <!-- City Faction Commander-->
+
+  <WwiseEventInfo name="SPELL_CITY_HIGHLAND_ROCKSLIDE">
+    <OnCastStart name="Play_highland_commander_rockslide_cast" />
+    <OnCastFinished name="Play_highland_commander_rockslide" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_HIGHLAND_WHIRLWIND_VO">
+    <OnCastStart name="Play_highland_commander_whirlwind_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_HIGHLAND_ENRAGE">
+    <OnCastStart name="Play_highland_commander_enrage" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_HIGHLAND_GROUNDBREAKER">
+    <OnCastStart name="Play_highand_commander_strike_vo" />
+    <OnSpellHit name="Play_melee_impact_rock_big" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_FOREST_WHISTLE">
+    <OnCastStart name="Play_forest_commander_whistle" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_FOREST_BOARIS_DIE">
+    <OnCastFinished name="Play_forest_commander_boaris_die" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_FOREST_WINDWALL_CAST">
+    <OnCastStart name="Play_forest_commander_tornado_cast_start" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_CITY_FOREST_MULITSHOT_CAST">
+    <OnCastStart name="Play_forest_commander_cone_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_STEPPE_DISENGAGE_CAST">
+    <OnCastStart name="Play_commander_steppe_disengage_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_SWAMP_METEOR_CAST">
+    <OnCastStart name="Play_swamp_commander_meteor_cast_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_SWAMP_FIREWALL_CAST">
+    <OnCastStart name="Play_swamp_commander_cast_firewall" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_CITY_SWAMP_FIREBOLT_CAST">
+    <OnCastStart name="Play_swamp_commander_standard_firespell" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_CITY_SWAMP_FIREBALLS_CAST">
+    <OnCastStart name="Play_swamp_commander_cast_fireball_vo" />
+    <OnCastFinished name="Play_fire_cast_medium" />
+  </WwiseEventInfo>
+  
+  
+  <!-- Mount Speed -->
 
   <WwiseEventInfo name="SPELL_MOUNT_SPEED">
     <OnSpellHit name="Play_mount_speed_increase" />
   </WwiseEventInfo>
+
 
   <!-- WwiseSpellEventDefaults: Define Default events for spells depending on uitype set in activespell info-->
   <!-- SPELL TEMPLATE-->
@@ -2386,10 +2557,20 @@
     <OnPlaced name="Play_ui_open_chicken"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_CHICKEN_BABY">
+    <OnOpened name="Play_ui_open_chicken_baby"/>
+    <OnPlaced name="Play_ui_open_chicken_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_GOOSE">
     <!--<OnViewInitialized name="env_animal_fx_farming_geese" />-->
-  <OnOpened name="Play_ui_open_goose"/>
-  <OnPlaced name="Play_ui_open_goose"/>
+    <OnOpened name="Play_ui_open_goose"/>
+    <OnPlaced name="Play_ui_open_goose"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_GOOSE_BABY">
+    <OnOpened name="Play_ui_open_goose_baby"/>
+    <OnPlaced name="Play_ui_open_goose_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_COW">
@@ -2398,10 +2579,20 @@
     <OnPlaced name="Play_ui_open_cow"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_COW_BABY">
+    <OnOpened name="Play_ui_open_cow_baby"/>
+    <OnPlaced name="Play_ui_open_cow_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_GOAT">
     <!--<OnViewInitialized name="env_animal_goat_idle_01" />-->
     <OnOpened name="Play_ui_open_goat"/>
     <OnPlaced name="Play_ui_open_goat"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_GOAT_BABY">
+    <OnOpened name="Play_ui_open_goat_baby"/>
+    <OnPlaced name="Play_ui_open_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_SHEEP">
@@ -2410,10 +2601,20 @@
     <OnPlaced name="Play_ui_open_sheep"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_SHEEP_BABY">
+    <OnOpened name="Play_ui_open_sheep_baby"/>
+    <OnPlaced name="Play_ui_open_sheep_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_PIG">
     <!-- <OnViewInitialized name="env_animal_pig_idle_01" /> -->
     <OnOpened name="Play_ui_open_pig"/>
     <OnPlaced name="Play_ui_open_pig"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_PIG_BABY">
+    <OnOpened name="Play_ui_open_pig_baby"/>
+    <OnPlaced name="Play_ui_open_pig_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_PLANTS">
@@ -2426,9 +2627,19 @@
     <OnPlaced name="Play_ui_open_ox"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_OX_BABY">
+    <OnOpened name="Play_ui_open_ox_baby"/>
+    <OnPlaced name="Play_ui_open_ox_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_HORSE">
     <OnOpened name="Play_ui_open_horse"/>
     <OnPlaced name="Play_ui_open_horse"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_HORSE_BABY">
+    <OnOpened name="Play_ui_open_horse_baby"/>
+    <OnPlaced name="Play_ui_open_horse_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_DIREWOLF">
@@ -2436,9 +2647,19 @@
     <OnPlaced name="Play_ui_open_direwolf"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_DIREWOLF_BABY">
+    <OnOpened name="Play_ui_open_direwolf_baby"/>
+    <OnPlaced name="Play_ui_open_direwolf_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_DIREBOAR">
     <OnOpened name="Play_ui_open_direboar"/>
     <OnPlaced name="Play_ui_open_direboar"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_DIREBOAR_BABY">
+    <OnOpened name="Play_ui_open_direboar_baby"/>
+    <OnPlaced name="Play_ui_open_direboar_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_DIREBEAR">
@@ -2446,9 +2667,29 @@
     <OnPlaced name="Play_ui_open_direbear"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_DIREBEAR_BABY">
+    <OnOpened name="Play_ui_open_direbear_baby"/>
+    <OnPlaced name="Play_ui_open_direbear_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_DRAGON">
     <OnOpened name="Play_ui_open_dragon"/>
     <OnPlaced name="Play_ui_open_dragon"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_DRAGON_BABY">
+    <OnOpened name="Play_ui_open_dragon_baby"/>
+    <OnPlaced name="Play_ui_open_dragon_baby"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_GIANTSTAG">
+    <OnOpened name="Play_ui_open_stag"/>
+    <OnPlaced name="Play_ui_open_stag"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_GIANTSTAG_BABY">
+    <OnOpened name="Play_ui_open_stag_baby"/>
+    <OnPlaced name="Play_ui_open_stag_baby"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="FARMABLE_MAMMOTH">
@@ -2456,10 +2697,195 @@
     <OnPlaced name="Play_ui_open_mammoth"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="FARMABLE_MAMMOTH_BABY">
+    <OnOpened name="Play_ui_open_mammoth_baby"/>
+    <OnPlaced name="Play_ui_open_mammoth_baby"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="FARMABLE_COUGAR">
     <OnOpened name="Play_ui_open_cougar"/>
     <OnPlaced name="Play_ui_open_cougar"/>
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_COUGAR_BABY">
+    <OnOpened name="Play_ui_open_cougar_baby"/>
+    <OnPlaced name="Play_ui_open_cougar_baby"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_MOABIRD">
+    <OnOpened name="Play_ui_open_moa"/>
+    <OnPlaced name="Play_ui_open_moa"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="FARMABLE_MOABIRD_BABY">
+    <OnOpened name="Play_ui_open_moa_baby"/>
+    <OnPlaced name="Play_ui_open_moa_baby"/>
+  </WwiseEventInfo>
+
+
+  <!--*************************************************************************************************************************************************************-->
+  <!--NPC-->
+  <!--*************************************************************************************************************************************************************-->
+  
+  <WwiseSwitchInfo name="NPC_ALCHEMIST">
+    <NpcType name="alchemist"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ARTIFACT_FOUNDRY">
+    <NpcType name="artifact_foundry"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_BLACKMARKET">
+    <NpcType name="blackmarket"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_BUTCHER">
+    <NpcType name="butcher"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CARPENTER">
+    <NpcType name="carpenter"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_COOK">
+    <NpcType name="cook"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ENERGY_MANIPULATOR">
+    <NpcType name="energy_manipulator"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_EXPEDITION_MASTER">
+    <NpcType name="expedition_master"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_FARMING_MERCHANT">
+    <NpcType name="farming_merchant"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_FORGE">
+    <NpcType name="forge"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_HUNTERSLODGE">
+    <NpcType name="hunterslodge"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ISLAND_MERCHANT">
+    <NpcType name="island_merchant"/>
+  </WwiseSwitchInfo>
+  
+  <WwiseSwitchInfo name="NPC_LABORER_FEMALE">
+    <NpcType name="laborer_female"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_LABORER_MALE">
+    <NpcType name="laborer_male"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_MAGE_TOWER">
+    <NpcType name="mage_tower"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_MARKETPLACE">
+    <NpcType name="marketplace"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_MILL">
+    <NpcType name="mill"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_REPAIRSHOP">
+    <NpcType name="repairshop"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ROYAL_COMMANDER">
+    <NpcType name="royal_commander"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ROYAL_CRAFTER">
+    <NpcType name="royal_crafter"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_ROYAL_SOLDIER">
+    <NpcType name="royal_soldier"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_SADDLER">
+    <NpcType name="saddler"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_SIEGE_CAMP">
+    <NpcType name="siege_camp"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_SMELTER">
+    <NpcType name="smelter"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_STONEMASONRY">
+    <NpcType name="stone_masonry"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TANNERY">
+    <NpcType name="tannery"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TERRITORY_MANAGER">
+    <NpcType name="territory_manager"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TOOLMAKER">
+    <NpcType name="toolmaker"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TOWNHALL">
+    <NpcType name="townhall"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TRAVEL_PLANNER_LAND">
+    <NpcType name="travel_planner_land"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_TRAVEL_PLANNER_SEA">
+    <NpcType name="travel_planner_sea"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_VANITY_MERCHANT">
+    <NpcType name="vanity_merchant"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_WEAVINGMILL">
+    <NpcType name="weavingmill"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_WORKBENCH">
+    <NpcType name="workbench"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_STEPPE">
+    <NpcType name="commander_steppe"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_FOREST">
+    <NpcType name="commander_forest"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_MOUNTAIN">
+    <NpcType name="commander_mountain"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_HIGHLAND">
+    <NpcType name="commander_highland"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_SWAMP">
+    <NpcType name="commander_swamp"/>
+  </WwiseSwitchInfo>
+  <!--
+    Arena_guard switch is defined in code in ArenaAgentObjectView.cs
+    Expedition_agent switch is defined in code in ExpeditionNarratorObjectView.cs  
+  -->
 
   <!--*************************************************************************************************************************************************************-->
   <!--CLUSTER EFFECTS -->
@@ -2494,7 +2920,35 @@
     <MobFaction name="Morgana"/>
     <Music name="Dungeon"/>
   </WwiseClusterStateOverwrite>
-    
+
+  <!--Arena Custom Matches-->
+  <WwiseClusterStateOverwrite clustername="ARENA-Resources_ARE_FR_T7_NON">
+    <Environment name="World"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="Arena"/>
+    <GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ARENA-HomeTerritory_ARE_HL_T7_NON_ROY">
+    <Environment name="World"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="Arena"/>
+    <GlobalEnvironmentEffect name="highlands"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ARENA-FarmLand_ARE_HL_T7_NON_ROY">
+    <Environment name="World"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="Arena"/>
+    <GlobalEnvironmentEffect name="highlands"/>
+  </WwiseClusterStateOverwrite>
+  
   <!--***********************************************************-->
   <!--*************    Audio for Vanity Items     ***************-->
   <!--***********************************************************-->
@@ -2513,6 +2967,17 @@
 
   <WwiseEventInfo name="SPELL_VANITY_SUMMONING">
     <OnCastStart name="Play_easter_cast_mob"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_SUMMONING_PORTAL">
+    <OnProjectileHit name="Play_portal_gun_portal_spawn"/>
+    <!--
+    <OnCastFinished name="Play_portal_gun_portal_spawn"/>
+    -->
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_SUMMONING_PORTAL_MOB">
+    <OnCastStart name="Play_portal_gun_mob_spawn"/>
   </WwiseEventInfo>
 
 </AudioInfos>

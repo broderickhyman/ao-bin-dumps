@@ -30,7 +30,7 @@
  
   <season uniquename="SEASON_5M" displayname="@SEASONS_SEASONNAME_SEASON_5M" startdatetime="2019-01-01T11:00:00Z" enddatetime="2019-01-01T11:05:00Z">
     <rewards>
-      <token type="GVGTOKEN_GENERIC" pointspertoken="1" />
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
     </rewards>
     <bracketsettings>
       <bracket level="crystal" pointsthreshold="10000"/>
@@ -74,13 +74,13 @@
 
 <!--  <season uniquename="GVG_SEASON_TEST_01" displayname="@SEASONS_SEASONNAME_SEASON_TEST_01" startdatetime="2017-11-29T14:00:00Z" enddatetime="2017-12-04T09:59:00Z">
     <rewards>
-      <token type="GVGTOKEN_GENERIC" pointspertoken="1" />
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
     </rewards>
     <bracketsettings>
-      <bracket level="crystal" pointsthreshold="150000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="15000" />
-      <bracket level="gold" pointsthreshold="50000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="5000"/>
-      <bracket level="silver" pointsthreshold="10000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="1000"/>
-      <bracket level="bronze" pointsthreshold="200" tokentype1="GVGTOKEN_GENERIC" tokenamount1="20"/>
+      <bracket level="crystal" pointsthreshold="150000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="50000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="10000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="200" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
       <bracket level="iron" pointsthreshold="1"/>
     </bracketsettings>
     <invadersettings>
@@ -166,13 +166,13 @@
     
   <season uniquename="GVG_SEASON_01" displayname="@SEASONS_SEASONNAME_SEASON_01" startdatetime="2017-12-09T11:00:00Z" enddatetime="2018-03-03T10:59:00Z">
     <rewards>
-      <token type="GVGTOKEN_GENERIC" pointspertoken="1" />
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
     </rewards>
     <bracketsettings>
-      <bracket level="crystal" pointsthreshold="150000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="15000" />
-      <bracket level="gold" pointsthreshold="50000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="5000"/>
-      <bracket level="silver" pointsthreshold="10000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="1000"/>
-      <bracket level="bronze" pointsthreshold="200" tokentype1="GVGTOKEN_GENERIC" tokenamount1="20"/>
+      <bracket level="crystal" pointsthreshold="150000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="50000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="10000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="200" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
       <bracket level="iron" pointsthreshold="1"/>
     </bracketsettings>
     <invadersettings>
@@ -358,13 +358,13 @@
   </season>
   <season uniquename="GVG_SEASON_02" displayname="@SEASONS_SEASONNAME_SEASON_02" startdatetime="2018-03-17T11:00:00Z" enddatetime="2018-06-09T10:59:00Z">
     <rewards>
-      <token type="GVGTOKEN_GENERIC" pointspertoken="1" />
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
     </rewards>
     <bracketsettings>
-      <bracket level="crystal" pointsthreshold="150000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="15000" />
-      <bracket level="gold" pointsthreshold="50000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="5000"/>
-      <bracket level="silver" pointsthreshold="10000" tokentype1="GVGTOKEN_GENERIC" tokenamount1="1000"/>
-      <bracket level="bronze" pointsthreshold="200" tokentype1="GVGTOKEN_GENERIC" tokenamount1="20"/>
+      <bracket level="crystal" pointsthreshold="150000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="50000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="10000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="200" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
       <bracket level="iron" pointsthreshold="1"/>
     </bracketsettings>
     <invadersettings>
@@ -383,6 +383,182 @@
           <gvgend/>
         </eventtime>
                <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="2">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="3">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="29">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="30">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="31">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="57">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+          <scoremultiplier newmultiplier="2"/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="58">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="59">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="85">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+      </day>
+    </seasontimes>
+  </season>
+  <season uniquename="GVG_SEASON_03" displayname="@SEASONS_SEASONNAME_SEASON_03" startdatetime="2018-06-23T11:00:00Z" enddatetime="2018-09-15T10:59:00Z">
+    <rewards>
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
+    </rewards>
+    <bracketsettings>
+      <bracket level="crystal" pointsthreshold="150000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="50000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="10000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="200" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
+      <bracket level="iron" pointsthreshold="1"/>
+    </bracketsettings>
+    <invadersettings>
+      <bossinvader mobname="T6_MOB_ARCANE_ELEMENTAL_ELITE_BOSS" blocksterritoryclaim="true"/>
+      <helperinvader mobname="T6_MOB_ARCANE_ELEMENTAL_ELITE" blocksterritoryclaim="false"/>
+    </invadersettings>
+    <territorytypes>
+      <territorytype type="WATCHTOWER" resourcetype="Resource" />
+      <territorytype type="CASTLE"/>
+    </territorytypes>
+    <seasontimes>
+      <day number="1">
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+          <gvgend/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
           <clusterfilter>
             <timeregion name="RU_ASIA_12_00" />
             <timeregion name="RU_14_00" />

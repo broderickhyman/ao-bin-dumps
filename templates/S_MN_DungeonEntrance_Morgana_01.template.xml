@@ -1,12 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/S_MN_DungeonEntrance_Morgana_01.unity" unityguid="f6c1b9eedf918224293147d56618a6dc" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -26" colBoundsMax="28 25">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_01">
+      <tile name="MOUNTAIN_GREEN_MOR_ENTRANCE_DUNGEON_10M_A" pos="0 0 0" roty="180">
+        <exit size="7 7" spawnpos="-0.2800007 -7" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_02">
       <tile name="MOUNTAIN_GREEN_MOR_ENTRANCE_DUNGEON_10M_A" pos="0 0 0" roty="180">
         <exit size="7 7" spawnpos="-0.2800007 -7" faction="Morgana" kind="DungeonSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="Dungeon">
+      <layer id="Layer_01" name="GroupDungeon">
+        <criticaltile name="MOUNTAIN_GREEN_MOR_ENTRANCE_DUNGEON_10M_A" pos="0 0 0" roty="180" id="exit_02" type="exit">
+          <exit size="7 7" spawnpos="-0.2800007 -7" faction="Morgana" kind="DungeonGroup" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_MN" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_SoloMobcamp_GroupDungeon_Morgana_30x30_MN" />
+        </tile>
+      </layer>
+      <layer id="Layer_02" name="SoloDungeon">
+        <criticaltile name="MOUNTAIN_GREEN_MOR_ENTRANCE_DUNGEON_10M_A" pos="0 0 0" roty="180" id="exit_01" type="exit">
+          <exit size="7 7" spawnpos="-0.2800007 -7" faction="Morgana" kind="DungeonSolo" roadtype="Primary" />
+        </criticaltile>
+        <tile name="LevelMarker_Morgana_Solo_DungeonEntrance" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_Morgana_Solo_DungeonEntrance" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Mobs">
       <layer id="72bafcd4-53a4-4098-880a-23e4d68829c5" name="T6">
         <tile name="SpawnPoint_T6_MOB_MORGANA_RECRUIT_RANGE" pos="18.26 0 -7.7" roty="90">
@@ -164,11 +187,5 @@
     <tile name="ORE_MEDIUM_NODE" pos="23 0 10" roty="332">
       <resourcenode nodetype="medium" resourcetype="ore" />
     </tile>
-    <tile name="LevelMarker_Morgana_Solo_DungeonEntrance" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Morgana_Solo_DungeonEntrance" />
-    </tile>
-    <criticaltile name="MOUNTAIN_GREEN_MOR_ENTRANCE_DUNGEON_10M_A" pos="0 0 0" roty="180" id="exit_01" type="exit">
-      <exit size="7 7" spawnpos="-0.2800007 -7" faction="Morgana" kind="DungeonSolo" roadtype="Primary" />
-    </criticaltile>
   </tiles>
 </template>
