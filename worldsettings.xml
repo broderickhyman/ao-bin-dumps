@@ -9,7 +9,7 @@
 			pvprule="PvpDisabled"
       playersarelethal="false"
       mobsarelethal="false"
-      showpvpplayeronminimap="false"
+      showpvpplayeronminimap="true"
       showfriendlycount="true"
       showhostilecount="false"
       logoutseconds="10"
@@ -431,6 +431,28 @@
       requiredreputationtoenter="-50000"
 	    allowfactionflagging="false"
 	  />
+    <archetype
+     name = "ARENA_CRYSTAL"
+     uipvptype="Limited"
+     pvpwarningtype="safe"
+     pvprule="PvpAllowed"
+     playersarelethal="true"
+     mobsarelethal="false"
+     showpvpplayeronminimap="false"
+     showfriendlycount="false"
+     showhostilecount="false"
+     spellcooldownsonenteringseconds="0"
+     craftefficiencybonus="0.20"
+     buildingcraftcapacityregenfactor="1"
+     itempowersoftcap="1000"
+     itempowerscalingfactor="0.5"
+     animalgrowthfactor="0.5"
+     cropyieldfactor="2"
+     clusterdangerbonustype="yellow"
+     knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
+     requiredreputationtoenter="-50000"
+     allowfactionflagging="false"
+	  />
   </archetypes>
 
   <gvgitempowerscaling>
@@ -510,7 +532,23 @@
       </resourcespawns>
       <mobspawns defaulttimefactor="0.05"/>
 		</clustertype>
-		
+
+    <clustertype name="TUTORIAL"
+    archetype="GREEN"
+    editorcolor="0, 255, 255"
+    furnitureobjectsallowed="false"
+    hellgatemobminimapvisible="true"
+    hellgateclustermessage="true"
+    isdungeon="false"
+    allowmounts="true"
+    isstartarea="true">
+      <resourcespawns defaulttimefactor="1.0">
+        <resourcetier tier="1" timefactor="0.1"/>
+        <resourcetier tier="2" timefactor="1"/>
+      </resourcespawns>
+      <mobspawns defaulttimefactor="1000"/>
+    </clustertype>
+    
 		<clustertype name="TESTSTARTAREA"
       archetype="GREEN"
 			editorcolor="0, 255, 255"
@@ -526,22 +564,6 @@
       </resourcespawns>
       <mobspawns defaulttimefactor="0.0002"/>
 		</clustertype>
-
-    <clustertype name="TUTORIAL"
-      archetype="GREEN"
-			editorcolor="0, 255, 255"
-			furnitureobjectsallowed="false"
-	    hellgatemobminimapvisible="true"
-	    hellgateclustermessage="true"
-			isdungeon="false"
-      allowmounts="true"
-      isstartarea="true">
-      <resourcespawns defaulttimefactor="1.0">
-        <resourcetier tier="1" timefactor="0.1"/>
-        <resourcetier tier="2" timefactor="0.2"/>
-      </resourcespawns>
-      <mobspawns defaulttimefactor="0.05"/>
-    </clustertype>
 
     <clustertype name="CITY"
       archetype="CITY-GREEN"
@@ -1189,6 +1211,18 @@
       <mobspawns defaulttimefactor="1.0"/>
       <resourcespawns defaulttimefactor="9999.0"/>
     </clustertype>
+    <!-- ARENA -->
+    <clustertype name="ARENA_CRYSTAL"
+        archetype="ARENA_CRYSTAL"
+        editorcolor="255, 255, 0"
+        furnitureobjectsallowed="false"
+        hellgatemobminimapvisible="true"
+        hellgateclustermessage="true"
+        isdungeon="false"
+        allowmounts="true">
+      <mobspawns defaulttimefactor="1.0"/>
+      <resourcespawns defaulttimefactor="9999.0"/>
+    </clustertype>
   </clustertypes>
   
  
@@ -1388,30 +1422,30 @@
   </hellclusters>
 
   <timeregions>
-    <timeregion name="US_05_00" starttime="05:00" timezone="-9" siegecamptime="3:00"/>
-    <timeregion name="US_04_00" starttime="04:00" timezone="-8" siegecamptime="3:00"/>
-    <timeregion name="US_03_00" starttime="03:00" timezone="-7" siegecamptime="3:00"/>
-    <timeregion name="US_02_00" starttime="02:00" timezone="-6" siegecamptime="3:00"/>
-    <timeregion name="US_01_00" starttime="01:00" timezone="-5" siegecamptime="3:00"/>
-    <timeregion name="BR_00_00" starttime="00:00" timezone="-4" siegecamptime="3:00"/>
-    <timeregion name="BR_23_00" starttime="23:00" timezone="-3" siegecamptime="18:00"/>
-    <timeregion name="BR_22_00" starttime="22:00" timezone="-2" siegecamptime="18:00"/>
-    <timeregion name="EU_21_00" starttime="21:00" timezone="-1" siegecamptime="18:00"/>
-    <timeregion name="EU_20_00" starttime="20:00" timezone="0" siegecamptime="18:00"/>
-    <timeregion name="EU_19_00" starttime="19:00" timezone="+1" siegecamptime="18:00"/>
-    <timeregion name="EU_RU_18_00" starttime="18:00" timezone="+2" siegecamptime="18:00"/>
-    <timeregion name="RU_17_00" starttime="17:00" timezone="+3" siegecamptime="18:00"/>
-    <timeregion name="RU_16_00" starttime="16:00" timezone="+4" siegecamptime="18:00"/>
-    <timeregion name="RU_15_00" starttime="15:00" timezone="+5" siegecamptime="18:00"/>
-    <timeregion name="RU_14_00" starttime="14:00" timezone="+6" siegecamptime="3:00"/>
+    <timeregion name="US_05_00" starttime="05:00" timezone="-9" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="US_04_00" starttime="04:00" timezone="-8" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="US_03_00" starttime="03:00" timezone="-7" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="US_02_00" starttime="02:00" timezone="-6" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="US_01_00" starttime="01:00" timezone="-5" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="BR_00_00" starttime="00:00" timezone="-4" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="BR_23_00" starttime="23:00" timezone="-3" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="BR_22_00" starttime="22:00" timezone="-2" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="EU_21_00" starttime="21:00" timezone="-1" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="EU_20_00" starttime="20:00" timezone="0" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="EU_19_00" starttime="19:00" timezone="+1" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="EU_RU_18_00" starttime="18:00" timezone="+2" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="RU_17_00" starttime="17:00" timezone="+3" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="RU_16_00" starttime="16:00" timezone="+4" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="RU_15_00" starttime="15:00" timezone="+5" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="RU_14_00" starttime="14:00" timezone="+6" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
 
-    <timeregion name="RU_ASIA_13_00" starttime="13:00" timezone="+7" siegecamptime="3:00"/>
-    <timeregion name="RU_ASIA_12_00" starttime="12:00" timezone="+8" siegecamptime="3:00"/>
+    <timeregion name="RU_ASIA_13_00" starttime="13:00" timezone="+7" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
+    <timeregion name="RU_ASIA_12_00" starttime="12:00" timezone="+8" siegecamptime="3:00" territorydailyinstancedbattletime = "2:00"/>
     <!--Can be removed probably-->
-    <timeregion name="AMERICA_EAST" starttime="12:00" timezone="+8" siegecamptime="18:00"/>
-    <timeregion name="AMERICA_WEST" starttime="14:00" timezone="+5" siegecamptime="18:00"/>
-    <timeregion name="EU" starttime="16:00" timezone="0" siegecamptime="18:00"/>
-    <timeregion name="RUSSIA" starttime="18:00" timezone="+3" siegecamptime="18:00"/>
+    <timeregion name="AMERICA_EAST" starttime="12:00" timezone="+8" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="AMERICA_WEST" starttime="14:00" timezone="+5" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="EU" starttime="16:00" timezone="0" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
+    <timeregion name="RUSSIA" starttime="18:00" timezone="+3" siegecamptime="18:00" territorydailyinstancedbattletime = "19:00"/>
   </timeregions>    
 
   <worldmap>

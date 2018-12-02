@@ -5,36 +5,6 @@
         <expeditionstartpoint />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="expeditionexit_01" type="expeditionexit" layerId="">
-      <tile name="ExpeditionExit" pos="170 4 -157">
-        <expeditionexit spawnatstartup="true" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="expeditionexit_02" type="expeditionexit" layerId="">
-      <tile name="ExpeditionExit" pos="-110 4 212">
-        <expeditionexit spawnatstartup="false" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="expeditionnarrator_01" type="expeditionnarrator" layerId="">
-      <tile name="ExpeditionNarrator" pos="166 4 -162" roty="90">
-        <expeditionnarrator />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="expeditionnarrator_02" type="expeditionnarrator" layerId="">
-      <tile name="ExpeditionNarratorFinish" pos="-114 4 207" roty="90">
-        <expeditionnarrator />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="expeditioncheckpoint_01" type="expeditioncheckpoint" layerId="">
-      <tile name="ExpeditionCheckPoint" pos="213 -12 -58" roty="53">
-        <expeditioncheckpoint maxcolliderdist="24.86468" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="expeditioncheckpoint_02" type="expeditioncheckpoint" layerId="">
-      <tile name="ExpeditionCheckPoint" pos="-115 -12 17" roty="315">
-        <expeditioncheckpoint maxcolliderdist="25.01999" />
-      </tile>
-    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
     <layergroup name="Mobs">
@@ -401,19 +371,16 @@
         <tile name="SpawnPoint_T5_MOB_EXP_HERETIC_FOULRAT" pos="-12.47 -12.28 7.16" roty="24">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_HEALER_VETERAN" pos="94.99 -12 30.78" rot="2 33 359">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
-        <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_SCAVENGER_VETERAN" pos="215.56 -12 -45.67" roty="350.39">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
         <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_ARCHER_VETERAN" pos="163.06 -12.27 23.26" rot="359 8 4">
           <mobspawnpoint behavior="PATROL">
             <path>
-              <waypoint pos="165.1507 24.30896" idle="1" pace="WALK" />
+              <waypoint pos="165.154 22.97532" idle="1" pace="WALK" />
               <waypoint pos="160.4602 22.6916" idle="1" pace="WALK" />
             </path>
           </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_SCAVENGER_VETERAN" pos="215.56 -12 -45.67" roty="350.39">
+          <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_THIEF_VETERAN" pos="165.88 -11.95 26.94" rot="9 321 359">
           <mobspawnpoint behavior="GUARD" />
@@ -422,6 +389,9 @@
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T5_MOB_EXP_HERETIC_FOULRAT" pos="-9.86 -12.28 9.18" roty="275">
+          <mobspawnpoint behavior="GUARD" />
+        </tile>
+        <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_HEALER_VETERAN" pos="94.99 -12 30.78" rot="2 33 359">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T6_MOB_EXP_HERETIC_SCAVENGER_VETERAN" pos="136.74 -12 30.17" roty="11">
@@ -563,11 +533,13 @@
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_T6_MOB_HRD_HERETIC_ARCHER_VETERAN" pos="164.14 -12.27 22.94" rot="359 8 4">
+        <tile name="SpawnPoint_T6_MOB_HRD_HERETIC_ARCHER_VETERAN" pos="164.13 -12.27 21.93" rot="359 8 4">
           <mobspawnpoint behavior="PATROL">
             <path>
-              <waypoint pos="165.6198 24.3881" idle="1" pace="WALK" />
-              <waypoint pos="160.8685 23.20332" idle="1" pace="WALK" />
+              <waypoint pos="165.1432 22.5145" idle="1" pace="WALK" />
+              <waypoint pos="160.8586 22.19332" idle="1" pace="WALK" />
+              <waypoint pos="164.99 21.99" idle="0" pace="WALK" />
+              <waypoint pos="160.8586 22.19332" idle="1" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
@@ -1030,25 +1002,25 @@
     <criticaltile name="ExpeditionStartPoint" pos="174 4 -165" id="expeditionstartpoint_01" type="expeditionstartpoint">
       <expeditionstartpoint />
     </criticaltile>
-    <criticaltile name="ExpeditionExit" pos="170 4 -157" id="expeditionexit_01" type="expeditionexit">
+    <tile name="ExpeditionExit" pos="170 4 -157">
       <expeditionexit spawnatstartup="true" />
-    </criticaltile>
-    <criticaltile name="ExpeditionExit" pos="-110 4 212" id="expeditionexit_02" type="expeditionexit">
+    </tile>
+    <tile name="ExpeditionExit" pos="-110 4 212">
       <expeditionexit spawnatstartup="false" />
-    </criticaltile>
-    <criticaltile name="ExpeditionNarrator" pos="166 4 -162" roty="90" id="expeditionnarrator_01" type="expeditionnarrator">
+    </tile>
+    <tile name="ExpeditionNarrator" pos="166 4 -162" roty="90">
       <expeditionnarrator />
-    </criticaltile>
-    <criticaltile name="ExpeditionNarratorFinish" pos="-114 4 207" roty="90" id="expeditionnarrator_02" type="expeditionnarrator">
+    </tile>
+    <tile name="ExpeditionNarratorFinish" pos="-114 4 207" roty="90">
       <expeditionnarrator />
-    </criticaltile>
+    </tile>
     <tile name="Atmosphere_EXP_HER_ST_RED" pos="0 0 0" />
-    <criticaltile name="ExpeditionCheckPoint" pos="213 -12 -58" roty="53" id="expeditioncheckpoint_01" type="expeditioncheckpoint">
+    <tile name="ExpeditionCheckPoint" pos="213 -12 -58" roty="53">
       <expeditioncheckpoint maxcolliderdist="24.86468" />
-    </criticaltile>
-    <criticaltile name="ExpeditionCheckPoint" pos="-115 -12 17" roty="315" id="expeditioncheckpoint_02" type="expeditioncheckpoint">
+    </tile>
+    <tile name="ExpeditionCheckPoint" pos="-115 -12 17" roty="315">
       <expeditioncheckpoint maxcolliderdist="25.01999" />
-    </criticaltile>
+    </tile>
     <tile name="ExpeditionCheckPoint" pos="84 -12 32" roty="45">
       <expeditioncheckpoint maxcolliderdist="25.01999" />
     </tile>
@@ -4764,21 +4736,15 @@
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-142.5 5 195.5" roty="270" scale="0.8852134 0.8852129 0.8852134" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 6 188.5" roty="270" scale="0.8852134 0.8852129 0.8852134" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-138.5 5 191.5" roty="306" scale="0.8852131 0.8852129 0.8852131" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 8 188.5" rot="0 270 354" scale="0.8852129 0.8852129 0.8852129" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-142.5 5 189.5" roty="270" scale="0.8852109 0.88521 0.8852109" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-139.5 6 190.5" roty="282" scale="0.8852127 0.8852129 0.8852127" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-138.5 6 188.5" roty="282" scale="0.8852129 0.8852129 0.8852129" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-138.5 8 196.5" roty="271" scale="0.885213 0.8852129 0.885213" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 8 188.5" rot="0 270 354" scale="0.88521 0.88521 0.88521" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-142.5 8 188.5" roty="270" scale="0.8852109 0.88521 0.8852109" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 8 188.5" rot="0 270 354" scale="0.88521 0.88521 0.88521" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 6 188.5" roty="270" scale="0.8852109 0.88521 0.8852109" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 7 188.5" roty="289" scale="0.88521 0.88521 0.88521" />
     <tile name="STEPPE_GREEN_FILL_BONES_C" pos="89.5 -12 13.5" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_SMALL_A" pos="-66.5 -12 32.5" />
     <tile name="STEPPE_GREEN_FILL_BONES_C" pos="171.4 -12 -5.5" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 7 188.5" roty="289" scale="0.88521 0.88521 0.88521" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-141.5 8 188.5" rot="0 270 354" scale="0.88521 0.88521 0.88521" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-144.5 8 197.5" roty="180" scale="0.8852105 0.88521 0.8852105" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-144.5 8 198.5" rot="0 180 354" scale="0.8852099 0.8852099 0.88521" />
     <tile name="STEPPE_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-145.5 5 197.5" roty="180" scale="0.8852105 0.88521 0.8852105" />
@@ -6175,7 +6141,6 @@
     <tile name="T6_SILVERCOINS_NODE" pos="-131.2 0 105.72" />
     <tile name="T6_SILVERCOINS_NODE" pos="-131.5 0 107.5" />
     <tile name="T6_SILVERCOINS_NODE" pos="-131.2 0 107.72" roty="180" />
-    <tile name="T6_SILVERCOINS_NODE" pos="85.1 -12 10.17" />
     <tile name="T6_SILVERCOINS_NODE" pos="205.5 -12 -29.5" roty="180" />
     <tile name="T6_SILVERCOINS_NODE" pos="203.5 -12 -30.5" roty="110.64" />
     <tile name="T6_SILVERCOINS_NODE" pos="245.5 -12 -48.5" roty="270" />

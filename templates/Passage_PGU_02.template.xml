@@ -1,5 +1,26 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Master/Passage/Passage_PGU_02.unity" unityguid="11561042106327840a51845c67a277f4" editorBoundsMin="-315 -315" editorBoundsMax="315 315" colBoundsMin="-235 -235" colBoundsMax="225 225">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="exit_01" type="exit" layerId="">
+      <tile name="Exit" pos="198.5 -4 -4.5" roty="180">
+        <exit size="15 15" spawnpos="15 0" faction="None" kind="Cluster" roadtype="Primary">
+          <guards>
+            <guard pos="183.5 -9.499998" />
+            <guard pos="183.5 0.5000011" />
+          </guards>
+        </exit>
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_02" type="exit" layerId="">
+      <tile name="Exit" pos="-191.5 -4 -15.5">
+        <exit size="15 15" spawnpos="15 5.960069E-07" faction="None" kind="Cluster" roadtype="Primary">
+          <guards>
+            <guard pos="-176.5 -10.5" />
+            <guard pos="-176.5 -20.5" />
+          </guards>
+        </exit>
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="route_01">
       <layer id="Layer_01" name="route_01_off" />
@@ -2134,21 +2155,21 @@
     <tile name="FOREST_GREEN_GROUND" pos="-220 0 210" roty="0" />
     <tile name="FOREST_GREEN_GROUND" pos="60 0 -110" roty="0" />
     <tile name="FOREST_GREEN_GROUND" pos="-190 0 170" roty="0" />
-    <tile name="Exit" pos="198.5 -4 -4.5" roty="180">
+    <criticaltile name="Exit" pos="198.5 -4 -4.5" roty="180" id="exit_01" type="exit">
       <exit size="15 15" spawnpos="15 0" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="183.5 -9.499998" />
           <guard pos="183.5 0.5000011" />
         </guards>
       </exit>
-    </tile>
-    <tile name="Exit" pos="-191.5 -4 -15.5">
+    </criticaltile>
+    <criticaltile name="Exit" pos="-191.5 -4 -15.5" id="exit_02" type="exit">
       <exit size="15 15" spawnpos="15 5.960069E-07" faction="None" kind="Cluster" roadtype="Primary">
         <guards>
           <guard pos="-176.5 -10.5" />
           <guard pos="-176.5 -20.5" />
         </guards>
       </exit>
-    </tile>
+    </criticaltile>
   </tiles>
 </template>

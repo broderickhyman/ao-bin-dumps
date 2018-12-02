@@ -13,6 +13,10 @@
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
+	  guildlogochangecooldownminutes="2880"
+	  guildchangecooldownminutes="2880"
+	  guildlogochangegoldcosts="3000"
+	  guildlogochangesilvercosts="0"
     />
   
 	<transactionlimits>
@@ -31,7 +35,7 @@
 	
     <SiegeCamp vaultsize="64" battlevaultsize="64" weightlimit="10000.0" siegecampclaimtimeinsec="15" cooldowninmin="360" costfactor="2.5" />
     <Territory territoryclaimtimeinsec="15" />
-    <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0"/>
+    <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="2880"/>
     <GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
     <Respawn autorespawntimerinsecs="600" />
     <Fame pvpfamesharingradius="50" pvefamesharingradius="50">
@@ -65,14 +69,20 @@
       knockdowngetuptimeseconds_duel="6"
       knockdowngetuptimeseconds_pvp="180"
       knockdowngetuptimeseconds_combatover="18"
-      knockdownbuffaftergetup="SPAWN_KNOCKDOWN" />
+      knockdownbuffaftergetup="SPAWN_KNOCKDOWN"
+      playervisibilityafterdeath="3"/>
     <StuckCommand cooldownseconds="86400" delayseconds="600" />
     <ClusterChange cooldownseconds="10"/>
     <SpawnBuff>
-      <buff name="SPAWN_INVULNERABILITY" onlywhenpvppossible="true" onlogin="true" inarena="false" ingvg="false"/>
-      <buff name="SPAWN_SPEED" onlywhenpvppossible="true" onlogin="false" inarena="false" ingvg="false"/>
+      <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
+      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       onlywhenpvppossible="false" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/> <!-- For transitioning from city to guild territory -->
+      <buff name="SPAWN_INVULNERABILITY"            onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
+      <buff name="SPAWN_INVULNERABILITY"            onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="false" onlyinarena="false" onlyingvg="true" onlyinexpedition="false"/> <!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
+      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="true"/>
+      <buff name="SPAWN_SPEED"                      onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
+      <buff name="SPAWN_BUFFIMMUNITY"               onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
       <!-- order is important: immunity LAST (obvious, right?) -->
-      <buff name="SPAWN_BUFFIMMUNITY" onlywhenpvppossible="true" onlogin="true" inarena="false" ingvg="false"/>
     </SpawnBuff>
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
     <InCombat activetimeoutseconds="30" passivetimeoutseconds="30"/>
@@ -1294,7 +1304,8 @@
   <AchievementHud tutorial_idletime_till_highlight="30"/>
   <SilverDropSettings silver="COINS" silverpremium="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5"/>
   <buildingrenovationsettings downgradedelay="86400" destroydelay="86400" ownerdowngradedestroydelay="60" lootprotection="86400" lootlifetime="172800" />
-  <Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout ="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_player_spawn" penaltyduration="900">
+  <constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400"/>
+  <Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout ="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectspell="EXPEDITIONSPAWN" penaltyduration="900">
     <ExpeditionBonusRewardTimer>
     <ResetTimer utctime="10:00"/>
     </ExpeditionBonusRewardTimer>

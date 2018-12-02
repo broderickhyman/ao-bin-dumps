@@ -349,7 +349,7 @@
       </Tier>
       <Tier tier="5" item="T5_WOOD" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_WOOD_LEVEL1" />
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
@@ -368,7 +368,7 @@
         <RareState state="2" item="T7_WOOD_LEVEL2" />
         <RareState state="3" item="T7_WOOD_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_WOOD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_WOOD" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_WOOD_LEVEL1" />
@@ -475,7 +475,7 @@
       </Tier>      
       <Tier tier="5" item="T5_WOOD" tile="FOREST_RED_T5_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_WOOD_LEVEL1" />
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
@@ -535,7 +535,7 @@
       </Tier>
       <Tier tier="5" item="T5_WOOD" tile="FOREST_RED_T5_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_WOOD_LEVEL1" />
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
@@ -595,7 +595,7 @@
       </Tier>
       <Tier tier="5" item="T5_WOOD" tile="FOREST_DEAD_T5_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_WOOD_LEVEL1" />
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
@@ -679,6 +679,26 @@
         <RareState state="3" item="T8_WOOD_LEVEL3" />
       </Tier>
     </Harvestable>
+    <Harvestable name="WOOD_MINIGUARDIAN_RED" resource="WOOD">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="1.5" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="6" item="T6_WOOD" tile="FOREST_RED_T6_TREE_GUARDIAN" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000" startcharges="500">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <RareState state="1" item="T6_WOOD_LEVEL1" />
+        <RareState state="2" item="T6_WOOD_LEVEL2" />
+        <RareState state="3" item="T6_WOOD_LEVEL3" />
+      </Tier>
+    </Harvestable>
     
     <Harvestable name="ROCK" resource="ROCK">
       <ToolModifier>
@@ -710,7 +730,7 @@
       </Tier>
       <Tier tier="5" item="T5_ROCK" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       </Tier>
       <Tier tier="6" item="T6_ROCK" maxchargesperharvest="1" respawntimeseconds="5357" harvesttimeseconds="8" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -720,7 +740,7 @@
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
       </Tier>
-      <Tier tier="8" item="T8_ROCK" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_ROCK" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
       </Tier>
@@ -755,7 +775,7 @@
       </Tier>
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       </Tier>
       <Tier tier="6" item="T6_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -800,7 +820,7 @@
       </Tier>
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_RED_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       </Tier>
       <Tier tier="6" item="T6_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -845,7 +865,7 @@
       </Tier>
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_DEAD_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       </Tier>
       <Tier tier="6" item="T6_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -905,6 +925,23 @@
         <Charge level="1-960" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
+    <Harvestable name="ROCK_MINIGUARDIAN_RED" resource="ROCK">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="6" item="T6_ROCK" tile="HIGHLAND_RED_T6_ROCK_GIANT" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000" startcharges="500">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+      </Tier>
+    </Harvestable>
     
     <Harvestable name="FIBER" resource="FIBER">
       <ToolModifier>
@@ -935,7 +972,7 @@
       </Tier>
       <Tier tier="5" item="T5_FIBER" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_FIBER_LEVEL1" />
         <RareState state="2" item="T5_FIBER_LEVEL2" />
         <RareState state="3" item="T5_FIBER_LEVEL3" />
@@ -954,7 +991,7 @@
         <RareState state="2" item="T7_FIBER_LEVEL2" />
         <RareState state="3" item="T7_FIBER_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_FIBER" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_FIBER" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_FIBER_LEVEL1" />
@@ -991,7 +1028,7 @@
       </Tier>
       <Tier tier="5" item="T5_FIBER" tile="SWAMP_GREEN_T5_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_FIBER_LEVEL1" />
         <RareState state="2" item="T5_FIBER_LEVEL2" />
         <RareState state="3" item="T5_FIBER_LEVEL3" />
@@ -1124,6 +1161,26 @@
         <RareState state="3" item="T8_FIBER_LEVEL3" />
       </Tier>
     </Harvestable>
+    <Harvestable name="FIBER_MINIGUARDIAN_RED" resource="FIBER">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="6" item="T6_FIBER" tile="SWAMP_RED_T6_FIBER_GUARDIAN" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000" startcharges="500">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <RareState state="1" item="T6_FIBER_LEVEL1" />
+        <RareState state="2" item="T6_FIBER_LEVEL2" />
+        <RareState state="3" item="T6_FIBER_LEVEL3" />
+      </Tier>
+    </Harvestable>
     
     <Harvestable name="HIDE" resource="HIDE">
       <ToolModifier>
@@ -1158,7 +1215,7 @@
       </Tier>
       <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" tile="T5_HIDE" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_HIDE_LEVEL1" />
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
@@ -1177,7 +1234,7 @@
         <RareState state="2" item="T7_HIDE_LEVEL2" />
         <RareState state="3" item="T7_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="T8_HIDE" decaytimeseconds="3600" decaytimewhenexhaustedseconds="86400">
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" tile="T8_HIDE" decaytimeseconds="3600" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_HIDE_LEVEL1" />
@@ -1218,7 +1275,7 @@
       </Tier>
       <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" tile="FOREST_GREEN_T5_HIDE_BEAR" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_HIDE_LEVEL1" />
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
@@ -1278,7 +1335,7 @@
       </Tier>
       <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" tile="STEPPE_GREEN_T5_HIDE_TERRORBIRD" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_HIDE_LEVEL1" />
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
@@ -1338,7 +1395,7 @@
       </Tier>
       <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" tile="SWAMP_GREEN_T5_HIDE_GIANTSNAKE" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_HIDE_LEVEL1" />
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
@@ -1418,7 +1475,7 @@
       </Tier>
       <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" tile="STEPPE_GREEN_T5_HIDE_COUGAR" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_HIDE_LEVEL1" />
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
@@ -1502,6 +1559,26 @@
         <RareState state="3" item="T8_HIDE_LEVEL3" />
       </Tier>
     </Harvestable>
+    <Harvestable name="HIDE_MINIGUARDIAN" resource="HIDE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="6" item="T6_HIDE" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" tile="STEPPE_GREEN_T6_HIDE_GUARDIAN_MAMMOTH" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000" startcharges="500">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <RareState state="1" item="T6_HIDE_LEVEL1" />
+        <RareState state="2" item="T6_HIDE_LEVEL2" />
+        <RareState state="3" item="T6_HIDE_LEVEL3" />
+      </Tier>
+    </Harvestable>
     
     <Harvestable name="ORE" resource="ORE">
       <ToolModifier>
@@ -1532,7 +1609,7 @@
       </Tier>
       <Tier tier="5" item="T5_ORE" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_ORE_LEVEL1" />
         <RareState state="2" item="T5_ORE_LEVEL2" />
         <RareState state="3" item="T5_ORE_LEVEL3" />
@@ -1551,7 +1628,7 @@
         <RareState state="2" item="T7_ORE_LEVEL2" />
         <RareState state="3" item="T7_ORE_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_ORE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_ORE" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_ORE_LEVEL1" />
@@ -1588,7 +1665,7 @@
       </Tier>
       <Tier tier="5" item="T5_ORE" tile="T5_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_ORE_LEVEL1" />
         <RareState state="2" item="T5_ORE_LEVEL2" />
         <RareState state="3" item="T5_ORE_LEVEL3" />
@@ -1644,7 +1721,7 @@
       </Tier>
       <Tier tier="5" item="T5_ORE" tile="MOUNTAIN_RED_T5_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_ORE_LEVEL1" />
         <RareState state="2" item="T5_ORE_LEVEL2" />
         <RareState state="3" item="T5_ORE_LEVEL3" />
@@ -1700,7 +1777,7 @@
       </Tier>
       <Tier tier="5" item="T5_ORE" tile="MOUNTAIN_DEAD_T5_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
-        <Charge level="1-4" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T5_ORE_LEVEL1" />
         <RareState state="2" item="T5_ORE_LEVEL2" />
         <RareState state="3" item="T5_ORE_LEVEL3" />
@@ -1780,6 +1857,26 @@
         <RareState state="3" item="T8_ORE_LEVEL3" />
       </Tier>
     </Harvestable>
+    <Harvestable name="ORE_MINIGUARDIAN_RED" resource="ORE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="6" item="T6_ORE" tile="MOUNTAIN_RED_T6_ORE_GIANT" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000" startcharges="500">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <RareState state="1" item="T6_ORE_LEVEL1" />
+        <RareState state="2" item="T6_ORE_LEVEL2" />
+        <RareState state="3" item="T6_ORE_LEVEL3" />
+      </Tier>
+    </Harvestable>
 
     <!--destroyable mobs 2nd state-->
     <Harvestable name="DEADRAT" resource="HIDE">
@@ -1842,6 +1939,50 @@
         <Charge level="2-13" yield="1.6903" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
    </Harvestable>
+    <!--WHITEBOX-->
+    <Harvestable name="SILVERCOINS_NODE_RICH">
+      <!-- Note: silver from nodes is rounded DOWN after all charges are summed up-->
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="10" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0.00" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="0.00" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="75" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="100.6494" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="10.1375" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="150" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="300.1459" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="30.2622" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="500.625" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="50.4688" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="700.5002" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="70.625" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1000.0889" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="100.8407" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1400.0562" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="140.1713" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="2000.2838" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="200.6903" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
     <!--Silver From Mobs -->
     <Harvestable name="SILVERCOINS_LOOT_STANDARD_TRASH">     
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">

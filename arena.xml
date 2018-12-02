@@ -5,14 +5,22 @@
     <arenaregistrationtype name="unranked_1"   elocategory="unranked"    category="unranked" groupsize="1"/>
     <arenaregistrationtype name="unranked_2"   elocategory="unranked"    category="unranked" groupsize="2"/>
     <arenaregistrationtype name="unranked_3"   elocategory="unranked"    category="unranked" groupsize="3"/>
-    <arenaregistrationtype name="unranked_4"   elocategory="unranked"    category="unranked" groupsize="4"/>
-    <arenaregistrationtype name="unranked_5"   elocategory="unranked"    category="unranked" groupsize="5"/>
+    <!--<arenaregistrationtype name="unranked_4"   elocategory="unranked"    category="unranked" groupsize="4"/>-->
+    <arenaregistrationtype name="unranked_5"   elocategory="unranked"    category="unranked_5" groupsize="5"/>
+
     <arenaregistrationtype name="custom_match_2v2"            elocategory="none" category="custom_match_2v2"           groupsize="2"/>
     <arenaregistrationtype name="custom_match_2v2_gvg"        elocategory="none" category="custom_match_2v2_gvg"       groupsize="2"/>
     <arenaregistrationtype name="custom_match_arena"          elocategory="none" category="custom_match_arena"         groupsize="5"/>
     <arenaregistrationtype name="custom_match_farmland"       elocategory="none" category="custom_match_farmland"      groupsize="5"/>
     <arenaregistrationtype name="custom_match_hometerritory"  elocategory="none" category="custom_match_hometerritory" groupsize="5"/>
     <arenaregistrationtype name="custom_match_resources"      elocategory="none" category="custom_match_resources"     groupsize="5"/>
+    <arenaregistrationtype name="custom_match_resources2"     elocategory="none" category="custom_match_resources2"    groupsize="5"/>
+
+    <arenaregistrationtype name="custom_match_1v1_gvg"        elocategory="none" category="custom_match_2v2_gvg"       groupsize="1"/>
+
+    <arenaregistrationtype name="crystal_match_test_1v1"          elocategory="none" category="crystal_match_test"        groupsize="1"/>
+    <arenaregistrationtype name="crystal_match_test_2v2"          elocategory="none" category="crystal_match_test"        groupsize="2"/>
+    <arenaregistrationtype name="crystal_match_5v5_gvg"          elocategory="none" category="crystal_match_5v5_gvg"        groupsize="5"/>
   </arenaregistrationtypes>
 
   <arenacategories>
@@ -21,7 +29,7 @@
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100" 
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="700">
+                   minitempoweraverage="700" arenamatchtype="arena">
 
       <neededitemroles>
         <role itemroleid="ARENA_HEAL" min="1" max="1" />
@@ -33,6 +41,28 @@
 
       <rewards rewardsperday="3">
         <itemreward itemid="QUESTITEM_TOKEN_ARENA_UNRANKED" enchantmentlevel="0" count="3"/>
+        <itemreward itemid="T3_SKILLBOOK_NONTRADABLE" enchantmentlevel="0" count="3"/>
+        <itemreward itemid="T4_SILVERBAG_NONTRADABLE" enchantmentlevel="0" count="1"/>
+        <!--
+        <itemreward itemid="QUESTITEM_TOKEN_EVENT_EASTER_2018" enchantmentlevel="0" count="8"/>
+        -->
+      </rewards>
+
+    </arenacategory>
+    <arenacategory name="unranked_5" ruleset="stdgvg" cluster="ARENA-STANDARD" matchtype="MATCH_ARENA" displayname="@ARENA_UNRANKED"
+                   startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                   elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                   scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
+                   scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
+                   minitempoweraverage="700" arenamatchtype="arena">
+      <neededitemroles>
+        <role itemroleid="ARENA_HEAL" min="1" max="1" />
+      </neededitemroles>
+
+      <rewards rewardsperday="3">
+        <itemreward itemid="QUESTITEM_TOKEN_ARENA_UNRANKED" enchantmentlevel="0" count="3"/>
+        <itemreward itemid="T3_SKILLBOOK_NONTRADABLE" enchantmentlevel="0" count="3"/>
+        <itemreward itemid="T4_SILVERBAG_NONTRADABLE" enchantmentlevel="0" count="1"/>
         <!--
         <itemreward itemid="QUESTITEM_TOKEN_EVENT_EASTER_2018" enchantmentlevel="0" count="8"/>
         -->
@@ -45,7 +75,7 @@
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100" 
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="0" iscustommatch="true" custommatchname="arena"
+                   minitempoweraverage="0" arenamatchtype="custom" custommatchname="arena"
                    custommatchdisplayname="@CUSTOM_MATCH_ARENA">
       <neededitemroles/>
       <rewards rewardsperday="0"/>
@@ -57,7 +87,7 @@
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100" 
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="0" iscustommatch="true" custommatchname="farmland"
+                   minitempoweraverage="0" arenamatchtype="custom" custommatchname="farmland"
                    custommatchdisplayname="@CUSTOM_MATCH_FARMLAND">
       <neededitemroles/>
       <rewards rewardsperday="0"/>
@@ -68,20 +98,32 @@
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100" 
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="0" iscustommatch="true" custommatchname="hometerritory"
+                   minitempoweraverage="0" arenamatchtype="custom" custommatchname="hometerritory"
                    custommatchdisplayname="@CUSTOM_MATCH_HOMETERRITORY">
       <neededitemroles/>
       <rewards rewardsperday="0"/>
     </arenacategory>
 
-    <arenacategory name="custom_match_resources" ruleset="stdgvg" cluster="ARENA-Resources" 
+    <arenacategory name="custom_match_resources" ruleset="stdgvg" cluster="ARENA-Resources1" 
                    matchtype="MATCH_CUSTOM" displayname="@CUSTOM_MATCH"
                    startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100" 
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="0" iscustommatch="true" custommatchname="resources"
+                   minitempoweraverage="0" arenamatchtype="custom" custommatchname="resources"
                    custommatchdisplayname="@CUSTOM_MATCH_RESOURCES">
+      <neededitemroles/>
+      <rewards rewardsperday="0"/>
+    </arenacategory>
+
+    <arenacategory name="custom_match_resources2" ruleset="stdgvg" cluster="ARENA-Resources2"
+                  matchtype="MATCH_CUSTOM" displayname="@CUSTOM_MATCH"
+                  startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                  elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                  scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
+                  scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
+                  minitempoweraverage="0" arenamatchtype="custom" custommatchname="resources2"
+                  custommatchdisplayname="@CUSTOM_MATCH_RESOURCES">
       <neededitemroles/>
       <rewards rewardsperday="0"/>
     </arenacategory>
@@ -92,7 +134,7 @@
                      elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                      scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
                      scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                     minitempoweraverage="0"  iscustommatch="true" custommatchname="2v2"
+                     minitempoweraverage="0" arenamatchtype="custom" custommatchname="2v2"
                      custommatchdisplayname="@CUSTOM_MATCH_FARMLAND">
       <neededitemroles/>
 
@@ -101,14 +143,39 @@
 
     </arenacategory>
 
-    <arenacategory name="custom_match_2v2_gvg" ruleset="2v2" cluster="ARENA-FarmLand"
+    <arenacategory name="custom_match_2v2_gvg" ruleset="2v2" cluster="ARENA-STANDARD"
                    matchtype="MATCH_GVG" displayname="@ARENA_2V2_GVG"
                    startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
                    elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
-                   minitempoweraverage="0"  iscustommatch="true" custommatchname="gvg"
+                   minitempoweraverage="0" arenamatchtype="custom" custommatchname="gvg"
                    custommatchdisplayname="@CUSTOM_MATCH_DEBUG">
+
+      <neededitemroles/>
+
+      <rewards rewardsperday="0"/>
+    </arenacategory>
+
+    <arenacategory name="crystal_match_test" ruleset="2v2" cluster="CrystalRealm"
+                   matchtype="MATCH_GVG" displayname="@ARENA_2V2_GVG"
+                   startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                   elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                   scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
+                   scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
+                   minitempoweraverage="0" arenamatchtype="crystal">
+
+      <neededitemroles/>
+
+      <rewards rewardsperday="0"/>
+    </arenacategory>
+    <arenacategory name="crystal_match_5v5_gvg" ruleset="stdgvg" cluster="CrystalRealm"
+                   matchtype="MATCH_CRYSTAL_GVG" displayname="@CRYSTALREALM_5V5_GVG"
+                   startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                   elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                   scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
+                   scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
+                   minitempoweraverage="0" arenamatchtype="crystal">
 
       <neededitemroles/>
 
