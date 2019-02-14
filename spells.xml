@@ -953,6 +953,7 @@
     <applyspell spell="PASSIVE_CAPE_HERETIC_AREA" target="self" >
         <not>
           <IfSpellCategoryActive category="cape_cooldown" who="Caster"/>
+          <IfSpellCategoryActive category="mountbuff" who="Caster"/>
         </not>  
     </applyspell> 
   </activespell>  
@@ -977,7 +978,7 @@
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/RootEffectVfx" socket="floor" constraintpreset="default" />
   </activespell>  
   <activespell uniquename="PASSIVE_CAPE_HERETIC_COOLDOWN" target="self" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="CAPE_COOLDOWN" category="cape_cooldown" uitype="buff" assessment="positive" buffpriority="1">
-    <dummy target="self" time="154.2" itempowertimemodifier="-3.4" persistsafterknockdown="true" />
+    <dummy target="self" time="112.5" itempowertimemodifier="-2.5" persistsafterknockdown="true" />
   </activespell>  
 
   <passivespell uniquename="PASSIVE_CAPE_UNDEAD" uisprite="PASSIVE_BRILLIANCE_1">
@@ -4265,7 +4266,7 @@
     <buffovertime target="all" type="energyregeneration" value="20.0" time="0" />
   </activespell>
   <activespell uniquename="MOB_SPEAK" target="all" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="5" energyusage="0" castrange="0" uitype="buff" castanimation="none" neutraleffect="true" buffpriority="10"></activespell>
-  <activespell uniquename="PLAYER_COUPDEGRACE" target="knockeddownplayer" damagecancelscasting="false" cancelautoattackaftercasting="true" castingtime="1.0" recastdelay="0" energyusage="0" castrange="2" uitype="damage" uisprite="COUPDEGRACE" category="damage" castanimation="execute" animmode="SingleAnim" neutraleffect="true" buffpriority="1">
+  <activespell uniquename="PLAYER_COUPDEGRACE" target="knockeddownplayer" damagecancelscasting="false" cancelautoattackaftercasting="true" castingtime="1.0" recastdelay="0" energyusage="0" castrange="2" uitype="damage" uisprite="COUPDEGRACE" category="damage" castanimation="execute" animmode="SingleAnim" neutraleffect="true" buffpriority="1" castablewhensilenced="true">
     <coupdegrace />
     <spellvfx target="target" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_impact_bloody" socket="floor" constraintpreset="inworld" />
     <AudioInfo name="SPELL_DMG_INSTANT_DAGGER_HEAVY" />
@@ -4398,17 +4399,17 @@
 
   <!-- Gallop - Giant Stags -->
   <activespell uniquename="MOUNT_SPEEDBUFF_GIANTSTAG_T4" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9">
-    <buffovertime type="movespeedbonus" value="0.35" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false" />
+    <buffovertime type="movespeedbonus" value="0.35" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="false" mountingbreakseffect="false" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_giantstag_speedbuff_01" socket="floor" fadeouttime="0.40" />
     <AudioInfo name="SPELL_MOUNT_SPEED" />
   </activespell>
   <activespell uniquename="MOUNT_SPEEDBUFF_GIANTSTAG_T6" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9">
-    <buffovertime type="movespeedbonus" value="0.45" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false" />
+    <buffovertime type="movespeedbonus" value="0.45" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="false" mountingbreakseffect="false" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_giantstag_speedbuff_01" socket="floor" fadeouttime="0.40" />
     <AudioInfo name="SPELL_MOUNT_SPEED" />
   </activespell>
   <activespell uniquename="MOUNT_SPEEDBUFF_GIANTSTAG_T7" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9">
-    <buffovertime type="movespeedbonus" value="0.5" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false" />
+    <buffovertime type="movespeedbonus" value="0.5" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="false" mountingbreakseffect="false" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_giantstag_speedbuff_01" socket="floor" fadeouttime="0.40" />
     <AudioInfo name="SPELL_MOUNT_SPEED" />
   </activespell>
@@ -4417,6 +4418,11 @@
   <!-- Gallop - Special Mounts -->
   <activespell uniquename="MOUNT_SPEEDBUFF_MOABIRD_T6" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9">
     <buffovertime type="movespeedbonus" value="0.65" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_direwolf_speedbuff_01" socket="floor" fadeouttime="0.40" />
+    <AudioInfo name="SPELL_MOUNT_SPEED" />
+  </activespell>  
+  <activespell uniquename="MOUNT_SPEEDBUFF_MOABIRD_T7" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.70" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_direwolf_speedbuff_01" socket="floor" fadeouttime="0.40" />
     <AudioInfo name="SPELL_MOUNT_SPEED" />
   </activespell>  
@@ -4484,7 +4490,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_MULE" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T2_MOUNT_MULE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T2_MOUNT_MULE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.47" target="self" time="0" />
   </activespell>
 
@@ -4501,7 +4507,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T3_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T3_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.84" target="self" time="0" />
   </activespell>
   <activespell uniquename="T4_MOUNT_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4516,7 +4522,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T4" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T4_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T4_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.54" target="self" time="0" />
   </activespell>
   <activespell uniquename="T5_MOUNT_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4531,7 +4537,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T5" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.37" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4546,7 +4552,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.26" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4561,7 +4567,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.189" target="self" time="0" />
   </activespell>
   <activespell uniquename="T8_MOUNT_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4576,7 +4582,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T8" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.139" target="self" time="0" />
   </activespell>
   <!--Armored Horse-->
@@ -4592,7 +4598,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T5" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_ARMORED_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4607,7 +4613,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_ARMORED_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4622,7 +4628,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T8_MOUNT_ARMORED_HORSE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4638,7 +4644,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T8" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_ARMORED_HORSE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <!--Ox Mount-->
@@ -4654,7 +4660,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T3_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T3_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="18.428" target="self" time="0" />
   </activespell>
   <activespell uniquename="T4_MOUNT_OX_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4669,7 +4675,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T4" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T4_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T4_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="15.423" target="self" time="0" />
   </activespell>
   <activespell uniquename="T5_MOUNT_OX_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4684,7 +4690,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T5" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="13.697" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_OX_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4699,7 +4705,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="12.623" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_OX_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4714,7 +4720,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="11.904" target="self" time="0" />
   </activespell>
   <activespell uniquename="T8_MOUNT_OX_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4729,7 +4735,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T8" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_OX_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_OX_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="11.386" target="self" time="0" />
   </activespell>
 
@@ -4746,7 +4752,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_GIANTSTAG_T4" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T4_MOUNT_GIANTSTAG_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T4_MOUNT_GIANTSTAG_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.08" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_GIANTSTAG_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4761,7 +4767,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_GIANTSTAG_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_GIANTSTAG_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_GIANTSTAG_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="2.38" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_GIANTSTAG_XMAS_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4776,7 +4782,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_GIANTSTAG_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_GIANTSTAG_XMAS_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_GIANTSTAG_XMAS_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="2.31" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_DIREWOLF_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4791,7 +4797,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREWOLF_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_DIREWOLF_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4806,7 +4812,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREWOLF_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>  
   <activespell uniquename="T8_MOUNT_DIREWOLF_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4821,7 +4827,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREWOLF_T8" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_DIREWOLF_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_WILDBOAR_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4836,7 +4842,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_WILDBOAR_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />    
   </activespell>
-  <activespell uniquename="T6_MOUNT_WILDBOAR_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_WILDBOAR_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.78" target="self" time="0" />
   </activespell>  
   <activespell uniquename="T7_MOUNT_DIREBOAR_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4851,7 +4857,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREBOAR_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />    
   </activespell>
-  <activespell uniquename="T7_MOUNT_DIREBOAR_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_DIREBOAR_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="4.16" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_SWAMPDRAGON_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4865,7 +4871,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_SWAMPDRAGON_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_SWAMPDRAGON_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.57" target="self" time="0" />
   </activespell>  
   <activespell uniquename="T8_MOUNT_DIREBEAR_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4880,24 +4886,9 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREBEAR" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_DIREBEAR_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_DIREBEAR_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="6.831" target="self" time="0" />
-  </activespell>
-  <activespell uniquename="T8_MOUNT_RHINO_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
-    <buffovertime type="movespeedbonus" value="0.55" target="self" time="0" />
-    <buffovertime type="physicalarmor" value="0.8" target="self" time="0" />
-    <buffovertime type="magicresistance" value="0.8" target="self" time="0" />
-    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
-    <removeactiveeffects category="movementbuff" target="self" />
-    <spellimmunity category="buff" target="self" time="0" />
-    <spellimmunity category="movementbuff" target="self" time="0" />
-    <spellimmunity category="heal" target="self" time="0" />
-    <spellimmunity category="buff_damageshield" target="self" time="0" />
-    <castspellaftermoving spell="MOUNT_SPEEDBUFF_RHINO_T8" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
-  </activespell>
-  <activespell uniquename="T8_MOUNT_RHINO_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
-    <buffovertime type="maxload" value="1.14" target="self" time="0" />
-  </activespell>  
+  </activespell> 
   <activespell uniquename="T8_MOUNT_MAMMOTH_TRANSPORT_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
     <buffovertime type="movespeedbonus" value="0.3" target="self" time="0" />
     <buffovertime type="physicalarmor" value="1.5" target="self" time="0" />
@@ -4909,7 +4900,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_MAMMOTH_TRANSPORT_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_MAMMOTH_TRANSPORT_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="113.86" target="self" time="0" />
     <!--10 times a T8 ox-->
   </activespell>
@@ -4929,7 +4920,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <removeactiveeffects category="movementbuff" target="self" />    
   </activespell>
-  <activespell uniquename="T8_MOUNT_MAMMOTH_BATTLE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_MAMMOTH_BATTLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="11.0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_SWAMPDRAGON_BATTLE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4944,7 +4935,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_SWAMPDRAGON_BATTLE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_SWAMPDRAGON_BATTLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="11.0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T7_MOUNT_ARMORED_SWAMPDRAGON_BATTLE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4959,7 +4950,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_ARMORED_SWAMPDRAGON_BATTLE_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_ARMORED_SWAMPDRAGON_BATTLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="11.0" target="self" time="0" />
   </activespell>
   <activespell uniquename="T6_MOUNT_SIEGE_BALLISTA_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4974,10 +4965,70 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_SIEGE_BALLISTA_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_SIEGE_BALLISTA_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="5.0" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T5_MOUNT_RHINO_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="0.9" target="self" time="0" />
+    <buffovertime type="magicresistance" value="0.9" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T5_MOUNT_RHINO_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="10.96" target="self" time="0" />
   </activespell>  
-  
+  <activespell uniquename="T6_MOUNT_RHINO_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="0.9" target="self" time="0" />
+    <buffovertime type="magicresistance" value="0.9" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T6_MOUNT_RHINO_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="10.08" target="self" time="0" />
+  </activespell>  
+  <activespell uniquename="T7_MOUNT_RHINO_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="0.9" target="self" time="0" />
+    <buffovertime type="magicresistance" value="0.9" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T7_MOUNT_RHINO_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="9.51" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T8_MOUNT_RHINO_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="0.9" target="self" time="0" />
+    <buffovertime type="magicresistance" value="0.9" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T8_MOUNT_RHINO_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="9.11" target="self" time="0" />
+  </activespell>
+
 
   <!--Faction Mounts-->
   <activespell uniquename="T5_MOUNT_HORSE_UNDEAD_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -4992,7 +5043,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_HORSE_UNDEAD_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_HORSE_UNDEAD_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.26" target="self" time="0" />
   </activespell>
 
@@ -5008,7 +5059,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T9" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_HORSE_UNDEAD_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_HORSE_UNDEAD_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.10" target="self" time="0" />
   </activespell>
 
@@ -5024,7 +5075,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_COUGAR_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_COUGAR_KEEPER_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_COUGAR_KEEPER_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
 
@@ -5040,7 +5091,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_COUGAR_T9" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_COUGAR_KEEPER_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_COUGAR_KEEPER_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>  
 
@@ -5056,7 +5107,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_ARMORED_HORSE_MORGANA_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_ARMORED_HORSE_MORGANA_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
 
@@ -5072,7 +5123,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T9" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T8_MOUNT_ARMORED_HORSE_MORGANA_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T8_MOUNT_ARMORED_HORSE_MORGANA_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   
@@ -5090,9 +5141,24 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_MOABIRD_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_MOABIRD_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_MOABIRD_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
-  </activespell>  
+  </activespell>
+  <activespell uniquename="T7_MOUNT_MOABIRD_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.70" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="0" target="self" time="0" />
+    <buffovertime type="magicresistance" value="0" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="0" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />    
+    <castspellaftermoving spell="MOUNT_SPEEDBUFF_MOABIRD_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
+  </activespell>
+  <activespell uniquename="T7_MOUNT_MOABIRD_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="0" target="self" time="0" />
+  </activespell>    
 
   <activespell uniquename="T6_MOUNT_SNOWBEAR_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
     <buffovertime type="movespeedbonus" value="0.55" target="self" time="0" />
@@ -5106,7 +5172,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_SNOWBEAR_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_SNOWBEAR_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_SNOWBEAR_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="6.3" target="self" time="0" />
   </activespell>   
 
@@ -5122,7 +5188,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_RAM_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_RAM_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_RAM_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="10.08" target="self" time="0" />
   </activespell>
 
@@ -5137,7 +5203,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="T6_MOUNT_SALAMANDER_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T6_MOUNT_SALAMANDER_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.26" target="self" time="0" />
   </activespell>
   
@@ -5158,7 +5224,7 @@
       </not>      
     </applyeffectoneventactive>
   </activespell>
-  <activespell uniquename="T7_MOUNT_SALAMANDER_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_SALAMANDER_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.19" target="self" time="0" />
   </activespell>
 
@@ -5236,7 +5302,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_TELLAFRIEND_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_TELLAFRIEND_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.845" target="self" time="0" />
   </activespell>
 
@@ -5254,7 +5320,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_SLEIGH_T7" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T7_MOUNT_SLEIGH_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T7_MOUNT_SLEIGH_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.57" target="self" time="0" />
   </activespell>
 
@@ -5270,7 +5336,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DONKEY" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_DONKEY_UNIQUE_TELLAFRIEND_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_DONKEY_UNIQUE_TELLAFRIEND_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.753" target="self" time="0" />
   </activespell>
 
@@ -5286,7 +5352,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DONKEY" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_RAM_TELLAFRIEND_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_RAM_TELLAFRIEND_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.753" target="self" time="0" />
   </activespell>
 
@@ -5302,7 +5368,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_DONKEY" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_PIG_TELLAFRIEND_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_PIG_TELLAFRIEND_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.753" target="self" time="0" />
   </activespell>
   
@@ -5317,7 +5383,7 @@
     <spellimmunity category="heal" target="self" time="0" />
     <spellimmunity category="buff_damageshield" target="self" time="0" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_GIANTTOAD_TELLAFRIEND_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_GIANTTOAD_TELLAFRIEND_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="1.84" target="self" time="0" />
   </activespell>
 
@@ -5335,7 +5401,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T5" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_HORSE_ARENA_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_HORSE_ARENA_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
 
@@ -5351,7 +5417,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />    
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_COUGAR_T6" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="T5_MOUNT_COUGAR_ARENA_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="T5_MOUNT_COUGAR_ARENA_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="0" target="self" time="0" />
   </activespell>
   
@@ -5370,7 +5436,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_HORSE_FOUNDER_LEGENDARY_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_HORSE_FOUNDER_LEGENDARY_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.682" target="self" time="0" />
   </activespell>
 
@@ -5386,7 +5452,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_OX_FOUNDER_LEGENDARY_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_OX_FOUNDER_LEGENDARY_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="22.11" target="self" time="0" />
   </activespell>
 
@@ -5402,7 +5468,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_HORSE_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_HORSE_STARTERPACK_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_HORSE_STARTERPACK_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="3.682" target="self" time="0" />
   </activespell>
 
@@ -5418,7 +5484,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_OX_T3" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_CART_STARTERPACK_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_CART_STARTERPACK_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="22.11" target="self" time="0" />
   </activespell>
 
@@ -5435,7 +5501,7 @@
     <spellimmunity category="buff_damageshield" target="self" time="0" />
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_GIANTSTAG_T4" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self" />
   </activespell>
-  <activespell uniquename="UNIQUE_MOUNT_GIANTSTAG_FOUNDER_EPIC_HALFMOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+  <activespell uniquename="UNIQUE_MOUNT_GIANTSTAG_FOUNDER_EPIC_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="2.76" target="self" time="0" />
   </activespell>
 
@@ -5474,10 +5540,68 @@
     <removeactivespell spell="MOUNT_SPEEDBUFF_DIREWOLF_T7" target="self" />
     <removeactivespell spell="MOUNT_SPEEDBUFF_DIREWOLF_T8" target="self" />  
   </activespell>
-      
+
+  <activespell uniquename="MOUNTSPELL_GIANTSTAG_LEAP" target="ground" keepmovingaftercast="false" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="30" energyusage="0" castrange="15" uitype="movement" uisprite="DODGE" category="instant" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive" hidespelleffecticon="true">
+    <dummy target="self" time="1" showarearadius="true" effectarearadius="1" />
+    <invincibility target="self" time="0.85" />
+    <spellimmunity target="self" category="forcedmovement" time="0.85" />
+    <spellimmunity target="self" category="debuff" time="0.85" />
+    <spellimmunity target="self" category="crowdcontrol" time="0.85" />
+    <dash mindistance="8" movespeed="18" animID="mount_giantstag_leap" scaleAnim="true" ruleset="constanttime">
+      <IfOwnLoadPercentIsBelow value="150" />
+    </dash>
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0.1" />    
+    <AudioInfo name="SPELL_EVASIVEJUMP" />
+  </activespell>
   
-  <!--GvG Season Mount Spells -->
-  <activespell uniquename="MOUNTSPELL_RHINO_CHARGE" target="ground" keepmovingaftercast="false" castingtime="0.8" recastdelay="30" energyusage="16" castrange="22" category="instant" uitype="crowdcontrol" showrange="true" uisprite="HAMMERTACKLE" adjustgroundtargettorange="true" castanimation="mount_rhino_charge" interruptiblebyspell="false" hidespelleffecticon="true">
+  <activespell uniquename="MOUNTSPELL_TERRORBIRD_FLASH" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="60" energyusage="0.15" energyusageisrelative="true" castrange="0" uitype="movement" uisprite="DASH_BUFF" category="instant" assessment="positive" > 
+    <buffovertime type="movespeedbonus" target="self" value="3" time="2" mountingbreakseffect="true" />
+    <invincibility target="self" time="2" mountingbreakseffect="true" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0.25" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0.5" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0.75" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="1" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="1.25" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="1.5" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="1.75" />    
+    <tintfx color="255, 204, 0, 255" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_shieldbubble_holy" socket="damage" constraintpreset="pointconstraint" />
+    <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large_02" socket="damage" constraintpreset="pointconstraint" />   
+  </activespell>  
+
+  <activespell uniquename="CHAMELEON_STEALTH" keepmovingaftercast="true" target="self" recastdelay="60" energyusage="0.08" energyusageisrelative="true" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" castanimation="none" uisprite="STEALTH" castrange="0" uitype="buff" cancelautoattackaftercasting="true" assessment="positive" hidespelleffecticon="true">
+    <channelingspell allowcancel="true" allowmovement="true" damagecancelscasting="true" initialeffectinterval="0" effectinterval="1" effectcount="9" energyusage="0.08" energyusageisrelative="true" ignoreMovedChannelAnim="true" >
+      <applyspell spell="REVEAL_INVISIBILITY" target="other" effectarearadius="15" />
+      <invisibility target="self" time="1" to="everyone" linktochanneling="true" />
+      <buffovertime target="self" time="1" type="energyregenerationbonus" value="-1" linktochanneling="true" />
+      <buffovertime target="self" time="1" type="movespeedbonus" value="-0.8" linktochanneling="true" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" donttriggerdiminishingreturns="true" ignorediminishingreturns="true" />
+      <spellvfx target="self" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_smokescreen" socket="floor" constraintpreset="inworld" />
+      <spellvfx target="self" event="OnChannelingInterrupted" alive="none" prefab="FX/ClientPrefabs/fx_smokescreen" socket="floor" constraintpreset="inworld" />
+      <spellvfx target="self" event="OnChannelingEnd" alive="none" prefab="FX/ClientPrefabs/fx_smokescreen" socket="floor" constraintpreset="inworld" />
+      <AudioInfo name="SPELL_UNDEAD_INVISIBILITY"/>
+    </channelingspell>
+  </activespell>  
+  
+  <!-- Guild Season Mount Spells -->
+
+  <activespell uniquename="MOUNTSPELL_PBAOE_RHINO_DEBUFF" target="self" keepmovingaftercast="false" castingtime="1" standtime="0.4" recastdelay="4" energyusage="6" castrange="0" category="crowdcontrol" uitype="crowdcontrol" showrange="true" uisprite="MOUNTSPELL_BIGCLEAVE" castanimation="mount_rhino_stomp" assessment="negative" maxstack="1" maxcharges="1">
+    <spelleffectarea target="ground" position="attarget" time="2" visible="false" effect="NONE" >
+      <area>        
+        <shape>
+          <node distance="1.25" >
+            <circle radius="14">
+            </circle>
+          </node>  
+        </shape>
+      </area>      
+    </spelleffectarea>
+    <spellvfx prefab="FX/ClientPrefabs/fx_spell_smokecloud_14m" target="self" constraintpreset="inWorldWithRotate" socket="root_mount" alive="none" event="OnCastFinished" ignoresocketscale="true" size="14.0" />                   
+    <buffovertime target="enemy" type="hitpointsmaxbonus" value="-0.08" time="10" effectarearadius="14" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" donttriggerdiminishingreturns="true" ignorediminishingreturns="true" />
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
+  </activespell> 
+    
+  <activespell uniquename="MOUNTSPELL_RHINO_CHARGE" target="ground" keepmovingaftercast="false" castingtime="1.2" recastdelay="50" energyusage="16" castrange="22" category="instant" uitype="crowdcontrol" showrange="true" uisprite="HAMMERTACKLE" adjustgroundtargettorange="true" castanimation="mount_rhino_charge" interruptiblebyspell="false" hidespelleffecticon="true">
     <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="22" />
     <pulsingspell target="self" spell="MOUNTSPELL_RHINO_CHARGE_PULSE" count="15" initialinterval="0" interval="0.1" />
     <dash movespeed="25" scaleAnim="false" animID="mount_rhino_charge" endeffect="MOUNTSPELL_RHINO_CHARGE_END">
@@ -5486,43 +5610,25 @@
     <AudioInfo name="SPELL_RHINO_CHARGE" />
   </activespell>
   <activespell uniquename="MOUNTSPELL_RHINO_CHARGE_PULSE" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="crowdcontrol" hidespelleffecticon="true">
-    <applyspell target="enemy" spell="MOUNTSPELL_RHINO_CHARGE_EFFECT" effectarearadius="3" />
-    <spellimmunity target="enemy" spellname="MOUNTSPELL_RHINO_CHARGE_PULSE" time="1.5" effectarearadius="3" />
+    <applyspell target="enemy" spell="MOUNTSPELL_RHINO_CHARGE_EFFECT" effectarearadius="4" />
+    <spellimmunity target="enemy" spellname="MOUNTSPELL_RHINO_CHARGE_PULSE" time="1.5" effectarearadius="4" />
     <spellvfx event="OnCastFinished" target="ground" prefab="FX/ClientPrefabs/fx_dust_01" socket="floor" constraintpreset="inworld" timeoffset="0" />    
   </activespell>
   <activespell uniquename="MOUNTSPELL_RHINO_CHARGE_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" category="damage" uitype="crowdcontrol" uisprite="HAMMERTACKLE">
+    <applyspell target="enemy" spell="PURGE_BUFFS" />
     <directattributechange target="enemy" attribute="health" change="-50.00" effecttype="physical" />
     <applyspell target="enemy" spell="MOUNTSPELL_RHINO_CHARGE_KNOCKBACK" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_BIGIMPACT" />
   </activespell>
   <activespell uniquename="MOUNTSPELL_RHINO_CHARGE_KNOCKBACK" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" category="forcedmovement" uitype="crowdcontrol" uisprite="HAMMERTACKLE">
-    <knockback fromwhere="FromCollisionPoint" target="enemy" distance="15" movespeed="20" />  
+    <knockback fromwhere="FromCaster" target="enemy" distance="12" movespeed="20" />  
   </activespell>
   <activespell uniquename="MOUNTSPELL_RHINO_CHARGE_END" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="crowdcontrol" uisprite="HAMMERTACKLE" hidespelleffecticon="true">
     <spellvfx target="ground" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_keeper_ram_impact" socket="floor" constraintpreset="inWorldWithRotate" />
     <removeactivespell target="self" spell="MOUNTSPELL_RHINO_CHARGE" casterchargesonly="true" />
       <AudioInfo name="SPELL_RHINO_SWOOSH" />
-  </activespell>
-  
-  <activespell uniquename="MOUNTSPELL_RHINO_CHARGE_V2" target="ground" keepmovingaftercast="false" castingtime="1.2" recastdelay="30" energyusage="16" castrange="22" category="instant" uitype="crowdcontrol" showrange="true" uisprite="HAMMERTACKLE" adjustgroundtargettorange="true" castanimation="mount_rhino_charge" interruptiblebyspell="false" hidespelleffecticon="true">
-    <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="22" />
-    <pulsingspell target="self" spell="MOUNTSPELL_RHINO_CHARGE_PULSE" count="15" initialinterval="0" interval="0.1" />
-    <dash movespeed="25" scaleAnim="false" animID="mount_rhino_charge" endeffect="MOUNTSPELL_RHINO_CHARGE_END">
-      <IfOwnLoadPercentIsBelow value="150" />
-    </dash>
-    <AudioInfo name="SPELL_RHINO_CHARGE" />
-  </activespell>  
-
-  <!--
-  <activespell uniquename="MOUNTSPELL_RHINO_CRYSTALSHIELD" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="50" energyusage="8" castrange="0" uisprite="FORCEFIELD" uitype="heal" category="buff" castanimation="none" assessment="positive" maxstack="1">
-    <buffovertime target="self" value="0.35" time="8" type="physicalarmor" />
-    <buffovertime target="self" value="0.35" time="8" type="magicresistance" />
-    <buffovertime target="self" value="0.30" time="8" type="healmodifier" />
-    <spellvfx prefab="FX/ClientPrefabs/fx_force_shield" socket="floor" constraintpreset="pointconstraint" target="self" event="OnCastStart" alive="none" size="0.3" />
-    <tintfx color="100, 100, 190, 200" />
-  </activespell>
-  -->
+  </activespell> 
 
   <!-- Rare Mount Spells -->  
   <activespell uniquename="MOUNTSPELL_TOADJUMP" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="2.5" energyusage="0" castrange="16" uitype="movement" uisprite="DODGE" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
@@ -5847,6 +5953,31 @@
     <AudioInfo name="SPELL_MOUNT_SPEED"/>  
   </togglespell>
 
+  <togglespell uniquename="MOUNTSPELL_SPRINT_RHINO_T8" uisprite="SPRINT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
+    <buffovertime type="movespeedbonus" value="0.9" target="self" time="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <pulsingspell spell="MOUNTSPELL_SPRINT_SILENCE" target="self" initialinterval="0" interval="1" count="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </togglespell>
+  <togglespell uniquename="MOUNTSPELL_SPRINT_RHINO_T7" uisprite="SPRINT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
+    <buffovertime type="movespeedbonus" value="0.85" target="self" time="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <pulsingspell spell="MOUNTSPELL_SPRINT_SILENCE" target="self" initialinterval="0" interval="1" count="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </togglespell>
+  <togglespell uniquename="MOUNTSPELL_SPRINT_RHINO_T6" uisprite="SPRINT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
+    <buffovertime type="movespeedbonus" value="0.8" target="self" time="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <pulsingspell spell="MOUNTSPELL_SPRINT_SILENCE" target="self" initialinterval="0" interval="1" count="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </togglespell>
+  <togglespell uniquename="MOUNTSPELL_SPRINT_RHINO_T5" uisprite="SPRINT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
+    <buffovertime type="movespeedbonus" value="0.75" target="self" time="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <pulsingspell spell="MOUNTSPELL_SPRINT_SILENCE" target="self" initialinterval="0" interval="1" count="600" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="true" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </togglespell>
+
   <togglespell uniquename="MOUNTSPELL_SPRINT_SILENCE" uisprite="MAGIC_INTERRUPT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
     <silence target="self" time="4" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx" socket="halo" />
@@ -6032,11 +6163,20 @@
   </activespell>
   <activespell uniquename="VANITY_HORN_BLOW" uisprite="DRINK" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="20" category="instant" hitdelay="0" standtime="2.1" castanimation="vanity_hunting_horn" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
   </activespell>
-  <activespell uniquename="VANITY_TRUMPET_TUNE_A" uisprite="DRINK" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0" standtime="2.1" castanimation="vanity_hunting_horn" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+  <activespell uniquename="VANITY_TRUMPET_TUNE_A" uisprite="JUMP_ATTACK" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0.2" standtime="0" castanimation="vanity_trumpet_play" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+    <channelingspell initialeffectinterval="0" effectinterval="1" channelinganimation="channel_vanity_trumpet" effectcount="4" energyusage="0" >
+      <AudioInfo name="SPELL_VANITY_TRUMPET_FANFARE" />
+    </channelingspell>
   </activespell>
-  <activespell uniquename="VANITY_TRUMPET_TUNE_B" uisprite="DRINK" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0" standtime="2.1" castanimation="vanity_hunting_horn" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+  <activespell uniquename="VANITY_TRUMPET_TUNE_B" uisprite="FEAR" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0.2" standtime="0" castanimation="vanity_trumpet_play" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+    <channelingspell initialeffectinterval="0" effectinterval="1" channelinganimation="channel_vanity_trumpet" effectcount="10" energyusage="0" >
+      <AudioInfo name="SPELL_VANITY_TRUMPET_FUNERAL" />
+    </channelingspell>
   </activespell>
-  <activespell uniquename="VANITY_TRUMPET_TUNE_C" uisprite="DRINK" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0" standtime="2.1" castanimation="vanity_hunting_horn" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+  <activespell uniquename="VANITY_TRUMPET_TUNE_C" uisprite="ENABLEPVP" target="self" castingtime="0" castrange="0" energyusage="0" recastdelay="40" category="instant" hitdelay="0.2" standtime="0" castanimation="vanity_trumpet_play" uitype="buff" animmode="SingleAnim" animIgnoreHitDelay="true" ignorecasttimereductionbonus="true">
+    <channelingspell initialeffectinterval="0" effectinterval="1" channelinganimation="channel_vanity_trumpet" effectcount="6" energyusage="0" >
+      <AudioInfo name="SPELL_VANITY_TRUMPET_MAINTHEME" />
+    </channelingspell>
   </activespell>
 
   <!--Vanity Summoning Spells-->  
@@ -6265,7 +6405,11 @@
   <activespell uniquename="UNIQUE_LOOTCHEST_ADC_JAN2019_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
     <generateloot target="self" lootlist="UNIQUE_LOOTCHEST_ADC_JAN2019_LOOT"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
-  </activespell>  
+  </activespell>
+  <activespell uniquename="UNIQUE_LOOTCHEST_ADC_FEB2019_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <generateloot target="self" lootlist="UNIQUE_LOOTCHEST_ADC_FEB2019_LOOT"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>
 
   <!-- Adventurer Challenge - Avatar Rings -->
   <activespell uniquename="UNIQUE_AVATARRING_ADC_NOV2018_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
@@ -6280,36 +6424,52 @@
     <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_ADC_JAN2019" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
+  <activespell uniquename="UNIQUE_AVATARRING_ADC_FEB2019_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_ADC_FEB2019" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>
 
   <!-- GvG Season Avatar Rings -->
+  <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_1ST_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_1ST" target="self"/>   
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>  
+  <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_2ND_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_2ND" target="self"/>   
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell> 
+  <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_3RD_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_3RD" target="self"/>   
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>     
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_CRYSTAL_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_CRYSTAL" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_GOLD" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_SILVER" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_BRONZE" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_IRON" target="self"/>    
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_CRYSTAL" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_GOLD" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_SILVER" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_BRONZE" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_IRON" target="self"/>    
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_GOLD_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_GOLD" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_SILVER" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_BRONZE" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_IRON" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_GOLD" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_SILVER" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_BRONZE" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_IRON" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_SILVER_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_SILVER" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_BRONZE" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_IRON" target="self"/>    
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_SILVER" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_BRONZE" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_IRON" target="self"/>    
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_BRONZE_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_BRONZE" target="self"/>
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_IRON" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_BRONZE" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_IRON" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_IRON_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
-    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_GVGSEASONREWARD_IRON" target="self"/>
+    <unlockavatar unlocktype="avatarring" unlockname="RING_GVGSEASONREWARD_IRON" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
 
@@ -6318,8 +6478,16 @@
     <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_TELLAFRIEND" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
-  
+  <activespell uniquename="UNIQUE_AVATARRING_TELLAFRIEND_02_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_TELLAFRIEND_02" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>
 
+  <!-- GvG Season Avatars -->
+  <activespell uniquename="UNIQUE_AVATAR_GVGSEASON_04_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatar" unlockname="GVGSEASON_04" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>
 
 
   <!--######################################-->
@@ -6467,20 +6635,30 @@
   </activespell>
 
 
-  <activespell uniquename="REVEAL_INVISIBILITY" target="enemy" castingtime="0" energyusage="0" recastdelay="0" castrange="0" hitdelay="0" standtime="0" uisprite="PURGE" uitype="debuff" category="instant" castanimation="cast_staffonground" showrange="true">
-    <removeactivespell spell="AMBUSH" target="enemy" />
-    <removeactivespell spell="AMBUSH_EFFECT" target="enemy" />
-    <removeactivespell spell="ETHERIAL_PATH_INVISIBILITY" target="enemy" />
-    <removeactivespell spell="MAGICMUSHROOM_INVISIBILITY" target="enemy" />
-    <removeactivespell spell="GHOSTSTRIKE_INVIS" target="enemy" />
-    <removeactivespell spell="MOUNTSPELL_UNDEAD_STEALTH" target="enemy" />
-    <removeactivespell spell="POTION_INVISIBILITY_EFFECT" target="enemy" />    
-    <removeactivespell spell="SMOKEBOMB_EFFECT" target="enemy" />
-    <removeactivespell spell="PASSIVE_CAPE_UNDEAD_EFFECT" target="enemy" />
-    <interruptcast target="enemy">
+  <activespell uniquename="REVEAL_INVISIBILITY" target="all" castingtime="0" energyusage="0" recastdelay="0" castrange="0" hitdelay="0" standtime="0" uisprite="PURGE" uitype="debuff" category="instant" castanimation="cast_staffonground" showrange="true">
+    <removeactivespell spell="AMBUSH" target="all" />
+    <removeactivespell spell="AMBUSH_EFFECT" target="all" />
+    <removeactivespell spell="ETHERIAL_PATH_INVISIBILITY" target="all" />
+    <removeactivespell spell="MAGICMUSHROOM_INVISIBILITY" target="all" />
+    <removeactivespell spell="GHOSTSTRIKE_INVIS" target="all" />
+    <removeactivespell spell="MOUNTSPELL_UNDEAD_STEALTH" target="all" />
+    <removeactivespell spell="POTION_INVISIBILITY_EFFECT" target="all" />    
+    <removeactivespell spell="SMOKEBOMB_EFFECT" target="all" />
+    <removeactivespell spell="PASSIVE_CAPE_UNDEAD_EFFECT" target="all" />
+    <interruptcast target="all">
       <IfIsTargetChanneling spell="STEALTH_REVEAL_CHANNELING" />
-    </interruptcast>    
+    </interruptcast>
+    <interruptcast target="all">
+      <IfIsTargetChanneling spell="DEATHMARK_CHANNELING" />
+    </interruptcast>
+    <interruptcast target="all">
+      <IfIsTargetChanneling spell="INVISIBLE_WALK_CHANNELING" />
+    </interruptcast>
+    <interruptcast target="all">
+      <IfIsTargetChanneling spell="CHAMELEON_STEALTH_CHANNELING" />
+    </interruptcast>
   </activespell>
+  
 
   <activespell uniquename="REMOVE_BEAMS" target="enemy" castingtime="0" energyusage="0" recastdelay="0" castrange="0" hitdelay="0" standtime="0" uisprite="PURGE" uitype="debuff" category="instant" castanimation="cast_staffonground" showrange="true">
     <removeactivespell spell="EMPOWERBEAM_EFFECT" target="enemy" />
@@ -7010,8 +7188,6 @@
   <activespell uniquename="RENDINGSWING" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0.2" standtime="0.4" disruptionfactor="1" recastdelay="15" energyusage="18" castrange="3" uitype="damage" uisprite="AXE_DOT" castanimation="melee_sweepingblow" category="damage" showrange="true" assessment="negative">
     <applyspell spell="RENDINGSWING_CONDITION" target="enemy" effectarearadius="7" />
     <applyspell spell="RENDINGSWING_CONDITION2" target="self" />
-    <directattributechange target="enemy" attribute="health" effecttype="physical" change="-125.00" effectarearadius="7" targetcountvaluebonusfactor="0.1" />
-    <spelleffectfx prefab="fx/clientprefabs/fx_dot_bloody" socket="floor" constraintpreset="pointconstraint" />
     <spellvfx target="self" event="OnCastStart" alive="toCastingEnd" prefab="FX/ClientPrefabs/fx_spell_melee_spin_7m" socket="root" constraintpreset="inWorldWithRotate" timeoffset="0.2" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_impact_bloody" socket="floor" constraintpreset="inworld" />
     <AudioInfo name="MELEE_BIG_SPIN_BIG_IMPACT" />
@@ -7062,6 +7238,7 @@
     <applyspell spell="RENDINGSWING_DOT3" target="self" >
         <IfSpellActive who="Caster" spell="RENDINGSWING_EFFECT3" casterchargesonly="true" />
     </applyspell>
+    <directattributechange target="enemy" attribute="health" effecttype="physical" change="-125.00" effectarearadius="7" targetcountvaluebonusfactor="0.1" />  
   </activespell>  
 
   <activespell uniquename="RENDINGSWING_DOT1" target="all" energyusage="0" castingtime="0" castrange="0" recastdelay="0" category="instant" uisprite="WHIRL_DOT" uitype="debuff" assessment="negative">
@@ -7157,7 +7334,7 @@
         <shape>
           <node distance="-2">
             <arc angle="100" innerradius="2" outerradius="9">
-              <spellvfx target="target" event="OnCastFinished" alive="none" constraintpreset="inWorldWithRotate" socket="demon_firebreath" prefab="FX/ClientPrefabs/fx_spell_dualaxe_crawler_swoosh" />
+              <spellvfx target="target" event="OnCastFinished" alive="none" constraintpreset="inWorldWithRotate" socket="dualaxe" prefab="FX/ClientPrefabs/fx_spell_dualaxe_crawler_swoosh" />
             </arc>
           </node>
         </shape>
@@ -7191,14 +7368,27 @@
   <activespell uniquename="DEADLYSHOT" target="ground" castingtime="0" keepmovingaftercast="false" hitdelay="0.2" standtime="0.4" disruptionfactor="1" recastdelay="3" energyusage="4" castrange="18" uitype="damage" uisprite="ARROW_AIMED" category="damage" castanimation="ranged_standardshot" assessment="negative" adjustgroundtargettorange="true" >
     <spelleffectarea visible="false" time="0.4" effect="DEADLYSHOT_EFFECT" target="enemy" removeonleave="false" position="atcaster" applyeffectonlyoncepertarget="true" skillshotindicatormax="22" skillshotindicatormin="22">
       <area>
-        <shape material="Purple">
+        <shape>
           <node angle="0" distance="10">
             <rectangle width="2" height="18"/>
           </node>
         </shape>
       </area>
     </spelleffectarea>
+    <spelleffectarea visible="false" time="1" effect="NONE" target="enemy" removeonleave="false" position="atcaster" applyeffectonlyoncepertarget="true" >
+      <area>
+        <shape>
+          <node angle="0" distance="10">
+            <rectangle width="2" height="18">
+              <spellvfx prefab="FX/ClientPrefabs/fx_spell_deadlyshot" constraintpreset="inWorldWithRotate" alive="none" event="SpellEffectAreaInit" target="target" socket="backcenterLaser2" />
+            </rectangle>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+    <!--
     <spellvfx target="self" socket="maintrail_180" prefab="FX/ClientPrefabs/fx_spell_deadlyshot" constraintpreset="inWorldWithRotate" event="SpellEffectAreaInit" />
+    -->
     <AudioInfo name="SPELL_ARROW_CAST_DEADLYSHOT" />
   </activespell>
   <activespell uniquename="DEADLYSHOT_EFFECT" target="enemy" castingtime="0" hitdelay="0.2" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="ARROW_AIMED" category="damage" castanimation="none" assessment="negative" maxcharges="3" >
@@ -7728,7 +7918,7 @@
     <AudioInfo name="SPELL_ARROW_HIT_MEDIUM" />
   </activespell>
   <!-- Artefact Level 1-->
-  <activespell uniquename="GROUNDMINE" target="ground" keepmovingaftercast="false" castingtime="0" hitdelay="0.5" standtime="0.5" disruptionfactor="1" recastdelay="20" energyusage="14" castrange="15" uisprite="FIREBALL" uitype="crowdcontrol" category="crowdcontrol" castanimation="ranged_heavycrossbow" showrange="true" assessment="negative" adjustgroundtargettorange="true">
+  <activespell uniquename="GROUNDMINE" target="ground" keepmovingaftercast="false" castingtime="0" hitdelay="0.5" standtime="0.5" disruptionfactor="1" recastdelay="20" energyusage="14" castrange="15" uisprite="FIREBALL" uitype="damage" category="instant" castanimation="ranged_heavycrossbow" showrange="true" assessment="negative" adjustgroundtargettorange="true">
     <dummy target="self" time="1" effectarearadius="1.5" showarearadius="true" />
     <spelleffectarea effect="GROUNDMINE_EFFECT" effectarearadius="2" time="12" target="all" maxeffectareatargets="1" removeonleave="false" applyeffectonlyoncepertarget="true" deletewhenmaxtargetshit="true" visible="true">
       <area>
@@ -7746,11 +7936,11 @@
     </projectile>
     <AudioInfo name="SPELL_ARROW_CAST_MEDIUM" />
   </activespell> 
-  <activespell uniquename="GROUNDMINE_EFFECT" target="all" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" uisprite="CALTROPS" castrange="0" uitype="crowdcontrol" category="crowdcontrol" hidespelleffecticon="true" assessment="negative">
+  <activespell uniquename="GROUNDMINE_EFFECT" target="all" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" uisprite="CALTROPS" castrange="0" uitype="damage" category="instant" hidespelleffecticon="true" assessment="negative">
     <applyspell target="all" spell="GROUNDMINE_EFFECT2" />
     <spellvfx target="target" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_undead_mine_explosion" constraintpreset="inworld" />
   </activespell>
-  <activespell uniquename="GROUNDMINE_EFFECT2" target="all" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" uisprite="CALTROPS" castrange="0" uitype="crowdcontrol" category="crowdcontrol" hidespelleffecticon="true" assessment="negative">
+  <activespell uniquename="GROUNDMINE_EFFECT2" target="all" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" uisprite="CALTROPS" castrange="0" uitype="damage" category="damage" hidespelleffecticon="true" assessment="negative">
     <directattributechange target="enemy" attribute="health" change="-270.00" effectarearadius="7" effecttype="magic" targetcountvaluebonusfactor="0.1" reflectdamage="never" />
     <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="floor" constraintpreset="pointconstraint" />
   </activespell>
@@ -8157,9 +8347,9 @@
         </fill>
       </area>
     </spellindicationarea>
-    <directattributechange target="enemy" attribute="health" effecttype="magic" change="-111.97" effectarearadius="13" targetcountvaluebonusfactor="0.1" showarearadius="true" />
-    <buffovertime target="enemy" type="physicalarmor" value="-0.14" time="8" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
-    <buffovertime target="enemy" type="magicresistance" value="-0.14" time="8" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
+    <directattributechange target="enemy" attribute="health" effecttype="magic" change="-120.00" effectarearadius="13" targetcountvaluebonusfactor="0.1" showarearadius="true" />
+    <buffovertime target="enemy" type="physicalarmor" value="-0.17" time="8" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
+    <buffovertime target="enemy" type="magicresistance" value="-0.17" time="8" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" socket="damage" constraintpreset="pointconstraint" />    
     <spellvfx event="OnCastFinished" target="ground" prefab="FX/ClientPrefabs/fx_spell_demonic_area_ultimate" socket="ground" constraintpreset="pointconstraint" />
     <spellvfx target="self" alive="toCastingEnd" event="OnCastStart" prefab="FX/ClientPrefabs/fx_spell_demonic_area_ground" socket="root" constraintpreset="inworld" />
@@ -8291,7 +8481,7 @@
     <directattributechange target="enemy" attribute="health" change="-21.21" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" timeoffset="0.22" />
   </activespell>
-  <activespell uniquename="GROUNDDASH" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="10" energyusage="0" castrange="11" uitype="movement" uisprite="DASH" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
+  <activespell uniquename="GROUNDDASH" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="18.5" itempowerrecastdelaymodifier="-0.5" energyusage="5" castrange="11" uitype="movement" uisprite="DASH" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
     <dash movespeed="30">
       <IfOwnLoadPercentIsBelow value="150" />
     </dash>
@@ -8524,6 +8714,7 @@
   </activespell>
   <!-- Artefact Level 1 -->
   <activespell uniquename="RAPIERSTAB" target="ground" keepmovingaftercast="true" castingtime="0" recastdelay="20" energyusage="17" castrange="13" category="damage" uitype="damage" showrange="true" uisprite="CLAYMORESTRIKE" adjustgroundtargettorange="true" castanimation="none" assessment="negative">
+    <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="13" />
     <pulsingspell target="self" spell="RAPIERSTAB_EFFECT" count="10" initialinterval="0" interval="0.1" />
     <dash movespeed="30" scaleAnim="true" animID="rapierstab" endeffect="RAPIERSTAB_END">
       <IfOwnLoadPercentIsBelow value="150" />
@@ -9420,7 +9611,17 @@
     </spellindicationarea>
     <directattributechange target="enemy" attribute="health" change="-55.04" effecttype="magic" effectarearadius="3" targetcountvaluebonusfactor="0.1" showarearadius="true" />
     <knockback fromwhere="FromCollisionPoint" target="friendother" effectarearadius="3" distance="8" movespeed="20" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" allownegativeeffectonally="true">
-      <IfTargetType type="groupmember" />
+      <and>
+        <IfTargetType type="groupmember" />
+        <not>
+          <or>
+            <IfCluster archetype="CITY-START"/>
+            <IfCluster archetype="CITY-GREEN"/>
+            <IfCluster archetype="CITY-RED"/>
+            <IfCluster archetype="CITY-BLACK"/>
+          </or>
+        </not>
+      </and>
     </knockback>
     <knockback fromwhere="FromCollisionPoint" target="enemy" effectarearadius="3" distance="1" movespeed="1" ruleset="constanttime" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
@@ -9723,7 +9924,7 @@
   -->
   
   <activespell uniquename="HOLYORB" target="ground" keepmovingaftercast="false" category="damage" castingtime="0" hitdelay="0" standtime="0.4" disruptionfactor="1" recastdelay="15" energyusage="10" castrange="25" uisprite="HOLY_ORB" uitype="heal" castanimation="2h_shot" assessment="positive" adjustgroundtargettorange="true" hidespelleffecticon="true" animIgnoreHitDelay="true" unlockedtoequip="false">
-    <spelleffectarea time="1.5" effect="HOLYORB_EFFECT" target="friendall" position="atcaster" removeonleave="false" maxeffectareatargets="1" deletewhenmaxtargetshit="true" visible="true" skillshotindicatormax="25">
+    <spelleffectarea time="1.5" effect="HOLYORB_EFFECT" target="friendother" position="atcaster" removeonleave="false" maxeffectareatargets="1" deletewhenmaxtargetshit="true" visible="true" skillshotindicatormax="25">
       <area>
         <shape material="none">
           <node angle="0" distance="3-25">
@@ -9741,7 +9942,7 @@
     <AudioInfo name="SPELL_HOLY_CAST_MEDIUM" />
   </activespell>  
   <activespell uniquename="HOLYORB_EFFECT" target="friendall" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uisprite="HOLY_ORB" uitype="heal" category="heal" castanimation="cast_standardattack" assessment="positive">
-    <directattributechange target="friendall" attribute="health" change="144.79" effectarearadius="7" maxeffectareatargets="10" />
+    <directattributechange target="friendall" attribute="health" change="135.00" effectarearadius="7" maxeffectareatargets="10" />
     <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_orb_impact_7m" socket="damage" constraintpreset="inworld" />
   </activespell>
 
@@ -9831,7 +10032,7 @@
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_loop" socket="offhand" timeoffset="0.260" />
   </activespell>
   <!-- Artefact Level 2-->
-  <activespell uniquename="HOLY_ULTIMATE" target="ground" castingtime="1" keepmovingaftercast="false" hitdelay="2" standtime="0.4" disruptionfactor="1" recastdelay="25" energyusage="18" uisprite="MAGICCIRCLE_HOLY" castrange="14" uitype="heal" category="heal" castanimation="cast_silence" showrange="true" animmode="StartLoopClimaxEnd" animIgnoreHitDelay="true" assessment="positive" adjustgroundtargettorange="true">
+  <activespell uniquename="HOLY_ULTIMATE" target="ground" castingtime="1" keepmovingaftercast="false" hitdelay="2" standtime="0.4" disruptionfactor="1" recastdelay="30" energyusage="18" uisprite="MAGICCIRCLE_HOLY" castrange="14" uitype="heal" category="heal" castanimation="cast_silence" showrange="true" animmode="StartLoopClimaxEnd" animIgnoreHitDelay="true" assessment="positive" adjustgroundtargettorange="true">
     <spellindicationarea target="enemy" position="attarget" visible="true">
       <area>
         <shape>
@@ -9886,7 +10087,7 @@
     <spelleffectfx prefab="FX/ClientPrefabs/fx_buff_shield_blue" socket="ground" constraintpreset="pointconstraint" />
   </activespell>
   
-  <activespell uniquename="THREATENINGSMASH" target="ground" castingtime="0" keepmovingaftercast="false" hitdelay="0.7" standtime="0.6" disruptionfactor="0" recastdelay="6" energyusage="5" castrange="3" uitype="debuff" uisprite="MELEEWHIRLWIND" castanimation="cast_melee2" category="instant" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true">
+  <activespell uniquename="THREATENINGSMASH" target="ground" castingtime="0" keepmovingaftercast="false" hitdelay="0.6" standtime="0.7" disruptionfactor="0" recastdelay="6" energyusage="5" castrange="3" uitype="debuff" uisprite="MELEEWHIRLWIND" castanimation="cast_melee2" category="instant" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true">
     <spellindicationarea target="enemy" position="atcaster" visible="true">
       <area>
         <shape>
@@ -10848,7 +11049,7 @@
   </activespell>
   <!-- *** SLOT 3 *** -->
   <!-- Level 1 -->
-  <activespell uniquename="DASHDMG" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" energyusage="18" castrange="11" uitype="movement" uisprite="DASH" castanimation="none" category="damage" usableincombat="true" adjustgroundtargettorange="true" showrange="true">
+  <activespell uniquename="DASHDMG" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" energyusage="18" castrange="11" uitype="movement" uisprite="DASH" castanimation="none" category="damage" usableincombat="true" adjustgroundtargettorange="true" showrange="true" hidespelleffecticon="true">
     <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="11" />
     <pulsingspell target="self" spell="DASHDMG_CONDITION" count="10" initialinterval="0" interval="0.1" />
     <dash movespeed="40" scaleAnim="true" animID="leap_spear" endeffect="DASHDMG_END">
@@ -10863,7 +11064,7 @@
     <applyspell target="enemy" spell="DASHDMG_EFFECT" effectarearadius="3" />  
   </activespell>
 
-  <activespell uniquename="DASHDMG_EFFECT" target="all" castingtime="0" hitdelay="0.0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="DASH" uitype="damage" category="damage">
+  <activespell uniquename="DASHDMG_EFFECT" target="all" castingtime="0" hitdelay="0.0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="DASH" uitype="damage" category="damage" hidespelleffecticon="true">
     <applyspell spell="DASHDMG_KNOCKBACK" target="enemy" />
     <directattributechange target="enemy" attribute="health" change="-61" effecttype="physical" targetcountvaluebonusfactor="0.1">
       <not>
@@ -11395,7 +11596,7 @@
     <removeactivespell target="self" spell="HEROIC_STACK" casterchargesonly="true" charges="3">
       <IfSpellActive who="Caster" spell="HEROIC_STACK" casterchargesonly="true" atleastcharges="1" />
     </removeactivespell>
-    <directattributechange target="enemy" attribute="health" change="-0.03" changetype="relative" effectarearadius="5" ignorearmor="true">
+    <directattributechange target="enemy" attribute="health" change="-0.05" changetype="relative" effectarearadius="5" ignorearmor="true">
       <IfTargetType type="player" />
     </directattributechange>
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
@@ -11434,25 +11635,29 @@
     <AudioInfo name="MELEE_BIGCAST_BIGIMPACT" />
   </activespell>
   <!--Artefact Level 2-->
-  <activespell uniquename="CLAYMORESLASH" target="ground" keepmovingaftercast="true" castingtime="0" recastdelay="20" energyusage="16" castrange="11" category="damage" uitype="damage" showrange="true" uisprite="CLAYMORESTRIKE" adjustgroundtargettorange="true" castanimation="none">
-    <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="11" />
-    <pulsingspell target="self" spell="CLAYMORESLASH_CONDITION" count="20" initialinterval="0" interval="0.1" />
+  <activespell uniquename="CLAYMORESLASH" target="ground" keepmovingaftercast="true" castingtime="0" recastdelay="20" energyusage="16" castrange="13" category="instant" uitype="damage" showrange="true" uisprite="CLAYMORESTRIKE" adjustgroundtargettorange="true" castanimation="none" hidespelleffecticon="true">
+    <spelleffectarea time="1" effect="NONE" target="ground" skillshotindicatormax="13" />
+    <pulsingspell target="self" spell="CLAYMORESLASH_CONDITION" count="20" initialinterval="0" interval="0.1" >
+      <IfOwnLoadPercentIsBelow value="150" />
+    </pulsingspell>
     <dash movespeed="30" scaleAnim="true" animID="strike_2hsword" endeffect="CLAYMORESLASH_END">
       <IfOwnLoadPercentIsBelow value="150" />
     </dash>
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="Prefabs/SpellEffects/SpellCastEffectVfx/SprintCastVfx" socket="floor" duration="0.800" />
     <AudioInfo name="MELEE_CHARGE" />
   </activespell>
-  <activespell uniquename="CLAYMORESLASH_CONDITION" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="true">
-    <directattributechange target="enemy" attribute="health" change="-150.10" effecttype="physical" effectarearadius="3" />
+  <activespell uniquename="CLAYMORESLASH_CONDITION" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="instant" uitype="damage" hidespelleffecticon="true">
+    <applyspell spell="CLAYMORESLASH_CONDITION2" target="enemy" effectarearadius="3" />
+  </activespell>  
+  <activespell uniquename="CLAYMORESLASH_CONDITION2" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="true">
 
-    <applyspell spell="CLAYMORESLASH_EFFECT0" target="enemy" effectarearadius="3">
+    <applyspell spell="CLAYMORESLASH_EFFECT0" target="enemy" >
       <not>
         <IfSpellActive who="Caster" spell="HEROIC_STACK" casterchargesonly="true" />
       </not>
     </applyspell>
 
-    <applyspell spell="CLAYMORESLASH_EFFECT1" target="enemy" effectarearadius="3">
+    <applyspell spell="CLAYMORESLASH_EFFECT1" target="enemy" >
       <and>
         <IfSpellActive who="Caster" spell="HEROIC_STACK" casterchargesonly="true" atleastcharges="1" />
         <not>
@@ -11461,7 +11666,7 @@
       </and>
     </applyspell>
     
-    <applyspell spell="CLAYMORESLASH_EFFECT2" target="enemy" effectarearadius="3">
+    <applyspell spell="CLAYMORESLASH_EFFECT2" target="enemy" >
       <and>
         <IfSpellActive who="Caster" spell="HEROIC_STACK" casterchargesonly="true" atleastcharges="2" />
         <not>
@@ -11470,35 +11675,39 @@
       </and>
     </applyspell>
     
-    <applyspell spell="CLAYMORESLASH_EFFECT3" target="enemy" effectarearadius="3">
+    <applyspell spell="CLAYMORESLASH_EFFECT3" target="enemy" >
       <IfSpellActive who="Caster" spell="HEROIC_STACK" casterchargesonly="true" atleastcharges="3" />
     </applyspell>
       
-    <spellimmunity target="enemy" spellname="CLAYMORESLASH_CONDITION" time="1" effectarearadius="3" />
+    <spellimmunity target="enemy" spellname="CLAYMORESLASH_CONDITION" time="1" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_BIGIMPACT" />
   </activespell>
-  <activespell uniquename="CLAYMORESLASH_EFFECT0" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="false">
-    <buffovertime type="physicalarmor" target="enemy" value="-0.06" time="6" />
-    <buffovertime type="magicresistance" target="enemy" value="-0.06" time="6" />
+  <activespell uniquename="CLAYMORESLASH_EFFECT0" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="debuff" uitype="debuff" hidespelleffecticon="false">
+    <buffovertime type="physicalarmor" target="enemy" value="-0.07" time="6" />
+    <buffovertime type="magicresistance" target="enemy" value="-0.07" time="6" />
+    <directattributechange target="enemy" attribute="health" change="-150.10" effecttype="physical" />    
     <spellvfx target="target_notCaster" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/ShieldDebuffImpactVfx" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
   </activespell>
-  <activespell uniquename="CLAYMORESLASH_EFFECT1" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="false">
-    <buffovertime type="physicalarmor" target="enemy" value="-0.09" time="6" />
-    <buffovertime type="magicresistance" target="enemy" value="-0.09" time="6" />
+  <activespell uniquename="CLAYMORESLASH_EFFECT1" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="debuff" uitype="debuff" hidespelleffecticon="false">
+    <buffovertime type="physicalarmor" target="enemy" value="-0.11" time="6" />
+    <buffovertime type="magicresistance" target="enemy" value="-0.11" time="6" />
+    <directattributechange target="enemy" attribute="health" change="-150.10" effecttype="physical" />
     <spellvfx target="target_notCaster" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/ShieldDebuffImpactVfx" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
   </activespell>
-  <activespell uniquename="CLAYMORESLASH_EFFECT2" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="false">
-    <buffovertime type="physicalarmor" target="enemy" value="-0.14" time="6" />
-    <buffovertime type="magicresistance" target="enemy" value="-0.14" time="6" />
+  <activespell uniquename="CLAYMORESLASH_EFFECT2" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="debuff" uitype="debuff" hidespelleffecticon="false">
+    <buffovertime type="physicalarmor" target="enemy" value="-0.17" time="6" />
+    <buffovertime type="magicresistance" target="enemy" value="-0.17" time="6" />
+    <directattributechange target="enemy" attribute="health" change="-150.10" effecttype="physical" />
     <spellvfx target="target_notCaster" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/ShieldDebuffImpactVfx" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
   </activespell>    
-  <activespell uniquename="CLAYMORESLASH_EFFECT3" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="damage" uitype="damage" hidespelleffecticon="false">
-    <buffovertime type="physicalarmor" target="enemy" value="-0.20" time="6" />
-    <buffovertime type="magicresistance" target="enemy" value="-0.20" time="6" />
+  <activespell uniquename="CLAYMORESLASH_EFFECT3" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="CLAYMORESTRIKE" category="debuff" uitype="debuff" hidespelleffecticon="false">
+    <buffovertime type="physicalarmor" target="enemy" value="-0.24" time="6" />
+    <buffovertime type="magicresistance" target="enemy" value="-0.24" time="6" />
+    <directattributechange target="enemy" attribute="health" change="-150.10" effecttype="physical" />
     <spellvfx target="target_notCaster" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/ShieldDebuffImpactVfx" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
   </activespell>  
@@ -11607,9 +11816,15 @@
   <!-- ##### QUARTERSTAFF ##### -->
   <!-- *** SLOT 1 *** -->
   <activespell uniquename="CARTWHEEL" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="7" energyusage="5" castrange="8" uitype="crowdcontrol" uisprite="DODGE" castanimation="none" category="instant" adjustgroundtargettorange="true" showrange="true" hidespelleffecticon="true" unlockedtoequip="false">
-    <applyeffectoneventactive applyeffecttarget="self" event="ReceiveDamage" spell="CARTWHEEL_BUFF" target="self" count="1" time="0.8" />
-    <pulsingspell target="self" spell="CARTWHEEL_EFFECT" count="8" initialinterval="0" interval="0.1" />
-    <pulsingspell target="self" spell="CARTWHEEL_KNOCKBACK" count="8" initialinterval="0" interval="0.1" />
+    <applyeffectoneventactive applyeffecttarget="self" event="ReceiveDamage" spell="CARTWHEEL_BUFF" target="self" count="1" time="0.8" >
+      <IfOwnLoadPercentIsBelow value="150" />
+    </applyeffectoneventactive>      
+    <pulsingspell target="self" spell="CARTWHEEL_EFFECT" count="8" initialinterval="0" interval="0.1" >
+      <IfOwnLoadPercentIsBelow value="150" />
+    </pulsingspell>
+    <pulsingspell target="self" spell="CARTWHEEL_KNOCKBACK" count="8" initialinterval="0" interval="0.1" >
+      <IfOwnLoadPercentIsBelow value="150" />
+    </pulsingspell>      
     <spelleffectarea effect="NONE" time="1" target="ground" skillshotindicatormin="4" skillshotindicatormax="8" />
     <dash movespeed="12" mindistance="4" animID="cartwheel" ruleset="constanttime" scaleAnim="true" endeffect="CARTWHEEL_END">
       <IfOwnLoadPercentIsBelow value="150" />
@@ -12762,14 +12977,24 @@
   </activespell>
   <!-- Artefact Level 1 -->
   <activespell uniquename="SACRIFICE_HEAL" target="friendall" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="1" recastdelay="60" energyusage="0" castrange="9" uisprite="LIFESTEAL" uitype="damage" category="damage" castanimation="cast_heal" showrange="true">
-    <directattributechange target="self" attribute="health" change="-0.15" changetype="relative" ignorearmor="true" effecttype="magic" reflectdamage="never" />
-    <applyspell spell="SACRIFICE_HEAL_EFFECT" target="friendall" />
+    <applyspell spell="SACRIFICE_HEAL_EFFECT" target="friendall" >
+      <IfOwnHealthAbovePercentage value="0.3"/>      
+    </applyspell>
+    <applyspell spell="SACRIFICE_HEAL_EFFECT2" target="friendall" >
+      <IfOwnHealthBelowPercentage value="0.3"/>
+    </applyspell>  
     <projectile prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_bullet" flyspeed="30" startsocket="mainhandprojectile" hitsocket="damage" />            
   </activespell>
   <activespell uniquename="SACRIFICE_HEAL_EFFECT" target="friendall" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="LIFESTEAL" uitype="damage" category="heal" castanimation="cast_heal" showrange="true">
-    <directattributechange target="friendall" attribute="health" change="0.25" changetype="relative" ignorearmor="true" effecttype="magic" />
+    <directattributechange target="self" attribute="health" change="-0.15" changetype="relative" ignorearmor="true" effecttype="magic" reflectdamage="never" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" />    
+    <directattributechange target="friendall" attribute="health" change="0.25" changetype="relative" ignorearmor="true" effecttype="magic" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" />
     <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact" socket="floor" constraintpreset="pointconstraint" timeoffset="0.2" />
   </activespell>
+  <activespell uniquename="SACRIFICE_HEAL_EFFECT2" target="friendall" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="LIFESTEAL" uitype="damage" category="heal" castanimation="cast_heal" showrange="true">
+    <directattributechange target="friendall" attribute="health" change="0.25" changetype="relative" ignorearmor="true" effecttype="magic" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" />
+    <directattributechange target="self" attribute="health" change="-0.15" changetype="relative" ignorearmor="true" effecttype="magic" reflectdamage="never" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" />        
+    <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact" socket="floor" constraintpreset="pointconstraint" timeoffset="0.2" />
+  </activespell>  
   <!-- Artefact Level 2 -->
   <activespell uniquename="WEAPON_SILENCE" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="40" energyusage="0" castrange="0" castanimation="cast_heal" uisprite="SILENCE" category="buff" uitype="buff" triggerautoattackcooldown="false">
     <applyeffectoneventactive event="AutoAttack" target="self" spell="WEAPON_SILENCE_EFFECT" applyeffecttarget="enemy" count="1" time="15" />
@@ -12856,7 +13081,6 @@
     <teleport>
       <IfOwnLoadPercentIsBelow value="150" />
     </teleport>
-    <buffovertime target="self" type="maxloadbonus" value="0.01" time="0.1" />
     <applyspell target="self" spell="DELAYED_TELEPORT_EFFECT" />
     <spellvfx target="self" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_teleport_start" socket="damage" constraintpreset="inworld" />
     <spellvfx target="ground" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_teleport_end" socket="damage" constraintpreset="inworld" />
@@ -12908,7 +13132,17 @@
    <invincibility target="self" time="0.2" />
     <pull target="enemy" enddistance="0" movespeed="40" pullwhere="ToCaster" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" />
     <pull target="friendother" enddistance="0" movespeed="40" pullwhere="ToCaster" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" allownegativeeffectonally="true">
-      <IfTargetType type="groupmember" />
+      <and>
+        <IfTargetType type="groupmember" />
+        <not>
+          <or>
+            <IfCluster archetype="CITY-START"/>
+            <IfCluster archetype="CITY-GREEN"/>
+            <IfCluster archetype="CITY-RED"/>
+            <IfCluster archetype="CITY-BLACK"/>
+          </or>  
+        </not>
+      </and>
     </pull>
     <invincibility target="self" time="0.2" />
     <teleport>
@@ -26610,80 +26844,40 @@
     <dummy target="self" time="10" />    
   </activespell>
   <activespell uniquename="MOB_WATCHTOWER_SOLDIER_WARCRY" uisprite="BLOODLUST" target="self" castingtime="0" hitdelay="0.6" standtime="1.65" castrange="1" recastdelay="2" energyusage="0" category="instant" uitype="damage" castanimation="taunt_01" animmode="SingleAnim" assessment="positive" maxstack="5">
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="6"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="6"/>
       <IfTargetType type="mob"/>  
     </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="7"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="7"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="8"/>
       <IfTargetType type="mob"/>
     </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="8"/>
       <IfTargetType type="mob"/>
     </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="9"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="9"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="10"/>
       <IfTargetType type="mob"/>
     </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="10"/>
       <IfTargetType type="mob"/>
     </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="11"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="11"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="12"/>
       <IfTargetType type="mob"/>
     </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="12"/>
       <IfTargetType type="mob"/>
     </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="13"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="13"/>
       <IfTargetType type="mob"/>
     </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="14"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">
       <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="14"/>
-      <IfTargetType type="mob"/>
-    </buffovertime>
-    <buffovertime target="friendall" type="bonusdamagevsplayers" value="0.02" time="20" effectarearadius="20">
-      <IfSpellActive who="Caster" spell="MOB_WATCHTOWER_SOLDIER_WARCRY_PULSE_EFFECT" atleastcharges="15"/>
       <IfTargetType type="mob"/>
     </buffovertime>
     <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.02" time="20" effectarearadius="20">

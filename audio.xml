@@ -156,6 +156,10 @@
     <CharType name="mount"/>
     <MountType name="sleigh"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_TOWERCHARIOT">
+    <CharType name="mount"/>
+    <MountType name="towerchariot"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -3322,7 +3326,7 @@
 
   <WwiseClusterStateOverwrite clustername="ARENA-HomeTerritory_ARE_HL_T7_NON_ROY">
     <Environment name="World"/>
-    <Biom name="Forest"/>
+    <Biom name="Highlands"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="Arena"/>
@@ -3331,7 +3335,7 @@
 
   <WwiseClusterStateOverwrite clustername="ARENA-FarmLand_ARE_HL_T7_NON_ROY">
     <Environment name="World"/>
-    <Biom name="Forest"/>
+    <Biom name="Highlands"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="Arena"/>
@@ -3341,11 +3345,41 @@
   <!--Crystal Realms-->
   <WwiseClusterStateOverwrite clustername="CrystalRealm_ARE_ST_T4_NON_ROY">
     <Environment name="Crystalrealm"/>
-    <Biom name="Forest"/>
+    <Biom name="Steppe"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="Arena"/>
     <GlobalEnvironmentEffect name="crystalrealm"/>
+  </WwiseClusterStateOverwrite>
+
+  <!--Hall of Fame-->
+  <WwiseClusterStateOverwrite clustername="3010_CTY_HL_T1_NON">
+    <Environment name="HallOfFame"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="HallOfFame"/>
+    <GlobalEnvironmentEffect name="hall_of_fame"/>
+  </WwiseClusterStateOverwrite>
+
+  <!--Carleon Auction House-->
+  <WwiseClusterStateOverwrite clustername="3005_CTY_HL_T7_NON">
+    <Environment name="Bank"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="None"/>
+    <GlobalEnvironmentEffect name="hall_of_fame"/>
+  </WwiseClusterStateOverwrite>
+
+  <!--Carleon Bank-->
+  <WwiseClusterStateOverwrite clustername="3006_CTY_HL_T7_NON">
+    <Environment name="Bank"/>
+    <Biom name="Forest"/>
+    <SubBiom name="Dead"/>
+    <MobFaction name="None"/>
+    <Music name="None"/>
+    <GlobalEnvironmentEffect name="hall_of_fame"/>
   </WwiseClusterStateOverwrite>
   
   <!--***********************************************************-->
@@ -3379,4 +3413,24 @@
     <OnCastStart name="Play_portal_gun_mob_spawn"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_VANITY_TRUMPET_FANFARE">
+    <OnChannelingStart name="Play_vanity_trumpet_fanfare" />
+    <OnChannelingEnd name="Stop_vanity_trumpet_fanfare" />
+    <OnChannelingInterrupted name="Stop_vanity_trumpet_fanfare" />
+    <OnChannelingCancelled name="Stop_vanity_trumpet_fanfare" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_TRUMPET_MAINTHEME">
+    <OnChannelingStart name="Play_vanity_trumpet_maintheme" />
+    <OnChannelingEnd name="Stop_vanity_trumpet_maintheme" />
+    <OnChannelingInterrupted name="Stop_vanity_trumpet_maintheme" />
+    <OnChannelingCancelled name="Stop_vanity_trumpet_maintheme" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_TRUMPET_FUNERAL">
+    <OnChannelingStart name="Play_vanity_trumpet_funeral" />
+    <OnChannelingEnd name="Stop_vanity_trumpet_funeral" />
+    <OnChannelingInterrupted name="Stop_vanity_trumpet_funeral" />
+    <OnChannelingCancelled name="Stop_vanity_trumpet_funeral" />
+  </WwiseEventInfo>
 </AudioInfos>
