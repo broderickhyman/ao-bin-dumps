@@ -1,1012 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quests.xsd">
   <!-- MISSIONS -->
-  <!-- MISSIONS --><!--
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_A_COMPLETIONTEXT" cancelable="false">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gotolocation locationid="POINT" markedonminimap="true" seconds="2" textloca="@MISSIONS_T2_TUTORIAL_TEST_A1_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_B_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_A">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gotolocation locationid="LIGHTHOUSEUP"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" />
-      </missionstep>
-      <missionstep>
-        <gotolocation locationid="LIGHTHOUSETOP" seconds="3" textloca="@MISSIONS_T2_TUTORIAL_TEST_B1_SIDETEXT" />
-      </missionstep>
-        <missionstep>
-        <gotolocation locationid="HERETICS" seconds="3" textloca="@MISSIONS_T2_TUTORIAL_TEST_B2_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gotolocation locationid="T1_RESOURCES" textloca="@MISSIONS_T2_TUTORIAL_TEST_C_SIDETEXT"/>
-      </missionstep>
-       <missionstep>
-        <gather itemid="T1_ROCK" count="6"/>
-        <gather itemid="T1_WOOD" count="10"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-        <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_D" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_D_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_D_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_D_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_D_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_C">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gotolocation locationid="FORGE" seconds="2" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT"/>
-        <craftitem itemid="T1_MAIN_SWORD" count="1"/>
-        <craftitem itemid="T1_OFF_SHIELD" count="1"/>
-        <equipitem itemid="T1_MAIN_SWORD" textloca="@MISSIONS_T2_TUTORIAL_TEST_D1_SIDETEXT"/>
-        <selectspell itemid="T1_MAIN_SWORD" textloca="@MISSIONS_T2_TUTORIAL_TEST_D2_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_E" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_E_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_E_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_E_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_E_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_D">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="GATE" textloca="@MISSIONS_T2_TUTORIAL_TEST_E_SIDETEXT"/>
-      </missionstep>
-      <missionstep>
-        <killmob mobid="T2_MOB_HERETIC_SCAVENGER_TUTORIAL" count="3"/>
-        <killmob mobid="T2_MOB_HERETIC_THIEF" count="1"/>
-       </missionstep>
-      <missionstep>
-        <gotolocation locationid="DESTINYBOARD" seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_E1_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotolocation locationid="CAPTAIN_TIA" textloca="@MISSIONS_T2_TUTORIAL_TEST_E2_SIDETEXT"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-        <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_F" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_F_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_F_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_F_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_F_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_E" cancelable="false">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-     <dynamicquestgiver name ="CAPTAIN">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="CAPTAIN_TIA"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-       <gotoquestgiver questgivervariable="CAPTAIN" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_G" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_G_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_G_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_G_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_G_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_F">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="SHIP_CHECK" seconds="5" textloca="@MISSIONS_T2_TUTORIAL_TEST_G_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="100"/>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_H" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_H_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_H_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_H_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_H_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_G">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="MARKETPLACE" seconds="15" textloca="@MISSIONS_T2_TUTORIAL_TEST_H_SIDETEXT"/>
-       <acquireitem itemid="T2_MOUNT_MULE" count="1"/>
-         <equipitem itemid ="T2_MOUNT_MULE" textloca="@MISSIONS_T2_TUTORIAL_TEST_H2_SIDETEXT"/>
-      </missionstep>
-      <missionstep>
-        <gotolocation locationid="CRAFTER" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT"/>
-      </missionstep>
-       <completionstep> 
-      <gotoquestgiver questgivervariable="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_I" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_I_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_I_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_I_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_I_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_H">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T1_ROCK" count="6"/>
-        <gather itemid="T1_WOOD" count="6"/>
-      </missionstep>
-       <missionstep>
-        <gotolocation locationid="TOOLMAKER" seconds="3" textloca="@MISSIONS_T2_TUTORIAL_TEST_I_SIDETEXT"/>
-       <acquireitem itemid="T1_2H_TOOL_PICK" count="1"/>
-      <acquireitem itemid="T1_2H_TOOL_AXE" count="1"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_J" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_J_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_J_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_J_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_J_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_I">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <usefunction function="OpenWorldMap" textloca="@MISSIONS_T2_TUTORIAL_TEST_J1_SIDETEXT"/>
-        <gotolocation locationid="MAP" seconds="15" textloca="@MISSIONS_T2_TUTORIAL_TEST_J_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
   
   
-   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_K" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_K_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_K_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_K_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_K_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_J">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="T2_WOOD" seconds="2" textloca="@MISSIONS_T2_TUTORIAL_TEST_K1_SIDETEXT"/>
-        <gather itemid="T2_WOOD" count="6"/>
-      </missionstep>
-      <missionstep>
-        <gotolocation locationid="T2_ORE" seconds="2" textloca="@MISSIONS_T2_TUTORIAL_TEST_K2_SIDETEXT"/>
-        <gather itemid="T2_ORE" count="6"/>
-      </missionstep>
-      <missionstep>
-        <gotolocation locationid="CRAFTER" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_H1_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_L" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_L_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_L_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_L_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_L_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_K">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-        <dynamicquestgiver name ="CAPTAIN">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="CAPTAIN_TIA"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="CARPENTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L1_SIDETEXT"/>
-         <acquireitem itemid="T2_PLANKS" count="6"/>
-      </missionstep>
-      <missionstep>
-        <gotolocation locationid="SMELTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L2_SIDETEXT"/>
-        <acquireitem itemid="T2_METALBAR" count="6"/>
-      </missionstep>
-        <completionstep>
-       <gotoquestgiver questgivervariable="CAPTAIN" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_M" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_M_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_M_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_M_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_M_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_L">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-       <missionstep>
-        <gotolocation locationid="SHIP_CHECK" seconds="5" textloca="@MISSIONS_T2_TUTORIAL_TEST_M_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_N" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_N_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_N_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_N_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_N_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_M">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-       <missionstep>
-         <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_N_SIDETEXT"/>
-         <gotolocation locationid="DESTINYBOARD" seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_N1_SIDETEXT"/>
-       </missionstep>
-      <missionstep>
-        <haveavgitempower itempower="300" textloca="@MISSIONS_T2_TUTORIAL_TEST_N2_SIDETEXT"/>
-        <unlockachievement achievement="PVE_T3" masterylevel="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_N3_SIDETEXT"/>
-        <gotolocation locationid="GRIND" seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_N4_SIDETEXT"/>
-      </missionstep>
-      <completionstep>
-       <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_O" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_O_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_O_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_O_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_O_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_N">  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-          <gotolocation locationid="LUMBERER" seconds="0"  textloca="@MISSIONS_T2_TUTORIAL_TEST_O1_SIDETEXT"/>
-        <killmob mobid="T3_MOB_HERETIC_LUMBERJACK_BOSS" count="1"/>
-       </missionstep>
-       <missionstep>
-           <gotolocation locationid="QUARRY" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_O2_SIDETEXT"/>
-        <killmob mobid="T2_MOB_HERETIC_SCAVENGER" count="5"/>
-       </missionstep>
-       <missionstep>
-           <gotolocation locationid="BALLISTA" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_O3_SIDETEXT"/>
-        <killmob mobid="T2_MOB_HERETIC_BALLISTA" count="2"/>
-       </missionstep>
-      <missionstep>
-           <gotolocation locationid="THIEF" textloca="@MISSIONS_T2_TUTORIAL_TEST_O4_SIDETEXT"/>
-        <killmob mobid="T2_MOB_HERETIC_THIEF_BOSS" count="1"/>
-       </missionstep>
-      <completionstep>
-       <gotolocation locationid="CAPTAIN_TIA"  textloca="@MISSIONS_T2_TUTORIAL_TEST_O5_SIDETEXT"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-    
-  --><!-- MISSIONS -->
-  
-  <!--Kay Tutorial-->
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_COMPLETIONTEXT">
-     <!--GOTO_CRAFTER--> 
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON"
-     mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_TITLE"
-     offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_OFFERTEXT"
-     progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_PROGRESSTEXT"
-     priority="1" minlevel="1" maxlevel="2"
-     tags="crafter"
-     offertimeout="0" questtimeout="3600000" questslotcooldown="0"
-     uicategory="GATHERING" onceonly="true"
-     previousquests="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER"
-selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C"
-           completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_COMPLETIONTEXT">
-    <!--DECISION QUEST SETUP-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="COMMANDER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCOMMANDER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest> 
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-   <!--TOOL_SWORD-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_PICK" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_PICK" />
-        <acquireitem itemid="T1_2H_TOOL_KNIFE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_KNIFE" />
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT" >
-    <!--TOOL_BOW-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_AXE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_AXE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-    <!--TOOL_STAFF-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_PICK" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_PICK"/>
-        <acquireitem itemid="T1_2H_TOOL_AXE" count="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T1_2H_TOOL_AXE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_COMPLETIONTEXT">
-    <!--LEARN_MAP-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <usefunction function="OpenWorldMap"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-  <!--SWORD QUEST-->
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - GOTO_Miner-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="MINER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALMINER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="MINER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_MINER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - Miner_ORE-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_ORE" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ORE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_SWORD" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - Miner_METALBAR-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_METALBAR" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_METALBAR"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_SWORD" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - GOTO_Hunter-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="2" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-        <dynamicquestgiver name ="HUNTER">
-          <distancefromquestgiver mindistance="0" maxdistance="2"/>
-          <questgivertag tag="ROYALHUNTER"/>
-        </dynamicquestgiver>
-     
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="HUNTER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="hunter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_HUNTER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - Hunter_Hide-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_HIDE" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_HIDE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="hunter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GATHER_HIDE_SWORD" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD_COMPLETIONTEXT">
-    <!--Sword Quest - Hunter_LEATHER-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_LEATHER" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_LEATHER"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="hunter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_REFINE_LEATHER_SWORD" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER_COMPLETIONTEXT">
-    <!--Sword Quest - Return to Town-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-      
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-
-
-
-
-  <!--BOW QUEST-->
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW_COMPLETIONTEXT">
-    <!--Bow Quest - GOTO_Lumberjack-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="LUMBERJACK">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALLUMBERJACK"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="LUMBERJACK" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_BOW" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW_COMPLETIONTEXT">
-    <!--Bow Quest - Lumberjack_Wood-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_WOOD" count="32" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_WOOD"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_BOW" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW_COMPLETIONTEXT">
-    <!--Bow Quest - Lumberjack_Planks-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_PLANKS" count="32" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_PLANK"/>   
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_BOW" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER_COMPLETIONTEXT">
-    <!--Bow Quest - Return to Town-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/>
-        <presentresource resourceid="WOOD" tier="2"/>
-        <presentresource resourceid="ORE" tier="2"/>
-        <presentresource resourceid="FIBER" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-  <!--STAFF QUEST-->
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - GOTO_Lumberjack-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="LUMBERJACK">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALLUMBERJACK"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="LUMBERJACK" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_LUMBERJACK_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - Lumberjack_Wood-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_WOOD" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_WOOD"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GATHER_WOOD_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - Lumberjack_Planks-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_PLANKS" count="16" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_PLANK"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="lumberjack" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_REFINE_WOOD_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - GOTO_Miner-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="2" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="MINER">
-        <distancefromquestgiver mindistance="0" maxdistance="2"/>
-        <questgivertag tag="ROYALMINER"/>
-      </dynamicquestgiver>
-
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="MINER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP,MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_MINER_STAFF" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - Miner_Ore-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_ORE" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ORE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GATHER_ORE_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF_COMPLETIONTEXT">
-    <!--Staff Quest - Miner_Metalbar-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_METALBAR" count="8" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_METALBAR"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="miner" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_MINER_REFINE_ORE_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER_COMPLETIONTEXT">
-    <!--Staff Quest - Go to Town-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/>
-        <presentresource resourceid="WOOD" tier="2"/>
-        <presentresource resourceid="ORE" tier="2"/>
-        <presentresource resourceid="FIBER" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-
-
-
-
-
-  <!--CRAFTING QUEST-->
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_HUNTER_GOTO_CRAFTER" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_COMPLETIONTEXT" >
-    <!--Crafting Quest - Craft Sword-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_MAIN_SWORD" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_MAIN_SWORD"/>   
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_LUMBERJACK_GOTO_CRAFTER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_COMPLETIONTEXT">
-    <!--Crafting Quest - Craft Bow-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_2H_BOW" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_2H_BOW"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_MINER_GOTO_CRAFTER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_COMPLETIONTEXT">
-    <!--Crafting Quest - Craft Staff-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T2_MAIN_FIRESTAFF" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_T2_MAIN_FIRESTAFF"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" requiresonlyonepreviousquest="true"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_COMPLETIONTEXT">
-    <!--Crafting Quest - Craft Armor + Offhand-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
-        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
-        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
-        <craftitem itemid="T2_OFF_SHIELD;T2_OFF_BOOK" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_OFF_HAND"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_CAPE" count="1"/>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_COMPLETIONTEXT">
-    <!--Crafting Quest - Craft Armor-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
-        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
-        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_CAPE" count="1"/>
-    </rewards>
-  </quest>
-
-  
-  <!-- FIGHTING QUEST -->
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_COMPLETIONTEXT" >
+  <!--COMBAT-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_COMBAT_COMPLETIONTEXT" cancelable="true">
     <!--Fighting Quest - GOTO_Soldier-->
     <variables>
       <dynamicquestgiver name ="SOLDIER">
@@ -1023,7 +21,7 @@ selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_RO
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_COMPLETIONTEXT">
+  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT2" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT2_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT2_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT2_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT"  completetext="@MISSIONS_T2_TUTORIAL_COMBAT2_COMPLETIONTEXT" cancelable="true">
     <!--Fighting Quest - Collect Silver-->
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -1032,7 +30,8 @@ selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_RO
     </variables>
     <tasks>
       <missionstep>
-        <gathersilver value="150" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_COLLECT_SILVER"/>
+        <gathersilver value="200" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_COLLECT_SILVER"/>
+        <unlockachievement achievement="PVE_T3" masterylevel="0" textloca="@MISSIONS_T2_TUTORIAL_COMBAT2_UNLOCK"/>
       </missionstep>
       <completionstep>
         <gotoquestgiver />
@@ -1042,40 +41,14 @@ selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_RO
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_NEW_COMPLETIONTEXT">
-    <!--Fighting Quest - Get Donkey-->
-    <variables>
-      <dynamicquestgiver name ="COMMANDER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALCOMMANDER"/>
-      </dynamicquestgiver>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_GOTO_MARKETPLACE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver questgivervariable="COMMANDER">
-          <item itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_TOKEN_TO_COMMANDER" />
-        </gotoquestgiver>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_MOUNT_MULE" count="1"/>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN_COMPLETIONTEXT">
+  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT3" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT3_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT3_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT3_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT2" completetext="@MISSIONS_T2_TUTORIAL_COMBAT3_COMPLETIONTEXT" cancelable="true">
     <!--Fighting Quest - Go Captain-->
     <variables>
       <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1"/>
-      </dynamiccluster> 
+        <distancetocluster mindistance="0" maxdistance="1"/>
+      </dynamiccluster>
       <dynamicquestgiver name ="CAPTAIN">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
+        <distancefromquestgiver mindistance="0" maxdistance="1"/>
         <questgivertag tag="ROYALCAPTAIN"/>
       </dynamicquestgiver>
     </variables>
@@ -1088,7 +61,7 @@ selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_RO
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captain" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CAPTAIN" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_UNLOCK_FIRST_REAVER_COMPLETIONTEXT">
+  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT4" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT4_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT4_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT4_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captain" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT3" completetext="@MISSIONS_T2_TUTORIAL_COMBAT4_COMPLETIONTEXT" completehintbox="NOMOREQUESTS" cancelable="true">
     <!--Fighting Quest - T4 Reaver-->
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -1097,72 +70,1240 @@ selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_RO
     </variables>
     <tasks>
       <missionstep>
-        <unlockachievement achievement="PVE_T3" masterylevel="0"/>
+        <or textloca="@MISSIONS_T2_TUTORIALCOMBAT4_ANY_HERETIC_BOSS_OR_MOBS">
+          <killmob mobid="T2_MOB_HERETIC_ARCHER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_ARCHER_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_MAGE_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_TANK_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_THIEF_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_HERETIC_THIEF_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_EXP_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_EXP_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_ARCHER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_ARCHER_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_BALLISTA_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_GIBSON_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_HEALER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_HEALER_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_MAGE_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_THIEF_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_ROAMING_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_ROAMING_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_HERETIC_THIEF_BOSS" count="1" countpartykills="true"/>
+          <killmob faction="HERETIC" mintier="2" maxtier="3" count="10"/>
+        </or>
       </missionstep>
       <completionstep>
         <gotoquestgiver />
       </completionstep>
     </tasks>
     <rewards>
-      <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="2"/>
+      <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="1"/>
     </rewards>
   </quest>
 
+  <!--CRAFTING_START-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_START" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_START_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_COMPLETIONTEXT" completehintbox="PREMIUM1">
+
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <unlockachievement achievement="CRAFT_TRAINEE" masterylevel="0"/>
+      </missionstep>
+      <completionstep>
+        <gotoquestgiver/>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <item itemid="UNIQUE_FOCUSPOTION_TUTORIAL_01" count="1"/>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_START" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_COMPLETIONTEXT">
+
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <or textloca="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_ANYBUILDING" locationmarkerid="CRAFTINGBUILDING">
+          <interactwithbuilding buildingid="T3_FORGE"/>
+          <interactwithbuilding buildingid="T3_HUNTERSLODGE"/>
+          <interactwithbuilding buildingid="T3_MAGICITEMS"/>
+          <interactwithbuilding buildingid="T3_TOOLMAKER"/>
+        </or>  
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="FOCUS_2"/>
+        </preactions>
+        <missions>
+        <usefocus value="1" textloca="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_FOCUS"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="FOCUS_3"/>
+        </preactions>
+        <missions>
+        <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="UNIQUE_FOCUSPOTION_TUTORIAL_01" count="1"/>
+    </rewards>
+  </quest>
+      
 
 
-  <!--DECISION OPTIONS-->
+
+  <!--Revisit Tutorial Hints-->
+  <quest uniquename="MISSIONS_T2_STT_HINT_WEAPONS" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_WEAPONS_TITLE" offertext="@MISSIONS_T2_STT_HINT_WEAPONS_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_WEAPONS_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION"  completetext="@MISSIONS_T2_STT_HINT_WEAPONS_COMPLETIONTEXT" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="BUTTONINFO1"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>        
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_STT_HINT_WHATYOUWEAR" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_TITLE" offertext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_COMPLETIONTEXT" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="AFTER_WHATYOUWEAR"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_STT_HINT_DB" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_DB_TITLE" offertext="@MISSIONS_T2_STT_HINT_DB_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_DB_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_DB_COMPLETIONTEXT" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="AFTER_DESTINYBOARDINTRO_01"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_STT_HINT_MAP" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_MAP_TITLE" offertext="@MISSIONS_T2_STT_HINT_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_MAP_COMPLETIONTEXT" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="AFTER_MAPINTRO_01"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
   
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_PROGRESS" priority="4" minlevel="1" maxlevel="2" tags="unused" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A_COMPLETIONTEXT">
+  <!--GOLD AND PREMIUM-->
+  <quest uniquename="MISSIONS_T2_STT_TEST_X" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_X_TITLE" offertext="@MISSIONS_T2_STT_TEST_X_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_X_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="goldsmuggler" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_X_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q" completehintbox="GOLDMARKET">
     <variables>
-      <dynamicquestgiver name="AGENT_A" includingme="true">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag ="ROYALCRAFTER"/>
-      </dynamicquestgiver>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
     </variables>
     <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="AGENT_A"></gotoquestgiver>
-      </completionstep>
+      <extendedmissionstep>
+        <missions>
+            <gotolocation locationmarkerid="SMUGGLERTEST" seconds="5" textloca="@MISSIONS_T2_STT_TEST_X_ALL_CLEAR"/>   
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemid="T2_MAIN_SWORD" count="1"/>
+      <gold amount="1"/>
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_PROGRESS" priority="4" minlevel="1" maxlevel="2" tags="unused" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B_COMPLETIONTEXT">
+
+  <quest uniquename="MISSIONS_T2_STT_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_A_TITLE" offertext="@MISSIONS_T2_STT_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_A_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
     <variables>
-      <dynamicquestgiver name="AGENT_A" includingme="true">
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="SOLDIER">
         <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag ="ROYALCOMMANDER"/>
+        <questgivertag tag="ROYALHARBOURMASTER"/>
       </dynamicquestgiver>
     </variables>
     <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="AGENT_A"></gotoquestgiver>
-      </completionstep>
+      <extendedcompletionstep locationmarkerid="SOLDIER" markedinworld="true" markedonminimap="true">
+        <missions>
+          <gotoquestgiver questgivervariable="SOLDIER"/>
+        </missions>
+      </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemid="T2_2H_BOW" count="1"/>
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_PROGRESS" priority="4" minlevel="1" maxlevel="2" tags="unused" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="GATHERING" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C_COMPLETIONTEXT">
-    <variables>
-      <dynamicquestgiver name="AGENT_A" includingme="true">
+  <quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="true" completehintbox="PREMIUMSMALL" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+     <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="COMMANDER">
         <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag ="ROYALSOLDIER"/>
+        <questgivertag tag="ROYALCOMMANDER"/>
       </dynamicquestgiver>
     </variables>
     <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="AGENT_A"></gotoquestgiver>
-      </completionstep>
+      <extendedcompletionstep locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">
+        <missions>
+          <gotoquestgiver questgivervariable="COMMANDER"/>
+        </missions>
+      </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemid="T2_MAIN_FIRESTAFF" count="1"/>
+      <item count="1" itemid="T3_PREMIUMITEM_3_NONTRADABLE"/>
+    </rewards>
+  </quest>
+  <!--TEST-->
+
+
+
+
+
+<!--TUTORIAL OBERON-->
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_A_COMPLETIONTEXT" cancelable="false" playcompletesoundonce="true" completesound="Play_NPC_VO_P1_Silas_Welcome">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="CRAFTER">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="WOUNDEDCRAFTER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="FIRSTQUEST"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="QUESTMARKERBOXTRIGGER" markedonminimap="false" markedinworld="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_A_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+          <openhintbox uniquename="QUESTMARKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="POINT" seconds="2" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_A1_SIDETEXT" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CLEAR"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT" />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
     </rewards>
   </quest>
 
+    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_B_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_A" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <gotolocation locationmarkerid="LIGHTHOUSEUP"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" />
+      </missionstep>
+      <missionstep>
+        <gotolocation locationmarkerid="LIGHTHOUSEUP2"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" markedinworld="false" markedonminimap="true" hideindetailsui="true" />
+      </missionstep>
+      <missionstep>
+        <gotolocation locationmarkerid="LIGHTHOUSETOP" textloca="@MISSIONS_T2_TUTORIAL_TEST_B1_SIDETEXT" />
+      </missionstep>
+        <missionstep>
+        <gotolocation locationmarkerid="HERETICS" textloca="@MISSIONS_T2_TUTORIAL_TEST_B2_SIDETEXT"/>
+      </missionstep>
+      <missionstep>
+        <gotolocation locationmarkerid="LIGHTHOUSEDOWN" textloca="@MISSIONS_T2_TUTORIAL_TEST_B3_SIDETEXT" hideindetailsui="true" markedinworld="false" markedonminimap="true"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="USESPELL"/>
+        </preactions>   
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_B4_SIDETEXT" hideindetailsui="true"  locationmarkerid="LIGHTHOUSEUP" markedinworld="true" markedonminimap="true">
+            <usespell spell="SPRINT"  hideinhud="true" hideindetailsui="true"/>
+            <gotolocation locationmarkerid="LIGHTHOUSEUP"/>
+          </or>    
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep locationmarkerid="T1_ALL" markedinworld="true" markedonminimap="false">
+        <preactions>
+          <settutorialstate state="FIRSTGATHER"/>
+        </preactions>
+        <missions>
+           <gotolocation locationmarkerid="T1_RESOURCES" hideindetailsui="true" markedinworld="false" markedonminimap="false"/>     
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+        </preactions>
+        <missions>
+          <acquireitem itemid="T1_ROCK" count="6" locationmarkerid="T1_ROCK" markedonminimap="false" markedinworld="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT_01"/>
+          <acquireitem itemid="T1_WOOD" count="6" locationmarkerid="T1_WOOD" markedonminimap="false" markedinworld="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT_02"/>
+        </missions>
+      </extendedmissionstep>
+      <completionstep>
+        <gotoquestgiver/>
+      </completionstep>
+      </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+        <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_D" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_D_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_D_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_D_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_D_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_C" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKFORGE" statetoset="0"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="T1_FORGE_TUTORIAL"  locationmarkerid="FORGE" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="FIRSTCRAFT"/>
+        </preactions>
+        <missions>
+          <acquireitem itemid="T1_MAIN_SWORD" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEST_D1_SIDETEXT"/> 
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="DELAYEDHARDCLEARPREDB"/>
+          <settutorialstate state="FIRSTINVENTORY"/> 
+        </preactions>
+        <missions>
+          <usefunction function="OpenInventory" textloca="@MISSIONS_T2_TUTORIAL_TEST_D2_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="FIRSTEQUIP"/>
+        </preactions>
+        <missions>
+          <equipitem itemid="T1_MAIN_SWORD" textloca="@MISSIONS_T2_TUTORIAL_TEST_D3_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="SPELLZONE_COOLDOWN_RESET_EFFECT">
+        <preactions>
+          <settutorialstate state="FIRSTSPELL"/>
+        </preactions>
+        <missions>
+          <selectspell itemid="T1_MAIN_SWORD" textloca="@MISSIONS_T2_TUTORIAL_TEST_D4_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T1_OFF_SHIELD" count="1"/>
+    </rewards>
+  </quest>
+  
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_E" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_E_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_E_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_E_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_E_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_D" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="EQUIPSHIELD"/>
+        </preactions>
+        <missions>
+          <equipitem itemid ="T1_OFF_SHIELD" textloca="@MISSIONS_T2_TUTORIAL_TEST_H2_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+        </preactions>
+         <missions>
+          <gotolocation locationmarkerid="GATE" textloca="@MISSIONS_T2_TUTORIAL_TEST_E_SIDETEXT" hideindetailsui="true" seconds="3"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="SPELLZONE_COOLDOWN_RESET_EFFECT">
+        <preactions>
+          <settutorialstate state="COMBAT"/>
+          <settutorialblocker id="HERETICGATE" statetoset="0"/>
+        </preactions>
+        <missions>
+          <killmob faction="HERETIC" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEST_E1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+       <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="COMBATCLEAR"/>
+        </preactions>
+        <missions>
+          <killmob faction="HERETIC" count="3" textloca="@MISSIONS_T2_TUTORIAL_TEST_E2_SIDETEXT"/>
+          <unlockachievement achievement="START" masterylevel="0" hideindetailsui="true" hideinhud="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARPREDB"/>
+          <settutorialstate state="DESTINYBOARDINTRO"/>
+          <settutorialblocker id="THIEFKILL" statetoset="0"/>
+        </preactions>
+        <missions>
+            <gotolocation locationmarkerid="CAPTAIN_TIA" textloca="@MISSIONS_T2_TUTORIAL_TEST_E3_SIDETEXT" />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+        <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_F" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_F_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_F_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_F_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_F_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_E" cancelable="false" completesound="Play_NPC_VO_P1_Tia_Welcome" playcompletesoundonce="true">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+     <dynamicquestgiver name ="CAPTAIN">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="CAPTAIN_TIA"/>
+      </dynamicquestgiver>
+    </variables>
+          <tasks>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="WHEREAREMYFRIENDS"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="CAPTAIN" locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <silver absolute="3"/>
+    </rewards>
+  </quest>
+  
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_H" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_H_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_H_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_H_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_H_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_F" cancelable="false" offersound="Play_NPC_VO_P1_Tia_Offer" acceptsound="Play_NPC_VO_P1_Tia_Accept" progresssound="Play_NPC_VO_P1_Tia_Progress" completesound="Play_NPC_VO_P2_Silas_Welcome" playcompletesoundonce="true" completehintbox="CLEAR">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    <dynamicquestgiver name ="CRAFTER">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="WOUNDEDCRAFTER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKSMP" statetoset="0"/>
+        </preactions>
+        <missions>
+          <usefunction function="InteractWithMarketplace" textloca="@MISSIONS_T2_TUTORIAL_TEST_H_SIDETEXT" locationmarkerid="MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="BUYMOUNT"/>
+        </preactions>
+        <missions >
+          <marketboughtitem item="T2_MOUNT_MULE" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEST_H1_SIDETEXT"  locationmarkerid="MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="COLLECTITEM"/>
+        </preactions>
+        <missions >
+          <acquireitem itemid ="T2_MOUNT_MULE" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEST_H4_SIDETEXT" hideindetailsui="true"  locationmarkerid="MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true">
+        <missions>
+          <gotolocation locationmarkerid="MOUNTREMINDER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+          <openhintbox uniquename="MOUNT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="CRAFTER" locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT"/>
+        </missions>
+      </extendedcompletionstep> 
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_I" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_I_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_I_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_I_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_I_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_H" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer"  acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKSTOOLS" statetoset="0"/>
+          <settutorialstate state="CRAFTTOOLSINFO"/>
+        </preactions>
+        <missions>
+           <acquireitem itemid="T1_2H_TOOL_PICK" count="1" locationmarkerid="TOOLMAKERSMALL"/>
+           <acquireitem itemid="T1_2H_TOOL_AXE" count="1" locationmarkerid="TOOLMAKERSMALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T1_2H_TOOL_SICKLE" count="1"/>
+      <item itemid="T1_2H_TOOL_KNIFE" count="1"/>
+    </rewards>
+  </quest>
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_J" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_J_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_J_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_J_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_J_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_I" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="HIGHLIGHTMAPBUTTON"/>
+        </preactions>
+        <missions>
+          <usefunction function="OpenWorldMap" textloca="@MISSIONS_T2_TUTORIAL_TEST_J1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state ="MAPINTRO"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver  locationmarkerid="CRAFTER"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+  
+   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_K" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_K_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_K_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_K_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_K_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_J" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep locationmarkerid="FOREST" markedinworld="false" markedonminimap="true">
+        <preactions>
+          <settutorialblocker id="FORESTBLOCK" statetoset="0"/>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FORESTINFOTRIGGER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_N2_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="FOREST"/>
+        </preactions>
+        <missions>
+          <gather itemid="T2_WOOD" count="6" locationmarkerid="T2_WOOD" textloca="@MISSIONS_T2_TUTORIAL_TEST_K1_SIDETEXT"  markedinworld="false" markedonminimap="false" />
+          <gather itemid="T2_HIDE" count="4" locationmarkerid="T2_WOOD" textloca="@MISSIONS_T2_TUTORIAL_TEST_K4_SIDETEXT"  markedinworld="false" markedonminimap="false" />
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_K3_SIDETEXT"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_KA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_KA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_KA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_KA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_KA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_K" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="MOUNTAIN" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MOUNTAINENTRANCE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_K5_SIDETEXT" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="FINALCHAPTER" markedinworld="false" markedonminimap="true">
+        <missions>
+          <gotolocation locationmarkerid="MOUNTAININFOTRIGGER" markedinworld="false" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_K5_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="MOUNTAIN"/>
+        </preactions>
+        <missions>
+          <gather itemid="T2_ORE" count="6" locationmarkerid="T2_ORE" textloca="@MISSIONS_T2_TUTORIAL_TEST_K2_SIDETEXT"  markedinworld="false" markedonminimap="false"/>
+          <gather itemid="T2_FIBER" count="4" locationmarkerid="T2_FIBER" textloca="@MISSIONS_T2_TUTORIAL_TEST_KA2_SIDETEXT"  markedinworld="false" markedonminimap="false"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_K3_SIDETEXT"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+   
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_L" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_L_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_L_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_L_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_L_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_KA" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" playcompletesoundonce="true" completesound="Play_NPC_VO_P2_Tia_Welcome">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+        <dynamicquestgiver name ="CAPTAIN">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="CAPTAIN_TIA"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKNPCS" statetoset="0"/>
+        </preactions>
+        <missions>
+          <acquireitem itemid="T2_METALBAR" count="6" locationmarkerid="SMELTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+       <missionstep>
+         <acquireitem itemid="T2_LEATHER" count="4" locationmarkerid="SKINNER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L2_SIDETEXT"/>
+      </missionstep>
+      <missionstep>
+        <acquireitem itemid="T2_PLANKS" count="6" locationmarkerid="CARPENTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L3_SIDETEXT"/>
+      </missionstep>
+      <missionstep>
+        <acquireitem itemid="T2_CLOTH" count="4" locationmarkerid="WEAVER" textloca="@MISSIONS_T2_TUTORIAL_TEST_L4_SIDETEXT"/>
+      </missionstep>
+      <extendedmissionstep locationmarkerid="SHIP_CHECK" >
+        <preactions>
+          <settutorialblocker id="BLOCKSHIP" statetoset="0"/>
+        </preactions>
+        <missions>
+          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_PLANKS" count="6" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L7_SIDETEXT"/>
+          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_METALBAR" count="6" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L5_SIDETEXT"/>
+          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_CLOTH" count="4" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L8_SIDETEXT"/>
+          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_LEATHER" count="4" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L6_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="FIXSHIP" statetoset="0"/>
+          <settutorialstate state="SHIPFIXED"/>
+          <settutorialstate state="HARDCLEARAFTERDB"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_L9_SIDETEXT" hideinhud="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+          <gotoquestgiver questgivervariable="CAPTAIN" locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T1_MEAL_SOUP" count="3"/>
+      <learningpoints amount="1"/>
+    </rewards>
+  </quest>
+
+  <!--TRIPPLE QUEST-->
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_MA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_MA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_MA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_MA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_MA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_L" cancelable="false" nextquest="MISSIONS_T2_TUTORIAL_TEST_NA" offersound="Play_NPC_VO_P2B_Tia_Offer"  acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="LEARNLP"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_A1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true">
+            <gotolocation locationmarkerid="CAMP_A1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_B1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_C1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+       <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="COMBAT2"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_A" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
+            <gotolocation locationmarkerid="CAMP_A" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_B" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_C" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="HERETIC_INFO_A" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_B" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_C" statetoset="0"/>
+        </preactions>
+        <missions>    
+            <reachlpthreshold achievement="COMBAT_TRAINEE" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA2_SIDETEXT"/>  
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="TUTORIAL_MOB_INVISIBILITY">
+        <preactions>
+          <settutorialstate state="USELP"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <uselearningpoints value="1"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="TIA" markedinworld="false" markedonminimap="true" applybuff="TUTORIAL_MOB_INVISIBILITY_NOSTUN">
+        <preactions>
+          <settutorialstate state="CLEARUSELP"/>
+          <openhintbox uniquename="USELP_03"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TIAMAP" markedinworld="true" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA4_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialblocker id="TIA_TABLE" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <silver absolute="40"/>
+    </rewards>
+  </quest>
+  
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_MB" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_MA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_MA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_MA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_MA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_L" cancelable="false" nextquest="MISSIONS_T2_TUTORIAL_TEST_NA" offersound="Play_NPC_VO_P2B_Tia_Offer"  acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+    <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="LEARNLP"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_B1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true">
+            <gotolocation locationmarkerid="CAMP_A1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_B1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_C1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="COMBAT2"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_B" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
+            <gotolocation locationmarkerid="CAMP_A" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_B" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_C" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="HERETIC_INFO_A" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_B" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_C" statetoset="0"/>
+        </preactions>
+        <missions>
+          <reachlpthreshold achievement="COMBAT_TRAINEE" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA2_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="TUTORIAL_MOB_INVISIBILITY">
+        <preactions>
+          <settutorialstate state="USELP"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <uselearningpoints value="1"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="TIA" markedinworld="false" markedonminimap="true" applybuff="TUTORIAL_MOB_INVISIBILITY_NOSTUN">
+        <preactions>
+          <settutorialstate state="CLEARUSELP"/>
+          <openhintbox uniquename="USELP_03"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TIAMAP" markedinworld="true" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA4_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialblocker id="TIA_TABLE" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <silver absolute="40"/>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_MC" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_MA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_MA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_MA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_MA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_L" cancelable="false" nextquest="MISSIONS_T2_TUTORIAL_TEST_NA"  offersound="Play_NPC_VO_P2B_Tia_Offer"  acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+    <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="LEARNLP"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_C1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true">
+            <gotolocation locationmarkerid="CAMP_A1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_B1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+            <gotolocation locationmarkerid="CAMP_C1" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="COMBAT2"/>
+        </preactions>
+        <missions>
+          <or locationmarkerid="CAMP_C" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
+            <gotolocation locationmarkerid="CAMP_A" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="true"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_B" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+            <gotolocation locationmarkerid="CAMP_C" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="false" markedonminimap="false"  hideindetailsui="true" seconds="3"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="HERETIC_INFO_A" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_B" statetoset="0"/>
+          <settutorialblocker id="HERETIC_INFO_C" statetoset="0"/>
+        </preactions>
+        <missions>
+          <reachlpthreshold achievement="COMBAT_TRAINEE" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA2_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="TUTORIAL_MOB_INVISIBILITY">
+        <preactions>
+          <settutorialstate state="USELP"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <uselearningpoints value="1"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="TIA" markedinworld="false" markedonminimap="true" applybuff="TUTORIAL_MOB_INVISIBILITY_NOSTUN">
+        <preactions>
+          <settutorialstate state="CLEARUSELP"/>
+          <openhintbox uniquename="USELP_03"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TIAMAP" markedinworld="true" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA4_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialblocker id="TIA_TABLE" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <silver absolute="40"/>
+    </rewards>
+  </quest>
+
+  <!-- END - TRIPPLE QUEST-->
+
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_NA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_NA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_NA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_NA_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_NA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_MA,MISSIONS_T2_TUTORIAL_TEST_MB,MISSIONS_T2_TUTORIAL_TEST_MC" cancelable="false" requiresonlyonepreviousquest="true"  offersound="Play_NPC_VO_P2_Tia_Offer"  acceptsound="Play_NPC_VO_P2_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2_Tia_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKCRAFTERS" statetoset="0"/>
+          <settutorialstate state="WHATYOUWEAR"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="T2_FORGE_TUTORIAL" locationmarkerid="FORGE"  markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_NA1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="INFO1"/>
+        </preactions>
+      <missions>
+          <interactwithbuilding buildingid="T2_HUNTERSLODGE_TUTORIAL" locationmarkerid="LODGE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_NA2_SIDETEXT"/>
+      </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialstate state="INFO2"/>
+        </preactions>
+      <missions>
+          <interactwithbuilding buildingid="T2_MAGICITEMS_TUTORIAL" locationmarkerid="TOWER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_NA3_SIDETEXT"/>
+      </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="INFO3"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+    
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_O" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_O_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_O_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_O_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_O_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_NA" cancelable="false"  offersound="Play_NPC_VO_P2_Tia_Offer" acceptsound="Play_NPC_VO_P2_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2_Tia_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+           <settutorialstate state="SILVER"/>
+        </preactions>
+        <missions>
+          <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEST_O1_SIDETEXT" count="1" listtype="or">
+            <item id="T2_HEAD_CLOTH_SET1"/>
+            <item id="T2_HEAD_LEATHER_SET1"/>
+            <item id="T2_HEAD_PLATE_SET1"/>
+          </acquireitem>
+          <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEST_O2_SIDETEXT" count="1" listtype="or">
+            <item id="T2_ARMOR_CLOTH_SET1"/>
+            <item id="T2_ARMOR_LEATHER_SET1"/>
+            <item id="T2_ARMOR_PLATE_SET1"/>
+          </acquireitem>
+          <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEST_O3_SIDETEXT" count="1" listtype="or">
+            <item id="T2_SHOES_CLOTH_SET1"/>
+            <item id="T2_SHOES_LEATHER_SET1"/>
+            <item id="T2_SHOES_PLATE_SET1"/>
+          </acquireitem>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_O5_SIDETEXT">
+            <acquireitem count="1">
+              <item id="T2_2H_BOW"/>       
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T2_MAIN_SWORD"/>
+              <item id="T2_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T2_MAIN_FIRESTAFF"/>
+              <item id="T2_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T2_MAIN_SWORD"/>
+              <item id="T2_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T2_MAIN_FIRESTAFF"/>
+              <item id="T2_OFF_SHIELD"/>
+            </acquireitem>
+          </or>     
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <missions>
+          <haveavgitempower itempower="240" textloca="@MISSIONS_T2_TUTORIAL_TEST_O_SIDETEXT" />
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state ="GETGEARCLEAR"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T2_CAPE" count="1"/>
+    </rewards>
+  </quest>
+  
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_P" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_P_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_P_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_P_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_P_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_O" cancelable="false" offersound="Play_NPC_VO_P2B_Tia_Offer"   acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+        <gotolocation locationmarkerid="MOUNTAINENTRANCE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_P1_SIDETEXT" hideinhud="false" hideindetailsui="true"/>
+      </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="FINALCHAPTER" markedinworld="false" markedonminimap="true">
+        <missions>
+          <gotolocation locationmarkerid="MOUNTAININFOTRIGGER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_P1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <gotolocation locationmarkerid="FORT" hideindetailsui="true" markedinworld="false" markedonminimap="true"  textloca="@MISSIONS_T2_TUTORIAL_TEST_P2_SIDETEXT" triggeronleave="true"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="SHIPGATE2" statetoset="0"/>
+        </preactions>
+        <missions>
+            <killmob faction="HERETIC" mintier="2" maxtier="2" count="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_P_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="AMMO" markedinworld="true" markedonminimap="true">
+        <missions>
+          <usefunction function="FinishTutorial" textloca="@MISSIONS_T2_TUTORIAL_TEST_P6_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="AMMO" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="SIGNALFIRE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_P7_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="SIGNALFIRE" statetoset="0"/>
+          <settutorialblocker id="SHIPGATE" statetoset="0"/>
+          <settutorialblocker id="ENDING" statetoset="0"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TRIGGERSHIP" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_P3_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <missions>
+          <gotolocation locationmarkerid="EXIT" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_P4_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialblocker id="ENDING" statetoset="1"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENDE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_P5_SIDETEXT"/>
+        </missions>
+      </extendedcompletionstep>    
+    </tasks>
+    <rewards>
+      <learningpoints amount="100"/>
+    </rewards>
+  </quest>
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_Q" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_Q_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_Q_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_Q_PROGRESSTEXT" priority="3" minlevel="1" maxlevel="2" tags="captaintia2" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_Q_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_P" cancelable="false"  offersound="Play_NPC_VO_P2_Tia_Finale" progresssound="Play_NPC_VO_P2_Tia_Finale">  
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <haveplaytime seconds="900" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="FINISH"/>
+        </preactions>
+        <missions>
+          <usefunction function="BuyJourney" locationmarkerid="FIRSTMATE" textloca="@MISSIONS_T2_TUTORIAL_TEST_Q_SIDETEXT"/>
+        </missions>
+      </extendedcompletionstep>    
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+    
 
   <!--Faction Caravan Missions
 Light-->
@@ -2397,699 +2538,6 @@ Light-->
       <changeflagging/>
     </failconditions>
   </playerfactionquest>
-
-  <!-- Old Tutorial
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER_COMPLETIONTEXT" >
-  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-      <dynamicquestgiver name ="CRAFTER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCRAFTER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CRAFTER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON"
-     mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_TITLE"
-     offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_OFFERTEXT"
-     progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_PROGRESSTEXT"
-     priority="1" minlevel="1" maxlevel="2"
-     tags="crafter"
-     offertimeout="0" questtimeout="14400" questslotcooldown="0"
-     uicategory="GATHERING" onceonly="true"
-     previousquests="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER"
-selectquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B;MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C"
-           completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CHOOSE_WEAPON_COMPLETIONTEXT">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="COMMANDER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCOMMANDER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest> 
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_A" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_PICK" count="1" />
-        <acquireitem itemid="T1_2H_TOOL_KNIFE" count="1" />
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_B" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT" >
-    
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_AXE" count="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SELECT_OPTION_C" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="T1_2H_TOOL_PICK" count="1"/>
-        <acquireitem itemid="T1_2H_TOOL_AXE" count="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <usefunction function="OpenWorldMap"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD_COMPLETIONTEXT">
- 
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamiccluster name="LOCATION_B">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_ORE" count="16"/>
-        <gather itemid="T2_HIDE" count="8"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
- 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_BOW,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW_COMPLETIONTEXT">
-
-  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_WOOD" count="32"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_TOOL_STAFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_LEARN_MAP" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamiccluster name="LOCATION_B">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_ORE" count="8"/>
-        <gather itemid="T2_WOOD" count="16"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD_COMPLETIONTEXT" >
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_METALBAR" count="16"/>
-        <craftitem itemid="T2_LEATHER" count="8"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_BOW" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW_COMPLETIONTEXT" >
-  
-    <variables>
-   <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_PLANKS" count="32"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GATHER_STAFF"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_METALBAR" count="8"/>
-        <craftitem itemid="T2_PLANKS" count="16"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_SWORD" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD_COMPLETIONTEXT" >
-  
-    
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_MAIN_SWORD" count ="1"/>   
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_2H_BOW" count ="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_REFINE_STAFF"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_MAIN_FIRESTAFF" count ="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_SWORD,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_STAFF" requiresonlyonepreviousquest="true"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF_COMPLETIONTEXT">
-  
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
-        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
-        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
-        <craftitem itemid="T2_OFF_SHIELD;T2_OFF_BOOK" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_OFF_HAND"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_CAPE" count="1"/>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_BOW"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR_COMPLETIONTEXT">
-    
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_CLOTH_SET1;T2_HEAD_LEATHER_SET1;T2_HEAD_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_HEAD_ARMOR"/>
-        <craftitem itemid="T2_ARMOR_CLOTH_SET1;T2_ARMOR_LEATHER_SET1;T2_ARMOR_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_CHEST_ARMOR"/>
-        <craftitem itemid="T2_SHOES_CLOTH_SET1;T2_SHOES_LEATHER_SET1;T2_SHOES_PLATE_SET1" count ="1" textloca="@MISSIONS_DESCRIPTION_CRAFTITEM_ANY_SHOES_ARMOR"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_CAPE" count="1"/>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMORANDOFF,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_CRAFT_ARMOR" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER_COMPLETIONTEXT" >
-    
-    <variables>
-      <dynamicquestgiver name ="SOLDIER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALSOLDIER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="SOLDIER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GOTO_SOLDIER"  completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC_COMPLETIONTEXT">
-   
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gathersilver value="150" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_COLLECT_SILVER"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_KILL_HERETIC" completetext="@MISSIONS_T2_TUTORIAL_ROYAL_SOLDIER_GOTO_COMMANDER_COMPLETIONTEXT">
-  
-    <variables>
-      <dynamicquestgiver name ="COMMANDER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCOMMANDER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <missionstep>
-        <acquireitem itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_GOTO_MARKETPLACE"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver questgivervariable="COMMANDER">
-          <item itemid="QUESTITEM_TOKEN_ROYAL_HORSE" count="1" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_TOKEN_TO_COMMANDER" />
-        </gotoquestgiver>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="T2_MOUNT_MULE" count="1"/>
-    </rewards>
-  </quest> -->
-
-  <!--Commented out for Update Galahad--><!--
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_AKINDOMFORAHORSE" mobfaction="ROYALARMY" title="@AKINDOMFORAHORSE" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="start" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="FIGHTING" >
-    
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="AGENT_1" includingme="false">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      
-      <completionstep>
-        <gotoquestgiver questgivervariable="AGENT_1" />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_SWORDANDSHIELD" mobfaction="ROYALARMY" title="@SWORDANDSHIELD" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="7" minlevel="1" maxlevel="2" tags="standard" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING" >
-    --><!-- SwordAndShield Mission --><!--
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-       <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamiccluster name="LOCATION_B">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/> 
-      </dynamiccluster>
-      <dynamiccluster name="LOCATION_C">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="WOOD" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gotocluster cluster="LOCATION_A"/>
-        <gotocluster cluster="LOCATION_B"/>
-        <gotocluster cluster="LOCATION_C"/>
-
-        <gather itemid="T2_ORE" count="20" cluster="LOCATION_A" />
-        <gather itemid="T2_HIDE" count="8" cluster="LOCATION_B"/>
-        <gather itemid="T2_WOOD" count="4" cluster="LOCATION_C"/>
-      </missionstep>
-      <missionstep>
-        
-        <craftitem itemid="T2_METALBAR" count="20"/>
-        <craftitem itemid="T2_LEATHER" count="8"/>
-        <craftitem itemid="T2_PLANKS" count="4"/>
-      </missionstep>
-      <missionstep>
-        <craftitem itemid="T2_OFF_SHIELD" count ="1"/>
-        <craftitem itemid="T2_MAIN_SWORD" count ="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GENERIC_STAFFANDBOOK" mobfaction="ROYALARMY" title="@STAFFANDBOOK" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="6" minlevel="1" maxlevel="2" tags="standard" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING" >
-    --><!-- StaffAndBook Mission --><!--
-  <variables>
-    <dynamiccluster name="LOCATION_A">
-      <distancetocluster mindistance="0" maxdistance="1" />
-     --><!-- <presentresource resourceid="ORE" tier="2"/>
-      <presentresource resourceid="HIDE" tier="2"/>
-      <presentresource resourceid="WOOD" tier="2"/>
-      <presentresource resourceid="FIBER" tier="2"/>--><!--
-     </dynamiccluster>
-  </variables>
-  <tasks>
-    <missionstep>
-      <gather itemid="T2_ORE" count="8" />
-      <gather itemid="T2_HIDE" count="4" />
-      <gather itemid="T2_WOOD" count="16" />
-      <gather itemid="T2_FIBER" count="4" />
-    </missionstep>
-    <missionstep>
-      <craftitem itemid="T2_METALBAR" count="8"/>
-      <craftitem itemid="T2_LEATHER" count="4"/>
-      <craftitem itemid="T2_PLANKS" count="16"/>
-      <craftitem itemid="T2_CLOTH" count="4"/>
-    </missionstep>
-    <missionstep>
-      <craftitem itemid="T2_MAIN_FIRESTAFF" count ="1"/>
-      <craftitem itemid="T2_OFF_BOOK" count ="1"/>
-    </missionstep>
-    <completionstep>
-      <gotoquestgiver />
-    </completionstep>
-  </tasks>
-  <rewards>
-    <silver absolute="915" />
-  </rewards>
-  </quest>
-
-
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST3" mobfaction="ROYALARMY" title="@TEST3" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" previousquests="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST2, T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST1,MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GENERIC_STAFFANDBOOK"  progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="5" minlevel="1" maxlevel="2" tags="hope" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING" >
-    --><!-- Bow Mission --><!--
-    <variables>
-
-      <dynamicquestgiver name="T2_BOB">
-        <presentagent agentid="T2_AGENT_ROYALARMY_COMBAT_TEST"/>
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="T2_BOB"></gotoquestgiver>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-  
-  
-  
-  <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_CRAFTER_GENERIC_BOW" nextmission="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST3" mobfaction="ROYALARMY" title="@BOW" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" previousquests="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST2, T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST1"  progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="5" minlevel="1" maxlevel="2" tags="hope" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING" onceonly="true">
-    --><!-- Bow Mission --><!--
-    <variables>
-
-      <dynamicquestgiver name="T2_BOB">
-        --><!--<presentagent agentid="T2_AGENT_ROYALARMY_COMBAT_TEST"/>--><!--
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="T2_BOB"></gotoquestgiver>
-      </completionstep>
-      </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST2" nextmission="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST1" mobfaction="ROYALARMY" title="@TEST2" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="5" minlevel="1" maxlevel="2" tags="test" offertimeout="0" questtimeout="14400" questslotcooldown="600" uicategory="GATHERING">
-    --><!-- HeavyArmor Mission --><!--
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="1" maxdistance="1" />
-        <presentresource resourceid="ORE" tier="2"/>
-      </dynamiccluster>
-      <dynamicquestgiver name="T2_BOB">
-        --><!--<presentagent agentid="T2_AGENTSOCKET_1109_ROYALARTISAN_HUNTER_01"/>--><!--
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="T2_AGENTSOCKET_1109_ROYALARTISAN_HUNTER_01"></gotoquestgiver>     
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
- 
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_TEST1" mobfaction="ROYALARMY" title="@TEST1" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="4" minlevel="1" maxlevel="2" tags="whatever" offertimeout="0" questtimeout="14400" questslotcooldown="600" uicategory="GATHERING">
-    --><!-- HeavyArmor Mission --><!--
-    <variables>
-
-      <dynamicquestgiver name="T2_BOB">
-        --><!--<presentagent agentid="T2_AGENT_ROYALARMY_COMBAT_TEST"/>--><!--
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="T2_BOB"></gotoquestgiver>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_MEDIUMARMOR" mobfaction="ROYALARMY" title="@MEDIUMARMOR" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="3" minlevel="1" maxlevel="2" tags="standard" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING"  previousquests="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_HEAVYARMOR" >
-    --><!-- MediumArmor Mission --><!--
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-         <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_HIDE" count="32" />
-      </missionstep>
-      <missionstep>
-        <craftitem itemid="T2_LEATHER" count="32"/>
-      </missionstep>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_LEATHER_SET1" count ="1"/>
-        <craftitem itemid="T2_ARMOR_LEATHER_SET1" count ="1"/>
-        <craftitem itemid="T2_SHOES_LEATHER_SET1" count ="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-  
-  <quest uniquename="T2_MISSION_COMBAT_ROYALARMY_HERETIC_GENERIC_LIGHTARMOR" mobfaction="ROYALARMY" title="@LIGHTARMOR" offertext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_OFFERTEXT" progresstext="@MISSIONS_T2_COMBAT_ROYALARMY_HERETIC_GENERIC_1_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="standard" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING" >
-    --><!-- LightArmor Mission -->
-    <!--
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-         <presentresource resourceid="FIBER" tier="2"/>
-       </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_FIBER" count="32" />
-      </missionstep>
-      <missionstep>
-        <craftitem itemid="T2_CLOTH" count="32"/>
-      </missionstep>
-      <missionstep>
-        <craftitem itemid="T2_HEAD_CLOTH_SET1" count ="1"/>
-        <craftitem itemid="T2_ARMOR_CLOTH_SET1" count ="1"/>
-        <craftitem itemid="T2_SHOES_CLOTH_SET1" count ="1"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="915" />
-    </rewards>
-  </quest>
-
-  <quest uniquename="T2_MISSION_GATHER_ROYALFORAGER_WARRIOR_1" faction="ROYALFORAGER" title="@MISSIONS_T2_GATHER_ROYALFORAGER_WARRIOR_1_TITLE" offertext="@MISSIONS_T2_GATHER_ROYALFORAGER_WARRIOR_1_OFFERTEXT" progresstext="@MISSIONS_T2_GATHER_ROYALFORAGER_WARRIOR_1_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" silverrequired="710" tags="standard" offertimeout="0" questtimeout="14400" questslotcooldown="0" uicategory="GATHERING">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-        <presentresource resourceid="ORE" tier="2" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gather itemid="T2_ORE" count="63" />
-        <gather itemid="T2_HIDE" count="8" />
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <silver absolute="710" />
-    </rewards>
-  </quest>
--->
     
 </quests>
 

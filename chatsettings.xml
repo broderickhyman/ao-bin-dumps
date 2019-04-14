@@ -2,7 +2,7 @@
 <ChatSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chatsettings.xsd">
 
   <!-- Setting for the Chat UI -->
-  <ChatUi maxtabs="10" selectedtab="0" maxmuted="30" maxtabnamelength="10">
+  <ChatUi maxtabs="10" selectedtab="0" maxtabnamelength="10">
     <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="false" showchannelnames="true" maininputchannel="global">
       <Channel id="global" />
       <Channel id="local" />
@@ -17,7 +17,7 @@
       <Channel id="personal" />
       <Channel id="killplayer" />
       <Channel id="system" />
-	  <Channel id="staff" />
+      <Channel id="staff" />
     </DefaultTab>
     <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="false" showchannelnames="true" maininputchannel="help">
       <Channel id="help" />
@@ -52,7 +52,24 @@
     <PartyTab showtimestamps="true" showchannelnames="false" maininputchannel="party">
       <Channel id="party" />
       <Channel id="personal" />
-    </PartyTab>    
-  </ChatUi>  
+    </PartyTab>
+  </ChatUi>
+
+  <Cooldowns default_message_cooldown_ms ="500" say_cooldown_ms="500" whisper_cooldown_ms="500" say_radius="30" PlayerWhisperListCoolDownInSec="3600" 
+			 MaxPlayerOnWhisperCoolDownListTutorial="3" MaxPlayerOnWhisperCoolDownList="10" MaxPlayerOnWhisperCoolDownListTrusted="100" >
+    <Channel id="Area"            cooldown_ms="500"/>
+    <Channel id="Global"          cooldown_ms="1000"/>
+    <Channel id="Trade"           cooldown_ms="30000"/>
+    <Channel id="Recruit"         cooldown_ms="30000"/>
+    <Channel id="Lookingforgroup" cooldown_ms="30000"/>
+    <Channel id="Help"            cooldown_ms="1000"/>
+    <Channel id="Staff"           cooldown_ms="100"/>
+    <Channel id="Guild"           cooldown_ms="500"/>
+    <Channel id="Alliance"        cooldown_ms="500"/>
+    <Channel id="Party"           cooldown_ms="500"/>
+    <Channel id="Duell"           cooldown_ms="500"/>
+    <Channel id="Faction"         cooldown_ms="1000"/>
+  </Cooldowns>
+
 </ChatSettings>
   

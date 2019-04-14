@@ -10,6 +10,18 @@
         <exit size="9 9" spawnpos="-9.536743E-07 -10.00001" faction="Undead" kind="DungeonStubSolo" roadtype="Primary" />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="randomdungeonfixedexit_01" type="randomdungeonfixedexit" layerId="Layer_01">
+      <tile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T4" pos="18 8 -40" />
+    </criticalscenemember>
+    <criticalscenemember id="randomdungeonfixedexit_02" type="randomdungeonfixedexit" layerId="Layer_01">
+      <tile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T4" pos="42 4 41" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="randomdungeonfixedexit_03" type="randomdungeonfixedexit" layerId="Layer_02">
+      <tile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T7" pos="42 4 41" roty="90" />
+    </criticalscenemember>
+    <criticalscenemember id="randomdungeonfixedexit_04" type="randomdungeonfixedexit" layerId="Layer_02">
+      <tile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T7" pos="18 8 -40" />
+    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
     <layergroup name="Dungeon">
@@ -35,9 +47,6 @@
         <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="43 4 17" roty="315">
           <mobspawnpoint behavior="GUARD" />
         </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="17 8 -43" roty="45">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_ARCHER" pos="-42 12 -43" roty="180">
           <mobspawnpoint behavior="PATROL">
             <path>
@@ -48,12 +57,8 @@
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="20 4 18" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="18 4 20" roty="180" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="42 4 40" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="40 8 -18" roty="90" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="40 4 42" roty="90" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="42 8 -20" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="18 8 -40" roty="180" />
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="20 8 -42" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="-18 12 -12" roty="45" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="-18 12 -8" roty="135" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="-48 16 45" roty="90">
@@ -72,9 +77,6 @@
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_GHOUL" pos="-45 16 48" roty="180">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
-        <tile name="SpawnPoint_T4_MOB_UNDEAD_SHADE" pos="43 4 43" roty="225">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T4_MOB_UNDEAD_SHADE" pos="17 8 -17" roty="135">
@@ -113,6 +115,8 @@
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="42 4 20" roty="180" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="20 8 -18" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="18 8 -20" />
+        <criticaltile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T4" pos="18 8 -40" id="randomdungeonfixedexit_01" type="randomdungeonfixedexit" />
+        <criticaltile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T4" pos="42 4 41" roty="90" id="randomdungeonfixedexit_02" type="randomdungeonfixedexit" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="40 8 -50" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="57 10 -53" roty="270" />
         <tile name="SpawnPoint_T4_MOB_UNDEAD_TRASH_SKELETON" pos="40 8 -40" roty="315" />
@@ -151,10 +155,9 @@
         </tile>
       </layer>
       <layer id="Layer_02" name="T7">
+        <criticaltile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T7" pos="42 4 41" roty="90" id="randomdungeonfixedexit_03" type="randomdungeonfixedexit" />
+        <criticaltile name="HIGHLAND_GREEN_FIXED_EXIT_10x10_UND_T7" pos="18 8 -40" id="randomdungeonfixedexit_04" type="randomdungeonfixedexit" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="43 4 17" roty="315">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="17 8 -43" roty="45">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_ARCHER" pos="-42 12 -43" roty="180">
@@ -167,12 +170,8 @@
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="20 4 18" roty="270" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="18 4 20" roty="180" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="42 4 40" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="40 8 -18" roty="90" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="40 4 42" roty="90" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="42 8 -20" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="18 8 -40" roty="180" />
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="20 8 -42" roty="270" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-18 12 -12" roty="45" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-18 12 -8" roty="135" />
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-48 16 45" roty="90">
@@ -191,9 +190,6 @@
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_GHOUL" pos="-45 16 48" roty="180">
-          <mobspawnpoint behavior="GUARD" />
-        </tile>
-        <tile name="SpawnPoint_T7_MOB_UNDEAD_SHADE" pos="43 4 43" roty="225">
           <mobspawnpoint behavior="GUARD" />
         </tile>
         <tile name="SpawnPoint_T7_MOB_UNDEAD_SHADE" pos="17 8 -17" roty="135">
@@ -403,8 +399,8 @@
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_RAMP_ROAD" pos="30 0 60" roty="270" />
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_RAMP_ROAD" pos="30 4 0" roty="270" />
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_RAMP_ROAD" pos="0 8 -30" />
-    <tile name="HIGHLAND_GREEN_PLATEAU_12M_STRAIGHT_B_NO_COLLISION" pos="-50 0 40" roty="270" />
-    <tile name="HIGHLAND_GREEN_PLATEAU_12M_STRAIGHT_B_NO_COLLISION" pos="-40 0 50" roty="180" />
+    <tile name="HIGHLAND_GREEN_PLATEAU_12M_STRAIGHT_B_NOCOL" pos="-50 0 40" roty="270" />
+    <tile name="HIGHLAND_GREEN_PLATEAU_12M_STRAIGHT_B_NOCOL" pos="-40 0 50" roty="180" />
     <tile name="HIGHLAND_GREEN_ROAD_PATH_HILL_8M_A" pos="5 4 30" />
     <tile name="HIGHLAND_GREEN_FILL_RUIN_PLATEAU_SIDE_A" pos="-30 -14 50" roty="180" />
     <tile name="HIGHLAND_GREEN_PLATEAU_4M_STRAIGHT_A" pos="10 0 60" roty="270" />
@@ -478,9 +474,9 @@
     <tile name="HIGHLAND_GREEN_HILL_8M_BASE_20X20_CORNER_A_OBJECT" pos="55 0 -65" roty="90" />
     <tile name="HIGHLAND_GREEN_GROUND" pos="50 0 -70" />
     <tile name="HIGHLAND_GREEN_GROUND" pos="50 0 -60" />
-    <tile name="HIGHLAND_GREEN_FILL_RUIN_PLATEAU_CORNER_LARGE_STANDARD_A_OBJECT" pos="-45 -14 45" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_PLATEAU_CORNER_LARGE_STANDARD_A_OBJ" pos="-45 -14 45" roty="180" />
     <tile name="HIGHLAND_GREEN_HILL_8M_BASE_20X20_STRAIGHT_A" pos="35 0 -65" roty="90" />
-    <tile name="HIGHLAND_GREEN_FILL_RUIN_PLATEAU_CORNER_LARGE_STANDARD_A_OBJECT" pos="-15 -14 45" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_PLATEAU_CORNER_LARGE_STANDARD_A_OBJ" pos="-15 -14 45" roty="270" />
     <tile name="HIGHLAND_GREEN_UND_IRON_FENCE_DOOR_B" pos="30.5 4 56.5" roty="270" />
     <tile name="HIGHLAND_GREEN_UND_IRON_FENCE_DOOR_B" pos="56.5 4 30.5" />
     <tile name="HIGHLAND_GREEN_UND_IRON_FENCE_DOOR_B" pos="55.5 8 -30.5" />
@@ -895,10 +891,8 @@
     <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="41.5 8 -16.5" roty="353" />
     <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="41.5 8 -42.5" roty="83" />
     <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="41.5 4 16.5" roty="30.09" />
-    <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="41.5 4 42.5" roty="120.74" />
     <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="21.5 4 41.5" roty="349.84" />
     <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="19.5 4 18.5" roty="306.54" />
-    <tile name="HIGHLAND_GREEN_VEG_STONE_FLOWER_A" pos="18.5 8 -40.5" roty="312.43" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_CORNER_A" pos="-52 0 55" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_CORNER_A_NOCOL" pos="-51 12 -51" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_CORNER_A_NOCOL" pos="-9 12 -51" roty="90" />
@@ -956,8 +950,6 @@
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_C" pos="0 8 -9" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_C" pos="-2 8 -42" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="6 8 -5" roty="90" scale="1.474076 0.5 1.474076" />
-    <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="-50 0 61" roty="270" scale="1.474076 0.5 1.474076" />
-    <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="-71 0 36" roty="270" scale="1.474076 0.5 1.474076" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="-16 0 71" scale="1.474075 0.5 1.474075" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="4 0 -70" roty="90" scale="1.474076 0.5 1.474076" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="18 8 -53" scale="1.474075 0.5 1.474075" />
@@ -1015,6 +1007,7 @@
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B" pos="65.5 0 0" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B_DIAGONAL_PLATEAU" pos="-57 2 44" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B_DIAGONAL_PLATEAU" pos="-62 4 -48" />
+    <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="-50 0 61" roty="270" scale="1.474076 0.5 1.474076" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B_DIAGONAL_PLATEAU" pos="-15 -1 68" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B_DIAGONAL_PLATEAU" pos="-29 4 -63" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_HIGH_B_DIAGONAL_PLATEAU" pos="-29 1 -67" />
@@ -1080,6 +1073,7 @@
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="-59 1 31.5" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="0 4 5.5" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="-54.5 4 -59" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_ROCK_FLAT_D" pos="-71 0 36" roty="270" scale="1.474076 0.5 1.474076" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="-37.5 1 -61" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="-16.5 4 -59" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_ROCK_PLATEAU_STRAIGHT_A" pos="-1.5 8 -57" roty="90" />
@@ -1179,40 +1173,40 @@
     <tile name="HIGHLAND_GREEN_UND_STATUE_B" pos="-48 12 -48" roty="315" />
     <tile name="HIGHLAND_GREEN_UND_STATUE_B" pos="-12 12 -48" roty="225" />
     <tile name="HIGHLAND_GREEN_UND_STATUE_B" pos="53 4 53" roty="135" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_CORNER_A" pos="-49 12 -49" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_CORNER_A" pos="-11 12 -49" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_CORNER_A" pos="-10 12 2" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_CORNER_A" pos="-51 12 2" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-49 12 -49" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-11 12 -49" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-10 12 1" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_INNERCORNER_A" pos="-50 12 1" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-49 12 -41.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-52 12 -35.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-40.5 12 -52" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-36.5 12 -49" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-31.5 12 -52" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-28.5 12 -50" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-23.5 12 -52" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-19.5 12 -49" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-8 12 -40.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-11 12 -19.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-8 12 -13.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-11 12 -6.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-16.5 12 3" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-22.5 12 0" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-37.5 12 3" roty="180" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-11 12 -35.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-8 12 -24.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-43.5 12 0" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-52 12 -7.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-49 12 -12.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-52 12 -16.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-50 12 -22.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-52 12 -28.5" roty="90" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-49 12 -30.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-55.5 12 -39" />
-    <tile name="HIGHLAND_GREEN_UND_STONES_FALLEN_STRAIGHT_A" pos="-55.5 12 -30" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_CORNER_A" pos="-49 12 -49" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_CORNER_A" pos="-11 12 -49" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_CORNER_A" pos="-10 12 2" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_CORNER_A" pos="-51 12 2" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-49 12 -49" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-11 12 -49" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-10 12 1" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-50 12 1" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-49 12 -41.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-52 12 -35.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-40.5 12 -52" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-36.5 12 -49" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-31.5 12 -52" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-28.5 12 -50" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-23.5 12 -52" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-19.5 12 -49" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-8 12 -40.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-11 12 -19.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-8 12 -13.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-11 12 -6.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-16.5 12 3" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-22.5 12 0" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-37.5 12 3" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-11 12 -35.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-8 12 -24.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-43.5 12 0" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-52 12 -7.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-49 12 -12.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-52 12 -16.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-50 12 -22.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-52 12 -28.5" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-49 12 -30.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-55.5 12 -39" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_B" pos="-55.5 12 -30" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_B" pos="-11 16 48" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_B" pos="-9 16 47" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_A" pos="-54 16 24" />

@@ -1,10 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <buildings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="buildings.xsd">
-  <!-- TUTORIAL --><!--
-  --><!-- Marketplace --><!--
+  <!-- TUTORIAL -->
+
+  <!--TUTORIAL SHIP-->
+  <!--<tutorialbuilding uniquename="T1_TUTORIAL_BUILDING_SETFIRE" tier="1" nutritionstorage="795000" nutritionloss="0" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="1" upgradeableto="T2_TUTORIAL_BUILDING_SETFIRE">
+    <AudioInfo name="NPC_WORKBENCH" />
+  </tutorialbuilding>
+
+  <tutorialbuilding uniquename="T2_TUTORIAL_BUILDING_SETFIRE" tier="2" nutritionstorage="795000" nutritionloss="0" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="1"  >
+    <craftingrequirements time="0" silverinrvpercentage="0">
+      <craftresource uniquename="T1_ROCK" count="2" />
+    </craftingrequirements>
+    <AudioInfo name="NPC_WORKBENCH" />
+  </tutorialbuilding>-->
+
+  <!--TUTORIAL SHIP-->
+    <tutorialbuilding uniquename="T1_TUTORIAL_SHIP_CRANE_A" tier="1" nutritionstorage="795000" nutritionloss="0" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_INGREDIENT_ANCHOR_FOUNDER_LEGENDARY" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="1" upgradeableto="T2_TUTORIAL_BUILDING">
+    <AudioInfo name="NPC_WORKBENCH" />
+  </tutorialbuilding>
+  
+   <tutorialbuilding uniquename="T2_TUTORIAL_BUILDING" tier="2" nutritionstorage="795000" nutritionloss="0" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_INGREDIENT_ANCHOR_FOUNDER_LEGENDARY" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="1"  >
+      <craftingrequirements time="0" silverinrvpercentage="0">
+      <craftresource uniquename="T2_PLANKS" count="6" />
+      <craftresource uniquename="T2_METALBAR" count="6" />
+      <craftresource uniquename="T2_LEATHER" count="4" />
+      <craftresource uniquename="T2_CLOTH" count="4" />
+    </craftingrequirements> 
+   <AudioInfo name="NPC_WORKBENCH" />
+  </tutorialbuilding>
+  
+  <!-- Marketplace -->
   <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE_TUTORIAL" />
 
-  --><!--Repairshop--><!--
+  <!--Repairshop-->
   <repairbuilding uniquename="T2_REPAIRSHOP_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_REPAIRSHOP" durability="2700" durabilityloss="0" nutritionstorage="30000" nutritionloss="5.55" craftcapacity="30000" craftcapacityregeneration="4" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="FURNITUREITEM_REPAIRKIT" uispritename="Gui/Avatars/Buildings/TYPE_REPAIRSHOP" repaircostfactor="0.9" destructionreturnfactor="0">
     <favoritedish>
       <dish item="T4_MEAL_SANDWICH" bonus="1" weight="1" />
@@ -12,7 +40,7 @@
     <AudioInfo name="NPC_REPAIRSHOP" />
   </repairbuilding>
   
-  --><!--Weavingmill--><!--
+  <!--Weavingmill-->
   <craftbuilding uniquename="T2_WEAVINGMILL_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_WEAVINGMILL" allowsstudy="false" durability="2250" durabilityloss="1097.14" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftweavingmill" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="CLOTH" uispritename="Gui/Avatars/Buildings/TYPE_WEAVINGMILL" uisoundevent="Play_ui_select_weavingmill" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013" >
     <favoritedish>
       <dish item="T3_MEAL_OMELETTE" bonus="1" weight="1" />
@@ -23,7 +51,7 @@
     <AudioInfo name="NPC_WEAVINGMILL" />
   </craftbuilding>
   
-  --><!-- Tannery --><!--
+   <!--Tannery--> 
   <craftbuilding uniquename="T2_TANNERY_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_TANNERY" durability="2250" allowsstudy="false" durabilityloss="1097.14" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftannery" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="LEATHER" uispritename="Gui/Avatars/Buildings/TYPE_TANNERY" uisoundevent="Play_ui_select_tannery" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013">
     <favoritedish>
       <dish item="T3_MEAL_PIE" bonus="1" weight="1" />
@@ -34,34 +62,28 @@
     <AudioInfo name="NPC_TANNERY" />
   </craftbuilding>
 
-  --><!-- Lodge --><!--
+   <!--Lodge--> 
   <craftbuilding uniquename="T2_HUNTERSLODGE_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_HUNTERSLODGE" durability="4500" durabilityloss="548.57" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="crafthunterlodge" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="2H_BOW" uispritename="Gui/Avatars/Buildings/TYPE_HUNTERSLODGE" uisoundevent="Play_ui_select_hunterslodge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013" allowsstudy="false">
     <favoritedish>
       <dish item="T6_MEAL_SALAD" bonus="1" weight="1" />
     </favoritedish>
     <craftingitemlist>
       <craftitem uniquename="T2_2H_BOW" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
-      --><!-- Armor --><!--
-      <craftitem uniquename="T1_HEAD_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="1" />
-      <craftitem uniquename="T1_ARMOR_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="1" />
-      <craftitem uniquename="T1_SHOES_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="1" />
-
+       <!--Armor--> 
       <craftitem uniquename="T2_HEAD_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_ARMOR_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_SHOES_LEATHER_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
-
     </craftingitemlist>
     <AudioInfo name="NPC_HUNTERSLODGE" />
   </craftbuilding>
 
-  --><!-- Forge --><!--
-  <craftbuilding uniquename="T1_FORGE_TUTORIAL" tier="1" placecost="100" durability="50" durabilityloss="0" allowsstudy="false" nutritionstorage="795000" nutritionloss="20" craftcapacity="13043" craftcapacityregeneration="6.62" category="none" displaygroup="1" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftforge" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013">
+   <!--Forge--> 
+  <craftbuilding uniquename="T1_FORGE_TUTORIAL" tier="1" placecost="100" durability="50" durabilityloss="0" allowsstudy="false" nutritionstorage="795000" nutritionloss="20" craftcapacity="13043" craftcapacityregeneration="6.62" category="none" displaygroup="1" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftforge" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" uisoundevent="Play_ui_select_forge" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013">
     <favoritedish>
       <dish item="T6_MEAL_STEW" bonus="1" weight="1" />
     </favoritedish>
     <craftingitemlist>
       <craftitem uniquename="T1_MAIN_SWORD" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" displaygroup="1" />
-      <craftitem uniquename="T1_OFF_SHIELD" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" displaygroup="1" />
     </craftingitemlist>
     <craftingrequirements time="0" silverinrvpercentage="0">
       <craftresource uniquename="T1_WOOD" count="25" />
@@ -79,7 +101,7 @@
       <craftitem uniquename="T1_OFF_SHIELD" displaygroup="1" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
       <craftitem uniquename="T2_MAIN_SWORD" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
       <craftitem uniquename="T2_OFF_SHIELD" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
-      --><!--Armor--><!--
+      <!--Armor-->
       <craftitem uniquename="T2_HEAD_PLATE_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_ARMOR_PLATE_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_SHOES_PLATE_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
@@ -87,7 +109,7 @@
     <AudioInfo name="NPC_FORGE" />
   </craftbuilding>
   
-  --><!-- Carpenter --><!--
+   <!--Carpenter--> 
   <craftbuilding uniquename="T2_CARPENTERSWORKSHOP_TUTORIAL" tier="1" placecost="100" allowsstudy="false" durability="2250" durabilityloss="1097.14" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftcarpworkshop" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="PLANKS" uispritename="Gui/Avatars/Buildings/TYPE_CARPENTERSWORKSHOP" uisoundevent="Play_ui_select_carpenter" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013" >
     <favoritedish>
       <dish item="T1_MEAL_SOUP" bonus="1" weight="1" />
@@ -103,7 +125,7 @@
     <AudioInfo name="NPC_CARPENTER" />
   </craftbuilding>
   
-  --><!-- Toolmaker --><!--
+   <!--Toolmaker--> 
   <craftbuilding uniquename="T2_TOOLMAKER_TUTORIAL" tier="1" placecost="100" durability="4500" durabilityloss="548.57" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" category="none" craftanimation="crafttool" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="2H_GEMHAMMER" uispritename="Gui/Avatars/Buildings/TYPE_TOOLMAKER" uisoundevent="Play_ui_select_toolmaker" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013" allowsstudy="false">
     <favoritedish>
       <dish item="T4_MEAL_SALAD" bonus="1" weight="1" />
@@ -114,15 +136,14 @@
       <craftitem uniquename="T1_2H_TOOL_KNIFE" category="@BUILDING_ITEMS_CATEGORY_TOOLS" displaygroup="1" />
       <craftitem uniquename="T1_2H_TOOL_HAMMER" category="@BUILDING_ITEMS_CATEGORY_TOOLS" displaygroup="1" />
       <craftitem uniquename="T1_2H_TOOL_SICKLE" category="@BUILDING_ITEMS_CATEGORY_TOOLS" displaygroup="1" />
-      --><!-- Accessoires --><!--
+       <!--Accessoires--> 
       <craftitem uniquename="T2_BAG" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T2_CAPE" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
-      --><!-- Furniture --><!--
     </craftingitemlist>
     <AudioInfo name="NPC_TOOLMAKER" />
   </craftbuilding>
 
-  --><!-- Magetower --><!--
+   <!--Magetower--> 
   <craftbuilding uniquename="T2_MAGICITEMS_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_MAGICITEMS" durability="4500" durabilityloss="548.57" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftmagicstore" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="OFF_BOOK" uispritename="Gui/Avatars/Buildings/TYPE_MAGICITEMS" uisoundevent="Play_ui_select_magetower" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013" allowsstudy="false">
     <favoritedish>
       <dish item="T6_MEAL_SANDWICH" bonus="1" weight="1" />
@@ -130,17 +151,32 @@
     <craftingitemlist>
       <craftitem uniquename="T2_MAIN_FIRESTAFF" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
       <craftitem uniquename="T2_OFF_BOOK" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_WEAPONS" />
-      --><!--Armor--><!--
+      <!--Armor-->
       <craftitem uniquename="T2_HEAD_CLOTH_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_ARMOR_CLOTH_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
       <craftitem uniquename="T2_SHOES_CLOTH_SET1" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="2" />
-
-      --><!--Trophies--><!--
     </craftingitemlist>
     <AudioInfo name="NPC_MAGE_TOWER" />
   </craftbuilding>
 
-  --><!-- TUTORIAL -->
+  <!--Smeleter-->
+  <craftbuilding uniquename="T2_SMELTER_TUTORIAL" tier="2" placecost="100" upgradeableto="T3_SMELTER" allowsstudy="false" durability="2250" durabilityloss="1097.14" nutritionstorage="795000" nutritionloss="1" craftcapacity="30000" craftcapacityregeneration="2.88" category="none" displaygroup="2" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftsmelter" unlocked="false" iconAtlas="RefItemAtlas" iconSprite="METALBAR" uispritename="Gui/Avatars/Buildings/TYPE_SMELTER" uisoundevent="Play_ui_select_smelter" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.00013">
+    <favoritedish>
+      <dish item="T3_MEAL_SOUP" bonus="1" weight="1" />
+    </favoritedish>
+    <craftingrequirements time="0" silverinrvpercentage="0">
+      <craftresource uniquename="T1_WOOD" count="25" />
+      <craftresource uniquename="T1_ROCK" count="3" />
+      <craftresource uniquename="T2_STONEBLOCK" count="150" />
+    </craftingrequirements>
+    <craftingitemlist>
+      <craftitem uniquename="T2_METALBAR" displaygroup="2" category="@BUILDING_ITEMS_CATEGORY_RESOURCES" />
+    </craftingitemlist>
+    <AudioInfo name="NPC_SMELTER" />
+  </craftbuilding>
+  
+  
+  <!-- TUTORIAL -->
   
   
 <!-- FACTION-WARFARE STORE -->
@@ -312,188 +348,188 @@
       <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T8" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" />
     </craftingitemlist>
     <meldingcombinations>
-      <combination tier="4" powerlevel="1" aspect="red" time="10" lootlist="MELD_4_1_RED_LOOT">
+      <combination tier="4" powerlevel="1" aspect="red" time="2" lootlist="MELD_4_1_RED_LOOT">
         <neededitem uniquename="T4_RUNE" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="1" aspect="blue" time="10" lootlist="MELD_4_1_BLUE_LOOT">
+      <combination tier="4" powerlevel="1" aspect="blue" time="2" lootlist="MELD_4_1_BLUE_LOOT">
         <neededitem uniquename="T4_RUNE" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="1" aspect="green" time="10" lootlist="MELD_4_1_GREEN_LOOT">
+      <combination tier="4" powerlevel="1" aspect="green" time="2" lootlist="MELD_4_1_GREEN_LOOT">
         <neededitem uniquename="T4_RUNE" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="1" aspect="all" time="10" lootlist="MELD_4_1_ALL_LOOT">
+      <combination tier="4" powerlevel="1" aspect="all" time="2" lootlist="MELD_4_1_ALL_LOOT">
         <neededitem uniquename="T4_RUNE" quantity="36" />
       </combination>
-      <combination tier="4" powerlevel="2" aspect="red" time="10" lootlist="MELD_4_2_RED_LOOT">
+      <combination tier="4" powerlevel="2" aspect="red" time="2" lootlist="MELD_4_2_RED_LOOT">
         <neededitem uniquename="T4_SOUL" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="2" aspect="blue" time="10" lootlist="MELD_4_2_BLUE_LOOT">
+      <combination tier="4" powerlevel="2" aspect="blue" time="2" lootlist="MELD_4_2_BLUE_LOOT">
         <neededitem uniquename="T4_SOUL" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="2" aspect="green" time="10" lootlist="MELD_4_2_GREEN_LOOT">
+      <combination tier="4" powerlevel="2" aspect="green" time="2" lootlist="MELD_4_2_GREEN_LOOT">
         <neededitem uniquename="T4_SOUL" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="2" aspect="all" time="10" lootlist="MELD_4_2_ALL_LOOT">
+      <combination tier="4" powerlevel="2" aspect="all" time="2" lootlist="MELD_4_2_ALL_LOOT">
         <neededitem uniquename="T4_SOUL" quantity="36" />
       </combination>
-      <combination tier="4" powerlevel="3" aspect="red" time="10" lootlist="MELD_4_3_RED_LOOT">
+      <combination tier="4" powerlevel="3" aspect="red" time="2" lootlist="MELD_4_3_RED_LOOT">
         <neededitem uniquename="T4_RELIC" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="3" aspect="blue" time="10" lootlist="MELD_4_3_BLUE_LOOT">
+      <combination tier="4" powerlevel="3" aspect="blue" time="2" lootlist="MELD_4_3_BLUE_LOOT">
         <neededitem uniquename="T4_RELIC" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="3" aspect="green" time="10" lootlist="MELD_4_3_GREEN_LOOT">
+      <combination tier="4" powerlevel="3" aspect="green" time="2" lootlist="MELD_4_3_GREEN_LOOT">
         <neededitem uniquename="T4_RELIC" quantity="50" />
       </combination>
-      <combination tier="4" powerlevel="3" aspect="all" time="10" lootlist="MELD_4_3_ALL_LOOT">
+      <combination tier="4" powerlevel="3" aspect="all" time="2" lootlist="MELD_4_3_ALL_LOOT">
         <neededitem uniquename="T4_RELIC" quantity="36" />
       </combination>
 
-      <combination tier="5" powerlevel="1" aspect="red" time="10" lootlist="MELD_5_1_RED_LOOT">
+      <combination tier="5" powerlevel="1" aspect="red" time="2" lootlist="MELD_5_1_RED_LOOT">
         <neededitem uniquename="T5_RUNE" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="1" aspect="blue" time="10" lootlist="MELD_5_1_BLUE_LOOT">
+      <combination tier="5" powerlevel="1" aspect="blue" time="2" lootlist="MELD_5_1_BLUE_LOOT">
         <neededitem uniquename="T5_RUNE" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="1" aspect="green" time="10" lootlist="MELD_5_1_GREEN_LOOT">
+      <combination tier="5" powerlevel="1" aspect="green" time="2" lootlist="MELD_5_1_GREEN_LOOT">
         <neededitem uniquename="T5_RUNE" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="1" aspect="all" time="10" lootlist="MELD_5_1_ALL_LOOT">
+      <combination tier="5" powerlevel="1" aspect="all" time="2" lootlist="MELD_5_1_ALL_LOOT">
         <neededitem uniquename="T5_RUNE" quantity="36" />
       </combination>
-      <combination tier="5" powerlevel="2" aspect="red" time="10" lootlist="MELD_5_2_RED_LOOT">
+      <combination tier="5" powerlevel="2" aspect="red" time="2" lootlist="MELD_5_2_RED_LOOT">
         <neededitem uniquename="T5_SOUL" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="2" aspect="blue" time="10" lootlist="MELD_5_2_BLUE_LOOT">
+      <combination tier="5" powerlevel="2" aspect="blue" time="2" lootlist="MELD_5_2_BLUE_LOOT">
         <neededitem uniquename="T5_SOUL" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="2" aspect="green" time="10" lootlist="MELD_5_2_GREEN_LOOT">
+      <combination tier="5" powerlevel="2" aspect="green" time="2" lootlist="MELD_5_2_GREEN_LOOT">
         <neededitem uniquename="T5_SOUL" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="2" aspect="all" time="10" lootlist="MELD_5_2_ALL_LOOT">
+      <combination tier="5" powerlevel="2" aspect="all" time="2" lootlist="MELD_5_2_ALL_LOOT">
         <neededitem uniquename="T5_SOUL" quantity="36" />
       </combination>
-      <combination tier="5" powerlevel="3" aspect="red" time="10" lootlist="MELD_5_3_RED_LOOT">
+      <combination tier="5" powerlevel="3" aspect="red" time="2" lootlist="MELD_5_3_RED_LOOT">
         <neededitem uniquename="T5_RELIC" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="3" aspect="blue" time="10" lootlist="MELD_5_3_BLUE_LOOT">
+      <combination tier="5" powerlevel="3" aspect="blue" time="2" lootlist="MELD_5_3_BLUE_LOOT">
         <neededitem uniquename="T5_RELIC" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="3" aspect="green" time="10" lootlist="MELD_5_3_GREEN_LOOT">
+      <combination tier="5" powerlevel="3" aspect="green" time="2" lootlist="MELD_5_3_GREEN_LOOT">
         <neededitem uniquename="T5_RELIC" quantity="50" />
       </combination>
-      <combination tier="5" powerlevel="3" aspect="all" time="10" lootlist="MELD_5_3_ALL_LOOT">
+      <combination tier="5" powerlevel="3" aspect="all" time="2" lootlist="MELD_5_3_ALL_LOOT">
         <neededitem uniquename="T5_RELIC" quantity="36" />
       </combination>
 
-      <combination tier="6" powerlevel="1" aspect="red" time="10" lootlist="MELD_6_1_RED_LOOT">
+      <combination tier="6" powerlevel="1" aspect="red" time="2" lootlist="MELD_6_1_RED_LOOT">
         <neededitem uniquename="T6_RUNE" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="1" aspect="blue" time="10" lootlist="MELD_6_1_BLUE_LOOT">
+      <combination tier="6" powerlevel="1" aspect="blue" time="2" lootlist="MELD_6_1_BLUE_LOOT">
         <neededitem uniquename="T6_RUNE" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="1" aspect="green" time="10" lootlist="MELD_6_1_GREEN_LOOT">
+      <combination tier="6" powerlevel="1" aspect="green" time="2" lootlist="MELD_6_1_GREEN_LOOT">
         <neededitem uniquename="T6_RUNE" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="1" aspect="all" time="10" lootlist="MELD_6_1_ALL_LOOT">
+      <combination tier="6" powerlevel="1" aspect="all" time="2" lootlist="MELD_6_1_ALL_LOOT">
         <neededitem uniquename="T6_RUNE" quantity="36" />
       </combination>
-      <combination tier="6" powerlevel="2" aspect="red" time="10" lootlist="MELD_6_2_RED_LOOT">
+      <combination tier="6" powerlevel="2" aspect="red" time="2" lootlist="MELD_6_2_RED_LOOT">
         <neededitem uniquename="T6_SOUL" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="2" aspect="blue" time="10" lootlist="MELD_6_2_BLUE_LOOT">
+      <combination tier="6" powerlevel="2" aspect="blue" time="2" lootlist="MELD_6_2_BLUE_LOOT">
         <neededitem uniquename="T6_SOUL" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="2" aspect="green" time="10" lootlist="MELD_6_2_GREEN_LOOT">
+      <combination tier="6" powerlevel="2" aspect="green" time="2" lootlist="MELD_6_2_GREEN_LOOT">
         <neededitem uniquename="T6_SOUL" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="2" aspect="all" time="10" lootlist="MELD_6_2_ALL_LOOT">
+      <combination tier="6" powerlevel="2" aspect="all" time="2" lootlist="MELD_6_2_ALL_LOOT">
         <neededitem uniquename="T6_SOUL" quantity="36" />
       </combination>
-      <combination tier="6" powerlevel="3" aspect="red" time="10" lootlist="MELD_6_3_RED_LOOT">
+      <combination tier="6" powerlevel="3" aspect="red" time="2" lootlist="MELD_6_3_RED_LOOT">
         <neededitem uniquename="T6_RELIC" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="3" aspect="blue" time="10" lootlist="MELD_6_3_BLUE_LOOT">
+      <combination tier="6" powerlevel="3" aspect="blue" time="2" lootlist="MELD_6_3_BLUE_LOOT">
         <neededitem uniquename="T6_RELIC" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="3" aspect="green" time="10" lootlist="MELD_6_3_GREEN_LOOT">
+      <combination tier="6" powerlevel="3" aspect="green" time="2" lootlist="MELD_6_3_GREEN_LOOT">
         <neededitem uniquename="T6_RELIC" quantity="50" />
       </combination>
-      <combination tier="6" powerlevel="3" aspect="all" time="10" lootlist="MELD_6_3_ALL_LOOT">
+      <combination tier="6" powerlevel="3" aspect="all" time="2" lootlist="MELD_6_3_ALL_LOOT">
         <neededitem uniquename="T6_RELIC" quantity="36" />
       </combination>
 
-      <combination tier="7" powerlevel="1" aspect="red" time="10" lootlist="MELD_7_1_RED_LOOT">
+      <combination tier="7" powerlevel="1" aspect="red" time="2" lootlist="MELD_7_1_RED_LOOT">
         <neededitem uniquename="T7_RUNE" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="1" aspect="blue" time="10" lootlist="MELD_7_1_BLUE_LOOT">
+      <combination tier="7" powerlevel="1" aspect="blue" time="2" lootlist="MELD_7_1_BLUE_LOOT">
         <neededitem uniquename="T7_RUNE" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="1" aspect="green" time="10" lootlist="MELD_7_1_GREEN_LOOT">
+      <combination tier="7" powerlevel="1" aspect="green" time="2" lootlist="MELD_7_1_GREEN_LOOT">
         <neededitem uniquename="T7_RUNE" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="1" aspect="all" time="10" lootlist="MELD_7_1_ALL_LOOT">
+      <combination tier="7" powerlevel="1" aspect="all" time="2" lootlist="MELD_7_1_ALL_LOOT">
         <neededitem uniquename="T7_RUNE" quantity="36" />
       </combination>
-      <combination tier="7" powerlevel="2" aspect="red" time="10" lootlist="MELD_7_2_RED_LOOT">
+      <combination tier="7" powerlevel="2" aspect="red" time="2" lootlist="MELD_7_2_RED_LOOT">
         <neededitem uniquename="T7_SOUL" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="2" aspect="blue" time="10" lootlist="MELD_7_2_BLUE_LOOT">
+      <combination tier="7" powerlevel="2" aspect="blue" time="2" lootlist="MELD_7_2_BLUE_LOOT">
         <neededitem uniquename="T7_SOUL" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="2" aspect="green" time="10" lootlist="MELD_7_2_GREEN_LOOT">
+      <combination tier="7" powerlevel="2" aspect="green" time="2" lootlist="MELD_7_2_GREEN_LOOT">
         <neededitem uniquename="T7_SOUL" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="2" aspect="all" time="10" lootlist="MELD_7_2_ALL_LOOT">
+      <combination tier="7" powerlevel="2" aspect="all" time="2" lootlist="MELD_7_2_ALL_LOOT">
         <neededitem uniquename="T7_SOUL" quantity="36" />
       </combination>
-      <combination tier="7" powerlevel="3" aspect="red" time="10" lootlist="MELD_7_3_RED_LOOT">
+      <combination tier="7" powerlevel="3" aspect="red" time="2" lootlist="MELD_7_3_RED_LOOT">
         <neededitem uniquename="T7_RELIC" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="3" aspect="blue" time="10" lootlist="MELD_7_3_BLUE_LOOT">
+      <combination tier="7" powerlevel="3" aspect="blue" time="2" lootlist="MELD_7_3_BLUE_LOOT">
         <neededitem uniquename="T7_RELIC" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="3" aspect="green" time="10" lootlist="MELD_7_3_GREEN_LOOT">
+      <combination tier="7" powerlevel="3" aspect="green" time="2" lootlist="MELD_7_3_GREEN_LOOT">
         <neededitem uniquename="T7_RELIC" quantity="50" />
       </combination>
-      <combination tier="7" powerlevel="3" aspect="all" time="10" lootlist="MELD_7_3_ALL_LOOT">
+      <combination tier="7" powerlevel="3" aspect="all" time="2" lootlist="MELD_7_3_ALL_LOOT">
         <neededitem uniquename="T7_RELIC" quantity="36" />
       </combination>
 
-      <combination tier="8" powerlevel="1" aspect="red" time="10" lootlist="MELD_8_1_RED_LOOT">
+      <combination tier="8" powerlevel="1" aspect="red" time="2" lootlist="MELD_8_1_RED_LOOT">
         <neededitem uniquename="T8_RUNE" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="1" aspect="blue" time="10" lootlist="MELD_8_1_BLUE_LOOT">
+      <combination tier="8" powerlevel="1" aspect="blue" time="2" lootlist="MELD_8_1_BLUE_LOOT">
         <neededitem uniquename="T8_RUNE" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="1" aspect="green" time="10" lootlist="MELD_8_1_GREEN_LOOT">
+      <combination tier="8" powerlevel="1" aspect="green" time="2" lootlist="MELD_8_1_GREEN_LOOT">
         <neededitem uniquename="T8_RUNE" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="1" aspect="all" time="10" lootlist="MELD_8_1_ALL_LOOT">
+      <combination tier="8" powerlevel="1" aspect="all" time="2" lootlist="MELD_8_1_ALL_LOOT">
         <neededitem uniquename="T8_RUNE" quantity="36" />
       </combination>
-      <combination tier="8" powerlevel="2" aspect="red" time="10" lootlist="MELD_8_2_RED_LOOT">
+      <combination tier="8" powerlevel="2" aspect="red" time="2" lootlist="MELD_8_2_RED_LOOT">
         <neededitem uniquename="T8_SOUL" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="2" aspect="blue" time="10" lootlist="MELD_8_2_BLUE_LOOT">
+      <combination tier="8" powerlevel="2" aspect="blue" time="2" lootlist="MELD_8_2_BLUE_LOOT">
         <neededitem uniquename="T8_SOUL" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="2" aspect="green" time="10" lootlist="MELD_8_2_GREEN_LOOT">
+      <combination tier="8" powerlevel="2" aspect="green" time="2" lootlist="MELD_8_2_GREEN_LOOT">
         <neededitem uniquename="T8_SOUL" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="2" aspect="all" time="10" lootlist="MELD_8_2_ALL_LOOT">
+      <combination tier="8" powerlevel="2" aspect="all" time="2" lootlist="MELD_8_2_ALL_LOOT">
         <neededitem uniquename="T8_SOUL" quantity="36" />
       </combination>
-      <combination tier="8" powerlevel="3" aspect="red" time="10" lootlist="MELD_8_3_RED_LOOT">
+      <combination tier="8" powerlevel="3" aspect="red" time="2" lootlist="MELD_8_3_RED_LOOT">
         <neededitem uniquename="T8_RELIC" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="3" aspect="blue" time="10" lootlist="MELD_8_3_BLUE_LOOT">
+      <combination tier="8" powerlevel="3" aspect="blue" time="2" lootlist="MELD_8_3_BLUE_LOOT">
         <neededitem uniquename="T8_RELIC" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="3" aspect="green" time="10" lootlist="MELD_8_3_GREEN_LOOT">
+      <combination tier="8" powerlevel="3" aspect="green" time="2" lootlist="MELD_8_3_GREEN_LOOT">
         <neededitem uniquename="T8_RELIC" quantity="50" />
       </combination>
-      <combination tier="8" powerlevel="3" aspect="all" time="10" lootlist="MELD_8_3_ALL_LOOT">
+      <combination tier="8" powerlevel="3" aspect="all" time="2" lootlist="MELD_8_3_ALL_LOOT">
         <neededitem uniquename="T8_RELIC" quantity="36" />
       </combination>
     </meldingcombinations>
@@ -1766,6 +1802,7 @@
   <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="HIGHLAND_GREEN_MARKETPLACE" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="STEPPE_GREEN_MARKETPLACE" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="STEPPE_GREEN_MARKETPLACE_CENTERCITY" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="HIGHLAND_GREEN_MARKETPLACE_CENTERCITY" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="HIGHLAND_RED_MARKETPLACE_CENTERCITY" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="HIGHLAND_DEAD_MARKETPLACE_CENTERCITY" />
@@ -2063,7 +2100,7 @@
   </craftbuilding>
   
   <!-- SEASONS_STORE -->
-  <craftbuilding uniquename="SEASONS_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isshop="true" hideonclustermap="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_GVGTOKEN_GENERIC" uispritename="Gui/Avatars/Buildings/NPC_TERRITORY_SHARDTRADER" uisoundevent="Play_ui_select_vanitymerchant">
+  <craftbuilding uniquename="SEASONS_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isshop="true" hideonclustermap="true" craftanimation="none" randomidleanimoffset="false" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_GVGTOKEN_GENERIC" uispritename="Gui/Avatars/Buildings/NPC_TERRITORY_SHARDTRADER" uisoundevent="Play_ui_select_vanitymerchant">
     <craftingitemlist>
       <craftitem uniquename="T6_MOUNT_SIEGE_BALLISTA" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="6" />      
       <craftitem uniquename="T7_MOUNT_SWAMPDRAGON_BATTLE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="7" />
@@ -2088,7 +2125,7 @@
   </craftbuilding>
   
   <!--VANITY_STORE-->
-  <craftbuilding uniquename="VANITY_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" animateonguiopen="true" isshop="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_STAFF_FIREWORKS_RED" uispritename="Gui/Avatars/Buildings/TYPE_VANITY_STORE" uisoundevent="Play_ui_select_vanitymerchant">
+  <craftbuilding uniquename="VANITY_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" animateonguiopen="true" randomidleanimoffset="false" isshop="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_STAFF_FIREWORKS_RED" uispritename="Gui/Avatars/Buildings/TYPE_VANITY_STORE" uisoundevent="Play_ui_select_vanitymerchant">
     <craftingitemlist>
       <craftitem uniquename="T3_VANITY_CONSUMABLE_FIREWORKS_BLUE" category="@BUILDING_ITEMS_CATEGORY_POTIONS" displaygroup="2" />
       <craftitem uniquename="T3_VANITY_CONSUMABLE_FIREWORKS_GREEN" category="@BUILDING_ITEMS_CATEGORY_POTIONS" displaygroup="2" />
@@ -2135,6 +2172,7 @@
       <craftitem uniquename="UNIQUE_FURNITUREITEM_EASTER_CHEST" category="@BUILDING_ITEMS_CATEGORY_VANITY" displaygroup="1" />    
       -->
     </craftingitemlist>
+    <AudioInfo name="NPC_VANITY_MERCHANT" />
   </craftbuilding>
 
   <buildingreference template="VANITY_STORE" uniquename="SWAMP_GREEN_VANITY_STORE" />
@@ -11773,4 +11811,5 @@
       <journal uniquename="T8_JOURNAL_TROPHY_GENERAL_FULL" />
     </journalsaccepted>
   </labourer>
+
 </buildings>

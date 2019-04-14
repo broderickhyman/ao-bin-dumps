@@ -950,18 +950,262 @@
   <season uniquename="GVG_SEASON_05" displayname="@SEASONS_SEASONNAME_SEASON_05" startdatetime="2019-01-05T11:00:00Z" enddatetime="2019-03-30T10:59:00Z">
 
     <guildmemberrewards minimumparticipationpercentage="75" >
-
+      
       <guildmemberreward rank="1">
-        <mail id="MAIL_GVGSEASONREWARD_TOP1" sender="Albion Online" />
+        <mail id="MAIL_GVGSEASONREWARD_1ST" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_1ST" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
       </guildmemberreward>
 
       <guildmemberreward rank="2">
-        <mail id="MAIL_GVGSEASONREWARD_TOP2" sender="Albion Online" />
+        <mail id="MAIL_GVGSEASONREWARD_2ND" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_2ND" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
       </guildmemberreward>
 
       <guildmemberreward rank="3">
-        <mail id="MAIL_GVGSEASONREWARD_TOP3" sender="Albion Online" />
+        <mail id="MAIL_GVGSEASONREWARD_3RD" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_3RD" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
       </guildmemberreward>
+      
+      
+      <guildmemberreward rank="crystal">
+        <mail id="MAIL_GVGSEASONREWARD_CRYSTAL" sender="Albion Online">
+          <item id="UNIQUE_MOUNT_TOWER_CHARIOT_CRYSTAL" amount="1" enchantmentlevel="0" qualitylevel="0" />
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_CRYSTAL" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+          <item id="UNIQUE_AVATAR_GVGSEASON_05" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>      
+
+      <guildmemberreward rank="gold">
+        <mail id="MAIL_GVGSEASONREWARD_GOLD" sender="Albion Online">
+          <item id="UNIQUE_MOUNT_TOWER_CHARIOT_GOLD" amount="1" enchantmentlevel="0" qualitylevel="0" />
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_GOLD" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+          <item id="UNIQUE_AVATAR_GVGSEASON_05" amount="1" enchantmentlevel="0" qualitylevel="0"/>          
+        </mail>
+      </guildmemberreward>
+
+      <guildmemberreward rank="silver">
+        <mail id="MAIL_GVGSEASONREWARD_SILVER" sender="Albion Online">
+          <item id="UNIQUE_MOUNT_TOWER_CHARIOT_SILVER" amount="1" enchantmentlevel="0" qualitylevel="0" />
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_SILVER" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+          <item id="UNIQUE_AVATAR_GVGSEASON_05" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+
+      <guildmemberreward rank="bronze">
+        <mail id="MAIL_GVGSEASONREWARD_BRONZE" sender="Albion Online">
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_BRONZE" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+          <item id="UNIQUE_AVATAR_GVGSEASON_05" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+
+      <guildmemberreward rank="iron">
+        <mail id="MAIL_GVGSEASONREWARD_IRON" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_IRON" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+    </guildmemberrewards>
+
+    <rewards>
+      <currency type="GVGTOKEN_GENERIC" pointspercurrency="1" />
+    </rewards>
+    <bracketsettings>
+      <bracket level="crystal" pointsthreshold="150000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="50000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="10000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="200" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
+      <bracket level="iron" pointsthreshold="1"/>
+    </bracketsettings>
+    <invadersettings>
+      <bossinvader mobname="T6_MOB_ARCANE_ELEMENTAL_ELITE_BOSS" blocksterritoryclaim="true"/>
+      <helperinvader mobname="T6_MOB_ARCANE_ELEMENTAL_ELITE" blocksterritoryclaim="false"/>
+    </invadersettings>
+    <territorytypes>
+      <territorytype type="WATCHTOWER" resourcetype="Resource" />
+      <territorytype type="CASTLE"/>
+    </territorytypes>
+    <seasontimes>
+      <day number="1">
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+          <gvgend/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="2">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="3">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="29">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="30">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="31">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="57">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+          <scoremultiplier newmultiplier="2"/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_14_00" />
+            <timeregion name="RU_16_00" />
+            <timeregion name="RU_17_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_19_00" />
+            <timeregion name="EU_20_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="58">
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_22_00" />
+            <timeregion name="BR_23_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_01_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_04_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <scoringstart/>
+        </eventtime>
+      </day>
+      <day number="59">
+        <eventtime utctime="11:00:00Z">
+          <gvgstart/>
+        </eventtime>
+      </day>
+      <day number="85">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <gvgend/>
+          <scoringend/>
+        </eventtime>
+      </day>
+    </seasontimes>
+  </season>
+
+  <season uniquename="GVG_SEASON_06" displayname="@SEASONS_SEASONNAME_SEASON_06" startdatetime="2019-04-20T11:00:00Z" enddatetime="2019-07-13T10:59:00Z">
+
+    <guildmemberrewards minimumparticipationpercentage="75" >
+
+      <guildmemberreward rank="1">
+        <mail id="MAIL_GVGSEASONREWARD_1ST" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_1ST" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+
+      <guildmemberreward rank="2">
+        <mail id="MAIL_GVGSEASONREWARD_2ND" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_2ND" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+
+      <guildmemberreward rank="3">
+        <mail id="MAIL_GVGSEASONREWARD_3RD" sender="Albion Online" >
+          <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_3RD" amount="1" enchantmentlevel="0" qualitylevel="0"/>
+        </mail>
+      </guildmemberreward>
+      
       
       <guildmemberreward rank="crystal">
         <mail id="MAIL_GVGSEASONREWARD_CRYSTAL" sender="Albion Online">
@@ -983,7 +1227,6 @@
           <item id="UNIQUE_AVATARRING_GVGSEASONREWARD_SILVER" amount="1" enchantmentlevel="0" qualitylevel="0"/>
         </mail>
       </guildmemberreward>
-
 
       <guildmemberreward rank="bronze">
         <mail id="MAIL_GVGSEASONREWARD_BRONZE" sender="Albion Online">

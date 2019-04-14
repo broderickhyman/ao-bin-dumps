@@ -8,29 +8,22 @@
     <ClientUpdate moveupdateinms="100" />
     <Items vanishtimeforunuseditems="432000" />
     <Guild 
-    cost="25000" 
+    cost="100000" 
     guildinvitationdelayinseconds="60" 
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
 	  guildlogochangecooldownminutes="2880"
-	  guildchangecooldownminutes="2880"
+	  guildchangecooldownminutes="30"
 	  guildlogochangegoldcosts="3000"
 	  guildlogochangesilvercosts="0"
     />
   
-	<transactionlimits>
-		<gold>
-			<day daynumber="0" goldamount="0" />
-			<day daynumber="1" goldamount="500" />
-			<day daynumber="5" goldamount="2500" />
-			<day daynumber="10" goldamount="5000" />
-		</gold>
-		<trial>
-			<day daynumber="0" trialkeyamount="3" />
-			<day daynumber="1" trialkeyamount="5" />
-			<day daynumber="5" trialkeyamount="10" />			
-		</trial>
+	<transactionlimits>	    
+		<gold GoldTransactionLimitUntrustedPerDay="100" 
+		GoldTransactionLimitUntrustedJourneymanPerDay="500" 
+		GoldTransactionLimitPaidUntrustedPerDay="500" 
+		GoldTransactionLimitLimitedPerDay="2500"/>
 	</transactionlimits>
 	
     <SiegeCamp vaultsize="64" battlevaultsize="64" weightlimit="10000.0" siegecampclaimtimeinsec="15" cooldowninmin="360" costfactor="2.5" />
@@ -75,17 +68,19 @@
     <ClusterChange cooldownseconds="10"/>
     <SpawnBuff>
       <!-- The first buff makes you immune to invul shields for respawning in the open world -->
-      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
-      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       onlywhenpvppossible="false" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/> <!-- For transitioning from city to guild territory -->
-      <buff name="SPAWN_INVULNERABILITY"            onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
-      <buff name="SPAWN_INVULNERABILITY"            onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="false" onlyinarena="false" onlyingvg="true" onlyinexpedition="false"/> <!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
-      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="false" onlyonrevive="true" onlyinarena="false" onlyingvg="false" onlyinexpedition="true"/>
-      <buff name="SPAWN_SPEED"                      onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
-      <buff name="SPAWN_BUFFIMMUNITY"               onlywhenpvppossible="true" onlyonlogin="false" onlyonclusterchange="true" onlyonrevive="false" onlyinarena="false" onlyingvg="false" onlyinexpedition="false"/>
+      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
+      <buff name="TUTORIAL_STUN"                    isintutorial="Must" isfirstlogin="Must" />
+      <buff name="SPAWN_INVULNERABILITY"            ispvppossible="Must" isclusterchange="Must" isinexpedition="MustNot" isindungeon="MustNot"/>
+      <buff name="SPAWN_INVULNERABILITY"            ispvppossible="Must" isingvg="Must" /> <!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
+      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="DoesNotMatter" isclusterchange="Must" isinexpedition="Must"/>
+      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="DoesNotMatter" isrevive="Must" isinexpedition="Must"/>
+      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" isindungeon="Must"/>
+      <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
+      <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
       <!-- order is important: immunity LAST (obvious, right?) -->
     </SpawnBuff>
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
-    <InCombat activetimeoutseconds="30" passivetimeoutseconds="30"/>
+    <InCombat activetimeoutseconds="20" passivetimeoutseconds="20"/>
     <FurnitureObjects placetimeseconds="3"/>
     <FarmableObjects placetimeseconds="1"/>
     <SpellCooldowns onequipmentchange="10" onmount="5"/>
@@ -114,10 +109,10 @@
       <level requiredpoints="500"    title="@REPUTATION_LEVEL_POSITIVE01"       nametagicon="REPUTATION_POSITIVE01" rewardicon="REPUTATION_POSITIVE01" recoveryperday="0"     pvegainfactor="0.008" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="2.5" knockdownpenalty="12.5" killpenalty="250"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE01"/>
       <level requiredpoints="0"      title="@REPUTATION_LEVEL_NEUTRAL"          nametagicon=""                      rewardicon="REPUTATION_NEUTRAL"    recoveryperday="0"     pvegainfactor="0.01"  gathergainfactor="0.05" candisablepvp="true" canenterexpedition="true"  attackpenalty="1"   knockdownpenalty="5"    killpenalty="100"  cityaccessdisplay="safe" crimeprotectionbuff=""/>
       <level requiredpoints="-1000"  title="@REPUTATION_LEVEL_NEUTRAL_NEGATIVE" nametagicon="REPUTATION_NEGATIVE00" rewardicon="REPUTATION_NEGATIVE00" recoveryperday="0.012" pvegainfactor="0.008" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe" crimeprotectionbuff=""/>
-      <level requiredpoints="-3000"  title="@REPUTATION_LEVEL_NEGATIVE01"       nametagicon="REPUTATION_NEGATIVE01" rewardicon="REPUTATION_NEGATIVE01" recoveryperday="1000"  pvegainfactor="0.02"  gathergainfactor="0.1"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="red"  crimeprotectionbuff=""/>
-      <level requiredpoints="-10000" title="@REPUTATION_LEVEL_NEGATIVE02"       nametagicon="REPUTATION_NEGATIVE02" rewardicon="REPUTATION_NEGATIVE02" recoveryperday="750"   pvegainfactor="0.04"  gathergainfactor="0.2"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="red"  crimeprotectionbuff=""/>
-      <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03"       nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500"   pvegainfactor="0.06"  gathergainfactor="0.3"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="red"  crimeprotectionbuff=""/>
-      <level requiredpoints="-50000" title="@REPUTATION_LEVEL_NEGATIVE04"       nametagicon="REPUTATION_NEGATIVE04" rewardicon="REPUTATION_NEGATIVE04" recoveryperday="2000"  pvegainfactor="0.09"  gathergainfactor="0.45" candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="red"  crimeprotectionbuff=""/>
+      <level requiredpoints="-3000"  title="@REPUTATION_LEVEL_NEGATIVE01"       nametagicon="REPUTATION_NEGATIVE01" rewardicon="REPUTATION_NEGATIVE01" recoveryperday="1000"  pvegainfactor="0.02"  gathergainfactor="0.1"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-10000" title="@REPUTATION_LEVEL_NEGATIVE02"       nametagicon="REPUTATION_NEGATIVE02" rewardicon="REPUTATION_NEGATIVE02" recoveryperday="750"   pvegainfactor="0.04"  gathergainfactor="0.2"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03"       nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500"   pvegainfactor="0.06"  gathergainfactor="0.3"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-50000" title="@REPUTATION_LEVEL_NEGATIVE04"       nametagicon="REPUTATION_NEGATIVE04" rewardicon="REPUTATION_NEGATIVE04" recoveryperday="2000"  pvegainfactor="0.09"  gathergainfactor="0.45" candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
     </Reputation>
   </ServerSettings>
   <ClientSettings>
@@ -216,9 +211,9 @@
         bonusdamagevsplayers="1.16"
         bonusdefensevsmobs="1.16"
         bonusdefensevsplayers="1.16"
-        energycostreduction="1"
+        energycostreduction="1.16"
         energyregenerationbonus="1"
-        healbonus="1"
+        healbonus="1.16"
         healmodifier="1.16"
         hitpointsregenerationbonus="1"
         magicattackdamagebonus="1.16"
@@ -487,9 +482,9 @@
         magiccooldownreduction="false"/>
 
       <armorshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
-      <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.36" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
-      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.5"/>
-      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0.0" shield="0.0" book="0.15" torch="0.0" cape="0.10" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.4" demonskull="0.0" totem="0.0"/>
+      <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.60" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
+      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.42"/>
+      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0.0" shield="0.0" book="0.15" torch="0.0" cape="0.10" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.5" demonskull="0" totem="0.0"/>
     </ItemPowerProgression>
     <QualityLevels>
       <qualitylevel level="2" itempowerbonus="10"/>
@@ -512,8 +507,8 @@
 
     <attribute name="AttackDamage" min="-0.8" max="1.5" absolutemin="1"/>
     <attribute name="AttackSpeedBonus" min="-1" max="1.2" />
-    <attribute name="PhysicalAttackDamageBonus" min="-0.8" max="2"/>
-    <attribute name="MagicAttackDamageBonus" min="-0.8" max="2"/>
+    <attribute name="PhysicalAttackDamageBonus" min="-0.8" max="3"/>
+    <attribute name="MagicAttackDamageBonus" min="-0.8" max="3"/>
 
     <attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1.5"/>
     <attribute name="MagicSpellDamageBonus" min="-0.8" max="1.5"/>
@@ -1292,13 +1287,13 @@
    <GoldPurchasePackage name="GOLDPACKAGE5" gold="21000" price="99.95"/>
   </GoldPurchasePackages>
   <ClusterDangerBonusTypes>
-    <ClusterDangerBonus type="safe" icon="safe" famefactor="1.375" moblootfactor="1.25" mobsilverlootfactor="1.25"/>
-    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="1.5" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
+    <ClusterDangerBonus type="safe" icon="safe" famefactor="1.8" moblootfactor="1.25" mobsilverlootfactor="1.25"/>
+    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
     <ClusterDangerBonus type="red"  icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
     <ClusterDangerBonus type="black"  icon="black" famefactor="3.5" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
-    <ClusterDangerBonus type="hell"  icon="black" famefactor="3.0" moblootfactor="5" mobsilverlootfactor="5"/>
-    <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="2.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
-    <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.375" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
+    <ClusterDangerBonus type="hell"  icon="black" famefactor="5.0" moblootfactor="5" mobsilverlootfactor="5"/>
+    <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
+    <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
     <ClusterDangerBonus type="expedition"  icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
   </ClusterDangerBonusTypes>
   <AchievementHud tutorial_idletime_till_highlight="30"/>

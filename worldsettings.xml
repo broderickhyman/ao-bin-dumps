@@ -12,7 +12,6 @@
       showpvpplayeronminimap="true"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
 			craftefficiencybonus="0.0"
 			buildingcraftcapacityregenfactor="1"
@@ -22,6 +21,7 @@
       cropyieldfactor="1"
       clusterdangerbonustype="safe"
       requiredreputationtoenter="-1000"
+      showdiebuttondelay="20"
       />
     
     <archetype
@@ -43,7 +43,8 @@
       cropyieldfactor="2"
       clusterdangerbonustype="yellow"
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
-      requiredreputationtoenter="-20000"
+      requiredreputationtoenter="-3000"
+      showdiebuttondelay="20"
       />
 
     <archetype
@@ -169,7 +170,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
 			craftefficiencybonus="0"
 			buildingcraftcapacityregenfactor="1"
@@ -192,7 +192,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
 			craftefficiencybonus="0.18"
 			buildingcraftcapacityregenfactor="1"
@@ -200,7 +199,7 @@
       itempowerscalingfactor="0"        
       animalgrowthfactor="1"
       cropyieldfactor="1"
-      requiredreputationtoenter="-1000"
+      requiredreputationtoenter="-50000"
       />
 
     <archetype
@@ -213,7 +212,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.18"
       buildingcraftcapacityregenfactor="1"
@@ -221,7 +219,7 @@
       itempowerscalingfactor="0"
       animalgrowthfactor="1"
       cropyieldfactor="1"
-      requiredreputationtoenter="-10000"
+      requiredreputationtoenter="-50000"
       allowfactionflagging="false"
       />
 
@@ -236,7 +234,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.18"
 	    buildingcraftcapacityregenfactor="1"
@@ -259,7 +256,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="10"
       spellcooldownsonenteringseconds="0"
 			craftefficiencybonus="0"
 			buildingcraftcapacityregenfactor="1"
@@ -281,7 +277,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="120"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
@@ -304,7 +299,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="120"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
@@ -327,7 +321,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="120"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
@@ -350,7 +343,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="120"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
@@ -373,7 +365,6 @@
       showpvpplayeronminimap="false"
       showfriendlycount="true"
       showhostilecount="false"
-      logoutseconds="120"
       spellcooldownsonenteringseconds="0"
       craftefficiencybonus="0.0"
       buildingcraftcapacityregenfactor="1"
@@ -400,7 +391,7 @@
       spellcooldownsonenteringseconds="0"
 	    craftefficiencybonus="0.20"
 	    buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="800"
+      itempowersoftcap="700"
       itempowerscalingfactor="0.2"    
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
@@ -534,6 +525,7 @@
   <clustertypes>
 		<clustertype name="STARTAREA"
       archetype="GREEN"
+		  logoutseconds="10"
 			editorcolor="0, 255, 255"
 			furnitureobjectsallowed="false"
 	    hellgatemobminimapvisible="true"
@@ -544,13 +536,14 @@
 		  allowfactionrewards="false">
       <resourcespawns defaulttimefactor="1.0">
         <resourcetier tier="1" timefactor="0.1"/>
-        <resourcetier tier="2" timefactor="0.2"/>
+        <resourcetier tier="2" timefactor="0.5"/>
       </resourcespawns>
-      <mobspawns defaulttimefactor="0.05"/>
+      <mobspawns defaulttimefactor="0.2"/>
 		</clustertype>
 
     <clustertype name="TUTORIAL"
     archetype="GREEN"
+    logoutseconds="10"
     editorcolor="0, 255, 255"
     furnitureobjectsallowed="false"
     hellgatemobminimapvisible="true"
@@ -567,6 +560,7 @@
     
 		<clustertype name="TESTSTARTAREA"
       archetype="GREEN"
+		  logoutseconds="10"
 			editorcolor="0, 255, 255"
 			furnitureobjectsallowed="false"
 	    hellgatemobminimapvisible="true"
@@ -583,6 +577,7 @@
 
     <clustertype name="CITY"
       archetype="CITY-GREEN"
+      logoutseconds="10"
 			editorcolor="255, 0, 255"
 			furnitureobjectsallowed="true"
       isplayercity="true"
@@ -594,6 +589,7 @@
 
     <clustertype name="STARTINGCITY"
       archetype="CITY-START"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="false"
       isplayercity="false"
@@ -611,6 +607,7 @@
 
     <clustertype name="PLAYERCITY_SAFEAREA"
       archetype="CITY-GREEN"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="true"
       isplayercity="true"           
@@ -624,6 +621,7 @@
 
     <clustertype name="PLAYERCITY_SAFEAREA_NOFURNITURE"
       archetype="CITY-GREEN"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="false"
       isplayercity="true"
@@ -636,6 +634,7 @@
 
     <clustertype name="PLAYERCITY_RED"
       archetype="CITY-RED"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="true"
       isplayercity="true"
@@ -647,6 +646,7 @@
 
     <clustertype name="PLAYERCITY_BLACK"
       archetype="CITY-BLACK"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="true"
       isplayercity="true"
@@ -658,6 +658,7 @@
 
     <clustertype name="PLAYERCITY_BLACK_NOFURNITURE"
       archetype="CITY-BLACK"
+      logoutseconds="10"
       editorcolor="255, 0, 255"
       furnitureobjectsallowed="false"
       isplayercity="true"
@@ -669,6 +670,7 @@
 
     <clustertype name="SAFEAREA"
       archetype="GREEN"
+      logoutseconds="10"
 			editorcolor="0, 255, 0"
 			furnitureobjectsallowed="true"
 	    hellgatemobminimapvisible="true"
@@ -677,11 +679,11 @@
       allowmounts="true">
       <resourcespawns defaulttimefactor="1.0">
         <resourcetier tier="1" timefactor="1.0"/>
-        <resourcetier tier="2" timefactor="1.0"/>
-        <resourcetier tier="3" timefactor="1.0"/>
-        <resourcetier tier="4" timefactor="0.75"/>
+        <resourcetier tier="2" timefactor="0.35"/>
+        <resourcetier tier="3" timefactor="0.25"/>
+        <resourcetier tier="4" timefactor="0.2"/>
       </resourcespawns>
-      <mobspawns defaulttimefactor="1.0">
+      <mobspawns defaulttimefactor="0.15">
         <!--Tier 1 -->
         <mobspawn name="MOB_RABBIT" timefactor="1" />
         <mobspawn name="T1_MOB_HIDE_SWAMP_TOAD" timefactor="1" />
@@ -689,28 +691,29 @@
         <mobspawn name="T1_MOB_HIDE_MOUNTAIN_RABBIT" timefactor="1" />
         <mobspawn name="T1_MOB_HIDE_HIGHLAND_MARMOT" timefactor="1" />
         <!--Tier 2 -->
-        <mobspawn name="MOB_FOX" timefactor="1" />
-        <mobspawn name="T2_MOB_HIDE_SWAMP_SNAKE" timefactor="1" />
-        <mobspawn name="T2_MOB_HIDE_STEPPE_IMPALA" timefactor="1" />
+        <mobspawn name="MOB_FOX" timefactor="0.35" />
+        <mobspawn name="T2_MOB_HIDE_SWAMP_SNAKE" timefactor="0.35" />
+        <mobspawn name="T2_MOB_HIDE_STEPPE_IMPALA" timefactor="0.35" />
         <!--Tier 3 -->
-        <mobspawn name="MOB_WOLF" timefactor="1" />
-        <mobspawn name="T3_MOB_HIDE_SWAMP_GIANTTOAD" timefactor="1" />
-        <mobspawn name="T3_MOB_HIDE_STEPPE_MOABIRD" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_SWAMP_DRYAD" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_STEPPE_COUGAR" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_GREEN_OREELEMENTAL" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_RED_OREELEMENTAL" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_FOREST_SPIRIT" timefactor="1" />
-        <mobspawn name="T3_MOB_CRITTER_HIGHLAND_EARTHELEMENTAL" timefactor="1" />
+        <mobspawn name="MOB_WOLF" timefactor="0.25" />
+        <mobspawn name="T3_MOB_HIDE_SWAMP_GIANTTOAD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_HIDE_STEPPE_MOABIRD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_SWAMP_DRYAD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_STEPPE_COUGAR" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_GREEN_OREELEMENTAL" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_RED_OREELEMENTAL" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_FOREST_SPIRIT" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_HIGHLAND_EARTHELEMENTAL" timefactor="0.25" />
         <!--Tier 4 -->
-        <mobspawn name="T4_MOB_HIDE_SWAMP_MONITORLIZARD" timefactor="0.75"/>
-        <mobspawn name="T4_MOB_HIDE_STEPPE_GIANTSTAG" timefactor="0.75"/>
-        <mobspawn name="MOB_BOAR" timefactor="0.75"/>
+        <mobspawn name="MOB_BOAR" timefactor="0.2"/>
+        <mobspawn name="T4_MOB_HIDE_SWAMP_MONITORLIZARD" timefactor="0.2"/>
+        <mobspawn name="T4_MOB_HIDE_STEPPE_GIANTSTAG" timefactor="0.2"/>
       </mobspawns>
     </clustertype>
 
     <clustertype name="PLAYERISLAND"
       archetype="ISLAND"
+      logoutseconds="10"
       editorcolor="128, 128, 255"
       furnitureobjectsallowed="true"
   	  hellgatemobminimapvisible="true"
@@ -724,6 +727,7 @@
 
     <clustertype name="GUILDISLAND"
       archetype="ISLAND"
+      logoutseconds="10"
       editorcolor="128, 128, 255"
       furnitureobjectsallowed="true"
   	  hellgatemobminimapvisible="true"
@@ -737,26 +741,39 @@
 
 		<clustertype name="OPENPVP_YELLOW"
       archetype="YELLOW"
-			editorcolor="255, 255, 0"
+		  editorcolor="255, 255, 0"
 			furnitureobjectsallowed="true"
 	    hellgatemobminimapvisible="true"
 	    hellgateclustermessage="true"
       isdungeon="false"
       allowmounts="true">
-      <mobspawns defaulttimefactor="1.0">
-        <mobspawn name="MOB_BEAR" timefactor="0.5" />
-        <mobspawn name="T5_MOB_HIDE_SWAMP_GIANTSNAKE" timefactor="0.5" />
-        <mobspawn name="T5_MOB_HIDE_STEPPE_TERRORBIRD" timefactor="0.5" />
-        <mobspawn name="T3_MOB_CRITTER_SWAMP_DRYAD" timefactor="0.5" />
-        <mobspawn name="T5_MOB_CRITTER_STEPPE_COUGAR" timefactor="0.5" />
-        <mobspawn name="T5_MOB_CRITTER_MOUNTAIN_GREEN_OREELEMENTAL" timefactor="0.5" />
-        <mobspawn name="T5_MOB_CRITTER_MOUNTAIN_RED_OREELEMENTAL" timefactor="0.5" />
-        <mobspawn name="T5_MOB_CRITTER_FOREST_SPIRIT" timefactor="0.5" />
-        <mobspawn name="T5_MOB_CRITTER_HIGHLAND_EARTHELEMENTAL" timefactor="0.5" />
-      </mobspawns>
       <resourcespawns defaulttimefactor="1.0">
-        <resourcetier tier="5" timefactor="0.5"/>
+        <resourcetier tier="1" timefactor="1.0"/>
+        <resourcetier tier="2" timefactor="0.35"/>
+        <resourcetier tier="3" timefactor="0.25"/>
+        <resourcetier tier="4" timefactor="0.2"/>
+        <resourcetier tier="5" timefactor="0.3"/>
       </resourcespawns>
+      <mobspawns defaulttimefactor="1.0">
+        <!--Tier 2 -->
+        <mobspawn name="MOB_FOX" timefactor="0.35" />
+        <mobspawn name="T2_MOB_HIDE_SWAMP_SNAKE" timefactor="0.35" />
+        <mobspawn name="T2_MOB_HIDE_STEPPE_IMPALA" timefactor="0.35" />
+        <!--Tier 3 -->
+        <mobspawn name="MOB_WOLF" timefactor="0.25" />
+        <mobspawn name="T3_MOB_HIDE_SWAMP_GIANTTOAD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_HIDE_STEPPE_MOABIRD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_SWAMP_DRYAD" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_STEPPE_COUGAR" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_GREEN_OREELEMENTAL" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_MOUNTAIN_RED_OREELEMENTAL" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_FOREST_SPIRIT" timefactor="0.25" />
+        <mobspawn name="T3_MOB_CRITTER_HIGHLAND_EARTHELEMENTAL" timefactor="0.25" />
+        <!--Tier 4 -->
+        <mobspawn name="MOB_BOAR" timefactor="0.2"/>
+        <mobspawn name="T4_MOB_HIDE_SWAMP_MONITORLIZARD" timefactor="0.2"/>
+        <mobspawn name="T4_MOB_HIDE_STEPPE_GIANTSTAG" timefactor="0.2"/>
+      </mobspawns>
 		</clustertype>
 
     <clustertype name="OPENPVP_T5RED"
@@ -771,7 +788,7 @@
         <mobspawn name="MOB_BEAR" timefactor="0.5" />
         <mobspawn name="T5_MOB_HIDE_SWAMP_GIANTSNAKE" timefactor="0.5" />
         <mobspawn name="T5_MOB_HIDE_STEPPE_TERRORBIRD" timefactor="0.5" />
-        <mobspawn name="T3_MOB_CRITTER_SWAMP_DRYAD" timefactor="0.5" />
+        <mobspawn name="T5_MOB_CRITTER_SWAMP_DRYAD" timefactor="0.5" />
         <mobspawn name="T5_MOB_CRITTER_STEPPE_COUGAR" timefactor="0.5" />
         <mobspawn name="T5_MOB_CRITTER_MOUNTAIN_GREEN_OREELEMENTAL" timefactor="0.5" />
         <mobspawn name="T5_MOB_CRITTER_MOUNTAIN_RED_OREELEMENTAL" timefactor="0.5" />
@@ -832,6 +849,7 @@
 
     <clustertype name="PASSAGE_SAFEAREA"
       archetype="GREEN"
+      logoutseconds="10"
       editorcolor="0, 255, 50"
       editorcolor2="0, 128, 0"
       furnitureobjectsallowed="false"
@@ -871,7 +889,7 @@
 
     <clustertype name="PASSAGE_BLACK"
       archetype="BLACK"
-			editorcolor="128, 128, 178"
+      editorcolor="128, 128, 178"
 			editorcolor2="64, 64, 64"
 			furnitureobjectsallowed="true"
 	    hellgatemobminimapvisible="true"
@@ -881,9 +899,10 @@
       allowmounts="true">
       <mobspawns defaulttimefactor="1.0"/>
     </clustertype>
-
+	
     <clustertype name="DUNGEON_SAFEAREA"
       archetype="GREEN"
+      logoutseconds="300"
 			editorcolor="0, 255, 0"
 			editorcolor2="0, 128, 0"
 			furnitureobjectsallowed="false"
@@ -897,6 +916,7 @@
 
     <clustertype name="DUNGEON_YELLOW"
       archetype="YELLOW"
+      logoutseconds="300"
 			editorcolor="255, 255, 0"
 			editorcolor2="128, 128, 0"
 			furnitureobjectsallowed="true"
@@ -910,6 +930,7 @@
 
 		<clustertype name="DUNGEON_RED"
       archetype="RED"
+		  logoutseconds="300"
 			editorcolor="255, 0, 0"
 			editorcolor2="128, 0, 0"
 			furnitureobjectsallowed="true"
@@ -923,6 +944,7 @@
 
     <clustertype name="DUNGEON_BLACK"
       archetype="BLACK"
+      logoutseconds="300"
 			editorcolor="128, 128, 128"
 			editorcolor2="64, 64, 64"
 			furnitureobjectsallowed="true"
@@ -936,6 +958,7 @@
 
     <clustertype name="DUNGEON_SAFEAREA_SANDBOX_SOLO"
       archetype="GREEN"
+      logoutseconds="300"
       editorcolor="0, 255, 0"
       editorcolor2="0, 128, 0"
       furnitureobjectsallowed="false"
@@ -949,6 +972,7 @@
 
     <clustertype name="DUNGEON_YELLOW_SANDBOX_SOLO"
       archetype="YELLOW"
+      logoutseconds="300"
 			editorcolor="255, 255, 0"
 			editorcolor2="128, 128, 0"
 			furnitureobjectsallowed="true"
@@ -962,6 +986,7 @@
 
     <clustertype name="DUNGEON_RED_SANDBOX_SOLO"
       archetype="RED"
+      logoutseconds="300"
 			editorcolor="255, 0, 0"
 			editorcolor2="128, 0, 0"
 			furnitureobjectsallowed="true"
@@ -975,6 +1000,7 @@
 
     <clustertype name="DUNGEON_BLACK_SANDBOX_SOLO"
       archetype="BLACK"
+      logoutseconds="300"
 			editorcolor="128, 128, 128"
 			editorcolor2="64, 64, 64"
 			furnitureobjectsallowed="true"
@@ -988,6 +1014,7 @@
 
     <clustertype name="DUNGEON_SAFEAREA_SANDBOX_GROUP"
       archetype="GREEN"
+      logoutseconds="300"
       editorcolor="0, 255, 0"
       editorcolor2="0, 128, 0"
       furnitureobjectsallowed="false"
@@ -1001,6 +1028,7 @@
 
     <clustertype name="DUNGEON_YELLOW_SANDBOX_GROUP"
       archetype="YELLOW"
+      logoutseconds="300"
 			editorcolor="255, 255, 0"
 			editorcolor2="128, 128, 0"
 			furnitureobjectsallowed="true"
@@ -1014,6 +1042,7 @@
 
     <clustertype name="DUNGEON_RED_SANDBOX_GROUP"
       archetype="RED"
+      logoutseconds="300"
 			editorcolor="255, 0, 0"
 			editorcolor2="128, 0, 0"
 			furnitureobjectsallowed="true"
@@ -1027,6 +1056,7 @@
 
     <clustertype name="DUNGEON_BLACK_SANDBOX_GROUP"
       archetype="BLACK"
+      logoutseconds="300"
 			editorcolor="128, 128, 128"
 			editorcolor2="64, 64, 64"
 			furnitureobjectsallowed="true"
@@ -1040,6 +1070,7 @@
     
     <clustertype name="DUNGEON_HELL"
       archetype="HELL"
+      logoutseconds="300"
 			editorcolor="255, 128, 0"
 			editorcolor2="128, 54, 0"
 			furnitureobjectsallowed="true"
@@ -1051,6 +1082,7 @@
 
     <clustertype name="DUNGEON_HELL_YELLOW"
       archetype="HELL_YELLOW"
+      logoutseconds="300"
       editorcolor="255, 128, 0"
       editorcolor2="128, 54, 0"
       furnitureobjectsallowed="true"
@@ -1062,6 +1094,7 @@
 
     <clustertype name="DUNGEON_HELL_GREEN"
       archetype="HELL_GREEN"
+      logoutseconds="300"
       editorcolor="255, 128, 0"
       editorcolor2="128, 54, 0"
       furnitureobjectsallowed="true"
@@ -1073,6 +1106,7 @@
 
     <clustertype name="T3_EXPEDITION_STANDARD"
        archetype="T3_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"                 
        isplayercity="false"
@@ -1086,6 +1120,7 @@
     </clustertype>
     <clustertype name="T4_EXPEDITION_STANDARD"
        archetype="T4_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1099,6 +1134,7 @@
     </clustertype>
     <clustertype name="T5_EXPEDITION_STANDARD"
        archetype="T5_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1112,6 +1148,7 @@
     </clustertype>
     <clustertype name="T6_EXPEDITION_STANDARD"
        archetype="T6_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1126,6 +1163,7 @@
 
     <clustertype name="T3_EXPEDITION_SURFACE"
        archetype="T3_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1139,6 +1177,7 @@
     </clustertype>
     <clustertype name="T4_EXPEDITION_SURFACE"
        archetype="T4_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1152,6 +1191,7 @@
     </clustertype>
     <clustertype name="T5_EXPEDITION_SURFACE"
        archetype="T5_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1165,6 +1205,7 @@
     </clustertype>
     <clustertype name="T6_EXPEDITION_SURFACE"
        archetype="T6_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1179,6 +1220,7 @@
     
     <clustertype name="HARDCORE_EXPEDITION_STANDARD"
        archetype="HARDCORE_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1192,6 +1234,7 @@
     </clustertype>
     <clustertype name="HARDCORE_EXPEDITION_SURFACE"
        archetype="HARDCORE_EXPEDITION"
+       logoutseconds="120"
        editorcolor="255, 0, 255"
        furnitureobjectsallowed="true"
        isplayercity="false"
@@ -1255,7 +1298,7 @@
     </island>
     
     <island name="GUILD_ISLAND">
-      <cluster name="ISLAND-GUILD-0001a" level="0" silverprice="50000"  descloca="@ISLAND_ACCESS_GUILD_ISLAND_0_DESC" premiumrequirement="0" />    
+      <cluster name="ISLAND-GUILD-0001a" level="0" silverprice="75000"  descloca="@ISLAND_ACCESS_GUILD_ISLAND_0_DESC" premiumrequirement="0" />    
 	    <cluster name="ISLAND-GUILD-0001b" level="1" silverprice="150000"  descloca="@ISLAND_ACCESS_GUILD_ISLAND_1_DESC" premiumrequirement="0" />    
 	    <cluster name="ISLAND-GUILD-0001c" level="2" silverprice="450000"  descloca="@ISLAND_ACCESS_GUILD_ISLAND_2_DESC" premiumrequirement="0" />    
 	    <cluster name="ISLAND-GUILD-0001d" level="3" silverprice="1350000"  descloca="@ISLAND_ACCESS_GUILD_ISLAND_3_DESC" premiumrequirement="0" />    

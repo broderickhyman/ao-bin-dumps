@@ -486,6 +486,14 @@
     <killmob mintier="1" maxtier="1" count="100"/>
   </achievement>
 
+  <achievement name="SA_PVE_KILL_MINIGUARDIANS" stat="SA_ST_PVE_KILL_MINIGUARDIANS">
+    <killmob mobid="T6_MOB_MINIGUARDIAN_SWAMP_DRYAD" count="1" countpartykills="true"/>
+    <killmob mobid="T6_MOB_MINIGUARDIAN_STEPPE_MAMMOTH" count="1" countpartykills="true"/>
+    <killmob mobid="T6_MOB_MINIGUARDIAN_MOUNTAIN_GIANT" count="1" countpartykills="true"/>
+    <killmob mobid="T6_MOB_MINIGUARDIAN_FOREST_SPIRIT" count="1" countpartykills="true"/>
+    <killmob mobid="T6_MOB_MINIGUARDIAN_HIGHLAND_GIANT" count="1" countpartykills="true"/>
+  </achievement>
+
   <!--Reputation-->
   <achievement name="SA_REPUTATION_MAX">
     <havereputation min="10000"/>
@@ -607,6 +615,66 @@
   <!-- Overcharge -->
   <achievement name="SA_COLLECTION_OVERCHARGE_01">
     <usefunction function="OverChargeItem"/>
+  </achievement>
+
+  <!-- Party Finder -->
+  <achievement name="SA_COLLECTION_PARTYFINDER">
+    <usefunction function="PartyFinderStartOrJoinParty"/>
+  </achievement>
+
+  <!-- Tutorial -->
+  <achievement name="SA_COLLECTION_TUTORIAL">
+    <reachtutorialstate name="FINISH"/>
+  </achievement>
+
+  <achievement name="SA_COLLECTION_TUTORIAL_02">
+    <reachtutorialstate name="SHIPFIXED"/>
+  </achievement>
+
+  <!-- Random Dungeons -->
+  <achievement name="SA_PVE_RANDOMDUNGEON_ENTERED_01">
+    <usefunction function="EnterRandomDungeon"/>
+  </achievement>
+
+  <achievement name="SA_PVE_RANDOMDUNGEON_ENTERED_02" stat="SA_ST_PVE_RANDOMDUNGEON_ENTERED_02">
+    <usefunction function="EnterRandomDungeon" count="1000"/>
+  </achievement>
+
+  <achievement name="SA_PVE_RANDOMDUNGEON_LEGENDARY" stat="SA_ST_PVE_RANDOMDUNGEON_LEGENDARY">
+    <or>
+      <killmob mobid="T4_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T5_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true"/>
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T5_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true"/>
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T5_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true"/>
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T5_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true"/>
+    </or>
+  </achievement>
+
+  <!-- Crystal Realm GvG-->
+
+  <achievement name="SA_PVP_CRYSTAL_PARTICIPATION">
+    <haveplayedcrystalgvgmatch count="1"/>
   </achievement>
 
   <!-- Service -->
