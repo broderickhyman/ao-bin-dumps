@@ -3394,7 +3394,7 @@
     <Item type="UNIQUE_CONSUMABLE_EVENT_WINTER_2017" chance="1" amount="1" />
   </Lootlist>
   <Lootlist name="EVENT_EASTER_2018_LOOT">
-    <Item type="QUESTITEM_TOKEN_EVENT_EASTER_2018" chance="1" amount="1" />
+    <Item type="QUESTITEM_TOKEN_EVENT_EASTER_2018" chance="1" amount="5-15" />
   </Lootlist>
 
   <!--Treasure Chest Loot-->
@@ -4197,6 +4197,68 @@
       </OR>
     </OR>
   </Lootlist>
+
+  <Lootlist name="DEMON_BOSS_LOOT_BLUE">
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="9.303736"/>
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="4.651868"/>
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="1.550623"/>
+    <LootListReference name="HELL_FRAGMENT_LOOT" chance="3.755039"/>
+    <LootListReference name="LOOT_DEMON_FACTION_CAPES" chance="0.049"/>
+    <Item type="T4_SKILLBOOK_STANDARD" chance="0.2889"/>
+    <OR chance="0.16">
+      <LootListReference name="MELD_4_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_4_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_4_3_ALL_LOOT" weight="25"/>
+      <LootListReference name="MELD_5_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_5_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_5_3_ALL_LOOT" weight="25"/>
+      <LootListReference name="MELD_6_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_6_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_6_3_ALL_LOOT" weight="25"/>
+    </OR>
+    <OR chance="0.1">
+      <LootListReference name="T4_FACTION_CAPES" chance="0.2"/>
+      <LootListReference name="T5_FACTION_CAPES" chance="0.2"/>
+      <LootListReference name="T6_FACTION_CAPES" chance="0.2"/>
+      <LootListReference name="T7_FACTION_CAPES" chance="0.04"/>
+      <LootListReference name="T8_FACTION_CAPES" chance="0.008"/>
+    </OR>
+  </Lootlist>
+  <Lootlist name="DEMON_BOSS_LOOT">
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="48.269164"/>
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="45.472717"/>
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="44.205908"/>
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="10.901222"/>
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="2.707658"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="6.614583"/>
+    <LootListReference name="LOOT_DEMON_FACTION_CAPES" chance="0.244985"/>
+    <Item type="T4_SKILLBOOK_STANDARD" chance="1.4445"/>
+    <OR chance="0.8">
+      <LootListReference name="MELD_4_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_4_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_4_3_ALL_LOOT" weight="25"/>
+      <LootListReference name="MELD_5_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_5_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_5_3_ALL_LOOT" weight="25"/>
+      <LootListReference name="MELD_6_1_ALL_LOOT" weight="225"/>
+      <LootListReference name="MELD_6_2_ALL_LOOT" weight="75"/>
+      <LootListReference name="MELD_6_3_ALL_LOOT" weight="25"/>
+      <LootListReference name="MELD_7_1_ALL_LOOT" weight="45"/>
+      <LootListReference name="MELD_7_2_ALL_LOOT" weight="15"/>
+      <LootListReference name="MELD_7_3_ALL_LOOT" weight="5"/>
+      <LootListReference name="MELD_8_1_ALL_LOOT" weight="9"/>
+      <LootListReference name="MELD_8_2_ALL_LOOT" weight="3"/>
+      <LootListReference name="MELD_8_3_ALL_LOOT" weight="1"/>
+    </OR>
+    <OR chance="0.1">
+      <LootListReference name="T4_FACTION_CAPES" chance="1"/>
+      <LootListReference name="T5_FACTION_CAPES" chance="1"/>
+      <LootListReference name="T6_FACTION_CAPES" chance="1"/>
+      <LootListReference name="T7_FACTION_CAPES" chance="0.2"/>
+      <LootListReference name="T8_FACTION_CAPES" chance="0.04"/>
+    </OR>
+  </Lootlist>
+    
   <Lootlist name="T5_DEMON_BOSS_YELLOW_LOOT">
     <Item type="T4_RUNE" weight="100" amount="1-3"/>
     <OR chance="51.45"> <!-- 1/3 of the BZ HG chance -->
@@ -4311,7 +4373,7 @@
           <LootListReference name="MELD_8_3_ALL_LOOT" weight="1"/>
           <Item type="T8_RELIC" weight="1" amount="25-75"/>
         </OR>
-      </OR>
+      </OR>      
       
     </AND>
   </Lootlist>
@@ -15987,6 +16049,45 @@
     </OR>
   </Lootlist>
 
+  <Lootlist name="UNIQUE_LOOTCHEST_ADC_MAY2019_LOOT">
+    <LootListReference name="UNIQUE_LOOTCHEST_ADC_GENERAL" />
+    <OR>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_STATUE_A" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_ARCHWAY_A" weight="5"/>      
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_CANDLESTAND_A" weight="8"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_CARPET_A" weight="8"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_PRISON_CELL_C" enchantmentlevel="3" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_WEAPONCRATE_A" enchantmentlevel="2" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_PENTAGRAM" enchantmentlevel="3" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_CAMPFIRE_D" enchantmentlevel="2" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_SIEGE_BALLISTA_A" enchantmentlevel="2" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_MORGANA_SACRIFICE_ALTAR_A" weight="1"/>
+    </OR>
+  </Lootlist>  
+  
+  <Lootlist name="UNIQUE_LOOTCHEST_ADC_JUN2019_LOOT">
+    <LootListReference name="UNIQUE_LOOTCHEST_ADC_GENERAL" />
+    <OR>
+      <Item type="UNIQUE_FURNITUREITEM_KNIGHT_STATUE_A" weight="1"/>
+      <Item type="UNIQUE_FURNITUREITEM_KNIGHT_THRONE_A" weight="4"/>
+      <Item type="UNIQUE_FURNITUREITEM_KNIGHT_ROUNDTABLE_A" weight="4"/>
+      <Item type="UNIQUE_FURNITUREITEM_KNIGHT_CARPET_A" weight="8"/>
+    </OR>
+  </Lootlist>  
+
+  <Lootlist name="UNIQUE_LOOTCHEST_ADC_JUL2019_LOOT">
+    <LootListReference name="UNIQUE_LOOTCHEST_ADC_GENERAL" />
+  </Lootlist>
+
+  <Lootlist name="UNIQUE_LOOTCHEST_ADC_AUG2019_LOOT">
+    <LootListReference name="UNIQUE_LOOTCHEST_ADC_GENERAL" />
+  </Lootlist>
+
+  <Lootlist name="UNIQUE_LOOTCHEST_ADC_SEP2019_LOOT">
+    <LootListReference name="UNIQUE_LOOTCHEST_ADC_GENERAL" />
+  </Lootlist>
+  
+
   <Lootlist name="UNIQUE_LOOTCHEST_ADC_GENERAL">
     <!--Guaranteed Fame Book-->
     <OR>
@@ -16033,7 +16134,6 @@
     </OR>
     <OR>
       <Item type="T4_SKILLBOOK_STANDARD" amount ="1" weight="4"/>
-      <Item type="UNIQUE_REPAIRPOWDER_ADC_GENERAL_01" amount="1"/>
       <Item type="UNIQUE_FOCUSPOTION_ADC_NONTRADABLE_01" amount="1"/>
     </OR>
 

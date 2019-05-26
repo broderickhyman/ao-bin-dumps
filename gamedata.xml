@@ -14,7 +14,7 @@
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
 	  guildlogochangecooldownminutes="2880"
-	  guildchangecooldownminutes="30"
+	  guildchangecooldownminutes="2880"
 	  guildlogochangegoldcosts="3000"
 	  guildlogochangesilvercosts="0"
     />
@@ -66,19 +66,6 @@
       playervisibilityafterdeath="3"/>
     <StuckCommand cooldownseconds="86400" delayseconds="600" />
     <ClusterChange cooldownseconds="10"/>
-    <SpawnBuff>
-      <!-- The first buff makes you immune to invul shields for respawning in the open world -->
-      <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
-      <buff name="TUTORIAL_STUN"                    isintutorial="Must" isfirstlogin="Must" />
-      <buff name="SPAWN_INVULNERABILITY"            ispvppossible="Must" isclusterchange="Must" isinexpedition="MustNot" isindungeon="MustNot"/>
-      <buff name="SPAWN_INVULNERABILITY"            ispvppossible="Must" isingvg="Must" /> <!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
-      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="DoesNotMatter" isclusterchange="Must" isinexpedition="Must"/>
-      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="DoesNotMatter" isrevive="Must" isinexpedition="Must"/>
-      <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" isindungeon="Must"/>
-      <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
-      <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
-      <!-- order is important: immunity LAST (obvious, right?) -->
-    </SpawnBuff>
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
     <InCombat activetimeoutseconds="20" passivetimeoutseconds="20"/>
     <FurnitureObjects placetimeseconds="3"/>
@@ -814,6 +801,7 @@
     <CraftingQuality bonus="50" />
   </ActionFocus>
   <LabourerSettings happinessperbarsegment="100" maxsafedistancefromhouse="1" maxsafedistancetimeout="3" maxbarsegments="9" maxyield="1.5"/>
+  <PortalSettings bindingresetdays="30"/>
 
   <!-- ********************************************************************************************************************** -->
   <!--
@@ -1061,38 +1049,38 @@
           <StackableItem tier="8" percentage="0.63" />
         </StackLoss>
     </AliveToDead>
-    <AliveToKO>
-        <Destroyed>
-          <EquipmentItem tier="1" percentage="0" />
-          <EquipmentItem tier="2" percentage="0" />
-          <EquipmentItem tier="3" percentage="0" />
-          <EquipmentItem tier="4" percentage="0" />
-          <EquipmentItem tier="5" percentage="0" />
-          <EquipmentItem tier="6" percentage="0" />
-          <EquipmentItem tier="7" percentage="0" />
-          <EquipmentItem tier="8" percentage="0" />
-        </Destroyed>
-        <DurabilityLoss>
-          <Item tier="1" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="2" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="3" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="4" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="5" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="6" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="7" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-          <Item tier="8" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
-        </DurabilityLoss>
-    <!--Note: Stackloss value determines the percentage of the stack that stays! 0.9 means 10% loss-->
-        <StackLoss>
-          <StackableItem tier="1" percentage="0.90" />
-          <StackableItem tier="2" percentage="0.90" />
-          <StackableItem tier="3" percentage="0.90" />
-          <StackableItem tier="4" percentage="0.90" />
-          <StackableItem tier="5" percentage="0.90" />
-          <StackableItem tier="6" percentage="0.90" />
-          <StackableItem tier="7" percentage="0.90" />
-          <StackableItem tier="8" percentage="0.90" />
-        </StackLoss>
+    <AliveToKO silverdropcapperitem="700">
+      <Destroyed>
+        <EquipmentItem tier="1" percentage="0" />
+        <EquipmentItem tier="2" percentage="0" />
+        <EquipmentItem tier="3" percentage="0" />
+        <EquipmentItem tier="4" percentage="0" />
+        <EquipmentItem tier="5" percentage="0" />
+        <EquipmentItem tier="6" percentage="0" />
+        <EquipmentItem tier="7" percentage="0" />
+        <EquipmentItem tier="8" percentage="0" />
+      </Destroyed>
+      <DurabilityLoss>
+        <Item tier="1" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="2" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="3" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="4" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="5" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="6" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="7" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+        <Item tier="8" minpercent="0.10" maxpercent="0.10" minimumpercentremaining="0.01"/>
+      </DurabilityLoss>
+      <!--Note: Stackloss value determines the percentage of the stack that stays! 0.9 means 10% loss-->
+      <StackLoss>
+        <StackableItem tier="1" percentage="0.90" />
+        <StackableItem tier="2" percentage="0.90" />
+        <StackableItem tier="3" percentage="0.90" />
+        <StackableItem tier="4" percentage="0.90" />
+        <StackableItem tier="5" percentage="0.90" />
+        <StackableItem tier="6" percentage="0.90" />
+        <StackableItem tier="7" percentage="0.90" />
+        <StackableItem tier="8" percentage="0.90" />
+      </StackLoss>
     </AliveToKO>
     <KOToDead>
         <Destroyed>
@@ -1291,7 +1279,7 @@
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
     <ClusterDangerBonus type="red"  icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
     <ClusterDangerBonus type="black"  icon="black" famefactor="3.5" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
-    <ClusterDangerBonus type="hell"  icon="black" famefactor="5.0" moblootfactor="5" mobsilverlootfactor="5"/>
+    <ClusterDangerBonus type="hell"  icon="black" famefactor="7.5" moblootfactor="7.5" mobsilverlootfactor="7.5"/>
     <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
     <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
     <ClusterDangerBonus type="expedition"  icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
@@ -1354,4 +1342,133 @@
     <endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
   </OverCharge>
   <AchievementProgressConversion silverConversionRatio="0.5" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
+  <TerritoryFirstClaimTimes>
+    <clustergroup date="2019-05-18T18:00:00Z">
+      <cluster id="0223-OWCOPY" />
+      <cluster id="0224-OWCOPY" />
+      <cluster id="0225-OWCOPY" />
+      <cluster id="0226-OWCOPY" />
+      <cluster id="0227-OWCOPY" />
+      <cluster id="0230-OWCOPY" />
+      <cluster id="0234-OWCOPY" />
+      <cluster id="0239-OWCOPY" />
+      <cluster id="0245-OWCOPY" />
+      <cluster id="1223-OWCOPY" />
+      <cluster id="1224-OWCOPY" />
+      <cluster id="1227-OWCOPY" />
+      <cluster id="1228-OWCOPY" />
+      <cluster id="1231-OWCOPY" />
+      <cluster id="1235-OWCOPY" />
+      <cluster id="1236-OWCOPY" />
+      <cluster id="1237-OWCOPY" />
+      <cluster id="1238-OWCOPY" />
+      <cluster id="1239-OWCOPY" />
+      <cluster id="1240-OWCOPY" />
+      <cluster id="1241-OWCOPY" />
+      <cluster id="1242-OWCOPY" />
+      <cluster id="1243-OWCOPY" />
+      <cluster id="1245-OWCOPY" />
+      <cluster id="2217-OWCOPY" />
+      <cluster id="2218-OWCOPY" />
+      <cluster id="2219-OWCOPY" />
+      <cluster id="2220-OWCOPY" />
+      <cluster id="2221-OWCOPY" />
+      <cluster id="2222-OWCOPY" />
+      <cluster id="2223-OWCOPY" />
+      <cluster id="2224-OWCOPY" />
+      <cluster id="2225-OWCOPY" />
+      <cluster id="2226-OWCOPY" />
+      <cluster id="2227-OWCOPY" />
+      <cluster id="2228-OWCOPY" />
+      <cluster id="2229-OWCOPY" />
+      <cluster id="2230-OWCOPY" />
+      <cluster id="2231-OWCOPY" />
+      <cluster id="2232-OWCOPY" />
+      <cluster id="4232-OWCOPY" />
+      <cluster id="4233-OWCOPY" />
+      <cluster id="4234-OWCOPY" />
+      <cluster id="4235-OWCOPY" />
+      <cluster id="4236-OWCOPY" />
+      <cluster id="4237-OWCOPY" />
+      <cluster id="4238-OWCOPY" />
+      <cluster id="4239-OWCOPY" />
+      <cluster id="4240-OWCOPY" />
+      <cluster id="4241-OWCOPY" />
+      <cluster id="4242-OWCOPY" />
+      <cluster id="4243-OWCOPY" />
+      <cluster id="4245-OWCOPY" />
+      <cluster id="4246-OWCOPY" />
+      <cluster id="4247-OWCOPY" />
+      <cluster id="4248-OWCOPY" />
+      <cluster id="0251" />
+      <cluster id="1265" />
+      <cluster id="4254" />
+      <cluster id="2248" />
+    </clustergroup>
+    <clustergroup date="2019-05-19T01:00:00Z">
+      <cluster id="0228-OWCOPY" />
+      <cluster id="0229-OWCOPY" />
+      <cluster id="0231-OWCOPY" />
+      <cluster id="0232-OWCOPY" />
+      <cluster id="0233-OWCOPY" />
+      <cluster id="0235-OWCOPY" />
+      <cluster id="0236-OWCOPY" />
+      <cluster id="0237-OWCOPY" />
+      <cluster id="0238-OWCOPY" />
+      <cluster id="0240-OWCOPY" />
+      <cluster id="0241-OWCOPY" />
+      <cluster id="0242-OWCOPY" />
+      <cluster id="0243-OWCOPY" />
+      <cluster id="0244-OWCOPY" />
+      <cluster id="1229-OWCOPY" />
+      <cluster id="1230-OWCOPY" />
+      <cluster id="1232-OWCOPY" />
+      <cluster id="1233-OWCOPY" />
+      <cluster id="1234-OWCOPY" />
+      <cluster id="2010-OWCOPY" />
+      <cluster id="2011-OWCOPY" />
+      <cluster id="2233-OWCOPY" />
+      <cluster id="2234-OWCOPY" />
+      <cluster id="2235-OWCOPY" />
+      <cluster id="2236-OWCOPY" />
+      <cluster id="2237-OWCOPY" />
+      <cluster id="2238-OWCOPY" />
+      <cluster id="2239-OWCOPY" />
+      <cluster id="2240-OWCOPY" />
+      <cluster id="3009-OWCOPY" />
+      <cluster id="3224-OWCOPY" />
+      <cluster id="3225-OWCOPY" />
+      <cluster id="3226-OWCOPY" />
+      <cluster id="3227-OWCOPY" />
+      <cluster id="3228-OWCOPY" />
+      <cluster id="3229-OWCOPY" />
+      <cluster id="3231-OWCOPY" />
+      <cluster id="3232-OWCOPY" />
+      <cluster id="3233-OWCOPY" />
+      <cluster id="3234-OWCOPY" />
+      <cluster id="3235-OWCOPY" />
+      <cluster id="3236-OWCOPY" />
+      <cluster id="3237-OWCOPY" />
+      <cluster id="3238-OWCOPY" />
+      <cluster id="3239-OWCOPY" />
+      <cluster id="3240-OWCOPY" />
+      <cluster id="3241-OWCOPY" />
+      <cluster id="3242-OWCOPY" />
+      <cluster id="3243-OWCOPY" />
+      <cluster id="3244-OWCOPY" />
+      <cluster id="3247-OWCOPY" />
+      <cluster id="3248-OWCOPY" />
+      <cluster id="4226-OWCOPY" />
+      <cluster id="4227-OWCOPY" />
+      <cluster id="4228-OWCOPY" />
+      <cluster id="4229-OWCOPY" />
+      <cluster id="4230-OWCOPY" />
+      <cluster id="4231-OWCOPY" />
+      <cluster id="0250" />
+      <cluster id="1264" />
+      <cluster id="4255" />
+      <cluster id="1266" />
+      <cluster id="2247" />  
+    </clustergroup>
+  </TerritoryFirstClaimTimes>
 </AO-GameData>
