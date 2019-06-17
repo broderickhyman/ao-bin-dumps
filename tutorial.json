@@ -1,0 +1,1206 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "tutorial": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "tutorial.xsd",
+    "@learningpointsifskipped": "100",
+    "clustergroup": {
+      "@startcluster": "1008",
+      "cluster": [
+        {
+          "@id": "1009"
+        },
+        {
+          "@id": "1010"
+        },
+        {
+          "@id": "1011"
+        }
+      ]
+    },
+    "travelplanner": {
+      "@id": "607d582d-0d7c-4a47-b2ef-1ea8a7664f06@1010",
+      "target": [
+        {
+          "@clusterid": "1006",
+          "@title": "@TUTORIAL_TRAVEL_FOREST_TITLE",
+          "@desc": "@TUTORIAL_TRAVEL_FOREST_DESC"
+        },
+        {
+          "@clusterid": "4006",
+          "@title": "@TUTORIAL_TRAVEL_MOUNTAIN_TITLE",
+          "@desc": "@TUTORIAL_TRAVEL_MOUNTAIN_DESC"
+        },
+        {
+          "@clusterid": "0004",
+          "@title": "@TUTORIAL_TRAVEL_SWAMP_TITLE",
+          "@desc": "@TUTORIAL_TRAVEL_SWAMP_DESC"
+        },
+        {
+          "@clusterid": "3002",
+          "@title": "@TUTORIAL_TRAVEL_HIGHLAND_TITLE",
+          "@desc": "@TUTORIAL_TRAVEL_HIGHLAND_DESC"
+        },
+        {
+          "@clusterid": "2002",
+          "@title": "@TUTORIAL_TRAVEL_STEPPE_TITLE",
+          "@desc": "@TUTORIAL_TRAVEL_STEPPE_DESC"
+        }
+      ]
+    },
+    "startstate": {
+      "@uniquename": "STARTTUTORIAL",
+      "@triggerhint": "FIRSTSTEPS",
+      "@hidedestinyboard": "true",
+      "@showdestinyboardflyout": "false"
+    },
+    "state": [
+      {
+        "@uniquename": "FIRSTSTEPS",
+        "@previousstate": "STARTTUTORIAL",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "USESPELL",
+        "@previousstate": "FIRSTSTEPS",
+        "@triggerhint": "USESPELL",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "USESPELLCLEAR",
+        "@previousstate": "USESPELL",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTGATHER",
+        "@previousstate": "USESPELL",
+        "@triggerhint": "FIRSTGATHER",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTCRAFT",
+        "@previousstate": "FIRSTGATHER",
+        "@triggerhint": "FIRSTCRAFT",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTINVENTORY",
+        "@previousstate": "FIRSTCRAFT",
+        "@triggerhint": "FIRSTINVENTORY",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTEQUIP",
+        "@previousstate": "FIRSTINVENTORY",
+        "@triggerhint": "FIRSTEQUIP",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTSPELL",
+        "@previousstate": "FIRSTEQUIP",
+        "@triggerhint": "FIRSTSPELL",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "FIRSTSPELLCLEAR",
+        "@previousstate": "FIRSTSPELL",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "EQUIPSHIELD",
+        "@previousstate": "FIRSTSPELLCLEAR",
+        "@triggerhint": "EQUIPSHIELD",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "EQUIPSHIELDCLEAR",
+        "@previousstate": "EQUIPSHIELD",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "COMBAT",
+        "@previousstate": "EQUIPSHIELDCLEAR",
+        "@triggerhint": "COMBAT",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "COMBATCLEAR",
+        "@previousstate": "COMBAT",
+        "@triggerhint": "COMBATCLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO",
+        "@previousstate": "COMBATCLEAR",
+        "@triggerhint": "DESTINYBOARDINTRO",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTROCLEAR",
+        "@previousstate": "DESTINYBOARDINTRO",
+        "@triggerhint": "DESTINYBOARDINTRO_08",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "WHEREAREMYFRIENDS",
+        "@previousstate": "DESTINYBOARDINTROCLEAR",
+        "@triggerhint": "WAMF",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MARKETPLACEINTRO",
+        "@previousstate": "WHEREAREMYFRIENDS",
+        "@triggerhint": "MARKETPLACEINTRO_01",
+        "@resetquestonrevisit": "true",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MARKETPLACEINTROCLEAR",
+        "@previousstate": "MARKETPLACEINTRO",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "BUYMOUNT",
+        "@previousstate": "MARKETPLACEINTROCLEAR",
+        "@triggerhint": "MARKETPLACEINTRO_01",
+        "@resetquestonrevisit": "true",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "COLLECTITEM",
+        "@previousstate": "BUYMOUNT",
+        "@triggerhint": "BUYMOUNT_04",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "CRAFTTOOLSINFO",
+        "@previousstate": "COLLECTITEM",
+        "@triggerhint": "CRAFTTOOLSINFO",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "CRAFTTOOLSCLEAR",
+        "@previousstate": "CRAFTTOOLSINFO",
+        "@triggerhint": "CRAFTTOOLSCLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "HIGHLIGHTMAPBUTTON",
+        "@previousstate": "CRAFTTOOLSCLEAR",
+        "@triggerhint": "MAPINTRO",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MAPINTRO",
+        "@previousstate": "HIGHLIGHTMAPBUTTON",
+        "@triggerhint": "MAPINTRO_01",
+        "@resetquestonrevisit": "true",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MAPINTROCLEAR",
+        "@previousstate": "MAPINTRO",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "FOREST",
+        "@previousstate": "MAPINTROCLEAR",
+        "@triggerhint": "FOREST",
+        "@infobuttonhint": "BUTTONFOREST",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "BIGHINTRECALL",
+        "@previousstate": "FOREST",
+        "@triggerhint": "BIGHINTRECALL",
+        "@infobuttonhint": "BUTTONFOREST",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "FORESTCLEAR",
+        "@previousstate": "BIGHINTRECALL",
+        "@triggerhint": "CLEAR",
+        "@infobuttonhint": "BUTTONFOREST",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MOUNTAIN",
+        "@previousstate": "FORESTCLEAR",
+        "@triggerhint": "MOUNTAIN",
+        "@infobuttonhint": "BUTTONMOUNTAIN",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MOUNTAINCLEAR",
+        "@previousstate": "MOUNTAIN",
+        "@triggerhint": "CLEAR",
+        "@infobuttonhint": "BUTTONMOUNTAIN",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "LEARNLP",
+        "@previousstate": "MOUNTAINCLEAR",
+        "@triggerhint": "LEARNLP_01",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "CLEARLEARNLP",
+        "@previousstate": "LEARNLP",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "USELP",
+        "@previousstate": "CLEARLEARNLP",
+        "@triggerhint": "USELP_01",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "CLEARUSELP",
+        "@previousstate": "USELP",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "INFO1",
+        "@previousstate": "CLEARUSELP",
+        "@triggerhint": "INFO1",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "INFO2",
+        "@previousstate": "INFO1",
+        "@triggerhint": "INFO2",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "INFO3",
+        "@previousstate": "INFO2",
+        "@triggerhint": "INFO3",
+        "@infobuttonhint": "BUTTONINFO1",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "WHATYOUWEAR",
+        "@previousstate": "INFO3",
+        "@triggerhint": "WHATYOUWEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "GETGEARCLEAR",
+        "@previousstate": "WHATYOUWEAR",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "SILVER",
+        "@previousstate": "GETGEARCLEAR",
+        "@triggerhint": "SILVER",
+        "@infobuttonhint": "BUTTONINFO1",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "SWORDGLOWOFF",
+        "@triggerhint": "CLEAR",
+        "@previousstate": "FIRSTSPELL"
+      },
+      {
+        "@uniquename": "MOUNTGLOWOFF",
+        "@triggerhint": "CLEAR",
+        "@previousstate": "EQUIPSHIELD"
+      },
+      {
+        "@uniquename": "DELAYEDHARDCLEARPREDB",
+        "@triggerhint": "DELAYEDCLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "HARDCLEARPREDB",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "true",
+        "@showdestinyboardflyout": "false"
+      },
+      {
+        "@uniquename": "HARDCLEARAFTERDB",
+        "@triggerhint": "CLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "SHIPFIXED"
+      }
+    ],
+    "endstate": {
+      "@uniquename": "FINISH",
+      "@previousstate": "SILVER"
+    },
+    "hint": [
+      {
+        "@uniquename": "FOREST",
+        "@explanation": "Biome1",
+        "@blockworldinteraction": "true",
+        "@setnextstateonend": "true",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "BIGHINTRECALL",
+        "@title": "@HINT_TITLE_BIGHINTRECALL",
+        "@infotext": "@HINT_INFO_BIGHINTRECALL",
+        "@triggerui": "firstquest",
+        "@endtriggerui": "clear",
+        "@completebutton": "true",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "MOUNTAIN",
+        "@explanation": "Biome2",
+        "@blockworldinteraction": "true",
+        "@setnextstateonend": "true",
+        "@endtriggerui": "clear",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "INFO1",
+        "@explanation": "Info1",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "INFO2",
+        "@explanation": "Info2",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "INFO3",
+        "@explanation": "Info3",
+        "@blockworldinteraction": "true",
+        "@nexthint": "BIGHINTRECALLAGAIN",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "BIGHINTRECALLAGAIN",
+        "@title": "@HINT_TITLE_BIGHINTRECALL",
+        "@infotext": "@HINT_INFO_BIGHINTRECALL",
+        "@triggerui": "firstquest",
+        "@endtriggerui": "clear",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "WHATYOUWEAR",
+        "@explanation": "WhatYouWear",
+        "@blockworldinteraction": "true",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "WAMF",
+        "@explanation": "AlbionTutorial",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "SILVER",
+        "@explanation": "Silver",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "BUTTONFOREST",
+        "@explanation": "Biome1",
+        "@completebutton": "true",
+        "@blockworldinteraction": "true",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "BUTTONMOUNTAIN",
+        "@explanation": "Biome2",
+        "@completebutton": "true",
+        "@blockworldinteraction": "true",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "BUTTONINFO1",
+        "@explanation": "Info1",
+        "@nexthint": "BUTTONINFO2",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "BUTTONINFO2",
+        "@explanation": "Info2",
+        "@nexthint": "BUTTONINFO3",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "BUTTONINFO3",
+        "@explanation": "Info3",
+        "@nexthint": "BUTTONINFO1",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "CLEAR",
+        "@triggerui": "clear"
+      },
+      {
+        "@uniquename": "DELAYEDCLEAR",
+        "@triggerui": "clear"
+      },
+      {
+        "@uniquename": "STARTTUTORIAL",
+        "@title": "@HINT_TITLE_STARTTUTORIAL",
+        "@infotext": "@HINT_INFO_STARTTUTORIAL",
+        "@completebutton": "true",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FIRSTSTEPS",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "FIRSTSTEPS",
+        "@title": "@HINT_TITLE_FIRSTSTEPS",
+        "@infotext": "@HINT_INFO_FIRSTSTEPS",
+        "@delay": "5"
+      },
+      {
+        "@uniquename": "FIRSTQUEST",
+        "@title": "@HINT_TITLE_FIRSTQUEST",
+        "@infotext": "@HINT_INFO_FIRSTQUEST",
+        "@completebutton": "true",
+        "@triggerui": "firstquest"
+      },
+      {
+        "@uniquename": "QUESTMARKER",
+        "@title": "@HINT_TITLE_QUESTMARKER",
+        "@infotext": "@HINT_INFO_QUESTMARKER",
+        "@triggerui": "firstquestmap",
+        "@endtriggerui": "clear",
+        "@delay": "3"
+      },
+      {
+        "@uniquename": "USESPELL",
+        "@title": "@HINT_TITLE_USESPELL",
+        "@infotext": "@HINT_INFO_USESPELL",
+        "@setnextstateonend": "true",
+        "@triggerui": "usespell"
+      },
+      {
+        "@uniquename": "FIRSTGATHER",
+        "@title": "@HINT_TITLE_FIRSTGATHER",
+        "@infotext": "@HINT_INFO_FIRSTGATHER"
+      },
+      {
+        "@uniquename": "FIRSTCRAFT",
+        "@title": "@HINT_TITLE_FIRSTCRAFT",
+        "@infotext": "@HINT_INFO_FIRSTCRAFT",
+        "@triggerui": "forgeswordshield",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "FIRSTINVENTORY",
+        "@title": "@HINT_TITLE_INVENTORY",
+        "@infotext": "@HINT_INFO_INVENTORY",
+        "@triggerui": "inventorybutton",
+        "@delay": "1"
+      },
+      {
+        "@uniquename": "FIRSTEQUIP",
+        "@title": "@HINT_TITLE_FIRSTEQUIP",
+        "@infotext": "@HINT_INFO_FIRSTEQUIP",
+        "@triggerui": "swordspell"
+      },
+      {
+        "@uniquename": "FIRSTSPELL",
+        "@title": "@HINT_TITLE_FIRSTSPELL",
+        "@infotext": "@HINT_INFO_FIRSTSPELL",
+        "@triggerui": "itemspellhighlight",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "EQUIPSHIELD",
+        "@title": "@HINT_TITLE_EQUIPSHIELD",
+        "@infotext": "@HINT_INFO_EQUIPSHIELD",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "COMBAT",
+        "@title": "@HINT_TITLE_COMBAT",
+        "@infotext": "@HINT_INFO_COMBAT",
+        "@setnextstateonend": "true",
+        "@blockworldinteraction": "false",
+        "@completebutton": "false",
+        "@triggerui": "combat"
+      },
+      {
+        "@uniquename": "COMBATCLEAR",
+        "@triggerui": "combat"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO",
+        "@nexthint": "DESTINYBOARDINTRO_01",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@delay": "5",
+        "@triggerui": "destinyboardbuttonhighlight",
+        "@endtriggerui": "destinyboardstart"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_01",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_01",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_01",
+        "@nexthint": "DESTINYBOARDINTRO_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@triggerui": "destinyboardstart"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_02",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_02",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_02",
+        "@nexthint": "DESTINYBOARDINTRO_03",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardstart"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_03",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_03",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_03",
+        "@nexthint": "DESTINYBOARDINTRO_04",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_04",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_04",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_04",
+        "@nexthint": "DESTINYBOARDINTRO_05",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardgather"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_05",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_05",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_05",
+        "@nexthint": "DESTINYBOARDINTRO_07",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardcraft",
+        "@endtriggerui": "destinyboardadventure"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_07",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_07",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_07",
+        "@nexthint": "TRACKERINTRO_01",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "TRACKERINTRO_01",
+        "@title": "@HINT_TITLE_TRACKERINTRO_01",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_01",
+        "@nexthint": "TRACKERINTRO_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardrequirements"
+      },
+      {
+        "@uniquename": "TRACKERINTRO_02",
+        "@title": "@HINT_TITLE_TRACKERINTRO_02",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_02",
+        "@nexthint": "TRACKERINTRO_03",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardcombattrack"
+      },
+      {
+        "@uniquename": "TRACKERINTRO_03",
+        "@title": "@HINT_TITLE_TRACKERINTRO_03",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_03",
+        "@nexthint": "DESTINYBOARDINTRO_08",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardbutton",
+        "@skiptonextstate": "true",
+        "@completebutton": "true",
+        "@setnextstateonend": "true",
+        "@endtriggerui": "firstquest"
+      },
+      {
+        "@uniquename": "DESTINYBOARDINTRO_08",
+        "@triggerui": "firstquest"
+      },
+      {
+        "@uniquename": "MARKETPLACEINTRO_01",
+        "@title": "@HINT_TITLE_MARKETPLACEINTRO_01",
+        "@infotext": "@HINT_INFO_MARKETPLACEINTRO_01",
+        "@nexthint": "BUYMOUNT_01",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "BUYMOUNT_01",
+        "@title": "@HINT_TITLE_BUYMOUNT_01",
+        "@infotext": "@HINT_INFO_BUYMOUNT_01",
+        "@triggerui": "marketplacesearch",
+        "@blockworldinteraction": "true",
+        "@nexthint": "BUYMOUNT_02"
+      },
+      {
+        "@uniquename": "BUYMOUNT_02",
+        "@title": "@HINT_TITLE_BUYMOUNT_02",
+        "@infotext": "@HINT_INFO_BUYMOUNT_02",
+        "@triggerui": "marketplacebuy",
+        "@blockworldinteraction": "true",
+        "@nexthint": "BUYMOUNT_03"
+      },
+      {
+        "@uniquename": "BUYMOUNT_03",
+        "@title": "@HINT_TITLE_BUYMOUNT_03",
+        "@infotext": "@HINT_INFO_BUYMOUNT_03",
+        "@triggerui": "marketplacemount"
+      },
+      {
+        "@uniquename": "BUYMOUNT_04",
+        "@title": "@HINT_TITLE_BUYMOUNT_04",
+        "@infotext": "@HINT_INFO_BUYMOUNT_04",
+        "@triggerui": "marketplacecollect",
+        "@blockworldinteraction": "true",
+        "@nexthint": "BUYMOUNT_05"
+      },
+      {
+        "@uniquename": "BUYMOUNT_05",
+        "@triggerui": "marketplacecollecttabhighlight"
+      },
+      {
+        "@uniquename": "MOUNT",
+        "@title": "@HINT_TITLE_MOUNT",
+        "@infotext": "@HINT_INFO_MOUNT",
+        "@completebutton": "true",
+        "@triggerui": "inventorybutton"
+      },
+      {
+        "@uniquename": "CRAFTTOOLSINFO",
+        "@title": "@HINT_TITLE_CRAFTTOOLS",
+        "@infotext": "@HINT_INFO_CRAFTTOOLS",
+        "@completebutton": "true",
+        "@setnextstateonend": "true",
+        "@triggerui": "toolmakeraxepickaxe"
+      },
+      {
+        "@uniquename": "CRAFTTOOLSCLEAR",
+        "@delay": "2",
+        "@triggerui": "toolmakeraxepickaxe"
+      },
+      {
+        "@uniquename": "MAPINTRO",
+        "@triggerui": "clustermapbutton"
+      },
+      {
+        "@uniquename": "MAPINTRO_01",
+        "@title": "@HINT_TITLE_MAPINTRO_01",
+        "@infotext": "@HINT_INFO_MAPINTRO_01",
+        "@nexthint": "MAPINTRO_01A",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true"
+      },
+      {
+        "@uniquename": "MAPINTRO_01A",
+        "@title": "@HINT_TITLE_MAPINTRO_01A",
+        "@infotext": "@HINT_INFO_MAPINTRO_01A",
+        "@nexthint": "MAPINTRO_01B",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "worldmap"
+      },
+      {
+        "@uniquename": "MAPINTRO_01B",
+        "@title": "@HINT_TITLE_MAPINTRO_01B",
+        "@infotext": "@HINT_INFO_MAPINTRO_01B",
+        "@nexthint": "MAPINTRO_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermap"
+      },
+      {
+        "@uniquename": "MAPINTRO_02",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_02",
+        "@nexthint": "MAPINTRO_03",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermapinfo"
+      },
+      {
+        "@uniquename": "MAPINTRO_03",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_03",
+        "@nexthint": "MAPINTRO_04",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermapleftdetail"
+      },
+      {
+        "@uniquename": "MAPINTRO_04",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_04",
+        "@nexthint": "MAPINTRO_05",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermapmiddledetail"
+      },
+      {
+        "@uniquename": "MAPINTRO_05",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_05",
+        "@nexthint": "MAPINTRO_07",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermaprightdetail"
+      },
+      {
+        "@uniquename": "MAPINTRO_07",
+        "@title": "@HINT_TITLE_MAPINTRO_07",
+        "@infotext": "@HINT_INFO_MAPINTRO_07",
+        "@nexthint": "MAPINTRO_08",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "clustermaprightdetail"
+      },
+      {
+        "@uniquename": "MAPINTRO_08",
+        "@title": "@HINT_TITLE_MAPINTRO_08",
+        "@infotext": "@HINT_INFO_MAPINTRO_08",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "@setnextstateonend": "true",
+        "@triggerui": "clustermaprightdetail",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "COMBAT2",
+        "@title": "@HINT_TITLE_COMBAT2",
+        "@infotext": "@HINT_INFO_COMBAT2",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "LEARNLP_01",
+        "@title": "@HINT_TITLE_LEARNLP_01",
+        "@infotext": "@HINT_INFO_LEARNLP_01",
+        "@nexthint": "LEARNLP_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@delay": "3",
+        "@triggerui": "destinyboardbuttonhighlight",
+        "@endtriggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "LEARNLP_02",
+        "@title": "@HINT_TITLE_LEARNLP_02",
+        "@infotext": "@HINT_INFO_LEARNLP_02",
+        "@nexthint": "LEARNLP_03",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@triggerui": "destinyboardlplocation",
+        "@delay": "2"
+      },
+      {
+        "@uniquename": "LEARNLP_03",
+        "@title": "@HINT_TITLE_LEARNLP_03",
+        "@infotext": "@HINT_INFO_LEARNLP_03",
+        "@nexthint": "LEARNLP_04",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardlpthreshold"
+      },
+      {
+        "@uniquename": "LEARNLP_04",
+        "@title": "@HINT_TITLE_LEARNLP_04",
+        "@infotext": "@HINT_INFO_LEARNLP_04",
+        "@nexthint": "LEARNLP_05",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardlpthreshold"
+      },
+      {
+        "@uniquename": "LEARNLP_05",
+        "@title": "@HINT_TITLE_LEARNLP_05",
+        "@infotext": "@HINT_INFO_LEARNLP_05",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true",
+        "@triggerui": "destinyboardcombat",
+        "@completebutton": "true",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "USELP_01",
+        "@title": "@HINT_TITLE_USELP_01",
+        "@infotext": "@HINT_INFO_USELP_01",
+        "@nexthint": "USELP_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@delay": "3",
+        "@triggerui": "destinyboardbuttonhighlight",
+        "@endtriggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "USELP_02",
+        "@title": "@HINT_TITLE_USELP_02",
+        "@infotext": "@HINT_INFO_USELP_02",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "false",
+        "@triggerui": "destinyboardlplocation",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "USELP_03",
+        "@title": "@HINT_TITLE_USELP_03",
+        "@infotext": "@HINT_INFO_USELP_03",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "TRACKERINTRO",
+        "@title": "@HINT_TITLE_TRACKERINTRO",
+        "@infotext": "@HINT_INFO_TRACKERINTRO",
+        "@nexthint": "TRACKERINTRO_03",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardbuttonhighlight"
+      },
+      {
+        "@uniquename": "TRACKERINTRO_04",
+        "@triggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "GETGEAR_02",
+        "@title": "@HINT_TITLE_GETGEAR_02",
+        "@infotext": "@HINT_INFO_GETGEAR_02",
+        "@nexthint": "GETGEAR_03",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true"
+      },
+      {
+        "@uniquename": "GETGEAR_03",
+        "@title": "@HINT_TITLE_GETGEAR_03",
+        "@infotext": "@HINT_INFO_GETGEAR_03",
+        "@nexthint": "GETGEAR_04",
+        "@blockworldinteraction": "true",
+        "@skiptonextstate": "true"
+      },
+      {
+        "@uniquename": "GETGEAR_04",
+        "@title": "@HINT_TITLE_GETGEAR_04",
+        "@infotext": "@HINT_INFO_GETGEAR_04",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "END",
+        "@title": "@HINT_TITLE_END",
+        "@infotext": "@HINT_INFO_END",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "THISISALBION",
+        "@title": "@HINT_TITLE_THISISALBION",
+        "@infotext": "@HINT_INFO_THISISALBION",
+        "@blockworldinteraction": "true",
+        "@triggerui": "worldmap",
+        "@nexthint": "THISISALBION_1"
+      },
+      {
+        "@uniquename": "THISISALBION_1",
+        "@title": "@HINT_TITLE_THISISALBION_1",
+        "@infotext": "@HINT_INFO_THISISALBION_1",
+        "@blockworldinteraction": "true",
+        "@nexthint": "THISISALBION_2"
+      },
+      {
+        "@uniquename": "THISISALBION_2",
+        "@title": "@HINT_TITLE_THISISALBION_2",
+        "@infotext": "@HINT_INFO_THISISALBION_2",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "PREMIUMSMALL",
+        "@title": "@HINT_TITLE_PREMIUM",
+        "@infotext": "@HINT_INFO_PREMIUM",
+        "@nexthint": "PREMIUM",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clear",
+        "@delay": "1"
+      },
+      {
+        "@uniquename": "PREMIUM",
+        "@explanation": "Weapon",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "USEITMES",
+        "@title": "@HINT_TITLE_USINGITEMS",
+        "@infotext": "@HINT_INFO_USINGITEMS",
+        "@nexthint": "PREMIUM",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "GOLDMARKET",
+        "@title": "@HINT_TITLE_GOLDMARKET",
+        "@infotext": "@HINT_INFO_GOLDMARKET",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "USE_POTIONS",
+        "@title": "@HINT_TITLE_FOCUS_1",
+        "@infotext": "@HINT_INFO_FOCUS_1",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS_2",
+        "@title": "@HINT_TITLE_FOCUS_2",
+        "@infotext": "@HINT_INFO_FOCUS_2",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS_3",
+        "@title": "@HINT_TITLE_FOCUS_3",
+        "@infotext": "@HINT_INFO_FOCUS_3",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_01",
+        "@title": "@HINT_TITLE_MAPINTRO_01",
+        "@infotext": "@HINT_INFO_MAPINTRO_01",
+        "@nexthint": "AFTER_MAPINTRO_01A",
+        "@blockworldinteraction": "true"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_01A",
+        "@title": "@HINT_TITLE_MAPINTRO_01A",
+        "@infotext": "@HINT_INFO_MAPINTRO_01A",
+        "@nexthint": "AFTER_MAPINTRO_01B",
+        "@blockworldinteraction": "true",
+        "@triggerui": "worldmap"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_01B",
+        "@title": "@HINT_TITLE_MAPINTRO_01B",
+        "@infotext": "@HINT_INFO_MAPINTRO_01B",
+        "@nexthint": "AFTER_MAPINTRO_02",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermap"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_02",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_02",
+        "@nexthint": "AFTER_MAPINTRO_03",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermapinfo"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_03",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_03",
+        "@nexthint": "AFTER_MAPINTRO_04",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermapleftdetail"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_04",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_04",
+        "@nexthint": "AFTER_MAPINTRO_05",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermapmiddledetail"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_05",
+        "@title": "@HINT_TITLE_MAPINTRO_02",
+        "@infotext": "@HINT_INFO_MAPINTRO_05",
+        "@nexthint": "AFTER_MAPINTRO_07",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermaprightdetail"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_07",
+        "@title": "@HINT_TITLE_MAPINTRO_07",
+        "@infotext": "@HINT_INFO_MAPINTRO_07",
+        "@nexthint": "AFTER_MAPINTRO_08",
+        "@blockworldinteraction": "true",
+        "@triggerui": "clustermaprightdetail"
+      },
+      {
+        "@uniquename": "AFTER_MAPINTRO_08",
+        "@title": "@HINT_TITLE_MAPINTRO_08",
+        "@infotext": "@HINT_INFO_MAPINTRO_08",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "@triggerui": "clustermaprightdetail",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_01",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_01",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_01",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_02",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardstart"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_02",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_02",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_02",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_03",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardstart"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_03",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_03",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_03",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_04",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_04",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_04",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_04",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_05",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardgather"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_05",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_05",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_05",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_07",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardcraft",
+        "@endtriggerui": "destinyboardadventure"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_07",
+        "@title": "@HINT_TITLE_DESTINYBOARDINTRO_07",
+        "@infotext": "@HINT_INFO_DESTINYBOARDINTRO_07",
+        "@nexthint": "AFTER_TRACKERINTRO_01",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardcombat"
+      },
+      {
+        "@uniquename": "AFTER_TRACKERINTRO_01",
+        "@title": "@HINT_TITLE_TRACKERINTRO_01",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_01",
+        "@nexthint": "AFTER_TRACKERINTRO_02",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardrequirements"
+      },
+      {
+        "@uniquename": "AFTER_TRACKERINTRO_02",
+        "@title": "@HINT_TITLE_TRACKERINTRO_02",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_02",
+        "@nexthint": "AFTER_TRACKERINTRO_03",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardcombattrack"
+      },
+      {
+        "@uniquename": "AFTER_TRACKERINTRO_03",
+        "@title": "@HINT_TITLE_TRACKERINTRO_03",
+        "@infotext": "@HINT_INFO_TRACKERINTRO_03",
+        "@nexthint": "AFTER_DESTINYBOARDINTRO_08",
+        "@blockworldinteraction": "true",
+        "@triggerui": "destinyboardbutton",
+        "@completebutton": "true",
+        "@endtriggerui": "clear"
+      },
+      {
+        "@uniquename": "AFTER_DESTINYBOARDINTRO_08",
+        "@triggerui": "clear"
+      },
+      {
+        "@uniquename": "AFTER_WHATYOUWEAR",
+        "@explanation": "WhatYouWear",
+        "@blockworldinteraction": "true",
+        "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "NOMOREQUESTS",
+        "@title": "@HINT_TITLE_NOMOREQUESTS_01",
+        "@infotext": "@HINT_INFO_NOMOREQUESTS_01",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true"
+      }
+    ],
+    "startgear": {
+      "item": [
+        {
+          "@itemid": "T1_ARMOR_LEATHER_SET1"
+        },
+        {
+          "@itemid": "T1_SHOES_LEATHER_SET1"
+        }
+      ]
+    }
+  }
+}

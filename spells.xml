@@ -1068,14 +1068,14 @@
         </not>
     </applyeffectoneventpassive>
   </passivespell>
-  <activespell uniquename="PASSIVE_CAPE_DEMON_CONDITION" target="all" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="FROSTSHIELD" category="instant" uitype="buff" assessment="positive">
+  <activespell uniquename="PASSIVE_CAPE_DEMON_CONDITION" target="all" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="AOE_FIRE" category="instant" uitype="buff" assessment="positive">
     <applyspell spell="PASSIVE_CAPE_DEMON_AREA" target="all" >
       <not>
         <IfSpellCategoryActive category="cape_cooldown" who="Caster"/>
       </not>
     </applyspell>
   </activespell>
-  <activespell uniquename="PASSIVE_CAPE_DEMON_AREA" target="all" hitdelay="0.2" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="FROSTSHIELD" category="damage" uitype="damage" assessment="negative">
+  <activespell uniquename="PASSIVE_CAPE_DEMON_AREA" target="all" hitdelay="0.2" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="AOE_FIRE" category="damage" uitype="damage" assessment="negative">
     <spellindicationarea target="enemy" visible="true" >
       <area>
         <shape>
@@ -1102,7 +1102,7 @@
     <applyspell spell="PASSIVE_CAPE_DEMON_COOLDOWN" target="self" />
     <AudioInfo name="PROJECTILE_LAVABOMB" />    
   </activespell>
-  <activespell uniquename="PASSIVE_CAPE_DEMON_EFFECT" target="all" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="LIVINGARMOR" category="buff" uitype="buff" assessment="positive" buffpriority="1" maxstack="1">
+  <activespell uniquename="PASSIVE_CAPE_DEMON_EFFECT" target="all" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="AOE_FIRE" category="buff" uitype="buff" assessment="positive" buffpriority="1" maxstack="1" hidespelleffecticon="true">
     <attributechangeovertime change="-60.00" target="enemy" effecttype="magic" initialinterval="0" interval="0.5" count="10" attribute="health" >
       <IfTargetType type="player"/>
     </attributechangeovertime>
@@ -5271,7 +5271,7 @@
 
   <passivespell uniquename="MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE" uisprite="PASSIVE_AGILITY_1" />
 
-  <activespell uniquename="MOUNTSPELL_RAVEN_SCREAM" target="self" castingtime="1" keepmovingaftercast="false" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="30" energyusage="0.15" energyusageisrelative="true" castrange="0" castanimation="mount_raven_scream" uisprite="INTIMIDATINGSHOUT" uitype="crowdcontrol" category="forcedmovement" assessment="negative" >
+  <activespell uniquename="MOUNTSPELL_RAVEN_SCREAM" target="self" castingtime="1.5" keepmovingaftercast="false" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="30" energyusage="0.15" energyusageisrelative="true" castrange="0" castanimation="mount_raven_scream" uisprite="INTIMIDATINGSHOUT" uitype="crowdcontrol" category="forcedmovement" assessment="negative" >
     <spellindicationarea target="enemy" position="attarget" visible="true">
       <area>
         <shape>
@@ -5325,7 +5325,7 @@
     <AudioInfo name="SPELL_RAVEN_SCREAM_PASSIVE" />    
   </activespell>  
   <activespell uniquename="MOUNTSPELL_RAVEN_SCREAM_COOLDOWN" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="PASSIVE_TACTICIAN" category="instant" assessment="positive">
-    <dummy target="self" time="120" />
+    <dummy target="self" time="180" />
   </activespell>
 
   <passivespell uniquename="MOUNTSPELL_RAVEN_SCREAM_PASSIVE" uisprite="PASSIVE_TACTICIAN" />  
@@ -6337,6 +6337,15 @@
       <AudioInfo name="SPELL_VANITY_TRUMPET_MAINTHEME" />
     </channelingspell>
   </activespell>
+  <activespell uniquename="VANITY_RUBBERBANDING" bindtoitem="true" keepmovingaftercast="true" target="ground" recastdelay="60" energyusage="0.03" energyusageisrelative="true" category="buff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" castanimation="none" uisprite="BLINK" castrange="0" adjustgroundtargettorange="true" uitype="buff" cancelautoattackaftercasting="true" assessment="positive" hidespelleffecticon="true" usableincombat="false">
+    <spelleffectarea time="1" target="self" effect="NONE" skillshotindicatormin="7" skillshotindicatormax="7" />
+    <channelingspell allowcancel="true" allowmovement="true" damagecancelscasting="true" initialeffectinterval="0" effectinterval="2" effectcount="5" energyusage="0" ignoreMovedChannelAnim="true" >
+      <teleport />
+      <spellvfx target="self" event="OnChannelingHit" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_smokescreen" socket="floor" constraintpreset="inworld" />
+      <spellvfx target="self" event="OnChannelingHit" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_smokescreen" socket="floor" constraintpreset="inworld" timeoffset="1.9" />
+      <spellvfx target="self" event="OnChannelingStart" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_spell_simple_trail_purple" socket="floor" />
+    </channelingspell>
+  </activespell>
 
   <!--Vanity Summoning Spells-->  
   <activespell uniquename="VANITY_SUMMONING_ONDEATH" target="ground" castingtime="0" castrange="0" energyusage="0" recastdelay="3" category="instant" uitype="buff">
@@ -7292,7 +7301,7 @@
     <AudioInfo name="MELEE_MEDIUMCAST_MEDIUMIMPACT" />
   </activespell>
   <activespell uniquename="AXE_BLEED" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="debuff" uisprite="AXE_DOT" castanimation="melee_highstrike" category="damage" maxstack="1" maxcharges="3" assessment="negative">
-    <attributechangeovertime target="enemy" attribute="health" change="-5.20" effecttype="physical" initialinterval="1" interval="1" count="4" />
+    <attributechangeovertime target="enemy" attribute="health" change="-5.20" effecttype="physical" initialinterval="1" interval="1" count="5" />
     <buffovertime target="enemy" type="healmodifier" value="-0.05" time="5" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_healingreduction_debuff_impact" socket="damage" constraintpreset="pointconstraint" />       
     <spelleffectfx prefab="FX/ClientPrefabs/fx_healingreduction_debuff" socket="damage" constraintpreset="pointconstraint" />    
@@ -7304,7 +7313,7 @@
       <statemapping vfxstate="3" charge="3"/>        
     </spelleffectfx>   
   </activespell>
-  <activespell uniquename="HEROICSTRIKEAXE" keepmovingaftercast="true" target="self" castingtime="0" hitdelay="0.3" standtime="0" disruptionfactor="1" recastdelay="3" energyusage="2" castrange="0" uitype="damage" uisprite="AXE_HIT" castanimation="melee_Heavy2" category="damage" showrange="true" unlockedtoequip="false" >
+  <activespell uniquename="HEROICSTRIKEAXE" keepmovingaftercast="true" target="self" castingtime="0" hitdelay="0.3" standtime="0" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="0" uitype="damage" uisprite="AXE_HIT" castanimation="melee_Heavy2" category="damage" showrange="true" unlockedtoequip="false" >
     <directattributechange target="enemy" attribute="health" change="-50.02" effecttype="physical" effectarearadius="6" />
     <applyspell spell="AXE_BLEED" target="enemy" effectarearadius="6"/>
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />      
@@ -11254,7 +11263,7 @@
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELLHIT_WEAPON_IMPACT" />
   </activespell>
-  <activespell uniquename="CHARGINGBLADE" keepmovingaftercast="false" target="self" castingtime="0" hitdelay="0" standtime="0.2" disruptionfactor="0" recastdelay="15" castrange="0" energyusage="13" uisprite="BLAST_FIRE" uitype="buff" category="buff" castanimation="none" spelleffectanimation="none" hidespelleffecticon="false" maxstack="1" unlockedtoequip="false" assessment="positive">
+  <activespell uniquename="CHARGINGBLADE" bindtoitem="true" keepmovingaftercast="false" target="self" castingtime="0" hitdelay="0" standtime="0.2" disruptionfactor="0" recastdelay="15" castrange="0" energyusage="13" uisprite="BLAST_FIRE" uitype="buff" category="buff" castanimation="none" spelleffectanimation="none" hidespelleffecticon="false" maxstack="1" unlockedtoequip="false" assessment="positive">
     <channelingspell channelinganimation="channel_undirected_03" initialeffectinterval="0" effectinterval="0.2" effectcount="10" energyusage="0" damagecancelscasting="false" disruptionfactor="0">
       <applyspell target="self" spell="CHARGINGBLADE_EFFECT" />
       <applyspell target="self" spell="CHARGINGBLADE_EFFECT2" />
