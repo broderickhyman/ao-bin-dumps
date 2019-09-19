@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/HERETIC/HER_MINE_BASIC_STRAIGHT_wide_01.unity" unityguid="d58d77af3ebbab2499958ff8b316ec5a" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-46 -41" colBoundsMax="40 41">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_18">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="-19 0 1">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="Backdrop">
       <layer id="Layer_05" name="env_out_Mountain" />
@@ -89,6 +95,57 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_MINER" />
         </tile>
       </layer>
+      <layer id="Layer_12" name="mob_solo_light_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="7.28 0 -14.37" roty="162">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="4.13 0 26.48" roty="102">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="-7.44 0 -6.28" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="5.43 0 23.45" roty="32">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-7.1 0.27 13.85" roty="102.77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="2.92 0.02 -13.27" rot="3 243 9">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_STANDARD">
+            <path>
+              <waypoint pos="2.92 -13.27" idle="3" pace="WALK" />
+              <waypoint pos="2.813748 22.28292" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="5.28 0.02 -16.38" rot="3 122 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+      </layer>
+      <layer id="Layer_13" name="mob_solo_light_02">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="3.64 0 -9.59" roty="342">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="-8.52 0 -0.46" roty="162">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="-5.56 0 0.78" roty="72">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="4.21 0 12.33" roty="252">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="6.71 0 -4.74" roty="72">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="-5.32 0 3.98" roty="72">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="2.26 0 11.26" roty="162">
+          <mobspawnpoint spawnbehavior="HERETIC_RAT" />
+        </tile>
+      </layer>
       <layer id="Layer_14" name="mob_light_02">
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_RAT" pos="-8.52 0 -0.46" roty="162">
           <mobspawnpoint spawnbehavior="HERETIC_VETERAN_RAT" />
@@ -124,6 +181,101 @@
           <mobspawnpoint spawnbehavior="HERETIC_VETERAN_RAT" />
         </tile>
       </layer>
+      <layer id="Layer_15" name="mob_solo_standard_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="5.95 0 -27.27" roty="122.99">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="5.44 0 12.7" roty="102">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="5.28 0.27 33.51" roty="137">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-6.54 0.4 -1.59" rot="3 243 9">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_STANDARD">
+            <path>
+              <waypoint pos="-7.781922 -2.957469" idle="3" pace="WALK" />
+              <waypoint pos="6.104391 9.776939" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="6.61 0.27 16.54" roty="71">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-10.82 0.4 -1.04" rot="3 153 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-5.49 0.4 -5.54" rot="3 270 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+      </layer>
+      <layer id="Layer_16" name="mob_solo_hard_02">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="1.85 0.4 4.41" rot="3 28.03 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-12.56 0.4 1.57" rot="3 23 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-3.32 0.4 20.9" rot="3 145 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="1.93 0.4 20.57" rot="3 244 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MORTAR" pos="5.51 0.02 7.71" rot="3 113 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MORTAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-12.54 0.4 4.74" rot="3 150.86 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="1.24 0.4 -14.62" rot="3 47 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="-1.35 0.4 17.87" rot="3 319 9">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_DUALCROSSBOW">
+            <path>
+              <waypoint pos="-1.678357 17.61021" idle="3" pace="WALK" />
+              <waypoint pos="-2.256796 -8.242851" idle="0" pace="WALK" />
+              <waypoint pos="1.202891 -10.69488" idle="3" pace="WALK" />
+              <waypoint pos="-2.256796 -8.242851" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="5.5 0.4 -13.08" rot="3 298 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MAGE" />
+        </tile>
+      </layer>
+      <layer id="Layer_17" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="5.06 0.4 -11.93" rot="3 251.46 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_BALLISTA" pos="-12.8 0.02 2.5" rot="3 83 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_BALLISTA" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="1.24 0.4 -14.62" rot="3 47 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-10.43 0.4 7.25" rot="3 319.44 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-10.44 0.4 -1.94" rot="3 202.9 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="-2.45 0.4 20.66" rot="3 145.49 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_STANDARD" pos="2.7 0.4 20.14" rot="3 244.12 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_STANDARD" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_18" name="Shrine_01">
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="-19 0 1" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_19" name="Shrine_none" />
     </layergroup>
     <layergroup name="Story">
       <layer id="Layer_01" name="Shacks">
@@ -177,7 +329,7 @@
         <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="25 0 0" />
         <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_A" pos="-18 0 -5" />
         <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_5_A" pos="-12.5 0 -5" roty="180" />
-        <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_A" pos="-23 0 3" roty="270" />
+        <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_A" pos="-23 0 7" roty="270" />
         <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_DEBRIS_B" pos="-23 0 0" roty="270" />
         <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_DEBRIS_D" pos="-20 0 7" roty="270" />
         <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_DEBRIS_B" pos="-21 0 5" roty="180" />
@@ -188,7 +340,7 @@
         <tile name="FOREST_GREEN_HER_MINE_TRAIN_ENTRANCE_B" pos="29 -2 -1" />
         <tile name="FOREST_GREEN_HER_WALKWAYS_POD_TRI_A" pos="25 0 -1" roty="270" />
         <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_A" pos="8 0 18" />
-        <tile name="FOREST_GREEN_HER_FILL_BUCKET_A" pos="8.5 0 9.5" />
+        <tile name="FOREST_GREEN_HER_FILL_BUCKET_A" pos="8.5 0 10.5" />
         <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="9 0 14" roty="90" />
         <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_A" pos="-12 0 -5" roty="180" />
       </layer>

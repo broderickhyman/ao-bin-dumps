@@ -1,6 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/HERETIC/HER_MINE_BOSS_RARE_END_CentralStation_01.unity" unityguid="8eec977d56e696944bc768f58dc49bab" editorBoundsMin="-80 -120" editorBoundsMax="80 120" colBoundsMin="-81 -122" colBoundsMax="81 121">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_03">
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_06">
+      <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_BOSS_RARE" pos="-4.5 16 6.5" roty="349">
+        <lootchest lootchesttype="HERETIC_SOLO_CHEST_BOSS_RARE" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_07">
       <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_RARE" pos="-4.5 16 6.5" roty="349">
         <lootchest lootchesttype="HERETIC_CHEST_RARE" />
       </tile>
@@ -17,7 +22,7 @@
       <layer id="Layer_11" name="Cave_Ocean" />
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="Hard_01">
+      <layer id="Layer_03" name="mob_veteran_Hard_01">
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_THIEF" pos="4.88 16 -12.34" roty="276">
           <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_VETERAN_THIEF">
             <path>
@@ -79,6 +84,78 @@
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_DUALCROSSBOW" pos="-43.7 0.03 -71.86" rot="359 189 9">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_DUALCROSSBOW" />
         </tile>
+      </layer>
+      <layer id="Layer_05" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_ENDBOSS_RARE" pos="-4.26 16 2.06" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ENDBOSS_RARE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_BRAWLER" pos="-46.87 0.03 -71.86" rot="358.57 188.76 9.27">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_BRAWLER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="-38.57 0 -87.74" roty="68">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_BRAWLER" pos="-37.16 0 -84.4" roty="131">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_BRAWLER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="-40.41 0 -83.94" roty="127">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_MAGE">
+            <path>
+              <waypoint pos="-40.41 -83.94" idle="3" pace="WALK" />
+              <waypoint pos="-44.76434 -74.39809" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="7.53 16 -7.24" roty="187">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="-43.7 0.03 -71.86" rot="359 189 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_THIEF" pos="7.55 16 -14.67" roty="276">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_THIEF">
+            <path>
+              <waypoint pos="7.640527 -15.17765" idle="3" pace="WALK" />
+              <waypoint pos="8.027355 -26.29874" idle="0" pace="WALK" />
+              <waypoint pos="6.866891 -35.00219" idle="0" pace="WALK" />
+              <waypoint pos="2.321752 -42.44849" idle="0" pace="WALK" />
+              <waypoint pos="-5.572495 -46.34183" idle="0" pace="WALK" />
+              <waypoint pos="-11.99331 -46.49149" idle="3" pace="WALK" />
+              <waypoint pos="-5.572495 -46.34183" idle="0" pace="WALK" />
+              <waypoint pos="2.321752 -42.44849" idle="0" pace="WALK" />
+              <waypoint pos="6.866891 -35.00219" idle="0" pace="WALK" />
+              <waypoint pos="8.027355 -26.29874" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_THIEF" pos="4.88 16 -12.34" roty="276">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_THIEF">
+            <path>
+              <waypoint pos="4.970527 -12.84765" idle="3" pace="WALK" />
+              <waypoint pos="5.357355 -23.96874" idle="0" pace="WALK" />
+              <waypoint pos="4.196891 -32.67219" idle="0" pace="WALK" />
+              <waypoint pos="-0.348248 -40.11848" idle="0" pace="WALK" />
+              <waypoint pos="-8.242496 -44.01183" idle="0" pace="WALK" />
+              <waypoint pos="-14.66331 -44.1615" idle="3" pace="WALK" />
+              <waypoint pos="-8.242496 -44.01183" idle="0" pace="WALK" />
+              <waypoint pos="-0.348248 -40.11848" idle="0" pace="WALK" />
+              <waypoint pos="4.196891 -32.67219" idle="0" pace="WALK" />
+              <waypoint pos="5.357355 -23.96874" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="3.74 16 -7.43" roty="159">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="Reward">
+      <layer id="Layer_06" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_BOSS_RARE" pos="-4.5 16 6.5" roty="349" id="lootchest_02" type="lootchest">
+          <lootchest lootchesttype="HERETIC_SOLO_CHEST_BOSS_RARE" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_07" name="reward_veteran">
         <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_RARE" pos="-4.5 16 6.5" roty="349" id="lootchest_01" type="lootchest">
           <lootchest lootchesttype="HERETIC_CHEST_RARE" />
         </criticaltile>
@@ -329,15 +406,15 @@
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="-12 8 -30" />
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="-8 8 -30" />
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="-4 8 -30" />
-    <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="14 20 -25" roty="285.94" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="14 20 -25" roty="286" />
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_C" pos="-15 16 -1" roty="266" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="0 16 10" roty="270" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-17 8 -49" roty="180" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-54 0 -79" />
-    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-5 16 -9" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-5 16 -11" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-18 16 4" roty="90" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="18 16 5" roty="90" />
-    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="1 16 -20" roty="90" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-1 16 -19" roty="90" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-8 8 -41" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-40 0 -72" roty="270" />
     <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_A" pos="-12 8 17" />
@@ -422,6 +499,44 @@
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-22 4 -2" roty="270" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-22 6 -2" roty="216" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LONG_A" pos="-22.5 4 1.5" roty="293" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-24.5 4 -19.5" roty="90" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-23 4 -17" roty="90" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-24 6 -18" roty="124" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-15 4 -18" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-18 -4 -22" rot="0 330.39 0" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-15 -4 -21" roty="279.34" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_A_NOCOL" pos="-19 -16 -31" roty="188" />
+    <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_C" pos="-24 -8 -29" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-20.5 -8 -30.5" roty="270" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-22 -8 -33" roty="270" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-21 -6 -32" roty="304" />
+    <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_C" pos="-24 -8 -53" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-20.5 -8 -54.5" roty="270" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-22 -8 -57" roty="270" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-21 -6 -56" roty="304" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B_NOCOL" pos="-15 -16 -31" roty="181" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LONG_A" pos="-7.5 -8 -72.5" roty="63" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_MEDIUM_A" pos="-7.5 -6 -72.5" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-6 -8 -71" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_SMALL_A" pos="-7.5 -9 -75.5" rot="0 246 352" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-40 12 -4" roty="270" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-41 12 -2" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="-40 14 -4" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_C" pos="-43 12 0" />
+    <tile name="FOREST_GREEN_HER_FILL_BAGS_PILE_C" pos="-33 4 -1" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="30.5 4 -44.5" roty="18" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="31.5 4 -52.5" roty="295" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="-25.5 -8 -36.5" roty="31" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="-22.5 -8 -26.5" roty="168" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="-19.5 4 -17.5" roty="249.07" />
+    <tile name="FOREST_GREEN_HER_FILL_CRANE_LARGE_A" pos="-28.5 0 -59.5" rot="0 180.02 0" />
+    <tile name="FOREST_GREEN_HER_FILL_HANGING_ROCK_SACK_B" pos="24.5 -2 -49.5" />
+    <tile name="FOREST_GREEN_HER_FILL_WATCHTOWER_A" pos="-26 -8 -22" />
+    <tile name="FOREST_GREEN_HER_ROAMING_BARREL_01" pos="-14.5 4 -16.5" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-1 -1 -19" roty="90" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_B_BLEND" pos="-1 -19 -19" roty="90" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-5 0 -11" roty="180" />
+    <tile name="FOREST_GREEN_HER_FILL_MINE_COLUMN_WOODEN_A_BLEND" pos="-5 -16 -11" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="-51 0 -103" roty="343" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="-31 0 -105" roty="191" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_INNERCORNER_A" pos="-65 0 105" />
@@ -534,7 +649,7 @@
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_RIGHT" pos="9 12 -49" />
     <tile name="FOREST_GREEN_HER_VERYLOW_CLUSTER_01" pos="28 -12 27" roty="90" scale="0.7500005 0.75 0.7500005" />
     <tile name="FOREST_GREEN_HER_VERYLOW_FLOOR_10_DIAGONAL_RIGHT_A" pos="-19 -8 -57" roty="90" />
-    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-30 3 -44" roty="48" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-30 3 -48" roty="48" />
     <tile name="FOREST_GREEN_HER_VERYLOW_FLOOR_10_DIAGONAL_RIGHT_A" pos="-10 -8 -67" roty="90" />
     <tile name="FOREST_GREEN_HER_VERYLOW_POD_TRI_A" pos="-12 -8 -65" roty="180" />
     <tile name="FOREST_GREEN_HER_VERYLOW_POD_TRI_A" pos="-20 -8 -57" roty="90" />
@@ -648,6 +763,54 @@
     <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="-7 0 -21" />
     <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-22 14 5" roty="223.55" />
     <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-24 5 -1" roty="224" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-12 -16 -31" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-32 -16 -31" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_10_A" pos="-47 -16 -31" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_CURVE_RAMP_26_LEFT" pos="-57 -20 -38.5" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_CURVE_RAMP_26_LEFT" pos="-47 -24 -38.5" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_RIGHT" pos="-62 -28 -26" roty="90" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-11 -16 -29" roty="43.98" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-26 -16 -29" roty="44" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-41 -16 -30" roty="44" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-61 -18 -37" roty="44" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-52 -22 -44" roty="44" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-53 0 -30" roty="317.51" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-53 5 -44" roty="318" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-64 17 -31" roty="352.69" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_RIGHT" pos="-13 -12 -49" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_LEFT" pos="-33 -16 -59" roty="270" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_LEFT" pos="-33 -20 -79" roty="180" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-35 -15 -59" rot="0 269.28 0" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-38 -15 -74" rot="0 218.24 0" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-4 12 -55" roty="120" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_RIGHT" pos="9 -8 -49" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_LEFT" pos="-11 -12 -59" roty="270" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-4 -8 -55" roty="120" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="9 -8 -51" roty="92" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_RIGHT" pos="21 0 -60" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_STRAIGHT_4M_10_A" pos="26 4 -45" roty="90" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_LEFT" pos="1 -4 -70" roty="270" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="18 0 -65" roty="120" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="21 -20 -62" roty="92" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="26 4 -52" roty="66.63" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-12 0 -21" roty="134.11" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_SWITCH_END" pos="-26 4 -25" roty="90" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-26 0 -55" roty="90" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_STRAIGHT_4M_10_A" pos="-26 0 -40" roty="90" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-26 1 -59" roty="44.22" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_RAMP_ROUND_20_LEFT" pos="-21 -4 -75" roty="180" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-11 8 -80" roty="71.1" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="-6 -4 -80" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="-4 -4 -85" roty="270" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="4 4 -84" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="5 0 -75" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="34 24 -14" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_DEADEND_B" pos="45 20 -20" roty="180" />
+    <tile name="FOREST_GREEN_HER_WALKWAYS_POD_QUAD_A" pos="-24 8 25" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-11 16 27" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-31 16 27" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-11 12 21" roty="180" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="-31 12 21" roty="180" />
     <tile name="FOREST_GREEN_HER_POINT_LIGHT_DNG_MINE_STANDARD_A" pos="5.5 20 -8.5">
       <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
@@ -660,5 +823,6 @@
     <tile name="FOREST_GREEN_HER_POINT_LIGHT_DNG_MINE_STANDARD_A" pos="-43.97 4 -73.5">
       <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
+    <tile name="FOREST_GREEN_HER_THREAT_INDICATOR_GROUND" pos="5 16 -15" />
   </tiles>
 </template>

@@ -1,8 +1,18 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_HIGHLIGHT_RARE_STRAIGHT_CrystalGrotto_01.unity" unityguid="599574c89ac0b0e42b54269b30716eca" editorBoundsMin="-80 -80" editorBoundsMax="80 80" colBoundsMin="-80 -81" colBoundsMax="80 82">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="">
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_05">
+      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOOKCHEST_RARE" pos="-53.5 0 15.5" roty="266">
+        <lootchest lootchesttype="KEEPER_SOLO_BOOKCHEST_RARE" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_06">
       <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOOKCHEST_RARE" pos="-53.5 0 15.5" roty="266">
         <lootchest lootchesttype="KEEPER_BOOKCHEST_RARE" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_12">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="36 0 12">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -17,7 +27,7 @@
       <layer id="Layer_11" name="Cave_Ocean" />
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="Hard_01">
+      <layer id="Layer_03" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BOSS_HIGHLIGHT" pos="-46.85 0 15.31" roty="86">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BOSS_HIGHLIGHT" />
         </tile>
@@ -32,12 +42,6 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_SNIPER" pos="13.1 0 43.36" roty="179.83">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_SNIPER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="38.44 0 13.4" roty="152.91">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="37.96 0 8.87" roty="71">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="56.41 0 34.51" roty="340">
           <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_DRUID">
@@ -85,19 +89,8 @@
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="21.33 0 -24.86" roty="15">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="-12.04 0 25.73" roty="224">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_GIANT">
-            <path>
-              <waypoint pos="-11.45118 25.96704" idle="3" pace="WALK" />
-              <waypoint pos="-4.192442 32.76232" idle="0" pace="WALK" />
-              <waypoint pos="3.715937 34.68961" idle="0" pace="WALK" />
-              <waypoint pos="7.863754 38.53854" idle="0" pace="WALK" />
-              <waypoint pos="8.79932 39.63691" idle="3" pace="WALK" />
-              <waypoint pos="7.863754 38.53854" idle="0" pace="WALK" />
-              <waypoint pos="3.715937 34.68961" idle="0" pace="WALK" />
-              <waypoint pos="-4.192442 32.76232" idle="0" pace="WALK" />
-            </path>
-          </mobspawnpoint>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="38.44 0 14.6" roty="153">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_STUMP_VETERAN" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="-16.1 0 18.2" rot="0 60.78 0">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
@@ -111,11 +104,100 @@
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="34.73 0 49.16" roty="77">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_EARTHCHILD" pos="-12.04 0 25.73" roty="224">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_EARTHCHILD_VETERAN">
+            <path>
+              <waypoint pos="-11.45118 25.96704" idle="3" pace="WALK" />
+              <waypoint pos="-4.192442 32.76232" idle="0" pace="WALK" />
+              <waypoint pos="3.715937 34.68961" idle="0" pace="WALK" />
+              <waypoint pos="7.863754 38.53854" idle="0" pace="WALK" />
+              <waypoint pos="8.79932 39.63691" idle="3" pace="WALK" />
+              <waypoint pos="7.863754 38.53854" idle="0" pace="WALK" />
+              <waypoint pos="3.715937 34.68961" idle="0" pace="WALK" />
+              <waypoint pos="-4.192442 32.76232" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="37.96 0 7.77" roty="71">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_STUMP_VETERAN" />
+        </tile>
+      </layer>
+      <layer id="Layer_07" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="37.96 0 7.77" roty="71">
+          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="13.1 0 43.36" roty="179.83">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="37.99 0 -29.06" roty="257.98">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="-8.03 0 17.78" roty="314">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
+            <path>
+              <waypoint pos="-7.788627 17.19614" idle="3" pace="WALK" />
+              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
+              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
+              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
+              <waypoint pos="6.603164 -27.80134" idle="3" pace="WALK" />
+              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
+              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
+              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="37.08 0 44.96" roty="45">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_GIANT" pos="32.65 0 -31.36" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_GIANT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="45.14 0 13.02" roty="63">
+          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="2.91 0 -29.61" roty="77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="14.74 0.87 35.54">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="38.02 0 -34.77" roty="303">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="-16.1 0 18.2" rot="0 60.78 0">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BOSS_HIGHLIGHT" pos="-46.85 0 15.31" roty="86">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BOSS_HIGHLIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="34.73 0 49.16" roty="77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="-17.46 0 21.72" roty="82">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
       </layer>
     </layergroup>
-    <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOOKCHEST_RARE" pos="-53.5 0 15.5" roty="266" id="lootchest_01" type="lootchest">
-      <lootchest lootchesttype="KEEPER_BOOKCHEST_RARE" />
-    </criticaltile>
+    <layergroup name="Reward">
+      <layer id="Layer_05" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOOKCHEST_RARE" pos="-53.5 0 15.5" roty="266" id="lootchest_02" type="lootchest">
+          <lootchest lootchesttype="KEEPER_SOLO_BOOKCHEST_RARE" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_06" name="reward_veteran">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOOKCHEST_RARE" pos="-53.5 0 15.5" roty="266" id="lootchest_01" type="lootchest">
+          <lootchest lootchesttype="KEEPER_BOOKCHEST_RARE" />
+        </criticaltile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_12" name="Shrine_01">
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="36 0 12" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_13" name="Shrine_none" />
+    </layergroup>
     <tile name="FOREST_GREEN_DNG_GROUND" pos="55 0 45" roty="90" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 45" roty="90" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="55 0 55" roty="90" />
@@ -215,11 +297,11 @@
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-2.35 11.07 -31.46">
       <pointlight range="10" intensity="6" color="1 0.5483328 0.2720588" />
     </tile>
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="13.54 11.07 49.68" roty="90">
-      <pointlight range="10" intensity="6" color="1 0.5483328 0.2720588" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="14.03 5.52 45.25" roty="90">
+      <pointlight range="12" intensity="6" color="0.3161765 1 0.9717038" />
     </tile>
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="34.01 8.83 -30.49">
-      <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="34.01 7.42 -30.49">
+      <pointlight range="15" intensity="6" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="34.92 5.88 47.53">
       <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />

@@ -682,7 +682,6 @@
 		  <RareState state="3" weight="1" />
 	  </cluster>
   </RareResources>
-  <CastleFight eliteguardarrivalinmin="15" eliteguardarrivalwarninginmin="14" castlelordarrivalinmin="15" castlelordarrivalwarninginmin="14" castlephasetimeoutinmin="30" castlephasetimeoutwarninginmin="25"/>
   <TravelSettings basetravelcost="0">
         <TierModifier tier="1" modifier="20.0" />
         <TierModifier tier="2" modifier="20.0" />
@@ -1160,7 +1159,7 @@
   <UserTaxValues>
     <Guild default="0.05" minimum="0" maximum="1.00"/>
     <Cluster default="0.05" minimum="0" maximum="0.05"/>
-    <City default="0.25" minimum="0" maximum="0.25"/>
+    <City default="0.1" minimum="0" maximum="0.1"/>
   </UserTaxValues>
   <!-- ********************************************************************************************************************** -->
   <!--
@@ -1288,44 +1287,67 @@
   <SilverDropSettings silver="COINS" silverpremium="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5"/>
   <buildingrenovationsettings downgradedelay="86400" destroydelay="86400" ownerdowngradedestroydelay="60" lootprotection="86400" lootlifetime="172800" />
   <constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400"/>
+  <ExitSettings channeledexitusagetime="2" defaultexitusagedistance="5"/>
   <Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout ="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectspell="EXPEDITIONSPAWN" penaltyduration="900">
     <ExpeditionBonusRewardTimer>
     <ResetTimer utctime="10:00"/>
     </ExpeditionBonusRewardTimer>
   </Expedition>
-	<GvgSeason>
-		<!-- Castles are worth 3x a territory in the equivalent area per day 
-				 the first cycle always starts when scoring starts for the specific cluster-->
-		<castlescoring minutespercycle="1440">
-		  <pointsvalues clustertype="OPENPVP_BLACK_1">
-			  <clustertier tier="6" pointspercycle="360" />
-		  </pointsvalues>
-		  <pointsvalues clustertype="OPENPVP_BLACK_2">
-			  <clustertier tier="7" pointspercycle="504" />
-		  </pointsvalues>
-		  <pointsvalues clustertype="OPENPVP_BLACK_3">
-			  <clustertier tier="8" pointspercycle="648" />
-		  </pointsvalues>
-		</castlescoring>   
-  </GvgSeason>
   <PersonalStatement characterlimit="270" />
   <FeaturedFeature utcdate="2017-10-17T10:15:00" />
-  <GuildIslandVault size="500" maxtabs="15" weightlimit="1000000.0">
-    <TabCost count="0" cost="0" />
-    <TabCost count="1" cost="200000" />
-    <TabCost count="2" cost="500000" />
-    <TabCost count="3" cost="1000000" />
-	<TabCost count="4" cost="2000000" />
-    <TabCost count="5" cost="4000000" />
-    <TabCost count="6" cost="6000000" />
-    <TabCost count="7" cost="7500000" />
-	<TabCost count="8" cost="9000000" />
-    <TabCost count="9" cost="10000000" />
-    <TabCost count="10" cost="10000000" />
-	<TabCost count="11" cost="10000000" />
-    <TabCost count="12" cost="10000000" />
-    <TabCost count="13" cost="10000000" />
-    <TabCost count="14" cost="10000000" />
+  <SiegeCampBank size="64" weightlimit="10000.0">
+    <DefaultTab Name="@SIEGECAMP_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
+  </SiegeCampBank>
+  <CityBank size="128" weightlimit="100000.0">
+    <DefaultTab Name="@BUILDINGS_T1_BANK" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
+    <TabCost cost="100000" />
+    <TabCost cost="150000" />
+    <TabCost cost="250000" />
+    <TabCost cost="400000" />
+    <TabCost cost="600000" />
+    <TabCost cost="900000" />
+    <TabCost cost="1200000" />
+    <TabCost cost="1500000" />
+    <TabCost cost="1800000" />
+    <TabCost cost="2000000" />
+    <TabCost cost="2200000" />
+    <TabCost cost="2400000" />
+    <TabCost cost="2600000" />
+    <TabCost cost="2800000" />
+  </CityBank>
+  <GuildIslandBank size="128" weightlimit="100000.0">
+    <DefaultTab Name="@BUILDINGS_T1_BANK" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
+    <TabCost cost="100000" />
+    <TabCost cost="150000" />
+    <TabCost cost="250000" />
+    <TabCost cost="400000" />
+    <TabCost cost="600000" />
+    <TabCost cost="900000" />
+    <TabCost cost="1200000" />
+    <TabCost cost="1500000" />
+    <TabCost cost="1800000" />
+    <TabCost cost="2000000" />
+    <TabCost cost="2200000" />
+    <TabCost cost="2400000" />
+    <TabCost cost="2600000" />
+    <TabCost cost="2800000" />
+  </GuildIslandBank>
+  <GuildIslandVault size="500" weightlimit="1000000.0">
+    <TabCost cost="0" />
+    <TabCost cost="250000" />
+    <TabCost cost="500000" />
+    <TabCost cost="750000" />
+    <TabCost cost="1250000" />
+    <TabCost cost="2500000" />
+    <TabCost cost="4000000" />
+    <TabCost cost="6000000" />
+    <TabCost cost="8000000" />
+    <TabCost cost="9500000" />
+    <TabCost cost="10000000" />
+    <TabCost cost="10000000" />
+    <TabCost cost="10000000" />
+    <TabCost cost="10000000" />
+    <TabCost cost="10000000" />
   </GuildIslandVault>
   <OverCharge
     bonus="100"

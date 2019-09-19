@@ -1,8 +1,18 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/HERETIC/HER_MINE_HIGHLIGHT_UNCOMMON_STRAIGHT_KeeperBreakIn_01.unity" unityguid="c1c47afeec9b07a4ba312ea12fb2d68c" editorBoundsMin="-80 -40" editorBoundsMax="80 40" colBoundsMin="-80 -40" colBoundsMax="80 40">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="">
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_02">
+      <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_UNCOMMON" pos="-30.5 0 -9.5" roty="230">
+        <lootchest lootchesttype="HERETIC_SOLO_CHEST_UNCOMMON" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_04">
       <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_UNCOMMON" pos="-30.5 0 -9.5" roty="230">
         <lootchest lootchesttype="HERETIC_CHEST_UNCOMMON" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_12">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="44 0 0">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -21,14 +31,52 @@
       <layer id="Layer_11" name="env_out_Swamp" />
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="mob_hard">
-        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_ARCHER" pos="18 0 -8.25" roty="296.63">
+      <layer id="Layer_01" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_ARCHER" pos="18 0 -8.25" roty="297">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="-17.09 0 -7.44" roty="70">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="-17.06 0 -0.25" roty="103">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_DUALCROSSBOW" pos="21.02 0 -1.46" roty="250">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_DUALCROSSBOW" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="42.36 0.02 -21.21" rot="3 108 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="44.97 0.02 -24.51" rot="3 44 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="34.13 0 29.79" roty="273">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_EXPLOSIVE_BARREL" pos="17.71 0 0.19" roty="131">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_EXPLOSIVE_BARREL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_EXPLOSIVE_BARREL" pos="-21.72 0 -10.42" roty="51">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_EXPLOSIVE_BARREL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_EXPLOSIVE_BARREL" pos="-22.07 0 1.78" roty="117">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_EXPLOSIVE_BARREL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_TANK" pos="-18.38 0 -3.76" roty="103">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_TANK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINIBOSS" pos="-29.38 0 -3.55" roty="96">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINIBOSS" />
+        </tile>
+      </layer>
+      <layer id="Layer_03" name="mob_veteran_hard">
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_ARCHER" pos="18 0 -8.25" roty="297">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_ARCHER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_ARCHER" pos="21.4 0 1.43" roty="256">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_ARCHER" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINER" pos="43.99 0.02 -18.99" rot="3 107.71 9">
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINER" pos="42.36 0.02 -21.21" rot="3 107.71 9">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_MINER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_SCAVENGER" pos="34.13 0 29.79" roty="272.87">
@@ -40,7 +88,7 @@
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_DUALCROSSBOW" pos="21.02 0 -1.46" roty="250">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_DUALCROSSBOW" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINER" pos="46.6 0.02 -22.29" rot="3 43.53 9">
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINER" pos="44.97 0.02 -24.51" rot="3 43.53 9">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_MINER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_DUALCROSSBOW" pos="-18.89 0 -7.44" roty="283">
@@ -52,6 +100,49 @@
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINIBOSS" pos="-15.91 0 -4.18" roty="283">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_MINIBOSS" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_EXPLOSIVE_BARREL" pos="17.14 0 1.71" roty="193">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_EXPLOSIVE_BARREL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_EXPLOSIVE_BARREL" pos="-21.87 0 2.61" roty="112.34">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_EXPLOSIVE_BARREL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_EXPLOSIVE_BARREL" pos="-22.96 0 -10.38" roty="56.04">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_EXPLOSIVE_BARREL" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="REWARD">
+      <layer id="Layer_02" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_UNCOMMON" pos="-30.5 0 -9.5" roty="230" id="lootchest_02" type="lootchest">
+          <lootchest lootchesttype="HERETIC_SOLO_CHEST_UNCOMMON" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_04" name="reward_veteran">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_UNCOMMON" pos="-30.5 0 -9.5" roty="230" id="lootchest_01" type="lootchest">
+          <lootchest lootchesttype="HERETIC_CHEST_UNCOMMON" />
+        </criticaltile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_12" name="Shrine_01">
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_A" pos="35 0 5" roty="90" />
+        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="45 0 -8" roty="239" />
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_ENTRANCE_B" pos="52 0 0" />
+        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="45 0 8" roty="114.31" />
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="35 0 -3" roty="90" />
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="41.23 0 -0.2" roty="250">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MAGE" />
+        </tile>
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_TROLLEY_B" pos="35 0 1" roty="270" />
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="44 0 0" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_13" name="Shrine_none">
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_ENTRANCE_B" pos="43 0 0" />
+      </layer>
+      <layer id="Layer_14" name="Shrine_veteran_block">
+        <tile name="FOREST_GREEN_HER_MINE_TRAIN_ENTRANCE_B" pos="43 0 0" />
       </layer>
     </layergroup>
     <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -35" />
@@ -186,7 +277,7 @@
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-41 0 17" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="19 0 25" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="54 0 14" roty="270" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="55 0 -12" roty="180" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="55 0 -13" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="-6 0 -23" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="-7 0 24" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="-43 0 -19" />
@@ -197,8 +288,8 @@
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="-50 0 8" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="-50 0 -9" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="15 0 16" roty="90" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_COCOON_A" pos="45 0 0" roty="180" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_A" pos="-38 0 10" roty="270" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_COCOON_A" pos="49 0 0" roty="180" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_A" pos="-39 0 4" roty="270" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_A" pos="-44 0 -21" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_A" pos="-21 0 -23" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_A" pos="-21 0 19" />
@@ -233,7 +324,7 @@
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="52 0 16" rot="357.07 200.34 351.87" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="23 0 -24" roty="343" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="23 0 18" roty="38" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="44 0 -11" roty="149" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="44 0 -12" roty="149" />
     <tile name="FOREST_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="43 -8 -34.5" rot="47 82 20" />
     <tile name="FOREST_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="40 -12 -36.5" rot="29 59 346" />
     <tile name="FOREST_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="43.5 -17 -15" rot="5 34 4" />
@@ -360,10 +451,30 @@
     <tile name="FOREST_GREEN_HER_FILL_MINE_WALL_10_A_DIAGONAL" pos="42 4 12" rot="345 349 340" scale="1 1 1.084641" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_WALL_10_A_DIAGONAL" pos="46 3 -17" roty="270" scale="1 1 1.08464" />
     <tile name="FOREST_GREEN_HER_FILL_MINE_WALL_10_A_NOCOL" pos="51 10 -12.5" rot="0 134 63" scale="1 1 1.08464" />
-    <tile name="FOREST_GREEN_HER_MINE_TRAIN_ENTRANCE_B" pos="43 0 0" />
-    <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_UNCOMMON" pos="-30.5 0 -9.5" roty="230" id="lootchest_01" type="lootchest">
-      <lootchest lootchesttype="HERETIC_CHEST_UNCOMMON" />
-    </criticaltile>
+    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="39 0 -6" roty="180" />
+    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="13 0 -1" roty="180" />
+    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-18 0 8" roty="90" />
+    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="38 0 7" />
+    <tile name="FOREST_GREEN_DNG_KPR_ROOT_CEILING_A" pos="-21.5 34 -19.5" />
+    <tile name="FOREST_GREEN_DNG_KPR_ROOT_CEILING_C" pos="-23.5 40 7.5" roty="180" />
+    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-31.5 1 2.5" roty="270" />
+    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-39.5 1 -4.5" roty="270" />
+    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-57.5 1 -7.5" roty="270" />
+    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-63.5 1 -13.5" roty="180" />
+    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-60.5 1 6.5" roty="180" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-13.5 0 8.5" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-28.5 0 4.5" roty="270" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-35.5 0 -8.5" roty="180" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-9.5 0 -15.5" roty="90" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-18.5 0 -18.5" roty="90" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="19.5 0 -14.5" roty="90" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="20.5 0 7.5" roty="270" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-3.5 0 0.5" roty="180" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-54.5 0 0.5" />
+    <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="-64.5 0 -5.5" roty="270" />
+    <tile name="FOREST_GREEN_HER_MINE_TRAIN_STRAIGHT_20" pos="50 0 0" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="44 0 -7" roty="270" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="46 0 7" roty="90" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_B" pos="-8 0 7" roty="270" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A" pos="-6 0 4" roty="270" />
   </tiles>

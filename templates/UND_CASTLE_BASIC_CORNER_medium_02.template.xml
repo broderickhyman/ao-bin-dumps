@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_BASIC_CORNER_medium_02.unity" unityguid="81cf396856b9b9741a3bb2cf86fedf97" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-49 -48" colBoundsMax="45 42">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_10">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="-5 0 0">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="BACKDROP">
       <layer id="Layer_01" name="Forest">
@@ -564,26 +570,26 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOUL" pos="-5.14 0 -1.33" roty="69">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOUL" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="3.11 0 8.85" roty="58">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="8 0 -1.8" roty="18">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="1.23 0 11.81" roty="65">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="4.93 0 0.15" roty="41">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="2.48 0 0.2" roty="221">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="13.88 0 1.61" roty="29">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOUL" pos="-3.82 0 30.15" roty="69">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="2.48 0 0.2" roty="221">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="1.23 0 11.81" roty="65">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="4.93 0 0.15" roty="41">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="8 0 -1.8" roty="18">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="13.88 0 1.61" roty="29">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="3.11 0 8.85" roty="58">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
       </layer>
       <layer id="Layer_03" name="Standard">
@@ -609,16 +615,152 @@
           <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_PULLER" />
         </tile>
       </layer>
-    </layergroup>
-    <layergroup name="SOLO-ENCOUNTER">
-      <layer id="Layer_04" name="Solo">
-        <tile name="SpawnPoint_RANDOM_ROAMING_MINIBOSS_FOR_TEST" pos="-0.19 0 -1.26" roty="48">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_MINIBOSS_FOR_TEST" />
+      <layer id="Layer_16" name="mob_veteran_Hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="-1.38 0 33.6" roty="297">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_STANDARD_FOR_TEST" pos="28.3 0 0.38" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="ROAMING_STANDARD_FOR_TEST" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="5.84 0 -6.96" roty="271">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="2.47 0 28.6" roty="27">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="-1.31 0 8.68" roty="216">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_MAGE">
+            <path>
+              <waypoint pos="-1.558612 8.51827" idle="1" pace="WALK" />
+              <waypoint pos="-2.057908 1.800459" idle="0" pace="WALK" />
+              <waypoint pos="-2.784157 1.255774" idle="3" pace="WALK" />
+              <waypoint pos="-1.694783 1.391944" idle="0" pace="WALK" />
+              <waypoint pos="5.387206 -0.8334198" idle="0" pace="WALK" />
+              <waypoint pos="5.617548 -2.830153" idle="3" pace="WALK" />
+              <waypoint pos="6.432724 -0.9255562" idle="0" pace="WALK" />
+              <waypoint pos="12.00868 0.4372559" idle="1" pace="WALK" />
+              <waypoint pos="6.432724 -0.9255562" idle="0" pace="WALK" />
+              <waypoint pos="5.617548 -2.830153" idle="3" pace="WALK" />
+              <waypoint pos="5.387206 -0.8334198" idle="0" pace="WALK" />
+              <waypoint pos="-1.694783 1.391944" idle="0" pace="WALK" />
+              <waypoint pos="-2.784157 1.255774" idle="3" pace="WALK" />
+              <waypoint pos="-2.057908 1.800459" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
+      <layer id="Layer_17" name="mob_veteran_Standard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="8.65 0 1.96" roty="241">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="-2.48 0 -0.15" roty="61">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="0.31 0 29.68" roty="27">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_MAGE" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_SOLO">
+      <layer id="Layer_04" name="mob_solo_Hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="-1.31 0 8.68" roty="216">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_MAGE">
+            <path>
+              <waypoint pos="-1.558612 8.51827" idle="1" pace="WALK" />
+              <waypoint pos="-2.057908 1.800459" idle="0" pace="WALK" />
+              <waypoint pos="-2.784157 1.255774" idle="3" pace="WALK" />
+              <waypoint pos="-1.694783 1.391944" idle="0" pace="WALK" />
+              <waypoint pos="5.387206 -0.8334198" idle="0" pace="WALK" />
+              <waypoint pos="5.617548 -2.830153" idle="3" pace="WALK" />
+              <waypoint pos="6.432724 -0.9255562" idle="0" pace="WALK" />
+              <waypoint pos="12.00868 0.4372559" idle="1" pace="WALK" />
+              <waypoint pos="6.432724 -0.9255562" idle="0" pace="WALK" />
+              <waypoint pos="5.617548 -2.830153" idle="3" pace="WALK" />
+              <waypoint pos="5.387206 -0.8334198" idle="0" pace="WALK" />
+              <waypoint pos="-1.694783 1.391944" idle="0" pace="WALK" />
+              <waypoint pos="-2.784157 1.255774" idle="3" pace="WALK" />
+              <waypoint pos="-2.057908 1.800459" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STATUE" pos="5.84 0 -6.96" roty="271">
+          <mobspawnpoint spawnbehavior="UNDEAD_STATUE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="-1.38 0 33.6" roty="297">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="2.47 0 28.6" roty="27">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+      </layer>
+      <layer id="Layer_05" name="mob_solo_light_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="2.48 0 0.2" roty="221">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="-0.97 0 14.99" roty="65">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOUL" pos="-3.82 0 30.15" roty="69">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="8.11 0 -1.75" roty="41">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="8.04 0 2.44" roty="18">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="21.64 0 0.36" roty="29">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOUL" pos="-4.3 0 -0.87" roty="69">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="0.91 0 12.03" roty="58">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+      </layer>
+      <layer id="Layer_06" name="mob_solo_Standard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="3.72 0 7.18" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="20.91 0 -2.03" roty="21">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="7.09 0 3.57" roty="268">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="-1.38 0 33.6" roty="297">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_PULLER" pos="-2.18 0 -1.03" roty="61">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_PULLER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="2.47 0 28.6" roty="27">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="23.98 0 -1.68" roty="358">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="23.18 0 1.95" roty="178">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_CURSED" />
+        </tile>
+      </layer>
+      <layer id="Layer_07" name="mob_solo_Standard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="0.31 0 29.68" roty="27">
+          <mobspawnpoint spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="-2.48 0 -0.15" roty="61">
+          <mobspawnpoint spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="8.65 0 1.96" roty="241">
+          <mobspawnpoint spawnbehavior="UNDEAD_BAT" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_10" name="Shrine_01">
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="-5 0 0" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_15" name="Shrine_none" />
     </layergroup>
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_LARGE_LOWCUT_A" pos="-9 -15 -19" roty="180" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_WINDOW_A" pos="5 0 25" />

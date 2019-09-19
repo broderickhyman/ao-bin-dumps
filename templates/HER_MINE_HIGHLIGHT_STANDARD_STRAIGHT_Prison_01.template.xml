@@ -1,6 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/HERETIC/HER_MINE_HIGHLIGHT_STANDARD_STRAIGHT_Prison_01.unity" unityguid="91492ebed667a324db50520ae7bb25df" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-45 -47" colBoundsMax="40 42">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="">
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_02">
+      <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_STANDARD" pos="-12.5 0 11.5" roty="12">
+        <lootchest lootchesttype="HERETIC_SOLO_CHEST_STANDARD" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_04">
       <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_STANDARD" pos="-12.5 0 11.5" roty="12">
         <lootchest lootchesttype="HERETIC_CHEST_STANDARD" />
       </tile>
@@ -17,7 +22,50 @@
       <layer id="Layer_11" name="env_out_Swamp" />
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="mob_hard_01">
+      <layer id="Layer_01" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="14.94 0.02 16.3" rot="3 0.93 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_BALLISTA" pos="16.33 0.02 -19.32" rot="3 302 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_BALLISTA" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_RAT" pos="13.82 0 -15.05" roty="154">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_TANK" pos="0.59 0.27 3.86" roty="99">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_TANK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="3.82 0.27 -35.32" roty="148">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="8.34 0 21.25" roty="72">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINIBOSS" pos="-14.84 0.27 4.05" roty="117">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MINER" pos="-2.48 0.27 -31.09" roty="286.14">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_MINER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_SCAVENGER" pos="-5.27 0 -35.42" rot="3 281 3">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_SCAVENGER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_BALLISTA" pos="10.15 0.02 18.22" rot="3 212 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_BALLISTA" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_TANK" pos="0.6 0.27 1.08" roty="79">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_TANK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_HERETIC_SOLO_MAGE" pos="9.91 0 -15.62" roty="9">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="HERETIC_MAGE">
+            <path>
+              <waypoint pos="9.611462 -15.56361" idle="3" pace="WALK" />
+              <waypoint pos="9.329117 13.37788" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_03" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_HERETIC_VETERAN_MINER" pos="8.34 0 21.25" roty="72">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_VETERAN_MINER" />
         </tile>
@@ -61,11 +109,20 @@
         </tile>
       </layer>
     </layergroup>
+    <layergroup name="REWARD">
+      <layer id="Layer_02" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_STANDARD" pos="-12.5 0 11.5" roty="12" id="lootchest_02" type="lootchest">
+          <lootchest lootchesttype="HERETIC_SOLO_CHEST_STANDARD" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_04" name="reward_veteran">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_STANDARD" pos="-12.5 0 11.5" roty="12" id="lootchest_01" type="lootchest">
+          <lootchest lootchesttype="HERETIC_CHEST_STANDARD" />
+        </criticaltile>
+      </layer>
+    </layergroup>
     <tile name="FOREST_GREEN_HER_POINT_LIGHT_DNG_MINE" pos="0.5 5 2.5" />
     <tile name="FOREST_GREEN_HER_POINT_LIGHT_DNG_MINE" pos="-13.5 3 8.5" />
-    <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_STANDARD" pos="-12.5 0 11.5" roty="12" id="lootchest_01" type="lootchest">
-      <lootchest lootchesttype="HERETIC_CHEST_STANDARD" />
-    </criticaltile>
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="-8 0 -28" roty="270" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="17 0 23" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="-29 0 5" roty="90" />
@@ -228,6 +285,8 @@
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="17 0 -4" roty="18" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="18 0 3" roty="233.32" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_LARGE_A" pos="19 0 -3" roty="288" />
+    <tile name="FOREST_GREEN_HER_FILL_BANNER_A" pos="2.5 1 -5.5" roty="340.76" />
+    <tile name="FOREST_GREEN_HER_FILL_BANNER_A" pos="-0.5 1 8.5" roty="302" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 0 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 35" />

@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <randomdungeons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="randomdungeons.xsd">
 
-  <!--
-  maxlifetimeseconds:         time until the dungeon is closed even if players are inside
-  lifetimeafteremptyseconds:  time until dungeon is closed, but it will pause when players are found in the dungeon
-  -->
+  <!--  maxlifetimeseconds:         time until the dungeon is closed even if players are inside -->
+  <!--  lifetimeafteremptyseconds:  time until dungeon is closed, but it will pause when players are found in the dungeon -->
   <DungeonLifeTimes maxlifetimeseconds="87000" lifetimeafteremptyseconds="300" />
 
   <DifficultyLevels>
@@ -52,6 +50,9 @@
     <Faction name="KEEPER" defaultname="Hidden Caverns">
       <Subset id="tribe">
         <displayname name="Hidden Caverns" />
+      </Subset>
+      <Subset id="easter">
+        <displayname name="Hidden Easter Dungeon" />
       </Subset>
     </Faction>
     <Faction name="MORGANA" defaultname="Hidden Sanctum">
@@ -144,117 +145,509 @@
   <RandomExitDistribution>
     <Continent name="None">		
 	  <!-- for Debug Cluster -->
-      <ClusterTier tier="1" maxfillratio="0.5">
-        <RandomExit name="T4_MORGANA" weight="1" />
-        <RandomExit name="T5_MORGANA" weight="1" />
-        <RandomExit name="T6_MORGANA" weight="1" />
-        <RandomExit name="T4_PORTAL" weight="1" />
-        <!--<RandomExit name="DEBUG" weight="1" />-->
-      </ClusterTier>
+      <Subtype name="SOLO">
+        <ClusterTier tier="1" maxfillratio="1">
+          <RandomExit name="T6_KEEPER_SOLO" weight="1" />
+        </ClusterTier>
+      </Subtype>
+      <Subtype name="VETERAN">
+        <ClusterTier tier="1" maxfillratio="0.7">
+          <RandomExit name="T4_MORGANA" weight="0" />
+          <RandomExit name="T5_MORGANA" weight="0" />
+          <RandomExit name="T6_MORGANA" weight="0" />
+          <RandomExit name="T4_PORTAL" weight="0" />
+          <!--<RandomExit name="DEBUG" weight="0" />-->
+        </ClusterTier>
+      </Subtype>
 	  </Continent>
 	  <Continent name="Royal">
-      <ClusterTier tier="3" maxfillratio="0.5">
-        <RandomExit name="T4_HERETIC" weight="1" />
-        <RandomExit name="T4_UNDEAD" weight="1" />
-        <RandomExit name="T4_PORTAL" weight="1" />
-        <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="4" maxfillratio="0.5">
-        <RandomExit name="T4_HERETIC" weight="1" />
-        <RandomExit name="T4_UNDEAD" weight="1" />
-        <RandomExit name="T4_KEEPER" weight="1" />
-        <RandomExit name="T4_MORGANA" weight="1" />
-        <RandomExit name="T4_PORTAL" weight="1" />
-        <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="5" maxfillratio="0.5">
-        <RandomExit name="T5_HERETIC" weight="1" />
-        <RandomExit name="T5_UNDEAD" weight="1" />
-        <RandomExit name="T5_KEEPER" weight="1" />
-        <RandomExit name="T5_MORGANA" weight="1" />
-        <RandomExit name="T5_PORTAL" weight="1" />
-        <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="6" maxfillratio="0.4">
-        <RandomExit name="T6_HERETIC" weight="1" />
-        <RandomExit name="T6_UNDEAD" weight="1" />
-        <RandomExit name="T6_KEEPER" weight="1" />
-        <RandomExit name="T6_MORGANA" weight="1" />
-        <RandomExit name="T6_PORTAL" weight="1" />
-        <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="7" maxfillratio="0.3">
-        <RandomExit name="T7_HERETIC" weight="1" />
-        <RandomExit name="T7_UNDEAD" weight="1" />
-        <RandomExit name="T7_KEEPER" weight="1" />
-        <RandomExit name="T7_MORGANA" weight="1" />
-        <RandomExit name="T7_PORTAL" weight="1" />
-        <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="8" maxfillratio="0.2">
-        <RandomExit name="T8_HERETIC" weight="1" />
-        <RandomExit name="T8_UNDEAD" weight="1" />
-        <RandomExit name="T8_KEEPER" weight="1" />
-        <RandomExit name="T8_MORGANA" weight="1" />
-        <RandomExit name="T8_PORTAL" weight="1" />
-        <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
+      <Subtype name="SOLO">
+        <ClusterTier tier="3" maxfillratio="0.7">
+          <RandomExit name="T3_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="4" maxfillratio="0.7">
+          <RandomExit name="T4_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="0.7">
+          <RandomExit name="T5_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.39">
+          <RandomExit name="T6_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="0.36">
+          <RandomExit name="T7_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="0.33">
+          <RandomExit name="T8_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+      </Subtype>
+      <Subtype name="VETERAN">
+        <ClusterTier tier="3" maxfillratio="0.5">
+          <RandomExit name="T4_HERETIC" weight="1" />
+          <RandomExit name="T4_UNDEAD" weight="1" />
+          <RandomExit name="T4_PORTAL" weight="1" />
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="4" maxfillratio="0.5">
+          <RandomExit name="T4_HERETIC" weight="1" />
+          <RandomExit name="T4_UNDEAD" weight="1" />
+          <RandomExit name="T4_KEEPER" weight="1" />
+          <RandomExit name="T4_MORGANA" weight="1" />
+          <RandomExit name="T4_PORTAL" weight="1" />
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="0.5">
+          <RandomExit name="T5_HERETIC" weight="1" />
+          <RandomExit name="T5_UNDEAD" weight="1" />
+          <RandomExit name="T5_KEEPER" weight="1" />
+          <RandomExit name="T5_MORGANA" weight="1" />
+          <RandomExit name="T5_PORTAL" weight="1" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.4">
+          <RandomExit name="T6_HERETIC" weight="1" />
+          <RandomExit name="T6_UNDEAD" weight="1" />
+          <RandomExit name="T6_KEEPER" weight="1" />
+          <RandomExit name="T6_MORGANA" weight="1" />
+          <RandomExit name="T6_PORTAL" weight="1" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="0.3">
+          <RandomExit name="T7_HERETIC" weight="1" />
+          <RandomExit name="T7_UNDEAD" weight="1" />
+          <RandomExit name="T7_KEEPER" weight="1" />
+          <RandomExit name="T7_MORGANA" weight="1" />
+          <RandomExit name="T7_PORTAL" weight="1" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="0.2">
+          <RandomExit name="T8_HERETIC" weight="1" />
+          <RandomExit name="T8_UNDEAD" weight="1" />
+          <RandomExit name="T8_KEEPER" weight="1" />
+          <RandomExit name="T8_MORGANA" weight="1" />
+          <RandomExit name="T8_PORTAL" weight="1" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+      </Subtype>
     </Continent>
     <Continent name="Outlands">
-      <ClusterTier tier="3" maxfillratio="0.5">
-        <RandomExit name="T4_HERETIC" weight="1" />
-        <RandomExit name="T4_UNDEAD" weight="1" />
-        <RandomExit name="T4_KEEPER" weight="1" />
-        <RandomExit name="T4_MORGANA" weight="1" />
-        <RandomExit name="T4_PORTAL" weight="1" />
-        <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="4" maxfillratio="0.5">
-        <RandomExit name="T4_HERETIC" weight="1" />
-        <RandomExit name="T4_UNDEAD" weight="1" />
-        <RandomExit name="T4_KEEPER" weight="1" />
-        <RandomExit name="T4_MORGANA" weight="1" />
-        <RandomExit name="T4_PORTAL" weight="1" />
-        <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="5" maxfillratio="0.5">
-        <RandomExit name="T5_HERETIC" weight="1" />
-        <RandomExit name="T5_UNDEAD" weight="1" />
-        <RandomExit name="T5_KEEPER" weight="1" />
-        <RandomExit name="T5_MORGANA" weight="1" />
-        <RandomExit name="T5_PORTAL" weight="1" />
-        <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="6" maxfillratio="0.4">
-        <RandomExit name="T6_HERETIC" weight="1" />
-        <RandomExit name="T6_UNDEAD" weight="1" />
-        <RandomExit name="T6_KEEPER" weight="1" />
-        <RandomExit name="T6_MORGANA" weight="1" />
-        <RandomExit name="T6_PORTAL" weight="1" />
-        <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="7" maxfillratio="0.3">
-        <RandomExit name="T7_HERETIC" weight="1" />
-        <RandomExit name="T7_UNDEAD" weight="1" />
-        <RandomExit name="T7_KEEPER" weight="1" />
-        <RandomExit name="T7_MORGANA" weight="1" />
-        <RandomExit name="T7_PORTAL" weight="1" />
-        <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
-      <ClusterTier tier="8" maxfillratio="0.2">
-        <RandomExit name="T8_HERETIC" weight="1" />
-        <RandomExit name="T8_UNDEAD" weight="1" />
-        <RandomExit name="T8_KEEPER" weight="1" />
-        <RandomExit name="T8_MORGANA" weight="1" />
-        <RandomExit name="T8_PORTAL" weight="1" />
-        <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-      </ClusterTier>
+      <Subtype name="SOLO">
+        <ClusterTier tier="3" maxfillratio="0.45">
+          <RandomExit name="T4_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="4" maxfillratio="0.45">
+          <RandomExit name="T4_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="0.42">
+          <RandomExit name="T5_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.39">
+          <RandomExit name="T6_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="0.36">
+          <RandomExit name="T7_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="0.33">
+          <RandomExit name="T8_PORTAL_SOLO" weight="1" />
+        </ClusterTier>
+      </Subtype>
+      <Subtype name="VETERAN">
+        <ClusterTier tier="3" maxfillratio="0.5">
+          <RandomExit name="T4_HERETIC" weight="1" />
+          <RandomExit name="T4_UNDEAD" weight="1" />
+          <RandomExit name="T4_KEEPER" weight="1" />
+          <RandomExit name="T4_MORGANA" weight="1" />
+          <RandomExit name="T4_PORTAL" weight="1" />
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="4" maxfillratio="0.5">
+          <RandomExit name="T4_HERETIC" weight="1" />
+          <RandomExit name="T4_UNDEAD" weight="1" />
+          <RandomExit name="T4_KEEPER" weight="1" />
+          <RandomExit name="T4_MORGANA" weight="1" />
+          <RandomExit name="T4_PORTAL" weight="1" />
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="0.5">
+          <RandomExit name="T5_HERETIC" weight="1" />
+          <RandomExit name="T5_UNDEAD" weight="1" />
+          <RandomExit name="T5_KEEPER" weight="1" />
+          <RandomExit name="T5_MORGANA" weight="1" />
+          <RandomExit name="T5_PORTAL" weight="1" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.4">
+          <RandomExit name="T6_HERETIC" weight="1" />
+          <RandomExit name="T6_UNDEAD" weight="1" />
+          <RandomExit name="T6_KEEPER" weight="1" />
+          <RandomExit name="T6_MORGANA" weight="1" />
+          <RandomExit name="T6_PORTAL" weight="1" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="0.3">
+          <RandomExit name="T7_HERETIC" weight="1" />
+          <RandomExit name="T7_UNDEAD" weight="1" />
+          <RandomExit name="T7_KEEPER" weight="1" />
+          <RandomExit name="T7_MORGANA" weight="1" />
+          <RandomExit name="T7_PORTAL" weight="1" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="0.2">
+          <RandomExit name="T8_HERETIC" weight="1" />
+          <RandomExit name="T8_UNDEAD" weight="1" />
+          <RandomExit name="T8_KEEPER" weight="1" />
+          <RandomExit name="T8_MORGANA" weight="1" />
+          <RandomExit name="T8_PORTAL" weight="1" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+      </Subtype>
     </Continent>
   </RandomExitDistribution>
 
   <!-- Random Exit types -->
-
   <RandomExitVisualizations>
+    <!--Solo-->
+    <Visualization name="KEEPER_SOLO">
+      <biome name="Default">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="HERETIC_SOLO">
+      <biome name="Default">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="UNDEAD_SOLO">
+      <biome name="Default">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="MORGANA_SOLO">
+      <biome name="Default">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="PORTAL_SOLO">
+      <biome name="Default">        
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">     
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">     
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">     
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">     
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">     
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <!--Veteran-->
     <Visualization name="KEEPER">
       <biome name="Default">
         <subbiome name="Green">
@@ -604,7 +997,217 @@
       </RandomDungeonGenerators>
       <Visualization ref="KEEPER"/>
     </RandomExit>
+
+    <!--  ############  -->
+    <!-- ###  Solo  ### -->
+    <!--  ############  -->
+
+    <!--Heretic-->
+    <RandomExit name="T4_HERETIC_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_HERETIC_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_HERETIC_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_HERETIC_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_HERETIC_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <!--Undead-->
+    <RandomExit name="T4_UNDEAD_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_UNDEAD_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_UNDEAD_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_UNDEAD_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_UNDEAD_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <!--Keeper-->
+    <RandomExit name="T4_KEEPER_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_KEEPER_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_KEEPER_SOLO" activationtime="120" cooldown="0" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_KEEPER_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_KEEPER_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <!--Morgana-->
+    <RandomExit name="T4_MORGANA_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_MORGANA_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_MORGANA_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_MORGANA_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_MORGANA_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <!--Portal-->
+    <RandomExit name="T3_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
     
+    <RandomExit name="T4_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_PORTAL_SOLO" activationtime="300" cooldown="120" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+    
+    <!--  #############  -->
+    <!-- ### Veteran ### -->
+    <!--  #############  -->
+    <!--Heretic-->
     <RandomExit name="T4_HERETIC" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON" tier="4" />
@@ -640,6 +1243,7 @@
       <Visualization ref="HERETIC"/>
     </RandomExit>
 
+    <!--Undead-->
     <RandomExit name="T4_UNDEAD" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON" tier="4" />
@@ -675,6 +1279,7 @@
       <Visualization ref="UNDEAD"/>
     </RandomExit>
 
+    <!--Keeper-->
     <RandomExit name="T4_KEEPER" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON" tier="4" />
@@ -709,7 +1314,8 @@
       </RandomDungeonGenerators>
       <Visualization ref="KEEPER"/>
     </RandomExit>
-    
+
+    <!--Morgana-->   
     <RandomExit name="T4_MORGANA" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON" tier="4" />
@@ -745,6 +1351,7 @@
       <Visualization ref="MORGANA"/>
     </RandomExit>
 
+    <!--Portal-->
     <RandomExit name="T4_PORTAL" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL" tier="4" weight="1" />
@@ -795,6 +1402,7 @@
       <Visualization ref="PORTAL"/>
     </RandomExit>
 
+    <!--Portal - Consumable-->
     <RandomExit name="T4_PORTAL_CONSUMABLE" activationtime="3600" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_CONSUMABLE" tier="4" weight="1" />
@@ -855,12 +1463,803 @@
       <Floor name="FOCUS-DNG-000#1" clustertype="DUNGEON_BLUE" nextcluster="NONE" /> <!-- name is reference to world.xml ID -->
     </PregeneratedClusterGenerator>
 
+    <!--########################################################################-->
     <!--normal random exit (no outdoor)-->
-    <!--Heretic-->
+    <!--########################################################################-->
+    <!--SOLO-->
+    <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON_SOLO">
+      <Faction name="HERETIC">
+        <Subset name="mine" weight="1" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="3" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="2" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="20" />
+            <highlight name="rare" weight="15" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="MORGANA_RANDOM_DUNGEON_SOLO">
+      <Faction name="MORGANA">
+        <Subset name="monastery" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="1" />
+          <Subset name="cave_ocean" weight="1" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="3" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="2" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="20" />
+            <highlight name="rare" weight="15" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="UNDEAD_RANDOM_DUNGEON_SOLO">
+      <Faction name="UNDEAD">
+        <Subset name="castle" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="1" />
+          <Subset name="cave_ocean" weight="1" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="3" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="2" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="20" />
+            <highlight name="rare" weight="15" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="KEEPER_RANDOM_DUNGEON_SOLO">
+      <Faction name="KEEPER">
+        <Subset name="tribe" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="3" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="2" />
+            <highlight name="rare" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="20" />
+            <highlight name="rare" weight="15" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    
+    <!--VETERANS-->
     <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON">
       <Faction name="HERETIC">
         <Subset name="mine" weight="1" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="0.5" />
@@ -1247,11 +2646,13 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-    <!--Morgana-->
     <RandomDungeonGenerator name="MORGANA_RANDOM_DUNGEON">
       <Faction name="MORGANA">
         <Subset name="monastery" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="1" />
@@ -1638,11 +3039,13 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-    <!--Undead-->
     <RandomDungeonGenerator name="UNDEAD_RANDOM_DUNGEON">
       <Faction name="UNDEAD">
         <Subset name="castle" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="1" />
@@ -2029,11 +3432,13 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-    <!--Keeper-->
     <RandomDungeonGenerator name="KEEPER_RANDOM_DUNGEON">
       <Faction name="KEEPER">
         <Subset name="tribe" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="0.5" />
@@ -2421,11 +3826,939 @@
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
 
+    <!--########################################################################-->
     <!--portal random exit (with outdoor)-->
+    <!--########################################################################-->
+    <!--SOLO-->
+    <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3">
+      <Faction name="HERETIC">
+        <Subset name="mine" weight="1" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="4">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="4">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="0" weight="35">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="15">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="1">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="15">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="25">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="50">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="10">
+              <highlight name="standard" weight="595" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="5" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="0" weight="15">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="50">
+              <highlight name="standard" weight="600" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="2" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>        
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO">
+      <Faction name="HERETIC">
+        <Subset name="mine" weight="1" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO">
+      <Faction name="MORGANA">
+        <Subset name="monastery" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO">
+      <Faction name="UNDEAD">
+        <Subset name="castle" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="KEEPER_RANDOM_DUNGEON_PORTAL_SOLO">
+      <Faction name="KEEPER">
+        <Subset name="tribe" />
+      </Faction>
+      <Flags>
+        <Flag name="solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="350">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="0" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="8" highlightCount="1" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="9" highlightCount="1" weight="25">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="10" highlightCount="2" weight="20">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="11" highlightCount="2" weight="15">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="12" highlightCount="2" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="2" weight="600">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="7" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="10">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="5">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+        <Size floors="3" weight="50">
+          <BossRarity>
+            <highlight name="uncommon" weight="792" />
+            <highlight name="rare" weight="198" />
+            <highlight name="legendary" weight="10" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="4" highlightCount="0" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="0" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="4" highlightCount="1" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="1" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="4" highlightCount="1" weight="3">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="5" highlightCount="2" weight="2">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+            <DungeonLength pathlength="6" highlightCount="3" weight="1">
+              <highlight name="standard" weight="590" />
+              <highlight name="uncommon" weight="300" />
+              <highlight name="rare" weight="100" />
+              <highlight name="legendary" weight="10" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    
+    <!--VETERANS-->
     <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON_PORTAL">
       <Faction name="HERETIC">
         <Subset name="mine" weight="1" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
@@ -2819,6 +5152,9 @@
       <Faction name="MORGANA">
         <Subset name="monastery" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
@@ -3212,6 +5548,9 @@
       <Faction name="UNDEAD">
         <Subset name="castle" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
@@ -3605,6 +5944,9 @@
       <Faction name="KEEPER">
         <Subset name="tribe" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
@@ -3994,12 +6336,20 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-
+    
+    <!--########################################################################-->
     <!--portal random exit from consumable (with outdoor)-->
+    <!--########################################################################-->
+    <!--SOLO-->
+
+    <!--VETERANS-->
     <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON_PORTAL_CONSUMABLE">
       <Faction name="HERETIC">
         <Subset name="mine" weight="1" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="0.5" />
@@ -4341,6 +6691,9 @@
       <Faction name="MORGANA">
         <Subset name="monastery" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="1" />
@@ -4682,6 +7035,9 @@
       <Faction name="UNDEAD">
         <Subset name="castle" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="1" />
@@ -5023,6 +7379,9 @@
       <Faction name="KEEPER">
         <Subset name="tribe" />
       </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
           <Subset name="cave_01" weight="0.5" />
@@ -5360,6 +7719,7 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
+    
   </RandomDungeonGenerators>
 
 </randomdungeons>

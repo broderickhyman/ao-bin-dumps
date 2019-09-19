@@ -1,6 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_BOSS_RARE_END_HallOfLords_01.unity" unityguid="669caf811de1c7d4ab5fb2ded23e70e0" editorBoundsMin="-120 -80" editorBoundsMax="120 80" colBoundsMin="-124 -84" colBoundsMax="124 83">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_01">
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_09">
+      <tile name="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_RARE" pos="-6.5 6 19.5" roty="328">
+        <lootchest lootchesttype="UNDEAD_SOLO_CHEST_BOSS_RARE" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_10">
       <tile name="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_RARE" pos="-6.5 6 19.5" roty="328">
         <lootchest lootchesttype="UNDEAD_CHEST_BOSS_RARE" />
       </tile>
@@ -3290,7 +3295,7 @@
       </layer>
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_01" name="Boss">
+      <layer id="Layer_01" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_KNIGHT" pos="-4.76 6 -18.92" roty="180">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_KNIGHT" />
         </tile>
@@ -3315,11 +3320,119 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="3.31 6 2.78" roty="357.17">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MAGE" />
         </tile>
+      </layer>
+      <layer id="Layer_11" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="0.42 6 -21.55" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_KNIGHT" pos="-4.76 6 -18.92" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="-4.19 0 -63.52" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_KNIGHT" pos="4.94 6 -19.09" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ENDBOSS_RARE" pos="1.26 6 18.66" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ENDBOSS_RARE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="3.31 6 2.78" roty="357.17">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="-2.68 6 2.77" roty="8">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="4.2 0 -63.35" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
+        </tile>
+      </layer>
+      <layer id="Layer_12" name="mob_solo_hard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_KNIGHT" pos="-9.68 6 -5.2" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ENDBOSS_RARE" pos="1.26 6 18.66" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ENDBOSS_RARE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="-0.07 4 -44.08" roty="15">
+          <mobspawnpoint spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="-2.05 6 -18.77">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_GHOST">
+            <path>
+              <waypoint pos="-1.808968 -18.8192" idle="3" pace="WALK" />
+              <waypoint pos="-1.16 12.08" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="1.75 6 -18.77">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_GHOST">
+            <path>
+              <waypoint pos="1.991032 -18.8192" idle="3" pace="WALK" />
+              <waypoint pos="2.64 12.08" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_KNIGHT" pos="-0.03 0 -62.15" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ARCHER" pos="2.32 0 -67.46" roty="355">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_KNIGHT" pos="10.8 6 -5.24" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_KNIGHT" />
+        </tile>
+      </layer>
+      <layer id="Layer_13" name="mob_veteran_hard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_ARCHER" pos="2.32 0 -67.46" roty="355">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="-0.07 4 -44.08" roty="15">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_KNIGHT" pos="-9.68 6 -5.2" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_KNIGHT" pos="-0.03 0 -62.15" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_KNIGHT" pos="10.8 6 -5.24" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_KNIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="-2.05 6 -18.77">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_GHOST">
+            <path>
+              <waypoint pos="-1.808968 -18.8192" idle="3" pace="WALK" />
+              <waypoint pos="-1.16 12.08" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="1.75 6 -18.77">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_GHOST">
+            <path>
+              <waypoint pos="1.991032 -18.8192" idle="3" pace="WALK" />
+              <waypoint pos="2.64 12.08" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_ENDBOSS_RARE" pos="1.26 6 18.66" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_ENDBOSS_RARE" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="REWARD">
+      <layer id="Layer_09" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_RARE" pos="-6.5 6 19.5" roty="328" id="lootchest_01" type="lootchest">
+          <lootchest lootchesttype="UNDEAD_SOLO_CHEST_BOSS_RARE" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_10" name="reward_veteran">
         <criticaltile name="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_RARE" pos="-6.5 6 19.5" roty="328" id="lootchest_02" type="lootchest">
           <lootchest lootchesttype="UNDEAD_CHEST_BOSS_RARE" />
         </criticaltile>
       </layer>
     </layergroup>
+    <tile name="FOREST_GREEN_UND_THREAT_INDICATOR_GROUND" pos="-1 6 -19" />
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="-7.5 0 -75" roty="270" scale="1 0.6130594 1" />
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="7.5 0 -75" roty="90" scale="1 0.6130594 1" />
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="-7.5 0 -65" roty="270" scale="1 0.61306 1" />
@@ -3348,7 +3461,7 @@
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-5 6 -5" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="5 6 -5" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_LARGE_LOWCUT_SMALL_A" pos="-17 8 -30" roty="90" />
-    <tile name="FOREST_GREEN_FILL_RUIN_VALOR_EMBLEM_GROUND_LARGE_A" pos="0 6 -3" scale="2.5 1 2.5" />
+    <tile name="FOREST_GREEN_FILL_RUIN_VALOR_EMBLEM_GROUND_LARGE_A" pos="0 6 0" scale="2.5 1 2.5" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="5 4 -45" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-45 8 -45" roty="180" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-45 8 -35" roty="180" />

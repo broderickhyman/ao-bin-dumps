@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_BASIC_CORNER_medium_01.unity" unityguid="7c1ba3fff2fd94f49a5d5f4aa52d3e3f" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-44 -43" colBoundsMax="45 44">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_16">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="-23 0 1">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="BACKDROP">
       <layer id="Layer_01" name="Forest">
@@ -628,7 +634,7 @@
         <tile name="SWAMP_GREEN_PLATEAU_ROCK_8M_A_DEBRIS_NOCOL" pos="29 -24 5" />
       </layer>
     </layergroup>
-    <layergroup name="Encounter">
+    <layergroup name="ENCOUNTER">
       <layer id="Layer_02" name="Light_01">
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="-14.34 0 2.79" roty="258">
           <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
@@ -671,19 +677,16 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="0.34 0 7.77" roty="93.42">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="4.2 0 21.69" roty="187">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-6.9 0 -5.81" roty="167">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-11.61 0 -2.12" roty="167">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="4.34 0 5.08" roty="10">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-3.34 0 -5.02" roty="212">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-10.97 0 1.06" roty="212">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="1.08 0 -5.82" roty="212">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-13.63 0 -3.11" roty="212">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="28.72 0 2.05" roty="319.06">
@@ -701,49 +704,58 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_PULLER" pos="-14.28 0 -0.52" roty="340">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_PULLER" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="2.3 0 24.41" roty="302">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="-1.81 0 24.97" roty="212">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="1.39 0 31.71" roty="302">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
+        </tile>
       </layer>
       <layer id="Layer_04" name="Light_02">
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-8.6 0 4.02" roty="311">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-8.43 0 7.86" roty="196">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="6.06 0 10.42" roty="258">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="3.59 0 0.89" roty="196">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="-9.45 0 0.08" roty="61">
           <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_GHOST" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="6.57 0 -4.05" roty="196">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="0.56 0 -4.24" roty="196">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="28.44 0.79 1.51">
           <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="25.71 0.79 -1.58">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-8.6 0 4.02" roty="311">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="31.53 0.79 -1.58">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="25.71 0.79 -1.58">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-1.48 0.79 27.13" roty="270">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-1.48 0.79 32.95" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="-1.48 0.79 32.95" roty="270">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="2.66 0.79 31.45" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="2.66 0.79 31.45" roty="270">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="2.66 0.79 25.63" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_TRASH" pos="2.66 0.79 25.63" roty="270">
-          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_TRASH" />
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="6.06 0 10.42" roty="258">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-8.43 0 7.86" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="31.53 0.79 -1.58">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-1.48 0.79 27.13" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="3.59 0 0.89" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="0.56 0 -4.24" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="6.57 0 -4.05" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
         </tile>
       </layer>
       <layer id="Layer_05" name="Standard_02">
@@ -790,8 +802,254 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_RAT" />
         </tile>
       </layer>
+      <layer id="Layer_19" name="mob_veteran_hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="4.78 0 6.68" roty="10">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="-2.7 0 28.44" roty="212">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="28.72 0 2.05" roty="319.06">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-6.9 0 -5.81" roty="167">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_PULLER" pos="-0.1 0 8.98" roty="76">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_PULLER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="-3.34 0 -5.02" roty="212">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_MAGE">
+            <path>
+              <waypoint pos="-3.333096 -4.961887" idle="3" pace="WALK" />
+              <waypoint pos="1.89979 6.568202" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STANDARD" pos="24.37 0 -1" roty="10">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_RAT" pos="1.72 0 27.64" roty="212">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-1.63 0 -5.93" roty="351.87">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="1.08 0 -5.82" roty="212">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+      </layer>
+      <layer id="Layer_20" name="mob_veteran_light_03">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="-10.21 0 9.9" roty="338">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="-11.71 0 -3.87" roty="234">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="-0.2 0 25.69" roty="61">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="26.62 0 1.68" roty="311">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="-8.5 0 11.44" roty="299.08">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="23.83 0 0.32" roty="340">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="8.21 0 -3.22" roty="157">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="-0.35 0 7.41" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+      </layer>
     </layergroup>
-    <tile name="FOREST_GREEN_CASTLE_GATE_MAIN_BROKEN_A" pos="-19.5 -14 0" scale="1 1 0.9499999" />
+    <layergroup name="ENCOUNTER_SOLO">
+      <layer id="Layer_06" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="1.72 0 27.64" roty="212">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="-2.7 0 28.44" roty="212">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="24.37 0 -1" rot="0 10.43 0">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="28.72 0 2.05" roty="319.06">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="4.78 0 6.68" roty="10">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-12.13 0 9.91" roty="352">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="1.08 0 -5.82" roty="212">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-6.9 0 -5.81" roty="167">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="-3.34 0 -5.02" roty="212">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_MAGE">
+            <path>
+              <waypoint pos="-3.333096 -4.961887" idle="3" pace="WALK" />
+              <waypoint pos="1.89979 6.568202" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_PULLER" pos="-0.1 0 8.98" roty="76.47">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_PULLER" />
+        </tile>
+      </layer>
+      <layer id="Layer_07" name="mob_solo_light_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="-0.35 0 7.41" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="23.83 0 0.32" roty="340">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="8.21 0 -3.22" roty="157">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="26.62 0 1.68" roty="311">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="-11.71 0 -3.87" roty="234">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="-0.2 0 25.69" roty="61">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="-10.21 0 9.9" roty="338">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="-8.5 0 11.44" roty="299.08">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+      </layer>
+      <layer id="Layer_10" name="mob_solo_standard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="-5.65 0 1.48" roty="61">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="8.1 0 10.82" roty="344.03">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="25.71 0.79 -1.58">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-14.37 0 3.45" roty="257">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="31.53 0.79 -1.58">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="28.44 0.79 1.51">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="1.86 0 9.86" roty="196">
+          <mobspawnpoint spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-14.32 0 0.15" roty="306.77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="-1.48 0.79 32.95" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="-1.48 0.79 27.13" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_CURSED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="2.66 0.79 31.45" roty="270">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_CURSED" />
+        </tile>
+      </layer>
+      <layer id="Layer_15" name="mob_solo_standard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="-6.13 0 -3.12" roty="77">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="8.2 0 -3.24" roty="77">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-2.77 0 35.91" roty="99">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="24.02 0 -0.06" roty="13">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="28.81 0 2.74" roty="322">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="4.88 0 -5.57" roty="77">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="-5.84 0 11.79" roty="77">
+          <mobspawnpoint spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOUL" pos="-6.08 0 1.76" roty="77">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOUL" pos="3.61 0 6.11" roty="247">
+          <mobspawnpoint spawnbehavior="UNDEAD_GHOUL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_STANDARD" pos="2.17 0 29.98" roty="72">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_STANDARD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_RAT" pos="26.93 0 1.1" roty="340">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-1.21 0 27.36" roty="72">
+          <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_16" name="Shrine_01">
+        <tile name="FOREST_GREEN_UND_CURTAIN_HANGING_A" pos="-18.5 1 -2.5" />
+        <tile name="FOREST_GREEN_UND_CURTAIN_HANGING_A" pos="-18.5 2 2.5" roty="180" />
+        <tile name="FOREST_GREEN_VEG_MOSS_BROWN_A" pos="-24.5 0 -4.5" />
+        <tile name="FOREST_GREEN_VEG_MOSS_BROWN_A" pos="-26.5 0 5.5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-26 0 5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-23 0 6" roty="270" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-24 0 -5" roty="90" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-26 0 -3" roty="180" />
+        <tile name="FOREST_GREEN_VEG_MOSS_BROWN_A" pos="-19.5 0 3.5" roty="180" />
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="-23 0 1" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_17" name="Shrine_none">
+        <tile name="FOREST_GREEN_FILL_RUIN_WALL_B" pos="-27 0 -5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_CITY_STONECIRCLE_A" pos="-20 0 0" roty="180" scale="1.295246 0.4317486 1.295246" />
+        <tile name="FOREST_GREEN_FILL_DIRTY_WATER_BARREL_A" pos="-18.5 0 -3.5" roty="270" scale="1.174144 1.174142 1.174144" />
+        <tile name="FOREST_GREEN_FILL_FIRE_CAMP_A" pos="-20 2 0" />
+        <tile name="FOREST_GREEN_FILL_FIREBOWL_STONE_A" pos="-20 1 0" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-21 0 3" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-23 0 -2" roty="180" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_LARGE_STRAIGHT_A" pos="-24 0 0" roty="180" scale="1 1 0.9259639" />
+        <tile name="FOREST_GREEN_FILL_RUIN_WALL_C" pos="-27 0 5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_STORAGE_CRATE_BROKEN_C" pos="-18.5 0 5.5" />
+        <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-20.5 0 -3.5" roty="109.69" />
+        <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-18.5 0 3.5" roty="270" />
+        <tile name="FOREST_GREEN_UND_CRYPT_URN_B" pos="-17.5 2 6.5" roty="218" />
+      </layer>
+      <layer id="Layer_18" name="Shrine_none_veteran">
+        <tile name="FOREST_GREEN_FILL_RUIN_WALL_B" pos="-27 0 -5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_CITY_STONECIRCLE_A" pos="-20 0 0" roty="180" scale="1.295246 0.4317486 1.295246" />
+        <tile name="FOREST_GREEN_FILL_DIRTY_WATER_BARREL_A" pos="-18.5 0 -3.5" roty="270" scale="1.174144 1.174142 1.174144" />
+        <tile name="FOREST_GREEN_FILL_FIRE_CAMP_A" pos="-20 2 0" />
+        <tile name="FOREST_GREEN_FILL_FIREBOWL_STONE_A" pos="-20 1 0" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-21 0 3" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-23 0 -2" roty="180" />
+        <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_LARGE_STRAIGHT_A" pos="-24 0 0" roty="180" scale="1 1 0.9259639" />
+        <tile name="FOREST_GREEN_FILL_RUIN_WALL_C" pos="-27 0 5" roty="180" />
+        <tile name="FOREST_GREEN_FILL_STORAGE_CRATE_BROKEN_C" pos="-18.5 0 5.5" />
+        <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-20.5 0 -3.5" roty="109.69" />
+        <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-18.5 0 3.5" roty="270" />
+        <tile name="FOREST_GREEN_UND_CRYPT_URN_B" pos="-17.5 2 6.5" roty="218" />
+      </layer>
+    </layergroup>
     <tile name="FOREST_GREEN_CASTLE_GATE_MAIN_SMALL_B_BLEND" pos="-13 -12 -17.5" roty="90" />
     <tile name="FOREST_GREEN_CASTLE_GATE_MAIN_SMALL_B_BLEND" pos="-3 -12 -17.5" roty="90" />
     <tile name="FOREST_GREEN_CASTLE_GATE_MAIN_SMALL_B_BLEND" pos="7 -12 -17.5" roty="90" />
@@ -804,9 +1062,7 @@
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="5 0 5" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-5 0 15" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-5 0 5" roty="180" />
-    <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-25 0 5" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-15 0 -15" roty="180" />
-    <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-25 0 -5" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-5 0 35" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="35 0 5" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="5 0 -15" roty="180" />
@@ -828,15 +1084,11 @@
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="15 0 -15" roty="90" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-5 0 -15" roty="90" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-15 0 -15" roty="180" />
-    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 5" roty="180" />
-    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 -5" roty="180" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-15 0 15" roty="180" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="15 0 15" roty="270" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="5 0 -15" roty="90" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-15 0 15" roty="270" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-15 0 -15" roty="90" />
-    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 5" roty="270" />
-    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 -5" roty="90" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_BROKEN_A" pos="35 0 5" roty="270" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_BROKEN_A" pos="5 0 35" />
     <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_BROKEN_B" pos="25 0 5" roty="270" />
@@ -871,6 +1123,13 @@
     <tile name="FOREST_GREEN_CASTLE_WALL_COLUMN_DECO_B" pos="-10 -1 20" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_WALL_COLUMN_DECO_B" pos="-19 -1 11" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_WALL_COLUMN_DECO_B" pos="-19 -1 -9" roty="270" />
+    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 5" roty="180" />
+    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 -5" roty="180" />
+    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 5" roty="270" />
+    <tile name="FOREST_GREEN_UND_CASTLE_WALL_INNER_STRAIGHT_A" pos="-25 0 -5" roty="90" />
+    <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-25 0 5" roty="180" />
+    <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="-25 0 -5" roty="180" />
+    <tile name="FOREST_GREEN_CASTLE_GATE_MAIN_BROKEN_A" pos="-19.5 -14 0" scale="1 1 0.9499999" />
     <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_A" pos="0.4 7 9.25" roty="270">
       <pointlight range="15" intensity="2" color="0.6838235 1 0.9084178" />
     </tile>
@@ -886,7 +1145,6 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_CLOSED_LARGE_A" pos="-4.5 0 -13.5" roty="313" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_CLOSED_LARGE_A" pos="2.5 2 -15.5" rot="68 204 61" scale="0.6042809 0.6042804 0.6042807" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_CLOSED_LARGE_A" pos="-3.5 0 -14.5" roty="133" />
-    <tile name="FOREST_GREEN_FILL_RUIN_WALL_C" pos="-27 0 5" roty="180" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-15 0 16" roty="266" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-11 0 16" roty="266" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-14 2 16" roty="266.25" />
@@ -899,15 +1157,12 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="9 2 -16" roty="90" />
     <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-13.5 0 -10.5" roty="270" />
     <tile name="FOREST_GREEN_HER_FILL_BARREL_WOOD_A" pos="-14.5 0 -8.5" roty="270" />
-    <tile name="FOREST_GREEN_UND_CRYPT_URN_B" pos="-17.5 2 6.5" roty="218.42" />
     <tile name="FOREST_GREEN_WATER_PUDDLE_A" pos="5 -1 -5" roty="25" scale="1 22.19131 1" />
     <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-13.5 0 -8.5" roty="90" />
     <tile name="FOREST_GREEN_WATER_PUDDLE_A" pos="10 0 14" roty="205" />
     <tile name="FOREST_GREEN_WATER_PUDDLE_A" pos="6 0 -12" roty="115" />
-    <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-21 0 3" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_SIDE_A_NOCOL" pos="30 0 -7" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="7 0 31" />
-    <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="-23 0 -2" roty="180" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_SIDE_A_NOCOL" pos="-7 0 34" />
     <tile name="FOREST_GREEN_UND_TABLE_BROKEN_A" pos="0.5 0 -10.5" roty="82" />
     <tile name="FOREST_GREEN_UND_BENCH_A" pos="-9 0 -7.5" roty="104" />
@@ -923,23 +1178,16 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="12 2 -12" roty="176" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="12 2 -10" roty="176" />
     <tile name="FOREST_GREEN_CASTLE_WALL_BUTTRESS_A" pos="-8 -1 34" roty="180" />
-    <tile name="FOREST_GREEN_FILL_RUIN_WALL_B" pos="-27 0 -5" roty="180" />
     <tile name="FOREST_GREEN_GROUND_STONES_CALM_C" pos="-9 0 11" roty="180" />
     <tile name="FOREST_GREEN_GROUND_STONES_CALM_A" pos="4 0 26" roty="270" />
     <tile name="FOREST_GREEN_UND_TORCH_WALL_B_POINTLIGHT" pos="8.5 0 33.5" roty="180" />
     <tile name="FOREST_GREEN_GROUND_STONES_CALM_B" pos="-8 0 -2" roty="90" />
     <tile name="FOREST_GREEN_UND_TABLE_A" pos="-4 0 -10.5" roty="270" />
     <tile name="FOREST_GREEN_UND_TORCH_WALL_A" pos="-16.5 0 9.5" roty="21" />
-    <tile name="FOREST_GREEN_FILL_CITY_STONECIRCLE_A" pos="-20 0 0" roty="180" scale="1.295246 0.4317486 1.295246" />
-    <tile name="FOREST_GREEN_FILL_DIRTY_WATER_BARREL_A" pos="-18.5 0 -3.5" roty="270" scale="1.174143 1.174142 1.174143" />
     <tile name="FOREST_GREEN_GROUND_STONES_CALM_A" pos="-15 0 0" roty="270" />
-    <tile name="FOREST_GREEN_FILL_FIRE_CAMP_A" pos="-20 2 0" />
-    <tile name="FOREST_GREEN_FILL_FIREBOWL_STONE_A" pos="-20 1 0" />
     <tile name="FOREST_GREEN_FILL_HANGING_ROPES_LAUNDRY_15M_A" pos="-7 7 -15" rot="0 44 3" scale="0.9383495 1 1" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_BROKEN_A" pos="6.5 0 28.5" roty="270" />
     <tile name="FOREST_GREEN_FILL_WAGON_BROKEN_A" pos="19 0 4" />
-    <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-20.5 0 -3.5" roty="109.69" />
-    <tile name="FOREST_GREEN_FILL_WOOD_CUT_A" pos="-18.5 0 3.5" roty="270" />
     <tile name="FOREST_GREEN_MOR_CASTLE_FURNITURE_CHAIR_A" pos="2 0 -12" roty="270" scale="1.409481 1.409481 1.409481" />
     <tile name="FOREST_GREEN_UND_BOOKSHELF_B" pos="-13 0 -17" roty="270" />
     <tile name="FOREST_GREEN_UND_BOOKSHELF_B" pos="15 0 13" roty="180" />
@@ -965,7 +1213,6 @@
     <tile name="FOREST_GREEN_VEG_MOSS_BROWN_A" pos="-1.5 0 -14.5" roty="90" scale="1 3 1" />
     <tile name="FOREST_GREEN_CASTLE_WALL_BUTTRESS_A" pos="-13 -1 -18" roty="90" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_SIDE_A" pos="35 0 7" roty="90" />
-    <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_LARGE_STRAIGHT_A" pos="-24 0 0" roty="180" scale="1 1 0.9259639" />
     <tile name="FOREST_GREEN_VEG_MOSS_BROWN_CORNER_A" pos="-14.5 0 14.5" scale="1 3 1" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_LARGE_BROKEN_B" pos="7 0 -12" roty="90" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_LARGE_BROKEN_B" pos="23 0 5" roty="90" />
@@ -973,7 +1220,6 @@
     <tile name="FOREST_GREEN_VEG_MOSS_BROWN_CORNER_A" pos="-14.5 0 -12.5" roty="270" scale="1 3 1" />
     <tile name="FOREST_GREEN_FILL_STORAGE_CRATE_BROKEN_B" pos="11 0 13.5" />
     <tile name="FOREST_GREEN_VEG_MOSS_BROWN_B" pos="12.5 0 -12.5" roty="180" scale="1 3 1" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_CRATE_BROKEN_C" pos="-18.5 0 5.5" />
     <tile name="FOREST_GREEN_FILL_STORAGE_CRATE_BROKEN_C" pos="6.5 0 22.5" />
     <tile name="FOREST_GREEN_UND_BOOKSHELF_A" pos="-3 0 -17" roty="270" />
     <tile name="FOREST_GREEN_UND_BOOKSHELF_A" pos="-18 0 15" />

@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_BASIC_STRAIGHT_room_01.unity" unityguid="a96c46644de2a494797c2cf530f51bc2" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-44 -44" colBoundsMax="45 43">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_16">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="18 0 -1">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="Backdrop">
       <layer id="Layer_05" name="env_out_Mountain" />
@@ -10,86 +16,553 @@
       <layer id="Layer_10" name="env_out_Steppe" />
       <layer id="Layer_11" name="env_out_Swamp" />
     </layergroup>
-    <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="mob_veteran_light_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-11.28 0 -8.14" roty="270">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="1.52 0.27 -10.59" roty="69">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="4.13 0.27 -6.73" roty="148">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-8.12 0 6.16" roty="259.87">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="-7.6 0.02 2.09" rot="3 322.34 9">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
-        </tile>
-      </layer>
-      <layer id="Layer_04" name="mob_veteran_standard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STANDARD" pos="-0.45 0 -9.76" roty="90.93">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STANDARD" pos="3.68 0 -4.74" rot="0.39 152.58 4.31">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-9.84 0 3.59" roty="262.65">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STANDARD" pos="-13.52 0 -2.38" roty="341.28">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="3.65 0 6.36" roty="48.85">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STANDARD" pos="-2.99 0.27 23.59" roty="45">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="0.39 0.27 27.52" roty="195">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
-        </tile>
-      </layer>
-    </layergroup>
-    <layergroup name="Encounter_Solo">
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_01" name="mob_solo_standard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE_SKNNING" pos="-7.96 0 12.31" roty="270">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE_SKNNING" />
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="-1.99 0 13.27" roty="189">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE_SKNNING" pos="-13.94 0 -4.1" roty="210">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE_SKNNING" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_WILL-O-WISP" pos="2.97 0 33.86">
-          <mobspawnpoint spawnbehavior="KEEPER_WILL-O-WISP" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_WILL-O-WISP" pos="-0.63 0 30.43">
-          <mobspawnpoint spawnbehavior="KEEPER_WILL-O-WISP" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="4.79 0 -1.01" roty="67">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_WILL-O-WISP" pos="0.82 0 34.4" roty="126">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_WILL-O-WISP">
             <path>
-              <waypoint pos="3.96797 -1.402386" idle="3" pace="WALK" />
-              <waypoint pos="-11.1382 -5.739629" idle="3" pace="WALK" />
+              <waypoint pos="2.130023 34.67192" idle="1" pace="WALK" />
+              <waypoint pos="2.929952 33.10188" idle="1" pace="RUN" />
+              <waypoint pos="0.291447 34.4812" idle="0" pace="WALK" />
+              <waypoint pos="-1.430951 36.07111" idle="0" pace="WALK" />
+              <waypoint pos="-1.298457 36.93231" idle="2" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_LIVING_PEBBLE" pos="-2.95 0 -30.65">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_LIVING_PEBBLE" />
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="0.4 0 -14.51" roty="345">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="9.39 0 -4.4" roty="297.43">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="-7.62 0 -14.3" roty="18.31">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="9.14 0 -2.4" roty="271.52">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="4.86 0 32.14" roty="306">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="-15.6 0 -2.57" roty="92">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="-3.71 0 -15.84" roty="9">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="-11.08 0 -8.95" roty="299.34">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_WILL-O-WISP" pos="-1.9 0 32.72">
-          <mobspawnpoint spawnbehavior="KEEPER_WILL-O-WISP" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="8.65 0 1.33" roty="243">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="-6.91 0 13.3" roty="170.23">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_STUMP" pos="-4.25 0 -1.61" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_STUMP">
+            <path>
+              <waypoint pos="3.253155 -2.292543" idle="3" pace="WALK" />
+              <waypoint pos="-11.43149 -2.45305" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
+      <layer id="Layer_02" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MUSHROOM_THROWER_YELLOW" pos="8.42 0 -7.51" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="8.67489 -7.086761" idle="3" pace="WALK" />
+              <waypoint pos="-13.82694 -7.002204" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MUSHROOM_THROWER_YELLOW" pos="8.42 0 1.7" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="12.04419 -0.5421584" idle="3" pace="WALK" />
+              <waypoint pos="-12.97746 0.6672432" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE_SKNNING" pos="-9.95 0.03 6.04" rot="356.81 247.51 352.35">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE_SKNNING" pos="13.02 0 -4.89" roty="181.09">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_STUMP" pos="-4.74 0 -33.14" roty="286">
+          <mobspawnpoint spawnbehavior="KEEPER_STUMP" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MUSHROOM_THROWER_YELLOW" pos="1.26 0 9.79" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="1.517425 8.671683" idle="3" pace="WALK" />
+              <waypoint pos="-10.44909 10.42541" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE_SKNNING" pos="4.71 0 -10.82" roty="110.99">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+      </layer>
+      <layer id="Layer_12" name="mob_solo_standard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="2.61 0 3.46" roty="261">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="-4.7 0 4.97" roty="106">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_AXE_THROWER">
+            <path>
+              <waypoint pos="-4.503239 5.463773" idle="1" pace="WALK" />
+              <waypoint pos="-4.637146 -0.4537187" idle="0" pace="WALK" />
+              <waypoint pos="-4.229326 -0.7256007" idle="3" pace="WALK" />
+              <waypoint pos="-5.044972 -0.929513" idle="0" pace="WALK" />
+              <waypoint pos="-4.836785 -5.955534" idle="1" pace="WALK" />
+              <waypoint pos="-5.044972 -0.929513" idle="0" pace="WALK" />
+              <waypoint pos="-4.229326 -0.7256007" idle="3" pace="WALK" />
+              <waypoint pos="-4.637146 -0.4537187" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="2.97 0 -5.84" roty="287.7">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="-5.07 0 30.87" roty="87">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="2.95 0 31.05" roty="271.63">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_LIVING_PEBBLE" pos="3.37 0 -1" roty="275">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_LIVING_PEBBLE" />
+        </tile>
+      </layer>
+      <layer id="Layer_13" name="mob_solo_light_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="3.43 0 0.43" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 0.3838974" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 0.5166354" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 1.237695" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -0.590024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678717 0.4581628" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 0.4233675" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -0.3380877" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 1.184124" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="3.43 0 -5.63" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 -5.676103" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 -5.543365" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 -4.822305" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -6.650024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678716 -5.601838" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 -5.636633" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -6.398088" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 -4.875876" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="-11.91 0 0.43" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_MALE">
+            <path>
+              <waypoint pos="-12.25925 0.4761019" idle="0" pace="WALK" />
+              <waypoint pos="-5.800578 0.3433623" idle="0" pace="WALK" />
+              <waypoint pos="-5.834888 -0.3776979" idle="1" pace="WALK" />
+              <waypoint pos="-5.875487 1.450022" idle="1" pace="WALK" />
+              <waypoint pos="-5.80128 0.401835" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 0.4366318" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 1.198087" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -0.3241254" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="-11.91 0 -2.51" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_MALE">
+            <path>
+              <waypoint pos="-12.25925 -2.463898" idle="0" pace="WALK" />
+              <waypoint pos="-5.800581 -2.596638" idle="0" pace="WALK" />
+              <waypoint pos="-5.83489 -3.317698" idle="1" pace="WALK" />
+              <waypoint pos="-5.87549 -1.489978" idle="1" pace="WALK" />
+              <waypoint pos="-5.801283 -2.538165" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 -2.503368" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 -1.741913" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -3.264125" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_MALE" pos="-11.91 0 -5.63" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_MALE">
+            <path>
+              <waypoint pos="-12.25925 -5.583898" idle="0" pace="WALK" />
+              <waypoint pos="-5.800581 -5.716638" idle="0" pace="WALK" />
+              <waypoint pos="-5.83489 -6.437697" idle="1" pace="WALK" />
+              <waypoint pos="-5.87549 -4.609978" idle="1" pace="WALK" />
+              <waypoint pos="-5.801283 -5.658165" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 -5.623368" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 -4.861913" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -6.384125" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_FEMALE" pos="3.43 0 -2.69" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 -2.736103" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 -2.603364" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 -1.882305" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -3.710024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678717 -2.661837" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 -2.696632" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -3.458087" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 -1.935876" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_14" name="mob_solo_light_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_WILL-O-WISP" pos="-4.3 0 -1.97" roty="126">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_WILL-O-WISP">
+            <path>
+              <waypoint pos="-0.5049691 1.416006" idle="1" pace="RUN" />
+              <waypoint pos="-2.296695 -1.645549" idle="1" pace="RUN" />
+              <waypoint pos="-4.828553 -1.888801" idle="0" pace="WALK" />
+              <waypoint pos="-5.235078 -3.750402" idle="1" pace="WALK" />
+              <waypoint pos="-7.110044 -1.856649" idle="2" pace="RUN" />
+              <waypoint pos="-0.4145701 -4.669323" idle="3" pace="WALK" />
+              <waypoint pos="-6.908422 -4.700656" idle="1" pace="WALK" />
+              <waypoint pos="-4.905134 -0.5213861" idle="0" pace="WALK" />
+              <waypoint pos="-1.900205 -2.939146" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-8.21 0 -5.54" roty="59">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="1.5 0 -6.88" roty="323.7">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-9.6 0 -1.32" roty="106">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-0.08 0 4.01" roty="207">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="2.79 0 1.99" roty="234.61">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_STUMP" pos="0.46 0 31.55" roty="239">
+          <mobspawnpoint spawnbehavior="KEEPER_STUMP" />
+        </tile>
+      </layer>
+      <layer id="Layer_15" name="mob_solo_hard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-4.26 0 -3.25" roty="286">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_UNPROVEN">
+            <path>
+              <waypoint pos="-6.251987 -3.696621" idle="1" pace="RUN" />
+              <waypoint pos="-5.652615 -5.195043" idle="0" pace="RUN" />
+              <waypoint pos="-6.012237 -7.652461" idle="0" pace="RUN" />
+              <waypoint pos="-3.375011 -7.952147" idle="0" pace="RUN" />
+              <waypoint pos="-1.277215 -6.034163" idle="0" pace="RUN" />
+              <waypoint pos="-0.3182259 -8.25183" idle="0" pace="RUN" />
+              <waypoint pos="6.095037 -6.813343" idle="2" pace="RUN" />
+              <waypoint pos="5.675479 -4.415863" idle="0" pace="RUN" />
+              <waypoint pos="5.795353 -1.898513" idle="0" pace="RUN" />
+              <waypoint pos="7.293776 0.4390316" idle="1" pace="RUN" />
+              <waypoint pos="4.656548 1.757646" idle="0" pace="RUN" />
+              <waypoint pos="0.3410864 0.6787822" idle="0" pace="RUN" />
+              <waypoint pos="-3.434948 1.757647" idle="0" pace="RUN" />
+              <waypoint pos="-5.289363 3.796124" idle="0" pace="RUN" />
+              <waypoint pos="-5.888737 2.89707" idle="2" pace="RUN" />
+              <waypoint pos="-4.688658 -0.4639161" idle="0" pace="RUN" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="-8.93 0 2.21" roty="322">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="-11.17 0 -5.45" roty="248">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="8.6 0 -4.9" roty="158">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
+      <layer id="Layer_03" name="mob_veteran_light_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-11.91 0 -5.63" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="-12.25925 -5.583898" idle="0" pace="WALK" />
+              <waypoint pos="-5.800581 -5.716638" idle="0" pace="WALK" />
+              <waypoint pos="-5.83489 -6.437697" idle="1" pace="WALK" />
+              <waypoint pos="-5.87549 -4.609978" idle="1" pace="WALK" />
+              <waypoint pos="-5.801283 -5.658165" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 -5.623368" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 -4.861913" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -6.384125" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-11.91 0 0.43" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="-12.25925 0.4761018" idle="0" pace="WALK" />
+              <waypoint pos="-5.800581 0.3433623" idle="0" pace="WALK" />
+              <waypoint pos="-5.83489 -0.3776975" idle="1" pace="WALK" />
+              <waypoint pos="-5.87549 1.450022" idle="1" pace="WALK" />
+              <waypoint pos="-5.801283 0.401835" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 0.4366318" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 1.198087" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -0.3241251" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-11.91 0 -2.51" roty="91">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="-12.25925 -2.463898" idle="0" pace="WALK" />
+              <waypoint pos="-5.800581 -2.596638" idle="0" pace="WALK" />
+              <waypoint pos="-5.83489 -3.317698" idle="1" pace="WALK" />
+              <waypoint pos="-5.87549 -1.489978" idle="1" pace="WALK" />
+              <waypoint pos="-5.801283 -2.538165" idle="0" pace="WALK" />
+              <waypoint pos="-12.28994 -2.503368" idle="0" pace="WALK" />
+              <waypoint pos="-12.36666 -1.741913" idle="1" pace="WALK" />
+              <waypoint pos="-12.25321 -3.264125" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="3.43 0 -2.69" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 -2.736103" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 -2.603364" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 -1.882305" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -3.710024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678717 -2.661837" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 -2.696632" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -3.458087" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 -1.935876" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="3.43 0 -5.63" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 -5.676103" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 -5.543365" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 -4.822305" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -6.650024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678716 -5.601838" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 -5.636633" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -6.398088" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 -4.875876" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="3.43 0 0.43" roty="271">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE">
+            <path>
+              <waypoint pos="3.779249 0.3838974" idle="0" pace="WALK" />
+              <waypoint pos="-2.679419 0.5166354" idle="0" pace="WALK" />
+              <waypoint pos="-2.645109 1.237695" idle="1" pace="WALK" />
+              <waypoint pos="-2.60451 -0.590024" idle="1" pace="WALK" />
+              <waypoint pos="-2.678717 0.4581628" idle="0" pace="WALK" />
+              <waypoint pos="3.809942 0.4233675" idle="0" pace="WALK" />
+              <waypoint pos="3.886665 -0.3380877" idle="1" pace="WALK" />
+              <waypoint pos="3.773214 1.184124" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="mob_veteran_standard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="9.14 0 -2.4" roty="271.52">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_EARTHCHILD" pos="-1.99 0 13.27" roty="189">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_EARTHCHILD_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="-6.91 0 13.3" roty="170.23">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="0.4 0 -14.51" roty="345">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_WILL-O-WISP" pos="0.82 0 34.4" roty="126">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_WILL-O-WISP">
+            <path>
+              <waypoint pos="2.130023 34.67192" idle="1" pace="WALK" />
+              <waypoint pos="2.929952 33.10188" idle="1" pace="RUN" />
+              <waypoint pos="0.2914472 34.4812" idle="0" pace="WALK" />
+              <waypoint pos="-1.43095 36.07111" idle="0" pace="WALK" />
+              <waypoint pos="-1.298456 36.93231" idle="2" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-7.62 0 -14.3" roty="18">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="4.86 0 32.14" roty="306">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="-3.53 0 -15.68" roty="3">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="-15.6 0 -2.57" roty="92">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="-4.25 0 -1.61" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_STUMP_VETERAN">
+            <path>
+              <waypoint pos="3.253155 -2.292543" idle="3" pace="WALK" />
+              <waypoint pos="-11.43149 -2.45305" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_18" name="mob_veteran_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BEAR" pos="-8.93 0 2.21" roty="322">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BEAR" pos="8.6 0 -4.9" roty="158">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BEAR" pos="-11.17 0 -5.45" roty="248">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-4.26 0 -3.25" roty="286">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_UNPROVEN">
+            <path>
+              <waypoint pos="-6.251986 -3.696621" idle="0" pace="RUN" />
+              <waypoint pos="-5.652614 -5.195042" idle="0" pace="RUN" />
+              <waypoint pos="-6.012236 -7.652458" idle="0" pace="RUN" />
+              <waypoint pos="-3.375011 -7.952145" idle="0" pace="RUN" />
+              <waypoint pos="-1.277216 -6.034161" idle="0" pace="RUN" />
+              <waypoint pos="-0.3182278 -8.251828" idle="0" pace="RUN" />
+              <waypoint pos="6.095032 -6.813342" idle="0" pace="RUN" />
+              <waypoint pos="5.675474 -4.415862" idle="0" pace="RUN" />
+              <waypoint pos="5.795347 -1.898513" idle="0" pace="RUN" />
+              <waypoint pos="7.293771 0.4390297" idle="0" pace="RUN" />
+              <waypoint pos="4.656543 1.757644" idle="0" pace="RUN" />
+              <waypoint pos="0.341084 0.6787803" idle="0" pace="RUN" />
+              <waypoint pos="-3.434948 1.757644" idle="0" pace="RUN" />
+              <waypoint pos="-5.289362 3.796122" idle="0" pace="RUN" />
+              <waypoint pos="-5.888736 2.897067" idle="2" pace="RUN" />
+              <waypoint pos="-4.688658 -0.4639175" idle="0" pace="RUN" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_19" name="mob_veteran_light_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="1.5 0 -6.88" roty="323.7">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-9.6 0 -1.32" roty="106">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-0.08 0 4.01" roty="207">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="-8.21 0 -5.54" roty="59">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_ANY" pos="2.79 0 1.99" roty="234.61">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_WILL-O-WISP" pos="-4.3 0 -1.97" roty="126">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_WILL-O-WISP">
+            <path>
+              <waypoint pos="-0.5049691 1.416006" idle="1" pace="RUN" />
+              <waypoint pos="-2.296695 -1.645549" idle="1" pace="RUN" />
+              <waypoint pos="-4.828553 -1.888801" idle="0" pace="WALK" />
+              <waypoint pos="-5.235078 -3.750402" idle="1" pace="WALK" />
+              <waypoint pos="-7.110044 -1.856649" idle="2" pace="RUN" />
+              <waypoint pos="-0.4145701 -4.669323" idle="3" pace="WALK" />
+              <waypoint pos="-6.908422 -4.700656" idle="1" pace="WALK" />
+              <waypoint pos="-4.905134 -0.5213861" idle="0" pace="WALK" />
+              <waypoint pos="-1.900205 -2.939146" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="0.46 0 31.55" roty="239">
+          <mobspawnpoint spawnbehavior="KEEPER_STUMP_VETERAN" />
+        </tile>
+      </layer>
+      <layer id="Layer_20" name="mob_veteran_hard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" pos="4.71 0 -10.82" roty="110.99">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" pos="-9.95 0.03 6.04" rot="357 248 352">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW" pos="1.26 0 9.79" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="1.517425 8.671683" idle="3" pace="WALK" />
+              <waypoint pos="-10.44909 10.42541" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW" pos="8.42 0 -7.51" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="8.67489 -7.086761" idle="3" pace="WALK" />
+              <waypoint pos="-13.82694 -7.002204" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" pos="13.02 0 -4.89" roty="181.09">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE_SKNNING" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="-4.74 0 -33.14" roty="286">
+          <mobspawnpoint spawnbehavior="KEEPER_STUMP_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW" pos="8.42 0 1.7" roty="67">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_MUSHROOM_THROWER_YELLOW">
+            <path>
+              <waypoint pos="12.04419 -0.5421584" idle="3" pace="WALK" />
+              <waypoint pos="-12.97746 0.6672432" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+      <layer id="Layer_21" name="mob_veteran_standard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_MALE" pos="2.61 0 3.46" roty="261">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_MALE" pos="2.95 0 31.05" roty="271.63">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_LIVING_PEBBLE" pos="3.37 0 -1" roty="275">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_LIVING_PEBBLE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_MALE" pos="-5.07 0 30.87" roty="87">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_MALE" pos="2.97 0 -5.84" roty="287.7">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_MALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="-4.7 0 4.97" roty="106">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_AXE_THROWER">
+            <path>
+              <waypoint pos="-4.503239 5.463773" idle="1" pace="WALK" />
+              <waypoint pos="-4.637146 -0.4537187" idle="0" pace="WALK" />
+              <waypoint pos="-4.229326 -0.7256007" idle="3" pace="WALK" />
+              <waypoint pos="-5.044972 -0.929513" idle="0" pace="WALK" />
+              <waypoint pos="-4.836785 -5.955534" idle="1" pace="WALK" />
+              <waypoint pos="-5.044972 -0.929513" idle="0" pace="WALK" />
+              <waypoint pos="-4.229326 -0.7256007" idle="3" pace="WALK" />
+              <waypoint pos="-4.637146 -0.4537187" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_16" name="Shrine_01">
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="18 0 -1" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_17" name="Shrine_none" />
     </layergroup>
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 0 -35" />
@@ -171,18 +644,18 @@
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="5.5 0 -35.5" roty="317" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="8.5 0 32.5" roty="227" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-9.5 0 -32.5" roty="47" />
-    <tile name="FOREST_GREEN_KPR_BOWL_A" pos="17.5 5 -7.5" roty="114" />
-    <tile name="FOREST_GREEN_KPR_BOWL_MEAT_A" pos="16.5 5 -8.5" roty="204" scale="1.402646 1.402645 1.402646" />
+    <tile name="FOREST_GREEN_KPR_BOWL_A" pos="19.5 5 -7.5" roty="114" />
+    <tile name="FOREST_GREEN_KPR_BOWL_MEAT_A" pos="18.5 5 -8.5" roty="204" scale="1.402646 1.402645 1.402646" />
     <tile name="FOREST_GREEN_KPR_BOWL_MEAT_A" pos="-11.5 0 10.5" roty="204" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="8 0 -11" roty="339" />
     <tile name="FOREST_GREEN_KPR_FILL_CAMPFIRE_SIT_A" pos="3 0 -15" roty="180" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="7 0 8" roty="249" />
-    <tile name="FOREST_GREEN_KPR_FILL_GATE_WOOD_A" pos="19 0 -2" rot="328 270 0" />
+    <tile name="FOREST_GREEN_KPR_FILL_GATE_WOOD_A" pos="21 0 -2" rot="328 270 0" />
     <tile name="FOREST_GREEN_KPR_FILL_GATE_WOOD_A" pos="-25 0 -2" roty="270" />
     <tile name="FOREST_GREEN_KPR_FUR_BAG" pos="7.5 0 5.5" />
-    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="21.5 0 -0.5" roty="270" />
-    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="22.5 0 -0.5" roty="180" />
-    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="24.5 0 -1.5" roty="90" />
+    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="23.5 0 -0.5" roty="270" />
+    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="24.5 0 -0.5" roty="180" />
+    <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="26.5 0 -1.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_DNG_FILL_SHELF_STONE_A_NOCOL" pos="-17 6 12" roty="297" scale="1.29716 1 1" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_C" pos="-15.5 7 11" roty="270" />
     <tile name="FOREST_GREEN_KPR_FILL_SACK_APPLES_B" pos="-17.5 7 12.5" roty="90" />
@@ -192,7 +665,7 @@
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="-13.5 0 4.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="-28.5 0 -0.5" />
     <tile name="FOREST_GREEN_KPR_DNG_FILL_SHELF_STONE_A_NOCOL" pos="12 2 -15" rot="3 149.43 5" scale="1.297161 1 1.000001" />
-    <tile name="FOREST_GREEN_KPR_DNG_FILL_SHELF_STONE_A_NOCOL" pos="18 4 -11" rot="3 120.84 5" scale="1.29716 1 1" />
+    <tile name="FOREST_GREEN_KPR_DNG_FILL_SHELF_STONE_A_NOCOL" pos="18 4 -11" rot="3 121 5" scale="1.29716 1 1" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="8.5 0 -11.5" roty="180" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="11.5 3 -13.5" roty="180" />
     <tile name="FOREST_GREEN_KPR_DNG_FILL_SHELF_STONE_A_NOCOL" pos="18 5 6" rot="3 27.07 5" scale="1.29716 1 1" />
@@ -200,14 +673,14 @@
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="-15 0 6" roty="159" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="-17 0 -10" roty="69" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="14.5 0 1.5" roty="180" />
-    <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="21.5 0 -3.5" roty="90" />
+    <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="23.5 0 -3.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="13.5 0 -8.5" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="13 0 4" roty="159" />
-    <tile name="FOREST_GREEN_KPR_BOWL_A" pos="17.5 6 3.5" roty="114" />
+    <tile name="FOREST_GREEN_KPR_BOWL_A" pos="19.5 6 3.5" roty="114" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="-12 0 -14" roty="249" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-7.5 0 34.5" roty="137" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="4.5 0 -26.5" roty="317" />
-    <tile name="FOREST_GREEN_KPR_FILL_DISHES_LARGE_A" pos="18.5 6 5.5" />
+    <tile name="FOREST_GREEN_KPR_FILL_DISHES_LARGE_A" pos="20.5 6 5.5" />
     <tile name="FOREST_GREEN_KPR_FILL_DISHES_LARGE_A" pos="-15.5 7 -16.5" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="11 0 4" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="6 0 23" roty="180" />
@@ -224,6 +697,7 @@
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A_POINTLIGHT" pos="-15 0 -9" roty="270" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A_POINTLIGHT" pos="5 0 29" roty="270" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A_POINTLIGHT" pos="-8 0 -31" roty="180" />
+    <tile name="FOREST_GREEN_KPR_FILL_STORAGE_PILE_D" pos="20.5 0 -4.5" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-30 0 16" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="20 0 28" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-18 0 -29" roty="90" />
@@ -233,7 +707,7 @@
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="30 0 14" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="27 0 -16" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_COCOON_A" pos="-25 0 -2" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_COCOON_A" pos="20 0 -2" roty="180" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_COCOON_A" pos="22 0 -2" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="-22 0 20" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_LEFT_A" pos="16 0 -14" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_LEFT_A" pos="-19 0 6" />

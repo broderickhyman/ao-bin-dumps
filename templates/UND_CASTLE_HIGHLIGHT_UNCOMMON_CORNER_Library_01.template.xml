@@ -1,8 +1,18 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_HIGHLIGHT_UNCOMMON_CORNER_Library_01.unity" unityguid="6654e7529056d264ebf2d280802955ce" editorBoundsMin="-80 -40" editorBoundsMax="80 40" colBoundsMin="-84 -51" colBoundsMax="84 44">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="">
+    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_01">
+      <tile name="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOOKCHEST_UNCOMMON" pos="-19.5 2 0.5" roty="270">
+        <lootchest lootchesttype="UNDEAD_SOLO_BOOKCHEST_UNCOMMON" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_02">
       <tile name="FOREST_GREEN_LOOTCHEST_UNDEAD_BOOKCHEST_UNCOMMON" pos="-19.5 2 0.5" roty="270">
         <lootchest lootchesttype="UNDEAD_BOOKCHEST_UNCOMMON" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_05">
+      <tile name="SHRINE_NON_COMBAT_BUFF" pos="45 0 14">
+        <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -156,7 +166,6 @@
         <tile name="MOUNTAIN_GREEN_FILL_TREE_GIANT_A" pos="74 -24 35" roty="270" />
         <tile name="MOUNTAIN_GREEN_T1_BUSH_B" pos="69.5 -24 -35.5" roty="90" />
         <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x20_COMP_01" pos="76 -24 -11" />
-        <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x20_COMP_01" pos="5 -24 20" />
         <tile name="MOUNTAIN_GREEN_FILL_TREE_GIANT_E" pos="16 -24 35" roty="180" />
         <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x20_COMP_01" pos="75 -24 19" />
         <tile name="MOUNTAIN_GREEN_FILL_HILL_BASE_B" pos="51 -24 -27" roty="270" />
@@ -323,7 +332,7 @@
         <compoundtile name="_FOREST_GREEN_BLEND_TO_SUB01_20x20_COMP_01" pos="63 -24 -27" roty="270" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="73 -24 -21" roty="90" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="28 -24 -30" roty="270" />
-        <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="9 -24 -12" roty="270" />
+        <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="9 -24 -26" roty="270" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="76 -24 7" roty="90" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="74 -24 21" roty="270" />
         <compoundtile name="_FOREST_GREEN_BUSHES_20x20_DIAGONAL_COMP_01" pos="59 -24 -34" roty="90" />
@@ -339,8 +348,7 @@
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_B_DEBRIS_NOCOL" pos="72 -24 28" roty="270" />
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_B_DEBRIS_NOCOL" pos="25 -24 5" roty="180" />
         <compoundtile name="_FOREST_GREEN_BLEND_TO_SUB01_20x20_COMP_01" pos="14 -24 30" />
-        <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="8 -24 18" />
-        <compoundtile name="_FOREST_GREEN_BLEND_TO_SUB01_20x20_COMP_01" pos="-13 -24 -23" />
+        <compoundtile name="_FOREST_GREEN_BLEND_TO_SUB01_20x20_COMP_01" pos="-13 -24 -21" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="-4 -24 -33" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="-52 -24 -30" roty="270" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="-71 -24 -12" roty="270" />
@@ -1184,7 +1192,69 @@
       </layer>
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_04" name="Hard">
+      <layer id="Layer_03" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="59.12 0 -13.18" roty="172">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="19.58 0 -14.74" roty="88">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_GHOST">
+            <path>
+              <waypoint pos="19.37048 -14.75732" idle="1" pace="WALK" />
+              <waypoint pos="45.24753 -14.79425" idle="1" pace="WALK" />
+              <waypoint pos="48.58373 -16.50991" idle="0" pace="WALK" />
+              <waypoint pos="48.91736 -19.17892" idle="3" pace="WALK" />
+              <waypoint pos="48.58373 -16.50991" idle="0" pace="WALK" />
+              <waypoint pos="45.24753 -14.79425" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="16.44 0 -2.95" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="57.96 0 -16.62" roty="69">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MINIBOSS" pos="-13.81 2.08 0.03" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="27.44 0 17.9" roty="336">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="16.75 0 2.61" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="21.55 0 17.19" roty="37">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-15.48 2.08 4.48" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_TRASH" pos="-16.43 2.08 -4.58" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_TRASH" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="19.61 0 -18.14" roty="225">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="17.23 0 -17.39" roty="181.39">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="10.8 0 -2.69" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="11.53 0 0.25" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST_RAT" pos="10.8 0 3.16" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="43.93 0 12.9" roty="54.25">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="45.73 0 15.67" roty="234">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MINIBOSS" pos="-12.75 2.08 -3.53" roty="88">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MINIBOSS" />
         </tile>
@@ -1204,7 +1274,7 @@
           <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_GHOST">
             <path>
               <waypoint pos="25.4942 -14.42749" idle="1" pace="WALK" />
-              <waypoint pos="61.70841 -14.29134" idle="1" pace="WALK" />
+              <waypoint pos="59.60287 -14.36708" idle="1" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
@@ -1217,7 +1287,48 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="45.87 0 -19.62" roty="127">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MAGE" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="10.94 0 -2.72" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="19.61 0 -18.14" roty="225">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="17.23 0 -17.39" roty="181.39">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="11.67 0 0.11" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST_RAT" pos="10.81 0 3.1" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST_RAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="45.7 0 15.34" roty="217">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MAGE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MAGE" pos="43.83 0 12.79" roty="37">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MAGE" />
+        </tile>
       </layer>
+    </layergroup>
+    <layergroup name="REWARD">
+      <layer id="Layer_01" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOOKCHEST_UNCOMMON" pos="-19.5 2 0.5" roty="270" id="lootchest_02" type="lootchest">
+          <lootchest lootchesttype="UNDEAD_SOLO_BOOKCHEST_UNCOMMON" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_02" name="reward_veteran">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_UNDEAD_BOOKCHEST_UNCOMMON" pos="-19.5 2 0.5" roty="270" id="lootchest_01" type="lootchest">
+          <lootchest lootchesttype="UNDEAD_BOOKCHEST_UNCOMMON" />
+        </criticaltile>
+      </layer>
+    </layergroup>
+    <layergroup name="SHRINE">
+      <layer id="Layer_05" name="Shrine_01">
+        <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="45 0 14" id="shrine_01" type="shrine">
+          <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_06" name="Shrine_none" />
     </layergroup>
     <tile name="FOREST_GREEN_UND_CASTLE_2M_STAIRS_ENTRANCE_STRAIGHT_A" pos="5 0 -5" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_GROUND_CALM_A" pos="25 0 5" roty="180" />
@@ -1622,8 +1733,8 @@
     <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_A" pos="-15.52 9.3 0.16">
       <pointlight range="15" intensity="4" color="0.5882353 1 0.5735294" />
     </tile>
-    <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_A" pos="12.41 4.55 -0.24">
-      <pointlight range="10" intensity="4" color="0.5882353 1 0.5735294" />
+    <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_A" pos="12.41 4.2 -0.24">
+      <pointlight range="12" intensity="5" color="0.5882353 1 0.5735294" />
     </tile>
     <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_B" pos="60.39 7.02 -19.94" roty="180">
       <pointlight range="6" intensity="3.03462" color="0.5882353 1 0.5735294" />
@@ -1643,9 +1754,6 @@
     <tile name="FOREST_GREEN_UND_POINT_LIGHT_DNG_CASTLE_STANDARD_A" pos="70.4 4.55 0.4">
       <pointlight range="10" intensity="2" color="0.5882353 1 0.5735294" />
     </tile>
-    <criticaltile name="FOREST_GREEN_LOOTCHEST_UNDEAD_BOOKCHEST_UNCOMMON" pos="-19.5 2 0.5" roty="270" id="lootchest_01" type="lootchest">
-      <lootchest lootchesttype="UNDEAD_BOOKCHEST_UNCOMMON" />
-    </criticaltile>
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="32.5 0 35" roty="270" scale="1 0.6130594 1" />
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="47.5 0 35" roty="90" scale="1 0.6130594 1" />
     <tile name="FOREST_GREEN_FILL_CITY_BORDERSTONE_B" pos="75 0 -7.5" roty="180" scale="1 0.61306 1" />

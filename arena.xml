@@ -15,12 +15,13 @@
     <arenaregistrationtype name="custom_match_hometerritory"  elocategory="none" category="custom_match_hometerritory" groupsize="5"/>
     <arenaregistrationtype name="custom_match_resources"      elocategory="none" category="custom_match_resources"     groupsize="5"/>
     <arenaregistrationtype name="custom_match_resources2"     elocategory="none" category="custom_match_resources2"    groupsize="5"/>
+    <arenaregistrationtype name="custom_match_city"           elocategory="none" category="custom_match_city"          groupsize="20"/>    
 
     <arenaregistrationtype name="custom_match_1v1_gvg"        elocategory="none" category="custom_match_2v2_gvg"       groupsize="1"/>
 
-    <arenaregistrationtype name="crystal_match_test_1v1"          elocategory="none" category="crystal_match_test"        groupsize="1"/>
-    <arenaregistrationtype name="crystal_match_test_2v2"          elocategory="none" category="crystal_match_test"        groupsize="2"/>
-    <arenaregistrationtype name="crystal_match_5v5_gvg"          elocategory="none" category="crystal_match_5v5_gvg"        groupsize="5"/>
+    <arenaregistrationtype name="crystal_match_test_1v1"      elocategory="none" category="crystal_match_test"         groupsize="1"/>
+    <arenaregistrationtype name="crystal_match_test_2v2"      elocategory="none" category="crystal_match_test"         groupsize="2"/>
+    <arenaregistrationtype name="crystal_match_5v5_gvg"       elocategory="none" category="crystal_match_5v5_gvg"      groupsize="5"/>
   </arenaregistrationtypes>
 
   <arenacategories>
@@ -128,6 +129,20 @@
       <rewards rewardsperday="0"/>
     </arenacategory>
 
+    <arenacategory name="custom_match_city" ruleset="gvg_20v20" cluster="ARENA-City"
+                  matchtype="MATCH_CUSTOM_CITY" displayname="@CUSTOM_MATCH"
+                  startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
+                  elopersecond="10" eloradiusbase="20" minpotentials="1" maxpotentials="200"
+                  scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
+                  scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
+                  minitempoweraverage="0" arenamatchtype="custom" custommatchname="city"
+                  custommatchdisplayname="@CUSTOM_MATCH_RESOURCES">
+      <neededitemroles/>
+      <rewards rewardsperday="0"/>
+    </arenacategory>
+
+
+
     <arenacategory name="custom_match_2v2" ruleset="2v2" cluster="ARENA-FarmLand"
                      matchtype="MATCH_ARENA" displayname="@ARENA_UNRANKED"
                      startingelo="1200" elok="20" subeloweight="1.0" groupeloweight="1.0"
@@ -137,10 +152,7 @@
                      minitempoweraverage="0" arenamatchtype="custom" custommatchname="2v2"
                      custommatchdisplayname="@CUSTOM_MATCH_FARMLAND">
       <neededitemroles/>
-
-      <rewards rewardsperday="0">
-      </rewards>
-
+      <rewards rewardsperday="0"/>
     </arenacategory>
 
     <arenacategory name="custom_match_2v2_gvg" ruleset="2v2" cluster="ARENA-STANDARD"
@@ -150,7 +162,7 @@
                    scoreperelodiff="-5" scorepersecond="2" scorefirsthealer="100"
                    scoregroupbalance="100" scoreunmatchedfullpremade="-1000"
                    minitempoweraverage="0" arenamatchtype="custom" custommatchname="gvg"
-                   custommatchdisplayname="@CUSTOM_MATCH_DEBUG">
+                   custommatchdisplayname="@CUSTOM_MATCH_CITY">
 
       <neededitemroles/>
 
@@ -185,6 +197,7 @@
   </arenacategories>
 
   <arenarules>
+    <arenaruleset name="gvg_20v20" teamsize="20" scorefactor="1.0"/>
     <arenaruleset name="stdgvg" teamsize="5" scorefactor="1.0"/>
     <arenaruleset name="2v2" teamsize="2" scorefactor="1.0"/>
   </arenarules>

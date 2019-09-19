@@ -1,8 +1,13 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_BOSS_LEGENDARY_END_Earthmother_01.unity" unityguid="ed344518524b1e94f9339f48cffca870" editorBoundsMin="-80 -80" editorBoundsMax="80 80" colBoundsMin="-80 -81" colBoundsMax="80 80">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_03">
+    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_05">
       <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_LEGENDARY" pos="-47.5 0 6.5" roty="261">
         <lootchest lootchesttype="KEEPER_CHEST_BOSS_LEGENDARY" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="lootchest_03" type="lootchest" layerId="Layer_06">
+      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_LEGENDARY" pos="-47.5 0 6.5" roty="261">
+        <lootchest lootchesttype="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
@@ -17,14 +22,14 @@
       <layer id="Layer_11" name="Cave_Ocean" />
     </layergroup>
     <layergroup name="ENCOUNTER">
-      <layer id="Layer_03" name="Hard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="28.64 0 -11.54" roty="204">
+      <layer id="Layer_03" name="mob_veteran_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="28.64 0 -11.54" roty="114">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_DRUID" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="32.41 0 -16.89" roty="296">
           <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_DRUID">
             <path>
-              <waypoint pos="32.40815 -16.89" idle="3" pace="WALK" />
+              <waypoint pos="33.8262 -16.46903" idle="3" pace="WALK" />
               <waypoint pos="34.69863 -18.82557" idle="0" pace="WALK" />
               <waypoint pos="34.73688 -47.58763" idle="3" pace="WALK" />
               <waypoint pos="34.69863 -18.82557" idle="0" pace="WALK" />
@@ -33,9 +38,6 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_ENDBOSS_LEGENDARY" pos="-36.52 0 6.71" roty="81">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_ENDBOSS_LEGENDARY" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="36.21 0 -9.09" roty="204">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_GIANT" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="-18.25 0 7.17" roty="286">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
@@ -58,8 +60,62 @@
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="-19.76 0 19.54" roty="257">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_EARTHCHILD" pos="36.21 0 -9.09" roty="204">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_EARTHCHILD_VETERAN" />
+        </tile>
+      </layer>
+      <layer id="Layer_07" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="31.89 0 -53.62" roty="154">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="20.88 0 12.68" roty="69">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="19.86 0 17.76" roty="105">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="32.41 0 -16.89" roty="296">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
+            <path>
+              <waypoint pos="34.19669 -16.85" idle="3" pace="WALK" />
+              <waypoint pos="34.69863 -18.82557" idle="0" pace="WALK" />
+              <waypoint pos="34.73688 -47.58763" idle="3" pace="WALK" />
+              <waypoint pos="34.69863 -18.82557" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="38.08 0 -53.77" roty="210">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="-17.02 0 13.28" roty="272">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-19.76 0 19.54" roty="257">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="-18.25 0 7.17" roty="286">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BOSS_HIGHLIGHT" pos="-36.88 0 8.06" roty="81">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BOSS_HIGHLIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="35.02 0.08 -7.56" rot="358.24 205.87 19.47">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHCHILD" pos="29.97 0 -9.46" roty="142">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_EARTHCHILD" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="Rewards">
+      <layer id="Layer_05" name="reward_veteran">
         <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_LEGENDARY" pos="-47.5 0 6.5" roty="261" id="lootchest_01" type="lootchest">
           <lootchest lootchesttype="KEEPER_CHEST_BOSS_LEGENDARY" />
+        </criticaltile>
+      </layer>
+      <layer id="Layer_06" name="reward_solo">
+        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_LEGENDARY" pos="-47.5 0 6.5" roty="261" id="lootchest_03" type="lootchest">
+          <lootchest lootchesttype="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" />
         </criticaltile>
       </layer>
     </layergroup>
@@ -720,5 +776,6 @@
     <tile name="CRYSTAL_REALM_FX_CLOUDS_MOVING_GROUND_B" pos="-36 -10 -19" roty="218" scale="24.9236 24.92359 24.9236" />
     <tile name="CRYSTAL_REALM_FX_CLOUDS_MOVING_GROUND_B" pos="42 -10 -35" roty="38" scale="24.92361 24.92359 24.92361" />
     <tile name="CRYSTAL_REALM_FX_CLOUDS_MOVING_GROUND_A" pos="57 -11 -12" roty="24" scale="32.30362 32.30359 32.30362" />
+    <tile name="FOREST_GREEN_KPR_THREAT_INDICATOR_GROUND" pos="-7 0 14" roty="270" />
   </tiles>
 </template>
