@@ -4985,6 +4985,51 @@
     <buffovertime type="maxload" value="2.85" target="self" time="0" />
   </activespell>     
   
+  <activespell uniquename="T6_MOUNT_BEETLE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.30" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="1.5" target="self" time="0" />
+    <buffovertime type="magicresistance" value="1.5" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T6_MOUNT_BEETLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="3.15" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T7_MOUNT_BEETLE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.30" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="1.5" target="self" time="0" />
+    <buffovertime type="magicresistance" value="1.5" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T7_MOUNT_BEETLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="2.97" target="self" time="0" />
+  </activespell> 
+  <activespell uniquename="T8_MOUNT_BEETLE_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
+    <buffovertime type="movespeedbonus" value="0.30" target="self" time="0" />
+    <buffovertime type="physicalarmor" value="1.5" target="self" time="0" />
+    <buffovertime type="magicresistance" value="1.5" target="self" time="0" />
+    <buffovertime type="crowdcontrolresistance" value="1" target="self" time="0" />
+    <removeactiveeffects category="movementbuff" target="self" />
+    <spellimmunity category="forcedmovement" target="self" time="0" />
+    <spellimmunity category="buff" target="self" time="0" />
+    <spellimmunity category="movementbuff" target="self" time="0" />
+    <spellimmunity category="heal" target="self" time="0" />
+    <spellimmunity category="buff_damageshield" target="self" time="0" />
+  </activespell>
+  <activespell uniquename="T8_MOUNT_BEETLE_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
+    <buffovertime type="maxload" value="2.85" target="self" time="0" />
+  </activespell>     
 
   <!--Faction Mounts-->
   <activespell uniquename="T5_MOUNT_HORSE_UNDEAD_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9">
@@ -5849,10 +5894,89 @@
   <activespell uniquename="MOUNTSPELL_EAGLE_LIGHTNING_EFFECT" target="enemy" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="instant" castanimation="cast_standardattack" uisprite="STORMSHIELD" assessment="negative" maxstack="1" >    
     <directattributechange target="enemy" attribute="health" effecttype="magic" change="-5.00" />
     <interruptcast target="enemy" />
-  </activespell>  
-  
+  </activespell>
 
-
+  <!-- Beetle Mount -->
+  <!-- Q -->
+  <activespell uniquename="MOUNTSPELL_BEETLE_SLAM" target="enemy" castingtime="0" keepmovingaftercast="false" hitdelay="0.4" standtime="1" disruptionfactor="1" recastdelay="5" energyusage="4" uisprite="LIVINGARMOR" castrange="4" uitype="damage" category="damage" castanimation="mount_beetle_slam" animmode="SingleAnim" cancelautoattackaftercasting="true" adjustgroundtargettorange="true" requireslineofsight="false" maxstack="1" maxcharges="3">
+    <directattributechange target="enemy" attribute="health" change="-77.81" effecttype="physical" />
+    <buffovertime target="enemy" type="bonusccrvsplayers" value="-0.20" time="8" />
+    <buffovertime target="enemy" type="bonusccrvsmobs" value="-0.20" time="8" />    
+    <applyspell target="self" spell="MOUNTSPELL_BEETLE_SLAM_EFFECT" maxeffectareatargets="20" />
+    <spellvfx target="target" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/DamageImpactEffect" socket="damage" constraintpreset="pointconstraint" timeoffset="0.4" />
+    <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_beetle_slam_buff" socket="floor" constraintpreset="inworld" timeoffset="0.4" />
+    <AudioInfo name="SPELL_BEETLE_SLAM" />
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_BEETLE_SLAM_EFFECT" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="LIVINGARMOR" category="buff" maxcharges="1" maxstack="1" showrange="true" assessment="positive">
+    <buffovertime target="friendall" type="bonusdefensevsplayers" value="0.15" time="8" effectarearadius="12" />
+    <buffovertime target="friendall" type="bonusdefensevsmobs" value="0.15" time="8" effectarearadius="12" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_buff_shield_blue" socket="ground" constraintpreset="pointconstraint" />
+  </activespell>
+  <!-- W -->
+  <activespell uniquename="MOUNTSPELL_BEETLE_BUZZ" target="self" castingtime="0.5" keepmovingaftercast="false" recastdelay="30" energyusage="20" castrange="0" hitdelay="0" standtime="0.2" uitype="debuff" uisprite="SMOKEBOMB" castanimation="mount_beetle_buzz" category="debuff" maxstack="1" assessment="negative">
+      <channelingspell initialeffectinterval="0" effectinterval="1" effectcount="6" damagecancelscasting="false" energyusage="0" disruptionfactor="0" channelinganimation="mount_beetle_buzz_channel">
+      <spelleffectarea target="enemy" effect="MOUNTSPELL_BEETLE_BUZZ_EFFECT" visible="true" linktochanneling="true" time="5" removeonleave="true">
+        <area>
+          <shape>
+            <circle radius="10">
+              <spellvfx prefab="FX/ClientPrefabs/fx_spell_beetle_buzz_smoke_area" event="SpellEffectAreaInit" size="1.0" target="target" socket="centerGround"  />
+            </circle>
+          </shape>
+        </area>
+      </spelleffectarea>
+      <AudioInfo name="SPELL_BEETLE_CHANNEL_BUZZ" />
+    </channelingspell>
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_BEETLE_BUZZ_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="debuff" uisprite="SMOKEBOMB" category="debuff" maxstack="1" assessment="negative">
+    <silence target="enemy" time="5" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
+    <buffovertime target="enemy" type="movespeedbonus" value="-0.1" time="5" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx" socket="halo" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" />
+  </activespell>
+  <!-- E -->
+  <activespell uniquename="MOUNTSPELL_BEETLE_CHARGE" target="ground" keepmovingaftercast="false" castingtime="0.5" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="30" energyusage="15" castrange="20" uitype="movement" uisprite="WINDWALL" category="instant" adjustgroundtargettorange="true" showrange="true" castanimation="mount_beetle_charge_climax" assessment="positive" hidespelleffecticon="true" animmode="SingleAnim" interruptiblebyspell="false">
+    <dummy target="self" time="1" showarearadius="true" effectarearadius="6" />
+    <invincibility target="self" time="1.2" />
+    <spellimmunity target="self" category="forcedmovement" time="1.2" />
+    <spellimmunity target="self" category="debuff" time="1.2" />
+    <spellimmunity target="self" category="crowdcontrol" time="1.2" />
+    <pulsingspell target="self" spell="MOUNTSPELL_BEETLE_CHARGE_BUFFAREA" count="4" initialinterval="0.0" interval="0.3"/>
+    <dash mindistance="8" movespeed="18" animID="mount_beetle_charge" scaleAnim="true" ruleset="constanttime" standtime="0.5" endeffect="MOUNTSPELL_BEETLE_CHARGE_IMPACT">
+      <IfOwnLoadPercentIsBelow value="150" />
+    </dash>
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_dust_01" socket="root_mount" constraintpreset="inworld" timeoffset="0.1" />
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_spell_beetle_charge" socket="root_mounts" />
+    <AudioInfo name="SPELL_BEETLE_CHARGE" />
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_BEETLE_CHARGE_BUFFAREA" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="movement" category="instant" assessment="positive">
+    <spelleffectarea target="friendother" position="atcaster" visible="false" effect="MOUNTSPELL_BEETLE_CHARGE_BUFFAREA_EFFECT" time="3" rotation="castdirection">
+      <area>
+        <shape>
+          <rectangle height="6" width="8"/>
+        </shape>
+      </area>
+    </spelleffectarea>
+    <spelleffectarea target="ground" position="atcaster" visible="false" effect="NONE" time="6" rotation="castdirection">
+      <area>
+        <shape>
+          <rectangle height="6" width="8">
+            <spellvfx prefab="FX/ClientPrefabs/fx_spell_beetle_charge_area" event="SpellEffectAreaInit" size="1.0" target="target" socket="centerGround" constraintpreset="inWorldWithRotate" fadeouttime="1.0"  />
+          </rectangle>
+        </shape>
+      </area>
+    </spelleffectarea>  
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_BEETLE_CHARGE_BUFFAREA_EFFECT" target="friendother" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH_BUFF" category="buff" assessment="positive">
+    <buffovertime target="friendother" type="movespeedbonus" value="0.5" time="6"/>
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx" socket="floor" />
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_BEETLE_CHARGE_IMPACT" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="movement" uisprite="WINDWALL" category="instant" hidespelleffecticon="true">
+    <removeactivespell spell="MOUNTSPELL_BEETLE_CHARGE" target="self" />
+    <directattributechange target="enemy" attribute="health" change="-100" effecttype="physical" effectarearadius="6"/>
+    <knockback target="enemy" distance="0.8" movespeed="1.25" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ruleset="constanttime" effectarearadius="6" /> <!-- knock up duration: 0.64s -->
+    <spellvfx target="ground" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_keeper_ram_impact" socket="floor" constraintpreset="inWorldWithRotate" timeoffset="0.1" />
+    <AudioInfo name="MELEE_SMALLCAST_MEDIUM_ROCK_IMPACT" />
+  </activespell>
 
   <!-- Rare Mount Spells -->  
   <activespell uniquename="MOUNTSPELL_TOADJUMP" target="ground" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="2" energyusage="0" castrange="16" uitype="movement" uisprite="DODGE" category="movementbuff" adjustgroundtargettorange="true" showrange="true" castanimation="none" assessment="positive">
@@ -6215,8 +6339,61 @@
   <togglespell uniquename="MOUNTSPELL_SPRINT_SILENCE" uisprite="MAGIC_INTERRUPT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="positive">
     <silence target="self" time="4" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx" socket="halo" />
-  </togglespell>  
+  </togglespell>
+
+  <activespell uniquename="MOUNTSPELL_FLY_BEETLE_T6" uisprite="SPRINT" target="self" keepmovingaftercast="false" castingtime="0.5" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="15" energyusage="0" castrange="0" castanimation="mount_beetle_fly_liftup" category="instant" uitype="movement" assessment="positive" hidespelleffecticon="true" animmode="SingleAnim">
+    <channelingspell allowmovement="true" allowcancel="true" disruptionfactor="0" channelinganimation="mount_beetle_fly_channel" overrideRotation="false" effectinterval="1" effectcount="9999" initialeffectinterval="0" energyusage="0">
+      <buffovertime type="movespeedbonus" value="0.8" target="self" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsmobs" value="-2" time="1" linktochanneling="true" />      
+      <buffovertime target="self" type="bonusccrvsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusccrvsmobs" value="-2" time="1" linktochanneling="true" />         
+      <spellimmunity linktochanneling="true" spellname="MOUNTSPELL_FLY_BEETLE_SILENCE" target="self" time="1"/>
+      <applyspell target="self" spell="MOUNTSPELL_FLY_BEETLE_SILENCE_CHECK"/>
+      <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+      <AudioInfo name="SPELL_BEETLE_CHANNEL_FLIGHT" />
+    </channelingspell>
+    <AudioInfo name="SPELL_BEETLE_CAST_FLY"/>
+  </activespell>
+
+  <activespell uniquename="MOUNTSPELL_FLY_BEETLE_T7" uisprite="SPRINT" target="self" keepmovingaftercast="false" castingtime="0.5" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="15" energyusage="0" castrange="0" castanimation="mount_beetle_fly_liftup" category="instant" uitype="movement" assessment="positive" hidespelleffecticon="true" animmode="SingleAnim">
+    <channelingspell allowmovement="true" allowcancel="true" disruptionfactor="0" channelinganimation="mount_beetle_fly_channel" overrideRotation="false" effectinterval="1" effectcount="9999" initialeffectinterval="0" energyusage="0">
+      <buffovertime type="movespeedbonus" value="0.85" target="self" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsmobs" value="-2" time="1" linktochanneling="true" />      
+      <buffovertime target="self" type="bonusccrvsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusccrvsmobs" value="-2" time="1" linktochanneling="true" /> 
+      <spellimmunity linktochanneling="true" spellname="MOUNTSPELL_FLY_BEETLE_SILENCE" target="self" time="1"/>
+      <applyspell target="self" spell="MOUNTSPELL_FLY_BEETLE_SILENCE_CHECK"/>
+      <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+      <AudioInfo name="SPELL_BEETLE_CHANNEL_FLIGHT" />
+    </channelingspell>
+    <AudioInfo name="SPELL_BEETLE_CAST_FLY"/>
+  </activespell>
+
+  <activespell uniquename="MOUNTSPELL_FLY_BEETLE_T8" uisprite="SPRINT" target="self" keepmovingaftercast="false" castingtime="0.5" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="15" energyusage="0" castrange="0" castanimation="mount_beetle_fly_liftup" category="instant" uitype="movement" assessment="positive" hidespelleffecticon="true" animmode="SingleAnim">
+    <channelingspell allowmovement="true" allowcancel="true" disruptionfactor="0" channelinganimation="mount_beetle_fly_channel" overrideRotation="false" effectinterval="1" effectcount="9999" initialeffectinterval="0" energyusage="0">
+      <buffovertime type="movespeedbonus" value="0.9" target="self" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusdefensevsmobs" value="-2" time="1" linktochanneling="true" />      
+      <buffovertime target="self" type="bonusccrvsplayers" value="-2" time="1" linktochanneling="true" />
+      <buffovertime target="self" type="bonusccrvsmobs" value="-2" time="1" linktochanneling="true" /> 
+      <spellimmunity linktochanneling="true" spellname="MOUNTSPELL_FLY_BEETLE_SILENCE" target="self" time="1"/>
+      <applyspell target="self" spell="MOUNTSPELL_FLY_BEETLE_SILENCE_CHECK"/>
+      <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40" />
+      <AudioInfo name="SPELL_BEETLE_CHANNEL_FLIGHT" />
+    </channelingspell>
+    <AudioInfo name="SPELL_BEETLE_CAST_FLY"/>
+  </activespell>  
   
+  <activespell uniquename="MOUNTSPELL_FLY_BEETLE_SILENCE_CHECK" uisprite="MAGIC_INTERRUPT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.1" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="negative" hidespelleffecticon="true">
+    <pulsingspell target="self" spell="MOUNTSPELL_FLY_BEETLE_SILENCE" initialinterval="0" interval="0.1" count="20"/>
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_FLY_BEETLE_SILENCE" uisprite="MAGIC_INTERRUPT" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="movement" assessment="negative">
+    <removeactivespell target="self" spell="MOUNTSPELL_FLY_BEETLE_SILENCE_CHECK"/>
+    <silence target="self" time="4" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx" socket="halo" />
+  </activespell>
   <!-- Siege Mounts -->
   <activespell uniquename="MOUNTSPELL_BALLISTA_MULTISHOT" target="ground" castingtime="1" disruptionfactor="0" standtime="0.5" recastdelay="2" energyusage="4" castrange="26" category="damage" uitype="damage" uisprite="ARROW_MULTISHOT" castanimation="mount_ability_01" animmode="SingleAnim" adjustgroundtargettorange="true">
     <spellindicationarea target="enemy" position="atcaster" visible="false">
@@ -6704,6 +6881,10 @@
     <generateloot target="self" lootlist="UNIQUE_LOOTCHEST_ADC_SEP2019_LOOT"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>   
+  <activespell uniquename="UNIQUE_LOOTCHEST_ADC_OCT2019_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <generateloot target="self" lootlist="UNIQUE_LOOTCHEST_ADC_OCT2019_LOOT"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>   
 
   <!-- Adventurer Challenge - Avatar Rings -->
   <activespell uniquename="UNIQUE_AVATARRING_ADC_NOV2018_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
@@ -6750,6 +6931,16 @@
     <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_ADC_SEP2019" target="self"/>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
   </activespell>     
+  <activespell uniquename="UNIQUE_AVATARRING_ADC_OCT2019_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_ADC_OCT2019" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>     
+
+  <!-- ADC Token Avatar Rings -->  
+  <activespell uniquename="UNIQUE_AVATARRING_ADC_TOKENLOCKED_01_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockavatar unlocktype="avatarring" unlockname="AVATARRING_ADC_TOKENLOCKED_01" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint" />
+  </activespell>   
   
   <!-- GvG Season Avatar Rings -->
   <activespell uniquename="UNIQUE_AVATARRING_GVGSEASONREWARD_1ST_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
@@ -7886,7 +8077,7 @@
       <IfSpellActive spell="SPEEDARCHER_BUFF" casterchargesonly="true" who="Caster" atleastcharges="6" />
     </applyeffectoneventactive>
   </activespell>
-  <activespell uniquename="SPEEDARCHER_MAXSTACK" target="enemy" castingtime="0" hitdelay="0.1" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" uisprite="BUFF_DAMAGE" castrange="0" uitype="buff" category="buff" triggerautoattackcooldown="false" assessment="negative">
+  <activespell uniquename="SPEEDARCHER_MAXSTACK" target="enemy" castingtime="0" hitdelay="0.1" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" uisprite="BUFF_DAMAGE" castrange="0" uitype="debuff" category="debuff" triggerautoattackcooldown="false" assessment="negative">
     <buffovertime target="enemy" type="physicalarmor" value="-0.15" time="3" />
     <buffovertime target="enemy" type="magicresistance" value="-0.15" time="3" />
     <spellvfx target="target_notCaster" event="OnCastFinished" alive="none" prefab="Prefabs/SpellEffects/SpellImpactVfx/ShieldDebuffImpactVfx" socket="damage" constraintpreset="pointconstraint" />
@@ -8694,7 +8885,7 @@
   </activespell>
   
   <!-- Artefact Level 3 -->
-  <activespell uniquename="CURSEULTIMATE" target="ground" castingtime="2.5" keepmovingaftercast="false" hitdelay="0" standtime="0.5" disruptionfactor="1" recastdelay="30" energyusage="31" castrange="12" castanimation="cast_undirected_long" uisprite="ENFEEBLEBLADES" uitype="damage" category="damage" showrange="true" assessment="negative" adjustgroundtargettorange="true" maxstack="1">
+  <activespell uniquename="CURSEULTIMATE" target="ground" castingtime="2.5" keepmovingaftercast="false" hitdelay="0" standtime="0.5" disruptionfactor="1" recastdelay="30" energyusage="31" castrange="12" castanimation="cast_undirected_long" uisprite="ENFEEBLEBLADES" uitype="damage" category="damage" showrange="true" assessment="negative" adjustgroundtargettorange="true" hidespelleffecticon="true" maxstack="1">
     <spellindicationarea target="enemy" position="attarget" visible="true">
       <area>
         <shape>
@@ -8705,15 +8896,20 @@
         </fill>
       </area>
     </spellindicationarea>
-    <directattributechange target="enemy" attribute="health" effecttype="magic" change="-120.00" effectarearadius="13" targetcountvaluebonusfactor="0.1" showarearadius="true" />
-    <buffovertime target="enemy" type="physicalarmor" value="-0.24" time="6" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
-    <buffovertime target="enemy" type="magicresistance" value="-0.24" time="6" effectarearadius="13" targetcountvaluebonusfactor="0.1" />
-    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" socket="damage" constraintpreset="pointconstraint" />    
+    <attributechangeovertime target="enemy" attribute="health" effecttype="magic" change="-18.00" effectarearadius="13" targetcountvaluebonusfactor="0.1" initialinterval="1" interval="1" count="6" showarearadius="true" reflectdamage="never" />
+    <applyspell spell="CURSEULTIMATE_DEBUFF" target="enemy" effectarearadius="13" />
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_demonic_projectile_impact" socket="damage" constraintpreset="pointconstraint" />  
     <spellvfx event="OnCastFinished" target="ground" prefab="FX/ClientPrefabs/fx_spell_demonic_area_ultimate" socket="ground" constraintpreset="pointconstraint" />
     <spellvfx target="self" alive="toCastingEnd" event="OnCastStart" prefab="FX/ClientPrefabs/fx_spell_demonic_area_ground" socket="root" constraintpreset="inworld" />
     <spellvfx target="self" alive="toCastingEnd" event="OnCastStart" prefab="FX/ClientPrefabs/fx_spell_demonic_area_trail" socket="floor" constraintpreset="inWorldWithRotate" />
     <spellvfx target="self" event="OnCastStart" alive="toCastingEnd" prefab="FX/ClientPrefabs/fx_spell_demonic_area_weapon" socket="mainhandprojectile" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_cursed" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_CURSED_CAST_MEDIUM" />    
+  </activespell>
+  <activespell uniquename="CURSEULTIMATE_DEBUFF" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="ENFEEBLEBLADES" uitype="damage" category="debuff" showrange="true" assessment="negative" adjustgroundtargettorange="true" maxstack="1">
+    <buffovertime target="enemy" type="physicalarmor" value="-0.24" time="6" targetcountvaluebonusfactor="0.1" />
+    <buffovertime target="enemy" type="magicresistance" value="-0.24" time="6" targetcountvaluebonusfactor="0.1" />
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
   </activespell>
 
 
@@ -9314,7 +9510,7 @@
   
   <!-- Prototype Spell -->
   
-  <activespell uniquename="FIREARTILLERY" target="enemy" castingtime="1.5" keepmovingaftercast="false" hitdelay="0.1" standtime="0.5" disruptionfactor="1" recastdelay="15" energyusage="16" castrange="18" uisprite="FIRE_ARTILLERY" uitype="damage" category="damage" castanimation="none" showrange="true" unlockedtoequip="true" assessment="negative">   
+  <activespell uniquename="FIREARTILLERY" target="enemy" castingtime="1.5" keepmovingaftercast="false" hitdelay="0.1" standtime="0.5" disruptionfactor="1" recastdelay="15" energyusage="16" castrange="18" uisprite="FIRE_ARTILLERY" uitype="damage" category="damage" castanimation="none" showrange="true" unlockedtoequip="false" assessment="negative">   
     <channelingspell channelinganimation="channel_levitate" initialeffectinterval="0" effectinterval="2" effectcount="3" energyusage="0" disruptionfactor="0" >
       <beamvfx alive="whileCastingAndChanneling" event="OnCastStart" target="target" prefab="FX/ClientPrefabs/fx_spell_killshot" >
         <!-- FX/ClientPrefabs/fx_beam_fire -->
@@ -10247,7 +10443,7 @@
     <scalefx scalevalue="1.8" />
     <AudioInfo name="SPELL_GIANT" />
   </activespell>
-  <activespell uniquename="GIANTSTEPS_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="GIANTSTEPS" category="instant">
+  <activespell uniquename="GIANTSTEPS_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="GIANTSTEPS" category="crowdcontrol">
     <buffovertime target="enemy" type="movespeedbonus" value="-0.5" time="10" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" donttriggerdiminishingreturns="true" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" />
   </activespell>
@@ -10294,7 +10490,7 @@
     <dummy target="self" time="10" />
   </activespell>    
   <activespell uniquename="HOLY_HEALINGSICKNESS_EFFECT" target="self" category="instant" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0" recastdelay="0" energyusage="0" castrange="0" uitype="debuff" uisprite="CRUSH_SPIRIT" neutraleffect="true" buffpriority="10">
-    <buffovertime type="healmodifier" value="0.25" target="self" time="10" />
+    <buffovertime type="healmodifier" value="-0.25" target="self" time="10" />
   </activespell>  
   
   
@@ -10950,7 +11146,7 @@
     <dummy target="self" time="18" />
   </activespell>    
   <activespell uniquename="NATURE_HEALINGSICKNESS_EFFECT" target="self" category="instant" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0" recastdelay="0" energyusage="0" castrange="0" uitype="debuff" uisprite="CRUSH_SPIRIT" neutraleffect="true" buffpriority="10">
-    <buffovertime type="healmodifier" value="0.25" target="self" time="18" />
+    <buffovertime type="healmodifier" value="-0.25" target="self" time="18" />
   </activespell>  
   
   <!-- *** SLOT 1 *** -->    
@@ -11033,7 +11229,7 @@
   </activespell>
   <!-- *** SLOT 2 *** -->
   <!-- Thorns -->
-  <activespell uniquename="THORNS" target="self" bindtoitem="true" castingtime="0.6" keepmovingaftercast="true" hitdelay="0" standtime="0.2" disruptionfactor="1" recastdelay="6" castrange="0" energyusage="8" uisprite="THORNS" uitype="buff" category="buff" castanimation="cast_heal" spelleffectanimation="none" hidespelleffecticon="true">
+  <activespell uniquename="THORNS" target="self" bindtoitem="true" castingtime="0.4" keepmovingaftercast="false" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="5" castrange="0" energyusage="8" uisprite="THORNS" uitype="buff" category="buff" castanimation="cast_heal" spelleffectanimation="none" hidespelleffecticon="true">
     <applyspell target="self" spell="THORNS_STACK"/>
     <applyspell target="self" spell="THORNS_STACK"/>
     <applyspell target="self" spell="THORNS_STACK"/>
@@ -11055,12 +11251,12 @@
     </removeactivespell>
     <directattributechange target="enemy" attribute="health" change="-52" effectarearadius="3" effecttype="magic"/>
     <applyspell target="enemy" spell="THORNS_ATTACK_FX"/>
-    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" />
     <AudioInfo name="SPELL_NATURE_HIT_THORNS" />
   </activespell>
   <activespell uniquename="THORNS_ATTACK_FX" target="enemy" castingtime="0" disruptionfactor="0" recastdelay="0" castrange="0" energyusage="0" uisprite="THORNS" uitype="damage" category="instant">
     <nop target="enemy" />
-    <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_dryad_tendrils" size="1.7" socket="floor" constraintpreset="pointconstraint" duration="0.1" fadeouttime="0.5" />
+    <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_dryad_tendrils_impact" size="1.7" ignoresocketscale="true" socket="floor" constraintpreset="inworld" duration="0.1" fadeouttime="0.1" />
   </activespell>
   <activespell uniquename="THORNS_REFLECT" target="enemy" castingtime="0" disruptionfactor="0" recastdelay="0" castrange="0" energyusage="0" uisprite="THORNS" uitype="damage" category="damage">
     <applyspell spell="THORNS_REFLECT_MOB" target="enemy">
@@ -11073,7 +11269,7 @@
   
   <activespell uniquename="THORNS_REFLECT_MOB" target="enemy" castingtime="0" disruptionfactor="0" recastdelay="0" castrange="0" energyusage="0" uisprite="THORNS" uitype="damage" category="damage">
     <directattributechange target="enemy" attribute="health" change="-12" effecttype="magic"/>
-    <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_dryad_tendrils" socket="damage" constraintpreset="pointconstraint" size="0.5" duration="0.5" fadeouttime="0.5"/>
+    <spellvfx target="target" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_dryad_tendrils_impact" socket="damage" constraintpreset="pointconstraint" size="0.5" duration="0.5" fadeouttime="0.5"/>
     <spellvfx target="target" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_magic_projectile_nature_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
 
@@ -11192,7 +11388,7 @@
     </channelingspell>
     <AudioInfo name="SPELL_NATURE_CAST_MEDIUM" />
   </activespell>
-  <activespell uniquename="NATURERESILIENCE" target="friendall" castingtime="0" keepmovingaftercast="false" hitdelay="0" standtime="0.2" disruptionfactor="1" recastdelay="20" energyusage="12" uisprite="REJUVMUSHROOM" castrange="11" uitype="buff" category="buff" castanimation="cast_heal" maxstack="5" showrange="true" unlockedtoequip="false" assessment="positive">
+  <activespell uniquename="NATURERESILIENCE" target="friendall" castingtime="0" keepmovingaftercast="false" hitdelay="0" standtime="0.2" disruptionfactor="1" recastdelay="15" energyusage="12" uisprite="REJUVMUSHROOM" castrange="11" uitype="buff" category="buff" castanimation="cast_heal" maxstack="5" showrange="true" unlockedtoequip="false" assessment="positive">
     <buffovertime target="friendall" type="physicalarmor" value="0.24" time="8" />
     <buffovertime target="friendall" type="magicresistance" value="0.24" time="8" />
     <buffovertime target="friendall" type="healmodifier" value="0.40" time="8" />
@@ -11813,7 +12009,7 @@
   </channelingspell>
   </activespell>
 
-  <activespell uniquename="GROUNDSPEAR" target="ground" keepmovingaftercast="false" castingtime="0" hitdelay="0.4" standtime="0.8" disruptionfactor="1" recastdelay="12" energyusage="10" castrange="12" uitype="damage" uisprite="GROUND_SPEAR" castanimation="melee_groundslam" category="damage" animmode="SingleAnim" assessment="negative" showrange="true" adjustgroundtargettorange="true" unlockedtoequip="false">    
+  <activespell uniquename="GROUNDSPEAR" target="ground" keepmovingaftercast="false" castingtime="0" hitdelay="0.4" standtime="0.8" disruptionfactor="1" recastdelay="12" energyusage="10" castrange="12" uitype="damage" uisprite="GROUND_SPEAR" castanimation="melee_groundslam" category="crowdcontrol" animmode="SingleAnim" assessment="negative" showrange="true" adjustgroundtargettorange="true" unlockedtoequip="false">    
     <spellindicationarea target="enemy" position="attarget" visible="true">
       <area>
         <shape>
@@ -12733,7 +12929,18 @@
   <activespell uniquename="CARTWHEEL_END" target="self" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="DODGE" castanimation="none" category="crowdcontrol" adjustgroundtargettorange="true" showrange="true" hidespelleffecticon="true">
     <removeactivespell spell="CARTWHEEL" target="self" casterchargesonly="true" />
   </activespell>
-  <activespell uniquename="CONCUSSIVEBLOW" target="enemy" castingtime="0" hitdelay="0.2" standtime="0.3" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="3" uitype="buff" uisprite="STUN" castanimation="melee_groundslam" category="buff" showrange="true" maxcharges="3" assessment="positive">
+  <activespell uniquename="CONCUSSIVEBLOW" target="enemy" castingtime="0" hitdelay="0.2" standtime="0.3" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="3" uitype="buff" uisprite="STUN" castanimation="melee_groundslam" category="damage" showrange="true" assessment="negative">
+    <directattributechange target="enemy" attribute="health" change="-90.00" effecttype="physical" />
+    <applyspell target="self" spell="CONCUSSIVEBLOW_STACK" />
+    <applyspell target="enemy" spell="CONCUSSION">
+      <IfSpellActive spell="CONCUSSIVEBLOW_STACK" casterchargesonly="true" atleastcharges="2" who="Caster" />
+    </applyspell>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_taunt" socket="halo" constraintpreset="pointconstraint" />    
+    <spellvfx target="self" event="OnCastStart" alive="none" prefab="Prefabs/SpellEffects/SpellCastEffectVfx/WhiteTrail" socket="mainhand" duration="0.300" />
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
+    <AudioInfo name="MELEE_SMALLCAST_STAFF" />
+  </activespell>
+  <activespell uniquename="CONCUSSIVEBLOW_STACK" target="self" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="STUN" category="buff" maxcharges="3" assessment="positive">
     <directattributechange target="enemy" attribute="health" change="-90.00" effecttype="physical" />
     <applyspell target="enemy" spell="CONCUSSION">
       <IfSpellActive spell="CONCUSSIVEBLOW" casterchargesonly="true" atleastcharges="2" who="Caster" />
@@ -12745,10 +12952,10 @@
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="Prefabs/SpellEffects/SpellCastEffectVfx/WhiteTrail" socket="mainhand" duration="0.300" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_SMALLCAST_STAFF" />
-  </activespell>
+  </activespell>  
   <activespell uniquename="CONCUSSION" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="STUN" castanimation="melee_piercestrike" category="crowdcontrol">
     <stun target="enemy" time="1.43" damagebreakseffect="false" />
-    <removeactivespell target="self" spell="CONCUSSIVEBLOW" />
+    <removeactivespell target="self" spell="CONCUSSIVEBLOW_STACK" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_status_stun" socket="halo" constraintpreset="pointconstraint" />
   </activespell>
   <!-- *** SLOT 2 *** -->
@@ -13249,8 +13456,7 @@
     <buffovertime target="self" type="magicspelldamagebonus" value="0.2" time="8" />
     <buffovertime target="self" type="physicalattackdamagebonus" value="0.2" time="8" />
     <buffovertime target="self" type="magicattackdamagebonus" value="0.2" time="8" />
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_haste" socket="offhand" />
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_haste" socket="mainhand" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_haste" socket="floor" />
     <AudioInfo name="SPELL_SELF_BUFF" />
   </activespell>
   <!-- Level 3 -->
@@ -13455,14 +13661,11 @@
       <IfTargetType type="mob"/>
     </applyspell>
     <applyspell spell="TAUNT_EFFECT_PVP" target="enemy">
-      <IfTargetType type="mob"/>
+      <IfTargetType type="player" />
     </applyspell>
     <AudioInfo name="SPELL_TAUNT"/>
   </activespell>
   <activespell uniquename="TAUNT_EFFECT_PVE" target="enemy" hidespelleffecticon="true" castingtime="0.0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="TAUNT" category="instant" assessment="positive">
-    <applyspell spell="TAUNT_PVE" target="enemy">
-      <IfTargetType type="mob"/>
-    </applyspell>
     <matchhighestthreatlevel target="enemy" />
     <directattributechange attribute="health" change="-1" target="enemy" />
     <changeaggro target="self" value="200" aggroradius="5" />
@@ -13939,7 +14142,7 @@
   
   <!-- Level 3 -->
   <activespell uniquename="SUMMONER_HEAL" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="30" uisprite="HEAL_SELF" energyusage="0" castrange="11" uitype="heal" castanimation="none" category="heal" assessment="positive">
-    <directattributechange target="friendall" attribute="health" change="0.15" changetype="relative" effectarearadius="4" />
+    <directattributechange target="friendall" attribute="health" change="0.10" changetype="relative" effectarearadius="4" />
     <removeactiveeffects category="damage" target="friendall" effectarearadius="4" />
     <spellvfx target="target" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact" socket="floor" constraintpreset="pointconstraint" timeoffset="0" />
     <AudioInfo name="SPELL_CLEANSE_IMPAIRMENT"/>
@@ -14858,7 +15061,7 @@
   <activespell uniquename="PAINSPRINT" bindtoitem="true" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="50" energyusage="0" castrange="0" uisprite="SPEAR_PURGE" category="movementbuff" uitype="movement" castanimation="none" assessment="positive">
     <buffovertime type="movespeedbonus" value="0.5" target="self" time="8" />
     <buffovertime type="maxloadbonus" target="self" value="2" time="8" />
-    <applyeffectoneventactive event="ReceiveDamage" target="self" applyeffecttarget="self" spell="PAINSPRINT_EFFECT" count="3" time="8" />
+    <applyeffectoneventactive event="ReceiveEnemyDamage" target="self" applyeffecttarget="self" spell="PAINSPRINT_EFFECT" count="3" time="8" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx" socket="floor" />
     <AudioInfo name="SPELL_SELF_BUFF"/>
   </activespell>
@@ -39806,6 +40009,549 @@
   <activespell uniquename="MOB_RD_KEEPER_WITCH_EXPLOSION_SOLO_EFFECT" target="enemy" castingtime="0" hitdelay="0.64" standtime="1.6" recastdelay="3" energyusage="0" castrange="5" castanimation="melee_standardstrike" animmode="SingleAnim" category="damage" uitype="damage">
     <directattributechange target="enemy" attribute="health" change="-900"/>
   </activespell>
+  <!-- Halloween Boss -->
+  <!-- Bloody Axe -->
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_BLEED" target="self" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="0.0" recastdelay="45" energyusage="0" castrange="1" uitype="buff" uisprite="AXE_DOT" category="instant" assessment="positive">
+    <applyeffectoneventactive event="AutoAttack" target="self" applyeffecttarget="enemy" count="9999" spell="MOB_HALLOWEEN_BOSS_BLEED_EFFECT" time="0"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_BLEED_EFFECT" target="enemy" energyusage="0" castingtime="0" castrange="0" recastdelay="0" category="damage" uitype="damage" maxcharges="3" uisprite="AXE_DOT">
+    <attributechangeovertime target="enemy" attribute="health" effecttype="physical" change="-15" count="8" initialinterval="0.5" interval="1"/>
+    <spelleffectfx prefab="fx/clientprefabs/fx_dot_bloody_01" socket="damage" constraintpreset="pointconstraint" />
+    <spelleffectfx prefab="fx/clientprefabs/fx_dot_bloody_01_ground" socket="floor" constraintpreset="pointconstraint" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_debuff_stack_bleed" socket="floor" constraintpreset="pointconstraint" fadeouttime="0.1">
+      <statemapping vfxstate="1" charge="1" />
+      <statemapping vfxstate="2" charge="2" />
+      <statemapping vfxstate="3" charge="3" />
+    </spelleffectfx>
+  </activespell>
+  <!-- Fear Aura -->
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_AURA" target="enemy" castingtime="0.7" hitdelay="0" standtime="0.0" disruptionfactor="0.0" recastdelay="30" energyusage="0" castrange="30" castanimation="cast_horn" uitype="movement" uisprite="BARRIER_DEMONIC" category="forcedmovement" interruptiblebyspell="false">
+    <pulsingspell target="enemy" spell="MOB_HALLOWEEN_BOSS_FEAR_AURA_EFFECT" initialinterval="0" interval="0.2" count="25" />
+    <spelleffectfx socket="floor" prefab="FX/ClientPrefabs/fx_spell_demonic_fear_area" constraintpreset="pointconstraint" />
+    <AudioInfo name="SPELL_HALLOWEEN_BOB_LAUGH" />
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_FEAR_AURA_EFFECT" target="enemy" energyusage="0" castingtime="0" castrange="0" recastdelay="0" uisprite="FEAR" category="forcedmovement" uitype="debuff" >
+    <forcedmovement target="enemy" initialdirection="random" movespeed="12" mindirectionchangetime="9" maxdirectionchangetime="9" movespeedpreset="run" effectarearadius="4" time="1" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true"/>
+    <spellimmunity spellname="MOB_HALLOWEEN_BOSS_FEAR_AURA_EFFECT" target="enemy" effectarearadius="4" time="1.2"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_status_fear" socket="halo" size="1" constraintpreset="pointconstraint" />
+    <AudioInfo name="SPELL_FEAR_HIT" />
+  </activespell>
+  <!-- Skull Stampede -->
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE" target="enemy" castingtime="1.5" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" interruptiblebyspell="false" spelleffectanimation="whirlwind">
+    <applyspell target="self" spell="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_DANCEDELAY" castablewhenstunned="true"/>
+    <applyspell target="enemy" spell="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_STUN_PREP" castablewhenstunned="true"/>
+    <applyspell target="enemy" spell="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_STUN" castablewhenstunned="true"/>
+    <stun target="self" time="6.2" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" ignoreabilitypowerscaling="true"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_STUN_PREP" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant">
+    <removeactivespell target="enemy" spell="BATTLEFRENZY" castablewhenstunned="true"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_STUN" target="enemy" castingtime="0" hitdelay="0.1" standtime="0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant">
+    <stun target="enemy" time="6.2" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" ignoreabilitypowerscaling="true" castablewhenstunned="true"/>
+    <spellimmunity target="enemy" spellname="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" time="9.2" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" ignoreabilitypowerscaling="true" castablewhenstunned="true"/>
+    <spellvfx target="target" event="OnSpellHit" alive="whileCastingAndChanneling" prefab="FX/ClientPrefabs/fx_spell_keeper_witch_heal_silent" socket="floor" duration="6.2"/> 
+    <tintfx color="0, 255, 150, 100"/>
+    <AudioInfo name="SPELL_HIT_STUN" />
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA1" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="20">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="13">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="11">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="4">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="2">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-1">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-3.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-11">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-19">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA2" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="18">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="15.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="13.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="11">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="2.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="0">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-7">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-9">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-17">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA3" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="19">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="16.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="9">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="7">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="2.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-7">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-17.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-20">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA4" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="18">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="15.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="8">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="6">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-0.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-3">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-13.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-15.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-18">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA5" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="19">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="17">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="14.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="12">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="6">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-4">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-6">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-8.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-10.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-20">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA6" target="self" castingtime="0" hitdelay="0" standtime="1.5" disruptionfactor="0.0" recastdelay="1.5" energyusage="0" castrange="40" uitype="damage" uisprite="UNDEADAURA" category="instant" hidespelleffecticon="true" castablewhenstunned="true" castanimation="cast_command">
+    <spelleffectarea target="enemy" effect="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" position="atcaster" time="6">
+      <area>
+        <shape>
+          <node distance="-25-25">
+            <node angle="90" distance="15">
+             <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="12.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="3.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="1">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-6">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-14.5">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-17">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+            <node angle="90" distance="-19">
+              <node angle="170">
+                <circle radius="1">
+                  <spellvfx target="target" event="SpellEffectAreaInit" prefab="FX/ClientPrefabs/fx_undead_governor_skull" socket="centerAboveGround" duration="6" size="1" />
+                </circle>
+              </node>
+            </node>
+          </node>
+        </shape>
+      </area>
+    </spelleffectarea>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_CAST" target="self" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="20" uitype="damage" category="instant" hidespelleffecticon="true">
+    <dummy target="self" time="2"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_AREA_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="6" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="20" uitype="damage" uisprite="UNDEADAURA" category="damage">
+    <directattributechange target="enemy" attribute="health" change="-750" effectarearadius="2"/>
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
+    <AudioInfo name="SPELL_CURSED_HIT_MEDIUM"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_SKULL_STAMPEDE_DANCEDELAY" target="self" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="20" uitype="damage" category="instant" hidespelleffecticon="true">
+    <dummy target="self" time="12.2"/>
+    <AudioInfo name="SPELL_HALLOWEEN_BOB_STAMPEDE"/>
+  </activespell>
+  <!-- Dance Break -->
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_DANCEBREAK" target="self" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="90" energyusage="0" castrange="20" uitype="crowdcontrol" uisprite="CURSED_AREA" category="instant" interruptiblebyspell="false" spelleffectanimation="dance" assessment="positive">
+    <stun target="self" time="6.6" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" ignoreabilitypowerscaling="true"/>
+    <applyspell target="enemy" spell="MOB_HALLOWEEN_BOSS_DANCEBREAK_EFFECT" effectarearadius="40" castablewhenstunned="true"/>
+    <spellvfx alive="none" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_halloween_dancebreak_fireworks" target="target" socket="floor" constraintpreset="pointconstraint" timeoffset="0.3"/>
+    <AudioInfo name="SPELL_HALLOWEEN_BOB_DANCE" />
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_DANCEBREAK_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="0.0" recastdelay="25" energyusage="0" castrange="20" uitype="crowdcontrol" uisprite="CURSED_AREA" category="crowdcontrol" interruptiblebyspell="false" spelleffectanimation="dance">
+    <stun time="6.6" target="enemy" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" ignoreabilitypowerscaling="true" effectarearadius="40"/>
+    <spellvfx alive="none" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_halloween_dancebreak_fireworks" target="target_notCaster" socket="floor" constraintpreset="pointconstraint" timeoffset="0.967"/>
+  </activespell>
+  <!-- Pumpkin Bounce -->
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_PUMPKIN_BOUNCE" target="enemy" castingtime="1" hitdelay="0.7" standtime="0.5" disruptionfactor="0.0" recastdelay="15" energyusage="0" castrange="20" uitype="damage" uisprite="CLEAVE_SWORD" category="damage" castanimation="ranged_undirected" interruptiblebyspell="false">
+    <chainspell spell="MOB_HALLOWEEN_BOSS_PUMPKIN_BOUNCE_EFFECT" target="enemy" chaintarget="enemy" onlyuniquetargets="false" maxdistance="20" maxcount="7" interval="0.7">
+      <projectile prefab="FX/ClientPrefabs/fx_spell_pumpkin_bullet_arc" startsocket="mainhandprojectile" ignoresocketscale="true" hitsocket="damage" flyspeed="30">
+        <impactvfx prefab="FX\ClientPrefabs\fx_pumpkin_impact" impactsocket="damage" constraintpreset="inworld"/>
+      </projectile>
+    </chainspell>
+    <projectile prefab="FX/ClientPrefabs/fx_spell_pumpkin_bullet_arc" startsocket="mainhandprojectile" ignoresocketscale="true" hitsocket="damage">
+      <impactvfx prefab="FX\ClientPrefabs\fx_pumpkin_impact" impactsocket="damage" constraintpreset="inworld"/>
+    </projectile>
+    <AudioInfo name="SPELL_HERETIC_GIBSON_KNOCKBACK"/>
+  </activespell>
+  <activespell uniquename="MOB_HALLOWEEN_BOSS_PUMPKIN_BOUNCE_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="0.0" recastdelay="15" energyusage="0" castrange="20" uitype="damage" uisprite="BUFF_DAMAGE" category="damage" interruptiblebyspell="false">
+    <buffovertime target="enemy" type="movespeedbonus" value="-0.2" time="3"/>
+    <directattributechange target="enemy" attribute="health" change="-400" effecttype="physical"/>
+    <spellvfx target="target" event="OnSpellHit" alive="none" prefab="FX\ClientPrefabs\fx_pumpkin_impact" socket="damage"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" constraintpreset="pointconstraint"/>
+    <AudioInfo name="SPELL_HERETIC_GIBSON_KNOCKBACK"/>
+  </activespell>
+  <!-- Pumpkin Death -->
+  <activespell uniquename="MOB_HALLOWEEN_PUMPKIN_DEATH" target="ground" castingtime="0" recastdelay="10" energyusage="0" castrange="0" category="instant" uitype="buff">
+    <spellvfx target="self" event="OnCastFinished" prefab="FX\ClientPrefabs\fx_pumpkin_death" constraintpreset="inWorldWithRotate" size="2" ignoresocketscale="false" />
+  </activespell>
+  <!--#############################################################-->
   <activespell uniquename="SPELLZONE_RD_UNDEAD_POISON_20" target="ground" category="damage" castingtime="0" recastdelay="3" energyusage="0" castrange="15" showgizmo="true" uitype="damage">
     <spelleffectarea target="allplayers" effectarearadius="20" time="0" effect="SPELLZONE_RD_UNDEAD_POISON_EFFECT" removeonleave="true" />
   </activespell>
@@ -39959,7 +40705,7 @@
   <activespell uniquename="UNIQUE_UNLOCK_SKIN_GIANTSTAG_DIVINE" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
     <unlockvanityunlock target="self" unlocktype="Mount" unlockname="SKIN_GIANTSTAG_DIVINE" />
   </activespell>  
-  
+
   <!-- Cougars-->
   <activespell uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_TIGER_WHITE_TELLAFRIEND_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
     <unlockvanityunlock target="self" unlocktype="Mount" unlockname="SKIN_COUGAR_TIGER_WHITE_TELLAFRIEND" />
@@ -39975,6 +40721,10 @@
 
   <activespell uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_TOURNAMENT_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
     <unlockvanityunlock target="self" unlocktype="Mount" unlockname="SKIN_COUGAR_TOURNAMENT" />
+  </activespell>
+  
+  <activespell uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_OCCULT_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="foodbuff" neutraleffect="true" buffpriority="10">
+    <unlockvanityunlock target="self" unlocktype="Mount" unlockname="SKIN_COUGAR_OCCULT" />
   </activespell>
 
   <!-- Direboars-->

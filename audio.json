@@ -383,6 +383,15 @@
         }
       },
       {
+        "@name": "MOUNT_BEETLE",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "beetle"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -3575,6 +3584,54 @@
         }
       },
       {
+        "@name": "MOB_EVENT_HALLOWEEN_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "undead"
+        },
+        "MobType": {
+          "@name": "undead_knight"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "axe_small"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_HALLOWEEN_PUMPKIN",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "undead"
+        },
+        "MobType": {
+          "@name": "undead_pumpkin"
+        },
+        "Size": {
+          "@name": "incorporeal_medium"
+        },
+        "ArmorType": {
+          "@name": "veggie"
+        },
+        "WeaponType": {
+          "@name": "swoosh_medium"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "CLOTH_ARMOR",
         "ArmorType": {
           "@name": "cloth"
@@ -6205,6 +6262,12 @@
         }
       },
       {
+        "@name": "SPELL_HIT_STUN",
+        "OnSpellHit": {
+          "@name": "Play_stun"
+        }
+      },
+      {
         "@name": "SPELL_DASH_SWOOSH",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_dash"
@@ -6575,6 +6638,54 @@
         },
         "OnCastFinished": {
           "@name": "Play_eagle_mount_spell_lightning"
+        }
+      },
+      {
+        "@name": "SPELL_BEETLE_CHANNEL_BUZZ",
+        "OnChannelingStart": {
+          "@name": "Play_beetle_channel_dust_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_beetle_channel_dust_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_beetle_channel_dust_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_beetle_channel_dust_loop"
+        }
+      },
+      {
+        "@name": "SPELL_BEETLE_SLAM",
+        "OnCastStart": {
+          "@name": "Play_beetle_attack_cry"
+        }
+      },
+      {
+        "@name": "SPELL_BEETLE_CAST_FLY",
+        "OnCastFinished": {
+          "@name": "Play_beetle_cast_flight_jump"
+        }
+      },
+      {
+        "@name": "SPELL_BEETLE_CHARGE",
+        "OnCastFinished": {
+          "@name": "Play_beetle_charge_flight"
+        }
+      },
+      {
+        "@name": "SPELL_BEETLE_CHANNEL_FLIGHT",
+        "OnChannelingStart": {
+          "@name": "Play_beetle_flight_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_beetle_flight_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_beetle_flight_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_beetle_flight_loop"
         }
       },
       {
@@ -7408,6 +7519,27 @@
         "@name": "SPELL_UNDEAD_SPAWN_SHADE",
         "OnCastStart": {
           "@name": "Play_undead_summon_shade"
+        }
+      },
+      {
+        "@name": "SPELL_HALLOWEEN_BOB_DANCE",
+        "OnSpellHit": {
+          "@name": "Play_mob_halloween_bob_dance_music"
+        }
+      },
+      {
+        "@name": "SPELL_HALLOWEEN_BOB_STAMPEDE",
+        "OnSpellHit": {
+          "@name": "Play_halloween_bob_skullstampede"
+        },
+        "OnSpellRemoved": {
+          "@name": "Stop_halloween_bob_skullstampede"
+        }
+      },
+      {
+        "@name": "SPELL_HALLOWEEN_BOB_LAUGH",
+        "OnCastStart": {
+          "@name": "Play_emotes_halloween_laugh"
         }
       },
       {
