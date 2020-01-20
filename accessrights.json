@@ -1040,6 +1040,99 @@
             ]
           }
         ]
+      },
+      {
+        "@name": "AccessRightsHideoutObject",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, builder, visitor",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "builder, visitor",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_COOWNER"
+          },
+          {
+            "@name": "builder",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_BUILDER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_BUILDER"
+          },
+          {
+            "@name": "visitor",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_VISITOR",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_VISITOR"
+          }
+        ],
+        "right": [
+          {
+            "@name": "VISIT",
+            "@roles": "owner, coowner, builder, visitor"
+          },
+          {
+            "@name": "PLACE_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "MAKEHOME",
+            "@roles": "owner, coowner, builder, visitor"
+          },
+          {
+            "@name": "FORCE_CLAIM_BUILDINGS",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PLACE_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "FORCE_CLAIM_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CHANGE_TRIBUTE",
+            "@roles": "owner, coowner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "visitor"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "everyone",
+                "@role": "visitor"
+              },
+              {
+                "@who": "guild",
+                "@role": "visitor"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

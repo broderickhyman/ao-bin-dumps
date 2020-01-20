@@ -1,10 +1,5 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/HIGHLAND/Master/City/3003-Portal_CTY_HL_T7_NON.unity" unityguid="87cedca6af9f86c4b819e8cfc8841fa0" editorBoundsMin="0 0" editorBoundsMax="0 0" colBoundsMin="-105 -95" colBoundsMax="99 135">
   <criticalscenemembers>
-    <criticalscenemember id="portalentrance_02" type="portalentrance" layerId="">
-      <tile name="HIGHLAND_GREEN_PORTAL_ENTRANCE_CAERLEON" pos="-35 6 10">
-        <portalentrance spawnpos="13.73127 0" />
-      </tile>
-    </criticalscenemember>
     <criticalscenemember id="exit_02" type="exit" layerId="">
       <tile name="ExitTrigger_10x10_EXIT" pos="34 2 10" roty="180">
         <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster" roadtype="Primary">
@@ -47,37 +42,8 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
-    <layergroup name="GVG-Season">
-      <layer id="Layer_03" name="Season">
-        <tile name="HIGHLAND_GREEN_HALL_OF_FAME_THRONE_SIMPLE_A" pos="0 4 30" roty="180">
-          <informationprovider locatag="@HALLOFFAME_SEASONSTORY_05" useradius="6" type="0" data="6" />
-        </tile>
-      </layer>
-      <layer id="Layer_04" name="SeasonConstruction">
-        <tile name="HIGHLAND_GREEN_HALL_OF_FAME_THRONE_EMPTY_A" pos="0 4 30" roty="180" />
-        <tile name="HIGHLAND_GREEN_FILL_CITY_ARENA_SIGN_A" pos="5 4 22" roty="338.33" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="5.5 -7 30" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="-4.5 -7 30" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_STRAIGHT_B" pos="2 15 30" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-2 8 30" roty="90" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_TOOLPILE_C" pos="2 8 31" roty="90" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_WOODPILE_B" pos="-2 5 25" roty="203.54" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-3 5 21" roty="104.44" />
-        <tile name="HIGHLAND_GREEN_FILL_LADDER_SMALL_A" pos="1 5 26" rot="2 273 332" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-1 5 20" roty="180" />
-        <tile name="HIGHLAND_GREEN_FILL_CRAFTER_STONEMASONRY_SMALL_A" pos="-6 4 23" roty="270" />
-        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-1.5 8 32.5" roty="322" scale="1.2 1.2 1.2" />
-        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-4.5 5 26.5" roty="32.23" scale="1.2 1.2 1.2" />
-        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="3.5 15 31.5" roty="333" scale="1.2 1.2 1.2" />
-        <tile name="HIGHLAND_GREEN_FILL_AWNING_C" pos="-0.5 6 27.5" roty="133" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_LANTERN_A" pos="-4.5 14 28.5" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_LANTERN_A" pos="5.5 14 28.5" />
-        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_SHORT_A" pos="-4.5 15 30" />
-        <tile name="HIGHLAND_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="0 4 20" roty="277.61" />
-      </layer>
-    </layergroup>
-    <layergroup name="Season">
-      <layer id="Layer_01" name="Halloween">
+    <layergroup name="">
+      <layer id="Layer_01" name="Halloween" flags="halloween">
         <tile name="HALLOWEEN_BUNTING_A" pos="10 4 -2.5" />
         <tile name="HALLOWEEN_BUNTING_A" pos="51 0 14.5" roty="189" />
         <tile name="HALLOWEEN_BUNTING_B" pos="10 15 32" />
@@ -106,7 +72,9 @@
         <tile name="HIGHLAND_GREEN_FILL_FARM_HAY_SACKS_B" pos="17 4 21" />
         <tile name="HIGHLAND_GREEN_VEG_MOSS_BROWN_SMALL_A" pos="49.5 0 13.5" />
       </layer>
-      <layer id="Layer_02" name="Christmas">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Christmas" flags="christmas">
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="10 17 31.5" scale="0.9393551 0.9393551 0.9393551" />
         <tile name="XMAS_FILL_CITY_BUSH_A" pos="20.5 4 17.5" />
         <tile name="XMAS_FILL_CITY_BUSH_C" pos="-20.5 4 -2.5" roty="100" />
@@ -132,7 +100,9 @@
         <tile name="XMAS_FILL_CITY_WREATH_B" pos="11.5 1 -7.5" />
         <tile name="XMAS_FILL_CITY_WREATH_B" pos="-10.5 1 -7.5" />
       </layer>
-      <layer id="Layer_05" name="Easter">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_05" name="Easter" flags="easter">
         <tile name="EASTER_DECO_A" pos="18.5 4 21.5" roty="270" />
         <tile name="EASTER_DECO_BUNTING_DIAGONAL_A" pos="20 4 20" roty="180" />
         <tile name="EASTER_DECO_HANGING_ROPES_LAMPS_10M_B" pos="16 5 -7" roty="2" />
@@ -150,7 +120,9 @@
         <tile name="EASTER_DECO_A" pos="-6.5 4 28.5" rot="357 359 4" />
         <tile name="EASTER_DECO_BUNTING_DIAGONAL_A" pos="21 4 0" roty="270" />
       </layer>
-      <layer id="Layer_06" name="Anniversary">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_06" name="Anniversary" flags="anniversary">
         <tile name="ANNIVERSARY_BANNER_A" pos="-7 4 -4.5" scale="1.402092 1.402092 1.402092" />
         <tile name="ANNIVERSARY_BANNER_A" pos="7 4 -4.5" scale="1.402092 1.402092 1.402092" />
         <tile name="ANNIVERSARY_BANNER_A" pos="23.5 4 4" roty="270" scale="1.402093 1.402092 1.402092" />
@@ -174,12 +146,35 @@
         <tile name="ANNIVERSARY_CONFETTI_A" pos="11 -8 -6" roty="180" />
       </layer>
     </layergroup>
-    <criticaltile name="HIGHLAND_GREEN_PORTAL_ENTRANCE_CAERLEON" pos="-35 6 10" id="portalentrance_02" type="portalentrance">
-      <portalentrance spawnpos="13.73127 0" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-35.5 6 9.5">
-      <minimapmarker type="Portal_Entrance_Caerleon" />
-    </tile>
+    <layergroup name="GVG-Season">
+      <layer id="Layer_03" name="Season">
+        <tile name="HIGHLAND_GREEN_HALL_OF_FAME_THRONE_SIMPLE_A" pos="0 4 30" roty="180">
+          <informationprovider locatag="@HALLOFFAME_SEASONSTORY_07" useradius="6" type="0" data="7" />
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="SeasonConstruction">
+        <tile name="HIGHLAND_GREEN_HALL_OF_FAME_THRONE_EMPTY_A" pos="0 4 30" roty="180" />
+        <tile name="HIGHLAND_GREEN_FILL_CITY_ARENA_SIGN_A" pos="5 4 22" roty="338.33" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="5.5 -7 30" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_PILLAR_A" pos="-4.5 -7 30" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_STRAIGHT_B" pos="2 15 30" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-2 8 30" roty="90" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_TOOLPILE_C" pos="2 8 31" roty="90" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_WOODPILE_B" pos="-2 5 25" roty="203.54" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-3 5 21" roty="104.44" />
+        <tile name="HIGHLAND_GREEN_FILL_LADDER_SMALL_A" pos="1 5 26" rot="2 273 332" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_STONEPILE_A" pos="-1 5 20" roty="180" />
+        <tile name="HIGHLAND_GREEN_FILL_CRAFTER_STONEMASONRY_SMALL_A" pos="-6 4 23" roty="270" />
+        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-1.5 8 32.5" roty="322" scale="1.2 1.2 1.2" />
+        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-4.5 5 26.5" roty="32.23" scale="1.2 1.2 1.2" />
+        <tile name="HIGHLAND_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="3.5 15 31.5" roty="333" scale="1.2 1.2 1.2" />
+        <tile name="HIGHLAND_GREEN_FILL_AWNING_C" pos="-0.5 6 27.5" roty="133" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_LANTERN_A" pos="-4.5 14 28.5" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_LANTERN_A" pos="5.5 14 28.5" />
+        <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_SCAFFOLD_SHORT_A" pos="-4.5 15 30" />
+        <tile name="HIGHLAND_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="0 4 20" roty="277.61" />
+      </layer>
+    </layergroup>
     <tile name="Atmosphere_WRL_NONE_HL_GREEN" pos="0 0 0" />
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="34 2 10" roty="180" id="exit_02" type="exit">
       <exit size="10 10" spawnpos="10.40518 0.09073634" faction="None" kind="Cluster" roadtype="Primary">
@@ -227,6 +222,12 @@
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-20 -40 -30" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="10 -40 -30" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="40 -40 -30" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_A" pos="-31 6 2" roty="358" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_A_NOCOL" pos="-32 6 15" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_C" pos="-31 6 19" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-29 6 20" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_A" pos="-18 4 -4" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_SIDE_A" pos="-19 4 24" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="0 -28 -20" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="10 -36 -10" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-10 -36 -10" roty="180" />
@@ -238,8 +239,6 @@
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-20 -52 0" roty="90" />
     <tile name="HIGHLAND_GREEN_FILL_RUIN_MAGIC_STATUE_LARGE_A" pos="33 2 5" />
     <tile name="HIGHLAND_GREEN_MOR_FILL_MAGE_BOOK_STATUE_BIG_A" pos="33 0 16" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A" pos="-24.5 4 24.5" roty="180" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A" pos="-24.5 4 -4.5" roty="180" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A_1M_SNAP" pos="0 0 -20" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_BORDERSTONE_B" pos="-20 4 15.5" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_BORDERSTONE_B" pos="-19 4 5.5" roty="180" />
@@ -272,18 +271,14 @@
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_A" pos="-16 -40 25" scale="0.79 0.79 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_A" pos="-16 -18 25" scale="0.79 0.79 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_8M_ROUNDED_RIGHT_RAILING_A" pos="-10 -8 -20" roty="180" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 0" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 -8 -10" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-20 4 20" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="0 4 20" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="10 4 0" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="10 -8 -10" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-20 4 0" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="10 4 20" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 30" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 20" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="0 4 0" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="10 4 30" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 20" />
     <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_EXTENSION_A" pos="-30 -50 0" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_EXTENSION_A" pos="-30 -22 20" roty="180" />
     <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_EXTENSION_A" pos="-30 -50 20" roty="180" />
@@ -301,6 +296,7 @@
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="-5 4 -5" scale="0.79 0.79 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="5 6 -5" scale="0.79 0.79 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="5 4 -5" scale="0.79 0.79 0.79" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 30" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="-16 6 -5" scale="0.79 1 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="-25 4 -5" scale="0.8294999 1.05 0.8294999" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="-33 5 0" scale="1 1.05 1" />
@@ -312,35 +308,28 @@
     <tile name="HIGHLAND_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_A" pos="8 4 -5" roty="270" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_MARKETPLACE_B" pos="16.5 -4 -6.5" scale="1.238929 1.238929 1.238929" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_BANNER_BANK_B" pos="-16.5 -4 -6.5" scale="1.238929 1.238929 1.238929" />
-    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_A" pos="-34 18 18" roty="180" scale="1.305314 1.305314 1.305314" />
-    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_A" pos="-34 18 2" roty="180" scale="1.305314 1.305314 1.305314" />
     <tile name="HIGHLAND_GREEN_HER_POINT_LIGHT_DNG_CELLAR_A" pos="-32.5 15 10.5" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_TORCH_B_SMALL" pos="14 -4 -7" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_TORCH_B_SMALL" pos="-8 -4 -7" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_TORCH_B_SMALL" pos="8 -4 -7" roty="180" />
     <tile name="HIGHLAND_GREEN_FILL_CITY_TORCH_B_SMALL" pos="-14 -4 -7" roty="180" />
-    <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_A" pos="-10 -24 0" roty="90" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="0 4 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_A" pos="10 -24 0" roty="90" />
-    <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_ROUNDED_A_OBJ" pos="-20 -22 15" roty="270" />
-    <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_ROUNDED_A_OBJ" pos="-20 -22 5" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_GROUND_EMBLEM_A" pos="-24.5 6 10.5" roty="270" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="-30 6 10" roty="90" />
+    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_STANDING_LARGE_A" pos="-29 5 23" rot="358.02 243.07 356.1" scale="1.30531 1.30531 1.30531" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="-20 4 10" roty="270" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="20 4 10" roty="270" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="10 4 10" roty="270" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="-10 4 10" roty="270" />
-    <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_A" pos="0 4 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_A_NOCOL" pos="5 -23 -16" scale="0.79 0.79 0.7" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_A_NOCOL" pos="-5 -23 -16" scale="0.79 0.79 0.7" />
     <tile name="HIGHLAND_GREEN_CASTLE_8M_STAIRS_ROUNDED_LEFT_A_DARK" pos="10 -28 -20" roty="180" />
     <tile name="HIGHLAND_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-20 4 -5" roty="270" />
+    <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_A" pos="-10 -24 0" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-20 4 25" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A" pos="30 -52 10" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A" pos="30 -52 10" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_INNERCORNER_ROUNDED_RAILING_B" pos="20 4 0" roty="180" />
     <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_C_DARK" pos="20 -24 0" />
     <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_C_DARK" pos="20 -24 20" roty="270" />
-    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_STANDING_LARGE_A" pos="-29 5 23" roty="243" scale="1.30531 1.30531 1.30531" />
     <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_STANDING_LARGE_A" pos="-29 5 -3" roty="119" scale="1.30531 1.30531 1.30531" />
     <tile name="HIGHLAND_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-15 4 27" />
     <tile name="HIGHLAND_GREEN_CASTLE_RAILING_PILLAR_A" pos="5 0 -16" />
@@ -353,8 +342,6 @@
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_4M_RAILING_A" pos="-5 0 -10" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_4M_RAILING_A" pos="30 0 15" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_4M_RAILING_A" pos="5 0 -10" />
-    <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_RAILING_A" pos="-30 6 20" roty="180" scale="1 1 0.9353716" />
-    <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_RAILING_A" pos="-30 6 0" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A_NOCOL" pos="-5 -1 -16" scale="0.79 1 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A_NOCOL" pos="5 -1 -16" scale="0.79 1 0.79" />
     <tile name="HIGHLAND_GREEN_CASTLE_DOOR_OPENED_A" pos="-11 -8 -6" roty="90" />
@@ -362,25 +349,76 @@
     <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_FLAT_SLIM_SHORT_A" pos="-24 4 21" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_FLAT_SLIM_SHORT_A" pos="-24 4 -1" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_8M_STAIRS_ROUNDED_RIGHT_A_DARK" pos="-10 -28 -20" roty="180" />
+    <tile name="HIGHLAND_GREEN_FILL_CITY_BORDERSTONE_B" pos="11 -8 -1.5" rot="337 180 0" scale="0.76 0.76 0.7599999" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_ENTRANCE_LIGHT_A" pos="10.5 9 42.5" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_ENTRANCE_LIGHT_A" pos="-9.5 9 42.5" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_ENTRANCE_LIGHT_A" pos="11.5 -1 -11.5" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_ENTRANCE_LIGHT_A" pos="-10.5 -1 -11.5" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_GENERAL_ENTRANCE_LIGHT_A" pos="9.5 15 26.5" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_C_WATER" pos="-20 4 20" />
     <tile name="HIGHLAND_GREEN_HALL_OF_FAME_GENERAL_ENTRANCE_LIGHT_A" pos="-7.5 15 25.5" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="10 4 40" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 4 40" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A_CAERLEON" pos="-33.5 6 20.5" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_B_CAERLEON" pos="-33.5 6 -0.5" roty="305" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="-25 6 17" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="-25 6 3" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="-5 6 -5" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="5 6 -5" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="-16 6 -5" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="27 6 3" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="16 6 -5" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="27 6 17" roty="90" />
-    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_ARCH_STATUES_A_CAERLEON" pos="-35 6 10" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="-25 6 17" roty="74" />
+    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_BROKEN_A" pos="-33 7 20" rot="340 226 313" scale="1.305314 1.305314 1.305314" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_GROUND_EMBLEM_BROKEN_A" pos="-24.5 6 10.5" roty="270" scale="1 1.9214 1" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_ROAD_CITY_BROKEN_STRAIGHT_C" pos="-30 6 10" roty="90" />
+    <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_RAILING_B" pos="-30 6 0" roty="90" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="-25 6 3" roty="172" />
+    <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_ROUNDED_A_OBJ" pos="-20 -22 15" roty="270" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_C_WATER" pos="-20 4 0" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_B" pos="-10 4 0" roty="90" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_ARCH_STATUES_A_CAERLEON_BROKEN" pos="-35 6 10" />
+    <tile name="HIGHLAND_GREEN_ROAD_CITY_PLACE_C_WATER" pos="-10 4 10" roty="180" />
+    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_BROKEN_A" pos="-34 18 2" roty="180" scale="1.305314 1.305314 1.305314" />
+    <tile name="HIGHLAND_GREEN_FILL_CITY_BORDERSTONE_C" pos="11 -8 -2.5" roty="180" scale="0.55 0.55 0.55" />
+    <tile name="HIGHLAND_GREEN_CASTLE_2M_STAIRS_ROUNDED_A_OBJ" pos="-20 -22 5" />
+    <tile name="HIGHLAND_GREEN_CASTLE_CORNER_ROUNDED_RAILING_B" pos="-30 6 20" roty="180" scale="1 1 0.9353716" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_INNERCORNER_A" pos="-29 6 0" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_BLOOD_SPLATTER_WALL_C" pos="-33 7 19" roty="4" />
+    <tile name="HIGHLAND_GREEN_FILL_BUILDING_FILL_D" pos="-16.5 4 -2" roty="90" />
+    <tile name="HIGHLAND_GREEN_FILL_CONSTSITE_TOOLPILE_B" pos="-14 4 23" />
+    <tile name="HIGHLAND_GREEN_FILL_LAMP_A" pos="-28.31 6 14.27" roty="270" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-28.5 6 1.5" roty="106" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-30.5 6 5.5" roty="18.85" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-29.5 6 13.5" roty="232" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-29.5 6 5.5" roty="226.29" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-29.5 6 3.5" roty="149" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-30.5 6 5.5" roty="279.44" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-30.5 6 12.5" roty="232" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-27.5 6 17.5" roty="232" />
+    <tile name="HIGHLAND_GREEN_UND_CITY_STATUE_BROKEN_B" pos="-25 4 24" roty="100" scale="1.676814 1.676813 1.676814" />
+    <tile name="HIGHLAND_GREEN_UND_GRAVE_OPEN_B" pos="-29 6 4" roty="311" />
+    <tile name="HIGHLAND_GREEN_UND_GRAVE_OPEN_B" pos="-30 6 16" roty="244" />
+    <tile name="HIGHLAND_GREEN_UND_SCORPION_CHAIN_C" pos="-30.5 6 15.5" roty="270" />
+    <tile name="HIGHLAND_GREEN_UND_WEAPONS_A" pos="-30.5 6 17.5" roty="300" />
+    <tile name="HIGHLAND_GREEN_UND_WEAPONS_B" pos="-24.5 6 15.5" roty="348.11" />
+    <tile name="HIGHLAND_GREEN_UND_WEAPONS_B" pos="-20.5 4 0.5" roty="50.82" />
+    <tile name="HIGHLAND_RED_MOR_MONASTERY_LIGHT_CANDLES_SMALL_A" pos="-30.5 6 12.5" />
+    <tile name="HIGHLAND_RED_MOR_MONASTERY_LIGHT_CANDLES_SMALL_B" pos="-28.5 6 15.5" roty="126" />
+    <tile name="HIGHLAND_RED_MOR_MONASTERY_LIGHT_CANDLES_SMALL_B" pos="-29.5 6 14.5" />
+    <tile name="HIGHLAND_RED_MOR_MONASTERY_LIGHT_CANDLES_SMALL_B" pos="-28.5 6 3.5" roty="69" />
+    <tile name="HIGHLAND_GREEN_UND_GRAVE_OPEN_B" pos="-30 6 14" roty="22.09" />
+    <tile name="HIGHLAND_GREEN_UND_WEAPONS_A" pos="-32.5 7 1.5" rot="349 297 9" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-29.5 6 2.5" roty="279" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-29.5 6 4.5" roty="346.92" />
+    <tile name="HIGHLAND_GREEN_FILL_LIGHT_CANDLES_A" pos="-31.5 6 11.5" roty="19" />
+    <tile name="HIGHLAND_GREEN_UND_GRAVE_OPEN_B" pos="-26 6 10" roty="311" />
+    <tile name="HIGHLAND_GREEN_UND_GRAVE_OPEN_B" pos="-31 6 -1" roty="311" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="16 6 -5" roty="67.91" />
+    <tile name="HIGHLAND_GREEN_FILL_CANDELABRA_B" pos="-30.5 5 14.5" roty="270" scale="1.586702 1.5867 1.586702" />
+    <tile name="HIGHLAND_GREEN_FILL_CANDELABRA_B" pos="-31.5 5 12.5" roty="270" scale="1.586702 1.5867 1.586702" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="5 6 -5" rot="12.65 236.42 8.38" />
+    <tile name="HIGHLAND_GREEN_FILL_CANDELABRA_B" pos="-29.5 5 4.5" roty="270" scale="1.586702 1.5867 1.586702" />
+    <tile name="HIGHLAND_GREEN_FILL_RUIN_DEBRIS_C_NOCOL" pos="-26 4 22" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="-16 6 -5" roty="359.75" />
+    <tile name="HIGHLAND_GREEN_FILL_CANDELABRA_B" pos="-31.5 5 5.5" roty="270" scale="1.586702 1.5867 1.586702" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A_NO_FX" pos="-33.5 6 20.5" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="-5 6 -5" roty="83" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="27 6 17" rot="14.27 85.89 356.32" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_B_NO_FX" pos="-33.5 6 -0.5" roty="305" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A_NO_FX" pos="-24.5 4 -4.5" roty="180" />
+    <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_BROKEN_A" pos="27 6 3" rot="349.3 18.33 356.48" />
     <tile name="gvg_banner_standing_01" pos="5.5 3 32.5" scale="1.36873 1.36873 1.36873" />
     <tile name="gvg_banner_standing_01" pos="-5.5 3 32.5" scale="1.36873 1.36873 1.36873" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-10 -52 30" roty="180" />
@@ -395,8 +433,6 @@
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 2 50" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="-10 0 60" />
     <tile name="HIGHLAND_GREEN_ROAD_CITY_BOARDWALK_A" pos="0 4 30" />
-    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_A" pos="-17 17 33" roty="270" scale="1.305311 1.30531 1.305311" />
-    <tile name="HIGHLAND_GREEN_CITY_CENTER_BANNER_LARGE_A" pos="17 17 33" roty="270" scale="1.305311 1.30531 1.305311" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_A" pos="0 -16 60" roty="90" />
     <tile name="HIGHLAND_GREEN_CASTLE_WALL_ARCH_A" pos="0 -16 60" roty="270" />
     <tile name="HIGHLAND_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="15 2 55" />
@@ -476,6 +512,8 @@
     <tile name="HIGHLAND_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A_NO_BLEND" pos="20 -7 34" />
     <tile name="HIGHLAND_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A_NO_BLEND" pos="-20 -9 34" />
     <tile name="HIGHLAND_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A_NO_BLEND" pos="21 -9 54" />
+    <tile name="HIGHLAND_GREEN_SHARD_TRADER_BANNER_HANGING_A" pos="17.5 6 32.5" scale="1.305311 1.30531 1.305311" />
+    <tile name="HIGHLAND_GREEN_SHARD_TRADER_BANNER_HANGING_A" pos="-16.5 6 32.5" scale="1.305311 1.30531 1.305311" />
     <tile name="FX_WATERRIPPLE_PLACABLE" pos="-44 -33 -20" />
     <tile name="FX_WATERRIPPLE_PLACABLE" pos="-44 -33 -2" />
     <tile name="FX_WATERRIPPLE_PLACABLE" pos="-9 -25 63" />
@@ -1577,7 +1615,8 @@
     <tile name="HIGHLAND_GREEN_CASTLE_GROUND_A_OBJ" pos="-70 0 -30" roty="90" />
     <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="35 2 16" />
     <tile name="HIGHLAND_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_CAERLEON" pos="35 2 5" />
-    <tile name="FACTION_GUARD_CAERLEON" pos="-30.5 6 2.5" roty="90" />
-    <tile name="FACTION_GUARD_CAERLEON" pos="-30.5 6 17.5" roty="90" />
+    <tile name="FACTION_GUARD_CAERLEON" pos="-19.5 4 21.5" roty="239.52" />
+    <tile name="FACTION_GUARD_CAERLEON" pos="-20.5 4 -1.5" roty="319.03" />
+    <tile name="FACTION_GUARD_CAERLEON" pos="-15.5 4 18.5" roty="250.43" />
   </tiles>
 </template>

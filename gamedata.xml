@@ -17,18 +17,24 @@
 	  guildchangecooldownminutes="2880"
 	  guildlogochangegoldcosts="3000"
 	  guildlogochangesilvercosts="0"
+    maxhideouts="6"
     />
-  
-	<transactionlimits>	    
+
+    <SmartClusterQueue
+      EntranceRadius = "100"
+      MinItemPower = "800"
+      />
+
+    <transactionlimits>	    
 		<gold GoldTransactionLimitUntrustedPerDay="100" 
 		GoldTransactionLimitUntrustedJourneymanPerDay="500" 
 		GoldTransactionLimitPaidUntrustedPerDay="500" 
 		GoldTransactionLimitLimitedPerDay="2500"/>
 	</transactionlimits>
-	
+
     <SiegeCamp vaultsize="64" battlevaultsize="64" weightlimit="10000.0" siegecampclaimtimeinsec="15" cooldowninmin="360" costfactor="2.5" />
     <Territory territoryclaimtimeinsec="15" />
-    <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="2880"/>
+    <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080"/>
     <GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
     <Respawn autorespawntimerinsecs="600" />
     <Fame pvpfamesharingradius="50" pvefamesharingradius="50">
@@ -602,7 +608,7 @@
     <dangerstate dangerstate="normal" attackerthreshold="2"/>
     <dangerstate dangerstate="roaming" attackerthreshold="2"/>
     <dangerstate dangerstate="veteran" attackerthreshold="7"/>
-    <dangerstate dangerstate="elite" attackerthreshold="12"/>
+    <dangerstate dangerstate="elite" attackerthreshold="20"/>
   </MobFocusFire>
   <PlayerFocusFire lookbackseconds="10">
     <attackers numbergreaterorequal="2" meleebuff="MELEE_FOCUSFIRE_2" rangedbuff="RANGED_FOCUSFIRE_2" mountedbuff="MELEE_FOCUSFIRE_2"/>
@@ -656,6 +662,65 @@
     <attackers numbergreaterorequal="19" buff="HEALINGSICKNESS_19"/>
     <attackers numbergreaterorequal="20" buff="HEALINGSICKNESS_20"/>
   </PlayerHealingSickness>
+  <ZergDebuff checkfrequency="20">
+    <allies numbergreaterorequal="25" debuff="ZERGDEBUFF_LVL1"/>
+    <allies numbergreaterorequal="30" debuff="ZERGDEBUFF_LVL2"/>
+    <allies numbergreaterorequal="35" debuff="ZERGDEBUFF_LVL3"/>
+    <allies numbergreaterorequal="40" debuff="ZERGDEBUFF_LVL4"/>
+    <allies numbergreaterorequal="45" debuff="ZERGDEBUFF_LVL5"/>
+    <allies numbergreaterorequal="50" debuff="ZERGDEBUFF_LVL6"/>
+    <allies numbergreaterorequal="55" debuff="ZERGDEBUFF_LVL7"/>
+    <allies numbergreaterorequal="60" debuff="ZERGDEBUFF_LVL8"/>
+    <allies numbergreaterorequal="65" debuff="ZERGDEBUFF_LVL9"/>
+    <allies numbergreaterorequal="70" debuff="ZERGDEBUFF_LVL10"/>
+    <allies numbergreaterorequal="75" debuff="ZERGDEBUFF_LVL11"/>
+    <allies numbergreaterorequal="80" debuff="ZERGDEBUFF_LVL12"/>
+    <allies numbergreaterorequal="85" debuff="ZERGDEBUFF_LVL13"/>
+    <allies numbergreaterorequal="90" debuff="ZERGDEBUFF_LVL14"/>
+    <allies numbergreaterorequal="95" debuff="ZERGDEBUFF_LVL15"/>
+    <allies numbergreaterorequal="100" debuff="ZERGDEBUFF_LVL16"/>
+    <allies numbergreaterorequal="105" debuff="ZERGDEBUFF_LVL17"/>
+    <allies numbergreaterorequal="110" debuff="ZERGDEBUFF_LVL18"/>
+    <allies numbergreaterorequal="115" debuff="ZERGDEBUFF_LVL19"/>
+    <allies numbergreaterorequal="120" debuff="ZERGDEBUFF_LVL20"/>
+    <allies numbergreaterorequal="125" debuff="ZERGDEBUFF_LVL21"/>
+    <allies numbergreaterorequal="130" debuff="ZERGDEBUFF_LVL22"/>
+    <allies numbergreaterorequal="135" debuff="ZERGDEBUFF_LVL23"/>
+    <allies numbergreaterorequal="140" debuff="ZERGDEBUFF_LVL24"/>
+    <allies numbergreaterorequal="145" debuff="ZERGDEBUFF_LVL25"/>
+    <allies numbergreaterorequal="150" debuff="ZERGDEBUFF_LVL26"/>
+    <allies numbergreaterorequal="155" debuff="ZERGDEBUFF_LVL27"/>
+    <allies numbergreaterorequal="160" debuff="ZERGDEBUFF_LVL28"/>
+    <allies numbergreaterorequal="165" debuff="ZERGDEBUFF_LVL29"/>
+    <allies numbergreaterorequal="170" debuff="ZERGDEBUFF_LVL30"/>
+    <allies numbergreaterorequal="175" debuff="ZERGDEBUFF_LVL31"/>
+    <allies numbergreaterorequal="180" debuff="ZERGDEBUFF_LVL32"/>
+    <allies numbergreaterorequal="185" debuff="ZERGDEBUFF_LVL33"/>
+    <allies numbergreaterorequal="190" debuff="ZERGDEBUFF_LVL34"/>
+    <allies numbergreaterorequal="195" debuff="ZERGDEBUFF_LVL35"/> 
+    <allies numbergreaterorequal="200" debuff="ZERGDEBUFF_LVL36"/>
+    <allies numbergreaterorequal="205" debuff="ZERGDEBUFF_LVL37"/>
+    <allies numbergreaterorequal="210" debuff="ZERGDEBUFF_LVL38"/>
+    <allies numbergreaterorequal="215" debuff="ZERGDEBUFF_LVL39"/>
+    <allies numbergreaterorequal="220" debuff="ZERGDEBUFF_LVL40"/>
+    <allies numbergreaterorequal="225" debuff="ZERGDEBUFF_LVL41"/>
+    <allies numbergreaterorequal="230" debuff="ZERGDEBUFF_LVL42"/>
+    <allies numbergreaterorequal="235" debuff="ZERGDEBUFF_LVL43"/>
+    <allies numbergreaterorequal="240" debuff="ZERGDEBUFF_LVL44"/>
+    <allies numbergreaterorequal="245" debuff="ZERGDEBUFF_LVL45"/>     
+    <allies numbergreaterorequal="250" debuff="ZERGDEBUFF_LVL46"/>
+    <allies numbergreaterorequal="255" debuff="ZERGDEBUFF_LVL47"/>
+    <!--
+    <allies numbergreaterorequal="260" debuff="ZERGDEBUFF_LVL48"/>
+    <allies numbergreaterorequal="265" debuff="ZERGDEBUFF_LVL49"/>
+    <allies numbergreaterorequal="270" debuff="ZERGDEBUFF_LVL50"/>
+    <allies numbergreaterorequal="275" debuff="ZERGDEBUFF_LVL51"/>
+    <allies numbergreaterorequal="280" debuff="ZERGDEBUFF_LVL52"/>
+    <allies numbergreaterorequal="285" debuff="ZERGDEBUFF_LVL53"/>
+    <allies numbergreaterorequal="290" debuff="ZERGDEBUFF_LVL54"/>
+    <allies numbergreaterorequal="295" debuff="ZERGDEBUFF_LVL55"/>  
+   -->
+  </ZergDebuff>
   <RareResources checkintervall="3600">
 	  <cluster ContinentType="Outlands" ClusterQuality="High">
 		  <RareState state="0" weight="1556" />
@@ -1002,6 +1067,7 @@
         <Place type="PlayerIsland" decay="false"/>
         <Place type="GuildIsland" decay="false"/>
         <Place type="GuildTerritory" decay="false"/>
+        <Place type="Hideout" decay="false"/>
       </FurnitureObjectPerPlace>
       <BuildingOnCraftedItem>
         <Item tier="1" itemvaluefactor="0" />
@@ -1169,24 +1235,24 @@
 
   -->
   <BuildBuilding>
-    <Resource tier="1" time="0.1" maxstack="30" />
-    <Resource tier="2" time="0.1" maxstack="30" />
-    <Resource tier="3" time="0.1" maxstack="30" />
-    <Resource tier="4" time="0.1" maxstack="30" />
-    <Resource tier="5" time="0.1" maxstack="30" />
-    <Resource tier="6" time="0.1" maxstack="30" />
-    <Resource tier="7" time="0.1" maxstack="30" />
-    <Resource tier="8" time="0.1" maxstack="30" />
+    <Resource tier="1" time="0.02" maxstack="999" />
+    <Resource tier="2" time="0.02" maxstack="999" />
+    <Resource tier="3" time="0.02" maxstack="999" />
+    <Resource tier="4" time="0.02" maxstack="999" />
+    <Resource tier="5" time="0.02" maxstack="999" />
+    <Resource tier="6" time="0.02" maxstack="999" />
+    <Resource tier="7" time="0.02" maxstack="999" />
+    <Resource tier="8" time="0.02" maxstack="999" />
   </BuildBuilding>
   <RepairBuilding>
-    <Resource tier="1" time="0.1" maxstack="30" />
-    <Resource tier="2" time="0.1" maxstack="30" />
-    <Resource tier="3" time="0.1" maxstack="30" />
-    <Resource tier="4" time="0.1" maxstack="30" />
-    <Resource tier="5" time="0.1" maxstack="30" />
-    <Resource tier="6" time="0.1" maxstack="30" />
-    <Resource tier="7" time="0.1" maxstack="30" />
-    <Resource tier="8" time="0.1" maxstack="30" />
+    <Resource tier="1" time="0.02" maxstack="999" />
+    <Resource tier="2" time="0.02" maxstack="999" />
+    <Resource tier="3" time="0.02" maxstack="999" />
+    <Resource tier="4" time="0.02" maxstack="999" />
+    <Resource tier="5" time="0.02" maxstack="999" />
+    <Resource tier="6" time="0.02" maxstack="999" />
+    <Resource tier="7" time="0.02" maxstack="999" />
+    <Resource tier="8" time="0.02" maxstack="999" />
   </RepairBuilding>
   <!-- ********************************************************************************************************************** -->
   <!--
@@ -1294,7 +1360,7 @@
     </ExpeditionBonusRewardTimer>
   </Expedition>
   <PersonalStatement characterlimit="270" />
-  <FeaturedFeature utcdate="2017-10-17T10:15:00" />
+  <FeaturedFeature utcdate="2019-11-13T10:15:00" />
   <SiegeCampBank size="64" weightlimit="10000.0">
     <DefaultTab Name="@SIEGECAMP_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
   </SiegeCampBank>
@@ -1356,7 +1422,7 @@
     trashchance="0.15"
     durabilityloss="0.30"
     overchargeitem="UNIQUE_GVGTOKEN_GENERIC"
-    overchargeitemcount="1"
+    overchargeitemcount="10"
     buttonholdtime="1.00">
     <startvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_start" socket="damage" constraintpreset="pointconstraint" />
     <endvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_end" socket="floor" constraintpreset="pointconstraint" />
@@ -1364,133 +1430,303 @@
     <endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
   </OverCharge>
   <AchievementProgressConversion silverConversionRatio="0.75" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
-  <TerritoryFirstClaimTimes>
-    <clustergroup date="2019-05-18T18:00:00Z">
-      <cluster id="0223-OWCOPY" />
-      <cluster id="0224-OWCOPY" />
-      <cluster id="0225-OWCOPY" />
-      <cluster id="0226-OWCOPY" />
-      <cluster id="0227-OWCOPY" />
-      <cluster id="0230-OWCOPY" />
-      <cluster id="0234-OWCOPY" />
-      <cluster id="0239-OWCOPY" />
-      <cluster id="0245-OWCOPY" />
-      <cluster id="1223-OWCOPY" />
-      <cluster id="1224-OWCOPY" />
-      <cluster id="1227-OWCOPY" />
-      <cluster id="1228-OWCOPY" />
-      <cluster id="1231-OWCOPY" />
-      <cluster id="1235-OWCOPY" />
-      <cluster id="1236-OWCOPY" />
-      <cluster id="1237-OWCOPY" />
-      <cluster id="1238-OWCOPY" />
-      <cluster id="1239-OWCOPY" />
-      <cluster id="1240-OWCOPY" />
-      <cluster id="1241-OWCOPY" />
-      <cluster id="1242-OWCOPY" />
-      <cluster id="1243-OWCOPY" />
-      <cluster id="1245-OWCOPY" />
-      <cluster id="2217-OWCOPY" />
-      <cluster id="2218-OWCOPY" />
-      <cluster id="2219-OWCOPY" />
-      <cluster id="2220-OWCOPY" />
-      <cluster id="2221-OWCOPY" />
-      <cluster id="2222-OWCOPY" />
-      <cluster id="2223-OWCOPY" />
-      <cluster id="2224-OWCOPY" />
-      <cluster id="2225-OWCOPY" />
-      <cluster id="2226-OWCOPY" />
-      <cluster id="2227-OWCOPY" />
-      <cluster id="2228-OWCOPY" />
-      <cluster id="2229-OWCOPY" />
-      <cluster id="2230-OWCOPY" />
-      <cluster id="2231-OWCOPY" />
-      <cluster id="2232-OWCOPY" />
-      <cluster id="4232-OWCOPY" />
-      <cluster id="4233-OWCOPY" />
-      <cluster id="4234-OWCOPY" />
-      <cluster id="4235-OWCOPY" />
-      <cluster id="4236-OWCOPY" />
-      <cluster id="4237-OWCOPY" />
-      <cluster id="4238-OWCOPY" />
-      <cluster id="4239-OWCOPY" />
-      <cluster id="4240-OWCOPY" />
-      <cluster id="4241-OWCOPY" />
-      <cluster id="4242-OWCOPY" />
-      <cluster id="4243-OWCOPY" />
-      <cluster id="4245-OWCOPY" />
-      <cluster id="4246-OWCOPY" />
-      <cluster id="4247-OWCOPY" />
-      <cluster id="4248-OWCOPY" />
-      <cluster id="0251" />
-      <cluster id="1265" />
-      <cluster id="4254" />
-      <cluster id="2248" />
+  <TerritoryBlockClaiming>
+    <clustergroup startdate="2020-01-20T10:00:00Z" enddate="2020-02-01T18:00:00Z"> <!-- EU -->
+      <cluster id="0302" />
+      <cluster id="0303" />
+      <cluster id="0304" />
+      <cluster id="0306" />
+      <cluster id="0308" />
+      <cluster id="0309" />
+      <cluster id="0310" />
+      <cluster id="0311" />
+      <cluster id="0312" />
+      <cluster id="0314" />
+      <cluster id="0315" />
+      <cluster id="0316" />
+      <cluster id="0317" />
+      <cluster id="0318" />
+      <cluster id="0319" />
+      <cluster id="0320" />
+      <cluster id="0321" />
+      <cluster id="0322" />
+      <cluster id="0324" />
+      <cluster id="0326" />
+      <cluster id="0327" />
+      <cluster id="0328" />
+      <cluster id="0330" />
+      <cluster id="0331" />
+      <cluster id="0333" />
+      <cluster id="0334" />
+      <cluster id="0335" />
+      <cluster id="0336" />
+      <cluster id="0338" />
+      <cluster id="0339" />
+      <cluster id="0341" />
+      <cluster id="0343" />
+      <cluster id="0344" />
+      <cluster id="0345" />
+      <cluster id="0348" />
+      <cluster id="0349" />
+      <cluster id="0350" />
+      <cluster id="0351" />
+      <cluster id="0352" />
+      <cluster id="0353" />
+      <cluster id="0357" />
+      <cluster id="0358" />
+      <cluster id="1305" />
+      <cluster id="1306" />
+      <cluster id="1309" />
+      <cluster id="1310" />
+      <cluster id="1318" />
+      <cluster id="1321" />
+      <cluster id="1323" />
+      <cluster id="1325" />
+      <cluster id="1326" />
+      <cluster id="1327" />
+      <cluster id="1328" />
+      <cluster id="1331" />
+      <cluster id="1333" />
+      <cluster id="1334" />
+      <cluster id="1339" />
+      <cluster id="1338" />
+      <cluster id="1350" />
+      <cluster id="1340" />
+      <cluster id="1342" />
+      <cluster id="1343" />
+      <cluster id="1344" />
+      <cluster id="1346" />
+      <cluster id="1349" />
+      <cluster id="1359" />
+      <cluster id="1353" />
+      <cluster id="1354" />
+      <cluster id="1356" />
+      <cluster id="1357" />
+      <cluster id="1358" />
+      <cluster id="2332" />
+      <cluster id="2302" />
+      <cluster id="2303" />
+      <cluster id="2305" />
+      <cluster id="2306" />
+      <cluster id="2308" />
+      <cluster id="2309" />
+      <cluster id="2310" />
+      <cluster id="2312" />
+      <cluster id="2313" />
+      <cluster id="2314" />
+      <cluster id="2315" />
+      <cluster id="2318" />
+      <cluster id="2319" />
+      <cluster id="2320" />
+      <cluster id="2321" />
+      <cluster id="2322" />
+      <cluster id="2325" />
+      <cluster id="2326" />
+      <cluster id="2327" />
+      <cluster id="2328" />
+      <cluster id="2329" />
+      <cluster id="2330" />
+      <cluster id="2335" />
+      <cluster id="2334" />
+      <cluster id="2340" />
+      <cluster id="2338" />
+      <cluster id="2339" />
+      <cluster id="2341" />
+      <cluster id="2357" />
+      <cluster id="2344" />
+      <cluster id="2345" />
+      <cluster id="2346" />
+      <cluster id="2347" />
+      <cluster id="2349" />
+      <cluster id="2350" />
+      <cluster id="2351" />
+      <cluster id="2353" />
+      <cluster id="2354" />
+      <cluster id="2355" />
+      <cluster id="2356" />
+      <cluster id="3326" />
+      <cluster id="2358" />
+      <cluster id="3302" />
+      <cluster id="3303" />
+      <cluster id="3309" />
+      <cluster id="3310" />
+      <cluster id="3312" />
+      <cluster id="3313" />
+      <cluster id="3317" />
+      <cluster id="3318" />
+      <cluster id="3320" />
+      <cluster id="3322" />
+      <cluster id="3325" />
+      <cluster id="3327" />
+      <cluster id="3329" />
+      <cluster id="3343" />
+      <cluster id="3330" />
+      <cluster id="3331" />
+      <cluster id="3334" />
+      <cluster id="3336" />
+      <cluster id="3338" />
+      <cluster id="3339" />
+      <cluster id="3340" />
+      <cluster id="3341" />
+      <cluster id="3347" />
+      <cluster id="3345" />
+      <cluster id="3346" />
+      <cluster id="3348" />
+      <cluster id="3349" />
+      <cluster id="3353" />
+      <cluster id="3356" />
+      <cluster id="3359" />
+      <cluster id="4302" />
+      <cluster id="4303" />
+      <cluster id="4304" />
+      <cluster id="4306" />
+      <cluster id="4309" />
+      <cluster id="4310" />
+      <cluster id="4311" />
+      <cluster id="4313" />
+      <cluster id="4314" />
+      <cluster id="4316" />
+      <cluster id="4318" />
+      <cluster id="4319" />
+      <cluster id="4320" />
+      <cluster id="4321" />
+      <cluster id="4322" />
+      <cluster id="4324" />
+      <cluster id="4327" />
+      <cluster id="4328" />
+      <cluster id="4330" />
+      <cluster id="4332" />
+      <cluster id="4333" />
+      <cluster id="4336" />
+      <cluster id="4344" />
+      <cluster id="4339" />
+      <cluster id="4340" />
+      <cluster id="4342" />
+      <cluster id="4346" />
+      <cluster id="4347" />
+      <cluster id="4348" />
+      <cluster id="4349" />
+      <cluster id="4350" />
+      <cluster id="4352" />
+      <cluster id="4353" />
+      <cluster id="4354" />
+      <cluster id="1336" />
+      <cluster id="4357" />
+      <cluster id="4358" />
+      <cluster id="4359" />
     </clustergroup>
-    <clustergroup date="2019-05-19T01:00:00Z">
-      <cluster id="0228-OWCOPY" />
-      <cluster id="0229-OWCOPY" />
-      <cluster id="0231-OWCOPY" />
-      <cluster id="0232-OWCOPY" />
-      <cluster id="0233-OWCOPY" />
-      <cluster id="0235-OWCOPY" />
-      <cluster id="0236-OWCOPY" />
-      <cluster id="0237-OWCOPY" />
-      <cluster id="0238-OWCOPY" />
-      <cluster id="0240-OWCOPY" />
-      <cluster id="0241-OWCOPY" />
-      <cluster id="0242-OWCOPY" />
-      <cluster id="0243-OWCOPY" />
-      <cluster id="0244-OWCOPY" />
-      <cluster id="1229-OWCOPY" />
-      <cluster id="1230-OWCOPY" />
-      <cluster id="1232-OWCOPY" />
-      <cluster id="1233-OWCOPY" />
-      <cluster id="1234-OWCOPY" />
-      <cluster id="2010-OWCOPY" />
-      <cluster id="2011-OWCOPY" />
-      <cluster id="2233-OWCOPY" />
-      <cluster id="2234-OWCOPY" />
-      <cluster id="2235-OWCOPY" />
-      <cluster id="2236-OWCOPY" />
-      <cluster id="2237-OWCOPY" />
-      <cluster id="2238-OWCOPY" />
-      <cluster id="2239-OWCOPY" />
-      <cluster id="2240-OWCOPY" />
-      <cluster id="3009-OWCOPY" />
-      <cluster id="3224-OWCOPY" />
-      <cluster id="3225-OWCOPY" />
-      <cluster id="3226-OWCOPY" />
-      <cluster id="3227-OWCOPY" />
-      <cluster id="3228-OWCOPY" />
-      <cluster id="3229-OWCOPY" />
-      <cluster id="3231-OWCOPY" />
-      <cluster id="3232-OWCOPY" />
-      <cluster id="3233-OWCOPY" />
-      <cluster id="3234-OWCOPY" />
-      <cluster id="3235-OWCOPY" />
-      <cluster id="3236-OWCOPY" />
-      <cluster id="3237-OWCOPY" />
-      <cluster id="3238-OWCOPY" />
-      <cluster id="3239-OWCOPY" />
-      <cluster id="3240-OWCOPY" />
-      <cluster id="3241-OWCOPY" />
-      <cluster id="3242-OWCOPY" />
-      <cluster id="3243-OWCOPY" />
-      <cluster id="3244-OWCOPY" />
-      <cluster id="3247-OWCOPY" />
-      <cluster id="3248-OWCOPY" />
-      <cluster id="4226-OWCOPY" />
-      <cluster id="4227-OWCOPY" />
-      <cluster id="4228-OWCOPY" />
-      <cluster id="4229-OWCOPY" />
-      <cluster id="4230-OWCOPY" />
-      <cluster id="4231-OWCOPY" />
-      <cluster id="0250" />
-      <cluster id="1264" />
-      <cluster id="4255" />
-      <cluster id="1266" />
-      <cluster id="2247" />  
+    <clustergroup startdate="2020-01-20T10:00:00Z" enddate="2020-02-02T01:00:00Z"> <!-- NA -->
+      <cluster id="0305" />
+      <cluster id="0307" />
+      <cluster id="0313" />
+      <cluster id="0323" />
+      <cluster id="0325" />
+      <cluster id="0329" />
+      <cluster id="0332" />
+      <cluster id="0337" />
+      <cluster id="0340" />
+      <cluster id="0342" />
+      <cluster id="0346" />
+      <cluster id="0347" />
+      <cluster id="0354" />
+      <cluster id="0355" />
+      <cluster id="0356" />
+      <cluster id="0359" />
+      <cluster id="1302" />
+      <cluster id="1303" />
+      <cluster id="1304" />
+      <cluster id="1307" />
+      <cluster id="1308" />
+      <cluster id="1311" />
+      <cluster id="1312" />
+      <cluster id="1313" />
+      <cluster id="1314" />
+      <cluster id="1315" />
+      <cluster id="1316" />
+      <cluster id="1317" />
+      <cluster id="1319" />
+      <cluster id="1320" />
+      <cluster id="1322" />
+      <cluster id="1324" />
+      <cluster id="1329" />
+      <cluster id="1330" />
+      <cluster id="1332" />
+      <cluster id="1335" />
+      <cluster id="1337" />
+      <cluster id="1341" />
+      <cluster id="1345" />
+      <cluster id="1347" />
+      <cluster id="1348" />
+      <cluster id="1351" />
+      <cluster id="1352" />
+      <cluster id="1355" />
+      <cluster id="2304" />
+      <cluster id="2307" />
+      <cluster id="2311" />
+      <cluster id="2316" />
+      <cluster id="2317" />
+      <cluster id="2323" />
+      <cluster id="2324" />
+      <cluster id="2331" />
+      <cluster id="2333" />
+      <cluster id="2336" />
+      <cluster id="2337" />
+      <cluster id="2343" />
+      <cluster id="2342" />
+      <cluster id="2348" />
+      <cluster id="2352" />
+      <cluster id="2359" />
+      <cluster id="2360" />
+      <cluster id="3304" />
+      <cluster id="3305" />
+      <cluster id="3306" />
+      <cluster id="3307" />
+      <cluster id="3308" />
+      <cluster id="3311" />
+      <cluster id="3314" />
+      <cluster id="3315" />
+      <cluster id="3316" />
+      <cluster id="3319" />
+      <cluster id="3321" />
+      <cluster id="3323" />
+      <cluster id="3324" />
+      <cluster id="3328" />
+      <cluster id="3332" />
+      <cluster id="3333" />
+      <cluster id="3335" />
+      <cluster id="3337" />
+      <cluster id="3342" />
+      <cluster id="3344" />
+      <cluster id="3355" />
+      <cluster id="3350" />
+      <cluster id="3351" />
+      <cluster id="3352" />
+      <cluster id="3354" />
+      <cluster id="4331" />
+      <cluster id="3357" />
+      <cluster id="3358" />
+      <cluster id="4305" />
+      <cluster id="4307" />
+      <cluster id="4308" />
+      <cluster id="4312" />
+      <cluster id="4315" />
+      <cluster id="4317" />
+      <cluster id="4323" />
+      <cluster id="4325" />
+      <cluster id="4326" />
+      <cluster id="4329" />
+      <cluster id="4335" />
+      <cluster id="4334" />
+      <cluster id="4337" />
+      <cluster id="4338" />
+      <cluster id="4341" />
+      <cluster id="4343" />
+      <cluster id="4356" />
+      <cluster id="4345" />
+      <cluster id="4351" />
+      <cluster id="4355" />
     </clustergroup>
-  </TerritoryFirstClaimTimes>
+  </TerritoryBlockClaiming>
+  <GvgSeason alliancesharefactor="0.5" />
+  <HideoutRecovery feefactor="5000" notclaimabletime="2419200"/>
 </AO-GameData>

@@ -1,77 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <territorytypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="territorytypes.xsd" upkeepwarningchecktimespaninhours="24" upkeepwarningintervalinmin="60" upkeeptimerinmin="1440">
   <territorytype
-    name="NORMAL"
-    claimcost="3000000"
-    upkeepcost="10800"
-	  allowprimetimesforevacuation="2"
-	  
-    maxdefensepoints="3"
-    defensepointschangeafterprimetime="1"
-	  
-    maxdefensebonus="5"
-    mindefensebonus="5"
-    defensebonuschangeafterprimetime="0"
-    defensebonuschangeafterloosingabattle="0"
-
-    dailyinstancedbattles="0"
-    
-    battlevaultsize="64"
-    nutritionstorage="194400"
-    secondspernutrition="4.444444444"
-    claimnutrition="20000.0"
-    conquernutrition ="20000.0">
-
-    <Bank size="128" weightlimit="100000.0">
-      <DefaultTab Name="@MONOLITH_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
-      <TabCost cost="100000" />
-      <TabCost cost="150000" />
-      <TabCost cost="250000" />
-      <TabCost cost="400000" />
-      <TabCost cost="600000" />
-      <TabCost cost="900000" />
-      <TabCost cost="1200000" />
-      <TabCost cost="1500000" />
-      <TabCost cost="1800000" />
-      <TabCost cost="2000000" />
-      <TabCost cost="2200000" />
-      <TabCost cost="2400000" />
-      <TabCost cost="2600000" />
-      <TabCost cost="2800000" />
-    </Bank>
-    <GuildVault size="500" weightlimit="1000000.0">
-      <TabCost cost="0" />
-      <TabCost cost="250000" />
-      <TabCost cost="500000" />
-      <TabCost cost="750000" />
-      <TabCost cost="1250000" />
-      <TabCost cost="2500000" />
-      <TabCost cost="4000000" />
-      <TabCost cost="6000000" />
-      <TabCost cost="8000000" />
-      <TabCost cost="9500000" />
-      <TabCost cost="10000000" />
-      <TabCost cost="10000000" />
-      <TabCost cost="10000000" />
-      <TabCost cost="10000000" />
-      <TabCost cost="10000000" />
-    </GuildVault>	
-    <MatchSettings matchtype="MATCH_GVG" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="150" mindefenderticketsleftforbreakingplayerlock="150" conquercost="2000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
-      <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
-        <TimeSlot id="1" time="17:00" />
-        <TimeSlot id="2" time="18:00" />
-        <TimeSlot id="3" time="19:00" />
-        <TimeSlot id="4" time="20:00" />
-      </TimeSlots>
-    </MatchSettings>
-  </territorytype>
-
-  <territorytype
     name="WATCHTOWER"
-    claimcost="1000000"
-    upkeepcost="3600"
-	  allowprimetimesforevacuation="0"
-	  
+    claimcost="2000000"
+    	  	  
     maxdefensepoints="1"
     defensepointschangeafterprimetime="1"
 	  
@@ -83,10 +15,10 @@
     dailyinstancedbattles="1"
     
     battlevaultsize="64"
-    nutritionstorage="19440"
-    secondspernutrition="44.44444444"
-    claimnutrition="2000"
-    conquernutrition="2000">
+    nutritionstorage="38880"
+    secondspernutrition="22.222222"
+    claimnutrition="4000"
+    conquernutrition="4000">
     <!-- PointboosterSettings set up how seasonal points FROM MAGES
       OWNING:
       baseratemultiplier = factor on base points from territory ownership
@@ -98,6 +30,62 @@
       earlyspawntoken = token type to spawn a rogue mage
       earlyspawntokenrate = tokens to spawn a rogue mage
     -->
+    <!-- bonuslootlist display is documented in http://confluence.office.albion.zone/display/AO/Crystal+League+UI#CrystalLeagueUI-BattleRewards -->
+    <crystalleague seasoncategory="DEBUG">
+      <towerlevel level="1"
+                  decaydays="0"
+                  yieldbonus="0"
+                  pointboostermultiplier="1"
+                  enchantedresourcemultiplier="1"/>
+      <towerlevel level="2"
+                  decaydays="4"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_01"
+                  yieldbonus="0.02"
+                  pointboostermultiplier="1.10"
+                  enchantedresourcemultiplier="1.1"/>
+      <towerlevel level="3"
+                  decaydays="4"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_02"
+                  yieldbonus="0.05"
+                  pointboostermultiplier="1.20"
+                  enchantedresourcemultiplier="1.2"/>
+      <towerlevel level="4"
+                  decaydays="4"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_03"
+                  yieldbonus="0.07"
+                  pointboostermultiplier="1.30"
+                  enchantedresourcemultiplier="1.3"
+                  bonuslootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL4"/>
+      <towerlevel level="5"
+                  decaydays="8"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_04"
+                  yieldbonus="0.10"
+                  pointboostermultiplier="1.40"
+                  enchantedresourcemultiplier="1.4"
+                  bonuslootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL5"/>
+      <towerlevel level="6"
+                  decaydays="15"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_05"
+                  yieldbonus="0.12"
+                  pointboostermultiplier="1.60"
+                  enchantedresourcemultiplier="1.6"
+                  bonuslootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL6"/>
+      <towerlevel level="7"
+                  decaydays="29"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_06"
+                  yieldbonus="0.15"
+                  pointboostermultiplier="1.80"
+                  enchantedresourcemultiplier="1.8"
+                  bonuslootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL7"/>
+      <towerlevel level="8"
+                  decaydays="29"
+                  guardbuff="MOB_TERRITORY_GUARD_BUFF_07"
+                  yieldbonus="0.20"
+                  pointboostermultiplier="2.00"
+                  enchantedresourcemultiplier="2.0"
+                  bonuslootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL8"/>
+    </crystalleague>
+    
     <PointBoosterSettings
       baseratemultiplier="0"
       totalpointboosterratebonus="1" 
@@ -112,54 +100,74 @@
       <SpawnSettings boosterpresent="1" spawndelayseconds="14400"/>
       <SpawnSettings boosterpresent="0" spawndelayseconds="10800"/>
     </PointBoosterSettings>
-    <Bank size="64" weightlimit="10000.0">
-      <DefaultTab Name="@MONOLITH_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
-    </Bank>
-    <GuildVault size="500" weightlimit="1000000.0">
-      <TabCost cost="0" />
-      <TabCost cost="250000" />
-      <TabCost cost="500000" />
-      <TabCost cost="750000" />
-      <TabCost cost="1250000" />
-    </GuildVault>
     <Tower engageattackrange="20.0" disengageattackrange="25.0" attackinterval="0.5" attackdamage="0.05" attackdistancedelay="24.0">
-      <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
-      <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      <FriendlyFX beam="FX/ClientPrefabs/fx_beam_lightning_tower_blue_01" impact="" />
+      <HostileFX beam="FX/ClientPrefabs/fx_beam_lightning_tower_red_01" impact=""/>
     </Tower>
     <GuardSettings respawntimeseconds="1200" />
-    <MatchSettings matchtype="MATCH_GVG" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="150" mindefenderticketsleftforbreakingplayerlock="150" conquercost="2000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
-      <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
-        <TimeSlot id="1" time="17:00" />
-        <TimeSlot id="2" time="18:00" />
-        <TimeSlot id="3" time="19:00" />
-        <TimeSlot id="4" time="20:00" />
-      </TimeSlots>
-    </MatchSettings>
+
+	<OpenWorldAttackSettings    
+      GuardCommanderRespawninsec="1200"
+      AttackSilverCost="2000000"
+      AttackDeclarationChannelTimeinsec="10"
+      ConquerChannelTimeinsec="30"
+      DamageCancelsDeclarationChannel="false"
+	  DamageCancelsConquerChannel="false"
+      BattlePreparationTimeinSec="900"
+	  MinTimeUntilNextOpenWorldAttackInMinutes="1200"
+      BattleTimeinsec="1800"
+    />
+	
     <!-- Red:B1:B2:B3 == 1:4:6:8; lowest has to be 86400/pointboosterspawndelayseconds/min(pointboostertokendroprate,pointboostertokendroprate) so you get at least 1 point/token when raiding -->
     <PointsSettings>
       <!--base points for territory ownership-->
-      <PointsValues clustertype="OPENPVP_RED">
-        <ClusterTier tier="5" points="96" />
-        <ClusterTier tier="6" points="96" />
-        <ClusterTier tier="7" points="96" />
-      </PointsValues>
       <PointsValues clustertype="OPENPVP_BLACK_1">
+        <ClusterTier tier="3" points="40" />
+        <ClusterTier tier="4" points="40" />
+        <ClusterTier tier="5" points="40" />
+        <ClusterTier tier="6" points="40" />
+        <ClusterTier tier="7" points="40" />
+        <ClusterTier tier="8" points="40" />        
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_2">
+        <ClusterTier tier="3" points="80" />
+        <ClusterTier tier="4" points="80" />
+        <ClusterTier tier="5" points="80" />
+        <ClusterTier tier="6" points="80" />
+        <ClusterTier tier="7" points="80" />
+        <ClusterTier tier="8" points="80" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_3">
         <ClusterTier tier="3" points="120" />
         <ClusterTier tier="4" points="120" />
         <ClusterTier tier="5" points="120" />
         <ClusterTier tier="6" points="120" />
+        <ClusterTier tier="7" points="120" />
+        <ClusterTier tier="8" points="120" />
       </PointsValues>
-      <PointsValues clustertype="OPENPVP_BLACK_2">
-        <ClusterTier tier="4" points="168" />
-        <ClusterTier tier="5" points="168" />
-        <ClusterTier tier="6" points="168" />
-        <ClusterTier tier="7" points="168" />
+      <PointsValues clustertype="OPENPVP_BLACK_4">
+        <ClusterTier tier="3" points="160" />
+        <ClusterTier tier="4" points="160" />
+        <ClusterTier tier="5" points="160" />
+        <ClusterTier tier="6" points="160" />
+        <ClusterTier tier="7" points="160" />
+        <ClusterTier tier="8" points="160" />
       </PointsValues>
-      <PointsValues clustertype="OPENPVP_BLACK_3">
-        <ClusterTier tier="5" points="216" />
-        <ClusterTier tier="6" points="216" />
-        <ClusterTier tier="7" points="216" />
-        <ClusterTier tier="8" points="216" />
+      <PointsValues clustertype="OPENPVP_BLACK_5">
+        <ClusterTier tier="3" points="200" />
+        <ClusterTier tier="4" points="200" />
+        <ClusterTier tier="5" points="200" />
+        <ClusterTier tier="6" points="200" />
+        <ClusterTier tier="7" points="200" />
+        <ClusterTier tier="8" points="200" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_6">
+        <ClusterTier tier="3" points="240" />
+        <ClusterTier tier="4" points="240" />
+        <ClusterTier tier="5" points="240" />
+        <ClusterTier tier="6" points="240" />
+        <ClusterTier tier="7" points="240" />
+        <ClusterTier tier="8" points="240" />
       </PointsValues>
     </PointsSettings>
   </territorytype>
@@ -167,9 +175,7 @@
   <territorytype
     name="CITY"
     claimcost="1000000"
-    upkeepcost="3600"
-	  allowprimetimesforevacuation="0"
-
+    	  
     mintimebetweenmatchesperconnectioninmin="720"
 
     maxdefensepoints="1"
@@ -191,14 +197,14 @@
     <Bank size="64" weightlimit="10000.0">
       <DefaultTab Name="@MONOLITH_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
     </Bank>
-    <MatchSettings matchtype="MATCH_GVG_CITY" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="196" mindefenderticketsleftforbreakingplayerlock="196" conquercost="10000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
+    <GvGMatchSettings matchtype="MATCH_GVG_CITY" participationpayoutfactor="0.9" winningpayoutfactor="0.05" timeuntilretaliationmustbedeclaredinmin="30" mindefenderticketsleftforcounterattack="100" mindefenderticketsleftfordecisivewin="196" mindefenderticketsleftforbreakingplayerlock="196" conquercost="10000000" mintimeuntilbattleinminutes="1200" timeslotspaninminutes="30" timeslotspansblocked="2">
       <TimeSlots blockedmatchtimestampstart="10:00" blockedmatchtimestampend="11:00" >
         <TimeSlot id="1" time="17:00" />
         <TimeSlot id="2" time="18:00" />
         <TimeSlot id="3" time="19:00" />
         <TimeSlot id="4" time="20:00" />
       </TimeSlots>
-    </MatchSettings>
+    </GvGMatchSettings>
   </territorytype>
 </territorytypes>
 

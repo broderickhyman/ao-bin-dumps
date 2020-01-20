@@ -26,7 +26,7 @@
       <layer id="Layer_10" name="env_out_Steppe" />
       <layer id="Layer_11" name="env_out_Swamp" />
     </layergroup>
-    <layergroup name="ENCOUNTER">
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_01" name="mob_solo_hard_01_secret">
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="40.53 0.02 -27.03" roty="180">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
@@ -62,6 +62,38 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
         </tile>
       </layer>
+      <layer id="Layer_04" name="mob_solo_hard_01_no_secret">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS" pos="9.8 0.27 -1.6" roty="7">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="44.33 0.02 25.6" rot="3 357 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="39.67 0.02 25.49" rot="3 19.24 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="40.53 0.02 -27.03" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHCHILD" pos="53.35 0.02 12.75" roty="230">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_EARTHCHILD" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="34.38 0.33 -4.44" rot="3 267 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="31.03 0.02 -5.45" rot="3 87 9">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="51.97 0 8.09">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="38.18 0.02 -31.65" roty="40">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-9 0 -8" roty="90" />
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
       <layer id="Layer_02" name="mob_veteran_hard_01_no_secret">
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="9.79 0.27 -2" roty="341.3">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
@@ -127,36 +159,6 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_EARTHELEMENTAL" />
         </tile>
       </layer>
-      <layer id="Layer_04" name="mob_solo_hard_01_no_secret">
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS" pos="9.8 0.27 -1.6" roty="7">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="44.33 0.02 25.6" rot="3 357 9">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="39.67 0.02 25.49" rot="3 19.24 9">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="40.53 0.02 -27.03" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHCHILD" pos="53.35 0.02 12.75" roty="230">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_EARTHCHILD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="34.38 0.33 -4.44" rot="3 267 9">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="31.03 0.02 -5.45" rot="3 87 9">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="51.97 0 8.09">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="38.18 0.02 -31.65" roty="40">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
-        </tile>
-        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-9 0 -8" roty="90" />
-      </layer>
     </layergroup>
     <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -35" />
@@ -194,7 +196,7 @@
     <tile name="FOREST_GREEN_DNG_BASE_PUDDLE_F" pos="35 0 -25" roty="90" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG" pos="35 0 5" roty="270" />
     <tile name="FOREST_GREEN_DNG_BASE_PUDDLE_F" pos="45 0 -15" roty="270" />
-    <tile name="FOREST_GREEN_KPR_FLY_BRIDGE_START_B_DNG_OBJ" pos="35 0 -5" rot="0 90.21 0" />
+    <tile name="FOREST_GREEN_KPR_FLY_BRIDGE_START_B_DNG_OBJ" pos="35 0 -5" roty="90" />
     <tile name="FOREST_GREEN_DNG_BASE_PUDDLE_B" pos="55 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="15 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 0 -5" />
@@ -271,6 +273,7 @@
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="65 0 -5" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="65 0 15" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="-35 0 5" roty="90" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_LEFT_A" pos="15 0 -15" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-55 0 5" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_STRAIGHT_A" pos="5 0 15" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="5 0 -25" roty="180" />
@@ -299,7 +302,6 @@
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="45 -8 15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 5" />
-    <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -8 -25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="45 -8 -25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 -5" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 -25" />
@@ -311,6 +313,7 @@
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="25 -8 -15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="-5 -8 -15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="25 -8 15" />
+    <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -8 -25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -8 -15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -8 5" />
     <criticaltile name="SHRINE_KPR_FAME_STANDARD" pos="7 0 5" roty="218" id="shrine_01" type="shrine">
@@ -332,11 +335,11 @@
       <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="9.9 3.5 4.1">
-      <pointlight range="15" intensity="4" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
-    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="27 -9 3" />
-    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="31 -9 11" roty="270" />
-    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="30 -9 6" />
+    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="27 -9 2" roty="270" />
+    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="30 -9 13" roty="180" />
+    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="22 -12 10" roty="180" />
     <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="27 -9 15" roty="90" />
     <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="26 -9 -11" />
     <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="27 -9 -20" roty="270" />
@@ -373,7 +376,7 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_B" pos="50 0 14" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_B" pos="40 0 22" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_B" pos="34 0 -32" roty="90" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="17 0 -15" roty="180" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="16 0 -15" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-6 0 1" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-31 0 11" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="-14 0 -24" roty="270" />
@@ -385,10 +388,8 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-31 0 -24" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-19 0 -4" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-13 0 -15" roty="180" />
+    <tile name="FOREST_GREEN_WATER_FILL_ROCK_B" pos="21 -9 11" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="17 0 7" roty="180" />
-    <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_C" pos="17 0 -14" />
-    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="10 0 -12" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_LEFT_A" pos="15 0 -15" roty="270" />
     <tile name="FOREST_GREEN_KPR_CAMPFIRE_A" pos="-39 1 -13" />
     <tile name="FOREST_GREEN_KPR_FILL_FUR_A" pos="-31 0 -4" roty="339" />
     <tile name="FOREST_GREEN_KPR_TENT_SCOUT_SMALL_A" pos="-32 1 -2" roty="180" scale="0.8050323 0.7864284 0.8168414" />
@@ -429,7 +430,7 @@
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="55.5 0 7.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="48.5 0 16.5" roty="180" />
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="34.5 0 36.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_D" pos="16.5 0 -12.5" roty="90" />
+    <tile name="FOREST_GREEN_VEG_FERN_D" pos="13.5 0 -10.5" roty="90" />
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="26.5 -3 -11.5" roty="38.1" />
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="26.5 -3 2.5" roty="278" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A" pos="36 0 32" roty="270" />
@@ -468,14 +469,16 @@
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-20.5 0 -14.5" roty="270" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-31.5 0 -24.5" roty="180" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-16.5 0 -4.5" roty="270" />
+    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="10 0 -12" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_C" pos="27 0 33" roty="270" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_A" pos="56 0 11" roty="270" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_D" pos="51 0 32" roty="180" />
     <tile name="FOREST_GREEN_DNG_KPR_ROCK_ROOT_A_BLEND" pos="-2 0 5" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A" pos="41 0 -9" />
     <tile name="FOREST_GREEN_KPR_FILL_FIREBOWL_OIL_SINGLE_A" pos="41 0 -1" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_D" pos="17.5 0 -20.5" />
+    <tile name="FOREST_GREEN_VEG_FERN_D" pos="18.5 0 -19.5" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="17.5 0 -10.5" roty="90" />
+    <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_C" pos="17 0 -14" />
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="4 0 5" />
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="6 0 -17" />
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="15 0 -4" />

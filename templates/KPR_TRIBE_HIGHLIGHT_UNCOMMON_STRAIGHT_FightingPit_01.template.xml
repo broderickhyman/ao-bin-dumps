@@ -21,38 +21,7 @@
       <layer id="Layer_13" name="Steppe" />
       <layer id="Layer_14" name="Swamp" />
     </layergroup>
-    <layergroup name="ENCOUNTER">
-      <layer id="Layer_02" name="mob_veteran_hard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="0.32 0 -6.13" roty="174">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="-9.05 0 -38.58" roty="138">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="-1.98 0 -38.13" roty="335">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_GIANT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="4.39 0 33.3" roty="327">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-2.81 0 40.9" rot="0 131.92 0">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="3.9 0 -12.37" roty="340">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="1 0 -13.42">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-2.96 0 -12.43" roty="8">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BEAR" pos="-1.47 0 -29.7" roty="182">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
-        </tile>
-      </layer>
-    </layergroup>
-    <layergroup name="Encounter">
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_05" name="mob_solo_hard_01">
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS_BERSERK" pos="-0.09 0 41.32" roty="179">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS_BERSERK" />
@@ -95,6 +64,37 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_GIANT" pos="3.96 0 -33.68" roty="261.43">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_GIANT" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
+      <layer id="Layer_02" name="mob_veteran_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="0.32 0 -6.13" roty="174">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BERSERK" pos="-9.05 0 -38.58" roty="138">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="-1.98 0 -38.13" roty="335">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_GIANT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="4.39 0 33.3" roty="327">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-2.81 0 40.9" rot="0 131.92 0">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="3.9 0 -12.37" roty="340">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="1 0 -13.42">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="-2.96 0 -12.43" roty="8">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BEAR" pos="-1.47 0 -29.7" roty="182">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
         </tile>
       </layer>
     </layergroup>
@@ -548,7 +548,7 @@
       <atmospherebubble layer="1" radius="40" blend="0.3625" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="0.39 7.56 34.54">
-      <pointlight range="15" intensity="4" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="0.58 6.23 -5.37">
       <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
@@ -557,37 +557,37 @@
       <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-17.99 7.78 21.05">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-18.05 7.78 39.19">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-6.59 7.78 49.19">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="6.16 7.78 49.12">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="19.37 7.78 39.4">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-7.12 7.78 11.98">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="8.14 7.78 10.91">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="18.39 7.78 21.56">
-      <pointlight range="5" intensity="5" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-10.08 6.02 -31.39">
-      <pointlight range="7" intensity="4" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="6.86 6.02 -27.98">
-      <pointlight range="7" intensity="4" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-0.98 6.02 -48.42">
-      <pointlight range="7" intensity="4" color="1 0.7591847 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
   </tiles>
 </template>

@@ -770,33 +770,7 @@
         <compoundtile name="_SWAMP_GREEN_FILL_LOW_TREES_GROUP_COMP_01" pos="37 -28 -73" roty="90" />
       </layer>
     </layergroup>
-    <layergroup name="Encounter">
-      <layer id="Layer_01" name="mob_veteran_hard_01">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="2.33 -0.04 -69.74" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-2.06 -0.04 -69.74" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="15.18 7.96 -1.83" roty="270">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-15.56 7.96 10.49" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="-15.56 7.96 -0.15" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="15.99 7.96 10.43" roty="270">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="-0.21 -0.04 -73.77">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ENDBOSS_UNCOMMON_MAGISTRA" pos="0.19 7.96 -1.11">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_ENDBOSS_UNCOMMON_MAGISTRA" />
-        </tile>
-      </layer>
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_11" name="mob_solo_hard_01">
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MAGIC" pos="-15.56 7.96 -0.15" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MAGIC" />
@@ -889,8 +863,6 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ENDBOSS_UNCOMMON_MAGISTRA" />
         </tile>
       </layer>
-    </layergroup>
-    <layergroup name="ENCOUNTER">
       <layer id="Layer_14" name="mob_solo_hard_04">
         <tile name="FOREST_GREEN_MOR_MONASTERY_DECO_BOOK_A" pos="-7.5 4 -36.5" roty="333" />
         <tile name="FOREST_GREEN_MOR_MONASTERY_DECO_BOOK_A" pos="7.5 4 -35.5" roty="243" />
@@ -958,6 +930,34 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ENDBOSS_UNCOMMON_MAGISTRA" pos="0.19 7.96 -1.11">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ENDBOSS_UNCOMMON_MAGISTRA" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
+      <layer id="Layer_01" name="mob_veteran_hard_01">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="2.33 -0.04 -69.74" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-2.06 -0.04 -69.74" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="15.18 7.96 -1.83" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-15.56 7.96 10.49" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="-15.56 7.96 -0.15" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="15.99 7.96 10.43" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="-0.21 -0.04 -73.77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ENDBOSS_UNCOMMON_MAGISTRA" pos="0.19 7.96 -1.11">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_ENDBOSS_UNCOMMON_MAGISTRA" />
         </tile>
       </layer>
       <layer id="Layer_15" name="mob_veteran_hard_02">
@@ -1719,11 +1719,11 @@
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_BORDER_STONES_STRAIGHT_A" pos="-7 0 -75" roty="90" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_COLLUMN_A" pos="-29 16 -13" roty="90" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_COLLUMN_A" pos="30 16 -13" roty="90" />
-    <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="-25 12 -13" />
-    <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="25 12 -40" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="26 12 -13" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="25 12 -27" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="-25 12 -27" />
+    <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="25 12 -40" />
+    <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="-25 12 -13" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_STRAIGHT_A" pos="-25 12 -40" />
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_BORDER_STRAIGHT_B" pos="15 8 5" roty="270" />
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_BORDER_STRAIGHT_B" pos="-5 8 15" roty="180" />

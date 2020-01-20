@@ -70,11 +70,6 @@
         <expeditionagent agenttype="T6_EXPAGENT_ROYAL_CITY" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="portalentrance_01" type="portalentrance" layerId="">
-      <tile name="MOUNTAIN_GREEN_PORTAL_ENTRANCE_FORTSTERLING" pos="-59 -12 59" roty="45">
-        <portalentrance spawnpos="9.441517 0.02811015" />
-      </tile>
-    </criticalscenemember>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="Exit" pos="68.5 0 -0.5" roty="180">
         <exit size="15 15" spawnpos="12.30435 1.075681E-06" faction="None" kind="Cluster" roadtype="Primary">
@@ -111,6 +106,26 @@
           <guards>
             <guard pos="4.819784 87.36638" />
             <guard pos="-5.110537 87.36638" />
+          </guards>
+        </exit>
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_07" type="exit" layerId="">
+      <tile name="Exit" pos="-70.5 -12 99.5" roty="90">
+        <exit size="15 15" spawnpos="23.57279 -5.898695" faction="None" kind="Cluster" roadtype="Primary">
+          <guards>
+            <guard pos="-65.40219 89.05526" />
+            <guard pos="-76.92249 88.83134" />
+          </guards>
+        </exit>
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_08" type="exit" layerId="">
+      <tile name="Exit" pos="-99.5 -12 70.5">
+        <exit size="15 15" spawnpos="23.23614 5.439011" faction="None" kind="Cluster" roadtype="Primary">
+          <guards>
+            <guard pos="-89.15214 75.49333" />
+            <guard pos="-88.69335 65.60439" />
           </guards>
         </exit>
       </tile>
@@ -515,11 +530,6 @@
         <realestate size="20 20" platepos="-25.5 28 -175" doorpos="-25 30.5 -179" doorsize="1 7 2" overridesaleprice="-1" plateorientation="NorthWest" locationquality="E" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="actionbuilding_07" type="actionbuilding" layerId="">
-      <tile name="SEASONS_STORE" pos="-45 -12 58" roty="108">
-        <actionbuilding />
-      </tile>
-    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
     <layergroup name="">
@@ -571,8 +581,8 @@
         <tile name="MOUNTAIN_GREEN_CITY_BANNER_B" pos="-37 6 11" roty="311" scale="1 1.5 1.25" />
       </layer>
     </layergroup>
-    <layergroup name="Season">
-      <layer id="Layer_03" name="Halloween">
+    <layergroup name="">
+      <layer id="Layer_03" name="Halloween" flags="halloween">
         <tile name="HALLOWEEN_BUNTING_A" pos="-79.5 0 -18" roty="90" />
         <tile name="HALLOWEEN_BUNTING_A" pos="-3.5 0 71" roty="90" />
         <tile name="HALLOWEEN_BUNTING_A" pos="-33.5 0 3" roty="90" />
@@ -634,7 +644,9 @@
         <tile name="SWAMP_GREEN_FILL_FARM_HAY_SACKS_B" pos="43 0 -8" roty="270" />
         <tile name="HALLOWEEN_PUMKIN_LIGHT_A" pos="-28 2 -25" roty="135" />
       </layer>
-      <layer id="Layer_04" name="Christmas">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="Christmas" flags="christmas">
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-3.5 1 71" rot="23 270 0" />
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-3.5 1 86" rot="23 270 0" />
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="53 12 13.5" />
@@ -733,7 +745,6 @@
         <tile name="XMAS_FILL_CITY_WREATH_C" pos="-29.5 4 6.5" roty="312" />
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-3.5 12 -121" roty="270" />
         <tile name="XMAS_FILL_CITY_WREATH_C" pos="34.5 21 27.5" />
-        <tile name="XMAS_FILL_CITY_WREATH_C" pos="-63.5 -10 52.5" roty="308" />
         <tile name="XMAS_FILL_CITY_BUNTING_D" pos="-3.5 12 -108" roty="270" />
         <tile name="XMAS_FILL_CITY_WREATH_B" pos="-3.5 13 -102.5" roty="263" />
         <tile name="XMAS_FILL_CITY_BUSH_B" pos="17.5 0 -11.5" />
@@ -752,7 +763,9 @@
         <tile name="XMAS_FILL_CITY_LIGHT_A" pos="-28.5 2 -24.5" />
         <tile name="XMAS_FILL_CITY_BUSH_A" pos="-32.5 0 -26.5" roty="270" />
       </layer>
-      <layer id="Layer_05" name="Easter">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_05" name="Easter" flags="easter">
         <tile name="EASTER_DECO_HANGING_A" pos="24 11 13" roty="90" />
         <tile name="EASTER_DECO_BUNTING_A" pos="5.5 0 44" roty="270" />
         <tile name="EASTER_DECO_A" pos="-36.5 0 -2.5" />
@@ -764,7 +777,6 @@
         <tile name="EASTER_DECO_BUNTING_A" pos="-50 0 -17.5" roty="180" />
         <tile name="EASTER_DECO_A" pos="-60.5 -12 15.5" roty="270" />
         <tile name="EASTER_DECO_BUNTING_DIAGONAL_A" pos="-58 -12 20" roty="270" />
-        <tile name="EASTER_DECO_B" pos="-61.5 -12 49.5" />
         <tile name="EASTER_DECO_B" pos="-24.5 -12 67.5" roty="270" />
         <tile name="EASTER_DECO_B" pos="-5.5 0 34.5" roty="90" />
         <tile name="EASTER_DECO_B" pos="40.5 0 8.5" roty="270" />
@@ -778,7 +790,6 @@
         <tile name="EASTER_DECO_BUNTING_DIAGONAL_A" pos="34 12 66" roty="90" />
         <tile name="EASTER_DECO_BUNTING_DIAGONAL_A" pos="36 12 20" />
         <tile name="EASTER_DECO_B" pos="11.5 0 -41.5" roty="270" />
-        <tile name="EASTER_DECO_B" pos="-49.5 -12 60.5" roty="270" />
         <tile name="EASTER_DECO_B" pos="-58.5 -12 16.5" roty="180" />
         <tile name="EASTER_DECO_B" pos="4.5 0 89.5" roty="270" />
         <tile name="EASTER_DECO_A" pos="14.5 0 16.5" roty="90" />
@@ -808,11 +819,12 @@
         <tile name="EASTER_DECO_A" pos="-48.5 0 -16.5" roty="270" />
         <tile name="EASTER_DECO_A" pos="-31.5 0 4.5" />
       </layer>
-      <layer id="Layer_06" name="Anniversary">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_06" name="Anniversary" flags="anniversary">
         <tile name="ANNIVERSARY_BANNER_A" pos="5 0 -43.5" scale="1.3 1.3 1.3" />
         <tile name="ANNIVERSARY_BANNER_A" pos="33.5 0 -5" roty="270" scale="1.3 1.3 1.3" />
         <tile name="ANNIVERSARY_BANNER_A" pos="-23.5 12 -33" roty="270" scale="1.3 1.3 1.3" />
-        <tile name="ANNIVERSARY_BANNER_B" pos="-58 -8 58" roty="315" scale="1.314224 1.314224 1.314224" />
         <tile name="ANNIVERSARY_BANNER_B" pos="-92 0 -10" roty="270" scale="1.314224 1.314224 1.314224" />
         <tile name="ANNIVERSARY_BANNER_B" pos="0 2 92" scale="1.314224 1.314224 1.314224" />
         <tile name="ANNIVERSARY_BANNER_B" pos="65 -1 0" roty="270" scale="1.314224 1.314224 1.314224" />
@@ -821,8 +833,6 @@
         <tile name="ANNIVERSARY_BANNER_B" pos="31 2 14" scale="1.314224 1.314224 1.314224" />
         <tile name="ANNIVERSARY_BANNER_C" pos="-66 -8 30" roty="25" scale="1.314224 1.314224 1.314224" />
         <tile name="ANNIVERSARY_BANNER_C" pos="-40 3 10" roty="41" scale="1.314224 1.314224 1.314224" />
-        <tile name="ANNIVERSARY_BUNTING_10M_A" pos="-64 -1 54" rot="0 103.31 337.25" />
-        <tile name="ANNIVERSARY_BUNTING_10M_A" pos="-54 -1 64" rot="0 347.29 337" />
         <tile name="ANNIVERSARY_BUNTING_10M_A" pos="-31 -5 69" roty="18.77" />
         <tile name="ANNIVERSARY_BUNTING_10M_A" pos="-34 1 68" rot="359.12 355.04 351.49" />
         <tile name="ANNIVERSARY_BUNTING_20M_A" pos="-85 -10 13" roty="257" scale="1.11 1.11 1.11" />
@@ -2651,13 +2661,6 @@
     <tile name="MiniMapMarker" pos="-39.05 0 -19">
       <minimapmarker type="Expedition" />
     </tile>
-    <criticaltile name="MOUNTAIN_GREEN_PORTAL_ENTRANCE_FORTSTERLING" pos="-59 -12 59" roty="45" id="portalentrance_01" type="portalentrance">
-      <portalentrance spawnpos="9.441517 0.02811015" />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-59.71 -12 59" roty="45">
-      <minimapmarker type="Portal_Entrance_Fort_Sterling" />
-    </tile>
-    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_CITY_A_DIAGONAL_FORTSTERLING" pos="-59 -12 59" scale="0.7 0.7 0.7" />
     <tile name="MOUNTAIN_GREEN_CONSTRUCTION_CORNER" pos="-70 12 -80" roty="90" />
     <tile name="MOUNTAIN_GREEN_CONSTRUCTION_CORNER" pos="-70 12 -70" roty="180" />
     <tile name="MOUNTAIN_GREEN_CONSTRUCTION_CORNER" pos="-60 12 -70" roty="270" />
@@ -6445,8 +6448,6 @@
     <tile name="MOUNTAIN_GREEN_PLATEAU_28M_INNERCORNER" pos="-70 -60 50" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_28M_INNERCORNER" pos="-80 -60 50" roty="270" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_28M_CORNER" pos="-80 -60 60" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_28M_CORNER" pos="-70 -60 60" roty="270" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_28M_CORNER" pos="-60 -60 70" roty="270" />
     <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-80 -60 110" />
     <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-110 -60 110" />
     <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-140 -60 110" />
@@ -7075,15 +7076,9 @@
     <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-30 -12 70" />
     <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A" pos="-30 -12 60" />
     <tile name="MOUNTAIN_GREEN_CITY_MARKETPLACE_TOWER_A" pos="-64 -12 45" roty="17" />
-    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A" pos="-54.5 -12 63.5" roty="270" scale="1 0.8 1" />
-    <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_STRAIGHT_A" pos="-50 -12 60" roty="255" />
+    <tile name="MOUNTAIN_GREEN_CITY_BANNER_LARGE_A" pos="-65 0 53" roty="221" />
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_CHUNKS_A" pos="-61.5 -12 47.5" />
-    <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_STRAIGHT_A_1M_SNAP" pos="-59 -12 49" roty="188" />
-    <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_STRAIGHT_A_1M_SNAP" pos="-48 -12 61" roty="246.51" />
-    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_PILLAR_A" pos="-63.5 -12 54.5" roty="239" scale="1 0.8 1" />
-    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_DIAGONAL_RAILING_A" pos="-59 -16 59" roty="270" />
-    <tile name="MOUNTAIN_GREEN_CITY_BANNER_LARGE_A" pos="-63 -1 54" roty="221" />
-    <tile name="MOUNTAIN_GREEN_CITY_BANNER_LARGE_A" pos="-54 -1 63" roty="226" />
+    <tile name="MOUNTAIN_GREEN_CITY_BANNER_LARGE_A" pos="-53 0 65" roty="226" />
     <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-39 -11 46" />
     <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-46 -11 39" />
     <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-29 1 23" />
@@ -7095,34 +7090,28 @@
     <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_INNERCORNER_A" pos="-30 0 20" roty="90" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_INNERCORNER_A" pos="-40 0 20" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_INNERCORNER_A" pos="-40 0 10" roty="270" />
-    <tile name="MOUNTAIN_GREEN_CITY_ENT_TOWER_A" pos="-67 -14 54" roty="180" />
-    <tile name="MOUNTAIN_GREEN_CITY_ENT_TOWER_A" pos="-55 -14 67" roty="180" />
     <tile name="MOUNTAIN_GREEN_CITY_ENT_TOWER_A" pos="-31 -5 19" roty="339.27" />
-    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_CORNER_ROUNDED_LARGE_A" pos="-55 -12 55" roty="270" />
     <tile name="MOUNTAIN_GREEN_CITY_BUILDING_A" pos="-25 -4 39" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_CORNER_A" pos="-30 -28 20" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_CORNER_A" pos="-40 -28 20" roty="270" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_CORNER_A" pos="-40 -28 10" roty="180" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_PILAR_A" pos="-25 0 16" roty="270" />
     <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_PILAR_B" pos="-16 0 25" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_28M_INNERCORNER_OBJ" pos="-60 -60 60" roty="180" />
     <tile name="MOUNTAIN_GREEN_GROUND_OBJECT" pos="-50 -32 60" />
     <tile name="MOUNTAIN_GREEN_GROUND_OBJECT" pos="-60 -32 50" />
-    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-50 -12 50" />
     <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-30 -4 20" />
     <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-40 -4 10" />
     <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-40 -4 20" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_A" pos="-44 0 -24" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-55 -12 55" roty="45" />
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-45 -12 46" roty="225" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-60 -12 52" roty="225" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-52 -12 60" roty="45" />
+    <tile name="MOUNTAIN_GREEN_VEG_SNOW_A" pos="-39.5 0 -15.5" roty="180" scale="1 0.2 1" />
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-25 0 25" roty="225" />
+    <tile name="MOUNTAIN_GREEN_VEG_SNOW_B" pos="-53.5 -12 65.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-49 -12 51" roty="45" />
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-27 0 27" roty="225" />
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_A" pos="-32.5 0 -20.5" roty="270" scale="1 0.2 1" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_A" pos="-30 0 -25" roty="180" />
-    <tile name="MOUNTAIN_GREEN_VEG_SNOW_A" pos="-39.5 0 -15.5" roty="180" scale="1 0.2 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-52 -12 53" roty="43" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_CRATE_LARGE_A" pos="-28 0 -25" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_CRATE_MEDIUM_A" pos="-27.5 0 -23.5" />
     <tile name="MOUNTAIN_GREEN_T1_DECO_TREE_PLAIN_C" pos="-21.5 -12 77.5" roty="270" />
@@ -7132,13 +7121,12 @@
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-44 -12 57" roty="277" />
     <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-44 -12 60" roty="93.9" />
     <tile name="MOUNTAIN_GREEN_FILL_LIGHT_WALL_TORCHHOLDER_B_NO_POINTLIGHT" pos="-88.5 -9 35.5" roty="225" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-47 -12 58" roty="7" />
     <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-84.69 -7.64 37.67">
-      <pointlight range="10" intensity="6" color="1 0.5137255 0.1411765" />
+      <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
     </tile>
     <tile name="MOUNTAIN_GREEN_FILL_LIGHT_WALL_TORCHHOLDER_B_NO_POINTLIGHT" pos="-85.5 -9 38.5" roty="225" />
     <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-87.6 -7.64 34.62">
-      <pointlight range="10" intensity="6" color="1 0.5137255 0.1411765" />
+      <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
     </tile>
     <criticaltile name="Exit" pos="68.5 0 -0.5" roty="180" id="exit_01" type="exit">
       <exit size="15 15" spawnpos="12.30435 1.075681E-06" faction="None" kind="Cluster" roadtype="Primary">
@@ -7169,6 +7157,22 @@
         <guards>
           <guard pos="4.819784 87.36638" />
           <guard pos="-5.110537 87.36638" />
+        </guards>
+      </exit>
+    </criticaltile>
+    <criticaltile name="Exit" pos="-70.5 -12 99.5" roty="90" id="exit_07" type="exit">
+      <exit size="15 15" spawnpos="23.57279 -5.898695" faction="None" kind="Cluster" roadtype="Primary">
+        <guards>
+          <guard pos="-65.40219 89.05526" />
+          <guard pos="-76.92249 88.83134" />
+        </guards>
+      </exit>
+    </criticaltile>
+    <criticaltile name="Exit" pos="-99.5 -12 70.5" id="exit_08" type="exit">
+      <exit size="15 15" spawnpos="23.23614 5.439011" faction="None" kind="Cluster" roadtype="Primary">
+        <guards>
+          <guard pos="-89.15214 75.49333" />
+          <guard pos="-88.69335 65.60439" />
         </guards>
       </exit>
     </criticaltile>
@@ -7853,6 +7857,12 @@
     <tile name="SpawnPoint_Mountain_SNOWBUNNY" pos="-263.24 0 461.63" roty="40.49" />
     <tile name="SpawnPoint_Mountain_SNOWBUNNY" pos="-252.02 0 446.61" roty="325.13" />
     <tile name="SpawnPoint_Mountain_SNOWBUNNY" pos="-264.22 0 470.05" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-92 -12 76" scale="0.6834315 1.125548 0.6834315" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-92 -12 65" scale="0.6834315 1.125548 0.6834315" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-65 -12 92" scale="0.6834315 1.125548 0.6834315" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-76 -12 92" scale="0.6834315 1.125548 0.6834315" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-51 -12 63" scale="0.6834315 1.125548 0.6834315" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_B_NOCOL" pos="-63 -12 51" scale="0.6834315 1.125548 0.6834315" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="-4.5 0 -64.5" roty="78" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="-4.5 0 -70.5" roty="78" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="3.5 0 -64.5" roty="279" />
@@ -7868,8 +7878,8 @@
     <tile name="FACTION_GUARD_MOUNTAIN" pos="-22.5 12 -27.5" roty="318" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="-9.5 0 -43.5" roty="35.74" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="-18.5 12 -27.5" roty="23" />
-    <tile name="FACTION_KNIGHT_MOUNTAIN" pos="-60.5 -12 52.5" roty="135" />
-    <tile name="FACTION_KNIGHT_MOUNTAIN" pos="-52.5 -12 60.5" roty="135" />
+    <tile name="FACTION_KNIGHT_MOUNTAIN" pos="-61.5 -12 53.5" roty="45" />
+    <tile name="FACTION_KNIGHT_MOUNTAIN" pos="-53.5 -12 61.5" roty="225" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="30.5 22 156.5" roty="334" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="165.5 20 46.5" roty="91" />
     <tile name="FACTION_GUARD_MOUNTAIN" pos="165.5 20 -46.5" roty="192" />
@@ -7907,22 +7917,176 @@
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -60 -30" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -60 -20" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -60 -20" />
-    <tile name="fx_buildings_shardtrader_pointlight_01" pos="-47.5 -11 60.5" />
-    <criticaltile name="SEASONS_STORE" pos="-45 -12 58" roty="108" id="actionbuilding_07" type="actionbuilding">
-      <actionbuilding />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="-45 -12 58" roty="108">
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-60 -60 90" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-90 -60 90" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-90 -60 60" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-70 -24 96.5" roty="90" scale="1 1 1.701243" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-70 -13 120" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-123 -25 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-123 -54 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-79.5 -26 113" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_RAILING_PILLAR_A" pos="-65 -12 85" roty="45" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_RAILING_PILLAR_A" pos="-85 -12 65" roty="45" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-64.5 -26 104" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-117 -26 64.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-76 -10 92" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_ROUNDED_20x20_EXTENSION_A" pos="-72 -55 131" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-99 -54 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-99 -25 61" rot="0.05 269.91 0.01" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A_DIAGONAL_OBJ" pos="-60 -12 60" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_A" pos="-60 -9 85" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-105 -42 64.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-117 -42 64.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-60 -13 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_ROUNDED_20x20_EXTENSION_A" pos="-133 -55 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_ROUNDED_20x20_EXTENSION_A" pos="-133 -27 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-64.5 -42 116" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-63 -10 51" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-94 -54 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-105 -26 64.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-60 -13 60" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-70 -13 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_SIMPLE_DIAGONAL_A" pos="-87 -12 87" roty="90">
+      <informationprovider locatag="@HALLOFFAME_SEASONSTORY_07" useradius="6" type="0" data="7" />
+    </tile>
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-61 -52 122" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-61 -23 122" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-100 -13 80" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-100 -13 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_ROUNDED_20x20_EXTENSION_A" pos="-72 -27 131" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-94 -25 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-50 -12 50" />
+    <tile name="MOUNTAIN_GREEN_MOR_FX_GODRAY_ROOF_A" pos="-72 -12 87" rot="50.22 0 0" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-120 -13 80" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-79.5 -26 103" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CITY_ENT_TOWER_A" pos="-54 -14 67" roty="290" />
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-51 -10 63" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_A_PEDESTAL" pos="-93 -12 80" roty="343" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-90 -12 63" roty="75" scale="1 1 1.0518" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-87 -12 64" roty="63" scale="1 1 0.9838184" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_2M_STAIRS_CORNER_ROUNDED_FLAT_DARK_A_OBJ" pos="-82 -13 91" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_2M_STAIRS_CORNER_ROUNDED_FLAT_DARK_A_OBJ" pos="-92 -13 82" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-90 -13 80" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_ENTRANCE_GROUND_DIAGONAL_A" pos="-75 -12 75" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_DIAGONAL_RAILING_B" pos="-60 -12 80" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_DIAGONAL_RAILING_B" pos="-70 -12 50" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-114 -26 78.5" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_GROUND_EMBLEM_SEASONS_GOLD_A" pos="-95 -12 71" roty="274" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-64.5 -42 104" roty="180" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-61 -52 93" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-62 -12 93" rot="358.96 11.56 0.33" scale="1 1 0.9838187" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-105 -12 61" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-117 -12 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-70 -13 80" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-80 -13 100" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_B_PEDESTAL" pos="-85 -10 60" roty="108.16" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-60 -40 85" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-70 -13 60" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_A_PEDESTAL" pos="-60 -10 85" roty="163" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-85 -40 60" roty="270" />
+    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_BANNER_HANGING_A_BLEND" pos="-59.5 -9 60.5" roty="316" scale="1.459 1.459 1.459" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_DIAGONAL_RAILING_B" pos="-80 -12 60" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-92 -45 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-94 -12 63" roty="100.7" scale="1 1 1.0518" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-61 -45 91" />
+    <tile name="MOUNTAIN_GREEN_MOR_FX_GODRAY_ROOF_A" pos="-86 -12 71" rot="13 339 47" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-64.5 -26 116" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-96.5 -24 71" roty="180" scale="1 1 1.701242" />
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-92 -10 76" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-80 -13 90" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-90 -13 90" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-104 -26 78.5" roty="90" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_PORTAL_WORLDMAP_A" pos="-62 -12 62" scale="1.274539 4.115791 1.274539" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_A" pos="-71.45 -7.78 94.35">
+      <pointlight range="10" intensity="4" color="1 1 1" />
+    </tile>
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-61 -52 98" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-61 -23 98" />
+    <tile name="MOUNTAIN_GREEN_CITY_ENT_TOWER_A" pos="-67 -14 54" roty="180" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_GROUND_EMBLEM_SEASONS_GOLD_A" pos="-72 -12 95" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_CORNER_DIAGONAL_RAILING_B" pos="-50 -12 70" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-61 -12 104" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_A" pos="-61 -12 116" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-90 -13 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-80 -13 80" roty="90" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-61 -23 110" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-61 -52 110" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-64 -12 87" roty="25" scale="1 1 0.9838187" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_B" pos="-85 -9 60" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-80 -13 70" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_2M_STAIRS_CORNER_ROUNDED_FLAT_DARK_A_OBJ" pos="-82 -13 82" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_SMALL_C" pos="-63 -12 90" roty="17.8" scale="1 1 0.9838186" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_A" pos="-93.24 -7.78 71.03">
+      <pointlight range="10" intensity="4" color="1 1 1" />
+    </tile>
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-92 -10 65" />
+    <tile name="MOUNTAIN_GREEN_CITY_PORTAL_IN_MAGIC_FIREBOWL_A_FORTSTERLING" pos="-65 -10 92" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-61 -23 93" />
+    <tile name="MOUNTAIN_GREEN_HALL_OF_FAME_THRONE_STATUE_A_PEDESTAL" pos="-80 -12 92" roty="343" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-70 -13 100" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-70 -13 90" roty="90" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-120 -13 70" />
+    <tile name="MOUNTAIN_GREEN_ROAD_STREET_PLACE_A_OBJECT" pos="-80 -13 120" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A_NOCOL" pos="-111 -54 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_A" pos="-111 -25 61" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-66.5 -50 116" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-79 -68 59" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-51 -40 71" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-61 -40 81" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-60 -12 50" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-72 -52 95.5" roty="90" scale="1 1 1.701243" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-70 -68 90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-70 -40 90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-69 -40 49" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-89 -68 69" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-79 -40 59" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-74 -76 103" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-89 -40 69" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-61 -68 81" roty="0" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-74 -48 115" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-66.5 -50 95" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-69 -68 49" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GROUND_A" pos="-50 -12 60" roty="270" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_DIAGONAL_EXTENSION_A_NOCOL" pos="-51 -68 71" roty="0" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-74 -48 103" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_C" pos="-66.5 -50 104" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-74 -76 115" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_B_DIAGONAL_BLEND" pos="-62 -24 62.5" />
+    <tile name="MOUNTAIN_GREEN_FILL_PLATFORM_STONE_FLAT_C_DECO" pos="-74 -12 109" roty="45" scale="1.954963 1 1.954963" />
+    <tile name="MOUNTAIN_GREEN_FILL_PLATFORM_STONE_FLAT_C_DECO" pos="-62 -12 62" roty="135" scale="1.954965 1 1.954965" />
+    <tile name="MOUNTAIN_GREEN_FILL_PLATFORM_STONE_FLAT_C_DECO" pos="-110 -12 73" roty="135" scale="1.954965 1 1.954965" />
+    <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_STRAIGHT_B" pos="-60 -12 48" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CITY_WALL_RAILING_STRAIGHT_B" pos="-48 -12 61" roty="270" />
+    <tile name="INVISIBLE_COLLISON_STRAIGHT" pos="-70 -12 98.5" roty="180" />
+    <tile name="INVISIBLE_COLLISON_STRAIGHT" pos="-98.5 -12 71" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_THICK_STRAIGHT_A" pos="-90 -24 96.5" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_THICK_STRAIGHT_A" pos="-96.5 -24 90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_THICK_STRAIGHT_A" pos="-96.5 -24 81" roty="180" scale="0.9172539 1 1" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_THICK_STRAIGHT_A" pos="-82 -24 96.5" roty="270" scale="0.9172538 1 1" />
+    <tile name="gvg_banner_hall_of_fame_s07_01" pos="-92.5 -16 79.5" roty="292" scale="2 2 2" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_SMALL_DIAGONAL_C" pos="-90 -24 90" roty="270" />
+    <tile name="gvg_banner_hall_of_fame_s07_03" pos="-91.5 -16 61.5" roty="270" scale="1.3 1.3 1.3" />
+    <tile name="gvg_banner_hall_of_fame_s07_01" pos="-79.5 -16 91.5" roty="333" scale="2 2 2" />
+    <tile name="gvg_banner_hall_of_fame_s07_02" pos="-60.5 -16 90.5" scale="1.3 1.3 1.3" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A" pos="-84 -24 94" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_A" pos="-94 -24 84" />
+    <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-60.85 -4.3 62.12">
+      <pointlight range="12" intensity="5" color="1 0.5137255 0.1411765" />
+    </tile>
+    <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-84.93 -2.6 84.93">
+      <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
+    </tile>
+    <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-59.41 -2.6 80.25">
+      <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
+    </tile>
+    <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-79.22 -2.6 59.29">
+      <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
+    </tile>
+    <tile name="MiniMapMarker" pos="-121 12 78">
       <minimapmarker type="Icon_Gvg_Seasons" />
     </tile>
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_CRATE_LARGE_A" pos="-43 -12 61" roty="344" />
-    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_CANISTER_A" pos="-47.5 -12 60.5" roty="18" />
-    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_CANISTER_C" pos="-42.5 -12 59.5" roty="108" />
-    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_CANISTER_B" pos="-44.5 -12 60.5" roty="198" />
-    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_CANISTER_B" pos="-43.5 -10 60.5" roty="288" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_CRATE_SMALL_A" pos="-43.5 -12 58.5" roty="276" />
-    <tile name="fx_buildings_shardtrader_pointlight_01" pos="-42.5 -11 59.5" />
-    <tile name="fx_buildings_shardtrader_pointlight_01" pos="-44.5 -11 60.5" />
-    <tile name="fx_buildings_shardtrader_pointlight_01" pos="-43.5 -9 60.5" />
-    <tile name="MOUNTAIN_GREEN_SHARD_TRADER_BANNER_HANGING_A" pos="-45.5 -12 61.5" roty="359" />
+    <tile name="MiniMapMarker" pos="-80 12 119">
+      <minimapmarker type="Portal_Entrance_Fort_Sterling" />
+    </tile>
   </tiles>
 </template>

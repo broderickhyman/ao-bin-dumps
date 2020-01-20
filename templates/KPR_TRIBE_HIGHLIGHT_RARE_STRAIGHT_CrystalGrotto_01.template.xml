@@ -26,7 +26,64 @@
       <layer id="Layer_10" name="Highlands" />
       <layer id="Layer_11" name="Cave_Ocean" />
     </layergroup>
-    <layergroup name="ENCOUNTER">
+    <layergroup name="ENCOUNTER_SOLO">
+      <layer id="Layer_07" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="37.96 0 7.77" roty="71">
+          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="13.1 0 43.36" roty="179.83">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="37.99 0 -29.06" roty="257.98">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="-8.03 0 17.78" roty="314">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
+            <path>
+              <waypoint pos="-7.788627 17.19614" idle="3" pace="WALK" />
+              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
+              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
+              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
+              <waypoint pos="6.603164 -27.80134" idle="3" pace="WALK" />
+              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
+              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
+              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="37.08 0 44.96" roty="45">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_GIANT" pos="32.65 0 -31.36" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_GIANT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="45.14 0 13.02" roty="63">
+          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="2.91 0 -29.61" roty="77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="14.74 0.87 35.54">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="38.02 0 -34.77" roty="303">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="-16.1 0 18.2" rot="0 60.78 0">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BOSS_HIGHLIGHT" pos="-46.85 0 15.31" roty="86">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BOSS_HIGHLIGHT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="34.73 0 49.16" roty="77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="-17.46 0 21.72" roty="82">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
       <layer id="Layer_03" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_BOSS_HIGHLIGHT" pos="-46.85 0 15.31" roty="86">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BOSS_HIGHLIGHT" />
@@ -120,61 +177,6 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_STUMP" pos="37.96 0 7.77" roty="71">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_STUMP_VETERAN" />
-        </tile>
-      </layer>
-      <layer id="Layer_07" name="mob_solo_hard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="37.96 0 7.77" roty="71">
-          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="13.1 0 43.36" roty="179.83">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="37.99 0 -29.06" roty="257.98">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="-8.03 0 17.78" roty="314">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
-            <path>
-              <waypoint pos="-7.788627 17.19614" idle="3" pace="WALK" />
-              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
-              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
-              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
-              <waypoint pos="6.603164 -27.80134" idle="3" pace="WALK" />
-              <waypoint pos="7.942092 -26.71715" idle="0" pace="WALK" />
-              <waypoint pos="4.499185 -6.529688" idle="0" pace="WALK" />
-              <waypoint pos="1.420668 4.937099" idle="0" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BERSERK" pos="37.08 0 44.96" roty="45">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BERSERK" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_GIANT" pos="32.65 0 -31.36" roty="95">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_GIANT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_EARTHELEMENTAL" pos="45.14 0 13.02" roty="63">
-          <mobspawnpoint spawnbehavior="KEEPER_EARTHELEMENTAL" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="2.91 0 -29.61" roty="77">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="14.74 0.87 35.54">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_UNPROVEN_ANY" pos="38.02 0 -34.77" roty="303">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_UNPROVEN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="-16.1 0 18.2" rot="0 60.78 0">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BOSS_HIGHLIGHT" pos="-46.85 0 15.31" roty="86">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BOSS_HIGHLIGHT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="34.73 0 49.16" roty="77">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="-17.46 0 21.72" roty="82">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
         </tile>
       </layer>
     </layergroup>
@@ -286,25 +288,25 @@
       <atmospherebubble layer="2" radius="30" blend="0.6666667" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-51.91 6.97 29.89">
-      <pointlight range="10" intensity="6" color="1 0.5483328 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.5483328 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-52.49 6.97 0.48">
-      <pointlight range="10" intensity="6" color="1 0.5483328 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.5483328 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-41.13 10.3 14.77">
-      <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-2.35 11.07 -31.46">
-      <pointlight range="10" intensity="6" color="1 0.5483328 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.5483328 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="14.03 5.52 45.25" roty="90">
-      <pointlight range="12" intensity="6" color="0.3161765 1 0.9717038" />
+      <pointlight range="10" intensity="4" color="0.3161765 1 0.9717038" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="34.01 7.42 -30.49">
-      <pointlight range="15" intensity="6" color="1 0.6688196 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="34.92 5.88 47.53">
-      <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-2.22 5.6 -31.03">
       <pointlight range="5" intensity="5" color="0 0.6705883 1" />
@@ -319,40 +321,40 @@
       <atmospherebubble layer="1" radius="35" blend="0.5714286" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-59.52 7.09 14.77">
-      <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-17.03 5.88 20.4">
-      <pointlight range="15" intensity="5" color="1 0.6688196 0.2720588" />
+      <pointlight range="10" intensity="4" color="1 0.6688196 0.2720588" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="29.68 2.42 9.28">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="35.53 2.91 -2.14">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="54.03 2.91 6.69">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="60.34 3.4 8.9">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="64.19 3.4 37.98">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="64.55 5.33 42.6">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="13.76 3.94 8.98">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-4.47 5.54 -7.52">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="8.45 3.06 24.18">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="27.91 3.06 26.59">
-      <pointlight range="5" intensity="5" color="0.2058824 0.4742395 1" />
+      <pointlight range="10" intensity="4" color="0.2058824 0.4742395 1" />
     </tile>
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_CORNER_A" pos="15 0 -65" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_CORNER_COLUMN_A" pos="15 0 -55" roty="270" />

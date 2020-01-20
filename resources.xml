@@ -52,6 +52,36 @@
       <ResourceTier value="7" resourcevalue="6.4" famevalue="75" />
       <ResourceTier value="8" resourcevalue="12.8" famevalue="150" />
     </Resource>
+    <Resource name="ROCK_LEVEL1">
+      <ResourceTier value="1" resourcevalue="1" famevalue="0" />
+      <ResourceTier value="2" resourcevalue="2" famevalue="3" />
+      <ResourceTier value="3" resourcevalue="2" famevalue="6" />
+      <ResourceTier value="4" resourcevalue="6" famevalue="15" />
+      <ResourceTier value="5" resourcevalue="5.33" famevalue="45" />
+      <ResourceTier value="6" resourcevalue="8" famevalue="90" />
+      <ResourceTier value="7" resourcevalue="12.8" famevalue="150" />
+      <ResourceTier value="8" resourcevalue="25.6" famevalue="300" />
+    </Resource>
+    <Resource name="ROCK_LEVEL2">
+      <ResourceTier value="1" resourcevalue="2" famevalue="0" />
+      <ResourceTier value="2" resourcevalue="4" famevalue="4.5" />
+      <ResourceTier value="3" resourcevalue="4" famevalue="9" />
+      <ResourceTier value="4" resourcevalue="12" famevalue="22.5" />
+      <ResourceTier value="5" resourcevalue="10.67" famevalue="67.5" />
+      <ResourceTier value="6" resourcevalue="16" famevalue="135" />
+      <ResourceTier value="7" resourcevalue="25.6" famevalue="225" />
+      <ResourceTier value="8" resourcevalue="51.2" famevalue="450" />
+    </Resource>
+    <Resource name="ROCK_LEVEL3">
+      <ResourceTier value="1" resourcevalue="4" famevalue="0" />
+      <ResourceTier value="2" resourcevalue="8" famevalue="6" />
+      <ResourceTier value="3" resourcevalue="8" famevalue="12" />
+      <ResourceTier value="4" resourcevalue="24" famevalue="30" />
+      <ResourceTier value="5" resourcevalue="21.33" famevalue="90" />
+      <ResourceTier value="6" resourcevalue="32" famevalue="180" />
+      <ResourceTier value="7" resourcevalue="51.2" famevalue="300" />
+      <ResourceTier value="8" resourcevalue="102.4" famevalue="600" />
+    </Resource>
     <Resource name="ORE">
       <ResourceTier value="1" resourcevalue="0" famevalue="0" />
       <ResourceTier value="2" resourcevalue="1" famevalue="1.5" />
@@ -312,19 +342,30 @@
       <ResourceTier value="7" resourcevalue="10" famevalue="10" />
       <ResourceTier value="8" resourcevalue="10" famevalue="10" />
     </Resource>
+    <Resource name="SHARD">
+      <ResourceTier value="1" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="2" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="3" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="4" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="5" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="6" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="7" resourcevalue="10" famevalue="10" />
+      <ResourceTier value="8" resourcevalue="10" famevalue="10" />
+    </Resource>
   </Resources>
-  <!-- Describes harvestable ressources 
   
-  ToolModifier - 	describes how a tool affects harvest time
-          * tierdifference = tool tier - resource tier; example: tier 3 tree vs. tier 4 axe = tierdifference 1
-          * harvesting is only possible if a tool modifier is given! I.e. tier difference 0 must be listed, otherwise harvesting is not possible
-          * timefactor is multiplied with with resource harvest time (see below)
+  
+  <!--Harvestable Resources -->  
+  <!--ToolModifier - 	describes how a tool affects harvest time-->
+  <!--        * tierdifference = tool tier - resource tier; example: tier 3 tree vs. tier 4 axe = tierdifference 1-->
+  <!--        * harvesting is only possible if a tool modifier is given! I.e. tier difference 0 must be listed, otherwise harvesting is not possible-->
+  <!--        * timefactor is multiplied with with resource harvest time (see below)-->
           
-  tier - describes a resource tier
-          * a resource has a maximum number of charges (how many times a 'full' resource can be harvested before it is 'empty')
-          * Charge level 0 of any Resource is the 'empty' state, i.e. cannot be harvested any more.
-          * RespawnFactor of charge level n affects time to reach charge level n+1
-  -->
+  <!--tier - describes a resource tier-->
+  <!--        * a resource has a maximum number of charges (how many times a 'full' resource can be harvested before it is 'empty')-->
+  <!--        * Charge level 0 of any Resource is the 'empty' state, i.e. cannot be harvested any more.-->
+  <!--        * RespawnFactor of charge level n affects time to reach charge level n+1-->
+  
   <Harvestables>
     <Harvestable name="WOOD" resource="WOOD">
       <ToolModifier>
@@ -371,14 +412,41 @@
         <RareState state="2" item="T6_WOOD_LEVEL2" />
         <RareState state="3" item="T6_WOOD_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_WOOD" maxchargesperharvest="1" respawntimeseconds="87000" harvesttimeseconds="10" requirestool="true" startcharges="1">
+      <Tier tier="7" item="T7_WOOD" maxchargesperharvest="1" respawntimeseconds="26100" harvesttimeseconds="10" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_WOOD_LEVEL1" />
+        <RareState state="2" item="T7_WOOD_LEVEL2" />
+        <RareState state="3" item="T7_WOOD_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_WOOD" maxchargesperharvest="1" respawntimeseconds="68300" harvesttimeseconds="15" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T8_WOOD_LEVEL1" />
+        <RareState state="2" item="T8_WOOD_LEVEL2" />
+        <RareState state="3" item="T8_WOOD_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="WOOD_BIG" resource="WOOD">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="1.5" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_WOOD" maxchargesperharvest="1" respawntimeseconds="240100" harvesttimeseconds="10" requirestool="true" startcharges="23">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_WOOD_LEVEL1" />
         <RareState state="2" item="T7_WOOD_LEVEL2" />
         <RareState state="3" item="T7_WOOD_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_WOOD" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_WOOD" maxchargesperharvest="1" respawntimeseconds="262700" harvesttimeseconds="15" requirestool="true" startcharges="27">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_WOOD_LEVEL1" />
@@ -475,7 +543,7 @@
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_WOOD" tile="FOREST_DEAD_T7_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="174000">
+      <Tier tier="7" item="T7_WOOD" tile="FOREST_DEAD_T7_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_WOOD_LEVEL1" />
@@ -537,9 +605,9 @@
         <RareState state="2" item="T5_WOOD_LEVEL2" />
         <RareState state="3" item="T5_WOOD_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_WOOD" tile="FOREST_DEAD_T7_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400" startcharges="320">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+      <Tier tier="7" item="T7_WOOD" tile="FOREST_DEAD_T7_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_WOOD_LEVEL1" />
         <RareState state="2" item="T7_WOOD_LEVEL2" />
         <RareState state="3" item="T7_WOOD_LEVEL3" />
@@ -610,22 +678,64 @@
       <Tier tier="4" item="T4_ROCK" maxchargesperharvest="1" respawntimeseconds="500" harvesttimeseconds="4" requirestool="true" notooltimefactor="2" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T4_ROCK_LEVEL1" />
+        <RareState state="2" item="T4_ROCK_LEVEL2" />
+        <RareState state="3" item="T4_ROCK_LEVEL3" />
       </Tier>
       <Tier tier="5" item="T5_ROCK" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T5_ROCK_LEVEL1" />
+        <RareState state="2" item="T5_ROCK_LEVEL2" />
+        <RareState state="3" item="T5_ROCK_LEVEL3" />
       </Tier>
       <Tier tier="6" item="T6_ROCK" maxchargesperharvest="1" respawntimeseconds="10000" harvesttimeseconds="8" requirestool="true" startcharges="1">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T6_ROCK_LEVEL1" />
+        <RareState state="2" item="T6_ROCK_LEVEL2" />
+        <RareState state="3" item="T6_ROCK_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_ROCK" maxchargesperharvest="1" respawntimeseconds="87000" harvesttimeseconds="10" requirestool="true" startcharges="1">
+      <Tier tier="7" item="T7_ROCK" maxchargesperharvest="1" respawntimeseconds="26100" harvesttimeseconds="10" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_ROCK_LEVEL1" />
+        <RareState state="2" item="T7_ROCK_LEVEL2" />
+        <RareState state="3" item="T7_ROCK_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_ROCK" maxchargesperharvest="1" respawntimeseconds="68300" harvesttimeseconds="15" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T8_ROCK_LEVEL1" />
+        <RareState state="2" item="T8_ROCK_LEVEL2" />
+        <RareState state="3" item="T8_ROCK_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="ROCK_BIG" resource="ROCK">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_ROCK" maxchargesperharvest="1" respawntimeseconds="240100" harvesttimeseconds="10" requirestool="true" startcharges="23">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <RareState state="1" item="T7_ROCK_LEVEL1" />
+        <RareState state="2" item="T7_ROCK_LEVEL2" />
+        <RareState state="3" item="T7_ROCK_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_ROCK" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_ROCK" maxchargesperharvest="1" respawntimeseconds="262700" harvesttimeseconds="15" requirestool="true" startcharges="27">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <RareState state="1" item="T8_ROCK_LEVEL1" />
+        <RareState state="2" item="T8_ROCK_LEVEL2" />
+        <RareState state="3" item="T8_ROCK_LEVEL3" />
       </Tier>
     </Harvestable>
     <Harvestable name="ROCK_CRITTER_GREEN" resource="ROCK">
@@ -647,10 +757,16 @@
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T5_ROCK_LEVEL1" />
+        <RareState state="2" item="T5_ROCK_LEVEL2" />
+        <RareState state="3" item="T5_ROCK_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_GREEN_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="174000">
+      <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_GREEN_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_ROCK_LEVEL1" />
+        <RareState state="2" item="T7_ROCK_LEVEL2" />
+        <RareState state="3" item="T7_ROCK_LEVEL3" />
       </Tier>
     </Harvestable>
     <Harvestable name="ROCK_CRITTER_RED" resource="ROCK">
@@ -672,10 +788,16 @@
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_RED_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T5_ROCK_LEVEL1" />
+        <RareState state="2" item="T5_ROCK_LEVEL2" />
+        <RareState state="3" item="T5_ROCK_LEVEL3" />
       </Tier>
       <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_RED_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_ROCK_LEVEL1" />
+        <RareState state="2" item="T7_ROCK_LEVEL2" />
+        <RareState state="3" item="T7_ROCK_LEVEL3" />
       </Tier>
     </Harvestable>
     <Harvestable name="ROCK_CRITTER_DEAD" resource="ROCK">
@@ -697,10 +819,16 @@
       <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_DEAD_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T5_ROCK_LEVEL1" />
+        <RareState state="2" item="T5_ROCK_LEVEL2" />
+        <RareState state="3" item="T5_ROCK_LEVEL3" />
       </Tier>
       <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_DEAD_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_ROCK_LEVEL1" />
+        <RareState state="2" item="T7_ROCK_LEVEL2" />
+        <RareState state="3" item="T7_ROCK_LEVEL3" />
       </Tier>
     </Harvestable>
     <Harvestable name="ROCK_CRITTER_RANDOM_DUNGEON" resource="ROCK">
@@ -717,7 +845,7 @@
       </ToolModifier>
       <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_DEAD_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="2" />
-        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="2" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       </Tier>
     </Harvestable>
     <Harvestable name="ROCK_GUARDIAN_RED" resource="ROCK">
@@ -752,6 +880,9 @@
       <Tier tier="6" item="T6_ROCK" tile="HIGHLAND_RED_T6_ROCK_GIANT" maxchargesperharvest="5" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="7000" startcharges="500">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
         <Charge level="1-500" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="500" />
+        <RareState state="1" item="T6_ROCK_LEVEL1" />
+        <RareState state="2" item="T6_ROCK_LEVEL2" />
+        <RareState state="3" item="T6_ROCK_LEVEL3" />
       </Tier>
     </Harvestable>
     
@@ -796,14 +927,41 @@
         <RareState state="2" item="T6_FIBER_LEVEL2" />
         <RareState state="3" item="T6_FIBER_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_FIBER" maxchargesperharvest="1" respawntimeseconds="87000" harvesttimeseconds="10" requirestool="true" startcharges="1">
+      <Tier tier="7" item="T7_FIBER" maxchargesperharvest="1" respawntimeseconds="26100" harvesttimeseconds="10" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_FIBER_LEVEL1" />
+        <RareState state="2" item="T7_FIBER_LEVEL2" />
+        <RareState state="3" item="T7_FIBER_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_FIBER" maxchargesperharvest="1" respawntimeseconds="68300" harvesttimeseconds="15" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T8_FIBER_LEVEL1" />
+        <RareState state="2" item="T8_FIBER_LEVEL2" />
+        <RareState state="3" item="T8_FIBER_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="FIBER_BIG" resource="FIBER">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_FIBER" maxchargesperharvest="1" respawntimeseconds="240100" harvesttimeseconds="10" requirestool="true" startcharges="23">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_FIBER_LEVEL1" />
         <RareState state="2" item="T7_FIBER_LEVEL2" />
         <RareState state="3" item="T7_FIBER_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_FIBER" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_FIBER" maxchargesperharvest="1" respawntimeseconds="262700" harvesttimeseconds="15" requirestool="true" startcharges="27">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_FIBER_LEVEL1" />
@@ -835,8 +993,8 @@
         <RareState state="3" item="T5_FIBER_LEVEL3" />
       </Tier>
       <Tier tier="7" item="T7_FIBER" tile="SWAMP_GREEN_T7_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_FIBER_LEVEL1" />
         <RareState state="2" item="T7_FIBER_LEVEL2" />
         <RareState state="3" item="T7_FIBER_LEVEL3" />
@@ -942,16 +1100,16 @@
         <RareState state="2" item="T6_HIDE_LEVEL2" />
         <RareState state="3" item="T6_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="87000" harvesttimeseconds="10" requirestool="true" tile="T7_HIDE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="174000">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="T7_HIDE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_HIDE_LEVEL1" />
         <RareState state="2" item="T7_HIDE_LEVEL2" />
         <RareState state="3" item="T7_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" tile="T8_HIDE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
-        <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="T8_HIDE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T8_HIDE_LEVEL1" />
         <RareState state="2" item="T8_HIDE_LEVEL2" />
         <RareState state="3" item="T8_HIDE_LEVEL3" />
@@ -1002,7 +1160,7 @@
         <RareState state="2" item="T6_HIDE_LEVEL2" />
         <RareState state="3" item="T6_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="FOREST_GREEN_T7_HIDE_DIREBOAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="174000">
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="FOREST_GREEN_T7_HIDE_DIREBOAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_HIDE_LEVEL1" />
@@ -1012,6 +1170,33 @@
       <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="FOREST_GREEN_T8_HIDE_DIREBEAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <RareState state="1" item="T8_HIDE_LEVEL1" />
+        <RareState state="2" item="T8_HIDE_LEVEL2" />
+        <RareState state="3" item="T8_HIDE_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="HIDE_FOREST_SMALL" resource="HIDE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="FOREST_GREEN_T7_HIDE_DIREBOAR_SMALL" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_HIDE_LEVEL1" />
+        <RareState state="2" item="T7_HIDE_LEVEL2" />
+        <RareState state="3" item="T7_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="FOREST_GREEN_T8_HIDE_DIREBEAR_SMALL" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T8_HIDE_LEVEL1" />
         <RareState state="2" item="T8_HIDE_LEVEL2" />
         <RareState state="3" item="T8_HIDE_LEVEL3" />
@@ -1055,14 +1240,14 @@
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="6" item="T6_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" tile="STEPPE_GREEN_T6_HIDE_RHINO" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000">
+      <Tier tier="6" item="T6_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" tile="STEPPE_GREEN_T6_HIDE_DESERTWOLF" decaytimeseconds="3600" decaytimewhenexhaustedseconds="7000">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T6_HIDE_LEVEL1" />
         <RareState state="2" item="T6_HIDE_LEVEL2" />
         <RareState state="3" item="T6_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_MAMMOTH" decaytimeseconds="86400" decaytimewhenexhaustedseconds="174000">
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="STEPPE_GREEN_T6_HIDE_RHINO" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_HIDE_LEVEL1" />
@@ -1072,6 +1257,33 @@
       <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="STEPPE_GREEN_T8_HIDE_ANCIENTMAMMOTH" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <RareState state="1" item="T8_HIDE_LEVEL1" />
+        <RareState state="2" item="T8_HIDE_LEVEL2" />
+        <RareState state="3" item="T8_HIDE_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="HIDE_STEPPE_SMALL" resource="HIDE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_RHINO_SMALL" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_HIDE_LEVEL1" />
+        <RareState state="2" item="T7_HIDE_LEVEL2" />
+        <RareState state="3" item="T7_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_MAMMOTH" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T8_HIDE_LEVEL1" />
         <RareState state="2" item="T8_HIDE_LEVEL2" />
         <RareState state="3" item="T8_HIDE_LEVEL3" />
@@ -1121,6 +1333,20 @@
         <RareState state="1" item="T6_HIDE_LEVEL1" />
         <RareState state="2" item="T6_HIDE_LEVEL2" />
         <RareState state="3" item="T6_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="SWAMP_GREEN_T7_HIDE_MARABOU" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_HIDE_LEVEL1" />
+        <RareState state="2" item="T7_HIDE_LEVEL2" />
+        <RareState state="3" item="T7_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="SWAMP_GREEN_T8_HIDE_ALLIGATOR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T8_HIDE_LEVEL1" />
+        <RareState state="2" item="T8_HIDE_LEVEL2" />
+        <RareState state="3" item="T8_HIDE_LEVEL3" />
       </Tier>
     </Harvestable>
     <Harvestable name="HIDE_MOUNTAIN" resource="HIDE">
@@ -1180,9 +1406,9 @@
         <RareState state="2" item="T5_HIDE_LEVEL2" />
         <RareState state="3" item="T5_HIDE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_COUGAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="174000">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_COUGAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_HIDE_LEVEL1" />
         <RareState state="2" item="T7_HIDE_LEVEL2" />
         <RareState state="3" item="T7_HIDE_LEVEL3" />
@@ -1225,6 +1451,60 @@
         <RareState state="3" item="T6_HIDE_LEVEL3" />
       </Tier>
     </Harvestable>
+    <Harvestable name="HIDE_FOREST_BIG" resource="HIDE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="FOREST_GREEN_T7_HIDE_DIREBOAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <RareState state="1" item="T7_HIDE_LEVEL1" />
+        <RareState state="2" item="T7_HIDE_LEVEL2" />
+        <RareState state="3" item="T7_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="FOREST_GREEN_T8_HIDE_DIREBEAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <RareState state="1" item="T8_HIDE_LEVEL1" />
+        <RareState state="2" item="T8_HIDE_LEVEL2" />
+        <RareState state="3" item="T8_HIDE_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="HIDE_STEPPE_BIG" resource="HIDE">
+      <ToolModifier>
+        <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_MAMMOTH" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <RareState state="1" item="T7_HIDE_LEVEL1" />
+        <RareState state="2" item="T7_HIDE_LEVEL2" />
+        <RareState state="3" item="T7_HIDE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" tile="STEPPE_GREEN_T8_HIDE_ANCIENTMAMMOTH" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
+        <RareState state="1" item="T8_HIDE_LEVEL1" />
+        <RareState state="2" item="T8_HIDE_LEVEL2" />
+        <RareState state="3" item="T8_HIDE_LEVEL3" />
+      </Tier>
+    </Harvestable>    
     
     <Harvestable name="ORE" resource="ORE">
       <ToolModifier>
@@ -1267,14 +1547,41 @@
         <RareState state="2" item="T6_ORE_LEVEL2" />
         <RareState state="3" item="T6_ORE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_ORE" maxchargesperharvest="1" respawntimeseconds="87000" harvesttimeseconds="10" requirestool="true" startcharges="1">
+      <Tier tier="7" item="T7_ORE" maxchargesperharvest="1" respawntimeseconds="26100" harvesttimeseconds="10" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T7_ORE_LEVEL1" />
+        <RareState state="2" item="T7_ORE_LEVEL2" />
+        <RareState state="3" item="T7_ORE_LEVEL3" />
+      </Tier>
+      <Tier tier="8" item="T8_ORE" maxchargesperharvest="1" respawntimeseconds="68300" harvesttimeseconds="15" requirestool="true" startcharges="1">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <RareState state="1" item="T8_ORE_LEVEL1" />
+        <RareState state="2" item="T8_ORE_LEVEL2" />
+        <RareState state="3" item="T8_ORE_LEVEL3" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="ORE_BIG" resource="ORE">
+      <ToolModifier>
+       <Modifier tierdifference="-1" timefactor="2" />
+        <Modifier tierdifference="0" timefactor="1" />
+        <Modifier tierdifference="1" timefactor="0.7" />
+        <Modifier tierdifference="2" timefactor="0.5" />
+        <Modifier tierdifference="3" timefactor="0.35" />
+        <Modifier tierdifference="4" timefactor="0.25" />
+        <Modifier tierdifference="5" timefactor="0.15" />
+        <Modifier tierdifference="6" timefactor="0.15" />
+        <Modifier tierdifference="7" timefactor="0.15" />
+      </ToolModifier>
+      <Tier tier="7" item="T7_ORE" maxchargesperharvest="1" respawntimeseconds="240100" harvesttimeseconds="10" requirestool="true" startcharges="23">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
         <RareState state="1" item="T7_ORE_LEVEL1" />
         <RareState state="2" item="T7_ORE_LEVEL2" />
         <RareState state="3" item="T7_ORE_LEVEL3" />
       </Tier>
-      <Tier tier="8" item="T8_ORE" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="1">
+      <Tier tier="8" item="T8_ORE" maxchargesperharvest="1" respawntimeseconds="262700" harvesttimeseconds="15" requirestool="true" startcharges="27">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <Charge level="1-27" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="27" />
         <RareState state="1" item="T8_ORE_LEVEL1" />
@@ -1305,9 +1612,9 @@
         <RareState state="2" item="T5_ORE_LEVEL2" />
         <RareState state="3" item="T5_ORE_LEVEL3" />
       </Tier>
-      <Tier tier="7" item="T7_ORE" tile="T7_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="174000">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+      <Tier tier="7" item="T7_ORE" tile="T7_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="86400">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_ORE_LEVEL1" />
         <RareState state="2" item="T7_ORE_LEVEL2" />
         <RareState state="3" item="T7_ORE_LEVEL3" />
@@ -1337,8 +1644,8 @@
         <RareState state="3" item="T5_ORE_LEVEL3" />
       </Tier>
       <Tier tier="7" item="T7_ORE" tile="T7_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_ORE_LEVEL1" />
         <RareState state="2" item="T7_ORE_LEVEL2" />
         <RareState state="3" item="T7_ORE_LEVEL3" />
@@ -1368,8 +1675,8 @@
         <RareState state="3" item="T5_ORE_LEVEL3" />
       </Tier>
       <Tier tier="7" item="T7_ORE" tile="MOUNTAIN_DEAD_T7_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
-        <Charge level="1-23" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="23" />
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+        <Charge level="1-3" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
         <RareState state="1" item="T7_ORE_LEVEL1" />
         <RareState state="2" item="T7_ORE_LEVEL2" />
         <RareState state="3" item="T7_ORE_LEVEL3" />
@@ -1465,47 +1772,47 @@
       </Tier>
       <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="14.0562" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1.1713" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="12.8848" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1.0737" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="300" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="20.2838" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1.6903" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="17.044" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1.4203" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
    </Harvestable>
     <!--WHITEBOX-->
     <Harvestable name="SILVERCOINS_NODE_RICH">
       <!-- Note: silver from nodes is rounded DOWN after all charges are summed up-->
-      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="0.00" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="67.08" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="87.2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="114.67" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="152.9" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="205.7" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="286.5" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="87000" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="240100" harvesttimeseconds="0.5" requirestool="false" startcharges="1" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="413.5" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
@@ -1514,7 +1821,7 @@
     <Harvestable name="SILVERCOINS_LOOT_STANDARD_TRASH">     
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="0.5868" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="0.8801" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1541,21 +1848,21 @@
         <Charge level="1" yield="10.0889" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="0.8407" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="14.0562" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1.1713" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="12.8848" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1.0737" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="20.2838" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1.6903" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="17.044" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1.4203" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_VETERAN_TRASH">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="3.5205" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="5.2808" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1582,21 +1889,21 @@
         <Charge level="1" yield="60.5333" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="5.0444" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="84.3371" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="7.0281" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="77.309" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="6.4424" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="121.7027" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="10.1419" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="102.2641" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="8.522" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ELITE_TRASH">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="9.3881" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="14.0821" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1623,22 +1930,22 @@
         <Charge level="1" yield="161.422" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="13.4518" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="224.8988" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="18.7416" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="206.1573" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="17.1798" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="324.5405" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="27.045" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="272.7042" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="22.7254" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     
     <Harvestable name="SILVERCOINS_LOOT_ROAMING">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="2.347" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="3.5205" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1665,21 +1972,21 @@
         <Charge level="1" yield="40.3555" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="3.363" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="56.2247" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="4.6854" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="51.5393" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="4.2949" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="81.1351" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="6.7613" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="68.1761" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="5.6813" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ROAMING_MINIBOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="12.6739" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="19.0108" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1706,21 +2013,21 @@
         <Charge level="1" yield="217.9197" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="18.16" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="303.6134" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="25.3011" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="278.3123" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="23.1927" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="438.1297" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="36.5108" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="368.1507" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="30.6792" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ROAMING_BOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="42.2463" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="63.3694" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1747,21 +2054,21 @@
         <Charge level="1" yield="726.399" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="60.5333" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1012.0448" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="84.3371" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="927.7077" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="77.309" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1460.4325" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="121.7027" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1227.1689" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="102.2641" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_STANDARD">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="2.347" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="3.5205" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1788,21 +2095,21 @@
         <Charge level="1" yield="40.3555" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="3.363" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="56.2247" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="4.6854" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="51.5393" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="4.2949" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="81.1351" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="6.7613" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="68.1761" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="5.6813" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_VETERAN">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="14.0821" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="21.1231" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1829,21 +2136,21 @@
         <Charge level="1" yield="242.133" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="20.1778" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="337.3483" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="28.1124" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="309.2359" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="25.7697" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="486.8108" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="40.5676" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="409.0563" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="34.088" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ELITE">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="37.5522" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="56.3284" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1870,21 +2177,21 @@
         <Charge level="1" yield="645.688" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="53.8073" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="899.5954" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="74.9663" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="824.6291" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="68.7191" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1298.1622" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="108.1802" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1090.8168" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="90.9014" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_STANDARD_MINIBOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="17.6026" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="26.4039" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1911,21 +2218,21 @@
         <Charge level="1" yield="302.6663" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="25.2222" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="421.6853" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="35.1404" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="386.5449" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="32.2121" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="608.5135" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="50.7095" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="511.3204" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="42.61" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_VETERAN_MINIBOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="105.6157" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="158.4235" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1952,21 +2259,21 @@
         <Charge level="1" yield="1815.9975" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="151.3331" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2530.112" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="210.8427" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="2319.2693" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="193.2724" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="3651.0811" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="304.2568" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="3067.9223" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="255.6602" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ELITE_MINIBOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="281.6418" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="422.4627" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1993,21 +2300,21 @@
         <Charge level="1" yield="4842.66" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="403.555" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="6746.9654" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="562.2471" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="6184.7182" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="515.3932" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="9736.2163" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="811.3514" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="8181.1262" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="681.7605" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_STANDARD_BOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="93.8806" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="140.8209" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2034,21 +2341,21 @@
         <Charge level="1" yield="1614.22" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="134.5183" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2248.9885" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="187.4157" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="2061.5727" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="171.7977" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="3245.4054" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="270.4505" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="2727.0421" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="227.2535" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_VETERAN_BOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="563.2836" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="844.9255" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2075,21 +2382,21 @@
         <Charge level="1" yield="9685.3201" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="807.11" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="13493.9307" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1124.4942" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="12369.4365" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1030.7864" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="19472.4327" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1622.7027" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="16362.2525" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="1363.521" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_ELITE_BOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="2347.0152" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="3520.5227" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2116,15 +2423,15 @@
         <Charge level="1" yield="40355.5002" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="3362.9584" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="56224.7113" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="4685.3926" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="51539.3187" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="4294.9432" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="81135.1361" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="6761.2613" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="68176.0519" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="5681.3377" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <!--Random Dungeons Mobs-->
@@ -2154,13 +2461,13 @@
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="12.45" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="17.3458" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="15.9003" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="25.0308" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="21.0329" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_RD_STANDARD">
@@ -2188,20 +2495,157 @@
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="49.8" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="69.3831" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="63.6012" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="100.1234" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="84.1315" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+
+    <Harvestable name="SILVERCOINS_RD_STANDARD_STANDARD">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_STANDARD_UNCOMMON">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_STANDARD_RARE">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_STANDARD_LEGENDARY">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <!--Veteran-->
     <Harvestable name="SILVERCOINS_RD_VETERAN_TRASH">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2.1984" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="3.2976" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2223,19 +2667,19 @@
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="63" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="87.7738" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="80.4593" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="126.6621" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="106.4314" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_RD_VETERAN">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="8.7936" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="13.1903" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2257,156 +2701,363 @@
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="252" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="351.0953" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="321.8374" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="506.6485" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="425.7255" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
+    
     <Harvestable name="SILVERCOINS_RD_VETERAN_STANDARD">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="120.5737" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="564.9166" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1077.4336" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1926.4953" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2568.7445" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="3455.3191" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="4814.0729" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="6946.9536" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_RD_VETERAN_UNCOMMON">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="361.7211" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1694.7498" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="3232.3008" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="5779.4858" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="7706.2334" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="10365.9574" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="14442.2188" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="20840.8609" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_RD_VETERAN_RARE">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1205.737" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="5649.1662" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="10774.3359" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="19264.9528" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="25687.4447" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="34553.1915" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="48140.7294" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="69469.5364" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_RD_VETERAN_LEGENDARY">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="9645.8958" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="45193.3292" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="86194.6872" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="154119.6226" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="205499.5575" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="276425.5319" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="385125.835" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="555756.2916" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <!--Elite-->
+    <Harvestable name="SILVERCOINS_RD_ELITE_TRASH">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="10.8742" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="33.9654" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="64.7804" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="115.8299" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="154.445" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="207.75" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="265.3243" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="350.9701" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_ELITE">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="43.4967" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="135.8618" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="259.1215" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="463.3197" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="617.7799" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="831" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1061.2971" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1403.8805" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+
+    <Harvestable name="SILVERCOINS_RD_ELITE_STANDARD">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_ELITE_UNCOMMON">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_ELITE_RARE">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+    </Harvestable>
+    <Harvestable name="SILVERCOINS_RD_ELITE_LEGENDARY">
+      <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="3" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="360" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="4" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="1000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="5" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="3000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="6" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="7000" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+      </Tier>
+      <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
+        <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="0" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <!--Faction Chest Silver Loot-->
     <Harvestable name="SILVERCOINS_LOOT_CHEST_STANDARD">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="64.5429" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="96.8144" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2433,21 +3084,21 @@
         <Charge level="1" yield="1109.7763" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="92.4814" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="1546.1796" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="128.8483" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1417.3313" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="118.1109" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2231.2162" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="185.9347" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1874.8414" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="156.2368" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_CHEST_STANDARD_TRASH">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="3.5205" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="5.2808" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2474,21 +3125,21 @@
         <Charge level="1" yield="60.5333" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="5.0444" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="84.3371" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="7.0281" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="77.309" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="6.4424" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="121.7027" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="10.1419" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="102.2641" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="8.522" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
     <Harvestable name="SILVERCOINS_LOOT_CHEST_VETERAN">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="398.9926" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="598.4889" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2515,22 +3166,22 @@
         <Charge level="1" yield="6860.435" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="571.7029" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="9558.2009" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="796.5167" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="8761.6842" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="730.1403" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="13792.9731" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="1149.4144" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="11589.9288" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="965.8274" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
 
     <Harvestable name="SILVERCOINS_LOOT_CHEST_DEMON">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="23.4702" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="35.2052" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2557,15 +3208,15 @@
         <Charge level="1" yield="403.555" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="33.6296" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="562.2471" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="46.8539" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="515.3932" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="42.9494" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="811.3514" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="67.6126" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="681.7605" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="56.8134" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
         
@@ -2599,7 +3250,7 @@
         <Charge level="1" yield="600" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="50" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="800" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="66.6666" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2640,7 +3291,7 @@
         <Charge level="1" yield="3000" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="250" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="1" yield="4000" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="333.3333" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2655,7 +3306,7 @@
     <Harvestable name="SILVERCOINS_LOOT_SARCOPHAGUS_STANDARD_MINIBOSS">
       <Tier tier="1" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1-2" yield="88.0131" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1-2" yield="132.0196" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="2" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="120" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -2682,15 +3333,15 @@
         <Charge level="1" yield="1513.3313" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
         <Charge level="2-13" yield="126.1109" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
-      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="174000" isscaled="false">
+      <Tier tier="7" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="2108.4267" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="175.7022" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="1932.7245" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="161.0604" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
       <Tier tier="8" item="SILVERCOINS" maxchargesperharvest="100" respawntimeseconds="0" harvesttimeseconds="0.5" requirestool="false" tile="SILVERCOINS" tilepremium="SILVERCOINS_PREMIUM" decaytimeseconds="300" decaytimewhenexhaustedseconds="86400" isscaled="false">
         <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="1" yield="3042.5676" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
-        <Charge level="2-13" yield="253.5473" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="1" yield="2556.6019" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
+        <Charge level="2-13" yield="213.0502" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
       </Tier>
     </Harvestable>
   </Harvestables>

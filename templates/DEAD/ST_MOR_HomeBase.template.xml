@@ -1,8 +1,8 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Master/Homebase/ST_MOR_HomeBase.unity" unityguid="bcd1b359784ea984aa913224cd17ad34" editorBoundsMin="-315 -315" editorBoundsMax="315 315" colBoundsMin="-316 -320" colBoundsMax="318 321">
   <criticalscenemembers />
   <tiles>
-    <layergroup name="MOBS">
-      <layer id="3deea85e-09a9-46bd-9a84-3f6c39902879" name="T8">
+    <layergroup name="">
+      <layer id="Layer_03" name="T8">
         <tile name="SpawnPoint_RANDOM_MORGANA_CROSSBOWMAN_VETERAN_BOSS" pos="155.99 -12.2 160.68" roty="90">
           <mobspawnpoint spawnbehavior="MORGANA_CROSSBOWMAN_VETERAN_BOSS" />
         </tile>
@@ -1528,7 +1528,9 @@
           <mobspawnpoint behavior="GUARD" />
         </tile>
       </layer>
-      <layer id="e329ba25-355d-456a-83e5-dda032d9fc3b" name="T6">
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_04" name="T6">
         <tile name="SpawnPoint_RANDOM_MORGANA_KNIGHT_VETERAN_BOSS" pos="179.64 -12 -118.49" roty="180">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_KNIGHT_VETERAN_BOSS" />
         </tile>
@@ -3053,6 +3055,20 @@
         <tile name="SpawnPoint_T6_MOB_MORGANA_RECRUIT_RANGE_VETERAN" pos="-128.3 -12 -23.33" roty="354">
           <mobspawnpoint behavior="GUARD" />
         </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="Up">
+      <layer id="Layer_01" name="UP_Passage_Off">
+        <compoundtile name="_STEPPE_DEAD_ROAD_ROAD_STRAIGHT_20M_A_COMP_05" pos="-285 0 0" roty="180" />
+        <compoundtile name="_STEPPE_DEAD_ROAD_ROAD_STRAIGHT_20M_A_COMP_09_DRY" pos="-305 0 0" />
+        <tile name="STEPPE_DEAD_ROAD_ROAD_BIFURCATION_20_A" pos="-265 0 -5" roty="90" />
+      </layer>
+      <layer id="Layer_02" name="UP_Passage_On">
+        <tile name="STEPPE_DEAD_GROUND" pos="-310 0 0" />
+        <tile name="STEPPE_DEAD_GROUND" pos="-280 0 0" />
+        <tile name="STEPPE_DEAD_GROUND" pos="-300 0 0" />
+        <tile name="STEPPE_DEAD_GROUND" pos="-290 0 0" />
+        <tile name="STEPPE_DEAD_ROAD_ROAD_DIAGONAL_20_B" pos="-265 0 -5" roty="270" />
       </layer>
     </layergroup>
     <tile name="STEPPE_DEAD_MOR_CASTLE_RAILING_DECO_B" pos="115 8 65" />
@@ -6854,9 +6870,6 @@
     <compoundtile name="_STEPPE_DEAD_ROAD_ROAD_DIAGONAL_20_A_COMP_02" pos="-265 0 -25" roty="90" />
     <tile name="STEPPE_DEAD_ROAD_PATH_T-CROSSING_B" pos="160 -12 -130" roty="90" />
     <tile name="STEPPE_DEAD_ROAD_PATH_T-CROSSING_B" pos="160 -12 -100" roty="270" />
-    <compoundtile name="_STEPPE_DEAD_ROAD_ROAD_STRAIGHT_20M_A_COMP_05" pos="-285 0 0" roty="180" />
-    <compoundtile name="_STEPPE_DEAD_ROAD_ROAD_STRAIGHT_20M_A_COMP_09_DRY" pos="-305 0 0" />
-    <tile name="STEPPE_DEAD_ROAD_ROAD_BIFURCATION_20_A" pos="-265 0 -5" roty="90" />
     <tile name="STEPPE_DEAD_ROAD_ROAD_STRAIGHT_D" pos="290 0 10" roty="180" />
     <tile name="STEPPE_DEAD_ROAD_ROAD_CORNER_A" pos="280 0 10" roty="270" />
     <tile name="STEPPE_DEAD_ROAD_ROAD_TO_PLACE_A" pos="280 0 40" roty="270" />
@@ -8528,7 +8541,6 @@
     <tile name="STEPPE_DEAD_GROUND" pos="-280 0 210" />
     <tile name="STEPPE_DEAD_GROUND" pos="-100 -12 180" />
     <tile name="STEPPE_DEAD_GROUND" pos="130 0 310" />
-    <tile name="STEPPE_DEAD_GROUND" pos="-300 0 10" />
     <tile name="STEPPE_DEAD_GROUND" pos="-190 0 -300" />
     <tile name="STEPPE_DEAD_GROUND" pos="200 -12 220" />
     <tile name="STEPPE_DEAD_GROUND" pos="-260 0 130" />
@@ -10526,7 +10538,7 @@
     <tile name="STEPPE_DEAD_GROUND" pos="-50 0 -270" />
     <tile name="STEPPE_DEAD_GROUND" pos="-50 0 -280" />
     <tile name="STEPPE_DEAD_RIVER_CORNER" pos="-20 0 -290" roty="180" />
-    <tile name="STEPPE_DEAD_RIVER_DIAGONAL_LEFT_LARGE_B" pos="-35 0 -270" roty="90" />
+    <tile name="STEPPE_DEAD_RIVER_DIAGONAL_LEFT_20x30_B" pos="-35 0 -270" roty="90" />
     <tile name="STEPPE_DEAD_RIVER_INNERCORNER" pos="-30 0 -290" roty="270" />
     <tile name="STEPPE_DEAD_RIVER_INNERCORNER" pos="-20 0 -300" roty="270" />
     <tile name="STEPPE_DEAD_RIVER_INNERCORNER" pos="-40 0 -250" />
@@ -10546,6 +10558,7 @@
     <tile name="STEPPE_DEAD_PLATEAU_4M_STRAIGHT_A_OBJ_NOCOL" pos="170 -32 30" roty="270" />
     <tile name="STEPPE_DEAD_PLATEAU_4M_STRAIGHT_A_OBJ_NOCOL" pos="190 -32 40" roty="180" />
     <tile name="STEPPE_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-270 -4 -160" />
+    <tile name="STEPPE_DEAD_GROUND" pos="-300 0 10" />
     <tile name="FIBER_LOW_NODE" pos="286.5 0 110.5" roty="84">
       <resourcenode nodetype="low" resourcetype="fiber" />
     </tile>
@@ -15035,7 +15048,6 @@
     <tile name="STEPPE_DEAD_VEG_BLEND_B" pos="308.5 0 -256.5" roty="36" />
     <tile name="STEPPE_DEAD_VEG_BLEND_B" pos="308.5 0 -247.5" roty="306" />
     <tile name="STEPPE_DEAD_VEG_BLEND_B" pos="312.5 0 -253.5" roty="216" />
-    <tile name="STEPPE_DEAD_VEG_STONE_FLOWER_B" pos="251.5 0 -308.5" />
     <tile name="STEPPE_DEAD_VEG_BLEND_A" pos="247.5 0 -253.5" />
     <tile name="STEPPE_DEAD_VEG_STONE_FLOWER_B" pos="193.5 -12 202.5" roty="90" />
     <tile name="STEPPE_DEAD_VEG_DRY_A" pos="193.5 -12 -63.5" roty="270" />
@@ -15341,7 +15353,7 @@
     <compoundtile name="_STEPPE_DEAD_FILL_SLIM_VEGETATION_SUB_01_COMP_01" pos="125 0 -258" />
     <tile name="STEPPE_DEAD_VEG_STONE_SMALL_A" pos="-32.5 0 272.5" />
     <compoundtile name="_STEPPE_DEAD_FILL_VEGETATION_BASE_20x20_COMP_02" pos="61 0 -274" />
-    <compoundtile name="_STEPPE_DEAD_FILL_VEGETATION_SUB_01_GIGANTIC_COMP_02" pos="29 0 -246" />
+    <compoundtile name="_STEPPE_DEAD_FILL_VEGETATION_SUB_01_GIGANTIC_COMP_02" pos="29 0 -242" />
     <compoundtile name="_STEPPE_DEAD_FILL_DRY_VEGETATION_BASE_BONES_COMP_03" pos="-178 0 -277" />
     <compoundtile name="_STEPPE_DEAD_FILL_SLIM_VEGETATION_SUB_01_COMP_01" pos="-188 0 -248" />
     <compoundtile name="_STEPPE_DEAD_FILL_DRY_VEGETATION_BASE_BONES_COMP_02" pos="-145 0 -284" />
@@ -15452,63 +15464,63 @@
     <tile name="STEPPE_DEAD_VEG_GRASS_B" pos="82.5 -12 191.5" />
     <tile name="STEPPE_DEAD_VEG_GRASS_B" pos="296.22 0 -186.6" />
     <tile name="STEPPE_DEAD_VEG_GRASS_B" pos="246.72 0.58 135.02" />
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-294.5 0 -33.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-296 0 -32">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-283.5 0 195.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-284 0 196">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-89.5 0 -243.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-90 0 -243">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-203.5 0 -253.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-203 0 -254">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="253.5 0 -296.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="254 0 -296">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="303.5 0 -66.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="303 0 -67">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="300.5 0 -202.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="300 0 -203">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="252.5 0 117.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="253 0 118">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="302.5 0 152.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="303 0 153">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="304.5 0 34.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="304 0 34">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="122.5 0 265.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="123 0 266">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="36.5 0 -284.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="37 0 -285">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-0.5 0 -233.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="0 0 -233">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-9.5 0 275.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-9 0 276">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="44.5 -4 256.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="45 -4 256">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-296.5 0 300.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-296 0 301">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="-226.5 0 13.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="-225 0 15">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
-    <tile name="MOBCAMP_MEDIUM_NODE" pos="263.5 0 -12.5">
+    <tile name="MOBCAMP_MEDIUM_NODE" pos="264 0 -14">
       <resourcenode nodetype="medium" resourcetype="mobcamp" />
     </tile>
     <compoundtile name="_STEPPE_DEAD_SB_T2_BUSHES_10x10_COMP_01" pos="-29 0 -241" />
     <compoundtile name="_STEPPE_DEAD_SB_T2_BUSHES_10x10_COMP_01" pos="12 0 -297" />
-    <compoundtile name="_STEPPE_DEAD_SB_T2_BUSHES_20x20_COMP_01" pos="-15 0 -235" />
+    <compoundtile name="_STEPPE_DEAD_SB_T2_BUSHES_20x20_COMP_01" pos="-18 0 -235" />
     <compoundtile name="_STEPPE_DEAD_SB_T2_BUSHES_20x20_COMP_01" pos="20 0 -288" />
     <compoundtile name="_STEPPE_DEAD_SB_T3_ROCK_SMALL_20x20_COMP_04" pos="-39 0 -276" />
     <tile name="Atmosphere_WRL_NONE_ST_DEAD" pos="82.4 520.6 21.75" />

@@ -1,18 +1,8 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/M_MN_Castle_01.unity" unityguid="99dbf7b2149688747b7fddd8e90908bc" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-78 -75" colBoundsMax="75 78">
   <criticalscenemembers>
-    <criticalscenemember id="treasurechest_01" type="treasurechest" layerId="Layer_01">
+    <criticalscenemember id="treasurechest_05" type="treasurechest" layerId="Layer_01">
       <tile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90">
-        <treasurechest type="OUTLAND_COFFER_T6" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="treasurechest_02" type="treasurechest" layerId="Layer_02">
-      <tile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90">
-        <treasurechest type="OUTLAND_COFFER_T7" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="treasurechest_03" type="treasurechest" layerId="Layer_03">
-      <tile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90">
-        <treasurechest type="OUTLAND_COFFER_T8" />
+        <treasurechest type="OUTLAND_COFFER_CASTLE" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="actionbuilding_01" type="actionbuilding" layerId="">
@@ -109,26 +99,10 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
-    <layergroup name="OUT_COFFER">
-      <layer id="Layer_01" name="OUT_COFFER_T6">
-        <criticaltile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90" id="treasurechest_01" type="treasurechest">
-          <treasurechest type="OUTLAND_COFFER_T6" />
-        </criticaltile>
-        <tile name="UnrestrictedPvpZone" pos="-5 12 5" roty="90">
-          <unrestrictedpvpzone radius="40" />
-        </tile>
-      </layer>
-      <layer id="Layer_02" name="OUT_COFFER_T7">
-        <criticaltile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90" id="treasurechest_02" type="treasurechest">
-          <treasurechest type="OUTLAND_COFFER_T7" />
-        </criticaltile>
-        <tile name="UnrestrictedPvpZone" pos="-5 12 5" roty="90">
-          <unrestrictedpvpzone radius="40" />
-        </tile>
-      </layer>
-      <layer id="Layer_03" name="OUT_COFFER_T8">
-        <criticaltile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90" id="treasurechest_03" type="treasurechest">
-          <treasurechest type="OUTLAND_COFFER_T8" />
+    <layergroup name="">
+      <layer id="Layer_01" name="OUT_COFFER" activationRule="X_X_X_X_Outlands_X">
+        <criticaltile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-5 12 5" roty="90" id="treasurechest_05" type="treasurechest">
+          <treasurechest type="OUTLAND_COFFER_CASTLE" />
         </criticaltile>
         <tile name="UnrestrictedPvpZone" pos="-5 12 5" roty="90">
           <unrestrictedpvpzone radius="40" />
@@ -900,5 +874,8 @@
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-10 -4 10" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-10 -4 0" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="0 -4 0" />
+    <tile name="PlacementBlocker_Castle" pos="0 0 0">
+      <placementblocker size="110" locaid="CASTLE" types="1" />
+    </tile>
   </tiles>
 </template>

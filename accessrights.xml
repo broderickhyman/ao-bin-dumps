@@ -293,5 +293,30 @@
     </preset>
   </accessclass>
 
+  <accessclass name="AccessRightsHideoutObject">
+    <role name="owner" managesroles="coowner, builder, visitor" displayname="@ACCESSRIGHTS_ISLAND_NAME_OWNER" description="@ACCESSRIGHTS_ISLAND_DESC_OWNER"/>
+    <role name="coowner" managesroles="builder, visitor" displayname="@ACCESSRIGHTS_ISLAND_NAME_COOWNER" description="@ACCESSRIGHTS_ISLAND_DESC_COOWNER"/>
+    <role name="builder" displayname="@ACCESSRIGHTS_ISLAND_NAME_BUILDER" description="@ACCESSRIGHTS_ISLAND_DESC_BUILDER"/>
+    <role name="visitor" displayname="@ACCESSRIGHTS_ISLAND_NAME_VISITOR" description="@ACCESSRIGHTS_ISLAND_DESC_VISITOR"/>
+    <right name="VISIT"                           roles="owner, coowner, builder, visitor"/>
+    <right name="PLACE_BUILDINGS"                 roles="owner, coowner, builder"/>
+    <right name="CLAIM_UNOWNED_BUILDINGS"         roles="owner, coowner, builder"/>
+    <right name="MAKEHOME"      				 	        roles="owner, coowner, builder, visitor"/>
+    <right name="FORCE_CLAIM_BUILDINGS"           roles="owner, coowner"/>
+    <right name="PLACE_FURNITURE_OUTDOOR"         roles="owner, coowner, builder"/>				
+    <right name="CLAIM_UNOWNED_FURNITURE_OUTDOOR" roles="owner, coowner, builder"/>
+    <right name="FORCE_CLAIM_FURNITURE_OUTDOOR" 	roles="owner, coowner"/>
+    <right name="CHANGE_TRIBUTE" 	                roles="owner, coowner"/>
+    <preset name="closed" description="@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_CLOSED">
+    </preset>
+    <preset name="private" description="@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PRIVATE">
+      <userpreset who="guild" role="visitor"/>
+    </preset>
+    <preset name="public" description="@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PUBLIC">
+      <userpreset who="everyone" role="visitor"/>
+      <userpreset who="guild" role="visitor"/>
+    </preset>
+  </accessclass>
+
 </accessrights>
 

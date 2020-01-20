@@ -74,6 +74,18 @@
           "@dungeonclustertype": "DUNGEON_BLACK"
         },
         {
+          "@clustertype": "OPENPVP_BLACK_4",
+          "@dungeonclustertype": "DUNGEON_BLACK"
+        },
+        {
+          "@clustertype": "OPENPVP_BLACK_5",
+          "@dungeonclustertype": "DUNGEON_BLACK"
+        },
+        {
+          "@clustertype": "OPENPVP_BLACK_6",
+          "@dungeonclustertype": "DUNGEON_BLACK"
+        },
+        {
           "@clustertype": "PASSAGE_SAFEAREA",
           "@dungeonclustertype": "DUNGEON_SAFEAREA"
         },
@@ -180,11 +192,47 @@
               }
             }
           }
+        },
+        {
+          "@name": "AVALON",
+          "@defaultname": "Hidden Vault",
+          "Subset": {
+            "@id": "temple",
+            "default": {
+              "displayname": {
+                "@name": "Hidden Vault"
+              }
+            }
+          }
         }
       ]
     },
     "FixedExits": {
       "FixedExit": [
+        {
+          "@name": "T6_AVALON_ELITE",
+          "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+          "@maxfillratio": "1",
+          "@activationtime": "120",
+          "@cooldown": "120",
+          "@tier": "6"
+        },
+        {
+          "@name": "T7_AVALON_ELITE",
+          "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+          "@maxfillratio": "1",
+          "@activationtime": "120",
+          "@cooldown": "120",
+          "@tier": "7"
+        },
+        {
+          "@name": "T8_AVALON_ELITE",
+          "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+          "@maxfillratio": "1",
+          "@activationtime": "120",
+          "@cooldown": "120",
+          "@tier": "8"
+        },
         {
           "@name": "T3_HERETIC",
           "@generatorName": "HERETIC_RANDOM_DUNGEON",
@@ -722,10 +770,6 @@
                     {
                       "@name": "T4_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T4_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -756,10 +800,6 @@
                     {
                       "@name": "T5_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T5_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -790,10 +830,6 @@
                     {
                       "@name": "T6_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T6_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -824,10 +860,6 @@
                     {
                       "@name": "T7_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T7_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -858,10 +890,6 @@
                     {
                       "@name": "T8_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T8_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 }
@@ -955,10 +983,6 @@
                     {
                       "@name": "T4_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T4_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -989,10 +1013,6 @@
                     {
                       "@name": "T4_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T4_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -1023,10 +1043,6 @@
                     {
                       "@name": "T5_PORTAL_CONSUMABLE",
                       "@weight": "0"
-                    },
-                    {
-                      "@name": "T5_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
                     }
                   ]
                 },
@@ -1059,8 +1075,8 @@
                       "@weight": "0"
                     },
                     {
-                      "@name": "T6_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
+                      "@name": "T6_AVALON_ELITE",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -1093,8 +1109,8 @@
                       "@weight": "0"
                     },
                     {
-                      "@name": "T7_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
+                      "@name": "T7_AVALON_ELITE",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -1125,10 +1141,101 @@
                     {
                       "@name": "T8_PORTAL_CONSUMABLE",
                       "@weight": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "@name": "ELITE",
+              "ClusterTier": [
+                {
+                  "@tier": "6",
+                  "@maxfillratio": "0.25",
+                  "RandomExit": [
+                    {
+                      "@name": "T6_AVALON_ELITE",
+                      "@weight": "12"
                     },
                     {
-                      "@name": "T8_UNDEAD_HALLOWEEN",
-                      "@weight": "5"
+                      "@name": "T6_AVALON_ELITE_CONSUMABLE",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "T6_HERETIC",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T6_UNDEAD",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T6_KEEPER",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T6_MORGANA",
+                      "@weight": "1"
+                    }
+                  ]
+                },
+                {
+                  "@tier": "7",
+                  "@maxfillratio": "0.25",
+                  "RandomExit": [
+                    {
+                      "@name": "T7_AVALON_ELITE",
+                      "@weight": "12"
+                    },
+                    {
+                      "@name": "T7_AVALON_ELITE_CONSUMABLE",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "T7_HERETIC",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T7_UNDEAD",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T7_KEEPER",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T7_MORGANA",
+                      "@weight": "1"
+                    }
+                  ]
+                },
+                {
+                  "@tier": "8",
+                  "@maxfillratio": "0.25",
+                  "RandomExit": [
+                    {
+                      "@name": "T8_AVALON_ELITE",
+                      "@weight": "12"
+                    },
+                    {
+                      "@name": "T8_AVALON_ELITE_CONSUMABLE",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "T8_HERETIC",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T8_UNDEAD",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T8_KEEPER",
+                      "@weight": "1"
+                    },
+                    {
+                      "@name": "T8_MORGANA",
+                      "@weight": "1"
                     }
                   ]
                 }
@@ -1721,19 +1828,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -1744,19 +1851,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -1767,19 +1874,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -1790,19 +1897,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -1813,19 +1920,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -1836,19 +1943,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_PORTAL_SOLO"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -2571,7 +2678,7 @@
           ]
         },
         {
-          "@name": "HALLOWEEN",
+          "@name": "AVALON_ELITE",
           "biome": [
             {
               "@name": "Default",
@@ -2579,19 +2686,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
                   }
                 }
               ]
@@ -2602,19 +2709,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "FOREST_GREEN_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "FOREST_RED_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "FOREST_DEAD_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 }
               ]
@@ -2625,19 +2732,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "STEPPE_GREEN_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "STEPPE_RED_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "STEPPE_DEAD_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 }
               ]
@@ -2648,19 +2755,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SWAMP_GREEN_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SWAMP_RED_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "SWAMP_DEAD_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 }
               ]
@@ -2671,19 +2778,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "HIGHLAND_GREEN_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "HIGHLAND_RED_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "HIGHLAND_DEAD_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 }
               ]
@@ -2694,19 +2801,19 @@
                 {
                   "@name": "Green",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "MOUNTAIN_GREEN_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Red",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "MOUNTAIN_RED_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 },
                 {
                   "@name": "Dead",
                   "prefab": {
-                    "@name": "RANDOM_EXIT_10x10_HALLOWEEN"
+                    "@name": "MOUNTAIN_DEAD_RANDOM_EXIT_20x20_AVA_ELITE"
                   }
                 }
               ]
@@ -3187,6 +3294,76 @@
           }
         },
         {
+          "@name": "T4_UNDEAD_HALLOWEEN",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
+              "@tier": "4"
+            }
+          },
+          "Visualization": {
+            "@ref": "HALLOWEEN"
+          }
+        },
+        {
+          "@name": "T5_UNDEAD_HALLOWEEN",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
+              "@tier": "5"
+            }
+          },
+          "Visualization": {
+            "@ref": "HALLOWEEN"
+          }
+        },
+        {
+          "@name": "T6_UNDEAD_HALLOWEEN",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
+              "@tier": "6"
+            }
+          },
+          "Visualization": {
+            "@ref": "HALLOWEEN"
+          }
+        },
+        {
+          "@name": "T7_UNDEAD_HALLOWEEN",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
+              "@tier": "7"
+            }
+          },
+          "Visualization": {
+            "@ref": "HALLOWEEN"
+          }
+        },
+        {
+          "@name": "T8_UNDEAD_HALLOWEEN",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
+              "@tier": "8"
+            }
+          },
+          "Visualization": {
+            "@ref": "HALLOWEEN"
+          }
+        },
+        {
           "@name": "T4_HERETIC",
           "@activationtime": "3600",
           "@cooldown": "600",
@@ -3324,76 +3501,6 @@
           },
           "Visualization": {
             "@ref": "UNDEAD"
-          }
-        },
-        {
-          "@name": "T4_UNDEAD_HALLOWEEN",
-          "@activationtime": "3600",
-          "@cooldown": "600",
-          "RandomDungeonGenerators": {
-            "GeneratedRandomDungeon": {
-              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
-              "@tier": "4"
-            }
-          },
-          "Visualization": {
-            "@ref": "HALLOWEEN"
-          }
-        },
-        {
-          "@name": "T5_UNDEAD_HALLOWEEN",
-          "@activationtime": "3600",
-          "@cooldown": "600",
-          "RandomDungeonGenerators": {
-            "GeneratedRandomDungeon": {
-              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
-              "@tier": "5"
-            }
-          },
-          "Visualization": {
-            "@ref": "HALLOWEEN"
-          }
-        },
-        {
-          "@name": "T6_UNDEAD_HALLOWEEN",
-          "@activationtime": "3600",
-          "@cooldown": "600",
-          "RandomDungeonGenerators": {
-            "GeneratedRandomDungeon": {
-              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
-              "@tier": "6"
-            }
-          },
-          "Visualization": {
-            "@ref": "HALLOWEEN"
-          }
-        },
-        {
-          "@name": "T7_UNDEAD_HALLOWEEN",
-          "@activationtime": "3600",
-          "@cooldown": "600",
-          "RandomDungeonGenerators": {
-            "GeneratedRandomDungeon": {
-              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
-              "@tier": "7"
-            }
-          },
-          "Visualization": {
-            "@ref": "HALLOWEEN"
-          }
-        },
-        {
-          "@name": "T8_UNDEAD_HALLOWEEN",
-          "@activationtime": "3600",
-          "@cooldown": "600",
-          "RandomDungeonGenerators": {
-            "GeneratedRandomDungeon": {
-              "@generatorName": "UNDEAD_HALLOWEEN_DUNGEON",
-              "@tier": "8"
-            }
-          },
-          "Visualization": {
-            "@ref": "HALLOWEEN"
           }
         },
         {
@@ -3854,6 +3961,90 @@
           },
           "Visualization": {
             "@ref": "PORTAL"
+          }
+        },
+        {
+          "@name": "T6_AVALON_ELITE",
+          "@activationtime": "3600",
+          "@cooldown": "86400",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "6"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
+        {
+          "@name": "T7_AVALON_ELITE",
+          "@activationtime": "3600",
+          "@cooldown": "86400",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "7"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
+        {
+          "@name": "T8_AVALON_ELITE",
+          "@activationtime": "3600",
+          "@cooldown": "86400",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "8"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
+        {
+          "@name": "T6_AVALON_ELITE_CONSUMABLE",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "6"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
+        {
+          "@name": "T7_AVALON_ELITE_CONSUMABLE",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "7"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
+        {
+          "@name": "T8_AVALON_ELITE_CONSUMABLE",
+          "@activationtime": "3600",
+          "@cooldown": "600",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_ELITE",
+              "@tier": "8"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
           }
         }
       ]
@@ -12313,17 +12504,17 @@
           }
         },
         {
-          "@name": "HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3",
+          "@name": "AVALON_RANDOM_DUNGEON_ELITE",
           "Faction": {
-            "@name": "HERETIC",
+            "@name": "AVALON",
             "Subset": {
-              "@name": "mine",
+              "@name": "temple",
               "@weight": "1"
             }
           },
           "Flags": {
             "Flag": {
-              "@name": "solo"
+              "@name": "elite"
             }
           },
           "Environments": {
@@ -12341,6 +12532,291 @@
                 }
               ]
             }
+          },
+          "DungeonSizeAndDepth": {
+            "Size": [
+              {
+                "@floors": "1",
+                "@weight": "1",
+                "BossRarity": {
+                  "highlight": {
+                    "@name": "legendary",
+                    "@weight": "1"
+                  }
+                },
+                "Floor": {
+                  "@level": "1",
+                  "DungeonLength": [
+                    {
+                      "@pathlength": "7",
+                      "@highlightCount": "2",
+                      "@weight": "15",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    },
+                    {
+                      "@pathlength": "8",
+                      "@highlightCount": "2",
+                      "@weight": "20",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    },
+                    {
+                      "@pathlength": "9",
+                      "@highlightCount": "3",
+                      "@weight": "25",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    },
+                    {
+                      "@pathlength": "10",
+                      "@highlightCount": "4",
+                      "@weight": "20",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    },
+                    {
+                      "@pathlength": "11",
+                      "@highlightCount": "4",
+                      "@weight": "15",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    },
+                    {
+                      "@pathlength": "12",
+                      "@highlightCount": "5",
+                      "@weight": "5",
+                      "highlight": {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "@floors": "2",
+                "@weight": "2",
+                "BossRarity": {
+                  "highlight": {
+                    "@name": "legendary",
+                    "@weight": "1"
+                  }
+                },
+                "Floor": [
+                  {
+                    "@level": "1",
+                    "DungeonLength": [
+                      {
+                        "@pathlength": "4",
+                        "@highlightCount": "1",
+                        "@weight": "40",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "5",
+                        "@highlightCount": "2",
+                        "@weight": "30",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "6",
+                        "@highlightCount": "2",
+                        "@weight": "15",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "7",
+                        "@highlightCount": "3",
+                        "@weight": "10",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "8",
+                        "@highlightCount": "3",
+                        "@weight": "5",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "@level": "2",
+                    "DungeonLength": [
+                      {
+                        "@pathlength": "4",
+                        "@highlightCount": "1",
+                        "@weight": "40",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "5",
+                        "@highlightCount": "2",
+                        "@weight": "30",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "6",
+                        "@highlightCount": "2",
+                        "@weight": "20",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      },
+                      {
+                        "@pathlength": "7",
+                        "@highlightCount": "3",
+                        "@weight": "10",
+                        "highlight": {
+                          "@name": "uncommon",
+                          "@weight": "1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "@name": "AVALON_RANDOM_DUNGEON_BOSSES",
+          "Faction": {
+            "@name": "AVALON",
+            "Subset": {
+              "@name": "temple",
+              "@weight": "1"
+            }
+          },
+          "Flags": {
+            "Flag": {
+              "@name": "elite"
+            }
+          },
+          "Environments": {
+            "Environment": {
+              "@name": "indoor",
+              "@weight": "1",
+              "Subset": [
+                {
+                  "@name": "cave_01",
+                  "@weight": "0.5"
+                },
+                {
+                  "@name": "cave_ocean",
+                  "@weight": "0.5"
+                }
+              ]
+            }
+          },
+          "DungeonSizeAndDepth": {
+            "Size": {
+              "@floors": "1",
+              "@weight": "1",
+              "BossRarity": {
+                "highlight": {
+                  "@name": "legendary",
+                  "@weight": "1"
+                }
+              },
+              "Floor": {
+                "@level": "1",
+                "DungeonLength": {
+                  "@pathlength": "10",
+                  "@highlightCount": "5",
+                  "@weight": "1",
+                  "highlight": {
+                    "@name": "uncommon",
+                    "@weight": "1"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@name": "HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3",
+          "Faction": {
+            "@name": "HERETIC",
+            "Subset": {
+              "@name": "mine",
+              "@weight": "1"
+            }
+          },
+          "Flags": {
+            "Flag": {
+              "@name": "solo"
+            }
+          },
+          "Environments": {
+            "Environment": [
+              {
+                "@name": "indoor",
+                "@weight": "0.9",
+                "Subset": [
+                  {
+                    "@name": "cave_01",
+                    "@weight": "0.5"
+                  },
+                  {
+                    "@name": "cave_ocean",
+                    "@weight": "0.5"
+                  }
+                ]
+              },
+              {
+                "@name": "outdoor",
+                "@weight": "0.1",
+                "Subset": [
+                  {
+                    "@name": "forest"
+                  },
+                  {
+                    "@name": "highlands"
+                  },
+                  {
+                    "@name": "mountain"
+                  },
+                  {
+                    "@name": "steppe"
+                  },
+                  {
+                    "@name": "swamp"
+                  }
+                ]
+              }
+            ]
           },
           "DungeonSizeAndDepth": {
             "Size": [
@@ -12755,20 +13231,43 @@
             }
           },
           "Environments": {
-            "Environment": {
-              "@name": "indoor",
-              "@weight": "1",
-              "Subset": [
-                {
-                  "@name": "cave_01",
-                  "@weight": "0.5"
-                },
-                {
-                  "@name": "cave_ocean",
-                  "@weight": "0.5"
-                }
-              ]
-            }
+            "Environment": [
+              {
+                "@name": "indoor",
+                "@weight": "0.9",
+                "Subset": [
+                  {
+                    "@name": "cave_01",
+                    "@weight": "0.5"
+                  },
+                  {
+                    "@name": "cave_ocean",
+                    "@weight": "0.5"
+                  }
+                ]
+              },
+              {
+                "@name": "outdoor",
+                "@weight": "0.1",
+                "Subset": [
+                  {
+                    "@name": "forest"
+                  },
+                  {
+                    "@name": "highlands"
+                  },
+                  {
+                    "@name": "mountain"
+                  },
+                  {
+                    "@name": "steppe"
+                  },
+                  {
+                    "@name": "swamp"
+                  }
+                ]
+              }
+            ]
           },
           "DungeonSizeAndDepth": {
             "Size": [
@@ -13458,20 +13957,43 @@
             }
           },
           "Environments": {
-            "Environment": {
-              "@name": "indoor",
-              "@weight": "1",
-              "Subset": [
-                {
-                  "@name": "cave_01",
-                  "@weight": "0.5"
-                },
-                {
-                  "@name": "cave_ocean",
-                  "@weight": "0.5"
-                }
-              ]
-            }
+            "Environment": [
+              {
+                "@name": "indoor",
+                "@weight": "0.9",
+                "Subset": [
+                  {
+                    "@name": "cave_01",
+                    "@weight": "0.5"
+                  },
+                  {
+                    "@name": "cave_ocean",
+                    "@weight": "0.5"
+                  }
+                ]
+              },
+              {
+                "@name": "outdoor",
+                "@weight": "0.1",
+                "Subset": [
+                  {
+                    "@name": "forest"
+                  },
+                  {
+                    "@name": "highlands"
+                  },
+                  {
+                    "@name": "mountain"
+                  },
+                  {
+                    "@name": "steppe"
+                  },
+                  {
+                    "@name": "swamp"
+                  }
+                ]
+              }
+            ]
           },
           "DungeonSizeAndDepth": {
             "Size": [
@@ -14161,20 +14683,43 @@
             }
           },
           "Environments": {
-            "Environment": {
-              "@name": "indoor",
-              "@weight": "1",
-              "Subset": [
-                {
-                  "@name": "cave_01",
-                  "@weight": "0.5"
-                },
-                {
-                  "@name": "cave_ocean",
-                  "@weight": "0.5"
-                }
-              ]
-            }
+            "Environment": [
+              {
+                "@name": "indoor",
+                "@weight": "0.9",
+                "Subset": [
+                  {
+                    "@name": "cave_01",
+                    "@weight": "0.5"
+                  },
+                  {
+                    "@name": "cave_ocean",
+                    "@weight": "0.5"
+                  }
+                ]
+              },
+              {
+                "@name": "outdoor",
+                "@weight": "0.1",
+                "Subset": [
+                  {
+                    "@name": "forest"
+                  },
+                  {
+                    "@name": "highlands"
+                  },
+                  {
+                    "@name": "mountain"
+                  },
+                  {
+                    "@name": "steppe"
+                  },
+                  {
+                    "@name": "swamp"
+                  }
+                ]
+              }
+            ]
           },
           "DungeonSizeAndDepth": {
             "Size": [
@@ -14864,20 +15409,43 @@
             }
           },
           "Environments": {
-            "Environment": {
-              "@name": "indoor",
-              "@weight": "1",
-              "Subset": [
-                {
-                  "@name": "cave_01",
-                  "@weight": "0.5"
-                },
-                {
-                  "@name": "cave_ocean",
-                  "@weight": "0.5"
-                }
-              ]
-            }
+            "Environment": [
+              {
+                "@name": "indoor",
+                "@weight": "0.9",
+                "Subset": [
+                  {
+                    "@name": "cave_01",
+                    "@weight": "0.5"
+                  },
+                  {
+                    "@name": "cave_ocean",
+                    "@weight": "0.5"
+                  }
+                ]
+              },
+              {
+                "@name": "outdoor",
+                "@weight": "0.1",
+                "Subset": [
+                  {
+                    "@name": "forest"
+                  },
+                  {
+                    "@name": "highlands"
+                  },
+                  {
+                    "@name": "mountain"
+                  },
+                  {
+                    "@name": "steppe"
+                  },
+                  {
+                    "@name": "swamp"
+                  }
+                ]
+              }
+            ]
           },
           "DungeonSizeAndDepth": {
             "Size": [

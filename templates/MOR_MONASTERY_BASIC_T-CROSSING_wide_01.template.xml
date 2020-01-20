@@ -652,7 +652,7 @@
         <compoundtile name="_SWAMP_GREEN_FILL_LOW_TREES_GROUP_COMP_01" pos="-30 -28 15" roty="180" />
       </layer>
     </layergroup>
-    <layergroup name="ENCOUNTER">
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_01" name="mob_solo_light_01">
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BLOODHOUND" pos="7.41 0 -4.25" roty="42">
           <mobspawnpoint spawnbehavior="MORGANA_BLOODHOUND" />
@@ -682,43 +682,7 @@
           <mobspawnpoint spawnbehavior="MORGANA_MAGIC" />
         </tile>
       </layer>
-      <layer id="Layer_04" name="Light">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="7.41 0 -4.25" roty="42">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="7.84 0 1.75" roty="312">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="2.53 0 1.24" roty="132">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="3.73 0 5.09" roty="42">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="0.05 0 -1.16" roty="312">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="4.07 0 -2.1" roty="222">
-          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
-        </tile>
-      </layer>
-      <layer id="Layer_05" name="Standard">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="2.58 0 0.42" roty="84">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
-            <path>
-              <waypoint pos="2.744303 0.7113324" idle="3" pace="WALK" />
-              <waypoint pos="24.54972 0.6175404" idle="3" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-1.94 0 -2.95" roty="20">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-1.52 0 4.07" roty="168.66">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
-        </tile>
-      </layer>
-      <layer id="Layer_15" name="mob_solo_Standard_01 ">
+      <layer id="Layer_15" name="mob_solo_standard_01 ">
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MELEE" pos="-1.52 0 4.07" roty="169">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MELEE" />
         </tile>
@@ -752,7 +716,7 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MELEE" />
         </tile>
       </layer>
-      <layer id="Layer_16" name="mob_solo_Hard_01">
+      <layer id="Layer_16" name="mob_solo_hard_01">
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MELEE" pos="25.07 0 4.55" roty="180">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MELEE" />
         </tile>
@@ -797,6 +761,44 @@
               <waypoint pos="3.079161 0.4617047" idle="3" pace="WALK" />
             </path>
           </mobspawnpoint>
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
+      <layer id="Layer_04" name="mob_veteran_light_01">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="7.41 0 -4.25" roty="42">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="7.84 0 1.75" roty="312">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="2.53 0 1.24" roty="132">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="3.73 0 5.09" roty="42">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="0.05 0 -1.16" roty="312">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BLOODHOUND" pos="4.07 0 -2.1" roty="222">
+          <mobspawnpoint spawnbehavior="MORGANA_VETERAN_BLOODHOUND" />
+        </tile>
+      </layer>
+      <layer id="Layer_05" name="mob_veteran_standard_01">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="2.58 0 0.42" roty="84">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
+            <path>
+              <waypoint pos="2.744303 0.7113324" idle="3" pace="WALK" />
+              <waypoint pos="24.54972 0.6175404" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-1.94 0 -2.95" roty="20">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="-1.52 0 4.07" roty="168.66">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
         </tile>
       </layer>
       <layer id="Layer_17" name="mob_veteran_hard_01">
@@ -1229,16 +1231,16 @@
         <tile name="FOREST_GREEN_MOR_MONASTERY_DECO_BOOK_A" pos="-3.5 0 5.5" roty="36" />
         <tile name="FOREST_GREEN_MOR_MONASTERY_DECO_BOOK_A" pos="5.5 0 10.5" roty="352" />
         <tile name="FOREST_GREEN_MOR_MONASTERY_DECO_BOOK_A" pos="-6.5 0 2.5" roty="262" />
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="-5.34 0 6.57" roty="236">
-          <mobspawnpoint spawnbehavior="MORGANA_BOOK" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="-5.02 0 2.25" roty="326">
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="7.13 0 12.2" roty="146">
           <mobspawnpoint spawnbehavior="MORGANA_BOOK" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="-4.57 0 8.85" roty="56">
           <mobspawnpoint spawnbehavior="MORGANA_BOOK" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="7.13 0 12.2" roty="146">
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="-5.34 0 6.57" roty="236">
+          <mobspawnpoint spawnbehavior="MORGANA_BOOK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="-5.02 0 2.25" roty="326">
           <mobspawnpoint spawnbehavior="MORGANA_BOOK" />
         </tile>
         <tile name="FOREST_GREEN_MOR_MONASTERY_RAILING_STRAIGHT_A" pos="5 0 25" />

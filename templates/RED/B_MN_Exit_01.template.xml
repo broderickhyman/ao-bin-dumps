@@ -82,6 +82,13 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="GuardZone">
+      <layer id="Layer_06" name="AdditionalGuardZone_Low_01">
+        <tile name="GuardTowerZone" pos="0 8 7">
+          <spellzone spell="MONITORED_SEA" />
+        </tile>
+      </layer>
+    </layergroup>
     <layergroup name="Main">
       <layer id="1e9b3c92-3729-47c0-a465-2e5514687f85" name="FortSterling_Guards">
         <tile name="MOUNTAIN_RED_VEG_SNOW_GRASS_A" pos="15.5 8 5.5" roty="321" />
@@ -1432,35 +1439,6 @@
         <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 50" />
       </layer>
       <layer id="a3e6e2c0-af25-44ea-86b4-c78ad8d3141a" name="Low_01">
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -48 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -48 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -48 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -48 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -48 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-40 -48 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 10" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -48 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 40" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 40" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 20" />
         <tile name="MOUNTAIN_RED_GROUND" pos="60 0 -40" />
         <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -30" />
         <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -40" />
@@ -2697,6 +2675,38 @@
         <tile name="ROAMING_MEDIUM_NODE" pos="102 0 -11">
           <resourcenode nodetype="medium" resourcetype="roamingmob" />
         </tile>
+        <tile name="PlacementBlocker_ClusterExit" pos="0 0 0">
+          <placementblocker size="200" locaid="CLUSTEREXIT" types="1" />
+        </tile>
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -48 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -48 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -48 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -48 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -48 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-40 -48 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 10" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -48 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -48 40" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 40" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -48 20" />
         <tile name="ROAMING_MEDIUM_NODE" pos="69 0 -28">
           <resourcenode nodetype="medium" resourcetype="roamingmob" />
         </tile>
@@ -2710,65 +2720,6 @@
         </criticaltile>
       </layer>
       <layer id="bf3f83de-bf84-43ce-9100-a773d3f26c24" name="GuardTower">
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-40 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 10" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -40 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -40 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 40" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 40" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 20" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 60" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 50" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 50" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 50" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 -30" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="70 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="70 -40 20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-70 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-70 -40 20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-70 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-80 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 -20" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="70 -40 -10" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="80 -40 0" />
-        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -30" />
-        <criticaltile name="Exit" pos="-0.5 8 6.5" roty="90" id="exit_02" type="exit">
-          <exit size="15 15" spawnpos="15.00002 0.5" faction="None" kind="Cluster" roadtype="Primary">
-            <guards>
-              <guard pos="6.99017 -8.478552" />
-              <guard pos="-7.352185 -8.407206" />
-            </guards>
-          </exit>
-        </criticaltile>
         <tile name="MOUNTAIN_RED_CASTLE_CORNER_RAILING_FORTIFIED_A" pos="80 16 10" />
         <tile name="MOUNTAIN_RED_CASTLE_CORNER_RAILING_FORTIFIED_A" pos="80 16 20" roty="270" />
         <tile name="MOUNTAIN_RED_CASTLE_CORNER_RAILING_FORTIFIED_A" pos="-80 16 10" roty="90" />
@@ -3462,6 +3413,14 @@
         <tile name="MOUNTAIN_RED_VEG_STONE_C" pos="-53.5 8 -7.5" roty="90" />
         <tile name="MOUNTAIN_RED_CITY_BANNER_STANDING_LARGE_A" pos="5 0 -45" roty="270" />
         <tile name="MOUNTAIN_RED_CITY_BANNER_STANDING_LARGE_A" pos="-5 0 -45" roty="270" />
+        <criticaltile name="Exit" pos="-0.5 8 6.5" roty="90" id="exit_02" type="exit">
+          <exit size="15 15" spawnpos="15.00002 0.5" faction="None" kind="Cluster" roadtype="Primary">
+            <guards>
+              <guard pos="6.99017 -8.478552" />
+              <guard pos="-7.352185 -8.407206" />
+            </guards>
+          </exit>
+        </criticaltile>
         <tile name="MOUNTAIN_RED_GROUND" pos="50 0 -40" />
         <tile name="MOUNTAIN_RED_GROUND" pos="60 0 -40" />
         <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -40" />
@@ -4048,6 +4007,60 @@
         <tile name="ROAMING_MEDIUM_NODE" pos="101 0 -18">
           <resourcenode nodetype="medium" resourcetype="roamingmob" />
         </tile>
+        <tile name="PlacementBlocker_ClusterExit" pos="-1 0 -9">
+          <placementblocker size="200" locaid="CLUSTEREXIT" types="1" />
+        </tile>
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-30 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-40 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 10" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="30 -40 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -40 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 40" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 40" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 20" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 60" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 50" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="30 -40 50" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 50" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="40 -40 -30" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="70 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="70 -40 20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-70 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-70 -40 20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-70 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-80 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-50 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-60 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="60 -40 -20" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="70 -40 -10" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="80 -40 0" />
+        <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="50 -40 -30" />
       </layer>
       <layer id="Layer_01" name="Passage_High_01">
         <tile name="INVISIBLE_COLLISON_A" pos="7.5 -16 9" roty="270" />
@@ -5078,6 +5091,9 @@
             </guards>
           </exit>
         </criticaltile>
+        <tile name="PlacementBlocker_ClusterExit" pos="-1 0 -12">
+          <placementblocker size="200" locaid="CLUSTEREXIT" types="1" />
+        </tile>
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 30" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 0" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 0" />
@@ -6314,6 +6330,9 @@
             </guards>
           </exit>
         </criticaltile>
+        <tile name="PlacementBlocker_ClusterExit" pos="0 0 -11">
+          <placementblocker size="200" locaid="CLUSTEREXIT" types="1" />
+        </tile>
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 30" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 0" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 0" />
@@ -7156,7 +7175,7 @@
         <tile name="MOUNTAIN_RED_PLATEAU_28M_STRAIGHT_D" pos="-50 -12 110" roty="180" />
         <tile name="MOUNTAIN_RED_PLATEAU_20M_CORNER" pos="-100 -56 160" roty="270" />
         <tile name="MOUNTAIN_RED_PLATEAU_8M_STRAIGHT_D" pos="-50 8 140" roty="180" />
-        <tile name="MOUNTAIN_RED_HILL_8M_BASE_20X20_STRAIGHT_D" pos="-35 8 25" roty="90" />
+        <tile name="MOUNTAIN_RED_HILL_8M_BASE_20X20_STRAIGHT_ROCK_D" pos="-35 8 25" roty="90" />
         <tile name="MOUNTAIN_RED_PLATEAU_4M_INNERCORNER" pos="-70 -32 110" roty="90" />
         <tile name="MOUNTAIN_RED_PLATEAU_8M_INNERCORNER" pos="-50 8 150" roty="90" />
         <tile name="MOUNTAIN_RED_PLATEAU_8M_CORNER" pos="-60 8 150" roty="180" />
@@ -7213,7 +7232,7 @@
         <tile name="MOUNTAIN_RED_GROUND_30x30" pos="-30 16 60" roty="270" />
         <tile name="MOUNTAIN_RED_HILL_8M_BASE_20X20_STRAIGHT_A_OBJECT" pos="-15 8 25" roty="90" />
         <tile name="MOUNTAIN_RED_PLATEAU_28M_NEXTTO_8M_LEFT" pos="-50 -12 120" roty="180" />
-        <tile name="MOUNTAIN_RED_HILL_8M_BASE_20X20_STRAIGHT_D_OBJECT" pos="15 8 25" roty="90" />
+        <tile name="MOUNTAIN_RED_HILL_8M_BASE_20X20_STRAIGHT_ROCK_D_OBJECT" pos="15 8 25" roty="90" />
         <tile name="MOUNTAIN_RED_HILL_8M_BASE_TO_PLATEAU_8M_CORNER_LEFT_A" pos="55 8 25" />
         <tile name="MOUNTAIN_RED_HILL_8M_BASE_TO_PLATEAU_8M_CORNER_RIGHT_A" pos="-55 8 25" roty="180" />
         <tile name="MOUNTAIN_RED_ROAD_STREET_STRAIGHT_A" pos="0 16 160" roty="270" />
@@ -10480,6 +10499,9 @@
             </guards>
           </exit>
         </criticaltile>
+        <tile name="PlacementBlocker_ClusterExit" pos="0 0 0">
+          <placementblocker size="200" locaid="CLUSTEREXIT" types="1" />
+        </tile>
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 30" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -48 0" />
         <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-30 -48 0" />

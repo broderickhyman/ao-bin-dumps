@@ -661,55 +661,7 @@
         <tile name="SWAMP_GREEN_PLATEAU_ROCK_8M_A_DEBRIS_NOCOL" pos="29 -28 5" />
       </layer>
     </layergroup>
-    <layergroup name="ENCOUNTER">
-      <layer id="Layer_02" name="Light">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="8.41 0 8.68" roty="221">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="2.9 0 3.78" roty="41">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="5.97 0 1.83" rot="0 17.99 0">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="1.18 0 6.85" roty="69">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="9.99 0 19.94" roty="58">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="19.4 0 10.1" roty="29">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="7.41 0 21.87" roty="65">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-      </layer>
-      <layer id="Layer_03" name="Standard">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="17.39 0 12.89" roty="245">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="3.03 0 0.01" roty="286">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="14.39 0 15.12" roty="177.72">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="14.01 0 11.02" roty="358">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="0.6 0 3.27" roty="163">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="0.9 0 -0.48" roty="226">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_MAGIC">
-            <path>
-              <waypoint pos="1.830134 0.9464817" idle="3" pace="WALK" />
-              <waypoint pos="10.93563 10.87949" idle="3" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-      </layer>
+    <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_04" name="mob_solo_light_01">
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ACOLYTE" pos="21.17 0 8.86" roty="58">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE" />
@@ -901,6 +853,56 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_TOME" pos="-2.98 0 6.21" roty="217">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_TOME" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
+      <layer id="Layer_02" name="mob_veteran_light_01">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="8.41 0 8.68" roty="221">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="2.9 0 3.78" roty="41">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="5.97 0 1.83" rot="0 17.99 0">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="1.18 0 6.85" roty="69">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="9.99 0 19.94" roty="58">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="19.4 0 10.1" roty="29">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="7.41 0 21.87" roty="65">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+      </layer>
+      <layer id="Layer_03" name="mob_veteran_standard_01">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="17.39 0 12.89" roty="245">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="3.03 0 0.01" roty="286">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="14.39 0 15.12" roty="177.72">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="14.01 0 11.02" roty="358">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="0.6 0 3.27" roty="163">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="0.9 0 -0.48" roty="226">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_MAGIC">
+            <path>
+              <waypoint pos="1.830134 0.9464817" idle="3" pace="WALK" />
+              <waypoint pos="10.93563 10.87949" idle="3" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
       <layer id="Layer_19" name="mob_veteran_light_02">
