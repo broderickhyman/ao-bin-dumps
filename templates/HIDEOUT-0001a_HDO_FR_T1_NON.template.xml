@@ -1,5 +1,10 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Master/Hideouts/HIDEOUT-0001a_HDO_FR_T1_NON.unity" unityguid="da6d98a74de19fb4eadf11b3617b4463" editorBoundsMin="-185 -125" editorBoundsMax="165 225" colBoundsMin="-185 -125" colBoundsMax="165 225">
   <criticalscenemembers>
+    <criticalscenemember id="fasttravelpoint_01" type="fasttravelpoint" layerId="">
+      <tile name="FASTTRAVEL_POINT" pos="-10 -8 3">
+        <fasttravelpoint spawnpos="9.93 -1.02" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="actionbuilding_02" type="actionbuilding" layerId="">
       <tile name="REPAIRSHOP_HIDEOUT" pos="-16 -12 63">
         <actionbuilding />
@@ -17,6 +22,10 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="0 -12 -7" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="0 -12 -13" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="3 -12 -10" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-3 -12 -10" />
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="70 -20 30" />
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="80 -20 50" roty="180" />
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="60 -20 70" roty="270" />
@@ -37,6 +46,12 @@
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="50 -20 20" />
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="70 -20 40" roty="270" />
     <tile name="FOREST_GREEN_DNG_CONSTRUCTION_CORNER" pos="50 -20 60" roty="90" />
+    <criticaltile name="FASTTRAVEL_POINT" pos="-10 -8 3" id="fasttravelpoint_01" type="fasttravelpoint">
+      <fasttravelpoint spawnpos="9.93 -1.02" />
+    </criticaltile>
+    <tile name="MiniMapMarker" pos="-10 -8 3">
+      <minimapmarker type="Harbor" />
+    </tile>
     <tile name="HIDEOUT_MANAGEMENT" pos="-16 -12 22">
       <hideoutmanagement spawnpos="-12 22" />
     </tile>
@@ -56,13 +71,13 @@
     <tile name="hideout_banner_standing_large_01" pos="-4.5 -12 13.5" roty="270" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="15.5 -8 -11.5" roty="270" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="7.5 -8 -22.5" roty="329" />
-    <tile name="FOREST_GREEN_T1_ROCK" pos="-12.5 -8 3.5" roty="90" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="75.5 -20 22.5" roty="270" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="66.5 -20 13.5" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="59.5 -20 13.5" roty="35.58" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="47.5 -20 53.5" roty="42.46" />
+    <tile name="FOREST_GREEN_T1_ROCK" pos="11.5 -8 0.5" roty="270" />
     <tile name="FOREST_GREEN_T1_ROCK" pos="9.5 -8 5.5" roty="70.75" />
-    <tile name="FOREST_GREEN_T1_ROCK" pos="-12.5 -8 0.5" roty="71" />
+    <tile name="FOREST_GREEN_T1_ROCK" pos="-11.5 -8 -2.5" roty="71" />
     <tile name="AtmosphereBubble_DNG_NONE_DL_NONE_hideout_market" pos="-0.31 -11.99 43.51">
       <atmospherebubble layer="1" radius="33" blend="0.8787879" />
     </tile>
@@ -1718,6 +1733,12 @@
     <tile name="FOREST_GREEN_FILL_CITY_TORCH_A_POINTLIGHT" pos="65.5 -20 11.5" roty="263" />
     <tile name="FOREST_GREEN_FILL_FARM_GROUND_STRAW_A" pos="-2.5 -12 41.5" roty="62.7" />
     <tile name="FOREST_GREEN_FILL_PLATFORM_STONE_FLAT_C_DECO" pos="0 -8 -10" scale="1.11 0.5 1.11" />
+    <tile name="FILL_STORAGE_BARREL_CLOSED_SMALL_A" pos="-13.5 -8 1.5" roty="270" />
+    <tile name="FILL_STORAGE_CRATE_LARGE_A" pos="-13 -8 3" roty="112" />
+    <tile name="FILL_STORAGE_CRATE_MEDIUM_A" pos="-13.5 -6 3.5" roty="131" />
+    <tile name="FILL_STORAGE_TRANSPORT_CART_A" pos="-9.5 -8 6.5" roty="186" />
+    <tile name="FOREST_GREEN_FILL_FARM_GROUND_STRAW_A" pos="-10.5 -8 3.5" />
+    <tile name="FOREST_GREEN_GROUND_STONES_CALM_C" pos="-10 -8 3" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-20 -20 75" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="35 -4 -66" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="43 -8 -12" roty="90" />
@@ -1748,8 +1769,6 @@
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="28 -8 -20" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="18 -4 -38" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_DIAGONAL_A" pos="20 -12 22" roty="270" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-20 -8 -2" roty="91" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-21 -11 -3" roty="91" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="64 -20 84" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="37 -20 49" roty="90" scale="1 1.3305 1" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="29 -20 18" />
@@ -1775,9 +1794,7 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="40 -20 72" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-23 -12 34" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-6 -8 -24" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-17 -8 -3" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="78 -32 13" roty="180" scale="3.4258 3.4258 3.4258" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-13 -8 8" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="63 -20 9" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="81 -20 26" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="17 -12 65" />
@@ -1794,7 +1811,6 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="31 -20 34" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="52 -20 79" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-23 -12 -22" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-15 -8 -4" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-31 -12 -23" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="101 -20 73" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_A" pos="7 -12 75" />
@@ -1882,7 +1898,6 @@
     <tile name="FOREST_GREEN_DNG_FILL_STALAGMITE_A" pos="78.5 -20 87.5" roty="270" />
     <tile name="FOREST_GREEN_DNG_FILL_STALAGMITE_A" pos="77.5 -20 80.5" roty="270" />
     <tile name="FOREST_GREEN_DNG_FILL_STALAGMITE_B" pos="75.5 -20 85.5" roty="270" scale="1.423922 1.057346 1.423922" />
-    <tile name="FOREST_GREEN_DNG_FILL_COLUMN_CAVERN_DIAGONAL_A_BLEND" pos="-18 -8 4" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_STALAGMITE_C" pos="78 -20 86" roty="90" />
     <tile name="FOREST_GREEN_DNG_KPR_COLUMN_SMALL_A_LOWER" pos="-16 -8 -5" roty="270" />
     <tile name="FOREST_GREEN_DNG_KPR_COLUMN_SMALL_A_LOWER" pos="12 -8 9" roty="90" />
@@ -1903,14 +1918,19 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-32 -12 -24" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-32 -14 -2" roty="91" scale="1 1.0669 1" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-27 -12 -24" roty="271" scale="1 1.1 1" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-21 -8 -2" roty="91" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-9 -20 85" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="8 -20 91" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A" pos="-14 -8 -20" roty="270" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_DEBRIS_A_DIAGONAL" pos="8 -12 35" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="80 -20 83" roty="180" />
+    <tile name="FOREST_GREEN_DNG_FILL_COLUMN_CAVERN_DIAGONAL_A_BLEND" pos="-20 -8 4" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_NOCOL" pos="81 -20 91" roty="180" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_B" pos="74 -20 82" roty="206.92" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-17 -8 4" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_A" pos="12 -3 15" rot="16 162.68 0" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-13 -8 8" roty="180" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="-15 -8 -4" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="35 -20 10" roty="90" />
     <tile name="FOREST_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-7.5 -12 28.5" roty="324" scale="1.200002 1.2 1.200002" />
     <tile name="FOREST_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="-0.5 -20 88.5" roty="10.33" scale="1.2 1.2 1.2" />

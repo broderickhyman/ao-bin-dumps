@@ -122,6 +122,15 @@
         }
       },
       {
+        "@name": "MOUNT_BEAR",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "bear"
+        }
+      },
+      {
         "@name": "MOUNT_COUGAR",
         "CharType": {
           "@name": "mount"
@@ -1627,7 +1636,7 @@
           "@name": "plate"
         },
         "WeaponType": {
-          "@name": "mace_2h_big"
+          "@name": "hammer_huge"
         },
         "MountType": {
           "@name": "empty"
@@ -1651,7 +1660,7 @@
           "@name": "plate"
         },
         "WeaponType": {
-          "@name": "sword_big"
+          "@name": "edge_big"
         },
         "MountType": {
           "@name": "empty"
@@ -1675,7 +1684,7 @@
           "@name": "cloth"
         },
         "WeaponType": {
-          "@name": "staff_standard"
+          "@name": "mace_big"
         },
         "MountType": {
           "@name": "empty"
@@ -1717,7 +1726,7 @@
           "@name": "avalon_cleric"
         },
         "Size": {
-          "@name": "big"
+          "@name": "medium"
         },
         "ArmorType": {
           "@name": "cloth"
@@ -1981,10 +1990,10 @@
           "@name": "avalon_eagle"
         },
         "Size": {
-          "@name": "wing_medium"
+          "@name": "wing_metal"
         },
         "ArmorType": {
-          "@name": "hide"
+          "@name": "plate"
         },
         "WeaponType": {
           "@name": "bite_small"
@@ -2035,7 +2044,7 @@
           "@name": "rock"
         },
         "WeaponType": {
-          "@name": "swoosh_rock"
+          "@name": "mace_rock"
         },
         "MountType": {
           "@name": "empty"
@@ -2675,6 +2684,54 @@
         },
         "MobType": {
           "@name": "morgana_raven_priestess"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "cloth"
+        },
+        "WeaponType": {
+          "@name": "cursed"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_MORGANA_MAGISTRA",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "morgana"
+        },
+        "MobType": {
+          "@name": "morgana_magistra"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "cloth"
+        },
+        "WeaponType": {
+          "@name": "cursed"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_MORGANA_FANG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "morgana"
+        },
+        "MobType": {
+          "@name": "morgana_fang"
         },
         "Size": {
           "@name": "medium"
@@ -6496,6 +6553,15 @@
         }
       },
       {
+        "@name": "SPELL_FIRE_INFERNO_SHIELD_REFLECT",
+        "OnCastStart": {
+          "@name": "Play_selfbuff_cast"
+        },
+        "OnSpellHit": {
+          "@name": "Play_fire_impact_small"
+        }
+      },
+      {
         "@name": "SPELL_FROST_START_MEDIUM",
         "OnCastStart": {
           "@name": "Play_frost_cast_medium"
@@ -6601,6 +6667,15 @@
         },
         "OnCastFinished": {
           "@name": "Play_frost_cast_small"
+        },
+        "OnSpellHit": {
+          "@name": "Play_frost_impact_small"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_SHIELD_REFLECT",
+        "OnCastStart": {
+          "@name": "Play_selfbuff_cast"
         },
         "OnSpellHit": {
           "@name": "Play_frost_impact_small"
@@ -6742,6 +6817,21 @@
         }
       },
       {
+        "@name": "SPELL_CHANNEL_LIGHTNING",
+        "OnChannelingStart": {
+          "@name": "Play_mob_territory_mage_channel_lightning"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_territory_mage_channel_lightning"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_mob_territory_mage_channel_lightning"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_territory_mage_channel_lightning"
+        }
+      },
+      {
         "@name": "SPELL_LIGHTNING_CHAIN_LOADCAST",
         "OnCastStart": {
           "@name": "Play_cast_load_damage_lightning"
@@ -6802,6 +6892,24 @@
         },
         "OnCastFinished": {
           "@name": "Play_selfbuff_cast"
+        }
+      },
+      {
+        "@name": "SPELL_NATURE_CAST_LOAD_DAMAGE_REFLECT",
+        "OnCastStart": {
+          "@name": "Play_nature_cast_load_damage"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_nature_cast_load_damage"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_nature_cast_load_damage"
+        },
+        "OnCastFinished": {
+          "@name": "Play_selfbuff_cast"
+        },
+        "OnDamagReflected": {
+          "@name": "Play_mob_stump_small_pierce"
         }
       },
       {
@@ -7914,6 +8022,76 @@
         }
       },
       {
+        "@name": "SPELL_MORGANA_FANG_ATTACK_SWOOSH",
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_fang_attack_swoosh"
+        }
+      },
+      {
+        "@name": "WEAPON_HIT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_FANG_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_morgana_fang_dash_vo"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_morgana_fang_dash_vo"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_morgana_fang_dash_vo"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_fang_dash"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_FANG_ENRAGE",
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_fang_laugh"
+        },
+        "OnSpellHit": {
+          "@name": "Play_mob_damage_increase"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_MAGISTRA_CHAOS_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_magistra_chaos_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_MAGISTRA_VETERAN_CHAOS_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_morgana_magistra_chaos_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_MAGISTRA_CHANNEL_LAUGH",
+        "OnChannelingStart": {
+          "@name": "Play_mob_morgana_magistra_exstatic_vo"
+        }
+      },
+      {
+        "@name": "SPELL_MAGISTRA_RAVEN_SCREAM",
+        "OnCastStart": {
+          "@name": "Play_mob_morgana_magistra_fear_vo"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_morgana_magistra_fear_vo"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_morgana_magistra_fear_vo"
+        },
+        "OnCastFinished": {
+          "@name": "Play_raven_scream_explosion"
+        }
+      },
+      {
         "@name": "SPELL_MORGANA_ROYALKNIGHT_ENRAGE",
         "OnCastFinished": {
           "@name": "Play_mob_morgana_sisters_royalknight_enrage"
@@ -8235,7 +8413,7 @@
           "@name": "Stop_mob_avalon_minion_dash_load"
         },
         "OnCastFinished": {
-          "@name": "Play_melee_swoosh_dash"
+          "@name": "Play_mob_avalon_minion_dash"
         }
       },
       {
@@ -8269,6 +8447,21 @@
         }
       },
       {
+        "@name": "SPELL_AVALON_BOWMAN_OPENING_SHOT",
+        "OnCastStart": {
+          "@name": "Play_grail_cast_load_short"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_grail_cast_load_short"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_grail_cast_load_short"
+        },
+        "OnCastFinished": {
+          "@name": "Play_grail_cast_soft"
+        }
+      },
+      {
         "@name": "SPELL_AVALON_MAGE_LASER_CHANNEL",
         "OnChannelingStart": {
           "@name": "Play_mob_avalon_mage_laser_beam"
@@ -8295,7 +8488,7 @@
           "@name": "Stop_mob_avalon_cleric_debuff_castandvo"
         },
         "OnCastFinished": {
-          "@name": "Play_grail_impact_small"
+          "@name": "Play_grail_impact_smoke"
         }
       },
       {
@@ -8430,7 +8623,7 @@
           "@name": "Stop_mob_avalon_wizard_rider_boss_load_vo"
         },
         "OnCastFinished": {
-          "@name": "Play_grail_cast_heal"
+          "@name": "Stop_mob_avalon_wizard_rider_boss_load_vo"
         }
       },
       {
@@ -8485,6 +8678,18 @@
         "@name": "SPELL_AVALON_DRONE_AURA",
         "OnCastFinished": {
           "@name": "Play_mob_avalon_drone_buff_damage_aura"
+        },
+        "OnSpellRemoved": {
+          "@name": "Stop_mob_avalon_drone_buff_damage_aura"
+        },
+        "OnDestroyed": {
+          "@name": "Stop_mob_avalon_drone_buff_damage_aura"
+        }
+      },
+      {
+        "@name": "SPELL_AVALON_DRONE_AURA_STOP",
+        "OnCastFinished": {
+          "@name": "Stop_mob_avalon_drone_buff_damage_aura"
         }
       },
       {
@@ -8693,14 +8898,14 @@
         "OnChannelingStart": {
           "@name": "Play_mob_avalon_captain_boss_nova_load_vo"
         },
-        "OnChannelingEnd": {
-          "@name": "Stop_mob_avalon_mage_laser_beam"
-        },
         "OnChannelingCancelled": {
           "@name": "Stop_mob_avalon_captain_boss_nova_load_vo"
         },
         "OnChannelingInterrupted": {
           "@name": "Stop_mob_avalon_captain_boss_nova_load_vo"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_grail_impact_heal_big"
         }
       },
       {
@@ -8769,13 +8974,13 @@
       {
         "@name": "SPELL_AVALON_EAGLE_WINDWALL_CAST",
         "OnCastStart": {
-          "@name": "Play_grail_cast_load_medium_01"
+          "@name": "Play_mob_avalon_eagle_cast_voice"
         },
         "OnCastCanceled": {
-          "@name": "Stop_grail_cast_load_medium_01"
+          "@name": "Play_mob_avalon_eagle_cast_voice"
         },
         "OnCastInterrupted": {
-          "@name": "Stop_grail_cast_load_medium_01"
+          "@name": "Stop_mob_avalon_eagle_cast_voice"
         },
         "OnCastFinished": {
           "@name": "Play_mob_avalon_eagle_cast"
@@ -8842,7 +9047,7 @@
       {
         "@name": "SPELL_AVALON_KING_ROTATINBLADES",
         "OnCastFinished": {
-          "@name": "Play_grail_cast_medium"
+          "@name": "Play_mob_avalon_king_load_blade"
         }
       },
       {
@@ -8887,13 +9092,13 @@
       {
         "@name": "SPELL_AVALON_BASILISK_WINDWALL_CAST",
         "OnCastStart": {
-          "@name": "Play_grail_cast_load_short"
+          "@name": "Play_grail_cast_load_medium_02"
         },
         "OnCastCanceled": {
-          "@name": "Stop_grail_cast_load_short"
+          "@name": "Stop_grail_cast_load_medium_02"
         },
         "OnCastInterrupted": {
-          "@name": "Stop_grail_cast_load_short"
+          "@name": "Stop_grail_cast_load_medium_02"
         },
         "OnCastFinished": {
           "@name": "Play_windwall_loop"
@@ -8927,6 +9132,12 @@
         },
         "OnCastFinished": {
           "@name": "Play_grail_cast_medium"
+        }
+      },
+      {
+        "@name": "SPELL_AVALON_STATUE_SPAWN_MINION",
+        "OnCastStart": {
+          "@name": "Play_mob_avalon_statue_spawn_minion"
         }
       },
       {
@@ -9597,6 +9808,27 @@
         }
       },
       {
+        "@clustername": "3011_CTY_HL_T7_NON",
+        "Environment": {
+          "@name": "Monument"
+        },
+        "Biom": {
+          "@name": "None"
+        },
+        "SubBiom": {
+          "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "city"
+        }
+      },
+      {
         "@clustername": "3005_CTY_HL_T7_NON",
         "Environment": {
           "@name": "Bank"
@@ -9722,7 +9954,7 @@
           "@name": "StartTown"
         },
         "GlobalEnvironmentEffect": {
-          "@name": "city"
+          "@name": "swamp"
         }
       },
       {
@@ -9743,7 +9975,7 @@
           "@name": "StartTown"
         },
         "GlobalEnvironmentEffect": {
-          "@name": "city"
+          "@name": "forest"
         }
       },
       {
@@ -9764,7 +9996,7 @@
           "@name": "StartTown"
         },
         "GlobalEnvironmentEffect": {
-          "@name": "city"
+          "@name": "mountain"
         }
       },
       {
