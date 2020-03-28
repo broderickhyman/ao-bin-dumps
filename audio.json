@@ -419,6 +419,15 @@
         }
       },
       {
+        "@name": "MOUNT_ALPACA",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "alpaca"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -5568,7 +5577,7 @@
       },
       {
         "@name": "MELEE_CAST_FATALBLADE",
-        "OnCastStart": {
+        "OnCastFinished": {
           "@name": "Play_cast_fatalblade"
         }
       },
@@ -6595,6 +6604,21 @@
         }
       },
       {
+        "@name": "SPELL_FROST_CAST_LOAD_SMALL_2S",
+        "OnCastStart": {
+          "@name": "Play_frost_cast_load_small_long"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_frost_cast_load_small_long"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_frost_cast_load_small_long"
+        },
+        "OnCastFinished": {
+          "@name": "Play_frost_cast_small"
+        }
+      },
+      {
         "@name": "SPELL_FROST_CAST_BIG_LOAD",
         "OnCastStart": {
           "@name": "Play_frost_cast_load"
@@ -7024,6 +7048,15 @@
         }
       },
       {
+        "@name": "SPELL_JUMP_FEAR",
+        "OnCastStart": {
+          "@name": "Play_jump"
+        },
+        "OnSpellHit": {
+          "@name": "Play_fear_impact"
+        }
+      },
+      {
         "@name": "SPELL_HIT_STUN",
         "OnSpellHit": {
           "@name": "Play_stun"
@@ -7101,6 +7134,12 @@
       {
         "@name": "SPELL_FEAR_HIT",
         "OnCastFinished": {
+          "@name": "Play_fear_impact"
+        }
+      },
+      {
+        "@name": "SPELL_FEAR_SPELLHIT",
+        "OnSpellHit": {
           "@name": "Play_fear_impact"
         }
       },
@@ -7475,6 +7514,15 @@
         "@name": "SPELL_MOUNT_HUSKY_HOWL",
         "OnCastStart": {
           "@name": "Play_cast_dog_howl"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_BALLISTA_MULTISHOTLOAD",
+        "OnCastStart": {
+          "@name": "Play_ballista_siege_multiload"
+        },
+        "OnProjectileHit": {
+          "ImpactType": null
         }
       },
       {

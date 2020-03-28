@@ -1,5 +1,25 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Slave/M_ST_Portal_01.unity" unityguid="b613cf06a92488b4a95594fe24b27bc8" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-77 -75" colBoundsMax="75 75">
   <criticalscenemembers>
+    <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_07">
+      <tile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="15 12 14">
+        <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_02" type="shrine" layerId="Layer_07">
+      <tile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="-15 12 14">
+        <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_03" type="shrine" layerId="Layer_07">
+      <tile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="15 12 -14">
+        <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="shrine_04" type="shrine" layerId="Layer_07">
+      <tile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="-15 12 -14">
+        <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="portalexit_04" type="portalexit" layerId="Layer_01">
       <tile name="FOREST_GREEN_PORTAL_EXIT_LYMHURST" pos="0 14 0">
         <portalexit size="10 10" spawnpos="10 0" />
@@ -32,6 +52,26 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_07" name="BUFFSHRINE" activationRule="X_X_X_X_Outlands_X">
+        <criticaltile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="15 12 14" id="shrine_01" type="shrine">
+          <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+        </criticaltile>
+        <tile name="STEPPE_GREEN_FILL_RUIN_MAGIC_EMBLEM_GROUND_LARGE_A" pos="-15 12 -14" roty="270" />
+        <tile name="STEPPE_GREEN_FILL_RUIN_MAGIC_EMBLEM_GROUND_LARGE_A" pos="-15 12 14" />
+        <criticaltile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="-15 12 14" id="shrine_02" type="shrine">
+          <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+        </criticaltile>
+        <tile name="STEPPE_GREEN_FILL_RUIN_MAGIC_EMBLEM_GROUND_LARGE_A" pos="15 12 -14" roty="180" />
+        <criticaltile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="15 12 -14" id="shrine_03" type="shrine">
+          <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+        </criticaltile>
+        <criticaltile name="SHRINE_PORTALCLUSTER_INVISIBILITY_BUFF" pos="-15 12 -14" id="shrine_04" type="shrine">
+          <shrine shrinetype="PORTALCLUSTER_SHRINE_INVISIBILITY_BUFF" />
+        </criticaltile>
+        <tile name="STEPPE_GREEN_FILL_RUIN_MAGIC_EMBLEM_GROUND_LARGE_A" pos="15 12 14" roty="90" />
+      </layer>
+    </layergroup>
     <layergroup name="KIND">
       <layer id="Layer_01" name="LYMHURST">
         <criticaltile name="FOREST_GREEN_PORTAL_EXIT_LYMHURST" pos="0 14 0" id="portalexit_04" type="portalexit">

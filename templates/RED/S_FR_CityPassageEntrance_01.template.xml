@@ -7,6 +7,13 @@
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Royals" activationRule="X_X_X_X_Royal_X">
+        <tile name="LevelMarker_CityPassageEntrance" pos="0 0 0">
+          <worldmapmarker type="LevelMarker_CityPassageEntrance" />
+        </tile>
+      </layer>
+    </layergroup>
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="0 -40 0" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 0" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="20 -40 10" />
@@ -20,6 +27,12 @@
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="10 -40 -20" roty="270" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="0 -40 -20" roty="270" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-10 -40 -20" roty="270" />
+    <tile name="PlacementBlocker_Hellgate" pos="0 0 0">
+      <placementblocker size="40" locaid="HELLGATE" types="1" />
+    </tile>
+    <criticaltile name="FOREST_RED_ENTRANCE_PASSAGE_CITY_A" pos="0 8 0" id="exit_01" type="exit">
+      <exit size="9 9" spawnpos="0 -8.6" faction="Undead" kind="DungeonSolo" roadtype="Primary" />
+    </criticaltile>
     <compoundtile name="_FOREST_RED_BASE_HILL_8M_BASE_20X20_CORNER_A_COMP_01" pos="15 0 -15" roty="90" />
     <compoundtile name="_FOREST_RED_BASE_HILL_8M_BASE_20X20_CORNER_A_COMP_01" pos="15 0 15" />
     <compoundtile name="_FOREST_RED_BASE_HILL_8M_BASE_20X20_CORNER_A_COMP_01" pos="-15 0 -15" roty="180" />
@@ -34,11 +47,5 @@
     <compoundtile name="_FOREST_RED_BUSHES_10x10_COMP_01" pos="22 0 -18" />
     <compoundtile name="_FOREST_RED_BUSHES_10x10_LINE_COMP_01" pos="19 0 -22" />
     <tile name="FOREST_RED_UND_CITY_STATUE_BROKEN_A" pos="17 0 -20" roty="90" />
-    <tile name="LevelMarker_CityPassageEntrance" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_CityPassageEntrance" />
-    </tile>
-    <criticaltile name="FOREST_RED_ENTRANCE_PASSAGE_CITY_A" pos="0 8 0" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -8.6" faction="Undead" kind="DungeonSolo" roadtype="Primary" />
-    </criticaltile>
   </tiles>
 </template>

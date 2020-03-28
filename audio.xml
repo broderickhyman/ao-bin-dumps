@@ -208,6 +208,10 @@
     <CharType name="mount"/>
     <MountType name="beetle"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_ALPACA">
+    <CharType name="mount"/>
+    <MountType name="alpaca"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -2368,7 +2372,7 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CAST_FATALBLADE">
-    <OnCastStart name="Play_cast_fatalblade" />
+    <OnCastFinished name="Play_cast_fatalblade" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_SMALL_SWOOSH">
@@ -2881,6 +2885,12 @@
     <OnCastInterrupted name="Stop_frost_cast_load_small" />
     <OnCastFinished name="Play_frost_cast_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_SMALL_2S">
+    <OnCastStart name="Play_frost_cast_load_small_long" />
+    <OnCastCanceled name="Stop_frost_cast_load_small_long" />
+    <OnCastInterrupted name="Stop_frost_cast_load_small_long" />
+    <OnCastFinished name="Play_frost_cast_small" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_BIG_LOAD">
     <OnCastStart name="Play_frost_cast_load" />
     <OnCastCanceled name="Stop_frost_cast_load" />
@@ -3082,6 +3092,10 @@
   <WwiseEventInfo name="SPELL_JUMP" >
     <OnCastStart name="Play_jump" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_JUMP_FEAR" >
+    <OnCastStart name="Play_jump" />
+    <OnSpellHit name="Play_fear_impact" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HIT_STUN">
     <OnSpellHit name="Play_stun" />
   </WwiseEventInfo>
@@ -3118,6 +3132,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FEAR_HIT">
     <OnCastFinished name="Play_fear_impact" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FEAR_SPELLHIT">
+    <OnSpellHit name="Play_fear_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_THROW_FISH" >
     <OnCastFinished name="Play_throw_rotten_fish" />
@@ -3327,6 +3344,13 @@
 
   <WwiseEventInfo name="SPELL_MOUNT_HUSKY_HOWL">
     <OnCastStart name="Play_cast_dog_howl"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_BALLISTA_MULTISHOTLOAD">
+    <OnCastStart name="Play_ballista_siege_multiload"/>
+    <OnProjectileHit>
+      <ImpactType/>
+    </OnProjectileHit>
   </WwiseEventInfo>
 
   <!--****************************************************-->
