@@ -120,6 +120,14 @@
     <CharType name="mount"/>
     <MountType name="ballista"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_BEHEMOTH">
+    <CharType name="mount"/>
+    <MountType name="behemoth"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_BEHEMOTH_ARMORED">
+    <CharType name="mount"/>
+    <MountType name="behemoth_armored"/>
+  </WwiseSwitchInfo>
  <WwiseSwitchInfo name="MOUNT_BAT">
     <CharType name="mount"/>
     <MountType name="bat"/>
@@ -3051,7 +3059,13 @@
   <!-- Misc -->
   <WwiseEventInfo name="CHARGE_INCREASE" >
     <OnCastFinished name="Play_charge_increase" />
-  </WwiseEventInfo>                  
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELLHIT_SLOW" >
+    <OnSpellHit name="Play_slow" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELLHIT_INVISIBILITY">
+    <OnSpellHit name="Play_cast_invisibility" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF">
     <OnCastStart name="Play_selfbuff_cast" />
   </WwiseEventInfo>
@@ -3189,6 +3203,10 @@
   
   <WwiseEventInfo name="SPELL_FOOD_BUFF">
     <OnCastStart name="Play_eat_food" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_FOOD_BUFF_SPECIAL">
+    <OnCastStart name="Play_eat_special" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_INVISIBILTY_SHRINE_BUFF">
@@ -5834,6 +5852,14 @@
 
   <WwiseEventInfo name="SPELL_VANITY_SUMMONING">
     <OnCastStart name="Play_easter_cast_mob"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_SUMMONING_PROJECTILEHIT">
+    <OnProjectileHit name="Play_easter_cast_mob"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_THROW_EGG">
+    <OnCastFinished name="Play_melee_swoosh_fast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_VANITY_SUMMONING_PORTAL">
