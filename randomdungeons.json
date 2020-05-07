@@ -8,7 +8,17 @@
     "@xsi:noNamespaceSchemaLocation": "randomdungeons.xsd",
     "DungeonLifeTimes": {
       "@maxlifetimeseconds": "87000",
-      "@lifetimeafteremptyseconds": "300"
+      "@lifetimeafteremptyseconds": "300",
+      "exitsubtype": [
+        {
+          "@type": "SOLO",
+          "@lifetimeafteremptyseconds": "30"
+        },
+        {
+          "@type": "ELITE",
+          "@lifetimeafteremptyseconds": "7200"
+        }
+      ]
     },
     "DifficultyLevels": {
       "difficulty": [
@@ -124,6 +134,30 @@
         {
           "@clustertype": "DUNGEON_BLACK",
           "@dungeonclustertype": "DUNGEON_BLACK"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_1",
+          "@dungeonclustertype": "DUNGEON_BLACK_1"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_2",
+          "@dungeonclustertype": "DUNGEON_BLACK_2"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_3",
+          "@dungeonclustertype": "DUNGEON_BLACK_3"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_4",
+          "@dungeonclustertype": "DUNGEON_BLACK_4"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_5",
+          "@dungeonclustertype": "DUNGEON_BLACK_5"
+        },
+        {
+          "@clustertype": "DUNGEON_BLACK_6",
+          "@dungeonclustertype": "DUNGEON_BLACK_6"
         }
       ]
     },
@@ -628,7 +662,7 @@
               "@name": "SOLO",
               "ClusterTier": {
                 "@tier": "1",
-                "@maxfillratio": "1",
+                "@maxfillratio": "0.4",
                 "RandomExit": {
                   "@name": "T6_KEEPER_SOLO",
                   "@weight": "1"
@@ -642,8 +676,12 @@
                 "@maxfillratio": "0.7",
                 "RandomExit": [
                   {
+                    "@name": "T6_CORRUPTED_SOLO",
+                    "@weight": "1"
+                  },
+                  {
                     "@name": "T4_MORGANA",
-                    "@weight": "0"
+                    "@weight": "1"
                   },
                   {
                     "@name": "T5_MORGANA",
@@ -1247,6 +1285,149 @@
     },
     "RandomExitVisualizations": {
       "Visualization": [
+        {
+          "@name": "CORRUPTED_SOLO",
+          "biome": [
+            {
+              "@name": "Default",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Forest",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Steppe",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Swamp",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Highlands",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Mountains",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO"
+                  }
+                }
+              ]
+            }
+          ]
+        },
         {
           "@name": "KEEPER_SOLO",
           "biome": [
@@ -2839,6 +3020,17 @@
           }
         },
         {
+          "@name": "T6_CORRUPTED_SOLO",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "CorruptedDungeonGenerator": null
+          },
+          "Visualization": {
+            "@ref": "CORRUPTED_SOLO"
+          }
+        },
+        {
           "@name": "T4_HERETIC_SOLO",
           "@activationtime": "300",
           "@cooldown": "120",
@@ -3120,7 +3312,7 @@
         },
         {
           "@name": "T3_PORTAL_SOLO",
-          "@activationtime": "300",
+          "@activationtime": "60",
           "@cooldown": "120",
           "RandomDungeonGenerators": {
             "GeneratedRandomDungeon": {
@@ -3135,7 +3327,7 @@
         },
         {
           "@name": "T4_PORTAL_SOLO",
-          "@activationtime": "300",
+          "@activationtime": "60",
           "@cooldown": "120",
           "RandomDungeonGenerators": {
             "GeneratedRandomDungeon": [

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<corrupteddungeons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="corrupteddungeons.xsd">
+  <!-- Global Settings -->
+
+  <globalsettings
+    safeperiod="60"
+    rollinterval="30"
+    matchmakingthreshold="0.01"
+  />
+
+  <!--
+    fxfrequency="120"
+    fxvariance="0.1"
+    majorfxweighting="1"
+    minorfxweighting="3"
+-->
+
+  <!-- Boss Loot Rarity Distribution -->
+
+  <!--
+  <bosslootrarityweighting
+    common="590"
+    uncommon="300"
+    rare="100"
+    legendary="10"
+  />
+  
+  -->
+
+  <!-- Difficulty Specific Parameters -->
+
+  <!-- MMR to Rewards Calculation
+ 
+The bonus to rewards is determined in code by:
+ 
+(1-e^-MMR/K)*C
+ 
+Where K is the reward constant, and C is the reward ceiling.  As players progress in MMR they will approach C but never surpass it.
+K will determine where the bonus the average player will get, and should be calculated using corrupteddungeon.xlsx.
+ 
+-->
+
+  <!-- Chance Per Roll Calculation
+ 
+The roll for chanceperrollpve/chanceperrollpvp should be determined with the formula
+ 
+chanceperoll=1-(1-totalchance)^(1/count)
+ 
+where totalchance is the targeted total chance over the whole dungeon, and count is the amount of times rolled.
+count is determined by taking the expected length of the dungeon, subtracting the safeperiod, dividing by the interval, and adding 1 (for t=0)
+ 
+count=((dungeonlength-safeperiod)/interval)+1
+ 
+-->
+
+  <difficulty>
+
+    <difficultylevel
+       name="beginner"
+       tier="4"
+       clustertype="CORRUPTED_DUNGEON_BEGINNER"
+       playersarelethalinentranceclusterrequirement="false"
+       itempowerrequirement="800"
+       infamyrequirement="0"
+
+       rewardconstant="70092"
+       rewardceiling="1"
+       pvppointloss="0.3"
+       pvppointgain="0.1"
+       famebonusmultiplier="1.0"
+       silverbonusmultiplier="0.5"
+       chanceperrollpve="0.00362652943"
+       chanceperrollpvp="0.00362652943"
+       exitdungeontime="120"
+       objectiveclearrequirement="3"
+       pointsrequirement="100"
+     />
+
+    <difficultylevel
+       name="intermediate"
+       tier="6"
+       clustertype="CORRUPTED_DUNGEON_INTERMEDIATE"
+       playersarelethalinentranceclusterrequirement="true"
+       itempowerrequirement="1000"
+       infamyrequirement="0"
+       
+       rewardconstant="70092"
+       rewardceiling="1"
+       pvppointloss="0.3"
+       pvppointgain="0.1"
+       famebonusmultiplier="1.0"
+       silverbonusmultiplier="0.5"
+       chanceperrollpve="0.00362652943"
+       chanceperrollpvp="0.00362652943"
+       exitdungeontime="120"
+       objectiveclearrequirement="3"
+       pointsrequirement="100"
+     />
+
+    <difficultylevel
+       name="pro"
+       tier="8"
+       clustertype="CORRUPTED_DUNGEON_PRO"
+       playersarelethalinentranceclusterrequirement="true"
+       itempowerrequirement="1200"
+       infamyrequirement="50000"
+       
+       rewardconstant="70092"
+       rewardceiling="1"
+       pvppointloss="0.3"
+       pvppointgain="0.1"
+       famebonusmultiplier="1.0"
+       silverbonusmultiplier="0.5"
+       chanceperrollpve="0.00362652943"
+       chanceperrollpvp="0.00362652943"
+       exitdungeontime="120"
+       objectiveclearrequirement="3"
+       pointsrequirement="100"
+     />
+
+  </difficulty>
+
+  <corrupteddungeonmaps>
+    <map id="CORRUPT-001" weight="1" />
+    <map id="CORRUPT-002" weight="1" />
+  </corrupteddungeonmaps>
+
+</corrupteddungeons>

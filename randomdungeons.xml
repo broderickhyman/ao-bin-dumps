@@ -1,9 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <randomdungeons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="randomdungeons.xsd">
 
   <!--  maxlifetimeseconds:         time until the dungeon is closed even if players are inside -->
   <!--  lifetimeafteremptyseconds:  time until dungeon is closed, but it will pause when players are found in the dungeon -->
-  <DungeonLifeTimes maxlifetimeseconds="87000" lifetimeafteremptyseconds="300" />
+  <DungeonLifeTimes maxlifetimeseconds="87000" lifetimeafteremptyseconds="300" >
+    <exitsubtype type="SOLO" lifetimeafteremptyseconds="30" />
+    <exitsubtype type="ELITE" lifetimeafteremptyseconds="7200" />
+  </DungeonLifeTimes>
 
   <DifficultyLevels>
     <difficulty level="1" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_01" silverfactor="1.4268" lootfactor="1.4268" mobfamefactor="1.276"/>
@@ -37,7 +40,13 @@
     <ClusterTypeMapping clustertype="DUNGEON_SAFEAREA" dungeonclustertype="DUNGEON_SAFEAREA"/>
     <ClusterTypeMapping clustertype="DUNGEON_YELLOW" dungeonclustertype="DUNGEON_YELLOW"/>
     <ClusterTypeMapping clustertype="DUNGEON_RED" dungeonclustertype="DUNGEON_RED"/>
-    <ClusterTypeMapping clustertype="DUNGEON_BLACK" dungeonclustertype="DUNGEON_BLACK"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK" dungeonclustertype="DUNGEON_BLACK"/>    
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_1" dungeonclustertype="DUNGEON_BLACK_1"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_2" dungeonclustertype="DUNGEON_BLACK_2"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_3" dungeonclustertype="DUNGEON_BLACK_3"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_4" dungeonclustertype="DUNGEON_BLACK_4"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_5" dungeonclustertype="DUNGEON_BLACK_5"/>
+    <ClusterTypeMapping clustertype="DUNGEON_BLACK_6" dungeonclustertype="DUNGEON_BLACK_6"/>
   </ClusterTypeMappings>
 
   <RandomDungeonNames>
@@ -175,13 +184,14 @@
     <Continent name="None">		
 	  <!-- for Debug Cluster -->
       <Subtype name="SOLO">
-        <ClusterTier tier="1" maxfillratio="1">
+        <ClusterTier tier="1" maxfillratio="0.4">
           <RandomExit name="T6_KEEPER_SOLO" weight="1" />
         </ClusterTier>
       </Subtype>
       <Subtype name="VETERAN">
         <ClusterTier tier="1" maxfillratio="0.7">
-          <RandomExit name="T4_MORGANA" weight="0" />
+          <RandomExit name="T6_CORRUPTED_SOLO" weight="1" />
+          <RandomExit name="T4_MORGANA" weight="1" />
           <RandomExit name="T5_MORGANA" weight="0" />
           <RandomExit name="T6_MORGANA" weight="0" />
           <RandomExit name="T4_PORTAL" weight="0" />
@@ -384,6 +394,75 @@
 
   <!-- Random Exit types -->
   <RandomExitVisualizations>
+    <!--Corrupted Dungeons-->
+    <Visualization name="CORRUPTED_SOLO">
+      <biome name="Default">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO" />
+        </subbiome>
+      </biome>
+    </Visualization>
     <!--Solo-->
     <Visualization name="KEEPER_SOLO">
       <biome name="Default">
@@ -1215,6 +1294,16 @@
       </RandomDungeonGenerators>
       <Visualization ref="KEEPER"/>
     </RandomExit>
+    <!--  ##########################  -->
+    <!-- ###  Corrupted Dungeons  ### -->
+    <!--  ##########################  -->
+    
+    <RandomExit name="T6_CORRUPTED_SOLO" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <CorruptedDungeonGenerator />
+      </RandomDungeonGenerators>
+      <Visualization ref="CORRUPTED_SOLO"/>
+    </RandomExit>
 
     <!--  ############  -->
     <!-- ###  Solo  ### -->
@@ -1365,14 +1454,14 @@
     </RandomExit>
 
     <!--Portal-->
-    <RandomExit name="T3_PORTAL_SOLO" activationtime="300" cooldown="120" >
+    <RandomExit name="T3_PORTAL_SOLO" activationtime="60" cooldown="120" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
     
-    <RandomExit name="T4_PORTAL_SOLO" activationtime="300" cooldown="120" >
+    <RandomExit name="T4_PORTAL_SOLO" activationtime="60" cooldown="120" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />

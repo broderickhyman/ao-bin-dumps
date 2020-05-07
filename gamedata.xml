@@ -116,7 +116,7 @@
   <Items>
     <AbilityPowerProgression
     basedamage="100"
-    baseload="50"
+    baseload="25"
     resistanceprogression="0.336554399"
     hitpointprogression="0.663445601"
     loadprogression="2.264101591"
@@ -797,12 +797,12 @@
   </DuelSettings>
 
   <WeightLimits normalmessage="@OVERLOAD_MESSAGE_OUT_OF_OVERLOAD" repeatdelay="10">
-    <Limit aboveweightpercent="50.0" speedfactor="0.8" message="@OVERLOAD_MESSAGE_LEVEL1"/> <!--4.16 m/s bei 5.2 m/s base speed-->
-    <Limit aboveweightpercent="65.0" speedfactor="0.5" message="@OVERLOAD_MESSAGE_LEVEL2"/> <!--2.6 m/s bei 5.2 m/s base speed-->
-    <Limit aboveweightpercent="80.0" speedfactor="0.3" message="@OVERLOAD_MESSAGE_LEVEL2"/><!--1.56 m/s bei 5.2 m/s base speed-->
-    <Limit aboveweightpercent="90.0" speedfactor="0.15" message="@OVERLOAD_MESSAGE_LEVEL3"/> <!--0.78 m/s bei 5.2 m/s base speed-->
-    <Limit aboveweightpercent="100.0" speedfactor="0.08" message="@OVERLOAD_MESSAGE_LEVEL4"/>
-    <Limit aboveweightpercent="400.0" speedfactor="0.00" message="@OVERLOAD_MESSAGE_LEVEL5"/>
+    <Limit aboveweightpercent="100.0" speedfactor="0.8" message="@OVERLOAD_MESSAGE_LEVEL1"/> <!--4.4 m/s bei 5.5 m/s base speed-->
+    <Limit aboveweightpercent="130.0" speedfactor="0.5" message="@OVERLOAD_MESSAGE_LEVEL2"/> <!--2.75 m/s bei 5.5 m/s base speed-->
+    <Limit aboveweightpercent="160.0" speedfactor="0.3" message="@OVERLOAD_MESSAGE_LEVEL2"/><!--1.65 m/s bei 5.5 m/s base speed-->
+    <Limit aboveweightpercent="180.0" speedfactor="0.15" message="@OVERLOAD_MESSAGE_LEVEL3"/> <!--0.825 m/s bei 5.5 m/s base speed-->
+    <Limit aboveweightpercent="200.0" speedfactor="0.08" message="@OVERLOAD_MESSAGE_LEVEL4"/> <!--0.44 m/s bei 5.5 m/s base speed-->
+    <Limit aboveweightpercent="800.0" speedfactor="0.00" message="@OVERLOAD_MESSAGE_LEVEL5"/>  <!--no movement anymore-->
   </WeightLimits>
   <TaxValues>
     <Tax name="materialtax" value="0.0" />
@@ -1103,17 +1103,30 @@
           <Item tier="7" minpercent="0.2" maxpercent="0.4" />
           <Item tier="8" minpercent="0.2" maxpercent="0.4" />
         </DurabilityLoss>
-    <!--Note: Stackloss value determines the percentage of the stack that stays! 0.9 means 10% loss-->
+        <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
         <StackLoss>
-          <StackableItem tier="1" percentage="0.63" />
-          <StackableItem tier="2" percentage="0.63" />
-          <StackableItem tier="3" percentage="0.63" />
-          <StackableItem tier="4" percentage="0.63" />
-          <StackableItem tier="5" percentage="0.63" />
-          <StackableItem tier="6" percentage="0.63" />
-          <StackableItem tier="7" percentage="0.63" />
-          <StackableItem tier="8" percentage="0.63" />
+          <StackableItem tier="1" percentage="0.37" />
+          <StackableItem tier="2" percentage="0.37" />
+          <StackableItem tier="3" percentage="0.37" />
+          <StackableItem tier="4" percentage="0.37" />
+          <StackableItem tier="5" percentage="0.37" />
+          <StackableItem tier="6" percentage="0.37" />
+          <StackableItem tier="7" percentage="0.37" />
+          <StackableItem tier="8" percentage="0.37" />
         </StackLoss>
+		<DestructionMultiplier>
+		  <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+		  <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+		  <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+		  <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+		  <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+      <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+      <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+      <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+      <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+      <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+      <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+		</DestructionMultiplier>
     </AliveToDead>
     <AliveToKO silverdropcapperitem="700">
       <Destroyed>
@@ -1136,17 +1149,30 @@
         <Item tier="7" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
         <Item tier="8" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
       </DurabilityLoss>
-      <!--Note: Stackloss value determines the percentage of the stack that stays! 0.9 means 10% loss-->
+      <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
       <StackLoss>
-        <StackableItem tier="1" percentage="1.00" />
-        <StackableItem tier="2" percentage="1.00" />
-        <StackableItem tier="3" percentage="1.00" />
-        <StackableItem tier="4" percentage="1.00" />
-        <StackableItem tier="5" percentage="1.00" />
-        <StackableItem tier="6" percentage="1.00" />
-        <StackableItem tier="7" percentage="1.00" />
-        <StackableItem tier="8" percentage="1.00" />
+        <StackableItem tier="1" percentage="0" />
+        <StackableItem tier="2" percentage="0" />
+        <StackableItem tier="3" percentage="0" />
+        <StackableItem tier="4" percentage="0" />
+        <StackableItem tier="5" percentage="0" />
+        <StackableItem tier="6" percentage="0" />
+        <StackableItem tier="7" percentage="0" />
+        <StackableItem tier="8" percentage="0" />
       </StackLoss>
+	  <DestructionMultiplier>
+      <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+      <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+      <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+      <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+      <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+      <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+      <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+      <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+      <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+      <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+      <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+	  </DestructionMultiplier>
     </AliveToKO>
     <KOToDead>
         <Destroyed>
@@ -1160,26 +1186,39 @@
           <EquipmentItem tier="8" percentage="0.3" />
         </Destroyed>
         <DurabilityLoss>
-          <Item tier="1" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="2" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="3" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="4" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="5" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="6" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="7" minpercent="0.0" maxpercent="0.0" />
-          <Item tier="8" minpercent="0.0" maxpercent="0.0" />
+          <Item tier="1" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="2" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="3" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="4" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="5" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="6" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="7" minpercent="0.15" maxpercent="0.35" />
+          <Item tier="8" minpercent="0.15" maxpercent="0.35" />
         </DurabilityLoss>
-    <!--Note: Stackloss value determines the percentage of the stack that stays! 0.9 means 10% loss-->
+        <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
         <StackLoss>
-          <StackableItem tier="1" percentage="0.63" />
-          <StackableItem tier="2" percentage="0.63" />
-          <StackableItem tier="3" percentage="0.63" />
-          <StackableItem tier="4" percentage="0.63" />
-          <StackableItem tier="5" percentage="0.63" />
-          <StackableItem tier="6" percentage="0.63" />
-          <StackableItem tier="7" percentage="0.63" />
-          <StackableItem tier="8" percentage="0.63" />
+          <StackableItem tier="1" percentage="0.37" />
+          <StackableItem tier="2" percentage="0.37" />
+          <StackableItem tier="3" percentage="0.37" />
+          <StackableItem tier="4" percentage="0.37" />
+          <StackableItem tier="5" percentage="0.37" />
+          <StackableItem tier="6" percentage="0.37" />
+          <StackableItem tier="7" percentage="0.37" />
+          <StackableItem tier="8" percentage="0.37" />
         </StackLoss>
+	    <DestructionMultiplier>
+        <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+        <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+        <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+        <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+        <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+        <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+        <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+        <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+        <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+        <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+        <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+	    </DestructionMultiplier>
     </KOToDead>
     </ItemLoss>
     <Repair>
@@ -1236,24 +1275,24 @@
 
   -->
   <BuildBuilding>
-    <Resource tier="1" time="0.02" maxstack="999" />
-    <Resource tier="2" time="0.02" maxstack="999" />
-    <Resource tier="3" time="0.02" maxstack="999" />
-    <Resource tier="4" time="0.02" maxstack="999" />
-    <Resource tier="5" time="0.02" maxstack="999" />
-    <Resource tier="6" time="0.02" maxstack="999" />
-    <Resource tier="7" time="0.02" maxstack="999" />
-    <Resource tier="8" time="0.02" maxstack="999" />
+    <Resource tier="1" time="0.0021" maxstack="999" />
+    <Resource tier="2" time="0.0021" maxstack="999" />
+    <Resource tier="3" time="0.0031" maxstack="999" />
+    <Resource tier="4" time="0.0042" maxstack="999" />
+    <Resource tier="5" time="0.0063" maxstack="999" />
+    <Resource tier="6" time="0.0083" maxstack="999" />
+    <Resource tier="7" time="0.0104" maxstack="999" />
+    <Resource tier="8" time="0.0156" maxstack="999" />
   </BuildBuilding>
   <RepairBuilding>
-    <Resource tier="1" time="0.02" maxstack="999" />
-    <Resource tier="2" time="0.02" maxstack="999" />
-    <Resource tier="3" time="0.02" maxstack="999" />
-    <Resource tier="4" time="0.02" maxstack="999" />
-    <Resource tier="5" time="0.02" maxstack="999" />
-    <Resource tier="6" time="0.02" maxstack="999" />
-    <Resource tier="7" time="0.02" maxstack="999" />
-    <Resource tier="8" time="0.02" maxstack="999" />
+    <Resource tier="1" time="0.0021" maxstack="999" />
+    <Resource tier="2" time="0.0021" maxstack="999" />
+    <Resource tier="3" time="0.0031" maxstack="999" />
+    <Resource tier="4" time="0.0042" maxstack="999" />
+    <Resource tier="5" time="0.0063" maxstack="999" />
+    <Resource tier="6" time="0.0083" maxstack="999" />
+    <Resource tier="7" time="0.0104" maxstack="999" />
+    <Resource tier="8" time="0.0156" maxstack="999" />
   </RepairBuilding>
   <!-- ********************************************************************************************************************** -->
   <!--
@@ -1416,6 +1455,9 @@
     <TabCost cost="14250000" />
     <TabCost cost="14250000" />
   </GuildIslandVault>
+  <BlackmarketBank size="128" weightlimit="100000.0">
+    <TabCost cost="250000" />
+  </BlackmarketBank>
   <OverCharge
     bonus="100"
     duration="1800"   
@@ -1431,100 +1473,100 @@
     <endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
   </OverCharge>
   <AlliancePenalty>
-    <Penalty territorythreshold="10" energydrainfactor="0.05" silverpenalty="0.01" famepenalty="0.01"/>
-    <Penalty territorythreshold="11" energydrainfactor="0.10" silverpenalty="0.02" famepenalty="0.02"/>
-    <Penalty territorythreshold="12" energydrainfactor="0.15" silverpenalty="0.03" famepenalty="0.03"/>
-    <Penalty territorythreshold="13" energydrainfactor="0.20" silverpenalty="0.04" famepenalty="0.04"/>
-    <Penalty territorythreshold="14" energydrainfactor="0.25" silverpenalty="0.05" famepenalty="0.05"/>
-    <Penalty territorythreshold="15" energydrainfactor="0.30" silverpenalty="0.06" famepenalty="0.06"/>
-    <Penalty territorythreshold="16" energydrainfactor="0.35" silverpenalty="0.07" famepenalty="0.07"/>
-    <Penalty territorythreshold="17" energydrainfactor="0.40" silverpenalty="0.08" famepenalty="0.08"/>
-    <Penalty territorythreshold="18" energydrainfactor="0.45" silverpenalty="0.09" famepenalty="0.09"/>
-    <Penalty territorythreshold="19" energydrainfactor="0.50" silverpenalty="0.10" famepenalty="0.10"/>
-    <Penalty territorythreshold="20" energydrainfactor="0.55" silverpenalty="0.11" famepenalty="0.11"/>
-    <Penalty territorythreshold="21" energydrainfactor="0.60" silverpenalty="0.12" famepenalty="0.12"/>
-    <Penalty territorythreshold="22" energydrainfactor="0.65" silverpenalty="0.13" famepenalty="0.13"/>
-    <Penalty territorythreshold="23" energydrainfactor="0.70" silverpenalty="0.14" famepenalty="0.14"/>
-    <Penalty territorythreshold="24" energydrainfactor="0.75" silverpenalty="0.15" famepenalty="0.15"/>
-    <Penalty territorythreshold="25" energydrainfactor="0.80" silverpenalty="0.16" famepenalty="0.16"/>
-    <Penalty territorythreshold="26" energydrainfactor="0.85" silverpenalty="0.17" famepenalty="0.17"/>
-    <Penalty territorythreshold="27" energydrainfactor="0.90" silverpenalty="0.18" famepenalty="0.18"/>
-    <Penalty territorythreshold="28" energydrainfactor="0.95" silverpenalty="0.19" famepenalty="0.19"/>
-    <Penalty territorythreshold="29" energydrainfactor="1.00" silverpenalty="0.20" famepenalty="0.20"/>
+    <Penalty territorythreshold="10" energydrainfactor="0.03" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="11" energydrainfactor="0.06" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="12" energydrainfactor="0.09" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="13" energydrainfactor="0.12" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="14" energydrainfactor="0.15" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="15" energydrainfactor="0.18" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="16" energydrainfactor="0.21" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="17" energydrainfactor="0.24" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="18" energydrainfactor="0.27" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="19" energydrainfactor="0.30" silverpenalty="0.00" famepenalty="0.00"/>
+    <Penalty territorythreshold="20" energydrainfactor="0.33" silverpenalty="0.01" famepenalty="0.01"/>
+    <Penalty territorythreshold="21" energydrainfactor="0.36" silverpenalty="0.02" famepenalty="0.02"/>
+    <Penalty territorythreshold="22" energydrainfactor="0.39" silverpenalty="0.03" famepenalty="0.03"/>
+    <Penalty territorythreshold="23" energydrainfactor="0.42" silverpenalty="0.04" famepenalty="0.04"/>
+    <Penalty territorythreshold="24" energydrainfactor="0.45" silverpenalty="0.05" famepenalty="0.05"/>
+    <Penalty territorythreshold="25" energydrainfactor="0.48" silverpenalty="0.06" famepenalty="0.06"/>
+    <Penalty territorythreshold="26" energydrainfactor="0.51" silverpenalty="0.07" famepenalty="0.07"/>
+    <Penalty territorythreshold="27" energydrainfactor="0.54" silverpenalty="0.08" famepenalty="0.08"/>
+    <Penalty territorythreshold="28" energydrainfactor="0.57" silverpenalty="0.09" famepenalty="0.09"/>
+    <Penalty territorythreshold="29" energydrainfactor="0.60" silverpenalty="0.10" famepenalty="0.10"/>
 
-    <Penalty territorythreshold="30" energydrainfactor="1.05" silverpenalty="0.21" famepenalty="0.21"/>
-    <Penalty territorythreshold="31" energydrainfactor="1.10" silverpenalty="0.22" famepenalty="0.22"/>
-    <Penalty territorythreshold="32" energydrainfactor="1.15" silverpenalty="0.23" famepenalty="0.23"/>
-    <Penalty territorythreshold="33" energydrainfactor="1.20" silverpenalty="0.24" famepenalty="0.24"/>
-    <Penalty territorythreshold="34" energydrainfactor="1.25" silverpenalty="0.25" famepenalty="0.25"/>
-    <Penalty territorythreshold="35" energydrainfactor="1.30" silverpenalty="0.26" famepenalty="0.26"/>
-    <Penalty territorythreshold="36" energydrainfactor="1.35" silverpenalty="0.27" famepenalty="0.27"/>
-    <Penalty territorythreshold="37" energydrainfactor="1.40" silverpenalty="0.28" famepenalty="0.28"/>
-    <Penalty territorythreshold="38" energydrainfactor="1.45" silverpenalty="0.29" famepenalty="0.29"/>
-    <Penalty territorythreshold="39" energydrainfactor="1.50" silverpenalty="0.30" famepenalty="0.30"/>
-    <Penalty territorythreshold="40" energydrainfactor="1.55" silverpenalty="0.31" famepenalty="0.31"/>
-    <Penalty territorythreshold="41" energydrainfactor="1.60" silverpenalty="0.32" famepenalty="0.32"/>
-    <Penalty territorythreshold="42" energydrainfactor="1.65" silverpenalty="0.33" famepenalty="0.33"/>
-    <Penalty territorythreshold="43" energydrainfactor="1.70" silverpenalty="0.34" famepenalty="0.34"/>
-    <Penalty territorythreshold="44" energydrainfactor="1.75" silverpenalty="0.35" famepenalty="0.35"/>
-    <Penalty territorythreshold="45" energydrainfactor="1.80" silverpenalty="0.36" famepenalty="0.36"/>
-    <Penalty territorythreshold="46" energydrainfactor="1.85" silverpenalty="0.37" famepenalty="0.37"/>
-    <Penalty territorythreshold="47" energydrainfactor="1.90" silverpenalty="0.38" famepenalty="0.38"/>
-    <Penalty territorythreshold="48" energydrainfactor="1.95" silverpenalty="0.39" famepenalty="0.39"/>
-    <Penalty territorythreshold="49" energydrainfactor="2.00" silverpenalty="0.40" famepenalty="0.40"/>
+    <Penalty territorythreshold="30" energydrainfactor="0.63" silverpenalty="0.11" famepenalty="0.11"/>
+    <Penalty territorythreshold="31" energydrainfactor="0.66" silverpenalty="0.12" famepenalty="0.12"/>
+    <Penalty territorythreshold="32" energydrainfactor="0.69" silverpenalty="0.13" famepenalty="0.13"/>
+    <Penalty territorythreshold="33" energydrainfactor="0.72" silverpenalty="0.14" famepenalty="0.14"/>
+    <Penalty territorythreshold="34" energydrainfactor="0.75" silverpenalty="0.15" famepenalty="0.15"/>
+    <Penalty territorythreshold="35" energydrainfactor="0.78" silverpenalty="0.16" famepenalty="0.16"/>
+    <Penalty territorythreshold="36" energydrainfactor="0.81" silverpenalty="0.17" famepenalty="0.17"/>
+    <Penalty territorythreshold="37" energydrainfactor="0.84" silverpenalty="0.18" famepenalty="0.18"/>
+    <Penalty territorythreshold="38" energydrainfactor="0.87" silverpenalty="0.19" famepenalty="0.19"/>
+    <Penalty territorythreshold="39" energydrainfactor="0.90" silverpenalty="0.20" famepenalty="0.20"/>
+    <Penalty territorythreshold="40" energydrainfactor="0.93" silverpenalty="0.21" famepenalty="0.21"/>
+    <Penalty territorythreshold="41" energydrainfactor="0.96" silverpenalty="0.22" famepenalty="0.22"/>
+    <Penalty territorythreshold="42" energydrainfactor="0.99" silverpenalty="0.23" famepenalty="0.23"/>
+    <Penalty territorythreshold="43" energydrainfactor="1.02" silverpenalty="0.24" famepenalty="0.24"/>
+    <Penalty territorythreshold="44" energydrainfactor="1.05" silverpenalty="0.25" famepenalty="0.25"/>
+    <Penalty territorythreshold="45" energydrainfactor="1.08" silverpenalty="0.26" famepenalty="0.26"/>
+    <Penalty territorythreshold="46" energydrainfactor="1.11" silverpenalty="0.27" famepenalty="0.27"/>
+    <Penalty territorythreshold="47" energydrainfactor="1.14" silverpenalty="0.28" famepenalty="0.28"/>
+    <Penalty territorythreshold="48" energydrainfactor="1.17" silverpenalty="0.29" famepenalty="0.29"/>
+    <Penalty territorythreshold="49" energydrainfactor="1.20" silverpenalty="0.30" famepenalty="0.30"/>
 
-    <Penalty territorythreshold="50" energydrainfactor="2.05" silverpenalty="0.41" famepenalty="0.41"/>
-    <Penalty territorythreshold="51" energydrainfactor="2.10" silverpenalty="0.42" famepenalty="0.42"/>
-    <Penalty territorythreshold="52" energydrainfactor="2.15" silverpenalty="0.43" famepenalty="0.43"/>
-    <Penalty territorythreshold="53" energydrainfactor="2.20" silverpenalty="0.44" famepenalty="0.44"/>
-    <Penalty territorythreshold="54" energydrainfactor="2.25" silverpenalty="0.45" famepenalty="0.45"/>
-    <Penalty territorythreshold="55" energydrainfactor="2.30" silverpenalty="0.46" famepenalty="0.46"/>
-    <Penalty territorythreshold="56" energydrainfactor="2.35" silverpenalty="0.47" famepenalty="0.47"/>
-    <Penalty territorythreshold="57" energydrainfactor="2.40" silverpenalty="0.48" famepenalty="0.48"/>
-    <Penalty territorythreshold="58" energydrainfactor="2.45" silverpenalty="0.49" famepenalty="0.49"/>
-    <Penalty territorythreshold="59" energydrainfactor="2.50" silverpenalty="0.50" famepenalty="0.50"/>
-    <Penalty territorythreshold="60" energydrainfactor="2.55" silverpenalty="0.51" famepenalty="0.51"/>
-    <Penalty territorythreshold="61" energydrainfactor="2.60" silverpenalty="0.52" famepenalty="0.52"/>
-    <Penalty territorythreshold="62" energydrainfactor="2.65" silverpenalty="0.53" famepenalty="0.53"/>
-    <Penalty territorythreshold="63" energydrainfactor="2.70" silverpenalty="0.54" famepenalty="0.54"/>
-    <Penalty territorythreshold="64" energydrainfactor="2.75" silverpenalty="0.55" famepenalty="0.55"/>
-    <Penalty territorythreshold="65" energydrainfactor="2.80" silverpenalty="0.56" famepenalty="0.56"/>
-    <Penalty territorythreshold="66" energydrainfactor="2.85" silverpenalty="0.57" famepenalty="0.57"/>
-    <Penalty territorythreshold="67" energydrainfactor="2.90" silverpenalty="0.58" famepenalty="0.58"/>
-    <Penalty territorythreshold="68" energydrainfactor="2.95" silverpenalty="0.59" famepenalty="0.59"/>
-    <Penalty territorythreshold="69" energydrainfactor="3.00" silverpenalty="0.60" famepenalty="0.60"/>
+    <Penalty territorythreshold="50" energydrainfactor="1.23" silverpenalty="0.31" famepenalty="0.31"/>
+    <Penalty territorythreshold="51" energydrainfactor="1.26" silverpenalty="0.32" famepenalty="0.32"/>
+    <Penalty territorythreshold="52" energydrainfactor="1.29" silverpenalty="0.33" famepenalty="0.33"/>
+    <Penalty territorythreshold="53" energydrainfactor="1.32" silverpenalty="0.34" famepenalty="0.34"/>
+    <Penalty territorythreshold="54" energydrainfactor="1.35" silverpenalty="0.35" famepenalty="0.35"/>
+    <Penalty territorythreshold="55" energydrainfactor="1.38" silverpenalty="0.36" famepenalty="0.36"/>
+    <Penalty territorythreshold="56" energydrainfactor="1.41" silverpenalty="0.37" famepenalty="0.37"/>
+    <Penalty territorythreshold="57" energydrainfactor="1.44" silverpenalty="0.38" famepenalty="0.38"/>
+    <Penalty territorythreshold="58" energydrainfactor="1.47" silverpenalty="0.39" famepenalty="0.39"/>
+    <Penalty territorythreshold="59" energydrainfactor="1.50" silverpenalty="0.40" famepenalty="0.40"/>
+    <Penalty territorythreshold="60" energydrainfactor="1.53" silverpenalty="0.41" famepenalty="0.41"/>
+    <Penalty territorythreshold="61" energydrainfactor="1.56" silverpenalty="0.42" famepenalty="0.42"/>
+    <Penalty territorythreshold="62" energydrainfactor="1.59" silverpenalty="0.43" famepenalty="0.43"/>
+    <Penalty territorythreshold="63" energydrainfactor="1.62" silverpenalty="0.44" famepenalty="0.44"/>
+    <Penalty territorythreshold="64" energydrainfactor="1.65" silverpenalty="0.45" famepenalty="0.45"/>
+    <Penalty territorythreshold="65" energydrainfactor="1.68" silverpenalty="0.46" famepenalty="0.46"/>
+    <Penalty territorythreshold="66" energydrainfactor="1.71" silverpenalty="0.47" famepenalty="0.47"/>
+    <Penalty territorythreshold="67" energydrainfactor="1.74" silverpenalty="0.48" famepenalty="0.48"/>
+    <Penalty territorythreshold="68" energydrainfactor="1.77" silverpenalty="0.49" famepenalty="0.49"/>
+    <Penalty territorythreshold="69" energydrainfactor="1.80" silverpenalty="0.50" famepenalty="0.50"/>
 
-    <Penalty territorythreshold="70" energydrainfactor="3.05" silverpenalty="0.61" famepenalty="0.61"/>
-    <Penalty territorythreshold="71" energydrainfactor="3.10" silverpenalty="0.62" famepenalty="0.62"/>
-    <Penalty territorythreshold="72" energydrainfactor="3.15" silverpenalty="0.63" famepenalty="0.63"/>
-    <Penalty territorythreshold="73" energydrainfactor="3.20" silverpenalty="0.64" famepenalty="0.64"/>
-    <Penalty territorythreshold="74" energydrainfactor="3.25" silverpenalty="0.65" famepenalty="0.65"/>
-    <Penalty territorythreshold="75" energydrainfactor="3.30" silverpenalty="0.66" famepenalty="0.66"/>
-    <Penalty territorythreshold="76" energydrainfactor="3.35" silverpenalty="0.67" famepenalty="0.67"/>
-    <Penalty territorythreshold="77" energydrainfactor="3.40" silverpenalty="0.68" famepenalty="0.68"/>
-    <Penalty territorythreshold="78" energydrainfactor="3.45" silverpenalty="0.69" famepenalty="0.69"/>
-    <Penalty territorythreshold="79" energydrainfactor="3.50" silverpenalty="0.70" famepenalty="0.70"/>
-    <Penalty territorythreshold="80" energydrainfactor="3.55" silverpenalty="0.71" famepenalty="0.71"/>
-    <Penalty territorythreshold="81" energydrainfactor="3.60" silverpenalty="0.72" famepenalty="0.72"/>
-    <Penalty territorythreshold="82" energydrainfactor="3.65" silverpenalty="0.73" famepenalty="0.73"/>
-    <Penalty territorythreshold="83" energydrainfactor="3.70" silverpenalty="0.74" famepenalty="0.74"/>
-    <Penalty territorythreshold="84" energydrainfactor="3.75" silverpenalty="0.75" famepenalty="0.75"/>
-    <Penalty territorythreshold="85" energydrainfactor="3.80" silverpenalty="0.76" famepenalty="0.76"/>
-    <Penalty territorythreshold="86" energydrainfactor="3.85" silverpenalty="0.77" famepenalty="0.77"/>
-    <Penalty territorythreshold="87" energydrainfactor="3.90" silverpenalty="0.78" famepenalty="0.78"/>
-    <Penalty territorythreshold="88" energydrainfactor="3.95" silverpenalty="0.79" famepenalty="0.79"/>
-    <Penalty territorythreshold="89" energydrainfactor="4.00" silverpenalty="0.80" famepenalty="0.80"/>    
+    <Penalty territorythreshold="70" energydrainfactor="1.83" silverpenalty="0.51" famepenalty="0.51"/>
+    <Penalty territorythreshold="71" energydrainfactor="1.86" silverpenalty="0.52" famepenalty="0.52"/>
+    <Penalty territorythreshold="72" energydrainfactor="1.89" silverpenalty="0.53" famepenalty="0.53"/>
+    <Penalty territorythreshold="73" energydrainfactor="1.92" silverpenalty="0.54" famepenalty="0.54"/>
+    <Penalty territorythreshold="74" energydrainfactor="1.95" silverpenalty="0.55" famepenalty="0.55"/>
+    <Penalty territorythreshold="75" energydrainfactor="1.98" silverpenalty="0.56" famepenalty="0.56"/>
+    <Penalty territorythreshold="76" energydrainfactor="2.01" silverpenalty="0.57" famepenalty="0.57"/>
+    <Penalty territorythreshold="77" energydrainfactor="2.04" silverpenalty="0.58" famepenalty="0.58"/>
+    <Penalty territorythreshold="78" energydrainfactor="2.07" silverpenalty="0.59" famepenalty="0.59"/>
+    <Penalty territorythreshold="79" energydrainfactor="2.10" silverpenalty="0.60" famepenalty="0.60"/>
+    <Penalty territorythreshold="80" energydrainfactor="2.13" silverpenalty="0.61" famepenalty="0.61"/>
+    <Penalty territorythreshold="81" energydrainfactor="2.16" silverpenalty="0.62" famepenalty="0.62"/>
+    <Penalty territorythreshold="82" energydrainfactor="2.19" silverpenalty="0.63" famepenalty="0.63"/>
+    <Penalty territorythreshold="83" energydrainfactor="2.22" silverpenalty="0.64" famepenalty="0.64"/>
+    <Penalty territorythreshold="84" energydrainfactor="2.25" silverpenalty="0.65" famepenalty="0.65"/>
+    <Penalty territorythreshold="85" energydrainfactor="2.28" silverpenalty="0.66" famepenalty="0.66"/>
+    <Penalty territorythreshold="86" energydrainfactor="2.31" silverpenalty="0.67" famepenalty="0.67"/>
+    <Penalty territorythreshold="87" energydrainfactor="2.34" silverpenalty="0.68" famepenalty="0.68"/>
+    <Penalty territorythreshold="88" energydrainfactor="2.37" silverpenalty="0.69" famepenalty="0.69"/>
+    <Penalty territorythreshold="89" energydrainfactor="2.40" silverpenalty="0.70" famepenalty="0.70"/>    
 
-    <Penalty territorythreshold="90" energydrainfactor="4.05" silverpenalty="0.81" famepenalty="0.81"/>
-    <Penalty territorythreshold="91" energydrainfactor="4.10" silverpenalty="0.82" famepenalty="0.82"/>
-    <Penalty territorythreshold="92" energydrainfactor="4.15" silverpenalty="0.83" famepenalty="0.83"/>
-    <Penalty territorythreshold="93" energydrainfactor="4.20" silverpenalty="0.84" famepenalty="0.84"/>
-    <Penalty territorythreshold="94" energydrainfactor="4.25" silverpenalty="0.85" famepenalty="0.85"/>
-    <Penalty territorythreshold="95" energydrainfactor="4.30" silverpenalty="0.86" famepenalty="0.86"/>
-    <Penalty territorythreshold="96" energydrainfactor="4.35" silverpenalty="0.87" famepenalty="0.87"/>
-    <Penalty territorythreshold="97" energydrainfactor="4.40" silverpenalty="0.88" famepenalty="0.88"/>
-    <Penalty territorythreshold="98" energydrainfactor="4.45" silverpenalty="0.89" famepenalty="0.89"/>
-    <Penalty territorythreshold="99" energydrainfactor="4.50" silverpenalty="0.90" famepenalty="0.90"/>    
+    <Penalty territorythreshold="90" energydrainfactor="2.43" silverpenalty="0.71" famepenalty="0.71"/>
+    <Penalty territorythreshold="91" energydrainfactor="2.46" silverpenalty="0.72" famepenalty="0.72"/>
+    <Penalty territorythreshold="92" energydrainfactor="2.49" silverpenalty="0.73" famepenalty="0.73"/>
+    <Penalty territorythreshold="93" energydrainfactor="2.52" silverpenalty="0.74" famepenalty="0.74"/>
+    <Penalty territorythreshold="94" energydrainfactor="2.55" silverpenalty="0.75" famepenalty="0.75"/>
+    <Penalty territorythreshold="95" energydrainfactor="2.58" silverpenalty="0.76" famepenalty="0.76"/>
+    <Penalty territorythreshold="96" energydrainfactor="2.61" silverpenalty="0.77" famepenalty="0.77"/>
+    <Penalty territorythreshold="97" energydrainfactor="2.64" silverpenalty="0.78" famepenalty="0.78"/>
+    <Penalty territorythreshold="98" energydrainfactor="2.67" silverpenalty="0.79" famepenalty="0.79"/>
+    <Penalty territorythreshold="99" energydrainfactor="2.70" silverpenalty="0.80" famepenalty="0.80"/>    
   </AlliancePenalty>
   <AchievementProgressConversion silverConversionRatio="0.75" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
   <TerritoryBlockClaiming>
