@@ -571,6 +571,46 @@
   </LootChest>
   
   <!--Keeper-->
+  <LootChest uniquename="KEEPER_CHEST_BOSS_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+    <Loot>
+      <LootByTier tier="4">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.36"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="T4_RANDOM_DUNGEON_KEEPER_BOSS_LOOT" chance="2" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.007645" />
+        <LootListReference name="T4_RANDOM_DUNGEON_VETERAN_RARE"/>
+      </LootByTier>
+      <LootByTier tier="5">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.36"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="T5_RANDOM_DUNGEON_KEEPER_BOSS_LOOT" chance="2" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.010193" />
+        <LootListReference name="T5_RANDOM_DUNGEON_VETERAN_RARE"/>
+      </LootByTier>
+      <LootByTier tier="6">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.36"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="T6_RANDOM_DUNGEON_KEEPER_BOSS_LOOT" chance="2" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.012164" />
+        <LootListReference name="T6_RANDOM_DUNGEON_VETERAN_RARE"/>
+      </LootByTier>
+      <LootByTier tier="7">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.36"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="T7_RANDOM_DUNGEON_KEEPER_BOSS_LOOT" chance="2" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.019103" />
+        <LootListReference name="T7_RANDOM_DUNGEON_VETERAN_RARE"/>
+      </LootByTier>
+      <LootByTier tier="8">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.36"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="T8_RANDOM_DUNGEON_KEEPER_BOSS_LOOT" chance="2" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.027567" />
+        <LootListReference name="T8_RANDOM_DUNGEON_VETERAN_RARE"/>
+      </LootByTier>
+    </Loot>
+  </LootChest>
+
   <!--boss-->
   <LootChest uniquename="KEEPER_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
     <Loot>
@@ -1766,6 +1806,74 @@
   </LootChest>
 
   <!--Keeper-->
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+    <Loot>
+      <LootByTier tier="4">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.12"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="KEEPER_SOLO_BOSS_LOOT" chance="1.74"/>
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.001723"/>
+        <LootListReference name="LOOT_KEEPER_FACTION_CAPES" chance="0.001204"/>
+
+        <LootListReference name="T4_RANDOM_DUNGEON_RARE"/>
+      </LootByTier>
+      <LootByTier tier="5">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.12"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="KEEPER_SOLO_BOSS_LOOT" chance="1.74"/>
+        <Item type="T5_FARM_COUGAR_BABY" chance="0.10527" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.002298"/>
+        <LootListReference name="LOOT_KEEPER_FACTION_CAPES" chance="0.001605"/>
+
+        <LootListReference name="T5_RANDOM_DUNGEON_RARE"/>
+      </LootByTier>
+      <LootByTier tier="6">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.12"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="KEEPER_SOLO_BOSS_LOOT" chance="1.74"/>
+        <OR chance="0.0017155">
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER"/>
+        </OR>
+        <Item type="T5_FARM_COUGAR_BABY" chance="0.126498" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.00309"/>
+        <LootListReference name="LOOT_KEEPER_FACTION_CAPES" chance="0.002158"/>
+
+        <LootListReference name="T6_RANDOM_DUNGEON_RARE"/>
+      </LootByTier>
+      <LootByTier tier="7">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.12"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="KEEPER_SOLO_BOSS_LOOT" chance="1.74"/>
+        <OR chance="0.0017155">
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER"/>
+        </OR>
+        <Item type="T5_FARM_COUGAR_BABY" chance="0.151728" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.004304"/>
+        <LootListReference name="LOOT_KEEPER_FACTION_CAPES" chance="0.003006"/>
+
+        <LootListReference name="T7_RANDOM_DUNGEON_RARE"/>
+      </LootByTier>
+      <LootByTier tier="8">
+        <Item type="T3_FURNITUREITEM_ANNIVERSARYBANNER_2020" chance="0.12"/>
+        <LootListReference name="KEEPER_ANNIVERSARY_LOOT" chance="0.24" />
+        <LootListReference name="KEEPER_SOLO_BOSS_LOOT" chance="1.74"/>
+        <OR chance="0.0017183">
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER"/>
+          <Item type="UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER"/>
+        </OR>
+        <Item type="T5_FARM_COUGAR_BABY" chance="0.182178" />
+        <LootListReference name="LOOT_KEEPER_FURNITURE" chance="0.00621"/>
+        <LootListReference name="LOOT_KEEPER_FACTION_CAPES" chance="0.004338"/>
+
+        <LootListReference name="T8_RANDOM_DUNGEON_RARE"/>
+      </LootByTier>
+    </Loot>
+  </LootChest>
   <!--boss-->
   <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
     <Loot>

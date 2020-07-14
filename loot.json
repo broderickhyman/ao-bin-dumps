@@ -51,6 +51,47 @@
         }
       },
       {
+        "@name": "KEEPER_ANNIVERSARY_LOOT",
+        "OR": {
+          "OR": [
+            {
+              "@weight": "1",
+              "Item": [
+                {
+                  "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                  "@weight": "1"
+                },
+                {
+                  "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                  "@weight": "1"
+                },
+                {
+                  "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                  "@weight": "1"
+                }
+              ]
+            },
+            {
+              "@weight": "278",
+              "Item": [
+                {
+                  "@type": "UNIQUE_FURNITUREITEM_KEEPER_SYMBOL_OF_POWER_A",
+                  "@weight": "1"
+                },
+                {
+                  "@type": "UNIQUE_FURNITUREITEM_KEEPER_CAULDRON",
+                  "@weight": "9"
+                },
+                {
+                  "@type": "UNIQUE_FURNITUREITEM_KEEPER_CAMP_FIRE_A",
+                  "@weight": "20"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
         "@name": "T4_RANDOM_DUNGEON_TOKEN",
         "OR": {
           "OR": [
@@ -12723,1229 +12764,1268 @@
       },
       {
         "@name": "T6_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
-        "Item": [
+        "OR": [
           {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
-            "@chance": "0.006"
+            "@chance": "0.006",
+            "Item": [
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                "@weight": "1"
+              }
+            ]
           },
           {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.0727",
-            "@amount": "1"
+            "@chance": "1.6363",
+            "OR": [
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "OR": {
-          "@chance": "1.6363",
-          "OR": [
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            }
-          ]
+        "Item": {
+          "@type": "T5_FARM_COUGAR_BABY",
+          "@chance": "0.0727",
+          "@amount": "1"
         }
       },
       {
         "@name": "T7_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
-        "Item": [
+        "OR": [
           {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
-            "@chance": "0.006"
+            "@chance": "0.006",
+            "Item": [
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                "@weight": "1"
+              }
+            ]
           },
           {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.0872",
-            "@amount": "1"
+            "@chance": "1.909",
+            "OR": [
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "OR": {
-          "@chance": "1.909",
-          "OR": [
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            }
-          ]
+        "Item": {
+          "@type": "T5_FARM_COUGAR_BABY",
+          "@chance": "0.0872",
+          "@amount": "1"
         }
       },
       {
         "@name": "T8_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
-        "Item": [
+        "OR": [
           {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
-            "@chance": "0.0061"
+            "@chance": "0.0061",
+            "Item": [
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                "@weight": "1"
+              }
+            ]
           },
           {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.1047",
-            "@amount": "1"
+            "@chance": "2.1818",
+            "OR": [
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "OR": {
-          "@chance": "2.1818",
-          "OR": [
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_GREEN",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_BLUE",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            }
-          ]
+        "Item": {
+          "@type": "T5_FARM_COUGAR_BABY",
+          "@chance": "0.1047",
+          "@amount": "1"
         }
       },
       {
@@ -27676,220 +27756,235 @@
       },
       {
         "@name": "T5_KEEPER_CHIEFTAIN_BOSS_LOOT",
-        "Item": {
-          "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
-          "@chance": "0.0007"
-        },
-        "OR": {
-          "@chance": "1",
-          "OR": [
-            {
-              "@weight": "7",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
+        "OR": [
+          {
+            "@chance": "0.0007",
+            "Item": [
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                "@weight": "1"
+              }
+            ]
+          },
+          {
+            "@chance": "1",
+            "OR": [
+              {
+                "@weight": "7",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T4_RUNE",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T4_RUNE",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T4_SOUL",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T4_SOUL",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T4_RELIC",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
+                ]
+              },
+              {
+                "@weight": "5",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T5_RUNE",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T4_RELIC",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "5",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T5_SOUL",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T5_RUNE",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T5_RELIC",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
+                ]
+              },
+              {
+                "@weight": "3.0",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T6_RUNE",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T5_SOUL",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T6_SOUL",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T5_RELIC",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T6_RELIC",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   }
-                }
-              ]
-            },
-            {
-              "@weight": "3.0",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
+                ]
+              },
+              {
+                "@weight": "0.60",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T7_RUNE",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T6_RUNE",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T7_SOUL",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T6_SOUL",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T7_RELIC",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
+                ]
+              },
+              {
+                "@weight": "0.12",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T8_RUNE",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T6_RELIC",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.60",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T8_SOUL",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   },
-                  "Item": {
-                    "@type": "T7_RUNE",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    },
+                    "Item": {
+                      "@type": "T8_RELIC",
+                      "@weight": "10.66",
+                      "@amount": "10-15"
+                    }
                   }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  },
-                  "Item": {
-                    "@type": "T7_SOUL",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  },
-                  "Item": {
-                    "@type": "T7_RELIC",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.12",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  },
-                  "Item": {
-                    "@type": "T8_RUNE",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  },
-                  "Item": {
-                    "@type": "T8_SOUL",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  },
-                  "Item": {
-                    "@type": "T8_RELIC",
-                    "@weight": "10.66",
-                    "@amount": "10-15"
-                  }
-                }
-              ]
-            }
-          ]
-        }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         "@name": "T5_KEEPER_SEER_BOSS_LOOT",
@@ -28327,151 +28422,164 @@
       },
       {
         "@name": "T5_KEEPER_CHIEFTAIN_VETERAN_BOSS_LOOT",
-        "Item": [
+        "OR": [
           {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
-            "@chance": "0.006"
+            "@chance": "0.006",
+            "Item": [
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_PLATE_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+                "@weight": "1"
+              },
+              {
+                "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+                "@weight": "1"
+              }
+            ]
           },
           {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.0605",
-            "@amount": "1"
+            "@chance": "1.3636",
+            "OR": [
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "@weight": "0.04",
+                "OR": [
+                  {
+                    "@weight": "9",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL2_ALL",
+                      "@weight": "4"
+                    }
+                  },
+                  {
+                    "@weight": "1",
+                    "LootListReference": {
+                      "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
+                      "@weight": "4"
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
-        "OR": {
-          "@chance": "1.3636",
-          "OR": [
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T4_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T5_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "1",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T6_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.2",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T7_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            },
-            {
-              "@weight": "0.04",
-              "OR": [
-                {
-                  "@weight": "9",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL1_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "3",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL2_ALL",
-                    "@weight": "4"
-                  }
-                },
-                {
-                  "@weight": "1",
-                  "LootListReference": {
-                    "@name": "T8_ARTEFACT_LVL3_KEEPER_RED",
-                    "@weight": "4"
-                  }
-                }
-              ]
-            }
-          ]
+        "Item": {
+          "@type": "T5_FARM_COUGAR_BABY",
+          "@chance": "0.0605",
+          "@amount": "1"
         }
       },
       {
@@ -68374,20 +68482,36 @@
         "OR": {
           "Item": [
             {
-              "@type": "UNIQUE_UNLOCK_HEAD_VANITY_SKELETON_UNDEAD",
+              "@type": "PLAYERISLAND_FURNITUREITEM_WOOD_LANTERN_CORNER_A",
+              "@weight": "3"
+            },
+            {
+              "@type": "PLAYERISLAND_FURNITUREITEM_WOOD_LANTERN_A",
+              "@weight": "4"
+            },
+            {
+              "@type": "PLAYERISLAND_FURNITUREITEM_WOOD_CANDELABRA_A",
+              "@weight": "3"
+            },
+            {
+              "@type": "UNIQUE_FURNITUREITEM_ADC_GRAVE_B",
               "@weight": "2"
+            },
+            {
+              "@type": "UNIQUE_UNLOCK_HEAD_VANITY_SKELETON_UNDEAD",
+              "@weight": "1"
             },
             {
               "@type": "UNIQUE_UNLOCK_ARMOR_VANITY_SKELETON_UNDEAD",
-              "@weight": "2"
+              "@weight": "1"
             },
             {
               "@type": "UNIQUE_UNLOCK_SHOES_VANITY_SKELETON_UNDEAD",
-              "@weight": "2"
+              "@weight": "1"
             },
             {
               "@type": "UNIQUE_UNLOCK_CAPE_VANITY_SKELETON_UNDEAD",
-              "@weight": "2"
+              "@weight": "1"
             }
           ]
         }

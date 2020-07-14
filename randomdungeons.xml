@@ -72,6 +72,12 @@
         <default>
           <displayname name="Hidden Caverns" />
         </default>
+        <flag id="legacy_solo">
+          <displayname name="Defenders Of The Past" />
+        </flag>
+        <flag id="legacy_group">
+          <displayname name="Defenders Of The Past" />
+        </flag>
       </Subset>
       <Subset id="easter">
         <default>
@@ -278,6 +284,28 @@
           <!--<RandomExit name="T8_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
       </Subtype>
+      <Subtype name="EVENT_SOLO">
+        <ClusterTier tier="4" maxfillratio="1">
+          <RandomExit name="T4_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T4_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="1">
+          <RandomExit name="T5_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T5_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="1">
+          <RandomExit name="T6_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T6_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="1">
+          <RandomExit name="T7_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T7_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="1">
+          <RandomExit name="T8_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T8_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+      </Subtype>      
     </Continent>
     <Continent name="Outlands">
       <Subtype name="SOLO">
@@ -391,6 +419,28 @@
           <RandomExit name="T8_MORGANA" weight="1" />
         </ClusterTier>
       </Subtype>
+      <Subtype name="EVENT_SOLO">
+        <ClusterTier tier="4" maxfillratio="1">
+          <RandomExit name="T4_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T4_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="1">
+          <RandomExit name="T5_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T5_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="1">
+          <RandomExit name="T6_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T6_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="1">
+          <RandomExit name="T7_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T7_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="1">
+          <RandomExit name="T8_KEEPER_LEGACY_SOLO" weight="19" />
+          <RandomExit name="T8_KEEPER_LEGACY" weight="1" />
+        </ClusterTier>
+      </Subtype>      
     </Continent>
   </RandomExitDistribution>
 
@@ -1217,6 +1267,120 @@
       </biome>
     </Visualization>
     <!--Event-->
+    <Visualization name="KEEPER_LEGACY_SOLO">
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="KEEPER_LEGACY_GROUP">
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+    </Visualization>
     <!--
     <Visualization name="HALLOWEEN">
       <biome name="Default">
@@ -1542,6 +1706,41 @@
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
 
+    <!--LEGACY-->
+    <RandomExit name="T4_KEEPER_LEGACY_SOLO" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_KEEPER_LEGACY_SOLO" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_KEEPER_LEGACY_SOLO" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_KEEPER_LEGACY_SOLO" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_KEEPER_LEGACY_SOLO" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
+    </RandomExit>
 
     <!--HALLOWEEN-->
     <RandomExit name="T4_UNDEAD_HALLOWEEN" activationtime="60" cooldown="600" >
@@ -1828,6 +2027,42 @@
       <Visualization ref="PORTAL"/>
     </RandomExit>
 
+    <!--LEGACY-->
+    <RandomExit name="T4_KEEPER_LEGACY" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+    </RandomExit>
+
+    <RandomExit name="T5_KEEPER_LEGACY" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+    </RandomExit>
+
+    <RandomExit name="T6_KEEPER_LEGACY" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+    </RandomExit>
+
+    <RandomExit name="T7_KEEPER_LEGACY" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+    </RandomExit>
+
+    <RandomExit name="T8_KEEPER_LEGACY" activationtime="60" cooldown="600" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+    </RandomExit>
+    
     <!--  #############  -->
     <!-- ### Elite ### -->
     <!--  #############  -->
@@ -4375,6 +4610,57 @@
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
 
+    <!--EVENT-->
+    <RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON SOLO">
+      <Faction name="KEEPER">
+        <Subset name="tribe" />
+      </Faction>
+      <Flags>
+        <Flag name="legacy_solo"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="1" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="1">
+          <BossRarity>
+            <highlight name="uncommon" weight="1" />
+          </BossRarity>
+          <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
+            <DungeonLength pathlength="0" highlightCount="0" weight="1">
+              <highlight name="standard" weight="1" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON">
+      <Faction name="KEEPER">
+        <Subset name="tribe" />
+      </Faction>
+      <Flags>
+        <Flag name="legacy_group"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="1" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="1" weight="1">
+          <BossRarity>
+            <highlight name="uncommon" weight="1" />
+          </BossRarity>
+          <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
+            <DungeonLength pathlength="0" highlightCount="0" weight="1">
+              <highlight name="standard" weight="1" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
     <!--########################################################################-->
     <!--portal random exit (with outdoor)-->
     <!--########################################################################-->
