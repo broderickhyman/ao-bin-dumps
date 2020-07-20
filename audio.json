@@ -554,6 +554,24 @@
         }
       },
       {
+        "@name": "MOUNT_OWL",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "owl"
+        }
+      },
+      {
+        "@name": "MOUNT_ENT",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "ent"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -7693,6 +7711,12 @@
         }
       },
       {
+        "@name": "SPELL_AREA_BUFF_SEVERAL",
+        "OnSpellHit": {
+          "@name": "Play_cast_march"
+        }
+      },
+      {
         "@name": "SPELL_PULL"
       },
       {
@@ -8072,6 +8096,66 @@
         },
         "OnSpellHit": {
           "@name": "Play_melee_impact_big"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_ENT_HEAL_CAST",
+        "OnCastStart": {
+          "@name": "Play_ent_cast_heal"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_ent_cast_heal"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_ent_cast_heal"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_ENT_BUFF_CAST",
+        "OnCastStart": {
+          "@name": "Play_ent_cast_load_buff"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_ent_cast_load_buff"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_ent_cast_load_buff"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_ENT_BUFFAREA_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_ent_channel_buff_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_ent_channel_buff_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_ent_channel_buff_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_ent_channel_buff_loop"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_ENT_ROOT_CAST",
+        "OnCastStart": {
+          "@name": "Play_ent_cast_damage"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_ent_cast_damage"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_ent_cast_damage"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_impact_rock_medium"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_OWL_SHIELD",
+        "OnCastFinished": {
+          "@name": "Play_owl_load"
         }
       },
       {

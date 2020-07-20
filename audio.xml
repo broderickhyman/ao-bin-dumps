@@ -268,6 +268,14 @@
     <CharType name="mount"/>
     <MountType name="alpaca"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_OWL">
+    <CharType name="mount"/>
+    <MountType name="owl"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_ENT">
+    <CharType name="mount"/>
+    <MountType name="ent"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -3259,6 +3267,9 @@
     <OnCastStart name="Play_selfbuff_cast" />
     <OnSpellHit name="Play_melee_impact_rock_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_AREA_BUFF_SEVERAL" >
+    <OnSpellHit name="Play_cast_march" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_PULL">
     <!--
     <OnSpellHit name="Play_pull" />
@@ -3475,6 +3486,36 @@
     <OnCastStart name="Play_mammoth_cast" />
     <OnCastFinished name="Play_melee_swoosh_big_instant" />
     <OnSpellHit name="Play_melee_impact_big" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_ENT_HEAL_CAST">
+    <OnCastStart name="Play_ent_cast_heal" />
+    <OnCastCanceled name="Stop_ent_cast_heal" />
+    <OnCastInterrupted name="Stop_ent_cast_heal" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_ENT_BUFF_CAST">
+    <OnCastStart name="Play_ent_cast_load_buff" />
+    <OnCastCanceled name="Stop_ent_cast_load_buff" />
+    <OnCastInterrupted name="Stop_ent_cast_load_buff" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_ENT_BUFFAREA_CHANNEL">
+    <OnChannelingStart name="Play_ent_channel_buff_loop" />
+    <OnChannelingCancelled name="Stop_ent_channel_buff_loop" />
+    <OnChannelingEnd name="Stop_ent_channel_buff_loop" />
+    <OnChannelingInterrupted name="Stop_ent_channel_buff_loop" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_ENT_ROOT_CAST">
+    <OnCastStart name="Play_ent_cast_damage" />
+    <OnCastCanceled name="Stop_ent_cast_damage" />
+    <OnCastInterrupted name="Stop_ent_cast_damage" />
+    <OnCastFinished name="Play_melee_impact_rock_medium" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_OWL_SHIELD">
+    <OnCastFinished name="Play_owl_load" />
   </WwiseEventInfo>
 
   <!--****************************************************-->
