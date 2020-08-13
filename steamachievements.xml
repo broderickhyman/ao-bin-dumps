@@ -5,7 +5,61 @@
 
 	All changes made to this file need to be mirrored in the Steam Partner console. Yes, even if you change just a number!
 
-    ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! -->  
+    ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! -->
+
+  <!--Roland Update Achievements-->
+  <achievement name="SA_PVP_CORRUPTED_DUNGEON_01">
+    <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonInvader"/>
+  </achievement>
+  <achievement name="SA_PVP_CORRUPTED_DUNGEON_02">
+    <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonHost" />
+  </achievement>
+  <achievement name="SA_COLLECTION_CORRUPTED_DUNGEONS_INFAMY" stat="SA_ST_COLLECTION_CORRUPTED_DUNGEONS_INFAMY">
+    <haveinfamy amount="50000" />
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_01">
+	<or>
+	  <killmob mobid="T5_MOB_CD_DEMON_SORCERER_BOSS" count="1" />
+	  <killmob mobid="T6_MOB_CD_DEMON_SORCERER_BOSS" count="1" />
+	</or>
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_02" stat="SA_ST_PVE_CORRUPTED_DUNGEONS_02">
+    <killmob faction="CORRUPTED" count="100" />
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_03" stat="SA_ST_PVE_CORRUPTED_DUNGEONS_03">
+    <killmob faction="CORRUPTED" count="1000" />
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_ROADS_01">
+    <gotocluster archetype="TUNNEL"/>
+  </achievement>
+  <achievement name="SA_COLLECTION_ROADS_02">
+    <gotocluster worldclustertype="TUNNEL_DEEP"/>
+  </achievement>
+  <achievement name="SA_PVE_ROADS_GUARDIAN">
+    <or>      
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true"/>
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true"/>
+
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true"/>
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true"/>
+
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true"/>
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_ROADS_AVALON" stat="SA_ST_PVE_ROADS_AVALON">
+    <killmob faction="ROAD" count="250" countpartykills="true"/>
+  </achievement>
   
   <!--Queen Update Achievements-->
   <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01">
@@ -667,13 +721,19 @@
     <killmob faction="KEEPER" count="1000" countpartykills="true"/>
   </achievement>
   <achievement name="SA_PVE_KILL_EARTHMOTHER">
-    <killmob mobid="T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS" count="1" countpartykills="true"/>
+    <or>
+      <killmob mobid="T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS" count="1" countpartykills="true"/>
+    </or>
   </achievement>
   <achievement name="SA_PVE_KILL_UNDEAD" stat="SA_ST_PVE_KILL_UNDEAD">
     <killmob faction="UNDEAD" count="1000" countpartykills="true"/>
   </achievement>
   <achievement name="SA_PVE_KILL_HARVESTER">
-    <killmob mobid="T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS" count="1" countpartykills="true"/>
+    <or>
+      <killmob mobid="T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS" count="1" countpartykills="true"/>
+      <killmob mobid="T8_MOB_UNDEAD_HARVESTER_ELITE_BOSS" count="1" countpartykills="true"/>
+    </or>
   </achievement>
   <achievement name="SA_PVE_KILL_HERETIC" stat="SA_ST_PVE_KILL_HERETIC">
     <killmob faction="HERETIC" count="1000" countpartykills="true"/>

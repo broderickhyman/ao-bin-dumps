@@ -166,8 +166,8 @@
         "@playervisibilityafterdeath": "3"
       },
       "StuckCommand": {
-        "@cooldownseconds": "86400",
-        "@delayseconds": "600"
+        "@cooldownseconds": "1800",
+        "@delayseconds": "180"
       },
       "ClusterChange": {
         "@cooldownseconds": "10"
@@ -209,7 +209,8 @@
       "Casting": {
         "@globaldisruptionfactor": "1",
         "@globalcastrangetolerance": "7",
-        "@minchanneldurationbeforecancelpossible": "0.5"
+        "@minchanneldurationbeforecancelpossible": "0.5",
+        "@mintoggledurationbeforecancelpossible": "0.5"
       },
       "AoeEscalation": {
         "@defaulttargetcountthresholdmin": "2",
@@ -766,80 +767,92 @@
           "@magiccooldownreduction": "false"
         },
         "armorshare": {
-          "@head": "0.0",
+          "@head": "0",
           "@armor": "1.0",
-          "@shoes": "0.0",
-          "@mainhand": "0.0",
-          "@shield": "0.0",
-          "@book": "0.0",
-          "@torch": "0.0",
-          "@cape": "0.0",
-          "@towershield": "0.0",
-          "@skullshield": "0.0",
-          "@spikedshield": "0.0",
-          "@horn": "0.0",
-          "@cane": "0.0",
-          "@lamp": "0.0",
-          "@orb": "0.0",
-          "@demonskull": "0.0",
-          "@totem": "0.0"
+          "@shoes": "0",
+          "@mainhand": "0",
+          "@cape": "0",
+          "@shield": "0",
+          "@towershield": "0",
+          "@skullshield": "0",
+          "@spikedshield": "0",
+          "@avalonshield": "0",
+          "@torch": "0",
+          "@horn": "0",
+          "@cane": "0",
+          "@lamp": "0",
+          "@talisman": "0",
+          "@book": "0",
+          "@orb": "0",
+          "@demonskull": "0",
+          "@totem": "0",
+          "@censer": "0"
         },
         "ccrshare": {
-          "@head": "0.0",
+          "@head": "0",
           "@armor": "1.0",
-          "@shoes": "0.0",
-          "@mainhand": "0.0",
+          "@shoes": "0",
+          "@mainhand": "0",
+          "@cape": "0",
           "@shield": "0.60",
-          "@book": "0.0",
-          "@torch": "0.0",
-          "@cape": "0.0",
-          "@towershield": "0.0",
-          "@skullshield": "0.0",
-          "@spikedshield": "0.0",
-          "@horn": "0.0",
-          "@cane": "0.0",
-          "@lamp": "0.0",
-          "@orb": "0.0",
-          "@demonskull": "0.0",
-          "@totem": "0.0"
+          "@towershield": "0",
+          "@skullshield": "0",
+          "@spikedshield": "0",
+          "@avalonshield": "0",
+          "@torch": "0",
+          "@horn": "0",
+          "@cane": "0",
+          "@lamp": "0",
+          "@talisman": "2.50",
+          "@book": "0",
+          "@orb": "0",
+          "@demonskull": "0",
+          "@totem": "0",
+          "@censer": "0"
         },
         "hitpointsshare": {
           "@head": "0.25",
           "@armor": "0.5",
           "@shoes": "0.25",
-          "@mainhand": "0.0",
-          "@shield": "0.0",
-          "@book": "0.0",
+          "@mainhand": "0",
+          "@cape": "0",
+          "@shield": "0",
+          "@towershield": "0",
+          "@skullshield": "0",
+          "@spikedshield": "0",
+          "@avalonshield": "0",
           "@torch": "0",
-          "@cape": "0.0",
-          "@towershield": "0.0",
-          "@skullshield": "0.0",
-          "@spikedshield": "0.0",
-          "@horn": "0.0",
-          "@cane": "0.0",
-          "@lamp": "0.0",
-          "@orb": "0.0",
-          "@demonskull": "0.0",
-          "@totem": "0.42"
+          "@horn": "0",
+          "@cane": "0",
+          "@lamp": "0",
+          "@talisman": "0",
+          "@book": "0",
+          "@orb": "0",
+          "@demonskull": "0",
+          "@totem": "0.42",
+          "@censer": "0"
         },
         "energyshare": {
           "@head": "0.5",
           "@armor": "0.25",
           "@shoes": "0.15",
-          "@mainhand": "0.0",
-          "@shield": "0.0",
-          "@book": "0.15",
-          "@torch": "0.0",
+          "@mainhand": "0",
           "@cape": "0.10",
-          "@towershield": "0.0",
-          "@skullshield": "0.0",
-          "@spikedshield": "0.0",
-          "@horn": "0.0",
-          "@cane": "0.0",
-          "@lamp": "0.0",
+          "@shield": "0",
+          "@towershield": "0",
+          "@skullshield": "0",
+          "@spikedshield": "0",
+          "@avalonshield": "0",
+          "@torch": "0",
+          "@horn": "0",
+          "@cane": "0",
+          "@lamp": "0",
+          "@talisman": "0",
+          "@book": "0.15",
           "@orb": "0.5",
           "@demonskull": "0",
-          "@totem": "0.0"
+          "@totem": "0",
+          "@censer": "0"
         }
       },
       "QualityLevels": {
@@ -939,12 +952,12 @@
         {
           "@name": "PhysicalSpellDamageBonus",
           "@min": "-0.8",
-          "@max": "1.5"
+          "@max": "1"
         },
         {
           "@name": "MagicSpellDamageBonus",
           "@min": "-0.8",
-          "@max": "1.5"
+          "@max": "1"
         },
         {
           "@name": "AbilityPower",
@@ -3776,11 +3789,39 @@
           "@mobsilverlootfactor": "1.75"
         },
         {
+          "@type": "corrupted_beginner",
+          "@icon": "corruptedbeginner",
+          "@famefactor": "2",
+          "@moblootfactor": "1.33",
+          "@mobsilverlootfactor": "1.33"
+        },
+        {
+          "@type": "corrupted_intermediate",
+          "@icon": "corruptedintermediate",
+          "@famefactor": "3.5",
+          "@moblootfactor": "2.75",
+          "@mobsilverlootfactor": "2.75"
+        },
+        {
+          "@type": "corrupted_pro",
+          "@icon": "corruptedpro",
+          "@famefactor": "3.5",
+          "@moblootfactor": "2.75",
+          "@mobsilverlootfactor": "2.75"
+        },
+        {
           "@type": "expedition",
           "@icon": "safe",
           "@famefactor": "1",
           "@moblootfactor": "0.5",
           "@mobsilverlootfactor": "0.5"
+        },
+        {
+          "@type": "tunnel",
+          "@icon": "black",
+          "@famefactor": "5",
+          "@moblootfactor": "7.5",
+          "@mobsilverlootfactor": "7.5"
         }
       ]
     },
@@ -3832,9 +3873,9 @@
       "@characterlimit": "270"
     },
     "FeaturedFeature": {
-      "@utcstartdate": "2019-11-13T10:15:00",
-      "@utcenddate": "2020-01-20T10:00:00",
-      "@showhint": "AVALONIAN_SEASON_INFO"
+      "@utcstartdate": "2020-08-12T10:15:00",
+      "@utcenddate": "2020-09-09T10:00:00",
+      "@showad": "DEFAULT"
     },
     "SiegeCampBank": {
       "@size": "64",
@@ -5480,9 +5521,49 @@
     "GvgSeason": {
       "@alliancesharefactor": "0.5"
     },
-    "HideoutRecovery": {
-      "@feefactor": "900",
-      "@notclaimabletime": "2419200"
+    "CombatFameToSilverConversion": {
+      "@silverfamefactor": "-1.15",
+      "@silverfamex": "0.006",
+      "@silverfamey": "2.72",
+      "@fameeffbase": "1.17",
+      "@fameeffconst": "-0.04"
+    },
+    "MarketPriceEstimation": {
+      "contributingmarket": [
+        {
+          "@id": "3005"
+        },
+        {
+          "@id": "1002"
+        },
+        {
+          "@id": "3008"
+        },
+        {
+          "@id": "4002"
+        },
+        {
+          "@id": "0007"
+        },
+        {
+          "@id": "2004"
+        },
+        {
+          "@id": "0004"
+        },
+        {
+          "@id": "1006"
+        },
+        {
+          "@id": "2002"
+        },
+        {
+          "@id": "3002"
+        },
+        {
+          "@id": "4006"
+        }
+      ]
     }
   }
 }
