@@ -74,7 +74,7 @@
       knockdowngetuptimeseconds_combatover="18"
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN"
       playervisibilityafterdeath="3"/>
-    <StuckCommand cooldownseconds="86400" delayseconds="600" />
+    <StuckCommand cooldownseconds="1800" delayseconds="180" />
     <ClusterChange cooldownseconds="10"/>
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
     <InCombat activetimeoutseconds="20" passivetimeoutseconds="20"/>
@@ -96,7 +96,7 @@
       decreasetimesilence="20"
       decreasetimeslow="20"
       decreasetimeforcedmovement="20"/>
-    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" />
+    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" mintoggledurationbeforecancelpossible="0.5" />
     <AoeEscalation defaulttargetcountthresholdmin="2" defaulttargetcountthresholdmax="11" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
@@ -478,10 +478,10 @@
         magiccasttimereduction="false"
         magiccooldownreduction="false"/>
 
-      <armorshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.0" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
-      <ccrshare head="0.0" armor="1.0" shoes="0.0" mainhand="0.0" shield="0.60" book="0.0" torch="0.0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.0"/>
-      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0.0" shield="0.0" book="0.0" torch="0" cape="0.0" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.0" demonskull="0.0" totem="0.42"/>
-      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0.0" shield="0.0" book="0.15" torch="0.0" cape="0.10" towershield="0.0" skullshield="0.0" spikedshield="0.0" horn="0.0" cane="0.0" lamp="0.0" orb="0.5" demonskull="0" totem="0.0"/>
+      <armorshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0" censer="0"/>
+      <ccrshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0.60" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="2.50" book="0" orb="0" demonskull="0" totem="0" censer="0"/>
+      <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0.42" censer="0"/>
+      <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0" cape="0.10" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0.15" orb="0.5" demonskull="0" totem="0" censer="0"/>
     </ItemPowerProgression>
     <QualityLevels>
       <qualitylevel level="2" itempowerbonus="10"/>
@@ -507,8 +507,8 @@
     <attribute name="PhysicalAttackDamageBonus" min="-0.8" max="3"/>
     <attribute name="MagicAttackDamageBonus" min="-0.8" max="3"/>
 
-    <attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1.5"/>
-    <attribute name="MagicSpellDamageBonus" min="-0.8" max="1.5"/>
+    <attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1"/>
+    <attribute name="MagicSpellDamageBonus" min="-0.8" max="1"/>
 
     <attribute name="AbilityPower" min="-0.5" max="2" absolutemin="1"/>
     <attribute name="AbilityPowerBonus" min="-0.5" max="2"/>
@@ -1396,7 +1396,11 @@
     <ClusterDangerBonus type="hell"  icon="black" famefactor="7.5" moblootfactor="7.5" mobsilverlootfactor="7.5"/>
     <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
     <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
+    <ClusterDangerBonus type="corrupted_beginner"  icon="corruptedbeginner" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
+    <ClusterDangerBonus type="corrupted_intermediate"  icon="corruptedintermediate" famefactor="3.5" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
+    <ClusterDangerBonus type="corrupted_pro"  icon="corruptedpro" famefactor="3.5" moblootfactor="2.75" mobsilverlootfactor="2.75"/>
     <ClusterDangerBonus type="expedition"  icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
+    <ClusterDangerBonus type="tunnel"  icon="black" famefactor="5" moblootfactor="7.5" mobsilverlootfactor="7.5"/>
   </ClusterDangerBonusTypes>
   <AchievementHud tutorial_idletime_till_highlight="30"/>
   <SilverDropSettings silver="COINS" silverpremium="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5"/>
@@ -1409,7 +1413,7 @@
     </ExpeditionBonusRewardTimer>
   </Expedition>
   <PersonalStatement characterlimit="270" />
-  <FeaturedFeature utcstartdate="2019-11-13T10:15:00" utcenddate="2020-01-20T10:00:00" showhint="AVALONIAN_SEASON_INFO" />
+  <FeaturedFeature utcstartdate="2020-08-12T10:15:00" utcenddate="2020-09-09T10:00:00" showad="DEFAULT" />
   <SiegeCampBank size="64" weightlimit="10000.0">
     <DefaultTab Name="@SIEGECAMP_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
   </SiegeCampBank>
@@ -1876,5 +1880,20 @@
     </clustergroup>
   </TerritoryBlockClaiming>
   <GvgSeason alliancesharefactor="0.5" />
-  <HideoutRecovery feefactor="900" notclaimabletime="2419200"/> <!--The feefactor is an approximation for TravelSettings TierModifier * Distance -->
+  <CombatFameToSilverConversion silverfamefactor="-1.15" silverfamex="0.006" silverfamey="2.72" fameeffbase="1.17" fameeffconst="-0.04"/>
+  <MarketPriceEstimation>
+    <!-- carleon and other royal cities-->
+    <contributingmarket id="3005"/>
+    <contributingmarket id="1002"/>
+    <contributingmarket id="3008"/>
+    <contributingmarket id="4002"/>
+    <contributingmarket id="0007"/>
+    <contributingmarket id="2004"/>
+    <!-- starter towns -->
+    <contributingmarket id="0004"/>
+    <contributingmarket id="1006"/>
+    <contributingmarket id="2002"/>
+    <contributingmarket id="3002"/>
+    <contributingmarket id="4006"/>
+  </MarketPriceEstimation>
 </AO-GameData>

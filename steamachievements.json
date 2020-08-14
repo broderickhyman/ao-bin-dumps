@@ -8,6 +8,165 @@
     "@xsi:noNamespaceSchemaLocation": "steamachievements.xsd",
     "achievement": [
       {
+        "@name": "SA_PVP_CORRUPTED_DUNGEON_01",
+        "killplayer": {
+          "@where": "all",
+          "@count": "1",
+          "@minvalue": "0",
+          "@specialcondition": "KillCorruptedDungeonInvader"
+        }
+      },
+      {
+        "@name": "SA_PVP_CORRUPTED_DUNGEON_02",
+        "killplayer": {
+          "@where": "all",
+          "@count": "1",
+          "@minvalue": "0",
+          "@specialcondition": "KillCorruptedDungeonHost"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_CORRUPTED_DUNGEONS_INFAMY",
+        "@stat": "SA_ST_COLLECTION_CORRUPTED_DUNGEONS_INFAMY",
+        "haveinfamy": {
+          "@amount": "50000"
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_01",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T5_MOB_CD_DEMON_SORCERER_BOSS",
+              "@count": "1"
+            },
+            {
+              "@mobid": "T6_MOB_CD_DEMON_SORCERER_BOSS",
+              "@count": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_02",
+        "@stat": "SA_ST_PVE_CORRUPTED_DUNGEONS_02",
+        "killmob": {
+          "@faction": "CORRUPTED",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_03",
+        "@stat": "SA_ST_PVE_CORRUPTED_DUNGEONS_03",
+        "killmob": {
+          "@faction": "CORRUPTED",
+          "@count": "1000"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ROADS_01",
+        "gotocluster": {
+          "@archetype": "TUNNEL"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ROADS_02",
+        "gotocluster": {
+          "@worldclustertype": "TUNNEL_DEEP"
+        }
+      },
+      {
+        "@name": "SA_PVE_ROADS_GUARDIAN",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_ROADS_AVALON",
+        "@stat": "SA_ST_PVE_ROADS_AVALON",
+        "killmob": {
+          "@faction": "ROAD",
+          "@count": "250",
+          "@countpartykills": "true"
+        }
+      },
+      {
         "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01",
         "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01",
         "unlocklootchest": {
@@ -1828,10 +1987,19 @@
       },
       {
         "@name": "SA_PVE_KILL_EARTHMOTHER",
-        "killmob": {
-          "@mobid": "T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
-          "@count": "1",
-          "@countpartykills": "true"
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
         }
       },
       {
@@ -1845,10 +2013,19 @@
       },
       {
         "@name": "SA_PVE_KILL_HARVESTER",
-        "killmob": {
-          "@mobid": "T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS",
-          "@count": "1",
-          "@countpartykills": "true"
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_UNDEAD_HARVESTER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
         }
       },
       {
