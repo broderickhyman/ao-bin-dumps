@@ -192,6 +192,10 @@
     <CharType name="mount"/>
     <MountType name="mule"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_MULE_HERETIC">
+    <CharType name="mount"/>
+    <MountType name="mule_heretic"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_RHINO">
     <CharType name="mount"/>
     <MountType name="rhino"/>
@@ -3820,6 +3824,12 @@
   
   <WwiseEventInfo name="SPELL_MOUNT_OWL_SHIELD">
     <OnCastFinished name="Play_owl_load" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_MULE_SHOOT">
+    <OnCastStart name="Play_mule_heretic_load" />
+    <OnCastFinished name="Play_mule_heretic_shoot" />
+    <OnSpellHit name="Play_self_knockback" />
   </WwiseEventInfo>
 
   <!--****************************************************-->
