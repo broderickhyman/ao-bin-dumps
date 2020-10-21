@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<achievements Version="706a8d5a-83dd-4741-8555-29b49955be38" xsi:noNamespaceSchemaLocation="achievements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<achievements Version="d2425c7a-e601-4c08-98b0-7740018fe46a" xsi:noNamespaceSchemaLocation="achievements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <template name="REFINE_T4" structure="Fame;LP;LPThreshold;MissionTargetMinTier;MissionTargetMaxTier;MissionItemMinTier;MissionItemMaxTier;UnlockTier">
     3713;15;0.2;2;8;2;8;4
     5826;15;0.2;4;4;4;4;
@@ -17141,6 +17141,7 @@
       <achievement id="FARM_COOK_SANDWICH" />
       <achievement id="FARM_COOK_PIE" />
       <achievement id="FARM_COOK_SOUP" />
+      <achievement id="FARM_COOK_ROAST" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="FARM_SPEC" missiontype="craftitemfame" lpmultiplier="1" famemultiplier="2" id="FARM_COOK_MEAT" category="farming" ring="9" spriteReward="MEAT" itemforsprite="T8_MEAT">
@@ -17237,6 +17238,30 @@
         <itempattern pattern="T?_BUTTER" />
         <itempattern pattern="T?_FLOUR" />
         <itempattern pattern="T?_BREAD" />
+      </bonus>
+    </rewards>
+    <parentachievements allrequired="false">
+      <achievement id="FARM_COOK" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement usetemplate="FARM_SPEC" missiontype="craftitemfame" lpmultiplier="1" famemultiplier="2" id="FARM_COOK_ROAST" category="farming" ring="9" spriteReward="MEAL_ROAST" itemforsprite="T7_MEAL_ROAST">
+    <title tag="@DESTINYBOARD_TITLE_FARM_COOK_ROAST" />
+    <itemlist>
+      <itempattern pattern="T?_MEAL_ROAST*" />
+    </itemlist>
+    <rewards>
+      <bonus type="craftingfocuscostreduction" bonus="0.3" mintier="1" maxtier="8">
+        <description tag="@DESTINYBOARD_FARM_COOK_CATEGORYBONUS" />
+        <itempattern pattern="T?_MEAL*" />
+        <itempattern pattern="T?_MEAT*" />
+        <itempattern pattern="T?_BUTTER" />
+        <itempattern pattern="T?_FLOUR" />
+        <itempattern pattern="T?_BREAD" />
+        <itempattern pattern="T?_FISHINGBAIT*" />
+      </bonus>
+      <bonus type="craftingfocuscostreduction" bonus="2.5" mintier="1" maxtier="8">
+        <description tag="@DESTINYBOARD_FARM_COOK_ROAST_GROUPBONUS" />
+        <itempattern pattern="T?_MEAL_ROAST*" />
       </bonus>
     </rewards>
     <parentachievements allrequired="false">
@@ -17371,6 +17396,8 @@
               <entry id="T3_MEAT" />
               <entry id="T3_FLOUR" />
               <entry id="T3_FISHINGBAIT" />
+              <entry id="T3_MEAL_ROAST" />
+              <entry id="T3_MEAL_ROAST_FISH" />
             </reward>
           </rewardgroup>
         </rewardgroups>
@@ -19747,7 +19774,7 @@
       <achievement id="GATHER_WOOD_T7" />
     </parentachievements>
   </templateachievement>
-  <achievement id="PVE_T3" category="fighting" ring="4">
+  <achievement id="PVE_T3" category="fighting" ring="4" textureReward="DESTINY_PVETRACK_T3">
     <title tag="@DESTINYBOARD_TITLE_PVE_T3" />
     <masterylevels>
       <masterylevel>
@@ -19902,7 +19929,7 @@
       <achievement id="PVE_T7" />
     </parentachievements>
   </achievement>
-  <achievement id="PVE_T7" category="fighting" ring="8">
+  <achievement id="PVE_T7" category="fighting" ring="8" textureReward="DESTINY_PVETRACK_T7">
     <title tag="@DESTINYBOARD_TITLE_PVE_T7" />
     <masterylevels>
       <masterylevel>
@@ -19931,7 +19958,7 @@
       <achievement id="PVE_T8" />
     </parentachievements>
   </achievement>
-  <achievement id="PVE_T8" category="fighting" ring="9">
+  <achievement id="PVE_T8" category="fighting" ring="9" textureReward="DESTINY_PVETRACK_T8">
     <title tag="@DESTINYBOARD_TITLE_PVE_T8" />
     <masterylevels>
       <masterylevel>

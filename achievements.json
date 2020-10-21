@@ -4,7 +4,7 @@
     "@encoding": "utf-8"
   },
   "achievements": {
-    "@Version": "706a8d5a-83dd-4741-8555-29b49955be38",
+    "@Version": "d2425c7a-e601-4c08-98b0-7740018fe46a",
     "@xsi:noNamespaceSchemaLocation": "achievements.xsd",
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "template": [
@@ -2491,6 +2491,12 @@
                     },
                     {
                       "@id": "T3_FISHINGBAIT"
+                    },
+                    {
+                      "@id": "T3_MEAL_ROAST"
+                    },
+                    {
+                      "@id": "T3_MEAL_ROAST_FISH"
                     }
                   ]
                 }
@@ -3001,6 +3007,7 @@
         "@id": "PVE_T3",
         "@category": "fighting",
         "@ring": "4",
+        "@textureReward": "DESTINY_PVETRACK_T3",
         "title": {
           "@tag": "@DESTINYBOARD_TITLE_PVE_T3"
         },
@@ -3430,6 +3437,7 @@
         "@id": "PVE_T7",
         "@category": "fighting",
         "@ring": "8",
+        "@textureReward": "DESTINY_PVETRACK_T7",
         "title": {
           "@tag": "@DESTINYBOARD_TITLE_PVE_T7"
         },
@@ -3501,6 +3509,7 @@
         "@id": "PVE_T8",
         "@category": "fighting",
         "@ring": "9",
+        "@textureReward": "DESTINY_PVETRACK_T8",
         "title": {
           "@tag": "@DESTINYBOARD_TITLE_PVE_T8"
         },
@@ -45864,6 +45873,9 @@
             },
             {
               "@id": "FARM_COOK_SOUP"
+            },
+            {
+              "@id": "FARM_COOK_ROAST"
             }
           ]
         }
@@ -46154,6 +46166,76 @@
                   "@pattern": "T?_BREAD"
                 }
               ]
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "FARM_COOK"
+          }
+        }
+      },
+      {
+        "@usetemplate": "FARM_SPEC",
+        "@missiontype": "craftitemfame",
+        "@lpmultiplier": "1",
+        "@famemultiplier": "2",
+        "@id": "FARM_COOK_ROAST",
+        "@category": "farming",
+        "@ring": "9",
+        "@spriteReward": "MEAL_ROAST",
+        "@itemforsprite": "T7_MEAL_ROAST",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_FARM_COOK_ROAST"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_MEAL_ROAST*"
+          }
+        },
+        "rewards": {
+          "bonus": [
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "0.3",
+              "@mintier": "1",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_FARM_COOK_CATEGORYBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MEAL*"
+                },
+                {
+                  "@pattern": "T?_MEAT*"
+                },
+                {
+                  "@pattern": "T?_BUTTER"
+                },
+                {
+                  "@pattern": "T?_FLOUR"
+                },
+                {
+                  "@pattern": "T?_BREAD"
+                },
+                {
+                  "@pattern": "T?_FISHINGBAIT*"
+                }
+              ]
+            },
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "2.5",
+              "@mintier": "1",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_FARM_COOK_ROAST_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_MEAL_ROAST*"
+              }
             }
           ]
         },

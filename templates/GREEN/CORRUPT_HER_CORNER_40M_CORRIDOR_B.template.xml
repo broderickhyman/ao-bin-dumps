@@ -4,11 +4,11 @@
     <layergroup name="STAGING">
       <layer id="Layer_01" name="_STAGING_EMPTY" />
       <layer id="Layer_02" name="STAGING_01_IMP">
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="-3.22 0 -5.14" roty="73">
-          <mobspawnpoint spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="-3.22 0 -5.14" roty="73">
+          <mobspawnpoint spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="-1.01 0 -0.85" roty="180">
-          <mobspawnpoint spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="-1.01 0 -0.85" roty="180">
+          <mobspawnpoint spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
       </layer>
       <layer id="Layer_03" name="STAGING_02_HER">
@@ -21,7 +21,20 @@
       </layer>
       <layer id="Layer_04" name="STAGING_03_SENTINEL">
         <tile name="SpawnPoint_RANDOM_DEMON_CD_SENTINEL" pos="-3.56 0 -0.25" roty="125">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SENTINEL" />
+          <mobspawnpoint behavior="PATROL" spawnbehavior="CD_DEMON_SENTINEL">
+            <path>
+              <waypoint pos="-1.449713 -18.86099" idle="0" pace="WALK" />
+              <waypoint pos="-1.351008 -12.74124" idle="0" pace="WALK" />
+              <waypoint pos="0.6231079 -7.50983" idle="0" pace="WALK" />
+              <waypoint pos="7.137688 -1.439426" idle="0" pace="WALK" />
+              <waypoint pos="15.08351 0.8801327" idle="0" pace="WALK" />
+              <waypoint pos="17.89663 4.137421" idle="0" pace="WALK" />
+              <waypoint pos="15.08351 0.8801327" idle="0" pace="WALK" />
+              <waypoint pos="7.137688 -1.439426" idle="0" pace="WALK" />
+              <waypoint pos="0.6231079 -7.50983" idle="0" pace="WALK" />
+              <waypoint pos="-1.351008 -12.74124" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
       <layer id="Layer_05" name="STAGING_04_MAGMA">
@@ -38,6 +51,11 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_TRAP_FLAMESPINNER_CCW" pos="2.59 0 4.01">
           <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_FLAMESPINNER_CCW" />
+        </tile>
+      </layer>
+      <layer id="Layer_09" name="STAGING_03_SPIKED">
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_SPIKED" pos="-3.56 0 -0.25" roty="125">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SPIKED" />
         </tile>
       </layer>
     </layergroup>

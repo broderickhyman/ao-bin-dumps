@@ -4,11 +4,11 @@
     <layergroup name="STAGING">
       <layer id="Layer_01" name="_STAGING_EMPTY" />
       <layer id="Layer_02" name="STAGING_01_IMP">
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="2.27 0 -3.17" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="2.27 0 -3.17" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="0.87 0 -6.19" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="0.87 0 -6.19" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
       </layer>
       <layer id="Layer_03" name="STAGING_02_HER">
@@ -21,7 +21,18 @@
       </layer>
       <layer id="Layer_04" name="STAGING_03_SENTINEL">
         <tile name="SpawnPoint_RANDOM_DEMON_CD_SENTINEL" pos="-4.3 0 -4.93" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SENTINEL" />
+          <mobspawnpoint behavior="PATROL" spawnbehavior="CD_DEMON_SENTINEL">
+            <path>
+              <waypoint pos="-2.701504 -17.61829" idle="0" pace="WALK" />
+              <waypoint pos="-1.406449 -8.936622" idle="0" pace="WALK" />
+              <waypoint pos="2.526682 -1.741875" idle="0" pace="WALK" />
+              <waypoint pos="11.87986 -0.3509102" idle="0" pace="WALK" />
+              <waypoint pos="18.64292 -0.2070141" idle="0" pace="WALK" />
+              <waypoint pos="11.87986 -0.3509102" idle="0" pace="WALK" />
+              <waypoint pos="2.526682 -1.741875" idle="0" pace="WALK" />
+              <waypoint pos="-1.406449 -8.936622" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
       <layer id="Layer_05" name="STAGING_04_MAGMA">
@@ -38,6 +49,39 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_TRAP_FLAMESPINNER_CW" pos="5.79 0 -7.98">
           <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_FLAMESPINNER_CW" />
+        </tile>
+      </layer>
+      <layer id="Layer_09" name="STAGING_06_SPIKED">
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_SPIKED" pos="-4.3 0 -4.93" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SPIKED" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="TRAP">
+      <layer id="Layer_07" name="STAGING_07_SPIKES">
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_HOOK" pos="-0.64 0 1.57" roty="136">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_HOOK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_A_COMMANDER" pos="-1.36 0 -4.43">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_A_COMMANDER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_A_FOLLOWER" pos="3.97 0 -4.28">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_A_FOLLOWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_A_FOLLOWER" pos="6.99 0 -0.73">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_A_FOLLOWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_B_FOLLOWER" pos="2.48 0 -10.53">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_B_FOLLOWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_B_FOLLOWER" pos="-0.82 0 -8.37">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_B_FOLLOWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_B_FOLLOWER" pos="12.07 0 0.19">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_B_FOLLOWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_B_FOLLOWER" pos="10.44 0 -3.79">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_B_FOLLOWER" />
         </tile>
       </layer>
     </layergroup>

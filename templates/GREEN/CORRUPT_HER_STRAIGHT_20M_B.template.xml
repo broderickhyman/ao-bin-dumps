@@ -7,11 +7,11 @@
         <tile name="SpawnPoint_RANDOM_HAZARD_CIRCLE" pos="0.37 0 5.27">
           <mobspawnpoint spawnbehavior="HAZARD_CIRCLE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="1.54 0 0.59">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="1.54 0 0.59">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_IMP" pos="-1.41 0 2.27">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_IMP" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_CATEGORY_A" pos="-1.41 0 2.27">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_CATEGORY_A" />
         </tile>
       </layer>
       <layer id="Layer_03" name="STAGING_02_HER">
@@ -26,8 +26,15 @@
         <tile name="SpawnPoint_RANDOM_HAZARD_DIRECTED" pos="7.65 0 -8.05" roty="294.05">
           <mobspawnpoint behavior="GUARD" spawnbehavior="HAZARD_DIRECTED" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_DEMON_CD_SENTINEL" pos="1.38 0 1" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SENTINEL" />
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_SENTINEL" pos="-2.41 0 7.28" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="CD_DEMON_SENTINEL">
+            <path>
+              <waypoint pos="-0.3991785 9.050266" idle="0" pace="WALK" />
+              <waypoint pos="1.183666 1.663653" idle="0" pace="WALK" />
+              <waypoint pos="3.725811 -7.977309" idle="0" pace="WALK" />
+              <waypoint pos="1.183666 1.663653" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
       </layer>
       <layer id="Layer_05" name="STAGING_04_FUN">
@@ -42,6 +49,28 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_DEMON_CD_MINOR_HERETICS" pos="0.83 5.39 0.83">
           <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_MINOR_HERETICS" />
+        </tile>
+      </layer>
+      <layer id="Layer_08" name="STAGING_04_FUN_MAULER">
+        <tile name="SpawnPoint_RANDOM_HAZARD_CIRCLE" pos="1.05 0 4.25">
+          <mobspawnpoint spawnbehavior="HAZARD_CIRCLE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_MAULER" pos="-3.02 0 -0.27">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_MAULER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_MINOR_HERETICS" pos="0.83 5.39 0.83">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_MINOR_HERETICS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_MAULER" pos="5.19 0 -0.27">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_MAULER" />
+        </tile>
+      </layer>
+      <layer id="Layer_09" name="STAGING_03_SPIKED">
+        <tile name="SpawnPoint_RANDOM_HAZARD_DIRECTED" pos="7.65 0 -8.05" roty="294.05">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="HAZARD_DIRECTED" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_DEMON_CD_SPIKED" pos="1.38 0 1" roty="180">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="CD_DEMON_SPIKED" />
         </tile>
       </layer>
     </layergroup>

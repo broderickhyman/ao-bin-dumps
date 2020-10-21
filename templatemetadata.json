@@ -6470,7 +6470,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor",
-                "@flags": "halloween",
+                "@flags": "halloween|halloween_solo",
                 "@pathdata": "BQ==",
                 "template": [
                   {
@@ -6630,7 +6630,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor|outdoor",
-                "@flags": "halloween",
+                "@flags": "halloween|halloween_solo",
                 "@pathdata": "Aw==",
                 "template": [
                   {
@@ -8477,7 +8477,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor",
-                "@flags": "halloween",
+                "@flags": "halloween|halloween_solo",
                 "@endbosshighlight": "true",
                 "@pathdata": "BQA=",
                 "template": [
@@ -9537,10 +9537,49 @@
                     {
                       "@type": "all:environment|outdoor|swamp",
                       "@layers": "Layer_08"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "11 11",
+                "@pathsize": "6",
+                "@factionsubset": "castle",
+                "@environment": "indoor",
+                "@flags": "halloween_solo",
+                "@templateusage": "Enforce",
+                "@dungeonlevelusage": "First",
+                "@pathdata": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAFAAAAAAAAAAAAAAUAAAAAAAAAAAAABQAAAAAAAAAAAAAFAAAAAAAAAAAAAAUAAAAAAA==",
+                "template": {
+                  "@name": "UND_HALLOWEEN_START_Halloween_Solo_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
                     },
                     {
-                      "@type": "halloween",
-                      "@layers": "Layer_01,Layer_10"
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_02"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|highlands",
+                      "@layers": "Layer_05"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|mountain",
+                      "@layers": "Layer_03"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|steppe",
+                      "@layers": "Layer_07"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|swamp",
+                      "@layers": "Layer_08"
                     }
                   ]
                 }
@@ -9555,7 +9594,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor|outdoor",
-                "@flags": "halloween|solo|veteran",
+                "@flags": "halloween|halloween_solo|solo|veteran",
                 "@pathdata": "BA==",
                 "template": {
                   "@name": "UND_MULTIFLAG_EXIT",
@@ -9706,7 +9745,7 @@
               "@pathsize": "0",
               "@factionsubset": "castle",
               "@environment": "indoor|outdoor",
-              "@flags": "halloween|solo|veteran",
+              "@flags": "halloween|halloween_solo|solo|veteran",
               "template": {
                 "@name": "UND_DEFAULT_BACKDROP_01",
                 "layercontrol": [
@@ -9764,13 +9803,9 @@
                 "@pathsize": "0",
                 "@factionsubset": "castle",
                 "@environment": "indoor",
-                "@flags": "halloween",
+                "@flags": "halloween|halloween_solo",
                 "template": {
-                  "@name": "UND_CASTLE_MASTER_HALLOWEEN_01",
-                  "layercontrol": {
-                    "@type": "all:environment|indoor|cave_01",
-                    "@layers": "Layer_08"
-                  }
+                  "@name": "UND_CASTLE_MASTER_HALLOWEEN_01"
                 }
               },
               {
