@@ -97,7 +97,7 @@
       decreasetimeslow="20"
       decreasetimeforcedmovement="20"/>
     <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" mintoggledurationbeforecancelpossible="0.5" />
-    <AoeEscalation defaulttargetcountthresholdmin="2" defaulttargetcountthresholdmax="11" />
+    <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="6" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
       <level requiredpoints="10000"  title="@REPUTATION_LEVEL_POSITIVE04"       nametagicon="REPUTATION_POSITIVE04" rewardicon="REPUTATION_POSITIVE04" recoveryperday="0"     pvegainfactor="0.002" gathergainfactor="0.01" candisablepvp="true" canenterexpedition="true"  attackpenalty="10"  knockdownpenalty="50"   killpenalty="1000" cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE04"/>
@@ -667,71 +667,68 @@
     <attackers numbergreaterorequal="20" buff="HEALINGSICKNESS_20"/>
   </PlayerHealingSickness>
   <ZergDebuff checkfrequency="20">
-    <allies numbergreaterorequal="26" debuff="ZERGDEBUFF_LVL1"/>
-    <allies numbergreaterorequal="27" debuff="ZERGDEBUFF_LVL2"/>
+    <allies numbergreaterorequal="26" debuff="ZERGDEBUFF_LVL1" damagemodifier="0.99" ccdurationmodifier="0.99"/>
+    <allies numbergreaterorequal="27" debuff="ZERGDEBUFF_LVL2" damagemodifier="0.98" ccdurationmodifier="0.98"/>
+    <allies numbergreaterorequal="28" debuff="ZERGDEBUFF_LVL3" damagemodifier="0.97" ccdurationmodifier="0.97"/>
+    <allies numbergreaterorequal="29" debuff="ZERGDEBUFF_LVL4" damagemodifier="0.96" ccdurationmodifier="0.96"/>
+    <allies numbergreaterorequal="30" debuff="ZERGDEBUFF_LVL5" damagemodifier="0.95" ccdurationmodifier="0.95"/>
+    <allies numbergreaterorequal="31" debuff="ZERGDEBUFF_LVL6" damagemodifier="0.94" ccdurationmodifier="0.94"/>    
+    <allies numbergreaterorequal="32" debuff="ZERGDEBUFF_LVL7" damagemodifier="0.93" ccdurationmodifier="0.93"/>    
+    <allies numbergreaterorequal="33" debuff="ZERGDEBUFF_LVL8" damagemodifier="0.92" ccdurationmodifier="0.92"/>
+    <allies numbergreaterorequal="34" debuff="ZERGDEBUFF_LVL9" damagemodifier="0.91" ccdurationmodifier="0.91"/>
+    <allies numbergreaterorequal="35" debuff="ZERGDEBUFF_LVL10" damagemodifier="0.90" ccdurationmodifier="0.90"/>
+    <allies numbergreaterorequal="37" debuff="ZERGDEBUFF_LVL11" damagemodifier="0.89" ccdurationmodifier="0.89"/>    
+    <allies numbergreaterorequal="38" debuff="ZERGDEBUFF_LVL12" damagemodifier="0.88" ccdurationmodifier="0.88"/>   
+    <allies numbergreaterorequal="40" debuff="ZERGDEBUFF_LVL13" damagemodifier="0.87" ccdurationmodifier="0.87"/>    
+    <allies numbergreaterorequal="41" debuff="ZERGDEBUFF_LVL14" damagemodifier="0.86" ccdurationmodifier="0.86"/> 
+    <allies numbergreaterorequal="43" debuff="ZERGDEBUFF_LVL15" damagemodifier="0.85" ccdurationmodifier="0.85"/>
+    <allies numbergreaterorequal="45" debuff="ZERGDEBUFF_LVL16" damagemodifier="0.84" ccdurationmodifier="0.84"/>
+    <allies numbergreaterorequal="47" debuff="ZERGDEBUFF_LVL17" damagemodifier="0.83" ccdurationmodifier="0.83"/>
+    <allies numbergreaterorequal="50" debuff="ZERGDEBUFF_LVL18" damagemodifier="0.82" ccdurationmodifier="0.82"/>
+    <allies numbergreaterorequal="52" debuff="ZERGDEBUFF_LVL19" damagemodifier="0.81" ccdurationmodifier="0.81"/>
+    <allies numbergreaterorequal="55" debuff="ZERGDEBUFF_LVL20" damagemodifier="0.80" ccdurationmodifier="0.80"/>
+    <allies numbergreaterorequal="59" debuff="ZERGDEBUFF_LVL21" damagemodifier="0.79" ccdurationmodifier="0.79"/>
+    <allies numbergreaterorequal="63" debuff="ZERGDEBUFF_LVL22" damagemodifier="0.78" ccdurationmodifier="0.78"/>
+    <allies numbergreaterorequal="67" debuff="ZERGDEBUFF_LVL23" damagemodifier="0.77" ccdurationmodifier="0.77"/>
+    <allies numbergreaterorequal="72" debuff="ZERGDEBUFF_LVL24" damagemodifier="0.76" ccdurationmodifier="0.76"/>
+    <allies numbergreaterorequal="77" debuff="ZERGDEBUFF_LVL25" damagemodifier="0.75" ccdurationmodifier="0.75"/>
+    <allies numbergreaterorequal="84" debuff="ZERGDEBUFF_LVL26" damagemodifier="0.74" ccdurationmodifier="0.74"/>
+    <allies numbergreaterorequal="91" debuff="ZERGDEBUFF_LVL27" damagemodifier="0.73" ccdurationmodifier="0.73"/>
+    <allies numbergreaterorequal="100" debuff="ZERGDEBUFF_LVL28" damagemodifier="0.72" ccdurationmodifier="0.72"/>
+    <allies numbergreaterorequal="120" debuff="ZERGDEBUFF_LVL29" damagemodifier="0.71" ccdurationmodifier="0.71"/>
+    <allies numbergreaterorequal="150" debuff="ZERGDEBUFF_LVL30" damagemodifier="0.70" ccdurationmodifier="0.70"/>
+    <allies numbergreaterorequal="159" debuff="ZERGDEBUFF_LVL31" damagemodifier="0.69" ccdurationmodifier="0.69"/>  
+    <allies numbergreaterorequal="167" debuff="ZERGDEBUFF_LVL32" damagemodifier="0.68" ccdurationmodifier="0.68"/>
+    <allies numbergreaterorequal="177" debuff="ZERGDEBUFF_LVL33" damagemodifier="0.67" ccdurationmodifier="0.67"/>
+    <allies numbergreaterorequal="188" debuff="ZERGDEBUFF_LVL34" damagemodifier="0.66" ccdurationmodifier="0.66"/>
+    <allies numbergreaterorequal="200" debuff="ZERGDEBUFF_LVL35" damagemodifier="0.65" ccdurationmodifier="0.65"/>
+    <allies numbergreaterorequal="209" debuff="ZERGDEBUFF_LVL36" damagemodifier="0.64" ccdurationmodifier="0.64"/>
+    <allies numbergreaterorequal="218" debuff="ZERGDEBUFF_LVL37" damagemodifier="0.63" ccdurationmodifier="0.63"/>
+    <allies numbergreaterorequal="228" debuff="ZERGDEBUFF_LVL38" damagemodifier="0.62" ccdurationmodifier="0.62"/>
+    <allies numbergreaterorequal="239" debuff="ZERGDEBUFF_LVL39" damagemodifier="0.61" ccdurationmodifier="0.61"/>
+    <allies numbergreaterorequal="250" debuff="ZERGDEBUFF_LVL40" damagemodifier="0.60" ccdurationmodifier="0.60"/>
+    <allies numbergreaterorequal="263" debuff="ZERGDEBUFF_LVL41" damagemodifier="0.59" ccdurationmodifier="0.59"/>
+    <allies numbergreaterorequal="276" debuff="ZERGDEBUFF_LVL42" damagemodifier="0.58" ccdurationmodifier="0.58"/>
+    <allies numbergreaterorequal="291" debuff="ZERGDEBUFF_LVL43" damagemodifier="0.57" ccdurationmodifier="0.57"/>
+    <allies numbergreaterorequal="307" debuff="ZERGDEBUFF_LVL44" damagemodifier="0.56" ccdurationmodifier="0.56"/>
+    <allies numbergreaterorequal="325" debuff="ZERGDEBUFF_LVL45" damagemodifier="0.55" ccdurationmodifier="0.55"/>
+    <allies numbergreaterorequal="345" debuff="ZERGDEBUFF_LVL46" damagemodifier="0.54" ccdurationmodifier="0.54"/>
+    <allies numbergreaterorequal="366" debuff="ZERGDEBUFF_LVL47" damagemodifier="0.53" ccdurationmodifier="0.53"/>
+    <allies numbergreaterorequal="391" debuff="ZERGDEBUFF_LVL48" damagemodifier="0.52" ccdurationmodifier="0.52"/>
+    <allies numbergreaterorequal="418" debuff="ZERGDEBUFF_LVL49" damagemodifier="0.51" ccdurationmodifier="0.51"/>
+    <allies numbergreaterorequal="450" debuff="ZERGDEBUFF_LVL50" damagemodifier="0.50" ccdurationmodifier="0.50"/>
     <!--
-    <allies numbergreaterorequal="27" debuff="ZERGDEBUFF_LVL3"/>
-    -->
-    <allies numbergreaterorequal="28" debuff="ZERGDEBUFF_LVL4"/>
-    <allies numbergreaterorequal="29" debuff="ZERGDEBUFF_LVL5"/>
-    <allies numbergreaterorequal="30" debuff="ZERGDEBUFF_LVL6"/>    
-    <allies numbergreaterorequal="31" debuff="ZERGDEBUFF_LVL7"/>    
-    <allies numbergreaterorequal="33" debuff="ZERGDEBUFF_LVL8"/>
-    <allies numbergreaterorequal="34" debuff="ZERGDEBUFF_LVL9"/>
-    <allies numbergreaterorequal="35" debuff="ZERGDEBUFF_LVL10"/>
-    <allies numbergreaterorequal="37" debuff="ZERGDEBUFF_LVL11"/>    
-    <allies numbergreaterorequal="38" debuff="ZERGDEBUFF_LVL12"/>   
-    <allies numbergreaterorequal="40" debuff="ZERGDEBUFF_LVL13"/>    
-    <allies numbergreaterorequal="41" debuff="ZERGDEBUFF_LVL14"/> 
-    <allies numbergreaterorequal="43" debuff="ZERGDEBUFF_LVL15"/>
-    <allies numbergreaterorequal="45" debuff="ZERGDEBUFF_LVL16"/>
-    <allies numbergreaterorequal="47" debuff="ZERGDEBUFF_LVL17"/>
-    <allies numbergreaterorequal="50" debuff="ZERGDEBUFF_LVL18"/>
-    <allies numbergreaterorequal="52" debuff="ZERGDEBUFF_LVL19"/>
-    <allies numbergreaterorequal="55" debuff="ZERGDEBUFF_LVL20"/>
-    <allies numbergreaterorequal="59" debuff="ZERGDEBUFF_LVL21"/>
-    <allies numbergreaterorequal="63" debuff="ZERGDEBUFF_LVL22"/>
-    <allies numbergreaterorequal="67" debuff="ZERGDEBUFF_LVL23"/>
-    <allies numbergreaterorequal="72" debuff="ZERGDEBUFF_LVL24"/>
-    <allies numbergreaterorequal="77" debuff="ZERGDEBUFF_LVL25"/>
-    <allies numbergreaterorequal="84" debuff="ZERGDEBUFF_LVL26"/>
-    <allies numbergreaterorequal="91" debuff="ZERGDEBUFF_LVL27"/>
-    <allies numbergreaterorequal="100" debuff="ZERGDEBUFF_LVL28"/>
-    <allies numbergreaterorequal="120" debuff="ZERGDEBUFF_LVL29"/>
-    <allies numbergreaterorequal="150" debuff="ZERGDEBUFF_LVL30"/>
-    
-    <!--
-    <allies numbergreaterorequal="113" debuff="ZERGDEBUFF_LVL31"/>
-    <allies numbergreaterorequal="129" debuff="ZERGDEBUFF_LVL32"/>
-    <allies numbergreaterorequal="150" debuff="ZERGDEBUFF_LVL33"/>
-    <allies numbergreaterorequal="124" debuff="ZERGDEBUFF_LVL34"/>
-    <allies numbergreaterorequal="136" debuff="ZERGDEBUFF_LVL35"/> 
-    <allies numbergreaterorequal="151" debuff="ZERGDEBUFF_LVL36"/>
-    <allies numbergreaterorequal="156" debuff="ZERGDEBUFF_LVL37"/>
-    <allies numbergreaterorequal="160" debuff="ZERGDEBUFF_LVL38"/>
-    <allies numbergreaterorequal="166" debuff="ZERGDEBUFF_LVL39"/>
-    <allies numbergreaterorequal="171" debuff="ZERGDEBUFF_LVL40"/>
-    <allies numbergreaterorequal="177" debuff="ZERGDEBUFF_LVL41"/>
-    <allies numbergreaterorequal="183" debuff="ZERGDEBUFF_LVL42"/>
-    <allies numbergreaterorequal="190" debuff="ZERGDEBUFF_LVL43"/>
-    <allies numbergreaterorequal="196" debuff="ZERGDEBUFF_LVL44"/>
-    <allies numbergreaterorequal="203" debuff="ZERGDEBUFF_LVL45"/>     
-    <allies numbergreaterorequal="211" debuff="ZERGDEBUFF_LVL46"/>
-    <allies numbergreaterorequal="219" debuff="ZERGDEBUFF_LVL47"/>
-    <allies numbergreaterorequal="227" debuff="ZERGDEBUFF_LVL48"/>
-    <allies numbergreaterorequal="236" debuff="ZERGDEBUFF_LVL49"/>
-    <allies numbergreaterorequal="246" debuff="ZERGDEBUFF_LVL50"/>
-    <allies numbergreaterorequal="255" debuff="ZERGDEBUFF_LVL51"/>
-    <allies numbergreaterorequal="266" debuff="ZERGDEBUFF_LVL52"/>
-    <allies numbergreaterorequal="278" debuff="ZERGDEBUFF_LVL53"/>
-    <allies numbergreaterorequal="290" debuff="ZERGDEBUFF_LVL54"/>
-    <allies numbergreaterorequal="302" debuff="ZERGDEBUFF_LVL55"/>
-    <allies numbergreaterorequal="316" debuff="ZERGDEBUFF_LVL56"/>
-    <allies numbergreaterorequal="331" debuff="ZERGDEBUFF_LVL57"/>
-    <allies numbergreaterorequal="347" debuff="ZERGDEBUFF_LVL58"/>
-    <allies numbergreaterorequal="363" debuff="ZERGDEBUFF_LVL59"/>
-    <allies numbergreaterorequal="382" debuff="ZERGDEBUFF_LVL60"/>
-    <allies numbergreaterorequal="401" debuff="ZERGDEBUFF_LVL61"/>
+    <allies numbergreaterorequal="255" debuff="ZERGDEBUFF_LVL51" damagemodifier="0.49" ccdurationmodifier="0.49"/>
+    <allies numbergreaterorequal="266" debuff="ZERGDEBUFF_LVL52" damagemodifier="0.48" ccdurationmodifier="0.48"/>
+    <allies numbergreaterorequal="278" debuff="ZERGDEBUFF_LVL53" damagemodifier="0.47" ccdurationmodifier="0.47"/>
+    <allies numbergreaterorequal="290" debuff="ZERGDEBUFF_LVL54" damagemodifier="0.46" ccdurationmodifier="0.46"/>
+    <allies numbergreaterorequal="302" debuff="ZERGDEBUFF_LVL55" damagemodifier="0.45" ccdurationmodifier="0.45"/>
+    <allies numbergreaterorequal="316" debuff="ZERGDEBUFF_LVL56" damagemodifier="0.44" ccdurationmodifier="0.44"/>
+    <allies numbergreaterorequal="331" debuff="ZERGDEBUFF_LVL57" damagemodifier="0.43" ccdurationmodifier="0.43"/>
+    <allies numbergreaterorequal="347" debuff="ZERGDEBUFF_LVL58" damagemodifier="0.42" ccdurationmodifier="0.42"/>
+    <allies numbergreaterorequal="363" debuff="ZERGDEBUFF_LVL59" damagemodifier="0.41" ccdurationmodifier="0.41"/>
+    <allies numbergreaterorequal="382" debuff="ZERGDEBUFF_LVL60" damagemodifier="0.40" ccdurationmodifier="0.40"/>
+    <allies numbergreaterorequal="401" debuff="ZERGDEBUFF_LVL61" damagemodifier="0.39" ccdurationmodifier="0.39"/>
     -->
   </ZergDebuff>
   <RareResources checkintervall="3600">
@@ -851,13 +848,6 @@
     <QualityLevel level="4" weight="10"/>
     <QualityLevel level="5" weight="1"/>
   </CraftingQualityChances>
-  <CraftingQualityBonusIncreaseByRequirement>
-    <Item level="1" bonus="0"/>
-    <Item level="2" bonus="100"/>
-    <Item level="3" bonus="200"/>
-    <Item level="4" bonus="300"/>
-    <Item level="5" bonus="400"/>
-  </CraftingQualityBonusIncreaseByRequirement>
   <FameGainFactors itemvaluetofameprogressionfactor="1.5" progressionstarttier="3">
     <KillPlayerIv factor="1.0"/> <!-- equivalent to durability / resource loss -->
     <GatherResource factor="1"/>
@@ -1417,7 +1407,8 @@
   </Expedition>
   <PersonalStatement characterlimit="270" />
   <FeaturedFeature>
-    <FeatureDetail id="defaultad" utcstartdate="2020-08-12T10:15:00" utcenddate="2020-09-09T10:00:00" showad="DEFAULT" showcount="1" counttype="percharacter"/>
+	<!-- <FeatureDetail id="SubscriptionPromo" utcstartdate="2020-10-21T10:15:00" utcenddate="2021-10-20T10:00:00" showad="SubscriptionPromo" showcount="1" nativeonly="true" counttype="peraccount"/> -->
+	<FeatureDetail id="KnightAdventurerBundle" utcstartdate="2020-10-21T10:15:00" utcenddate="2021-10-25T10:00:00" showad="KnightAdventurerBundle" showcount="1" counttype="peraccount"/>
     <FeatureDetail id="extragoldnative" utcstartdate="2020-09-04T10:15:00" utcenddate="2021-09-04T10:00:00" showhint="EXTRA_GOLD_ON_NATIVE" showcount="2" nativeonly="true" counttype="peraccount"/>
   </FeaturedFeature>
   <SiegeCampBank size="64" weightlimit="10000.0">

@@ -79,6 +79,9 @@
         <flag id="halloween">
           <displayname name="Hallowed Ground" />
         </flag>
+		    <flag id="halloween_solo">
+          <displayname name="Hallowed Ground" />
+        </flag>
       </Subset>
     </Faction>
     <Faction name="KEEPER" defaultname="Hidden Caverns">
@@ -259,18 +262,16 @@
 	  <!-- for Debug Cluster -->
       <Subtype name="SOLO">
         <ClusterTier tier="1" maxfillratio="0.5">
-          <RandomExit name="T6_KEEPER_SOLO" weight="1" />
+          <RandomExit name="CORRUPTED_SOLO" weight="1" />
         </ClusterTier>
       </Subtype>
       <Subtype name="VETERAN">
         <ClusterTier tier="1" maxfillratio="0.5">
           <RandomExit name="CORRUPTED_SOLO" weight="1" />
-		  <RandomExit name="T6_KEEPER_LEGACY_SOLO" weight="1" />
-          <RandomExit name="T6_KEEPER_SOLO" weight="1" />
+          <RandomExit name="T6_KEEPER" weight="1" />
           <RandomExit name="T5_MORGANA" weight="0" />
           <RandomExit name="T6_MORGANA" weight="0" />
           <RandomExit name="T4_PORTAL" weight="0" />
-		  <RandomExit name="T6_KEEPER_LEGACY" weight="1" />
           <!--<RandomExit name="DEBUG" weight="0" />-->
         </ClusterTier>
       </Subtype>
@@ -341,7 +342,6 @@
           <RandomExit name="T4_MORGANA" weight="9" />
           <RandomExit name="T4_PORTAL" weight="9" />
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T4_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.5">
           <RandomExit name="T5_HERETIC" weight="9" />
@@ -350,7 +350,6 @@
           <RandomExit name="T5_MORGANA" weight="9" />
           <RandomExit name="T5_PORTAL" weight="9" />
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T5_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.4">
           <RandomExit name="T6_HERETIC" weight="9" />
@@ -359,7 +358,6 @@
           <RandomExit name="T6_MORGANA" weight="9" />
           <RandomExit name="T6_PORTAL" weight="9" />          
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T6_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.3">
           <RandomExit name="T7_HERETIC" weight="9" />
@@ -368,7 +366,6 @@
           <RandomExit name="T7_MORGANA" weight="9" />
           <RandomExit name="T7_PORTAL" weight="9" />          
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T7_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.2">
           <RandomExit name="T8_HERETIC" weight="9" />
@@ -377,29 +374,53 @@
           <RandomExit name="T8_MORGANA" weight="9" />
           <RandomExit name="T8_PORTAL" weight="9" />          
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T8_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
-      </Subtype>      
+      </Subtype>
       <Subtype name="EVENT_SOLO">
         <ClusterTier tier="4" maxfillratio="1">
+          <!--
           <RandomExit name="T4_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T4_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T4_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T4_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="1">
+          <!--
           <RandomExit name="T5_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T5_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T5_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T5_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="1">
+          <!--
           <RandomExit name="T6_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T6_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T6_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T6_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="1">
+          <!--
           <RandomExit name="T7_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T7_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T7_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T7_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="1">
+          <!--
           <RandomExit name="T8_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T8_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T8_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T8_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
       </Subtype>      
     </Continent>
@@ -437,7 +458,6 @@
           <RandomExit name="T4_MORGANA" weight="9" />
           <RandomExit name="T4_PORTAL" weight="9" />
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T4_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="4" maxfillratio="0.5">
           <RandomExit name="T4_HERETIC" weight="9" />
@@ -446,7 +466,6 @@
           <RandomExit name="T4_MORGANA" weight="9" />
           <RandomExit name="T4_PORTAL" weight="9" />          
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T4_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.5">
           <RandomExit name="T5_HERETIC" weight="9" />
@@ -455,7 +474,6 @@
           <RandomExit name="T5_MORGANA" weight="9" />
           <RandomExit name="T5_PORTAL" weight="9" />
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T5_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.4">
           <RandomExit name="T6_HERETIC" weight="1" />
@@ -465,7 +483,6 @@
           <RandomExit name="T6_PORTAL" weight="1" />
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T6_AVALON_ELITE" weight="0" />
-          <!--<RandomExit name="T6_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.3">
           <RandomExit name="T7_HERETIC" weight="9" />
@@ -475,7 +492,6 @@
           <RandomExit name="T7_PORTAL" weight="9" />          
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_AVALON_ELITE" weight="0" />
-          <!--<RandomExit name="T7_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.2">
           <RandomExit name="T8_HERETIC" weight="9" />
@@ -484,7 +500,6 @@
           <RandomExit name="T8_MORGANA" weight="9" />
           <RandomExit name="T8_PORTAL" weight="9" />
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          <!--<RandomExit name="T8_UNDEAD_HALLOWEEN" weight="5" />-->
         </ClusterTier>
       </Subtype>
       <Subtype name="ELITE">
@@ -518,24 +533,49 @@
       </Subtype>      
       <Subtype name="EVENT_SOLO">
         <ClusterTier tier="4" maxfillratio="1">
+          <!--
           <RandomExit name="T4_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T4_KEEPER_LEGACY" weight="1" />
+          -->
+          
+          <RandomExit name="T4_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T4_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="1">
+          <!--
           <RandomExit name="T5_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T5_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T5_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T5_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="1">
+          <!--
           <RandomExit name="T6_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T6_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T6_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T6_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="1">
+          <!--
           <RandomExit name="T7_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T7_KEEPER_LEGACY" weight="1" />
+          -->
+
+          <RandomExit name="T7_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T7_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="1">
+          <!--
           <RandomExit name="T8_KEEPER_LEGACY_SOLO" weight="19" />
           <RandomExit name="T8_KEEPER_LEGACY" weight="1" />
+          -->
+          
+          <RandomExit name="T8_UNDEAD_HALLOWEEN_SOLO" weight="19" />
+          <RandomExit name="T8_UNDEAD_HALLOWEEN" weight="1" />
         </ClusterTier>
       </Subtype>      
     </Continent>
@@ -630,6 +670,23 @@
 		  <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
+      </biome>
     </Visualization>
     <!--Solo-->
     <Visualization name="KEEPER_SOLO">
@@ -686,6 +743,17 @@
         </subbiome>
         <subbiome name="Dead">
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_KPR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_KPR_SOLO" />
         </subbiome>
       </biome>
     </Visualization>
@@ -745,6 +813,17 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_HER_SOLO" />
+        </subbiome>
+      </biome>
     </Visualization>
     <Visualization name="UNDEAD_SOLO">
       <biome name="Forest">
@@ -802,6 +881,17 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_UND_SOLO" />
+        </subbiome>
+      </biome>
     </Visualization>
     <Visualization name="MORGANA_SOLO">
       <biome name="Forest">
@@ -857,6 +947,17 @@
         </subbiome>
         <subbiome name="Dead">
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_MOR_SOLO" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_MOR_SOLO" />
         </subbiome>
       </biome>
     </Visualization>
@@ -946,6 +1047,23 @@
 		  <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </subbiome>
+      </biome>
     </Visualization>
     <!--Event-->
     <Visualization name="KEEPER_LEGACY_SOLO">
@@ -994,6 +1112,17 @@
         </subbiome>
       </biome>
       <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
         <subbiome name="Green">
           <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_KPR_LEGACY" />
         </subbiome>
@@ -1063,6 +1192,17 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_KPR" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_KPR" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_KPR" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_KPR" />
+        </subbiome>
+      </biome>
     </Visualization>
     <Visualization name="HERETIC">
       <biome name="Forest">
@@ -1118,6 +1258,17 @@
         </subbiome>
         <subbiome name="Dead">
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_HER" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_HER" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_HER" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_HER" />
         </subbiome>
       </biome>
     </Visualization>
@@ -1177,6 +1328,17 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_UND" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_UND" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_UND" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_UND" />
+        </subbiome>
+      </biome>
     </Visualization>  
     <Visualization name="MORGANA">
       <biome name="Forest">
@@ -1234,6 +1396,17 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_MOR" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_MOR" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_MOR" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_MOR" />
+        </subbiome>
+      </biome>
     </Visualization>
     <Visualization name="PORTAL">
       <biome name="Forest">
@@ -1289,6 +1462,17 @@
         </subbiome>
         <subbiome name="Dead">
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL" />
         </subbiome>
       </biome>
     </Visualization>
@@ -1350,9 +1534,21 @@
           <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_20x20_AVA_ELITE" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_20x20_AVA_ELITE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_20x20_AVA_ELITE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_20x20_AVA_ELITE" />
+        </subbiome>
+      </biome>
     </Visualization>
 
     <!--Event-->
+    <!--
     <Visualization name="KEEPER_LEGACY_GROUP">
       <biome name="Forest">
         <subbiome name="Green">
@@ -1409,20 +1605,20 @@
           <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
         </subbiome>
       </biome>
-    </Visualization>
-    <!--
-    <Visualization name="HALLOWEEN">
-      <biome name="Default">
+      <biome name="Hell">
         <subbiome name="Green">
-          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
         </subbiome>
         <subbiome name="Red">
-          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+          <prefab name="RANDOM_EXIT_10x10_KPR_LEGACY" />
         </subbiome>
       </biome>
+    </Visualization>
+    -->
+    <Visualization name="HALLOWEEN">
       <biome name="Forest">
         <subbiome name="Green">
           <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
@@ -1478,8 +1674,86 @@
           <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
         </subbiome>
       </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="RANDOM_EXIT_10x10_HALLOWEEN" />
+        </subbiome>
+      </biome>
     </Visualization>
-    -->
+    <Visualization name="HALLOWEEN_SOLO">
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+      <biome name="Highlands">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+      <biome name="Mountains">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+      <biome name="Hell">
+        <subbiome name="Green">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SHARED_RANDOM_EXIT_10x10_PORTAL_SOLO_HALLOWEEN" />
+        </subbiome>
+      </biome>
+    </Visualization>
   </RandomExitVisualizations>
 
   <RandomExits>    
@@ -1502,152 +1776,8 @@
 
     <!--  ############  -->
     <!-- ###  Solo  ### -->
-    <!--  ############  -->    
-
-    <!--Heretic-->
-    <RandomExit name="T4_HERETIC_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="4" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T5_HERETIC_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="5" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T6_HERETIC_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="6" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T7_HERETIC_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="7" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T8_HERETIC_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_SOLO" tier="8" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>    
-
-    <!--Undead-->
-    <RandomExit name="T4_UNDEAD_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="4" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T5_UNDEAD_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="5" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T6_UNDEAD_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="6" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T7_UNDEAD_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="7" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T8_UNDEAD_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" tier="8" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <!--Keeper-->
-    <RandomExit name="T4_KEEPER_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="4" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T5_KEEPER_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="5" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T6_KEEPER_SOLO" activationtime="120" cooldown="0" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="6" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T7_KEEPER_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="7" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T8_KEEPER_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_SOLO" tier="8" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <!--Morgana-->
-    <RandomExit name="T4_MORGANA_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="4" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T5_MORGANA_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="5" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T6_MORGANA_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="6" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T7_MORGANA_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="7" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
-    <RandomExit name="T8_MORGANA_SOLO" activationtime="60" cooldown="120" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_SOLO" tier="8" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_SOLO"/>
-    </RandomExit>
-
+    <!--  ############  -->  
+    
     <!--Portal-->
     <RandomExit name="T3_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
@@ -1733,6 +1863,42 @@
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+
+    <!--HALLOWEEN-->
+    <RandomExit name="T4_UNDEAD_HALLOWEEN_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_HALLOWEEN_DUNGEON_SOLO" tier="4" />
+      </RandomDungeonGenerators>
+      <Visualization ref="HALLOWEEN_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T5_UNDEAD_HALLOWEEN_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_HALLOWEEN_DUNGEON_SOLO" tier="5" />
+      </RandomDungeonGenerators>
+      <Visualization ref="HALLOWEEN_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T6_UNDEAD_HALLOWEEN_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_HALLOWEEN_DUNGEON_SOLO" tier="6" />
+      </RandomDungeonGenerators>
+      <Visualization ref="HALLOWEEN_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T7_UNDEAD_HALLOWEEN_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_HALLOWEEN_DUNGEON_SOLO" tier="7" />
+      </RandomDungeonGenerators>
+      <Visualization ref="HALLOWEEN_SOLO"/>
+    </RandomExit>
+
+    <RandomExit name="T8_UNDEAD_HALLOWEEN_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_HALLOWEEN_DUNGEON_SOLO" tier="8" />
+      </RandomDungeonGenerators>
+      <Visualization ref="HALLOWEEN_SOLO"/>
     </RandomExit>
     
     <!--LEGACY-->
@@ -2063,35 +2229,35 @@
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="4" />
       </RandomDungeonGenerators>
-      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
     </RandomExit>
 
     <RandomExit name="T5_KEEPER_LEGACY" activationtime="60" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="5" />
       </RandomDungeonGenerators>
-      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
     </RandomExit>
 
     <RandomExit name="T6_KEEPER_LEGACY" activationtime="60" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="6" />
       </RandomDungeonGenerators>
-      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
     </RandomExit>
 
     <RandomExit name="T7_KEEPER_LEGACY" activationtime="60" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="7" />
       </RandomDungeonGenerators>
-      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
     </RandomExit>
 
     <RandomExit name="T8_KEEPER_LEGACY" activationtime="60" cooldown="600" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_LEGACY_DUNGEON" tier="8" />
       </RandomDungeonGenerators>
-      <Visualization ref="KEEPER_LEGACY_GROUP"/>
+      <Visualization ref="KEEPER_LEGACY_SOLO"/>
     </RandomExit>
 
     <!--  #############  -->
@@ -2934,31 +3100,57 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-	<RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON SOLO">
-      <Faction name="KEEPER">
-        <Subset name="tribe" />
-      </Faction>
-      <Flags>
-        <Flag name="legacy_solo"/>
-      </Flags>
-      <Environments>
-        <Environment name="indoor" weight="1">
-          <Subset name="cave_01" weight="1" />
-        </Environment>
-      </Environments>
-      <DungeonSizeAndDepth>
-        <Size floors="1" weight="1">
-          <BossRarity>
-            <highlight name="uncommon" weight="1" />
-          </BossRarity>
-          <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
-            <DungeonLength pathlength="0" highlightCount="0" weight="1">
-              <highlight name="standard" weight="1" />
-            </DungeonLength>
-          </Floor>
-        </Size>
-      </DungeonSizeAndDepth>
-    </RandomDungeonGenerator>
+    
+	  <RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON SOLO">
+        <Faction name="KEEPER">
+          <Subset name="tribe" />
+        </Faction>
+        <Flags>
+          <Flag name="legacy_solo"/>
+        </Flags>
+        <Environments>
+          <Environment name="indoor" weight="1">
+            <Subset name="cave_01" weight="1" />
+          </Environment>
+        </Environments>
+        <DungeonSizeAndDepth>
+          <Size floors="1" weight="1">
+            <BossRarity>
+              <highlight name="uncommon" weight="1" />
+            </BossRarity>
+            <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
+              <DungeonLength pathlength="0" highlightCount="0" weight="1">
+                <highlight name="standard" weight="1" />
+              </DungeonLength>
+            </Floor>
+          </Size>
+        </DungeonSizeAndDepth>
+      </RandomDungeonGenerator>
+	  <RandomDungeonGenerator name="UNDEAD_HALLOWEEN_DUNGEON_SOLO">
+        <Faction name="UNDEAD">
+          <Subset name="castle" />
+        </Faction>
+        <Flags>
+          <Flag name="halloween_solo"/>
+        </Flags>
+        <Environments>
+          <Environment name="indoor" weight="1">
+            <Subset name="cave_01" weight="1" />
+          </Environment>
+        </Environments>
+        <DungeonSizeAndDepth>
+          <Size floors="1" weight="1">
+            <BossRarity>
+              <highlight name="uncommon" weight="1" />
+            </BossRarity>
+            <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
+              <DungeonLength pathlength="0" highlightCount="0" weight="1">
+                <highlight name="standard" weight="1" />
+              </DungeonLength>
+            </Floor>
+          </Size>
+        </DungeonSizeAndDepth>
+      </RandomDungeonGenerator>
 	
     <!--VETERANS-->
     <RandomDungeonGenerator name="HERETIC_RANDOM_DUNGEON">
@@ -4140,31 +4332,6 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-    <RandomDungeonGenerator name="UNDEAD_HALLOWEEN_DUNGEON">
-      <Faction name="UNDEAD">
-        <Subset name="castle" />
-      </Faction>
-      <Flags>
-        <Flag name="halloween"/>
-      </Flags>
-      <Environments>
-        <Environment name="indoor" weight="1">
-          <Subset name="cave_01" weight="1" />
-        </Environment>
-      </Environments>
-      <DungeonSizeAndDepth>
-        <Size floors="1" weight="1">
-          <BossRarity>
-            <highlight name="uncommon" weight="1" />
-          </BossRarity>
-          <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
-            <DungeonLength pathlength="0" highlightCount="0" weight="1">
-              <highlight name="standard" weight="1" />
-            </DungeonLength>
-          </Floor>
-        </Size>
-      </DungeonSizeAndDepth>
-    </RandomDungeonGenerator>
     <RandomDungeonGenerator name="KEEPER_RANDOM_DUNGEON">
       <Faction name="KEEPER">
         <Subset name="tribe" />
@@ -4558,12 +4725,38 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-	<RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON">
-      <Faction name="KEEPER">
-        <Subset name="tribe" />
+    
+	  <RandomDungeonGenerator name="KEEPER_LEGACY_DUNGEON">
+        <Faction name="KEEPER">
+          <Subset name="tribe" />
+        </Faction>
+        <Flags>
+          <Flag name="legacy_group"/>
+        </Flags>
+        <Environments>
+          <Environment name="indoor" weight="1">
+            <Subset name="cave_01" weight="1" />
+          </Environment>
+        </Environments>
+        <DungeonSizeAndDepth>
+          <Size floors="1" weight="1">
+            <BossRarity>
+              <highlight name="uncommon" weight="1" />
+            </BossRarity>
+            <Floor level="1" enforceInDirection="Forward" enforceOutDirection="Forward">
+              <DungeonLength pathlength="0" highlightCount="0" weight="1">
+                <highlight name="standard" weight="1" />
+              </DungeonLength>
+            </Floor>
+          </Size>
+        </DungeonSizeAndDepth>
+      </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="UNDEAD_HALLOWEEN_DUNGEON">
+      <Faction name="UNDEAD">
+        <Subset name="castle" />
       </Faction>
       <Flags>
-        <Flag name="legacy_group"/>
+        <Flag name="halloween"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="1">
@@ -4709,10 +4902,6 @@
         </Environment>
 		<Environment name="outdoor" weight="0.1">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -4840,10 +5029,6 @@
         </Environment>
 		<Environment name="outdoor" weight="0.1">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -5046,10 +5231,6 @@
         </Environment>
 		<Environment name="outdoor" weight="0.1">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -5252,10 +5433,6 @@
         </Environment>
 		<Environment name="outdoor" weight="0.1">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -5458,10 +5635,6 @@
         </Environment>
 		<Environment name="outdoor" weight="0.1">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -5662,10 +5835,6 @@
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -6058,10 +6227,6 @@
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -6454,10 +6619,6 @@
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -6850,10 +7011,6 @@
       <Environments>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -7257,10 +7414,6 @@
         </Environment>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -7601,10 +7754,6 @@
         </Environment>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -7945,10 +8094,6 @@
         </Environment>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -8289,10 +8434,6 @@
         </Environment>
         <Environment name="outdoor" weight="10">
           <Subset name="forest" />
-          <Subset name="highlands" />
-          <Subset name="mountain" />
-          <Subset name="steppe" />
-          <Subset name="swamp" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>

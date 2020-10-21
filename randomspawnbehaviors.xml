@@ -42,6 +42,26 @@
     </default>
   </spawnbehavior>
   <!--Halloween-->
+  <spawnbehavior name="EVENT_HALLOWEEN_SOLO_BOSS">
+    <clustertype tier="4" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T4_MOB_EVENT_HALLOWEEN_BOSS" weight="1"/>
+    </clustertype>
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_EVENT_HALLOWEEN_BOSS" weight="12"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_EVENT_HALLOWEEN_BOSS" weight="12"/>
+    </clustertype>
+    <clustertype tier="7" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T7_MOB_EVENT_HALLOWEEN_BOSS" weight="12"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_EVENT_HALLOWEEN_BOSS" weight="12"/>
+    </clustertype>
+    <default respawntimesecondsmin="99999" respawntimesecondsmax="99999" charges="13">
+      <mob name="T4_MOB_EVENT_HALLOWEEN_BOSS" weight="1"/>
+    </default>
+  </spawnbehavior>
   <spawnbehavior name="EVENT_HALLOWEEN_BOSS">
     <clustertype tier="4" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T4_MOB_EVENT_HALLOWEEN_VETERAN_BOSS" weight="1"/>
@@ -60,6 +80,26 @@
     </clustertype>
     <default respawntimesecondsmin="99999" respawntimesecondsmax="99999" charges="13">
       <mob name="T4_MOB_EVENT_HALLOWEEN_VETERAN_BOSS" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="EVENT_HALLOWEEN_PUMPKIN_SOLO_TRASH">
+    <clustertype tier="4" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T4_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="1"/>
+    </clustertype>
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="12"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="12"/>
+    </clustertype>
+    <clustertype tier="7" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T7_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="12"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="12"/>
+    </clustertype>
+    <default respawntimesecondsmin="99999" respawntimesecondsmax="99999" charges="13">
+      <mob name="T4_MOB_EVENT_HALLOWEEN_PUMPKIN" weight="1"/>
     </default>
   </spawnbehavior>
   <spawnbehavior name="EVENT_HALLOWEEN_PUMPKIN_TRASH">
@@ -1765,33 +1805,89 @@
   <!-- Category Spawnpoints -->
   <spawnbehavior name="CD_DEMON_CATEGORY_A">
     <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T5_MOB_CD_DEMON_IMP" weight="1"/>
+      <mob name="T5_MOB_CD_DEMON_IMP" weight="1" group="IMP"/>
+      <mob name="T5_MOB_CD_DEMON_HELLHOUND" weight="1" group="HOUND"/>
     </clustertype>
     <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T6_MOB_CD_DEMON_IMP" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_IMP" weight="1" group="IMP"/>
+      <mob name="T6_MOB_CD_DEMON_HELLHOUND" weight="1" group="HOUND"/>
     </clustertype>
     <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T8_MOB_CD_DEMON_IMP" weight="1"/>
+      <mob name="T8_MOB_CD_DEMON_IMP" weight="1" group="IMP"/>
+      <mob name="T8_MOB_CD_DEMON_HELLHOUND" weight="1" group="HOUND"/>
     </clustertype>
     <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T6_MOB_CD_DEMON_IMP" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_IMP" weight="1" group="IMP"/>
+      <mob name="T6_MOB_CD_DEMON_HELLHOUND" weight="1" group="HOUND"/>
     </default>
   </spawnbehavior>
   <spawnbehavior name="CD_DEMON_MINOR_HERETICS">
     <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_HER_THIEF" weight="1" group="TM"/>
+      <mob name="T5_MOB_CD_DEMON_HER_MAGE" weight="1" group="TM"/>
+      <mob name="T5_MOB_CD_DEMON_HER_THIEF" weight="1" group="DT"/>
+      <mob name="T5_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DT"/>
+      <mob name="T5_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DM"/>
+      <mob name="T5_MOB_CD_DEMON_HER_MAGE" weight="1" group="DM"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1" group="TM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1" group="TM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1" group="DT"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DT"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1" group="DM"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_HER_THIEF" weight="1" group="TM"/>
+      <mob name="T8_MOB_CD_DEMON_HER_MAGE" weight="1" group="TM"/>
+      <mob name="T8_MOB_CD_DEMON_HER_THIEF" weight="1" group="DT"/>
+      <mob name="T8_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DT"/>
+      <mob name="T8_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DM"/>
+      <mob name="T8_MOB_CD_DEMON_HER_MAGE" weight="1" group="DM"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1" group="TM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1" group="TM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1" group="DT"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DT"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1" group="DM"/>
+      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1" group="DM"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_MINOR_HERETICS_TD">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T5_MOB_CD_DEMON_HER_THIEF" weight="1"/>
-      <mob name="T5_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+      <mob name="T5_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
     </clustertype>
     <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1"/>
-      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
     </clustertype>
     <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T8_MOB_CD_DEMON_HER_THIEF" weight="1"/>
-      <mob name="T8_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+      <mob name="T8_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
     </clustertype>
     <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T6_MOB_CD_DEMON_HER_THIEF" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_MINOR_HERETICS_MD">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+      <mob name="T5_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+      <mob name="T8_MOB_CD_DEMON_HER_MAGE" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
       <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1"/>
     </default>
   </spawnbehavior>
@@ -1856,6 +1952,20 @@
       <mob name="T6_MOB_CD_DEMON_HER_MAGE" weight="1"/>
     </default>
   </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_HER_DUALXBOW">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HER_DUALXBOW" weight="1"/>
+    </default>
+  </spawnbehavior>
   <spawnbehavior name="CD_DEMON_HER_BRAWLER">
     <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T5_MOB_CD_DEMON_HER_BRAWLER" weight="1"/>
@@ -1889,7 +1999,8 @@
       <mob name="T5_MOB_CD_DEMON_HOOK" weight="1"/>
     </clustertype>
     <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T6_MOB_CD_DEMON_HOOK" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_SPIKED" weight="1" group="SPIKED"/>
+      <mob name="T6_MOB_CD_DEMON_HOOK" weight="1" group="HOOK"/>
     </clustertype>
     <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T8_MOB_CD_DEMON_HOOK" weight="1"/>
@@ -1904,13 +2015,56 @@
       <mob name="T5_MOB_CD_DEMON_SENTINEL" weight="1"/>
     </clustertype>
     <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
-      <mob name="T6_MOB_CD_DEMON_SENTINEL" weight="1"/>
+      <mob name="T6_MOB_CD_DEMON_MAULER" weight="1" group="MAULER"/>
+      <mob name="T6_MOB_CD_DEMON_SENTINEL" weight="1" group="SENTINEL"/>
     </clustertype>
     <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T8_MOB_CD_DEMON_SENTINEL" weight="1"/>
     </clustertype>
     <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
       <mob name="T6_MOB_CD_DEMON_SENTINEL" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_SPIKED">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_SPIKED" weight="1"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_SPIKED" weight="1"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_SPIKED" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_SPIKED" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_MAULER">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_MAULER" weight="1"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_MAULER" weight="1"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_MAULER" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_MAULER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="CD_DEMON_HELLHOUND">
+    <clustertype tier="5" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_HELLHOUND" weight="1"/>
+    </clustertype>
+    <clustertype tier="6" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HELLHOUND" weight="1"/>
+    </clustertype>
+    <clustertype tier="8" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_HELLHOUND" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_HELLHOUND" weight="1"/>
     </default>
   </spawnbehavior>
   <spawnbehavior name="CD_DEMON_MINIBOSS">
@@ -1966,9 +2120,11 @@
   </spawnbehavior>
   <spawnbehavior name="CD_DEMON_ENDBOSS">
     <clustertype tier="5" initialspawntimeseconds="3500000" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T5_MOB_CD_DEMON_BRUTE_BOSS" weight="1"/>
       <mob name="T5_MOB_CD_DEMON_SORCERER_BOSS" weight="1"/>
     </clustertype>
     <clustertype tier="6" initialspawntimeseconds="3600000" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T6_MOB_CD_DEMON_BRUTE_BOSS" weight="1"/>
       <mob name="T6_MOB_CD_DEMON_SORCERER_BOSS" weight="1"/>
       <!--
       <mob name="T6_MOB_CD_DEMON_SORCERER_BOSS_SPAWN_VARIANT" weight="1"/>
@@ -1976,6 +2132,7 @@
       -->
     </clustertype>
     <clustertype tier="8" initialspawntimeseconds="3800000" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
+      <mob name="T8_MOB_CD_DEMON_BRUTE_BOSS" weight="1"/>
       <mob name="T8_MOB_CD_DEMON_SORCERER_BOSS" weight="1"/>
     </clustertype>
     <default initialspawntimeseconds="3600000" respawntimesecondsmin="87000" respawntimesecondsmax="87000" charges="1">
@@ -2103,6 +2260,66 @@
     </clustertype>
     <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
       <mob name="T6_MOB_CD_TRAP_MAGMATHROWER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_SPIKE_SINGLE">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_SINGLE" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_SINGLE" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_SPIKE_A_COMMANDER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_COMMANDER" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_COMMANDER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_SPIKE_A_B_COMMANDER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_B_COMMANDER" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_B_COMMANDER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_SPIKE_A_FOLLOWER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_FOLLOWER" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_A_FOLLOWER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_SPIKE_B_FOLLOWER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_B_FOLLOWER" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_SPIKE_B_FOLLOWER" weight="1"/>
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_WALLTHROWER_FOLLOWER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <!--
+      <mob name="T6_MOB_CD_TRAP_WALLTHROWER_FOLLOWER" weight="1"/>
+      -->
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <!--
+      <mob name="T6_MOB_CD_TRAP_WALLTHROWER_FOLLOWER" weight="1"/>
+      -->
+    </default>
+  </spawnbehavior>
+  <spawnbehavior name="TRAP_DEMON_WALLTHROWER_COMMANDER">
+    <clustertype tier="6" respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_WALLTHROWER_SINGLE" weight="1"/>
+    </clustertype>
+    <default respawntimesecondsmin="120" respawntimesecondsmax="120" charges="1">
+      <mob name="T6_MOB_CD_TRAP_WALLTHROWER_SINGLE" weight="1"/>
     </default>
   </spawnbehavior>
   <spawnbehavior name="PATROL_WATCHER">
