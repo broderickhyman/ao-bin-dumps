@@ -1248,7 +1248,10 @@
       </extendedmissionstep>
       <extendedmissionstep locationmarkerid="AMMO" markedinworld="true" markedonminimap="true">
         <missions>
-          <usefunction function="FinishTutorial" textloca="@MISSIONS_T2_TUTORIAL_TEST_P6_SIDETEXT"/>
+          <or textloca ="@MISSIONS_T2_TUTORIAL_TEST_P6_SIDETEXT">
+            <usefunction function="FinishTutorial"/>
+            <gotolocation locationmarkerid="AMMO" markedinworld="false" markedonminimap="false" seconds="2"/>
+          </or>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
