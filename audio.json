@@ -554,6 +554,15 @@
         }
       },
       {
+        "@name": "MOUNT_SPIDER",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "spider"
+        }
+      },
+      {
         "@name": "MOUNT_ALPACA",
         "CharType": {
           "@name": "mount"
@@ -6184,6 +6193,12 @@
     ],
     "WwiseEventInfo": [
       {
+        "@name": "MOB_AVALON_CAPTAIN_BOSS",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
         "@name": "MOB_DEMON_HERETIC_BRAWLER",
         "OnMobDied": {
           "@name": "Die"
@@ -8937,6 +8952,12 @@
         }
       },
       {
+        "@name": "SPELLHIT_POISON_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_poison_impact"
+        }
+      },
+      {
         "@name": "SPELL_TOADJUMP",
         "OnCastStart": {
           "@name": "Play_mount_toad_jump"
@@ -9234,6 +9255,57 @@
         },
         "OnSpellHit": {
           "@name": "Play_self_knockback"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_SHOOT_POISON",
+        "OnCastStart": {
+          "@name": "Play_spider_cast_load_A"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_spider_cast_load_A"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_spider_cast_load_A"
+        },
+        "OnCastFinished": {
+          "@name": "Play_spider_spit_poison"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_SHOOT_WEB",
+        "OnCastStart": {
+          "@name": "Play_spider_cast_load_B"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_spider_cast_load_B"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_spider_cast_load_B"
+        },
+        "OnCastFinished": {
+          "@name": "Play_spider_shoot_web"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_COCOON_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_spider_channel_thread"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_spider_channel_thread"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_spider_channel_thread"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_spider_channel_thread"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_COCOON_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_spider_cocoon_spawn"
         }
       },
       {

@@ -268,6 +268,10 @@
     <CharType name="mount"/>
     <MountType name="beetle"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_SPIDER">
+    <CharType name="mount"/>
+    <MountType name="spider"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_ALPACA">
     <CharType name="mount"/>
     <MountType name="alpaca"/>
@@ -794,6 +798,9 @@
     <WeaponType name="hammer_huge"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_AVALON_CAPTAIN_BOSS">
+    <OnMobDied name="Die"/>
+  </WwiseEventInfo>
   <WwiseSwitchInfo name="MOB_AVALON_WOUNDED_KING_BOSS">
     <CharType name="mob"/>
     <MobFaction name="avalon"/>
@@ -3804,6 +3811,10 @@
     <OnCastFinished name="Play_poison_impact" />    
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELLHIT_POISON_IMPACT" >
+    <OnSpellHit name="Play_poison_impact" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_TOADJUMP" >
     <OnCastStart name="Play_mount_toad_jump" />
   </WwiseEventInfo>
@@ -3963,7 +3974,32 @@
     <OnCastFinished name="Play_mule_heretic_shoot" />
     <OnSpellHit name="Play_self_knockback" />
   </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_SHOOT_POISON" >
+    <OnCastStart name="Play_spider_cast_load_A" />
+    <OnCastInterrupted name="Stop_spider_cast_load_A" />
+    <OnCastCanceled name="Stop_spider_cast_load_A" />
+    <OnCastFinished name="Play_spider_spit_poison" />      
+  </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_SHOOT_WEB" >
+    <OnCastStart name="Play_spider_cast_load_B" />
+    <OnCastInterrupted name="Stop_spider_cast_load_B" />
+    <OnCastCanceled name="Stop_spider_cast_load_B" />
+    <OnCastFinished name="Play_spider_shoot_web" />      
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_COCOON_CHANNEL">
+    <OnChannelingStart name="Play_spider_channel_thread" />
+    <OnChannelingCancelled name="Stop_spider_channel_thread" />
+    <OnChannelingEnd name="Stop_spider_channel_thread" />
+    <OnChannelingInterrupted name="Stop_spider_channel_thread" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_COCOON_IMPACT">
+    <OnSpellHit name="Play_spider_cocoon_spawn" />
+  </WwiseEventInfo>
+  
   <!--****************************************************-->
   <!--*** Spells for Mobs ***-->
   <!--****************************************************-->
