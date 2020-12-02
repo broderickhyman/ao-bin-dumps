@@ -1190,7 +1190,7 @@
     <MobType name="morgana_crossbowman"/>
     <Size name="medium"/>
     <ArmorType name="plate"/>
-    <WeaponType name="bolt_swoosh"/>
+    <WeaponType name="bolt_big"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MORGANA_KNIGHT">
@@ -2482,6 +2482,11 @@
       <ImpactType/>
     </OnProjectileHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="WEAPON_HIT" >
+    <OnSpellHit name="Play_melee_impact_small_add" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
 
   <!-- Melee-->
   <WwiseEventInfo name="MELEE_SMALLCAST">
@@ -2521,6 +2526,9 @@
     <OnSpellHit name="Play_melee_impact_small_add" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SPLITTINGSLASH_SWORD">
+    <OnCastFinished name="Play_melee_splittingstrike_swoosh" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_MEDIUM_ROCK_IMPACT">
     <OnCastStart name="Play_melee_swoosh_small" />
@@ -2562,11 +2570,22 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MEDIUMCAST_NOAUTO_MEDIUMIMPACT">
+    <OnCastStart name="Play_melee_swoosh_load_medium" />
+    <OnCastFinished name="Play_melee_swoosh_small_instant" />
+    <OnSpellHit name="Play_melee_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MEDIUMCAST_BIGIMPACT">
     <OnCastStart name="Play_melee_swoosh_medium" />
     <OnSpellHit name="Play_melee_impact_big" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+   <WwiseEventInfo name="MELEE_MEDIUMCAST_ROCKIMPACT">
+    <OnCastStart name="Play_melee_swoosh_medium" />
+    <OnCastFinished name="Play_melee_impact_rock_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MEDIUMCAST_BIG_ROCK_IMPACT">
     <OnCastStart name="Play_melee_swoosh_medium" />
@@ -2604,6 +2623,11 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_BIG_ROCK_IMPACT_NO_WEAPON_IMPACT">
     <OnCastStart name="Play_melee_swoosh_small" />
+    <OnSpellHit name="Play_melee_impact_rock_big" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MEDIUMCAST_ROCK_IMPACT_NOATTACK">
+    <OnCastStart name="Play_melee_swoosh_load_medium" />
+    <OnCastFinished name="Play_melee_swoosh_small_instant" />
     <OnSpellHit name="Play_melee_impact_rock_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_MEDIUM_ROCK_IMPACT_NO_WEAPON_IMPACT">
@@ -2909,11 +2933,29 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
-    <WwiseEventInfo name="MELEE_SMALLSTRIKE_AXE">
+    <WwiseEventInfo name="MELEE_SMALLCAST_AXE_SINGLE">
+    <OnCastStart name="Play_axe_swoosh_single" />
+    <OnSpellHit name="Play_melee_impact_small_add" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SMALLSTRIKE_AXE">
     <OnCastStart name="Play_axe_swoosh_strike" />
     <OnSpellHit name="Play_melee_impact_small_add" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+    <WwiseEventInfo name="MELEE_RENDINGSWING_AXE">
+    <OnCastFinished name="Play_axe_swoosh_rendingspin" />
+    <OnSpellHit name="Play_melee_impact_small_add" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE">
+    <OnCastFinished name="Play_melee_rending_combo" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE_JUMP">
+    <OnCastFinished name="Play_melee_axe_rendingcombo_jump" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXESMASH">
     <OnCastStart name="Play_melee_axesmash" />
@@ -3597,6 +3639,7 @@
   </WwiseEventInfo>
   
   <!-- Misc -->
+
   <WwiseEventInfo name="CHARGE_INCREASE" >
     <OnCastFinished name="Play_charge_increase" />
   </WwiseEventInfo>
@@ -3651,6 +3694,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_JUMP" >
     <OnCastStart name="Play_jump" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_JUMP_ONCASTFINISHED" >
+    <OnCastFinished name="Play_jump" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_JUMP_FEAR" >
     <OnCastStart name="Play_jump" />
@@ -4211,6 +4257,11 @@
 
 
   <!-- Keeper-->
+
+  <WwiseEventInfo name="SPELL_KEEPER_AXETHROWER_DASH">
+    <OnCastFinished name="Play_mob_keeper_axethrower_dash"/>
+  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_KEEPER_BERSERKER_ENRAGE">
     <OnCastFinished name="Play_mob_damage_increase"/>
     <OnSpellHit name="Play_berserker_enrage" />
@@ -4387,10 +4438,18 @@
     <OnCastFinished name="Play_mob_morgana_fang_attack_swoosh" />
   </WwiseEventInfo>
 
-  <WwiseEventInfo name="WEAPON_HIT" >
-    <OnSpellHit name="Play_melee_impact_small_add" >
-      <ImpactType/>
-    </OnSpellHit>
+  <WwiseEventInfo name="SPELL_MORGANA_KNIGHT_DASH">
+    <OnCastStart name="Play_mob_morgana_knight_dash_load_vo" />
+    <OnCastFinished name="Play_mob_morgana_knight_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MORGANA_KNIGHT_FIREWALL">
+    <OnCastStart name="Play_melee_swoosh_load_medium" />
+    <OnCastFinished name="Play_fire_cast_stomp" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_MORGANA_CROSSBOW_JUMP">
+    <OnCastFinished name="Play_mob_morgana_crossbow_jump" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_MORGANA_FANG_DASH">
@@ -4700,6 +4759,9 @@
     <OnCastFinished name="Play_undead_stomp" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_DASH">
+    <OnCastFinished name="Play_undead_ghoul_jump" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_GHOUL_BARF">
     <OnCastStart name="Play_undead_ghoul_barf" />
     <OnCastCanceled name="Stop_undead_ghoul_barf" />
@@ -4719,6 +4781,15 @@
     <OnCastStart name="Play_undead_ghoul_boss_hurl" />
     <OnCastCanceled name="Stop_undead_ghoul_boss_hurl" />
     <OnCastInterrupted name="Stop_undead_ghoul_boss_hurl" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_SHADE_BEAM_CHANNEL">
+    <OnChannelingStart name="Play_undead_harvester_energy_drain" />
+    <OnChannelingCancelled name="Stop_undead_harvester_energy_drain" />
+    <OnChannelingEnd name="Stop_undead_harvester_energy_drain" />
+    <OnChannelingInterrupted name="Stop_undead_harvester_energy_drain" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_UNDEAD_SHADE_TELEPORT">
+    <OnCastFinished name="Play_undead_shade_teleport" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_SUMMON">
     <OnCastStart name="Play_undead_mageboss_summon" />

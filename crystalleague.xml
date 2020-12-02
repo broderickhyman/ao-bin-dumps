@@ -63,6 +63,7 @@
          arenacategory="crystal_league"
          startdatetime="2020-08-29T11:00:00Z"
          enddatetime="2020-11-23T23:59:00Z"
+         showindailylimitui="true"          
          ruleset="CRYSTAL_LEAGUE"/>
   
   <season uniquename="CL_SEASON_10_11_OFFSEASON"
@@ -87,7 +88,31 @@
          arenacategory="crystal_league"
          startdatetime="2020-12-05T11:00:00Z"
          enddatetime="2021-03-01T23:59:00Z"
+         showindailylimitui="true"
          ruleset="CRYSTAL_LEAGUE"/>
+
+
+  <!-- ============================== 20v20 SEASONS ============================== -->
+  <season uniquename="CL_CITY_OFFSEASON_10_11"
+         displayname="@SEASONS_SEASONNAME_OFFSEASON"
+         category="CRYSTAL_LEAGUE_CITY"
+         arenacategory="crystal_league_city"
+         startdatetime="2020-11-23T11:00:00Z"
+         enddatetime="2020-12-05T10:59:00Z"
+         ruleset="CRYSTAL_LEAGUE_CITY_OFFSEASON"
+		 color="#FFC300"
+		 fontcolor="#543d2c"/>
+
+  <season uniquename="CL_CITY_SEASON_11"
+         displayname="@SEASONS_SEASONNAME_SEASON_11"
+         category="CRYSTAL_LEAGUE_CITY"
+         arenacategory="crystal_league_city"
+         startdatetime="2020-12-05T11:00:00Z"
+         enddatetime="2021-03-01T23:59:00Z"
+         ruleset="CRYSTAL_LEAGUE_CITY"
+		 color="#FFC300"
+         showindailylimitui="true"
+		 fontcolor="#543d2c"/>
 
 
   <!-- ============================== RULESETS ============================== -->
@@ -1596,7 +1621,7 @@
 
   <!--CRYSTAL LEAGUE-->
   
-  <ruleset name="CRYSTAL_LEAGUE">
+  <ruleset name="CRYSTAL_LEAGUE" limitedpointsperday="true">    
     <matchtimers prebattlewarninginssec="10"
                  signupperiodinsec="1740"
                  dcendqueueinsec="90"
@@ -1608,7 +1633,7 @@
                     bonuslootlistamount="4"/>
 
     <!--LEVEL 1-->
-    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false">
+    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false" dailypointfactor="0">
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
           <weekday>
@@ -1629,7 +1654,7 @@
       </rewards>
     </match>
     <!--LEVEL 2-->
-    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2">
+    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2" dailypointfactor="2">
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
           <weekday>
@@ -1650,7 +1675,7 @@
       </rewards>
     </match>
     <!--LEVEL 3-->
-    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2">
+    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="2">
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
           <weekday>
@@ -1664,14 +1689,14 @@
         </week>
       </times>
       <rewards>        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="5"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="5"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="3"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="3"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL3"/>
         <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3"/>
       </rewards>
     </match>
     <!--LEVEL 4-->
-    <match level="4" itempowersoftcap="1200" itempowerscalingfactor="0.2">
+    <match level="4" itempowersoftcap="1200" itempowerscalingfactor="0.2" dailypointfactor="2">
       <times>
         <week weeknumber="1 3 5 7 9 11 13">        
           <weekday day="Monday">
@@ -1728,17 +1753,17 @@
         </week>      
       </times>
       <rewards>        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="15"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="15"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="8"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="8"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL4"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" gvgseasonpoints="45"/>  
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" gvgseasonpoints="24"/>  
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL4"/>  
       </rewards>
     </match>
     <!--LEVEL 5-->
-    <match level="5" itempowersoftcap="1300" itempowerscalingfactor="0.2">
+    <match level="5" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1.8">
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+        <week weeknumber="2 3 4 5 6 7 8 9 10 11 12 13">
           <weekday day="Tuesday">
             <timeslot utctime="13:30:00"/>
             <timeslot utctime="20:30:00"/>
@@ -1756,17 +1781,17 @@
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="40"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="40"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="20"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="20"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL5"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" gvgseasonpoints="120"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" gvgseasonpoints="60"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL5"/>  
       </rewards>
     </match>
     <!--LEVEL 6-->
-    <match level="6" itempowersoftcap="1400" itempowerscalingfactor="0.2">
+    <match level="6" itempowersoftcap="1400" itempowerscalingfactor="0.2" dailypointfactor="2">
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+        <week weeknumber="2 3 4 5 6 7 8 9 10 11 12 13">
           <weekday day="Saturday">
             <timeslot utctime="14:00:00"/>
             <timeslot utctime="21:00:00"/>
@@ -1777,15 +1802,15 @@
         </week>      
       </times>
       <rewards>    
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="100"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="100"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="50"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="50"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL6"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" gvgseasonpoints="300"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" gvgseasonpoints="150"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL6"/>  
       </rewards>
     </match>
     <!--LEVEL 7-->
-    <match level="7" itempowersoftcap="1500" itempowerscalingfactor="0.2">
+    <match level="7" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="1">
       <times>
         <week weeknumber="3 5 7 9 11 13">
           <weekday day="Saturday">
@@ -1798,15 +1823,15 @@
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="200"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="200"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="120"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="120"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL7"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" gvgseasonpoints="600"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" gvgseasonpoints="360"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL7"/>  
       </rewards>
     </match>
     <!--LEVEL 8-->
-    <match level="8" itempowersoftcap="1600" itempowerscalingfactor="0.2">
+    <match level="8" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="1">
       <times>
         <week weeknumber="6 10 13">
           <weekday day="Sunday">
@@ -1815,15 +1840,15 @@
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="500"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="500"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="320"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="320"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL8"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" gvgseasonpoints="1500"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" gvgseasonpoints="960"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL8"/>  
       </rewards>
     </match>
     <!--LEVEL 9-->
-    <match level="9" itempowersoftcap="1700" itempowerscalingfactor="0.2">
+    <match level="9" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1.4">
       <times>
         <week weeknumber="13">
           <weekday day="Sunday">
@@ -1840,6 +1865,181 @@
     </match>
   </ruleset>
 
+  <!--20v20 CRYSTAL LEAGUE-->
+
+  <ruleset name="CRYSTAL_LEAGUE_CITY" limitedpointsperday="true">
+    <matchtimers prebattlewarninginssec="10"
+                 signupperiodinsec="1740"
+                 dcendqueueinsec="90"
+                 restrictiondurationinsec="43200"/>
+
+    <rewardsettings crystalprizepool="1000"
+                    crystalshareamount="0.75"
+                    crystalwinnerbonus="0.25"
+                    bonuslootlistamount="4"/>
+
+    <!--LEVEL 1-->
+    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false" dailypointfactor="1.2">
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday>
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="19:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1" gvgseasonpoints="1" />
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1" gvgseasonpoints="1" />
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL1"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1"/>
+      </rewards>
+    </match>
+    <!--LEVEL 2-->
+    <match level="2" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1.6">
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday>
+            <timeslot utctime="01:30:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2" gvgseasonpoints="3"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" gvgseasonpoints="3"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL2"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2"/>
+      </rewards>
+    </match>
+    <!--LEVEL 3-->
+    <match level="3" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1.5">
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday day="Saturday">
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="19:00:00"/>
+          </weekday>
+          <weekday day="Sunday">
+            <timeslot utctime="01:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3" gvgseasonpoints="12"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3" gvgseasonpoints="12"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL3"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL3" gvgseasonpoints="36"/>
+      </rewards>
+    </match>
+    <!--LEVEL 4-->
+    <match level="4" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="1.4">
+      <times>
+        <week weeknumber="2 4 6 8 10 12 13">
+          <weekday day="Saturday">
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+          <weekday day="Sunday">
+            <timeslot utctime="01:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4" gvgseasonpoints="40"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4" gvgseasonpoints="40"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL4"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL4" gvgseasonpoints="120"/>
+      </rewards>
+    </match>
+    <!--LEVEL 5-->
+    <match level="5" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="0.8">
+      <times>
+        <week weeknumber="6 10 13">
+          <weekday day="Saturday">
+            <timeslot utctime="17:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5" gvgseasonpoints="150"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5" gvgseasonpoints="150"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL5"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL5" gvgseasonpoints="450"/>
+      </rewards>
+    </match>
+    <!--LEVEL 6-->
+    <match level="6" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1">
+      <times>
+        <week weeknumber="13">
+          <weekday day="Saturday">
+            <timeslot utctime="18:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" gvgseasonpoints="500"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" gvgseasonpoints="500"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL6"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6" gvgseasonpoints="1500"/>
+      </rewards>
+    </match>
+  </ruleset>
+
+
+  <!--20v20 CRYSTAL LEAGUE - OFFSEASON-->
+  
+  <ruleset name="CRYSTAL_LEAGUE_CITY_OFFSEASON">
+    <matchtimers prebattlewarninginssec="10"
+                 signupperiodinsec="1740"
+                 dcendqueueinsec="90"
+                 restrictiondurationinsec="43200"/>
+
+    <rewardsettings crystalprizepool="1000"
+                    crystalshareamount="0.75"
+                    crystalwinnerbonus="0.25"
+                    bonuslootlistamount="4"/>
+
+    <!--LEVEL 1-->
+    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false">
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15">
+          <weekday>
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="14:00:00"/>
+            <timeslot utctime="20:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL1"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1"/>
+      </rewards>
+    </match>
+    <!--LEVEL 2-->
+    <match level="2" itempowersoftcap="1100" itempowerscalingfactor="0.2">
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8">
+          <weekday>
+            <timeslot utctime="01:30:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2_OFFSEASON"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2_OFFSEASON"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL2_OFFSEASON"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2_OFFSEASON"/>
+      </rewards>
+    </match>
+  </ruleset>
+  
   <!-- TESTING - DEBUG RULESET  -->
   
   <ruleset name="RULESET_DEBUG">
