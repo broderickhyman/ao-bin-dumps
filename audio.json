@@ -2911,7 +2911,7 @@
           "@name": "plate"
         },
         "WeaponType": {
-          "@name": "bolt_swoosh"
+          "@name": "bolt_big"
         },
         "MountType": {
           "@name": "empty"
@@ -6307,6 +6307,13 @@
         }
       },
       {
+        "@name": "WEAPON_HIT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "MELEE_SMALLCAST",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_small"
@@ -6365,6 +6372,12 @@
         "OnSpellHit": {
           "@name": "Play_melee_impact_small_add",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_SPLITTINGSLASH_SWORD",
+        "OnCastFinished": {
+          "@name": "Play_melee_splittingstrike_swoosh"
         }
       },
       {
@@ -6435,6 +6448,19 @@
         }
       },
       {
+        "@name": "MELEE_MEDIUMCAST_NOAUTO_MEDIUMIMPACT",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_medium"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_small_instant"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "MELEE_MEDIUMCAST_BIGIMPACT",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_medium"
@@ -6442,6 +6468,15 @@
         "OnSpellHit": {
           "@name": "Play_melee_impact_big",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_MEDIUMCAST_ROCKIMPACT",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_medium"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_impact_rock_medium"
         }
       },
       {
@@ -6513,6 +6548,18 @@
         "@name": "MELEE_BIGCAST_BIG_ROCK_IMPACT_NO_WEAPON_IMPACT",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_small"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_rock_big"
+        }
+      },
+      {
+        "@name": "MELEE_MEDIUMCAST_ROCK_IMPACT_NOATTACK",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_medium"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_small_instant"
         },
         "OnSpellHit": {
           "@name": "Play_melee_impact_rock_big"
@@ -7092,6 +7139,16 @@
         }
       },
       {
+        "@name": "MELEE_SMALLCAST_AXE_SINGLE",
+        "OnCastStart": {
+          "@name": "Play_axe_swoosh_single"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "MELEE_SMALLSTRIKE_AXE",
         "OnCastStart": {
           "@name": "Play_axe_swoosh_strike"
@@ -7099,6 +7156,28 @@
         "OnSpellHit": {
           "@name": "Play_melee_impact_small_add",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_RENDINGSWING_AXE",
+        "OnCastFinished": {
+          "@name": "Play_axe_swoosh_rendingspin"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_RENDINGCOMBO_AXE",
+        "OnCastFinished": {
+          "@name": "Play_melee_rending_combo"
+        }
+      },
+      {
+        "@name": "MELEE_RENDINGCOMBO_AXE_JUMP",
+        "OnCastFinished": {
+          "@name": "Play_melee_axe_rendingcombo_jump"
         }
       },
       {
@@ -8660,6 +8739,12 @@
         }
       },
       {
+        "@name": "SPELL_JUMP_ONCASTFINISHED",
+        "OnCastFinished": {
+          "@name": "Play_jump"
+        }
+      },
+      {
         "@name": "SPELL_JUMP_FEAR",
         "OnCastStart": {
           "@name": "Play_jump"
@@ -9688,6 +9773,12 @@
         }
       },
       {
+        "@name": "SPELL_KEEPER_AXETHROWER_DASH",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_axethrower_dash"
+        }
+      },
+      {
         "@name": "SPELL_KEEPER_BERSERKER_ENRAGE",
         "OnCastFinished": {
           "@name": "Play_mob_damage_increase"
@@ -9994,10 +10085,27 @@
         }
       },
       {
-        "@name": "WEAPON_HIT",
-        "OnSpellHit": {
-          "@name": "Play_melee_impact_small_add",
-          "ImpactType": null
+        "@name": "SPELL_MORGANA_KNIGHT_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_morgana_knight_dash_load_vo"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_knight_dash"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_KNIGHT_FIREWALL",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_medium"
+        },
+        "OnCastFinished": {
+          "@name": "Play_fire_cast_stomp"
+        }
+      },
+      {
+        "@name": "SPELL_MORGANA_CROSSBOW_JUMP",
+        "OnCastFinished": {
+          "@name": "Play_mob_morgana_crossbow_jump"
         }
       },
       {
@@ -10562,6 +10670,12 @@
         }
       },
       {
+        "@name": "SPELL_UNDEAD_GHOUL_DASH",
+        "OnCastFinished": {
+          "@name": "Play_undead_ghoul_jump"
+        }
+      },
+      {
         "@name": "SPELL_UNDEAD_GHOUL_BARF",
         "OnCastStart": {
           "@name": "Play_undead_ghoul_barf"
@@ -10607,6 +10721,27 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_undead_ghoul_boss_hurl"
+        }
+      },
+      {
+        "@name": "SPELL_UNDEAD_SHADE_BEAM_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_undead_harvester_energy_drain"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_undead_harvester_energy_drain"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_undead_harvester_energy_drain"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_undead_harvester_energy_drain"
+        }
+      },
+      {
+        "@name": "SPELL_UNDEAD_SHADE_TELEPORT",
+        "OnCastFinished": {
+          "@name": "Play_undead_shade_teleport"
         }
       },
       {
