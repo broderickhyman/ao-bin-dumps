@@ -27,7 +27,8 @@
       ExitCooldownOnJoinInSeconds="0"
       EarlyRetreatTimeWindowInSeconds="60"
       EarlyRetreatPenaltyInSeconds="600"
-      SkipClusterCooldownInSeconds="125"/>
+      SkipClusterCooldownInSeconds="125"
+      MinActiveTimeBeforeSkippingAllowed="120"/>
 
     <transactionlimits>	    
 		<gold GoldTransactionLimitUntrustedPerDay="100" 
@@ -1382,18 +1383,18 @@
    <GoldPurchasePackage name="GOLDPACKAGE5" gold="21000" price="99.95"/>
   </GoldPurchasePackages>
   <ClusterDangerBonusTypes>
-    <ClusterDangerBonus type="safe" icon="safe" famefactor="1.8" moblootfactor="1.25" mobsilverlootfactor="1.25"/>
-    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
-    <ClusterDangerBonus type="red"  icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
-    <ClusterDangerBonus type="black"  icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="2.6"/>
-    <ClusterDangerBonus type="hell"  icon="black" famefactor="7.5" moblootfactor="7.1" mobsilverlootfactor="7.1"/>
-    <ClusterDangerBonus type="hell_yellow"  icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.25"/>
-    <ClusterDangerBonus type="hell_green"  icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="1.75"/>
-    <ClusterDangerBonus type="corrupted_beginner"  icon="corruptedbeginner" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.33"/>
-    <ClusterDangerBonus type="corrupted_intermediate"  icon="corruptedintermediate" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="2.6"/>
-    <ClusterDangerBonus type="corrupted_pro"  icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="2.6"/>
-    <ClusterDangerBonus type="expedition"  icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
-    <ClusterDangerBonus type="tunnel"  icon="black" famefactor="5" moblootfactor="7.1" mobsilverlootfactor="7.1"/>
+    <ClusterDangerBonus type="safe" icon="safe" famefactor="1.8" moblootfactor="1.25" mobsilverlootfactor="1.45"/>
+    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
+    <ClusterDangerBonus type="red" icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.6"/>
+    <ClusterDangerBonus type="black" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="hell" icon="black" famefactor="7.5" moblootfactor="7.1" mobsilverlootfactor="8.17"/>
+    <ClusterDangerBonus type="hell_yellow" icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.6"/>
+    <ClusterDangerBonus type="hell_green" icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="2"/>
+    <ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
+    <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="expedition" icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5"/>
+    <ClusterDangerBonus type="tunnel" icon="black" famefactor="5" moblootfactor="7.1" mobsilverlootfactor="8.17"/>
   </ClusterDangerBonusTypes>
   <AchievementHud tutorial_idletime_till_highlight="30"/>
   <SilverDropSettings silver="COINS" silverpremium="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5"/>
@@ -1579,7 +1580,7 @@
     <Penalty territorythreshold="98" energydrainfactor="2.67" silverpenalty="0.79" famepenalty="0.79"/>
     <Penalty territorythreshold="99" energydrainfactor="2.70" silverpenalty="0.80" famepenalty="0.80"/>    
   </AlliancePenalty>
-  <AchievementProgressConversion silverConversionRatio="0.75" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
+  <AchievementProgressConversion silverConversionRatio="0.9" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
   <TerritoryBlockClaiming>
     <clustergroup startdate="2020-01-20T10:00:00Z" enddate="2020-02-01T18:00:00Z"> <!-- EU -->
       <cluster id="0302" />
@@ -1878,7 +1879,7 @@
     </clustergroup>
   </TerritoryBlockClaiming>
   <GvgSeason alliancesharefactor="0.5" />
-  <CombatFameToSilverConversion silverfamefactor="0.22" silverfamex="0.006" silverfamey="1.652" fameeffbase="1.2218" fameeffconst="-0.0855"/>
+  <CombatFameToSilverConversion silverfamefactor="0.19" silverfamex="0.007" silverfamey="1.156" fameeffbase="1.2218" fameeffconst="0.015"/>
   <MarketPriceEstimation>
     <!-- carleon and other royal cities-->
     <contributingmarket id="3005"/>
