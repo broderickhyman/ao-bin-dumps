@@ -2551,6 +2551,10 @@
     <OnSpellHit name="Play_melee_impact_small" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
+    <OnCastFinished name="Play_melee_swoosh_big_double" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="MELEE_MEDIUMCAST">
     <OnCastStart name="Play_melee_swoosh_medium" />
   </WwiseEventInfo>
@@ -2836,6 +2840,14 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_GROUND_SHAKER_MACE">
+    <OnCastStart name="Play_melee_mace_load_swoosh_faster" />
+    <OnCastCanceled name="Stop_melee_mace_load_swoosh_faster" />
+    <OnCastInterrupted name="Stop_melee_mace_load_swoosh_faster" />
+    <OnSpellHit name="Play_melee_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HEAVYSLAM_MACE">
     <OnCastStart name="Play_melee_mace_load_swoosh" />
     <OnCastCanceled name="Stop_melee_mace_load_swoosh" />
@@ -2865,6 +2877,10 @@
     <OnCastStart name="Play_shrinking_smash" />
     <OnCastCanceled name="Stop_shrinking_smash" />
     <OnCastInterrupted name="Stop_shrinking_smash" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MACE_QUADRUNE_CAST">
+    <OnCastStart name="Play_cast_load_buff" />
+    <OnCastFinished name="Play_magicrune_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_IRONBREAKER">
@@ -3659,6 +3675,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF">
     <OnCastStart name="Play_selfbuff_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_CASTFINISHED">
+    <OnCastFinished name="Play_selfbuff_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SMALL_DEBUFF">
     <OnSpellHit name="Play_small_debuff" />

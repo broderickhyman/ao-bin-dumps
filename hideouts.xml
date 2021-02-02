@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <hideouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hideouts.xsd">
   <!--The feefactor is an approximation for TravelSettings TierModifier * Distance -->
   <itemrecovery feefactor="900" notclaimabletime="2419200">
     <avalonroads feefactor="900" notclaimabletime="2419200">
-      <target clusterid="0006"/><!-- thedford bank -->
-      <target clusterid="1001"/><!-- lymhurst bank -->
-      <target clusterid="2003"/><!-- bridgewatch bank -->
-      <target clusterid="3007"/><!-- martlock bank -->
-      <target clusterid="4001"/><!-- fort sterling bank -->
+      <target clusterid="0006" /><!-- thedford bank -->
+      <target clusterid="1001" /><!-- lymhurst bank -->
+      <target clusterid="2003" /><!-- bridgewatch bank -->
+      <target clusterid="3007" /><!-- martlock bank -->
+      <target clusterid="4001" /><!-- fort sterling bank -->
     </avalonroads>
   </itemrecovery>
   <hideout startingnutrition="15000" vulnerabilitytimeseconds="1200" damagescalingthreshold="684" damagescalefactor="1.5" damagelookbacktimeseconds="3">
@@ -16,34 +17,37 @@
       <phaseinvulnerable />
       <phase durationseconds="1200" maxdurability="25000" durabilityrecovery="15" />
     </constructionphases>
-		<upgradelevels>
-			<level cluster="HIDEOUT-0001a" maxshields="2" maxdurability="50000" durabilityrecovery="25" dailyupkeepnutrition="15000" maximumnutritionstorage="150000">	
-				<attackcosts silver="1000000" time="5" swaptransaction="true">
-          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="50"/>
-				</attackcosts>
-			</level>
-			<level cluster="HIDEOUT-0001b" maxshields="4" maxdurability="100000" durabilityrecovery="75" dailyupkeepnutrition="20000" maximumnutritionstorage="400000">
-			  <upgraderequirement silver="20000000" time="172800" swaptransaction="true">
+    <upgradelevels>
+      <level cluster="HIDEOUT-0001a" maxshields="2" maxdurability="50000" durabilityrecovery="25" dailyupkeepnutrition="15000" maximumnutritionstorage="150000">
+        <attackcosts silver="1000000" time="5" swaptransaction="true">
+          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="50" />
+        </attackcosts>
+        <makehome guild="true" alliance="false" public="false" />
+      </level>
+      <level cluster="HIDEOUT-0001b" maxshields="4" maxdurability="100000" durabilityrecovery="75" dailyupkeepnutrition="20000" maximumnutritionstorage="400000">
+        <upgraderequirement silver="20000000" time="172800" swaptransaction="true">
           <upgraderesource uniquename="UNIQUE_GVGTOKEN_GENERIC" count="1000" />
           <upgraderesource uniquename="T1_WOOD" count="1250" />
           <upgraderesource uniquename="T1_ROCK" count="125" />
           <upgraderesource uniquename="T6_STONEBLOCK" count="500" />
-			  </upgraderequirement>
-			  <attackcosts silver="3000000" time="5" swaptransaction="true">
-          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="150"/>
-			  </attackcosts>
-			</level>
-			<level cluster="HIDEOUT-0001c" maxshields="5" maxdurability="150000" durabilityrecovery="100" dailyupkeepnutrition="25000" maximumnutritionstorage="750000">
-			  <upgraderequirement silver="80000000" time="345600" swaptransaction="true">
+        </upgraderequirement>
+        <attackcosts silver="3000000" time="5" swaptransaction="true">
+          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="150" />
+        </attackcosts>
+        <makehome guild="true" alliance="false" public="false" />
+      </level>
+      <level cluster="HIDEOUT-0001c" maxshields="5" maxdurability="150000" durabilityrecovery="100" dailyupkeepnutrition="25000" maximumnutritionstorage="750000">
+        <upgraderequirement silver="80000000" time="345600" swaptransaction="true">
           <upgraderesource uniquename="UNIQUE_GVGTOKEN_GENERIC" count="4000" />
           <upgraderesource uniquename="T1_WOOD" count="5000" />
           <upgraderesource uniquename="T1_ROCK" count="500" />
           <upgraderesource uniquename="T6_STONEBLOCK" count="2000" />
-			  </upgraderequirement>
-			  <attackcosts silver="11000000" time="5" swaptransaction="true">
-          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="550"/>
-			  </attackcosts>
-			</level>
-		</upgradelevels>
-	</hideout>
+        </upgraderequirement>
+        <attackcosts silver="11000000" time="5" swaptransaction="true">
+          <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="550" />
+        </attackcosts>
+        <makehome guild="true" alliance="true" public="false" />
+      </level>
+    </upgradelevels>
+  </hideout>
 </hideouts>
