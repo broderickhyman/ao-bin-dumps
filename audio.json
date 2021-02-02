@@ -6421,6 +6421,12 @@
         }
       },
       {
+        "@name": "MELEE_SWORD_MIGHTY_BLOW",
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_big_double"
+        }
+      },
+      {
         "@name": "MELEE_MEDIUMCAST",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_medium"
@@ -6962,6 +6968,22 @@
         }
       },
       {
+        "@name": "MELEE_GROUND_SHAKER_MACE",
+        "OnCastStart": {
+          "@name": "Play_melee_mace_load_swoosh_faster"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_mace_load_swoosh_faster"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_mace_load_swoosh_faster"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "MELEE_HEAVYSLAM_MACE",
         "OnCastStart": {
           "@name": "Play_melee_mace_load_swoosh"
@@ -7026,6 +7048,15 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_shrinking_smash"
+        }
+      },
+      {
+        "@name": "MELEE_MACE_QUADRUNE_CAST",
+        "OnCastStart": {
+          "@name": "Play_cast_load_buff"
+        },
+        "OnCastFinished": {
+          "@name": "Play_magicrune_cast"
         }
       },
       {
@@ -8666,6 +8697,12 @@
       {
         "@name": "SPELL_SELF_BUFF",
         "OnCastStart": {
+          "@name": "Play_selfbuff_cast"
+        }
+      },
+      {
+        "@name": "SPELL_SELF_BUFF_CASTFINISHED",
+        "OnCastFinished": {
           "@name": "Play_selfbuff_cast"
         }
       },
