@@ -8,6 +8,7 @@
   <clusterclosetimeaftermatch duration="898"/>
 
   <!-- ============================== SEASONS ============================== -->
+  <!-- Offseason_2 = Tournament-->
 
   <season uniquename="CL_SEASON_07_08_OFFSEASON"
          displayname="@SEASONS_SEASONNAME_SEASON_08"
@@ -107,6 +108,31 @@
          enddatetime="2021-03-12T10:59:00Z"
          ruleset="CRYSTAL_LEAGUE_OFFSEASON_2"/>
 
+  <season uniquename="CL_SEASON_12"
+         displayname="@SEASONS_SEASONNAME_SEASON_11"
+         category="CRYSTAL_LEAGUE"
+         arenacategory="crystal_league"
+         startdatetime="2021-03-12T11:00:00Z"
+         enddatetime="2021-06-07T10:59:00Z"
+         showindailylimitui="true"
+         ruleset="CRYSTAL_LEAGUE"/>
+
+  <season uniquename="CL_SEASON_12_13_OFFSEASON"
+          displayname="@SEASONS_SEASONNAME_OFFSEASON"
+          category="CRYSTAL_LEAGUE"
+          arenacategory="crystal_league"
+          startdatetime="2021-06-07T11:00:00Z"
+          enddatetime="2021-06-18T10:59:00Z"
+          ruleset="CRYSTAL_LEAGUE_OFFSEASON"/>
+  
+  <season uniquename="CL_SEASON_12_13_OFFSEASON_2" 
+          displayname="@SEASONS_SEASONNAME_OFFSEASON"
+          category="CRYSTAL_LEAGUE"
+          arenacategory="crystal_league"
+          startdatetime="2021-06-07T11:00:00Z"
+          enddatetime="2021-06-18T10:59:00Z"
+          ruleset="CRYSTAL_LEAGUE_OFFSEASON_2"/>
+
 
   <!-- ============================== 20v20 SEASONS ============================== -->
   <season uniquename="CL_CITY_OFFSEASON_10_11"
@@ -129,6 +155,37 @@
 		 color="#FFC300"
          showindailylimitui="true"
 		 fontcolor="#543d2c"/>
+  
+  <season uniquename="CL_CITY_OFFSEASON_11_12"
+         displayname="@SEASONS_SEASONNAME_OFFSEASON"
+         category="CRYSTAL_LEAGUE_CITY"
+         arenacategory="crystal_league_city"
+         startdatetime="2021-03-01T11:00:00Z"
+         enddatetime="2021-03-12T10:59:00Z"
+         ruleset="CRYSTAL_LEAGUE_CITY_OFFSEASON"
+		 color="#FFC300"
+		 fontcolor="#543d2c"/>
+
+  <season uniquename="CL_CITY_SEASON_12"
+         displayname="@SEASONS_SEASONNAME_SEASON_12"
+         category="CRYSTAL_LEAGUE_CITY"
+         arenacategory="crystal_league_city"
+         startdatetime="2021-03-12T11:00:00Z"
+         enddatetime="2021-06-07T10:59:00Z"
+         ruleset="CRYSTAL_LEAGUE_CITY"
+		 color="#FFC300"
+         showindailylimitui="true"
+		 fontcolor="#543d2c"/>
+
+  <season uniquename="CL_CITY_OFFSEASON_12_13"
+          displayname="@SEASONS_SEASONNAME_OFFSEASON"
+          category="CRYSTAL_LEAGUE_CITY"
+          arenacategory="crystal_league_city"
+          startdatetime="2021-06-07T11:00:00Z"
+          enddatetime="2021-06-18T10:59:00Z"
+          ruleset="CRYSTAL_LEAGUE_CITY_OFFSEASON"
+		      color="#FFC300"
+		      fontcolor="#543d2c"/>
 
 
   <!-- ============================== RULESETS ============================== -->
@@ -1065,7 +1122,7 @@
         <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL1" gvgseasonpoints="1" />
         <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL1" />
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL1"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1" gvgseasonpoints="1"/>
       </rewards>
     </match>
     <!--LEVEL 2-->
@@ -1086,7 +1143,7 @@
         <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL2" gvgseasonpoints="1"/>
         <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL2" gvgseasonpoints="1"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL2"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2" gvgseasonpoints="3"/>
       </rewards>
     </match>
     <!--LEVEL 3-->
@@ -1107,7 +1164,7 @@
         <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="3"/>
         <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="3"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_DRAW_LVL3"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3" gvgseasonpoints="9"/>
       </rewards>
     </match>
     <!--LEVEL 4-->
@@ -1299,8 +1356,11 @@
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
           <weekday>
             <timeslot utctime="01:00:00"/>
+            <timeslot utctime="01:30:00"/>
             <timeslot utctime="12:00:00"/>
+            <timeslot utctime="12:30:00"/>
             <timeslot utctime="19:00:00"/>
+            <timeslot utctime="19:30:00"/>
           </weekday>
         </week>
       </times>
@@ -1308,7 +1368,7 @@
         <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1" gvgseasonpoints="1" />
         <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1" gvgseasonpoints="1" />
         <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL1"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1" gvgseasonpoints="3"/>
       </rewards>
     </match>
     <!--LEVEL 2-->
@@ -1316,8 +1376,11 @@
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
           <weekday>
+            <timeslot utctime="01:00:00"/>
             <timeslot utctime="01:30:00"/>
+            <timeslot utctime="12:00:00"/>
             <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:00:00"/>
             <timeslot utctime="19:30:00"/>
           </weekday>
         </week>
@@ -1326,7 +1389,7 @@
         <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2" gvgseasonpoints="3"/>
         <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" gvgseasonpoints="3"/>
         <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL2"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2" gvgseasonpoints="9"/>
       </rewards>
     </match>
     <!--LEVEL 3-->
@@ -1440,9 +1503,9 @@
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8">
           <weekday>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="19:30:00"/>
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="19:00:00"/>
           </weekday>
         </week>
       </times>
