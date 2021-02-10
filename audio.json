@@ -608,6 +608,15 @@
         }
       },
       {
+        "@name": "MOUNT_BASTION",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "bastion"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -8536,6 +8545,12 @@
         }
       },
       {
+        "@name": "SPELL_LIGHTNING_HIT_ADD",
+        "OnCastFinished": {
+          "@name": "Play_lightning_impact_add"
+        }
+      },
+      {
         "@name": "SPELL_LIGHTNING_CHAIN",
         "OnCastFinished": {
           "@name": "Play_lightningbolt_chain"
@@ -9446,6 +9461,39 @@
         "@name": "SPELL_MOUNT_SPIDER_COCOON_IMPACT",
         "OnSpellHit": {
           "@name": "Play_spider_cocoon_spawn"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_BASTION_BEAM",
+        "OnCastStart": {
+          "@name": "Play_bastion_cast_beam_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_bastion_shoot_beam"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_BASTION_CHARGE",
+        "OnCastStart": {
+          "@name": "Play_bastion_cast_charge"
+        },
+        "OnCastFinished": {
+          "@name": "Play_bastion_charge"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_BASTION_SHIELD_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_bastion_buff_shield_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_bastion_buff_shield_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_bastion_buff_shield_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_bastion_buff_shield_loop"
         }
       },
       {
