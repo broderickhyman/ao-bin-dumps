@@ -6172,7 +6172,7 @@
       <LootListReference name="MELD_8_3_ALL_LOOT" weight="1" />
     </OR>
   </Lootlist>
-  <Lootlist name="CASTLE_LOOT_ARTEFACTS">
+  <Lootlist name="CASTLE_LOOT_ARTEFACTS"> <!-- est. market value: 47,500 -->
     <OR>
       <LootListReference name="MELD_6_1_ALL_LOOT" weight="225" />
       <LootListReference name="MELD_6_2_ALL_LOOT" weight="75" />
@@ -6285,7 +6285,7 @@
     </OR>
   </Lootlist>
 
-  <Lootlist name="OUTLAND_TREASURES_TREASURE_LOOT">
+  <Lootlist name="OUTLAND_TREASURES_TREASURE_LOOT"> <!-- Calculated silver value 50,000-->
     <OR>
       <Item type="TREASURE_KNOWLEDGE_RARITY3" weight="2" amount="1-3" />
       <Item type="TREASURE_SILVERWARE_RARITY3" weight="2" amount="1-3" />
@@ -6296,7 +6296,7 @@
     </OR> 
   </Lootlist>
 
-  <Lootlist name="OUTLAND_TREASURES_BLACKMARKET_LOOT"> <!-- Calculated silver value 3992.87-->
+  <Lootlist name="OUTLAND_TREASURES_BLACKMARKET_LOOT"> <!-- Calculated silver value 3,992.87-->
     <OR>
       <LootListReference name="T4_DIRECTLOOTDROP_WHITE" weight="9" />
       <LootListReference name="T5_DIRECTLOOTDROP_WHITE" weight="27" />
@@ -6306,31 +6306,34 @@
     </OR>
   </Lootlist>
 
-  <Lootlist name="OUTLAND_CHEST_LOOT">
-    <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="7.7" /> 
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="2-3" />
-    <Item type="T4_SKILLBOOK_STANDARD" amount="8-11" />
-    <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="63.5" />
+  <Lootlist name="OUTLAND_CHEST_LOOT"> <!-- est. market value w/o tomes: 300,000 -->
+    <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="3.1" /> 
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="4-6" />
+    <Item type="T4_SKILLBOOK_STANDARD" amount="3-5" />
+    <LootListReference name="CASTLE_LOOT_ARTEFACTS" chance="0.4"/>
+    <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="25.4" />
   </Lootlist>
-  <Lootlist name="OUTLAND_LOCKER_LOOT">
+  <Lootlist name="OUTLAND_LOCKER_LOOT"> <!-- est. market value w/o tomes: 2,120,000 -->
     <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="23.5" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="3-4" />
     <Item type="T4_SKILLBOOK_STANDARD" amount="32-37" />
     <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="194.4" />
   </Lootlist>
-  <Lootlist name="OUTLAND_COFFER_CASTLEOUTPOST_LOOT">
+  <Lootlist name="OUTLAND_COFFER_CASTLEOUTPOST_LOOT"> <!-- est. market value w/o tomes: 2,275,000 -->
     <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="21.6" />
     <Item type="T6_SILVERBAG_NONTRADABLE" amount="6-7" />
     <Item type="T4_SKILLBOOK_STANDARD" amount="23-30" />
     <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="178.525" />
   </Lootlist>
-  <Lootlist name="OUTLAND_COFFER_CASTLE_LOOT">
-    <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="244.8" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="19-20" />
+  <Lootlist name="OUTLAND_COFFER_CASTLE_LOOT"> <!-- est. market value w/o tomes: 44,640,000 -->
+    <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="468.7" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="36-38" />
     <Item type="T4_SKILLBOOK_STANDARD" amount="400-453" />
+    <LootListReference name="CASTLE_LOOT_ARTEFACTS" chance="40"/>
     <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="999" />
     <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="999" />
-    <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="25.2" />
+    <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="999" />
+    <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="877" />
   </Lootlist>
 
 
@@ -20149,16 +20152,13 @@
   <!--LEVEL 1-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1">
     <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" amount="1" />
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
     <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1">
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
     <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
@@ -20173,16 +20173,16 @@
   <!--LEVEL 2-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2">
     <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03_S11" amount="1" />
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2">
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL2">
@@ -20195,21 +20195,16 @@
   </Lootlist>
   <!--LEVEL 3-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04_S11" amount="1" />
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
-    <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04_S12" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3">
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
-    <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL3">
@@ -20222,22 +20217,24 @@
   </Lootlist>
   <!--LEVEL 4-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05_S11" amount="1" />
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05_S12" amount="1" />
     <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
-    <LootListReference name="BATTLEMOUNTS_SILVER" chance="0.2" />
-  </Lootlist>
-  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4">
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4">
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
+  </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL4">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04_S11" amount="1" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04_S12" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL4">
     <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4" />
@@ -20246,30 +20243,22 @@
   </Lootlist>
   <!--LEVEL 5-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06_S11" amount="1" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06_S12" amount="1" />
     <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="2" />
-    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
-    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
-    <OR>
-      <LootListReference name="BATTLEMOUNTS_SILVER" weight="4"/>
-      <LootListReference name="BATTLEMOUNTS_GOLD" weight="1"/>
-    </OR>
-  </Lootlist>
-  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5">
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
-    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
+    <LootListReference name="BATTLEMOUNTS_SILVER" chance="0.2" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5">
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL5">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05_S11" amount="1" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05_S12" amount="1" />
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL5">
     <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5" />
@@ -20278,9 +20267,41 @@
   </Lootlist>
   <!--LEVEL 6-->
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6">
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07_S12" amount="1" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="4" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="2" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
+    <OR>
+      <LootListReference name="BATTLEMOUNTS_SILVER" weight="4"/>
+      <LootListReference name="BATTLEMOUNTS_GOLD" weight="1"/>
+    </OR>
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6">
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL6">
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06_S12" amount="1" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6">
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" />
+  </Lootlist>
+  <!--LEVEL 7-->
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7">
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="5" />
     <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
@@ -20289,33 +20310,34 @@
       <LootListReference name="BATTLEMOUNTS_CRYSTAL" weight="1"/>
     </OR>
   </Lootlist>
-  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6">
-    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="3" />
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7">
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="4" />
     <Item type="T4_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
   </Lootlist>
-  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL6">
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL7">
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="4" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="5" />
+    <Item type="T4_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="5" />
     <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
-    <Item type="T5_SILVERBAG_NONTRADABLE" amount="2" />
-    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
-    <Item type="T8_SILVERBAG_NONTRADABLE" amount="4" />
     <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T6_SKILLBOOK_NONTRADABLE" amount="1" />
     <Item type="T8_SKILLBOOK_NONTRADABLE" amount="2" />
   </Lootlist>
-  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6">
-    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" />
-    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" />
-    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" />
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL7">
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7" />
   </Lootlist>
 
   <!--20v20 Crystal League Offseason Loot-->
@@ -20340,10 +20362,34 @@
   </Lootlist>
   <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2_OFFSEASON">
     <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2_OFFSEASON" />
-    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" />
-    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2_OFFSEASON" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2_OFFSEASON" />
   </Lootlist>
 
+  <!--LEVEL 3-->
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3_OFFSEASON">
+    <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="3" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T7_SKILLBOOK_NONTRADABLE" amount="1" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3_OFFSEASON">
+    <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" />
+    <Item type="T8_SILVERBAG_NONTRADABLE" amount="2" />
+    <Item type="T5_SKILLBOOK_NONTRADABLE" amount="2" />
+    <Item type="T8_SKILLBOOK_NONTRADABLE" amount="1" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL3_OFFSEASON">
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3_OFFSEASON" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3_OFFSEASON" />
+  </Lootlist>
+  <Lootlist name="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL3_OFFSEASON">
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3_OFFSEASON" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3_OFFSEASON" />
+    <LootListReference name="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3_OFFSEASON" />
+  </Lootlist>
 
   <!-- CRYSTAL LEAGUE -->
   
@@ -20408,7 +20454,7 @@
 
   <!--LEVEL 3-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL3">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_04_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_04_S12" amount="1" chance="1.0" />
 
     <Item type="T5_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />
@@ -20438,7 +20484,7 @@
   
   <!--LEVEL 4-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL4">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_05_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_05_S12" amount="1" chance="1.0" />
 
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="2" chance="1.0" />
 
@@ -20456,7 +20502,7 @@
   </Lootlist>
 
   <Lootlist name="CRYSTALLEAGUE_LOOT_DRAW_LVL4">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_04_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_04_S12" amount="1" chance="1.0" />
   </Lootlist>
   
  <Lootlist name="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4">    
@@ -20467,7 +20513,7 @@
   
   <!--LEVEL 5-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL5">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_06_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_06_S12" amount="1" chance="1.0" />
 
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="2" chance="1.0" />
@@ -20483,7 +20529,7 @@
   </Lootlist>
   
   <Lootlist name="CRYSTALLEAGUE_LOOT_DRAW_LVL5">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_05_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_05_S12" amount="1" chance="1.0" />
   </Lootlist>
 
   <Lootlist name="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5">
@@ -20494,7 +20540,7 @@
   
   <!--LEVEL 6-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL6">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_07_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_07_S12" amount="1" chance="1.0" />
 
     <Item type="T6_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />    
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />    
@@ -20515,7 +20561,7 @@
   </Lootlist>
 
    <Lootlist name="CRYSTALLEAGUE_LOOT_DRAW_LVL6">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_06_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_06_S12" amount="1" chance="1.0" />
   </Lootlist>
     
   <Lootlist name="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6">
@@ -20526,7 +20572,7 @@
 
   <!--LEVEL 7-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL7">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_08_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_08_S12" amount="1" chance="1.0" />
 
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="5" chance="1.0" />
@@ -20549,7 +20595,7 @@
   </Lootlist>
 
   <Lootlist name="CRYSTALLEAGUE_LOOT_DRAW_LVL7">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_07_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_07_S12" amount="1" chance="1.0" />
   </Lootlist>
 
   <Lootlist name="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7">
@@ -20560,7 +20606,7 @@
 
   <!--LEVEL 8-->
   <Lootlist name="CRYSTALLEAGUE_LOOT_WINNER_LVL8">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_09_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_09_S12" amount="1" chance="1.0" />
 
     <Item type="T7_SILVERBAG_NONTRADABLE" amount="1" chance="1.0" />
     <Item type="T8_SILVERBAG_NONTRADABLE" amount="7" chance="1.0" />
@@ -20583,7 +20629,7 @@
   </Lootlist>
 
   <Lootlist name="CRYSTALLEAGUE_LOOT_DRAW_LVL8">
-    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_08_S11" amount="1" chance="1.0" />
+    <Item type="T4_TOKEN_CRYSTALLEAGUE_LVL_08_S12" amount="1" chance="1.0" />
   </Lootlist>
   
   <Lootlist name="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8">
@@ -20719,7 +20765,8 @@
       <Item type="UNIQUE_MOUNT_ARMORED_EAGLE_SILVER" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_BEETLE_SILVER" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_BEHEMOTH_SILVER" amount="1" weight="1" />
-      <Item type="UNIQUE_MOUNT_ENT_SILVER" amount="1" weight="1" />      
+      <Item type="UNIQUE_MOUNT_ENT_SILVER" amount="1" weight="1" />
+      <Item type="UNIQUE_MOUNT_BATTLESPIDER_SILVER" amount="1" weight="1" />      
     </OR>
   </Lootlist>
 
@@ -20731,6 +20778,7 @@
       <Item type="UNIQUE_MOUNT_BEETLE_GOLD" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_BEHEMOTH_GOLD" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_ENT_GOLD" amount="1" weight="1" />
+      <Item type="UNIQUE_MOUNT_BATTLESPIDER_GOLD" amount="1" weight="1" />
     </OR>
   </Lootlist>
 
@@ -20741,7 +20789,8 @@
       <Item type="UNIQUE_MOUNT_ARMORED_EAGLE_CRYSTAL" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_BEETLE_CRYSTAL" amount="1" weight="1" />
       <Item type="UNIQUE_MOUNT_BEHEMOTH_CRYSTAL" amount="1" weight="1" />
-      <Item type="UNIQUE_MOUNT_ENT_CRYSTAL" amount="1" weight="1" />      
+      <Item type="UNIQUE_MOUNT_ENT_CRYSTAL" amount="1" weight="1" />
+      <Item type="UNIQUE_MOUNT_BATTLESPIDER_CRYSTAL" amount="1" weight="1" />
     </OR>
   </Lootlist>  
 
