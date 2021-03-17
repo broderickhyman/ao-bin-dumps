@@ -1,12 +1,31 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/S_FR_FactionTradingOutpost.unity" unityguid="a6684c99ea3ba0344b88729e97d1f133" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-26 -25" colBoundsMax="25 26">
   <criticalscenemembers>
-    <criticalscenemember id="questgiverobject_01" type="questgiverobject" layerId="">
+    <criticalscenemember id="questgiverobject_01" type="questgiverobject" layerId="Layer_01">
       <tile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5">
         <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_FOREST" />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="questgiverobject_03" type="questgiverobject" layerId="Layer_02">
+      <tile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5">
+        <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_CAERLEON" />
+      </tile>
+    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Royal_Faction" activationRule="X_X_T5|T4|T3_X_X_X">
+        <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_01" type="questgiverobject">
+          <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_FOREST" />
+        </criticaltile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Caerleon_Faction" activationRule="X_X_T6|T7_X_X_X">
+        <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_03" type="questgiverobject">
+          <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_CAERLEON" />
+        </criticaltile>
+      </layer>
+    </layergroup>
     <tile name="FOREST_RED_GROUND" pos="-20 0 -20" roty="270" />
     <tile name="FOREST_RED_GROUND" pos="-20 0 20" roty="270" />
     <tile name="FOREST_RED_GROUND" pos="20 0 20" roty="270" />
@@ -167,8 +186,5 @@
     <tile name="TradingOutpostSafeZone" pos="0 0 1">
       <spellzone spell="TRADING_OUTPOST_SAFEAREA" />
     </tile>
-    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_01" type="questgiverobject">
-      <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_FOREST" />
-    </criticaltile>
   </tiles>
 </template>

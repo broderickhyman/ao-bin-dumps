@@ -1,43 +1,35 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/S_MN_FactionTradingOutpost.unity" unityguid="710461bcf6050f54d81cdb7b702bd6bf" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-28 -28" colBoundsMax="27 28">
   <criticalscenemembers>
-    <criticalscenemember id="questgiverobject_01" type="questgiverobject" layerId="">
+    <criticalscenemember id="questgiverobject_02" type="questgiverobject" layerId="Layer_01">
+      <tile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5">
+        <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_CAERLEON" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="questgiverobject_01" type="questgiverobject" layerId="Layer_02">
       <tile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5">
         <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_MOUNTAIN" />
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="">
+      <layer id="Layer_01" name="Caerleon_Faction" activationRule="X_X_T6|T7|T8_X_X_X">
+        <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_02" type="questgiverobject">
+          <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_CAERLEON" />
+        </criticaltile>
+      </layer>
+    </layergroup>
+    <layergroup name="">
+      <layer id="Layer_02" name="Royal_Faction" activationRule="X_X_T3|T4|T5_X_X_X">
+        <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_01" type="questgiverobject">
+          <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_MOUNTAIN" />
+        </criticaltile>
+      </layer>
+    </layergroup>
     <tile name="TradingOutpostSafeZone" pos="0 0 1">
       <spellzone spell="TRADING_OUTPOST_SAFEAREA" />
     </tile>
-    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="-10.5 0 10.5" id="questgiverobject_01" type="questgiverobject">
-      <questgiverobject reference="TRADING_OUTPOST_SMUGGLER_MOUNTAIN" />
-    </criticaltile>
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 -20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="20 0 20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="20 0 -20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 -10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 0" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="0 0 20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="10 0 20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="20 0 10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="20 0 0" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="20 0 -10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="10 0 -20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="0 0 -20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 -20" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="0 0 -10" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="0 0 10" roty="180" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="10 0 -10" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="0 0 0" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 -10" roty="90" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="10 0 10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="10 0 0" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 10" roty="180" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 0" roty="90" />
+    <tile name="MOUNTAIN_RED_GROUND_50x50" pos="0 0 0" />
     <tile name="MOUNTAIN_RED_FILL_RUIN_ARCH_BROKEN_SIDE_A" pos="12 0 24" roty="270" />
     <tile name="MOUNTAIN_RED_FILL_RUIN_WALL_INNERCORNER_LARGE_GROUND_DEBRIS_A" pos="15 0 15" roty="90" />
     <tile name="MOUNTAIN_RED_FILL_RUIN_WALL_COLUMN_A" pos="-5.5 0 -20" roty="270" />

@@ -779,6 +779,7 @@
       <extendedmissionstep>
         <preactions>
           <settutorialblocker id="MOUNTAIN" statetoset="0"/>
+          <settutorialblocker id="FINALDEBRIS" statetoset="0"/>
         </preactions>
         <missions>
           <gotolocation locationmarkerid="MOUNTAINENTRANCE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_K5_SIDETEXT" hideindetailsui="true"/>
@@ -1226,6 +1227,9 @@
     </variables>
     <tasks>
       <extendedmissionstep>
+        <preactions>  
+          <settutorialblocker id="FINALDEBRIS" statetoset="0"/>
+        </preactions>
         <missions>
         <gotolocation locationmarkerid="MOUNTAINENTRANCE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_P1_SIDETEXT" hideinhud="false" hideindetailsui="true"/>
       </missions>
@@ -1279,7 +1283,7 @@
       </extendedmissionstep>
       <extendedcompletionstep>
         <preactions>
-          <settutorialblocker id="ENDING" statetoset="1"/>
+          <settutorialblocker id="FINALDEBRIS" statetoset="1"/>
         </preactions>
         <missions>
           <gotolocation locationmarkerid="ENDE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_P5_SIDETEXT"/>
@@ -1315,7 +1319,443 @@
     <rewards>
     </rewards>
   </quest>
-    
+   
+  <!--CAERLEON-->
+  <!--FACTIONS TOWARDS CAERLEON-->
+  <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
+  completetext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_light">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Caerleon"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="6" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_LIGHT" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1"/>
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="3"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_LIGHT_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+        <preactions>
+          <receiveitem count="20" itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="6"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+
+
+  <playerfactionquest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON" title="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
+  completetext="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_MEDIUM">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Caerleon"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="6" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_MEDIUM" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_MEDIUM" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_MEDIUM" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_MEDIUM" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_MEDIUM" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_MEDIUM" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1"/>
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="7"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_MEDIUM_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+        <preactions>
+          <receiveitem count="20" itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="11"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+
+
+  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
+  completetext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_HEAVY">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Caerleon"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="6" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_HEAVY" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1"/>
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="15"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_HEAVY_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+        <preactions>
+          <receiveitem count="20" itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="21"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+  <!--CAERLEON TO FACTIONS-->
+  <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT" progresstext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT"
+  completetext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_light">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Swamp"/>
+        <filter faction="Steppe"/>
+        <filter faction="Forest"/>
+        <filter faction="Highland"/>
+        <filter faction="Mountain"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_LIGHT"/>   
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="3"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_LIGHT_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+        <preactions>
+          <receiveitem itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="6"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+  
+  <playerfactionquest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION" title="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT" progresstext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT"
+  completetext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_MEDIUM">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Swamp"/>
+        <filter faction="Steppe"/>
+        <filter faction="Forest"/>
+        <filter faction="Highland"/>
+        <filter faction="Mountain"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_MEDIUM"/>
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_MEDIUM" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_MEDIUM" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_MEDIUM" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_MEDIUM" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_MEDIUM" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="7"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_MEDIUM_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+        <preactions>
+          <receiveitem itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="11"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+  
+  
+  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT" progresstext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT"
+  completetext="@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_HEAVY">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Swamp"/>
+        <filter faction="Steppe"/>
+        <filter faction="Forest"/>
+        <filter faction="Highland"/>
+        <filter faction="Mountain"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Caerleon" item="QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_HEAVY"/>
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Caerleon" item="T1_FACTION_CAERLEON_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="15"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_HEAVY_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+        <preactions>
+          <receiveitem itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="21"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
 
   <!--Faction Caravan Missions
 Light-->
@@ -1331,7 +1771,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="4" maxdistance="6" />
+        <distancefromquestgiver mindistance="4" maxdistance="8" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1413,7 +1853,89 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <distancefromquestgiver mindistance="6" maxdistance="9" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="3"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_LIGHT_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+        <preactions>
+          <receiveitem itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="4"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+
+  <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
+  completetext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_light">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Swamp"/>
+        <filter faction="Steppe"/>
+        <filter faction="Forest"/>
+        <filter faction="Highland"/>
+        <filter faction="Mountain"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="8" maxdistance="10" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1483,88 +2005,6 @@ Light-->
     </failconditions>
   </playerfactionquest>
 
-  <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
-  offertext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
-  completetext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_light">
-    <variables>
-      <dynamicplayerfaction name="FACTION_B" includingown="false">
-        <filter faction="Swamp"/>
-        <filter faction="Steppe"/>
-        <filter faction="Forest"/>
-        <filter faction="Highland"/>
-        <filter faction="Mountain"/>
-      </dynamicplayerfaction>
-      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="6" maxdistance="8" />
-        <questgivertag tag="faction_outside" />
-      </dynamicquestgiver>
-      <dynamicfactionitem name="ITEM_A" factionvariable="self">
-        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
-        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
-        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
-        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
-        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
-        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT" />
-        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT" />
-        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT" />
-        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT" />
-        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
-        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
-        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
-        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
-        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
-        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
-        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
-        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
-        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
-        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
-        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
-      </dynamicfactionitem>
-    </variables>
-    <requirements>
-      <maxloadafteritemsreceived maxload="1"/>
-    </requirements>
-    <costs>
-      <item itemvariable="ITEM_REQUIRED" amount="3"/>
-    </costs>
-    <tasks>
-      <extendedmissionstep applybuff="TRADE_PACK_BUFF_LIGHT_A">
-        <preactions>
-          <receiveitem itemvariable="ITEM_A"/>
-        </preactions>
-        <missions>
-          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT" textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
-            <item itemvariable="ITEM_A"/>
-          </gotoquestgiver>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
-        <preactions>
-          <receiveitem itemvariable="ITEM_B"/>
-        </preactions>
-        <missions>
-          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
-            <item itemvariable="ITEM_B"/>
-          </gotoquestgiver>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-      <item itemvariable="ITEM_REWARD" count="6"/>
-    </rewards>
-    <failconditions>
-      <missionitemloss/>
-      <playerdeath/>
-      <changeflagging/>
-    </failconditions>
-  </playerfactionquest>
-
   <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
   offertext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
   completetext="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_light">
@@ -1577,7 +2017,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="7" maxdistance="10" />
+        <distancefromquestgiver mindistance="10" maxdistance="12" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1638,7 +2078,7 @@ Light-->
       </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemvariable="ITEM_REWARD" count="7"/>
+      <item itemvariable="ITEM_REWARD" count="5"/>
     </rewards>
     <failconditions>
       <missionitemloss/>
@@ -1660,7 +2100,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="4" maxdistance="6" />
+        <distancefromquestgiver mindistance="4" maxdistance="8" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1742,7 +2182,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <distancefromquestgiver mindistance="6" maxdistance="9" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1824,7 +2264,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="6" maxdistance="8" />
+        <distancefromquestgiver mindistance="8" maxdistance="10" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1906,7 +2346,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="7" maxdistance="10" />
+        <distancefromquestgiver mindistance="10" maxdistance="12" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -1967,7 +2407,7 @@ Light-->
       </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemvariable="ITEM_REWARD" count="13"/>
+      <item itemvariable="ITEM_REWARD" count="12"/>
     </rewards>
     <failconditions>
       <missionitemloss/>
@@ -1988,7 +2428,89 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="4" maxdistance="6" />
+        <distancefromquestgiver mindistance="4" maxdistance="8" />
+        <questgivertag tag="faction_outside" />
+      </dynamicquestgiver>
+      <dynamicfactionitem name="ITEM_A" factionvariable="self">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
+        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
+        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
+        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
+        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
+        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
+        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
+        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
+        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
+        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
+      </dynamicfactionitem>
+    </variables>
+    <requirements>
+      <maxloadafteritemsreceived maxload="1"/>
+    </requirements>
+    <costs>
+      <item itemvariable="ITEM_REQUIRED" amount="15"/>
+    </costs>
+    <tasks>
+      <extendedmissionstep applybuff="TRADE_PACK_BUFF_HEAVY_A">
+        <preactions>
+          <receiveitem itemvariable="ITEM_A"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT"  textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
+            <item itemvariable="ITEM_A"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+        <preactions>
+          <receiveitem itemvariable="ITEM_B"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
+            <item itemvariable="ITEM_B"/>
+          </gotoquestgiver>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemvariable="ITEM_REWARD" count="18"/>
+    </rewards>
+    <failconditions>
+      <missionitemloss/>
+      <playerdeath/>
+      <changeflagging/>
+    </failconditions>
+  </playerfactionquest>
+
+  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
+  offertext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
+  completetext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_heavy">
+    <variables>
+      <dynamicplayerfaction name="FACTION_B" includingown="false">
+        <filter faction="Swamp"/>
+        <filter faction="Steppe"/>
+        <filter faction="Forest"/>
+        <filter faction="Highland"/>
+        <filter faction="Mountain"/>
+      </dynamicplayerfaction>
+      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
+        <distancefromquestgiver mindistance="6" maxdistance="9" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -2058,7 +2580,7 @@ Light-->
     </failconditions>
   </playerfactionquest>
 
-  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
+  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
   offertext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
   completetext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_heavy">
     <variables>
@@ -2070,7 +2592,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="5" maxdistance="7" />
+        <distancefromquestgiver mindistance="8" maxdistance="10" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -2140,88 +2662,6 @@ Light-->
     </failconditions>
   </playerfactionquest>
 
-  <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
-  offertext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
-  completetext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_heavy">
-    <variables>
-      <dynamicplayerfaction name="FACTION_B" includingown="false">
-        <filter faction="Swamp"/>
-        <filter faction="Steppe"/>
-        <filter faction="Forest"/>
-        <filter faction="Highland"/>
-        <filter faction="Mountain"/>
-      </dynamicplayerfaction>
-      <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="6" maxdistance="8" />
-        <questgivertag tag="faction_outside" />
-      </dynamicquestgiver>
-      <dynamicfactionitem name="ITEM_A" factionvariable="self">
-        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
-        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
-        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
-        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
-        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_B" factionvariable="FACTION_B">
-        <perfaction faction="Swamp" item="QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY" />
-        <perfaction faction="Forest" item="QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY" />
-        <perfaction faction="Steppe" item="QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY" />
-        <perfaction faction="Highland" item="QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY" />
-        <perfaction faction="Mountain" item="QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_REQUIRED" factionvariable="self">
-        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
-        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
-        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
-        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
-        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
-      </dynamicfactionitem>
-      <dynamicfactionitem name="ITEM_REWARD" factionvariable="FACTION_B">
-        <perfaction faction="Swamp" item="T1_FACTION_SWAMP_TOKEN_1" />
-        <perfaction faction="Steppe" item="T1_FACTION_STEPPE_TOKEN_1" />
-        <perfaction faction="Forest" item="T1_FACTION_FOREST_TOKEN_1" />
-        <perfaction faction="Highland" item="T1_FACTION_HIGHLAND_TOKEN_1" />
-        <perfaction faction="Mountain" item="T1_FACTION_MOUNTAIN_TOKEN_1" />
-      </dynamicfactionitem>
-    </variables>
-    <requirements>
-      <maxloadafteritemsreceived maxload="1"/>
-    </requirements>
-    <costs>
-      <item itemvariable="ITEM_REQUIRED" amount="15"/>
-    </costs>
-    <tasks>
-      <extendedmissionstep applybuff="TRADE_PACK_BUFF_HEAVY_A">
-        <preactions>
-          <receiveitem itemvariable="ITEM_A"/>
-        </preactions>
-        <missions>
-          <gotoquestgiver questgivervariable="AGENTS_A" mustaccept="true" accepttext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT"  textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1">
-            <item itemvariable="ITEM_A"/>
-          </gotoquestgiver>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
-        <preactions>
-          <receiveitem itemvariable="ITEM_B"/>
-        </preactions>
-        <missions>
-          <gotoquestgiver textloca="@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2">
-            <item itemvariable="ITEM_B"/>
-          </gotoquestgiver>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-      <item itemvariable="ITEM_REWARD" count="23"/>
-    </rewards>
-    <failconditions>
-      <missionitemloss/>
-      <playerdeath/>
-      <changeflagging/>
-    </failconditions>
-  </playerfactionquest>
-
   <playerfactionquest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D" title="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE"
   offertext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT" progresstext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT"
   completetext="@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT" questtimeout="86400" icon="icon_module_tradepack_heavy">
@@ -2234,7 +2674,7 @@ Light-->
         <filter faction="Mountain"/>
       </dynamicplayerfaction>
       <dynamicquestgiver name="AGENTS_A" factionvariable="FACTION_B" maxcount="999">
-        <distancefromquestgiver mindistance="7" maxdistance="10" />
+        <distancefromquestgiver mindistance="10" maxdistance="12" />
         <questgivertag tag="faction_outside" />
       </dynamicquestgiver>
       <dynamicfactionitem name="ITEM_A" factionvariable="self">
@@ -2295,7 +2735,7 @@ Light-->
       </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item itemvariable="ITEM_REWARD" count="26"/>
+      <item itemvariable="ITEM_REWARD" count="22"/>
     </rewards>
     <failconditions>
       <missionitemloss/>

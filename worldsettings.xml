@@ -6,7 +6,7 @@
       name = "GREEN"
       uipvptype="Safe"
       pvpwarningtype="safe"
-			pvprule="PvpDisabled"
+			pvprule="FactionPvpOnly"
       playersarelethal="false"
       mobsarelethal="false"
       showpvpplayeronminimap="true"
@@ -19,9 +19,9 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       clusterdangerbonustype="safe"
+      knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
       requiredreputationtoenter="-1000"
-      showdiebuttondelay="20"
-	    vanityvisibility="Allowed"
+	    vanityvisibility="Allowed"            
       ignoredestructionmultiplier="true"
       />
     
@@ -44,7 +44,6 @@
       clusterdangerbonustype="yellow"
       knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
       requiredreputationtoenter="-20000"
-      showdiebuttondelay="20"
 	    vanityvisibility="Allowed"
       zergdebuffenabled="false"
       ignoredestructionmultiplier="true"
@@ -68,7 +67,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="red"
       requiredreputationtoenter="-20000"
-      showdiebuttondelay="20"
 	    vanityvisibility="Allowed"
       zergdebuffenabled="false"
       ignoredestructionmultiplier="false"
@@ -92,7 +90,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="black"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false" 
 	    vanityvisibility="Allowed"
       zergdebuffenabled="true"      
@@ -117,7 +114,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="tunnel"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false" 
 	    vanityvisibility="Allowed"
       zergdebuffenabled="true"      
@@ -125,7 +121,7 @@
       />
     
     <archetype
-      name = "HELL"
+      name = "HELL_2V2_LETHAL"
       uipvptype="Black"
       pvpwarningtype="black"
       pvprule="PvpForced"
@@ -134,25 +130,26 @@
       showpvpplayeronminimap="false"
       showfriendlycount="false"
       showhostilecount="false"
-      spellcooldownsonenteringseconds="15"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="0"
 			buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="1000"
-      itempowerscalingfactor="0.5"
-      animalgrowthfactor="0.5"
+      itempowersoftcap="1100"
+      itempowerscalingfactor="0.2"
+      animalgrowthfactor="0.2"
       cropyieldfactor="2"
       clusterdangerbonustype="hell"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
 	    vanityvisibility="Allowed"            
 	    ignoredestructionmultiplier="true"      
       allowequipmentswapping="false"
       outlawbuffenabled="false"
+      allowtrade="GroupOnly"
       />
-    
+
     <archetype
-      name = "HELL_YELLOW"
+      name = "HELL_5V5_LETHAL"
       uipvptype="Black"
       pvpwarningtype="black"
       pvprule="PvpForced"
@@ -161,21 +158,134 @@
       showpvpplayeronminimap="false"
       showfriendlycount="false"
       showhostilecount="false"
-      spellcooldownsonenteringseconds="15"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="0"
 			buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="700"
-      itempowerscalingfactor="0.2"
-      animalgrowthfactor="0.5"
+      itempowersoftcap="1200"
+      itempowerscalingfactor="0.35"
+      animalgrowthfactor="0.2"
       cropyieldfactor="2"
-      clusterdangerbonustype="hell_yellow"
+      clusterdangerbonustype="hell"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
 	    vanityvisibility="Allowed"
 	    ignoredestructionmultiplier="true"
       allowequipmentswapping="false"
       outlawbuffenabled="false"
+      allowtrade="GroupOnly"
+      />
+
+    <archetype
+      name = "HELL_10V10_LETHAL"
+      uipvptype="Black"
+      pvpwarningtype="black"
+      pvprule="PvpForced"
+      playersarelethal="true"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
+      showfriendlycount="false"
+      showhostilecount="false"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="0"
+			buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="1300"
+      itempowerscalingfactor="0.5"
+      animalgrowthfactor="0.5"
+      cropyieldfactor="2"
+      clusterdangerbonustype="hell"
+      requiredreputationtoenter="-50000"
+      allowfactionflagging="false"
+      ignoreguilds="true"
+	    vanityvisibility="Allowed"
+	    ignoredestructionmultiplier="true"
+      allowequipmentswapping="false"
+      outlawbuffenabled="false"
+      allowtrade="GroupOnly"
+      />
+    
+    <archetype
+      name = "HELL_2V2_NON_LETHAL"
+      uipvptype="Limited"
+      pvpwarningtype="yellow"
+      pvprule="PvpForced"
+      playersarelethal="false"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
+      showfriendlycount="false"
+      showhostilecount="true"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="15"
+			buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="900"
+      itempowerscalingfactor="0.1"
+      animalgrowthfactor="0.2"
+      cropyieldfactor="2"
+      clusterdangerbonustype="hell_green"
+      requiredreputationtoenter="-50000"
+      allowfactionflagging="false"
+      ignoreguilds="true"
+  	  vanityvisibility="Allowed"
+	    ignoredestructionmultiplier="true"
+      allowequipmentswapping="false"
+      outlawbuffenabled="false"
+      allowtrade="GroupOnly"
+      />
+
+    <archetype
+      name = "HELL_5V5_NON_LETHAL"
+      uipvptype="Limited"
+      pvpwarningtype="yellow"
+      pvprule="PvpForced"
+      playersarelethal="false"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
+      showfriendlycount="false"
+      showhostilecount="true"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="15"
+			buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="900"
+      itempowerscalingfactor="0.1"
+      animalgrowthfactor="0.2"
+      cropyieldfactor="2"
+      clusterdangerbonustype="hell_green"
+      requiredreputationtoenter="-50000"
+      allowfactionflagging="false"
+      ignoreguilds="true"
+  	  vanityvisibility="Allowed"
+	    ignoredestructionmultiplier="true"
+      allowequipmentswapping="false"
+      outlawbuffenabled="false"
+      allowtrade="GroupOnly"
+      />
+
+    <archetype
+      name = "HELL_10V10_NON_LETHAL"
+      uipvptype="Limited"
+      pvpwarningtype="yellow"
+      pvprule="PvpForced"
+      playersarelethal="false"
+      mobsarelethal="false"
+      showpvpplayeronminimap="false"
+      showfriendlycount="false"
+      showhostilecount="true"
+      showmobsonminimap="true"
+      spellcooldownsonenteringseconds="15"
+			buildingcraftcapacityregenfactor="1"
+      itempowersoftcap="900"
+      itempowerscalingfactor="0.1"
+      animalgrowthfactor="0.5"
+      cropyieldfactor="2"
+      clusterdangerbonustype="hell_green"
+      requiredreputationtoenter="-50000"
+      allowfactionflagging="false"
+      ignoreguilds="true"
+  	  vanityvisibility="Allowed"
+	    ignoredestructionmultiplier="true"
+      allowequipmentswapping="false"
+      outlawbuffenabled="false"
+      allowtrade="GroupOnly"
       />
     
     <archetype
@@ -188,21 +298,22 @@
       showpvpplayeronminimap="false"
       showfriendlycount="false"
       showhostilecount="true"
+      showmobsonminimap="true"
       spellcooldownsonenteringseconds="15"
 			buildingcraftcapacityregenfactor="1"
-      itempowersoftcap="700"
+      itempowersoftcap="1100"
       itempowerscalingfactor="0.2"
       animalgrowthfactor="0.5"
       cropyieldfactor="2"
       clusterdangerbonustype="hell_green"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
   	  vanityvisibility="Allowed"
 	    ignoredestructionmultiplier="true"
       allowequipmentswapping="false"      
       outlawbuffenabled="false"
+      allowtrade="GroupOnly"
       />
 
     <archetype
@@ -213,6 +324,7 @@
       playersarelethal="false"
       mobsarelethal="false"
       showpvpplayeronminimap="false"
+      showmobsonminimap="true"
       showfriendlycount="false"
       showhostilecount="true"
       spellcooldownsonenteringseconds="0"
@@ -223,7 +335,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="corrupted_beginner"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
       vanityvisibility="Allowed"
@@ -240,6 +351,7 @@
       playersarelethal="true"
       mobsarelethal="false"
       showpvpplayeronminimap="false"
+      showmobsonminimap="true"
       showfriendlycount="false"
       showhostilecount="true"
       spellcooldownsonenteringseconds="0"
@@ -250,7 +362,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="corrupted_intermediate"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
       vanityvisibility="Allowed"
@@ -267,6 +378,7 @@
       playersarelethal="true"
       mobsarelethal="false"
       showpvpplayeronminimap="false"
+      showmobsonminimap="true"
       showfriendlycount="false"
       showhostilecount="true"
       spellcooldownsonenteringseconds="0"
@@ -277,7 +389,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="corrupted_pro"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       ignoreguilds="true"
       vanityvisibility="Allowed"
@@ -304,7 +415,6 @@
       cropyieldfactor="2"
       clusterdangerbonustype="black"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false" 
 	    vanityvisibility="Allowed"
       zergdebuffenabled="true"      
@@ -328,7 +438,6 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-1000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       allowfactionflaggedenter="false"
 	    vanityvisibility="AllowedAndDefault"
@@ -352,7 +461,7 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
+      allowenemyfactionenter="false"
 	    vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
       />
@@ -374,7 +483,7 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
+      allowenemyfactionenter="false"
 	    vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
       />
@@ -396,8 +505,7 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
-      allowfactionflagging="false"
+      allowenemyfactionenter="false"
 	    vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
       />
@@ -420,9 +528,7 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
-      allowfactionflagging="false"
-      allowfactionflaggedenter="false"
+      allowenemyfactionenter="false"
 	    vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
       />
@@ -444,7 +550,6 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       durabilitydecaydivider="0"
 	    vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
@@ -467,7 +572,6 @@
       animalgrowthfactor="1"
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
-      showdiebuttondelay="20"
       allowfactionflagging="false"
       vanityvisibility="AllowedAndDefault"
    	  ignoredestructionmultiplier="true"
@@ -491,7 +595,7 @@
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	    allowtrade="false"
+	    allowtrade="Disabled"
       allowfactionflagging="false"
   	  vanityvisibility="Allowed"
    	  ignoredestructionmultiplier="true"
@@ -514,7 +618,7 @@
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	    allowtrade="false"
+	    allowtrade="Disabled"
       allowfactionflagging="false"
   	  vanityvisibility="Allowed"
    	  ignoredestructionmultiplier="true"
@@ -537,7 +641,7 @@
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	    allowtrade="false"
+	    allowtrade="Disabled"
       allowfactionflagging="false"
   	  vanityvisibility="Allowed"
    	  ignoredestructionmultiplier="true"
@@ -560,7 +664,7 @@
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	    allowtrade="false"
+	    allowtrade="Disabled"
       allowfactionflagging="false"
   	  vanityvisibility="Allowed"
    	  ignoredestructionmultiplier="true"
@@ -583,7 +687,7 @@
       cropyieldfactor="1"
       requiredreputationtoenter="-50000"
       clusterdangerbonustype="expedition"
-	    allowtrade="false"
+	    allowtrade="Disabled"
       allowfactionflagging="false"
   	  vanityvisibility="Allowed"
   	  ignoredestructionmultiplier="true"
@@ -894,7 +998,6 @@
       hellgateclustermessage="true"
       isdungeon="false"
       allowmounts="true"
-      playerfactionaffiliated="true"
       allowfactionrewards="false"
 	  showvanitymainoffhand ="true">
     </clustertype>
@@ -909,7 +1012,6 @@
       hellgateclustermessage="true"
       isdungeon="false"
       allowmounts="true"
-      playerfactionaffiliated="true"
       allowfactionrewards="false"
 	  showvanitymainoffhand ="true">
     </clustertype>
@@ -924,7 +1026,6 @@
       hellgateclustermessage="true"
       isdungeon="false"
       allowmounts="true"
-      playerfactionaffiliated="true"
 	  showvanitymainoffhand ="true">
     </clustertype>
 
@@ -1001,6 +1102,7 @@
 	    hellgatemobminimapvisible="true"
 	    hellgateclustermessage="true"
 			isdungeon="false"
+      smartclusterqueue="true"                 
       allowmounts="true"
                  
       tunnelpreset="SAFEZONE">
@@ -1574,7 +1676,8 @@
 	    hellgatemobminimapvisible="true"
 	    hellgateclustermessage="true"
       escapedungeonspellavailable="false"
-      isdungeon="true"
+      isdungeon="true"                 
+      smartclusterqueue="true"
       allowmounts="true">
       <spawnbuff>
         <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1597,6 +1700,7 @@
 	    hellgateclustermessage="true"
       escapedungeonspellavailable="false"
       isdungeon="true"
+      smartclusterqueue="true"
       allowmounts="true">
       <spawnbuff>
         <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1619,6 +1723,7 @@
 	    hellgateclustermessage="true"
       escapedungeonspellavailable="false"
       isdungeon="true"
+      smartclusterqueue="true"                 
       allowmounts="true">
       <spawnbuff>
         <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -2029,16 +2134,39 @@
       </spawnbuff>
       <mobspawns defaulttimefactor="1.0"/>
     </clustertype>
-    
-    <clustertype name="DUNGEON_HELL"
-      archetype="HELL"
-      logoutseconds="300"
-			editorcolor="255, 128, 0"
-			editorcolor2="128, 54, 0"
-			furnitureobjectsallowed="true"
-			isdungeon="true"
-      allowmounts="false"                 
-			persistsimulationtodatabase="false">
+
+    <clustertype name="DUNGEON_HELL_2V2_LETHAL"
+     archetype="HELL_2V2_LETHAL"              
+     logoutseconds="900"
+     editorcolor="255, 128, 0"
+     editorcolor2="128, 54, 0"
+     furnitureobjectsallowed="true"
+     isdungeon="true"
+     allowmounts="false"
+     escapedungeonspellavailable="true"
+     persistsimulationtodatabase="false">
+      <spawnbuff>
+        <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+        <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
+        <buff name="HELL_2V2_ENTER"                   isclusterchange="Must"/>
+        <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must"/>
+        <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
+        <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
+        <!-- order is important: immunity LAST (obvious, right?) -->
+      </spawnbuff>
+      <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
+    </clustertype>
+
+    <clustertype name="DUNGEON_HELL_5V5_LETHAL"
+     archetype="HELL_5V5_LETHAL"
+     logoutseconds="900"
+     editorcolor="255, 128, 0"
+     editorcolor2="128, 54, 0"
+     furnitureobjectsallowed="true"
+     isdungeon="true"
+     allowmounts="false"
+     escapedungeonspellavailable="true"
+     persistsimulationtodatabase="false">
       <spawnbuff>
         <!-- The first buff makes you immune to invul shields for respawning in the open world -->
         <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
@@ -2048,16 +2176,60 @@
         <!-- order is important: immunity LAST (obvious, right?) -->
       </spawnbuff>
       <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
-		</clustertype>
+    </clustertype>
 
-    <clustertype name="DUNGEON_HELL_YELLOW"
-      archetype="HELL_YELLOW"
-      logoutseconds="300"
+    <clustertype name="DUNGEON_HELL_10V10_LETHAL"
+     archetype="HELL_10V10_LETHAL"
+     logoutseconds="900"
+     editorcolor="255, 128, 0"
+     editorcolor2="128, 54, 0"
+     furnitureobjectsallowed="true"
+     isdungeon="true"
+     allowmounts="false"
+     escapedungeonspellavailable="true"
+     persistsimulationtodatabase="false">
+      <spawnbuff>
+        <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+        <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
+        <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must"/>
+        <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
+        <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
+        <!-- order is important: immunity LAST (obvious, right?) -->
+      </spawnbuff>
+      <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
+    </clustertype>
+
+    <clustertype name="DUNGEON_HELL_2V2_NON_LETHAL"
+      archetype="HELL_2V2_NON_LETHAL"
+      logoutseconds="900"
       editorcolor="255, 128, 0"
       editorcolor2="128, 54, 0"
       furnitureobjectsallowed="true"
       isdungeon="true"
       allowmounts="false"
+      escapedungeonspellavailable="true"
+      persistsimulationtodatabase="false">
+      <spawnbuff>
+        <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+        <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
+        <buff name="HELL_2V2_ENTER"                   isclusterchange="Must"/>        
+        <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must"/>
+        <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
+        <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
+        <!-- order is important: immunity LAST (obvious, right?) -->
+      </spawnbuff>
+      <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
+    </clustertype>
+
+    <clustertype name="DUNGEON_HELL_5V5_NON_LETHAL"
+      archetype="HELL_5V5_NON_LETHAL"
+      logoutseconds="900"
+      editorcolor="255, 128, 0"
+      editorcolor2="128, 54, 0"
+      furnitureobjectsallowed="true"
+      isdungeon="true"
+      allowmounts="false"
+      escapedungeonspellavailable="true"
       persistsimulationtodatabase="false">
       <spawnbuff>
         <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -2070,6 +2242,26 @@
       <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
     </clustertype>
 
+    <clustertype name="DUNGEON_HELL_10V10_NON_LETHAL"
+      archetype="HELL_10V10_NON_LETHAL"
+      logoutseconds="900"
+      editorcolor="255, 128, 0"
+      editorcolor2="128, 54, 0"
+      furnitureobjectsallowed="true"
+      isdungeon="true"
+      allowmounts="false"
+      escapedungeonspellavailable="true"
+      persistsimulationtodatabase="false">
+      <spawnbuff>
+        <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+        <buff name="SPAWN_BUFFIMMUNITY_ONDEATH"       isrevive="Must" />
+        <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must"/>
+        <buff name="SPAWN_SPEED"                      ispvppossible="Must" isclusterchange="Must" />
+        <buff name="SPAWN_BUFFIMMUNITY"               ispvppossible="Must" isclusterchange="Must" />
+        <!-- order is important: immunity LAST (obvious, right?) -->
+      </spawnbuff>
+      <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
+    </clustertype>
     <clustertype name="DUNGEON_HELL_GREEN"
       archetype="HELL_GREEN"
       logoutseconds="300"
@@ -2662,7 +2854,7 @@
     <!-- Black 5v5 Hell Gate-->
     <hellcluster
 			type="T5_HELLGATE_GROUP_01"
-			hellclusterlevel="HELLGATE-0003_HEL_DL_T5_NON_GROUP_01"
+			hellclusterlevel="HELLGATE-OLD-0003_HEL_DL_T5_NON_GROUP_01"
 			minimapicon="hellgatemob"
 			hellgatedeath="true"
 			gateentertitle="@HELLGATE_BAR_TITLE_GROUP"
@@ -2705,7 +2897,7 @@
     <!-- Black 2v2 Hell Gate-->      
     <hellcluster
 			type="T4_HELLGATE_SINGLE_02"
-			hellclusterlevel="HELLGATE-0004_HEL_DL_T5_NON_GROUP_01"
+			hellclusterlevel="HELLGATE-OLD-0004_HEL_DL_T5_NON_GROUP_01"
 			minimapicon="hellgatemob_solo"
 			hellgatedeath="true"
 			gateentertitle="@HELLGATE_BAR_TITLE_SOLO"
@@ -2749,7 +2941,7 @@
     <!-- enterwarningmessagestring = @HELLCLUSTER_ENTER_WARNING   -->    
     <hellcluster
 			type="T5_HELLGATE_GROUP_02"
-			hellclusterlevel="HELLGATE-0002_HEL_DL_T5_NON_GROUP_01"
+			hellclusterlevel="HELLGATE-OLD-0002_HEL_DL_T5_NON_GROUP_01"
 			minimapicon="hellgatemob"
 			hellgatedeath="true"
 			gateentertitle="@HELLGATE_BAR_TITLE_GROUP"
@@ -2792,7 +2984,7 @@
     <!-- Safe 2v2 Hell Gate-->      
     <hellcluster
 			type="T4_HELLGATE_SINGLE_01"
-			hellclusterlevel="HELLGATE-0001_HEL_DL_T4_NON_GROUP_01"
+			hellclusterlevel="HELLGATE-OLD-0001_HEL_DL_T4_NON_GROUP_01"
 			minimapicon="hellgatemob_solo"
 			hellgatedeath="true"
 			gateentertitle="@HELLGATE_BAR_TITLE_SOLO"
