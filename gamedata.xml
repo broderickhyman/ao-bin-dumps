@@ -28,7 +28,9 @@
       EarlyRetreatTimeWindowInSeconds="60"
       EarlyRetreatPenaltyInSeconds="600"
       SkipClusterCooldownInSeconds="125"
-      MinActiveTimeBeforeSkippingAllowed="120"/>
+      MinActiveTimeBeforeSkippingAllowed="120"
+      ReservedFactionSeats="300" 
+      MinSeatsPerFaction="50" />
 
     <transactionlimits>	    
 		<gold GoldTransactionLimitUntrustedPerDay="100" 
@@ -97,6 +99,7 @@
       decreasetimesilence="20"
       decreasetimeslow="20"
       decreasetimeforcedmovement="20"/>
+    <ReflectedDamage maxReflectCapacityFactorOfMaxHp="2"/>
     <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" mintoggledurationbeforecancelpossible="0.5" />
     <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="9" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
@@ -511,6 +514,9 @@
     <attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1"/>
     <attribute name="MagicSpellDamageBonus" min="-0.8" max="1"/>
 
+    <attribute name="HealBonus" min="-0.7" max="unrestricted"/>
+    <attribute name="HealModifier" min="-0.7" max="unrestricted"/>
+
     <attribute name="AbilityPower" min="-0.5" max="2" absolutemin="1"/>
     <attribute name="AbilityPowerBonus" min="-0.5" max="2"/>
 
@@ -560,8 +566,6 @@
        MagicCoolDownReductionAdjusted,
        MagicCastingResilience,
 
-       HealBonus,
-       HealModifier,
        EnergyCostReduction,
 
        PhysicalArmor,
@@ -571,7 +575,7 @@
        BalanceModifier,
        FocusFireModifier,
        HealingSicknessModifier,
-       FocusFireProtectionPeneration,
+       FocusFireProtectionPenetration,
 
        CraftTime,
        InstallTime,
@@ -1387,8 +1391,8 @@
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="red" icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.6"/>
     <ClusterDangerBonus type="black" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell" icon="black" famefactor="7.5" moblootfactor="7.1" mobsilverlootfactor="8.17"/>
-    <ClusterDangerBonus type="hell_yellow" icon="yellow" famefactor="3.5" moblootfactor="2.25" mobsilverlootfactor="2.6"/>
+    <ClusterDangerBonus type="hell" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="hell_yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="hell_green" icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="2"/>
     <ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
@@ -1409,9 +1413,8 @@
   <PersonalStatement characterlimit="270" />
   <FeaturedFeature>
 	<!-- <FeatureDetail id="SubscriptionPromo" utcstartdate="2020-10-21T10:15:00" utcenddate="2021-10-20T10:00:00" showad="SubscriptionPromo" showcount="1" nativeonly="true" counttype="peraccount"/> -->
-	<FeatureDetail id="BarbarianBundle" utcstartdate="2021-02-10T10:15:00" utcenddate="2022-02-10T10:00:00" showad="BarbarianBundle" showcount="1" counttype="peraccount"/>
-    <FeatureDetail id="ReferralLynx" utcstartdate="2021-02-10T10:15:00" utcenddate="2021-04-01T10:00:00" showad="ReferralLynx" showcount="1" counttype="peraccount"/>
-	<FeatureDetail id="extragoldnative2" utcstartdate="2020-11-04T10:15:00" utcenddate="2020-12-31T10:00:00" showhint="EXTRA_GOLD_ON_NATIVE" showcount="2" nativeonly="true" counttype="peraccount"/>
+	<FeatureDetail id="BarbarianBundle" utcstartdate="2020-02-10T10:15:00" utcenddate="2022-02-10T10:00:00" showad="BarbarianBundle" showcount="1" counttype="peraccount"/>
+    <FeatureDetail id="extragoldnative2" utcstartdate="2020-11-04T10:15:00" utcenddate="2020-12-31T10:00:00" showhint="EXTRA_GOLD_ON_NATIVE" showcount="2" nativeonly="true" counttype="peraccount"/>
   </FeaturedFeature>
   <SiegeCampBank size="64" weightlimit="10000.0">
     <DefaultTab Name="@SIEGECAMP_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
@@ -1895,4 +1898,5 @@
     <contributingmarket id="3002"/>
     <contributingmarket id="4006"/>
   </MarketPriceEstimation>
+  <Loadouts maximumplayerloadouts="30" playerinventorysize="18"/>
 </AO-GameData>

@@ -153,6 +153,26 @@
         "OR": {
           "OR": [
             {
+              "@weight": "25",
+              "Item": [
+                {
+                  "@type": "T5_HELLGATE_2V2_NON_LETHAL_1_MAP",
+                  "@enchantmentlevel": "0",
+                  "@weight": "10"
+                },
+                {
+                  "@type": "T5_HELLGATE_5V5_NON_LETHAL_1_MAP",
+                  "@enchantmentlevel": "0",
+                  "@weight": "2"
+                },
+                {
+                  "@type": "T5_HELLGATE_10V10_NON_LETHAL_1_MAP",
+                  "@enchantmentlevel": "0",
+                  "@weight": "1"
+                }
+              ]
+            },
+            {
               "@weight": "8",
               "Item": [
                 {
@@ -210,7 +230,15 @@
         "OR": {
           "OR": [
             {
-              "@weight": "1",
+              "@weight": "20",
+              "Item": {
+                "@type": "T6_HELLGATE_2V2_LETHAL_1_MAP",
+                "@enchantmentlevel": "0",
+                "@weight": "1"
+              }
+            },
+            {
+              "@weight": "2",
               "Item": [
                 {
                   "@type": "T6_RANDOM_DUNGEON_ELITE_TOKEN_1",
@@ -235,7 +263,7 @@
               ]
             },
             {
-              "@weight": "8",
+              "@weight": "16",
               "Item": [
                 {
                   "@type": "T6_RANDOM_DUNGEON_TOKEN_1",
@@ -260,7 +288,7 @@
               ]
             },
             {
-              "@weight": "80",
+              "@weight": "160",
               "Item": [
                 {
                   "@type": "T6_RANDOM_DUNGEON_SOLO_TOKEN_1",
@@ -292,7 +320,15 @@
         "OR": {
           "OR": [
             {
-              "@weight": "1",
+              "@weight": "4",
+              "Item": {
+                "@type": "T7_HELLGATE_5V5_LETHAL_1_MAP",
+                "@enchantmentlevel": "0",
+                "@weight": "1"
+              }
+            },
+            {
+              "@weight": "2",
               "Item": [
                 {
                   "@type": "T7_RANDOM_DUNGEON_ELITE_TOKEN_1",
@@ -317,7 +353,7 @@
               ]
             },
             {
-              "@weight": "8",
+              "@weight": "16",
               "Item": [
                 {
                   "@type": "T7_RANDOM_DUNGEON_TOKEN_1",
@@ -342,7 +378,7 @@
               ]
             },
             {
-              "@weight": "80",
+              "@weight": "160",
               "Item": [
                 {
                   "@type": "T7_RANDOM_DUNGEON_SOLO_TOKEN_1",
@@ -375,6 +411,14 @@
           "OR": [
             {
               "@weight": "1",
+              "Item": {
+                "@type": "T8_HELLGATE_10V10_LETHAL_1_MAP",
+                "@enchantmentlevel": "0",
+                "@weight": "1"
+              }
+            },
+            {
+              "@weight": "2",
               "Item": [
                 {
                   "@type": "T8_RANDOM_DUNGEON_ELITE_TOKEN_1",
@@ -399,7 +443,7 @@
               ]
             },
             {
-              "@weight": "8",
+              "@weight": "16",
               "Item": [
                 {
                   "@type": "T8_RANDOM_DUNGEON_TOKEN_1",
@@ -424,7 +468,7 @@
               ]
             },
             {
-              "@weight": "80",
+              "@weight": "160",
               "Item": [
                 {
                   "@type": "T8_RANDOM_DUNGEON_SOLO_TOKEN_1",
@@ -16694,11 +16738,6 @@
       },
       {
         "@name": "T5_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
-        "Item": {
-          "@type": "T5_FARM_COUGAR_BABY",
-          "@chance": "0.0605",
-          "@amount": "1"
-        },
         "OR": {
           "@chance": "1.3636",
           "OR": [
@@ -17510,12 +17549,7 @@
               }
             ]
           }
-        ],
-        "Item": {
-          "@type": "T5_FARM_COUGAR_BABY",
-          "@chance": "0.0727",
-          "@amount": "1"
-        }
+        ]
       },
       {
         "@name": "T7_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
@@ -17932,12 +17966,7 @@
               }
             ]
           }
-        ],
-        "Item": {
-          "@type": "T5_FARM_COUGAR_BABY",
-          "@chance": "0.0872",
-          "@amount": "1"
-        }
+        ]
       },
       {
         "@name": "T8_RANDOM_DUNGEON_KEEPER_BOSS_LOOT",
@@ -18354,12 +18383,7 @@
               }
             ]
           }
-        ],
-        "Item": {
-          "@type": "T5_FARM_COUGAR_BABY",
-          "@chance": "0.1047",
-          "@amount": "1"
-        }
+        ]
       },
       {
         "@name": "T4_RANDOM_DUNGEON_HERETIC_BOSS_LOOT",
@@ -19050,29 +19074,29 @@
       },
       {
         "@name": "MOB_GIANTSTAG_LOOT",
-        "OR": {
-          "Item": {
-            "@type": "T4_FARM_GIANTSTAG_BABY",
-            "@weight": "25",
-            "@amount": "1"
-          }
+        "Item": {
+          "@type": "T4_FARM_GIANTSTAG_BABY",
+          "@amount": "1"
+        }
+      },
+      {
+        "@name": "MOB_COUGAR_LOOT",
+        "Item": {
+          "@type": "T5_FARM_COUGAR_BABY",
+          "@amount": "1"
         }
       },
       {
         "@name": "MOB_DIREWOLF_LOOT",
-        "OR": {
-          "Item": {
-            "@type": "T6_FARM_DIREWOLF_BABY",
-            "@weight": "25",
-            "@amount": "1"
-          }
+        "Item": {
+          "@type": "T6_FARM_DIREWOLF_BABY",
+          "@amount": "1"
         }
       },
       {
         "@name": "MOB_DIREBOAR_LOOT",
         "Item": {
           "@type": "T7_FARM_DIREBOAR_BABY",
-          "@chance": "1.0",
           "@amount": "1"
         }
       },
@@ -19080,7 +19104,6 @@
         "@name": "MOB_SWAMPDRAGON_LOOT",
         "Item": {
           "@type": "T7_FARM_SWAMPDRAGON_BABY",
-          "@chance": "1.0",
           "@amount": "1"
         }
       },
@@ -19088,7 +19111,6 @@
         "@name": "MOB_DIREBEAR_LOOT",
         "Item": {
           "@type": "T8_FARM_DIREBEAR_BABY",
-          "@chance": "1.0",
           "@amount": "1"
         }
       },
@@ -19096,7 +19118,6 @@
         "@name": "MOB_MAMMOTH_LOOT",
         "Item": {
           "@type": "T8_FARM_MAMMOTH_BABY",
-          "@chance": "1.0",
           "@amount": "1"
         }
       },
@@ -20415,6 +20436,100 @@
             ]
           }
         ]
+      },
+      {
+        "@name": "HELLGATE_ARTEFACT_LOOT",
+        "OR": {
+          "LootListReference": [
+            {
+              "@name": "MELD_4_1_ALL_LOOT",
+              "@weight": "225"
+            },
+            {
+              "@name": "MELD_4_2_ALL_LOOT",
+              "@weight": "75"
+            },
+            {
+              "@name": "MELD_4_3_ALL_LOOT",
+              "@weight": "25"
+            },
+            {
+              "@name": "MELD_5_1_ALL_LOOT",
+              "@weight": "225"
+            },
+            {
+              "@name": "MELD_5_2_ALL_LOOT",
+              "@weight": "75"
+            },
+            {
+              "@name": "MELD_5_3_ALL_LOOT",
+              "@weight": "25"
+            },
+            {
+              "@name": "MELD_6_1_ALL_LOOT",
+              "@weight": "225"
+            },
+            {
+              "@name": "MELD_6_2_ALL_LOOT",
+              "@weight": "75"
+            },
+            {
+              "@name": "MELD_6_3_ALL_LOOT",
+              "@weight": "25"
+            },
+            {
+              "@name": "MELD_7_1_ALL_LOOT",
+              "@weight": "45"
+            },
+            {
+              "@name": "MELD_7_2_ALL_LOOT",
+              "@weight": "15"
+            },
+            {
+              "@name": "MELD_7_3_ALL_LOOT",
+              "@weight": "5"
+            },
+            {
+              "@name": "MELD_8_1_ALL_LOOT",
+              "@weight": "9"
+            },
+            {
+              "@name": "MELD_8_2_ALL_LOOT",
+              "@weight": "3"
+            },
+            {
+              "@name": "MELD_8_3_ALL_LOOT",
+              "@weight": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "HELLGATE_FACTION_CAPES",
+        "OR": {
+          "LootListReference": [
+            {
+              "@name": "T4_FACTION_CAPES",
+              "@chance": "1"
+            },
+            {
+              "@name": "T5_FACTION_CAPES",
+              "@chance": "1"
+            },
+            {
+              "@name": "T6_FACTION_CAPES",
+              "@chance": "1"
+            },
+            {
+              "@name": "T7_FACTION_CAPES",
+              "@chance": "0.2"
+            },
+            {
+              "@name": "T8_FACTION_CAPES",
+              "@chance": "0.04"
+            }
+          ]
+        }
       },
       {
         "@name": "T5_DEMON_BOSS_YELLOW_LOOT",
@@ -33371,26 +33486,14 @@
               }
             ]
           }
-        ],
-        "Item": {
-          "@type": "T5_FARM_COUGAR_BABY",
-          "@chance": "0.0605",
-          "@amount": "1"
-        }
+        ]
       },
       {
         "@name": "T5_KEEPER_SEER_VETERAN_BOSS_LOOT",
-        "Item": [
-          {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
-            "@chance": "0.006"
-          },
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.0605",
-            "@amount": "1"
-          }
-        ],
+        "Item": {
+          "@type": "UNIQUE_UNLOCK_T6_CAPE_CLOTH_KEEPER",
+          "@chance": "0.006"
+        },
         "OR": {
           "@chance": "1.3636",
           "OR": [
@@ -33529,17 +33632,10 @@
       },
       {
         "@name": "T5_KEEPER_ANCIENT_GIANT_VETERAN_BOSS_LOOT",
-        "Item": [
-          {
-            "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
-            "@chance": "0.006"
-          },
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.0605",
-            "@amount": "1"
-          }
-        ],
+        "Item": {
+          "@type": "UNIQUE_UNLOCK_T6_CAPE_LEATHER_KEEPER",
+          "@chance": "0.006"
+        },
         "OR": {
           "@chance": "1.3636",
           "OR": [
@@ -33678,18 +33774,6 @@
       },
       {
         "@name": "T5_KEEPER_SEER_ELITE_BOSS_LOOT",
-        "Item": [
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.002014",
-            "@amount": "1"
-          },
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.002014",
-            "@amount": "1"
-          }
-        ],
         "OR": [
           {
             "@chance": "0.002553",
@@ -33840,18 +33924,6 @@
       },
       {
         "@name": "T8_KEEPER_SEER_ELITE_BOSS_LOOT",
-        "Item": [
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.00348",
-            "@amount": "1"
-          },
-          {
-            "@type": "T5_FARM_COUGAR_BABY",
-            "@chance": "0.00348",
-            "@amount": "1"
-          }
-        ],
         "OR": [
           {
             "@chance": "0.003868",
@@ -78555,6 +78627,1274 @@
         ]
       },
       {
+        "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+        "Item": [
+          {
+            "@type": "T4_SILVERBAG_NONTRADABLE",
+            "@amount": "1-3"
+          },
+          {
+            "@type": "T4_SKILLBOOK_NONTRADABLE",
+            "@amount": "6-10"
+          }
+        ],
+        "OR": [
+          {
+            "OR": [
+              {
+                "Item": [
+                  {
+                    "@type": "T4_WOOD_LEVEL1",
+                    "@amount": "18-60",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T4_WOOD_LEVEL2",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T4_WOOD_LEVEL3",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "3"
+                  },
+                  {
+                    "@type": "T5_WOOD",
+                    "@amount": "18-60"
+                  },
+                  {
+                    "@type": "T5_WOOD_LEVEL1",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T5_WOOD_LEVEL2",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T6_WOOD",
+                    "@amount": "9-30"
+                  },
+                  {
+                    "@type": "T6_WOOD_LEVEL1",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T7_WOOD",
+                    "@amount": "4-15"
+                  }
+                ]
+              },
+              {
+                "Item": [
+                  {
+                    "@type": "T4_ORE_LEVEL1",
+                    "@amount": "18-60",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T4_ORE_LEVEL2",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T4_ORE_LEVEL3",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "3"
+                  },
+                  {
+                    "@type": "T5_ORE",
+                    "@amount": "18-60"
+                  },
+                  {
+                    "@type": "T5_ORE_LEVEL1",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T5_ORE_LEVEL2",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T6_ORE",
+                    "@amount": "9-30"
+                  },
+                  {
+                    "@type": "T6_ORE_LEVEL1",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T7_ORE",
+                    "@amount": "4-15"
+                  }
+                ]
+              },
+              {
+                "Item": [
+                  {
+                    "@type": "T4_ROCK_LEVEL1",
+                    "@amount": "18-60",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T4_ROCK_LEVEL2",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T4_ROCK_LEVEL3",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "3"
+                  },
+                  {
+                    "@type": "T5_ROCK",
+                    "@amount": "18-60"
+                  },
+                  {
+                    "@type": "T5_ROCK_LEVEL1",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T5_ROCK_LEVEL2",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T6_ROCK",
+                    "@amount": "9-30"
+                  },
+                  {
+                    "@type": "T6_ROCK_LEVEL1",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T7_ROCK",
+                    "@amount": "4-15"
+                  }
+                ]
+              },
+              {
+                "Item": [
+                  {
+                    "@type": "T4_HIDE_LEVEL1",
+                    "@amount": "18-60",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T4_HIDE_LEVEL2",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T4_HIDE_LEVEL3",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "3"
+                  },
+                  {
+                    "@type": "T5_HIDE",
+                    "@amount": "18-60"
+                  },
+                  {
+                    "@type": "T5_HIDE_LEVEL1",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T5_HIDE_LEVEL2",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T6_HIDE",
+                    "@amount": "9-30"
+                  },
+                  {
+                    "@type": "T6_HIDE_LEVEL1",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T7_HIDE",
+                    "@amount": "4-15"
+                  }
+                ]
+              },
+              {
+                "Item": [
+                  {
+                    "@type": "T4_FIBER_LEVEL1",
+                    "@amount": "18-60",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T4_FIBER_LEVEL2",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T4_FIBER_LEVEL3",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "3"
+                  },
+                  {
+                    "@type": "T5_FIBER",
+                    "@amount": "18-60"
+                  },
+                  {
+                    "@type": "T5_FIBER_LEVEL1",
+                    "@amount": "9-30",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T5_FIBER_LEVEL2",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "2"
+                  },
+                  {
+                    "@type": "T6_FIBER",
+                    "@amount": "9-30"
+                  },
+                  {
+                    "@type": "T6_FIBER_LEVEL1",
+                    "@amount": "4-15",
+                    "@enchantmentlevel": "1"
+                  },
+                  {
+                    "@type": "T7_FIBER",
+                    "@amount": "4-15"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Item": [
+              {
+                "@type": "TREASURE_KNOWLEDGE_RARITY3"
+              },
+              {
+                "@type": "TREASURE_SILVERWARE_RARITY3"
+              },
+              {
+                "@type": "TREASURE_DECORATIVE_RARITY3"
+              },
+              {
+                "@type": "TREASURE_CEREMONIAL_RARITY3"
+              },
+              {
+                "@type": "TREASURE_TRIBAL_RARITY3"
+              },
+              {
+                "@type": "TREASURE_RITUAL_RARITY3"
+              }
+            ]
+          },
+          {
+            "OR": [
+              {
+                "@weight": "1",
+                "LootListReference": [
+                  {
+                    "@name": "MELD_4_1_ALL_LOOT",
+                    "@weight": "10"
+                  },
+                  {
+                    "@name": "MELD_4_2_ALL_LOOT",
+                    "@weight": "5"
+                  },
+                  {
+                    "@name": "MELD_4_3_ALL_LOOT",
+                    "@weight": "1"
+                  }
+                ],
+                "Item": [
+                  {
+                    "@type": "T4_RUNE",
+                    "@weight": "25",
+                    "@amount": "1-51"
+                  },
+                  {
+                    "@type": "T4_SOUL",
+                    "@weight": "5",
+                    "@amount": "25-75"
+                  },
+                  {
+                    "@type": "T4_RELIC",
+                    "@weight": "1",
+                    "@amount": "25-75"
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "LootListReference": [
+                  {
+                    "@name": "MELD_5_1_ALL_LOOT",
+                    "@weight": "10"
+                  },
+                  {
+                    "@name": "MELD_5_2_ALL_LOOT",
+                    "@weight": "5"
+                  },
+                  {
+                    "@name": "MELD_5_3_ALL_LOOT",
+                    "@weight": "1"
+                  }
+                ],
+                "Item": [
+                  {
+                    "@type": "T5_RUNE",
+                    "@weight": "25",
+                    "@amount": "25-75"
+                  },
+                  {
+                    "@type": "T5_SOUL",
+                    "@weight": "5",
+                    "@amount": "25-75"
+                  },
+                  {
+                    "@type": "T5_RELIC",
+                    "@weight": "1",
+                    "@amount": "25-75"
+                  }
+                ]
+              },
+              {
+                "@weight": "1",
+                "LootListReference": [
+                  {
+                    "@name": "MELD_6_1_ALL_LOOT",
+                    "@weight": "25"
+                  },
+                  {
+                    "@name": "MELD_6_2_ALL_LOOT",
+                    "@weight": "5"
+                  }
+                ],
+                "Item": [
+                  {
+                    "@type": "T6_RUNE",
+                    "@weight": "25",
+                    "@amount": "25-75"
+                  },
+                  {
+                    "@type": "T6_SOUL",
+                    "@weight": "5",
+                    "@amount": "25-75"
+                  }
+                ]
+              },
+              {
+                "@weight": "0.2",
+                "LootListReference": {
+                  "@name": "MELD_7_1_ALL_LOOT",
+                  "@weight": "25"
+                },
+                "Item": {
+                  "@type": "T7_RUNE",
+                  "@weight": "25",
+                  "@amount": "25-75"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_CAERLEON_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_CAERLEON_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_CAERLEON_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_CAERLEON_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_CAERLEON_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_FOREST_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_FOREST_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_FOREST_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_FOREST_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_FOREST_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_FOREST_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_FOREST_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_FOREST_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_LYMHURST_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_HIGHLAND_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_HIGHLAND_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_RAM_FW_MARTLOCK_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_HIGHLAND_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_HIGHLAND_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_RAM_FW_MARTLOCK_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_HIGHLAND_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_HIGHLAND_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_RAM_FW_MARTLOCK_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_HIGHLAND_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_HIGHLAND_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_RAM_FW_MARTLOCK_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_MARTLOCK_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_MOUNTAIN_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_MOUNTAIN_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_MOUNTAIN_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_MOUNTAIN_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_MOUNTAIN_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_MOUNTAIN_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_MOUNTAIN_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_MOUNTAIN_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_FORTSTERLING_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_STEPPE_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_STEPPE_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_STEPPE_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_STEPPE_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_STEPPE_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_STEPPE_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_STEPPE_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_STEPPE_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_BRIDGEWATCH_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_SWAMP_01_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_SWAMP_TOKEN_1",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY",
+            "@chance": "0.133333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.102839"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.032407"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.019108"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.003134"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.002511"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_SWAMP_02_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.25"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_SWAMP_TOKEN_1",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY",
+            "@chance": "0.166667"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.128549"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.040509"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.023885"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.003918"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.003139"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_SWAMP_03_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "1.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_SWAMP_TOKEN_1",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY",
+            "@chance": "0.2"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.154258"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.048611"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.028662"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.004702"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.003767"
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_SWAMP_04_LOOT",
+        "LootListReference": {
+          "@name": "LOOT_FACTIONCAMPAIGN_GENERAL",
+          "@chance": "2.5"
+        },
+        "Item": [
+          {
+            "@type": "T1_FACTION_SWAMP_TOKEN_1",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY",
+            "@chance": "0.333333"
+          },
+          {
+            "@type": "T4_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.257097"
+          },
+          {
+            "@type": "T5_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.081018"
+          },
+          {
+            "@type": "T6_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.047771"
+          },
+          {
+            "@type": "T7_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.007836"
+          },
+          {
+            "@type": "T8_CAPEITEM_FW_THETFORD_BP",
+            "@chance": "0.006278"
+          }
+        ]
+      },
+      {
         "@name": "T4_CHEST_FAME",
         "Item": {
           "@type": "T4_SKILLBOOK_NONTRADABLE",
@@ -79137,64 +80477,9 @@
       },
       {
         "@name": "CRYSTALLEAGUE_CITY_LOOT_DRAW_LVL7",
-        "Item": [
-          {
-            "@type": "T4_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T5_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T7_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T8_SILVERBAG_NONTRADABLE",
-            "@amount": "5"
-          },
-          {
-            "@type": "T4_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T5_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T7_SILVERBAG_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T8_SILVERBAG_NONTRADABLE",
-            "@amount": "5"
-          },
-          {
-            "@type": "T5_SKILLBOOK_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T6_SKILLBOOK_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T8_SKILLBOOK_NONTRADABLE",
-            "@amount": "2"
-          },
-          {
-            "@type": "T5_SKILLBOOK_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T6_SKILLBOOK_NONTRADABLE",
-            "@amount": "1"
-          },
-          {
-            "@type": "T8_SKILLBOOK_NONTRADABLE",
-            "@amount": "2"
-          }
-        ]
+        "LootListReference": {
+          "@name": "CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7"
+        }
       },
       {
         "@name": "CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL7",
@@ -80085,16 +81370,10 @@
       },
       {
         "@name": "CRYSTALLEAGUE_LOOT_DRAW_LVL9",
-        "LootListReference": [
-          {
-            "@name": "CRYSTALLEAGUE_LOOT_WINNER_LVL9",
-            "@chance": "1.0"
-          },
-          {
-            "@name": "CRYSTALLEAGUE_LOOT_WINNER_LVL9",
-            "@chance": "1.0"
-          }
-        ]
+        "LootListReference": {
+          "@name": "CRYSTALLEAGUE_LOOT_WINNER_LVL9",
+          "@chance": "1.0"
+        }
       },
       {
         "@name": "CRYSTALLEAGUE_LOOT_NOSHOW_LVL9",

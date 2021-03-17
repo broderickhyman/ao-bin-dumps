@@ -1838,10 +1838,16 @@
           "extendedmissionstep": [
             {
               "preactions": {
-                "settutorialblocker": {
-                  "@id": "MOUNTAIN",
-                  "@statetoset": "0"
-                }
+                "settutorialblocker": [
+                  {
+                    "@id": "MOUNTAIN",
+                    "@statetoset": "0"
+                  },
+                  {
+                    "@id": "FINALDEBRIS",
+                    "@statetoset": "0"
+                  }
+                ]
               },
               "missions": {
                 "gotolocation": {
@@ -3015,6 +3021,12 @@
         "tasks": {
           "extendedmissionstep": [
             {
+              "preactions": {
+                "settutorialblocker": {
+                  "@id": "FINALDEBRIS",
+                  "@statetoset": "0"
+                }
+              },
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "MOUNTAINENTRANCE",
@@ -3139,7 +3151,7 @@
           "extendedcompletionstep": {
             "preactions": {
               "settutorialblocker": {
-                "@id": "ENDING",
+                "@id": "FINALDEBRIS",
                 "@statetoset": "1"
               }
             },
@@ -3217,6 +3229,1005 @@
     ],
     "playerfactionquest": [
       {
+        "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON",
+        "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
+        "@progresstext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_light",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": {
+              "@faction": "Caerleon"
+            }
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "6"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_LIGHT"
+              }
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "3"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_B",
+            "preactions": {
+              "receiveitem": {
+                "@count": "20",
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "6"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON",
+        "@title": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
+        "@progresstext": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_MEDIUM",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": {
+              "@faction": "Caerleon"
+            }
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "6"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_MEDIUM"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_MEDIUM"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_MEDIUM"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_MEDIUM"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_MEDIUM"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_MEDIUM"
+              }
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "7"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_MEDIUM_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_MEDIUM_B",
+            "preactions": {
+              "receiveitem": {
+                "@count": "20",
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "11"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON",
+        "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
+        "@progresstext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_HEAVY",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": {
+              "@faction": "Caerleon"
+            }
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "6"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_HEAVY"
+              }
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "15"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_B",
+            "preactions": {
+              "receiveitem": {
+                "@count": "20",
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "21"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION",
+        "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT",
+        "@progresstext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_light",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": [
+              {
+                "@faction": "Swamp"
+              },
+              {
+                "@faction": "Steppe"
+              },
+              {
+                "@faction": "Forest"
+              },
+              {
+                "@faction": "Highland"
+              },
+              {
+                "@faction": "Mountain"
+              }
+            ]
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "7"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_LIGHT"
+              }
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "3"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_B",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "6"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION",
+        "@title": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT",
+        "@progresstext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_MEDIUM",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": [
+              {
+                "@faction": "Swamp"
+              },
+              {
+                "@faction": "Steppe"
+              },
+              {
+                "@faction": "Forest"
+              },
+              {
+                "@faction": "Highland"
+              },
+              {
+                "@faction": "Mountain"
+              }
+            ]
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "7"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_MEDIUM"
+              }
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_MEDIUM"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_MEDIUM"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_MEDIUM"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_MEDIUM"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_MEDIUM"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "7"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_MEDIUM_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_MEDIUM_B",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "11"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION",
+        "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_OFFERTEXT",
+        "@progresstext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_TRADE_PACK_CAERLEON_TO_FACTION_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_HEAVY",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": [
+              {
+                "@faction": "Swamp"
+              },
+              {
+                "@faction": "Steppe"
+              },
+              {
+                "@faction": "Forest"
+              },
+              {
+                "@faction": "Highland"
+              },
+              {
+                "@faction": "Mountain"
+              }
+            ]
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "5",
+              "@maxdistance": "7"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "QUESTITEM_CARAVAN_TRADEPACK_CAERLEON_HEAVY"
+              }
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": {
+                "@faction": "Caerleon",
+                "@item": "T1_FACTION_CAERLEON_TOKEN_1"
+              }
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "15"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_B",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "21"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
         "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A",
         "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
         "@offertext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
@@ -3252,7 +4263,7 @@
             "@maxcount": "999",
             "distancefromquestgiver": {
               "@mindistance": "4",
-              "@maxdistance": "6"
+              "@maxdistance": "8"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -3460,8 +4471,217 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "5",
-              "@maxdistance": "7"
+              "@mindistance": "6",
+              "@maxdistance": "9"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "3"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_LIGHT_B",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "4"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C",
+        "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
+        "@progresstext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_light",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": [
+              {
+                "@faction": "Swamp"
+              },
+              {
+                "@faction": "Steppe"
+              },
+              {
+                "@faction": "Forest"
+              },
+              {
+                "@faction": "Highland"
+              },
+              {
+                "@faction": "Mountain"
+              }
+            ]
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "8",
+              "@maxdistance": "10"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -3635,215 +4855,6 @@
         }
       },
       {
-        "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C",
-        "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
-        "@offertext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
-        "@progresstext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
-        "@completetext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
-        "@questtimeout": "86400",
-        "@icon": "icon_module_tradepack_light",
-        "variables": {
-          "dynamicplayerfaction": {
-            "@name": "FACTION_B",
-            "@includingown": "false",
-            "filter": [
-              {
-                "@faction": "Swamp"
-              },
-              {
-                "@faction": "Steppe"
-              },
-              {
-                "@faction": "Forest"
-              },
-              {
-                "@faction": "Highland"
-              },
-              {
-                "@faction": "Mountain"
-              }
-            ]
-          },
-          "dynamicquestgiver": {
-            "@name": "AGENTS_A",
-            "@factionvariable": "FACTION_B",
-            "@maxcount": "999",
-            "distancefromquestgiver": {
-              "@mindistance": "6",
-              "@maxdistance": "8"
-            },
-            "questgivertag": {
-              "@tag": "faction_outside"
-            }
-          },
-          "dynamicfactionitem": [
-            {
-              "@name": "ITEM_A",
-              "@factionvariable": "self",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_B",
-              "@factionvariable": "FACTION_B",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_LIGHT"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_LIGHT"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_LIGHT"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_LIGHT"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_LIGHT"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_REQUIRED",
-              "@factionvariable": "self",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "T1_FACTION_FOREST_TOKEN_1"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_REWARD",
-              "@factionvariable": "FACTION_B",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "T1_FACTION_FOREST_TOKEN_1"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
-                }
-              ]
-            }
-          ]
-        },
-        "requirements": {
-          "maxloadafteritemsreceived": {
-            "@maxload": "1"
-          }
-        },
-        "costs": {
-          "item": {
-            "@itemvariable": "ITEM_REQUIRED",
-            "@amount": "3"
-          }
-        },
-        "tasks": {
-          "extendedmissionstep": {
-            "@applybuff": "TRADE_PACK_BUFF_LIGHT_A",
-            "preactions": {
-              "receiveitem": {
-                "@itemvariable": "ITEM_A"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@questgivervariable": "AGENTS_A",
-                "@mustaccept": "true",
-                "@accepttext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TRADETEXT",
-                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
-                "item": {
-                  "@itemvariable": "ITEM_A"
-                }
-              }
-            }
-          },
-          "extendedcompletionstep": {
-            "@applybuff": "TRADE_PACK_BUFF_LIGHT_B",
-            "preactions": {
-              "receiveitem": {
-                "@itemvariable": "ITEM_B"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
-                "item": {
-                  "@itemvariable": "ITEM_B"
-                }
-              }
-            }
-          }
-        },
-        "rewards": {
-          "item": {
-            "@itemvariable": "ITEM_REWARD",
-            "@count": "6"
-          }
-        },
-        "failconditions": {
-          "missionitemloss": null,
-          "playerdeath": null,
-          "changeflagging": null
-        }
-      },
-      {
         "@uniquename": "MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D",
         "@title": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE",
         "@offertext": "@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
@@ -3878,8 +4889,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "7",
-              "@maxdistance": "10"
+              "@mindistance": "10",
+              "@maxdistance": "12"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -4043,7 +5054,7 @@
         "rewards": {
           "item": {
             "@itemvariable": "ITEM_REWARD",
-            "@count": "7"
+            "@count": "5"
           }
         },
         "failconditions": {
@@ -4088,7 +5099,7 @@
             "@maxcount": "999",
             "distancefromquestgiver": {
               "@mindistance": "4",
-              "@maxdistance": "6"
+              "@maxdistance": "8"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -4296,8 +5307,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "5",
-              "@maxdistance": "7"
+              "@mindistance": "6",
+              "@maxdistance": "9"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -4505,8 +5516,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "6",
-              "@maxdistance": "8"
+              "@mindistance": "8",
+              "@maxdistance": "10"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -4714,8 +5725,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "7",
-              "@maxdistance": "10"
+              "@mindistance": "10",
+              "@maxdistance": "12"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -4879,7 +5890,7 @@
         "rewards": {
           "item": {
             "@itemvariable": "ITEM_REWARD",
-            "@count": "13"
+            "@count": "12"
           }
         },
         "failconditions": {
@@ -4924,7 +5935,216 @@
             "@maxcount": "999",
             "distancefromquestgiver": {
               "@mindistance": "4",
-              "@maxdistance": "6"
+              "@maxdistance": "8"
+            },
+            "questgivertag": {
+              "@tag": "faction_outside"
+            }
+          },
+          "dynamicfactionitem": [
+            {
+              "@name": "ITEM_A",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_B",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REQUIRED",
+              "@factionvariable": "self",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            },
+            {
+              "@name": "ITEM_REWARD",
+              "@factionvariable": "FACTION_B",
+              "perfaction": [
+                {
+                  "@faction": "Swamp",
+                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
+                },
+                {
+                  "@faction": "Steppe",
+                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
+                },
+                {
+                  "@faction": "Forest",
+                  "@item": "T1_FACTION_FOREST_TOKEN_1"
+                },
+                {
+                  "@faction": "Highland",
+                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
+                },
+                {
+                  "@faction": "Mountain",
+                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
+                }
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "maxloadafteritemsreceived": {
+            "@maxload": "1"
+          }
+        },
+        "costs": {
+          "item": {
+            "@itemvariable": "ITEM_REQUIRED",
+            "@amount": "15"
+          }
+        },
+        "tasks": {
+          "extendedmissionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_A",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_A"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@questgivervariable": "AGENTS_A",
+                "@mustaccept": "true",
+                "@accepttext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT",
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
+                "item": {
+                  "@itemvariable": "ITEM_A"
+                }
+              }
+            }
+          },
+          "extendedcompletionstep": {
+            "@applybuff": "TRADE_PACK_BUFF_HEAVY_B",
+            "preactions": {
+              "receiveitem": {
+                "@itemvariable": "ITEM_B"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": {
+                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
+                "item": {
+                  "@itemvariable": "ITEM_B"
+                }
+              }
+            }
+          }
+        },
+        "rewards": {
+          "item": {
+            "@itemvariable": "ITEM_REWARD",
+            "@count": "18"
+          }
+        },
+        "failconditions": {
+          "missionitemloss": null,
+          "playerdeath": null,
+          "changeflagging": null
+        }
+      },
+      {
+        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B",
+        "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
+        "@offertext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
+        "@progresstext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
+        "@questtimeout": "86400",
+        "@icon": "icon_module_tradepack_heavy",
+        "variables": {
+          "dynamicplayerfaction": {
+            "@name": "FACTION_B",
+            "@includingown": "false",
+            "filter": [
+              {
+                "@faction": "Swamp"
+              },
+              {
+                "@faction": "Steppe"
+              },
+              {
+                "@faction": "Forest"
+              },
+              {
+                "@faction": "Highland"
+              },
+              {
+                "@faction": "Mountain"
+              }
+            ]
+          },
+          "dynamicquestgiver": {
+            "@name": "AGENTS_A",
+            "@factionvariable": "FACTION_B",
+            "@maxcount": "999",
+            "distancefromquestgiver": {
+              "@mindistance": "6",
+              "@maxdistance": "9"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -5098,7 +6318,7 @@
         }
       },
       {
-        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B",
+        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C",
         "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
         "@offertext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
         "@progresstext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
@@ -5132,8 +6352,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "5",
-              "@maxdistance": "7"
+              "@mindistance": "8",
+              "@maxdistance": "10"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -5307,215 +6527,6 @@
         }
       },
       {
-        "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C",
-        "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
-        "@offertext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
-        "@progresstext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_PROGRESSTEXT",
-        "@completetext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_COMPLETIONTEXT",
-        "@questtimeout": "86400",
-        "@icon": "icon_module_tradepack_heavy",
-        "variables": {
-          "dynamicplayerfaction": {
-            "@name": "FACTION_B",
-            "@includingown": "false",
-            "filter": [
-              {
-                "@faction": "Swamp"
-              },
-              {
-                "@faction": "Steppe"
-              },
-              {
-                "@faction": "Forest"
-              },
-              {
-                "@faction": "Highland"
-              },
-              {
-                "@faction": "Mountain"
-              }
-            ]
-          },
-          "dynamicquestgiver": {
-            "@name": "AGENTS_A",
-            "@factionvariable": "FACTION_B",
-            "@maxcount": "999",
-            "distancefromquestgiver": {
-              "@mindistance": "6",
-              "@maxdistance": "8"
-            },
-            "questgivertag": {
-              "@tag": "faction_outside"
-            }
-          },
-          "dynamicfactionitem": [
-            {
-              "@name": "ITEM_A",
-              "@factionvariable": "self",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_B",
-              "@factionvariable": "FACTION_B",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_SWAMP_HEAVY"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_FOREST_HEAVY"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_STEPPE_HEAVY"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_HIGHLAND_HEAVY"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "QUESTITEM_CARAVAN_TRADEPACK_MOUNTAIN_HEAVY"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_REQUIRED",
-              "@factionvariable": "self",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "T1_FACTION_FOREST_TOKEN_1"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
-                }
-              ]
-            },
-            {
-              "@name": "ITEM_REWARD",
-              "@factionvariable": "FACTION_B",
-              "perfaction": [
-                {
-                  "@faction": "Swamp",
-                  "@item": "T1_FACTION_SWAMP_TOKEN_1"
-                },
-                {
-                  "@faction": "Steppe",
-                  "@item": "T1_FACTION_STEPPE_TOKEN_1"
-                },
-                {
-                  "@faction": "Forest",
-                  "@item": "T1_FACTION_FOREST_TOKEN_1"
-                },
-                {
-                  "@faction": "Highland",
-                  "@item": "T1_FACTION_HIGHLAND_TOKEN_1"
-                },
-                {
-                  "@faction": "Mountain",
-                  "@item": "T1_FACTION_MOUNTAIN_TOKEN_1"
-                }
-              ]
-            }
-          ]
-        },
-        "requirements": {
-          "maxloadafteritemsreceived": {
-            "@maxload": "1"
-          }
-        },
-        "costs": {
-          "item": {
-            "@itemvariable": "ITEM_REQUIRED",
-            "@amount": "15"
-          }
-        },
-        "tasks": {
-          "extendedmissionstep": {
-            "@applybuff": "TRADE_PACK_BUFF_HEAVY_A",
-            "preactions": {
-              "receiveitem": {
-                "@itemvariable": "ITEM_A"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@questgivervariable": "AGENTS_A",
-                "@mustaccept": "true",
-                "@accepttext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TRADETEXT",
-                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP1",
-                "item": {
-                  "@itemvariable": "ITEM_A"
-                }
-              }
-            }
-          },
-          "extendedcompletionstep": {
-            "@applybuff": "TRADE_PACK_BUFF_HEAVY_B",
-            "preactions": {
-              "receiveitem": {
-                "@itemvariable": "ITEM_B"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@textloca": "@MISSIONS_TRADE_PACK_TO_OUTPOST_STEP2",
-                "item": {
-                  "@itemvariable": "ITEM_B"
-                }
-              }
-            }
-          }
-        },
-        "rewards": {
-          "item": {
-            "@itemvariable": "ITEM_REWARD",
-            "@count": "23"
-          }
-        },
-        "failconditions": {
-          "missionitemloss": null,
-          "playerdeath": null,
-          "changeflagging": null
-        }
-      },
-      {
         "@uniquename": "MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D",
         "@title": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_TITLE",
         "@offertext": "@MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_OFFERTEXT",
@@ -5550,8 +6561,8 @@
             "@factionvariable": "FACTION_B",
             "@maxcount": "999",
             "distancefromquestgiver": {
-              "@mindistance": "7",
-              "@maxdistance": "10"
+              "@mindistance": "10",
+              "@maxdistance": "12"
             },
             "questgivertag": {
               "@tag": "faction_outside"
@@ -5715,7 +6726,7 @@
         "rewards": {
           "item": {
             "@itemvariable": "ITEM_REWARD",
-            "@count": "26"
+            "@count": "22"
           }
         },
         "failconditions": {

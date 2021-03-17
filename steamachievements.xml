@@ -7,6 +7,38 @@
 
     ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! -->
 
+
+  <!--Sagramore Update Achievements-->
+  <achievement name="SA_COLLECTION_HELLGATE_01" stat="SA_ST_COLLECTION_HELLGATE_01">
+    <or>
+      <haveinfamy amount="100000" infamytype="Hell2v2" />
+      <haveinfamy amount="100000" infamytype="Hell5v5" />
+      <haveinfamy amount="100000" infamytype="Hell10v10" />
+    </or>
+  </achievement>
+  <achievement name="SA_COLLECTION_HELLGATE_02" stat="SA_ST_COLLECTION_HELLGATE_02">
+    <or>
+      <haveinfamy amount="250000" infamytype="Hell2v2" />
+      <haveinfamy amount="250000" infamytype="Hell5v5" />
+      <haveinfamy amount="250000" infamytype="Hell10v10" />
+    </or>
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_01" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_01">
+    <chainhellgate count="2"/>
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_02" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_02">
+    <chainhellgate count="5"/>
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_03" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_03">
+    <chainhellgate count="10"/>
+  </achievement>
+  <achievement name="SA_FACTIONWARFARE_CLUSTER_CAPTURE">
+    <gainfactionpoints value="1" source="CLUSTER_CAPTURED" />
+  </achievement>
+  <achievement name="SA_FACTIONWARFARE_BANDIT_ASSAULT">
+    <gainfactionpoints value="1" source="REDZONE_EVENT" />
+  </achievement>
+
   <!--Roland Update Achievements-->
   <achievement name="SA_PVP_CORRUPTED_DUNGEON_01">
     <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonInvader"/>
@@ -15,7 +47,7 @@
     <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonHost" />
   </achievement>
   <achievement name="SA_COLLECTION_CORRUPTED_DUNGEONS_INFAMY" stat="SA_ST_COLLECTION_CORRUPTED_DUNGEONS_INFAMY">
-    <haveinfamy amount="100000" />
+    <haveinfamy amount="100000" infamytype="CorruptedDungeon" />
   </achievement>
   <achievement name="SA_PVE_CORRUPTED_DUNGEONS_01">
 	<or>
@@ -806,7 +838,7 @@
   </achievement>
 
   <achievement name="SA_PVP_WIN_HELLGATE_01">
-    <completehellgate/>
+    <usefunction function="WinHellgatePvp"/>
   </achievement>
 
   <!--Social-->
@@ -842,15 +874,7 @@
 
   <!-- Faction Warfare -->
   <achievement name="SA_FACTIONWARFARE_JOIN">
-    <joinfaction/>
-  </achievement>
-
-  <achievement name="SA_FACTIONWARFARE_JOIN_ALL" stat="SA_ST_FACTIONWARFARE_JOIN_ALL">
-    <joinfaction faction="swamp"/>
-    <joinfaction faction="steppe"/>
-    <joinfaction faction="highland"/>
-    <joinfaction faction="mountain"/>
-    <joinfaction faction="forest"/>
+    <usefunction function="EnlistWithFaction"/>
   </achievement>
 
   <achievement name="SA_FACTIONWARFARE_CAPTURE_01">
@@ -866,15 +890,36 @@
   </achievement>
 
   <achievement name="SA_FACTIONWARFARE_KILLBOSS_ALL" stat="SA_ST_FACTIONWARFARE_KILLBOSS_ALL">
-    <killmob mobid="T4_MOB_CITY_FOREST_BOSS" count="1" countpartykills="true"/>
-    <killmob mobid="T4_MOB_CITY_HIGHLAND_BOSS" count="1" countpartykills="true"/>
-    <killmob mobid="T4_MOB_CITY_MOUNTAIN_BOSS" count="1" countpartykills="true"/>
-    <killmob mobid="T4_MOB_CITY_STEPPE_BOSS" count="1" countpartykills="true"/>
-    <killmob mobid="T4_MOB_CITY_SWAMP_BOSS" count="1" countpartykills="true"/>
+    <any count="5">
+      <or>
+        <killmob mobid="T5_MOB_CITY_FOREST_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_FOREST_BOSS" count="1" countpartykills="true"/>
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_HIGHLAND_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_HIGHLAND_BOSS" count="1" countpartykills="true"/>
+      </or>      
+      <or>
+        <killmob mobid="T5_MOB_CITY_MOUNTAIN_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_MOUNTAIN_BOSS" count="1" countpartykills="true"/>
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_STEPPE_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_STEPPE_BOSS" count="1" countpartykills="true"/>
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_SWAMP_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_SWAMP_BOSS" count="1" countpartykills="true"/>
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_CAERLEON_BOSS" count="1" countpartykills="true"/>
+        <killmob mobid="T6_MOB_CITY_CAERLEON_BOSS" count="1" countpartykills="true"/>
+      </or>
+    </any>
   </achievement>
 
   <achievement name="SA_FACTIONWARFARE_STANDING_MAX" stat="SA_ST_FACTIONWARFARE_STANDING_MAX">
-    <havefactionstanding faction="any" value="240000"/>
+    <havefactionstanding faction="any" value="330000"/>
   </achievement>
 
   <achievement name="SA_FACTIONWARFARE_TRADEMISSION_01">

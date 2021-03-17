@@ -20,15 +20,15 @@
     <biome biome="Forest" subbiome="Green" prefab="HIDEOUT_FOREST_GREEN"/>
     <biome biome="Forest" subbiome="Red" prefab="HIDEOUT_FOREST_RED"/>
     <biome biome="Forest" subbiome="Dead" prefab="HIDEOUT_FOREST_DEAD"/>
-    <biome biome="Mountains" subbiome="Green" prefab="HIDEOUT_MOUNTAIN_GREEN"/>
-    <biome biome="Mountains" subbiome="Red" prefab="HIDEOUT_MOUNTAIN_RED"/>
-    <biome biome="Mountains" subbiome="Dead" prefab="HIDEOUT_MOUNTAIN_DEAD"/>
+    <biome biome="Mountain" subbiome="Green" prefab="HIDEOUT_MOUNTAIN_GREEN"/>
+    <biome biome="Mountain" subbiome="Red" prefab="HIDEOUT_MOUNTAIN_RED"/>
+    <biome biome="Mountain" subbiome="Dead" prefab="HIDEOUT_MOUNTAIN_DEAD"/>
     <biome biome="Steppe" subbiome="Green" prefab="HIDEOUT_STEPPE_GREEN"/>
     <biome biome="Steppe" subbiome="Red" prefab="HIDEOUT_STEPPE_RED"/>
     <biome biome="Steppe" subbiome="Dead" prefab="HIDEOUT_STEPPE_DEAD"/>
-    <biome biome="Highlands" subbiome="Green" prefab="HIDEOUT_HIGHLAND_GREEN"/>
-    <biome biome="Highlands" subbiome="Red" prefab="HIDEOUT_HIGHLAND_RED"/>
-    <biome biome="Highlands" subbiome="Dead" prefab="HIDEOUT_HIGHLAND_DEAD"/>
+    <biome biome="Highland" subbiome="Green" prefab="HIDEOUT_HIGHLAND_GREEN"/>
+    <biome biome="Highland" subbiome="Red" prefab="HIDEOUT_HIGHLAND_RED"/>
+    <biome biome="Highland" subbiome="Dead" prefab="HIDEOUT_HIGHLAND_DEAD"/>
     <biome biome="Swamp" subbiome="Green" prefab="HIDEOUT_SWAMP_GREEN"/>
     <biome biome="Swamp" subbiome="Red" prefab="HIDEOUT_SWAMP_RED"/>
     <biome biome="Swamp" subbiome="Dead" prefab="HIDEOUT_SWAMP_DEAD"/>
@@ -200,140 +200,111 @@
   
   
 <!-- FACTION-WARFARE STORE -->
+  <factionbuilding uniquename="CAERLEON_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_CAERLEON" namegenerator="FACTIONSTORE_CAERLEON" craftanimation="none" faction="Caerleon" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_caerleon" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_CAERLEON" hideonclustermap="true">
+    <craftingitemlist recipefilter="CAERLEON_GREEN_FACTION_TRADER">
+      <craftitem uniquename="T1_FACTION_CAERLEON_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T7_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_CAERLEON_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+    </craftingitemlist>
+    <AudioInfo name="NPC_CITY_COMMANDER_CAERLEON" />
+  </factionbuilding>
+   
   <factionbuilding uniquename="FOREST_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_FOREST" namegenerator="FACTIONSTORE_FOREST" craftanimation="none" faction="Forest" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_forest" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_FOREST" hideonclustermap="true">
     <craftingitemlist recipefilter="FOREST_GREEN_FACTION_TRADER">
       <craftitem uniquename="T1_FACTION_FOREST_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <!--<craftitem uniquename="T4_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />-->
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_FOREST_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T4_CAPEITEM_FW_LYMHURST_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_CAPEITEM_FW_LYMHURST_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T6_CAPEITEM_FW_LYMHURST_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T7_CAPEITEM_FW_LYMHURST_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T8_CAPEITEM_FW_LYMHURST_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_FARM_DIREBOAR_FW_LYMHURST_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-  </craftingitemlist>
+      <craftitem uniquename="T8_FARM_DIREBOAR_FW_LYMHURST_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_LYMHURST_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+    </craftingitemlist>
   <AudioInfo name="NPC_CITY_COMMANDER_FOREST" />
   </factionbuilding>
   <factionbuilding uniquename="HIGHLAND_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_HIGHLAND" namegenerator="FACTIONSTORE_HIGHLAND" craftanimation="none" faction="Highland" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_highland" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_HIGHLAND" hideonclustermap="true">
     <craftingitemlist recipefilter="HIGHLAND_GREEN_FACTION_TRADER">
       <craftitem uniquename="T1_FACTION_HIGHLAND_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <!--<craftitem uniquename="T4_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />-->
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_HIGHLAND_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T4_CAPEITEM_FW_MARTLOCK_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_CAPEITEM_FW_MARTLOCK_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T6_CAPEITEM_FW_MARTLOCK_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T7_CAPEITEM_FW_MARTLOCK_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T8_CAPEITEM_FW_MARTLOCK_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_FARM_RAM_FW_MARTLOCK_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_RAM_FW_MARTLOCK_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_MARTLOCK_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
     </craftingitemlist>
     <AudioInfo name="NPC_CITY_COMMANDER_HIGHLAND" />
   </factionbuilding>
   <factionbuilding uniquename="STEPPE_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_STEPPE" namegenerator="FACTIONSTORE_STEPPE" craftanimation="none" faction="Steppe" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_steppe" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_STEPPE" hideonclustermap="true">
     <craftingitemlist recipefilter="STEPPE_GREEN_FACTION_TRADER">
       <craftitem uniquename="T1_FACTION_STEPPE_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <!--<craftitem uniquename="T4_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />-->
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_STEPPE_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T4_CAPEITEM_FW_BRIDGEWATCH_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_CAPEITEM_FW_BRIDGEWATCH_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T6_CAPEITEM_FW_BRIDGEWATCH_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T7_CAPEITEM_FW_BRIDGEWATCH_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T8_CAPEITEM_FW_BRIDGEWATCH_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_BRIDGEWATCH_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
     </craftingitemlist>
     <AudioInfo name="NPC_CITY_COMMANDER_STEPPE" />
   </factionbuilding>
   <factionbuilding uniquename="MOUNTAIN_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_MOUNTAIN" namegenerator="FACTIONSTORE_MOUNTAIN" craftanimation="none" faction="Mountain" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_mountain" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_MOUNTAIN" hideonclustermap="true">
     <craftingitemlist recipefilter="MOUNTAIN_GREEN_FACTION_TRADER">
       <craftitem uniquename="T1_FACTION_MOUNTAIN_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <!--<craftitem uniquename="T4_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />-->
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_MOUNTAIN_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T4_CAPEITEM_FW_FORTSTERLING_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_CAPEITEM_FW_FORTSTERLING_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T6_CAPEITEM_FW_FORTSTERLING_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T7_CAPEITEM_FW_FORTSTERLING_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T8_CAPEITEM_FW_FORTSTERLING_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_FORTSTERLING_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />      
     </craftingitemlist>
     <AudioInfo name="NPC_CITY_COMMANDER_MOUNTAIN" />
   </factionbuilding>
   <factionbuilding uniquename="SWAMP_GREEN_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_SWAMP" namegenerator="FACTIONSTORE_SWAMP" craftanimation="none" faction="Swamp" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_swamp" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_SWAMP" hideonclustermap="true">
     <craftingitemlist recipefilter="SWAMP_GREEN_FACTION_TRADER">
       <craftitem uniquename="T1_FACTION_SWAMP_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <!--<craftitem uniquename="T4_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_FAME_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_YIELD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T4_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T5_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T6_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T7_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
-      <craftitem uniquename="T8_BAG_FW_SILVER_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />-->
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_SWAMP_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T4_CAPEITEM_FW_THETFORD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_CAPEITEM_FW_THETFORD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T6_CAPEITEM_FW_THETFORD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T7_CAPEITEM_FW_THETFORD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T8_CAPEITEM_FW_THETFORD_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
       <craftitem uniquename="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_THETFORD_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
     </craftingitemlist>
     <AudioInfo name="NPC_CITY_COMMANDER_SWAMP" />
+  </factionbuilding>
+  <factionbuilding uniquename="HIGHLAND_DEAD_CENTER_CITY_FACTION_TRADER" tier="8" questgivertype="FACTIONSTORE_CAERLEON" namegenerator="FACTIONSTORE_CAERLEON" craftanimation="none" faction="Caerleon" uisoundevent="Play_ui_select_artifactfoundry" iconSprite="outpost_caerleon" uispritename="Gui/Avatars/Buildings/NPC_FACTIONTRADER_CAERLEON" hideonclustermap="true">
+    <craftingitemlist recipefilter="CAERLEON_GREEN_FACTION_TRADER">
+      <craftitem uniquename="T1_FACTION_CAERLEON_TOKEN_1" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_LOOTCHEST_FACTIONCAMPAIGN_REWARD_CAERLEON_01" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T7_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_CAPEITEM_FW_CAERLEON_BP" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_FW_CAERLEON_BANNER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_FACTIONWARFARE" />
+    </craftingitemlist>
+    <AudioInfo name="NPC_CITY_COMMANDER_CAERLEON" />
   </factionbuilding>
 
 <!--MELDBUILDING-->
@@ -371,6 +342,13 @@
       <craftitem uniquename="T8_RELIC" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" />
       <craftitem uniquename="T8_SHARD_AVALONIAN" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" />      
       <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T8" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" />
+      <!--Hellgate Maps-->
+      <craftitem uniquename="T6_HELLGATE_2V2_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
+      <craftitem uniquename="T7_HELLGATE_5V5_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
+      <craftitem uniquename="T8_HELLGATE_10V10_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
+      <craftitem uniquename="T5_HELLGATE_2V2_NON_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
+      <craftitem uniquename="T5_HELLGATE_5V5_NON_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
+      <craftitem uniquename="T5_HELLGATE_10V10_NON_LETHAL_1_MAP" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
       <!--Random Dungeon Maps-->
       <craftitem uniquename="T6_RANDOM_DUNGEON_ELITE_TOKEN_1" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
       <craftitem uniquename="T6_RANDOM_DUNGEON_ELITE_TOKEN_2" category="@BUILDING_ITEMS_CATEGORY_FRAGMENTS" displaygroup="6" />
@@ -667,6 +645,7 @@
   <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_GREEN_T8_MELDBUILDING_CENTERCITY" />
   <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_RED_T8_MELDBUILDING_CENTERCITY" />
   <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_DEAD_T8_MELDBUILDING_CENTERCITY" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_DEAD_CENTER_CITY_MELDBUILDING" />
   <buildingreference template="T8_MELDBUILDING" uniquename="T8_MELDBUILDING_HIDEOUT" />
   
   <craftbuilding uniquename="TESTFORGE" tile="T1_FORGE" tier="1" placecost="0" durability="972000" durabilityloss="0" nutritionstorage="460500" nutritionloss="0" craftcapacity="0" craftcapacityregeneration="0" category="none" displaygroup="1" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftforge" unlocked="false" iconAtlas="RefMiniMapAtlas" iconSprite="building_warrior_forge" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uisoundevent="Play_ui_select_forge" accessrightspreset="public">
@@ -900,6 +879,7 @@
       <craftitem uniquename="T8_CAPEITEM_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T8_CAPEITEM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T8_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
+      <craftitem uniquename="T8_CAPEITEM_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />      
       <craftitem uniquename="T8_CAPEITEM_HERETIC" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T8_CAPEITEM_UNDEAD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T8_CAPEITEM_KEEPER" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
@@ -1161,6 +1141,7 @@
       <craftitem uniquename="T7_CAPEITEM_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T7_CAPEITEM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T7_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
+      <craftitem uniquename="T7_CAPEITEM_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />      
       <craftitem uniquename="T7_CAPEITEM_HERETIC" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T7_CAPEITEM_UNDEAD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T7_CAPEITEM_KEEPER" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
@@ -1420,6 +1401,7 @@
       <craftitem uniquename="T6_CAPEITEM_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T6_CAPEITEM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T6_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />      
       <craftitem uniquename="T6_CAPEITEM_HERETIC" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T6_CAPEITEM_UNDEAD" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
       <craftitem uniquename="T6_CAPEITEM_KEEPER" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" displaygroup="8" />
@@ -1436,8 +1418,8 @@
       <craftitem uniquename="T5_MEAL_OMELETTE_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
       <craftitem uniquename="T5_MEAL_PIE" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
       <craftitem uniquename="T5_MEAL_PIE_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
-	  <craftitem uniquename="T5_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
-	  <craftitem uniquename="T5_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
+	    <craftitem uniquename="T5_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
+	    <craftitem uniquename="T5_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
       <craftitem uniquename="T6_MEAL_SALAD" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="6" />
       <craftitem uniquename="T6_MEAL_SALAD_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="6" />
       <craftitem uniquename="T6_MEAL_STEW" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="6" />
@@ -1613,7 +1595,8 @@
       <craftitem uniquename="T5_CAPEITEM_FW_FORTSTERLING" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T5_CAPEITEM_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T5_CAPEITEM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
-      <craftitem uniquename="T5_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />      
+      <craftitem uniquename="T5_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />      
       <craftitem uniquename="T5_BAG" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T5_MOUNT_HORSE" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T5_MOUNT_OX" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
@@ -1634,8 +1617,8 @@
       <craftitem uniquename="T5_MEAL_OMELETTE_AVALON" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
       <craftitem uniquename="T5_MEAL_PIE" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
       <craftitem uniquename="T5_MEAL_PIE_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
-	  <craftitem uniquename="T5_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
-	  <craftitem uniquename="T5_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
+	    <craftitem uniquename="T5_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
+	    <craftitem uniquename="T5_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="5" />
 
       <!-- POTIONS -->
       <craftitem uniquename="T4_POTION_HEAL" category="@BUILDING_ITEMS_CATEGORY_POTIONS" displaygroup="4" />
@@ -1767,7 +1750,8 @@
       <craftitem uniquename="T4_CAPEITEM_FW_FORTSTERLING" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T4_CAPEITEM_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T4_CAPEITEM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
-      <craftitem uniquename="T4_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />        
+      <craftitem uniquename="T4_CAPEITEM_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />      
       <craftitem uniquename="T4_BAG" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T4_MOUNT_HORSE" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />
       <craftitem uniquename="T4_MOUNT_OX" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="8" />       
@@ -1780,8 +1764,8 @@
       <craftitem uniquename="T3_MEAL_OMELETTE_AVALON" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />      
       <craftitem uniquename="T3_MEAL_PIE" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
       <craftitem uniquename="T3_MEAL_PIE_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
-	  <craftitem uniquename="T3_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
-	  <craftitem uniquename="T3_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
+	    <craftitem uniquename="T3_MEAL_ROAST" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
+	    <craftitem uniquename="T3_MEAL_ROAST_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="3" />
       <craftitem uniquename="T4_MEAL_SALAD" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="4" />
       <craftitem uniquename="T4_MEAL_SALAD_FISH" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="4" />
       <craftitem uniquename="T4_MEAL_STEW" category="@BUILDING_ITEMS_CATEGORY_FOOD" displaygroup="4" />
@@ -1949,6 +1933,9 @@
   <buildingreference template="MARKETPLACE_SMALL" uniquename="MARKETPLACE_HIDEOUT" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="SWAMP_GREEN_MARKETPLACE_SMALL" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE_SMALL" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE_CENTERCITY" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="SWAMP_GREEN_MARKETPLACE_CENTERCITY" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="MOUNTAIN_GREEN_MARKETPLACE_CENTERCITY" />
   
   <!--CASTLEGATE-->
   <castlegate uniquename="T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
@@ -2148,6 +2135,21 @@
       <farmableitem uniquename="T5_FARM_RAM_FW_MARTLOCK_GROWN" />
       <farmableitem uniquename="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
       <farmableitem uniquename="T5_FARM_SWAMPDRAGON_FW_THETFORD_GROWN" />
+      <farmableitem uniquename="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" />
+      <farmableitem uniquename="T5_FARM_GREYWOLF_FW_CAERLEON_GROWN" />
+    
+      <farmableitem uniquename="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
+      <farmableitem uniquename="T8_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN" />
+      <farmableitem uniquename="T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY" />
+      <farmableitem uniquename="T8_FARM_DIREBEAR_FW_FORTSTERLING_GROWN" />
+      <farmableitem uniquename="T8_FARM_DIREBOAR_FW_LYMHURST_BABY" />
+      <farmableitem uniquename="T8_FARM_DIREBOAR_FW_LYMHURST_GROWN" />
+      <farmableitem uniquename="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+      <farmableitem uniquename="T8_FARM_RAM_FW_MARTLOCK_GROWN" />
+      <farmableitem uniquename="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
+      <farmableitem uniquename="T8_FARM_SWAMPDRAGON_FW_THETFORD_GROWN" />
+      <farmableitem uniquename="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" />
+      <farmableitem uniquename="T8_FARM_GREYWOLF_FW_CAERLEON_GROWN" />
     </farmableitems>
   </farmbuilding>
   <craftbuilding uniquename="FARMING_MERCHANT" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isshop="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="FARM_CHICKEN_BABY" uispritename="Gui/Avatars/Buildings/NPC_FARMING_MERCHANT" uisoundevent="Play_ui_select_farming_merchant">
@@ -2261,6 +2263,8 @@
     <AudioInfo name="NPC_ARENAMASTER" />
   </craftbuilding>
   
+  <buildingreference template="ARENA_AGENCY" uniquename="HIGHLAND_DEAD_CENTER_CITY_ARENA_AGENCY" />  
+	
   <!-- SEASONS_STORE -->
   <crystalleaguebuilding uniquename="SEASONS_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isshop="true" hideonclustermap="true" craftanimation="none" randomidleanimoffset="false" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_GVGTOKEN_GENERIC" uispritename="Gui/Avatars/Buildings/NPC_TERRITORY_SHARDTRADER" uisoundevent="Play_ui_select_vanitymerchant">
     <craftingitemlist>
@@ -2293,6 +2297,7 @@
   </crystalleaguebuilding>
   
   <buildingreference template="SEASONS_STORE" uniquename="SEASONS_STORE_HIDEOUT" />  
+  <buildingreference template="SEASONS_STORE" uniquename="HIGHLAND_DEAD_CENTER_CITY_SEASONS_STORE" />  
   
   <!--VANITY_STORE-->
   <craftbuilding uniquename="VANITY_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" animateonguiopen="true" randomidleanimoffset="false" isshop="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_STAFF_FIREWORKS_RED" uispritename="Gui/Avatars/Buildings/TYPE_VANITY_STORE" uisoundevent="Play_ui_select_vanitymerchant">
@@ -2369,6 +2374,7 @@
   <buildingreference template="VANITY_STORE" uniquename="HIGHLAND_GREEN_VANITY_STORE_CENTERCITY" />
   <buildingreference template="VANITY_STORE" uniquename="HIGHLAND_RED_VANITY_STORE_CENTERCITY" />
   <buildingreference template="VANITY_STORE" uniquename="HIGHLAND_DEAD_VANITY_STORE_CENTERCITY" />
+  <buildingreference template="VANITY_STORE" uniquename="HIGHLAND_DEAD_CENTER_CITY_VANITY_STORE" />
   <buildingreference template="VANITY_STORE" uniquename="VANITY_STORE_HIDEOUT" />
 
   
@@ -8576,6 +8582,7 @@
       <craftitem uniquename="T4_CAPEITEM_FW_LYMHURST" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_FW_MARTLOCK" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_FW_THETFORD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />      
 
       <craftitem uniquename="T4_CAPEITEM_HERETIC" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_UNDEAD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
@@ -8714,6 +8721,9 @@
       <craftitem uniquename="T4_CAPEITEM_FW_THETFORD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T5_CAPEITEM_FW_THETFORD" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
 
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />  
+      
       <craftitem uniquename="T4_CAPEITEM_HERETIC" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_UNDEAD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_KEEPER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
@@ -8908,6 +8918,10 @@
       <craftitem uniquename="T4_CAPEITEM_FW_THETFORD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T5_CAPEITEM_FW_THETFORD" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T6_CAPEITEM_FW_THETFORD" displaygroup="6" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON" displaygroup="6" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
 
       <craftitem uniquename="T4_CAPEITEM_HERETIC" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_UNDEAD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
@@ -9163,6 +9177,11 @@
       <craftitem uniquename="T5_CAPEITEM_FW_THETFORD" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T6_CAPEITEM_FW_THETFORD" displaygroup="6" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T7_CAPEITEM_FW_THETFORD" displaygroup="7" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON" displaygroup="6" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T7_CAPEITEM_FW_CAERLEON" displaygroup="7" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
 
       <craftitem uniquename="T4_CAPEITEM_HERETIC" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_UNDEAD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
@@ -9478,6 +9497,12 @@
       <craftitem uniquename="T7_CAPEITEM_FW_THETFORD" displaygroup="7" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T8_CAPEITEM_FW_THETFORD" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
 
+      <craftitem uniquename="T4_CAPEITEM_FW_CAERLEON" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T5_CAPEITEM_FW_CAERLEON" displaygroup="5" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T6_CAPEITEM_FW_CAERLEON" displaygroup="6" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T7_CAPEITEM_FW_CAERLEON" displaygroup="7" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
+      <craftitem uniquename="T8_CAPEITEM_FW_CAERLEON" displaygroup="8" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />      
+      
       <craftitem uniquename="T4_CAPEITEM_HERETIC" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_UNDEAD" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
       <craftitem uniquename="T4_CAPEITEM_KEEPER" displaygroup="4" category="@BUILDING_ITEMS_CATEGORY_ACCESSOIRES" />
@@ -9770,10 +9795,23 @@
   <buildingreference template="T8_REPAIRSHOP" uniquename="FOREST_GREEN_REPAIRSHOP" />
   <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_GREEN_REPAIRSHOP" />
   <buildingreference template="T8_REPAIRSHOP" uniquename="STEPPE_GREEN_REPAIRSHOP" />
-  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_GREEN_REPAIRSHOP_CENTERCITY" />
-  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_RED_REPAIRSHOP_CENTERCITY" />
-  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_DEAD_REPAIRSHOP_CENTERCITY" />
-  <buildingreference template="T8_REPAIRSHOP" uniquename="REPAIRSHOP_HIDEOUT" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_DEAD_CENTER_CITY_REPAIRSHOP" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="REPAIRSHOP_HIDEOUT" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="FOREST_GREEN_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="FOREST_RED_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="FOREST_DEAD_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_GREEN_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_RED_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_DEAD_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="MOUNTAIN_GREEN_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="MOUNTAIN_RED_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="MOUNTAIN_DEAD_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="STEPPE_GREEN_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="STEPPE_RED_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="STEPPE_DEAD_REPAIRSHOP_OUTPOST" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_GREEN_REPAIRSHOP_OUTPOST" />   
+  <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_RED_REPAIRSHOP_OUTPOST" />
+  <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_DEAD_REPAIRSHOP_OUTPOST" />  
   
   <!--STABLE-->
   <craftbuilding uniquename="T3_STABLE" tier="3" placecost="100" upgradeableto="T4_STABLE" allowsstudy="false" durability="12000" durabilityloss="240" nutritionstorage="795000" nutritionloss="1" craftcapacity="69000" craftcapacityregeneration="1.25" displaygroup="3" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="crafttalk" unlocked="false" iconAtlas="RefMiniMapAtlas" iconSprite="building_saddler" uispritename="Gui/Avatars/Buildings/TYPE_STABLE" uibuildmenutexture="Gui/BuildingIcons/building_saddler" uisoundevent="Play_ui_select_saddler" category="@BUILDING_CATEGORY_FARMING" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.06528">
@@ -9834,6 +9872,7 @@
       <craftitem uniquename="T5_MOUNT_DIREBOAR_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_RAM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_SWAMPDRAGON_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
+      <craftitem uniquename="T5_MOUNT_GREYWOLF_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
     </craftingitemlist>
     <craftingrequirements time="0" silverinrvpercentage="0">
       <craftresource uniquename="T1_WOOD" count="400" />
@@ -9871,6 +9910,7 @@
       <craftitem uniquename="T5_MOUNT_DIREBOAR_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_RAM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_SWAMPDRAGON_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
+      <craftitem uniquename="T5_MOUNT_GREYWOLF_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
     </craftingitemlist>
     <craftingrequirements time="0" silverinrvpercentage="0">
       <craftresource uniquename="T1_WOOD" count="800" />
@@ -9914,6 +9954,7 @@
       <craftitem uniquename="T5_MOUNT_DIREBOAR_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_RAM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_SWAMPDRAGON_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
+      <craftitem uniquename="T5_MOUNT_GREYWOLF_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
     </craftingitemlist>
     <craftingrequirements time="0" silverinrvpercentage="0">
       <craftresource uniquename="T1_WOOD" count="1600" />
@@ -9961,11 +10002,19 @@
       <craftitem uniquename="T8_MOUNT_MAMMOTH_TRANSPORT" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
 
       <!-- Faction Mounts -->
+      <craftitem uniquename="T8_MOUNT_MOABIRD_FW_BRIDGEWATCH_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      <craftitem uniquename="T8_MOUNT_DIREBEAR_FW_FORTSTERLING_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      <craftitem uniquename="T8_MOUNT_DIREBOAR_FW_LYMHURST_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      <craftitem uniquename="T8_MOUNT_RAM_FW_MARTLOCK_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      <craftitem uniquename="T8_MOUNT_SWAMPDRAGON_FW_THETFORD_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      <craftitem uniquename="T8_MOUNT_GREYWOLF_FW_CAERLEON_ELITE" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="8" />
+      
       <craftitem uniquename="T5_MOUNT_MOABIRD_FW_BRIDGEWATCH" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_DIREBEAR_FW_FORTSTERLING" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_DIREBOAR_FW_LYMHURST" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_RAM_FW_MARTLOCK" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
       <craftitem uniquename="T5_MOUNT_SWAMPDRAGON_FW_THETFORD" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />
+      <craftitem uniquename="T5_MOUNT_GREYWOLF_FW_CAERLEON" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="5" />      
     </craftingitemlist>
     <craftingrequirements time="0" silverinrvpercentage="0">
       <craftresource uniquename="T1_WOOD" count="3200" />
