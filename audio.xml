@@ -659,6 +659,15 @@
     <WeaponType name="swoosh_medium"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MOOSE">
+    <CharType name="mob"/>
+    <MobFaction name="hide"/>
+    <MobType name="hide_moose"/>
+    <Size name="medium_ungulate"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="swoosh_medium"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MAMMOTH">
     <CharType name="mob"/>
     <MobFaction name="hide"/>
@@ -2804,6 +2813,13 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_SPIN">
     <OnCastStart name="Play_axe_spin" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_THROW_AXE" >
+    <OnCastStart name="Play_emote_foley_armor_move_fast"/>
+    <OnCastFinished name="Play_throw_axe" />
+    <OnSpellHit name="Play_melee_impact_big" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIG_SPIN_BIG_IMPACT">
     <OnCastStart name="Play_melee_spin_big" />
