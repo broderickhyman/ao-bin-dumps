@@ -483,7 +483,7 @@
         magiccooldownreduction="false"/>
 
       <armorshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0" censer="0"/>
-      <ccrshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0.60" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="2.50" book="0" orb="0" demonskull="0" totem="0" censer="0"/>
+      <ccrshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0.60" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="1.2" book="0" orb="0" demonskull="0" totem="0" censer="0"/>
       <hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0.3" censer="0"/>
       <energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0" cape="0.10" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0.15" orb="0.5" demonskull="0" totem="0" censer="0"/>
     </ItemPowerProgression>
@@ -800,6 +800,7 @@
   <DuelSettings>
     <DuelAreaLeftTimerInSeconds value="10"/>
     <DuelAreaRadius value="25"/>
+    <DuelMaxAllowedHeightDifference value="5"/>
     <AcceptDuelCountDownInSeconds value="13"/>
     <AcceptButtonDelayInSeconds value="3"/>
     <DuelPreparationTimeInSeconds value="10"/>
@@ -1391,9 +1392,12 @@
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="red" icon="red" famefactor="2.75" moblootfactor="2.25" mobsilverlootfactor="2.6"/>
     <ClusterDangerBonus type="black" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell_yellow" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="hell_green" icon="yellow" famefactor="1.8" moblootfactor="1.75" mobsilverlootfactor="2"/>
+    <ClusterDangerBonus type="hell_nonlethal_2v2" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
+    <ClusterDangerBonus type="hell_nonlethal_5v5" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
+    <ClusterDangerBonus type="hell_nonlethal_10v10" icon="yellow" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
+    <ClusterDangerBonus type="hell_lethal_2v2" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="hell_lethal_5v5" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
+    <ClusterDangerBonus type="hell_lethal_10v10" icon="black" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
     <ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="2" moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
     <ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3"/>
@@ -1411,12 +1415,6 @@
     </ExpeditionBonusRewardTimer>
   </Expedition>
   <PersonalStatement characterlimit="270" />
-  <FeaturedFeature>
-	<!-- <FeatureDetail id="SubscriptionPromo" utcstartdate="2020-10-21T10:15:00" utcenddate="2021-10-20T10:00:00" showad="SubscriptionPromo" showcount="1" nativeonly="true" counttype="peraccount"/> -->
-	<FeatureDetail id="SoulKeeperBundle" utcstartdate="2021-04-21T10:15:00" utcenddate="2022-02-10T10:00:00" showad="SoulKeeperBundle" showcount="1" counttype="peraccount"/>
-	<FeatureDetail id="LuxuryCart" utcstartdate="2021-04-01T10:15:00" utcenddate="2021-06-01T10:00:00" showad="LuxuryCart" showcount="1" counttype="peraccount"/>
-    <FeatureDetail id="extragoldnative2" utcstartdate="2020-11-04T10:15:00" utcenddate="2020-12-31T10:00:00" showhint="EXTRA_GOLD_ON_NATIVE" showcount="2" nativeonly="true" counttype="peraccount"/>
-  </FeaturedFeature>
   <SiegeCampBank size="64" weightlimit="10000.0">
     <DefaultTab Name="@SIEGECAMP_VAULT_TITLE" Icon="icon_tag_chest" IconColorBg="2B2C29FF"/>
   </SiegeCampBank>
