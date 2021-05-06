@@ -2817,9 +2817,6 @@
   <WwiseEventInfo name="SPELL_THROW_AXE" >
     <OnCastStart name="Play_emote_foley_armor_move_fast"/>
     <OnCastFinished name="Play_throw_axe" />
-    <OnSpellHit name="Play_melee_impact_big" >
-      <ImpactType/>
-    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIG_SPIN_BIG_IMPACT">
     <OnCastStart name="Play_melee_spin_big" />
@@ -3017,9 +3014,6 @@
     <OnCastStart name="Play_melee_execution_cast" />
     <OnCastCanceled name="Stop_melee_execution_cast" />
     <OnCastInterrupted name="Stop_melee_execution_cast" />
-    <OnSpellHit name="Play_melee_impact_big" >
-      <ImpactType/>
-    </OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_MAJESTIC_SMASH">
@@ -3241,6 +3235,12 @@
     <OnCastCanceled name="Stop_bolt_load_silencer" />
     <OnCastFinished name="Play_arrow_cast_swoosh_medium" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARROW_KNOCKBACKSHOT">
+    <OnCastStart name="Play_bolt_load_silencer" />
+    <OnCastInterrupted name="Stop_bolt_load_silencer" />
+    <OnCastCanceled name="Stop_bolt_load_silencer" />
+    <OnCastFinished name="Play_arrow_cast_medium_instant" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_CAST_ARMOURPIERCER">
     <OnCastStart name="Play_arrow_cast_swoosh_big" />
     <OnCastFinished name="Play_arrow_attack_medium" />
@@ -3436,9 +3436,9 @@
     <OnCastCanceled name="Stop_cursed_cast_start_deathcurse" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_DARKMATTER">
-    <OnCastStart name="Play_cursed_cast_start_standard" />
-    <OnCastInterrupted name="Stop_cursed_cast_start_standard" />
-    <OnCastCanceled name="Stop_cursed_cast_start_standard" />
+    <OnCastStart name="Play_cursed_cast_darkmatter" />
+    <OnCastInterrupted name="Stop_cursed_cast_darkmatter" />
+    <OnCastCanceled name="Stop_cursed_cast_darkmatter" />
     <OnCastFinished name="Play_cursed_cast_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_ENFEEBLEBLADES">
@@ -3452,7 +3452,7 @@
     <OnCastInterrupted name="Stop_cursed_cast_start_standard" />
     <OnCastCanceled name="Stop_cursed_cast_start_standard" />
     <OnCastFinished name="Play_cursed_cast_medium" />
-    <OnSpellHit name="Play_cursed_impact_medium" />
+    <!--    <OnSpellHit name="Play_cursed_impact_medium" /> !-->
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_INSTANT">
     <OnCastStart name="Play_cursed_cast_instant" />
@@ -3650,7 +3650,11 @@
   <WwiseEventInfo name="SPELL_HIT_FROST_CRACK">
     <OnSpellHit name="Play_frost_crack" />
   </WwiseEventInfo>
-
+  <WwiseEventInfo name="SPELL_FROST_FREEZINGWIND_CAST">
+    <OnCastFinished name="Play_frost_freezingwind" />
+    <OnSpellHit name="Play_frost_impact_medium" />
+  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_SMALL">
     <OnCastStart name="Play_holy_cast_load_small" />
     <OnCastCanceled name="Stop_holy_cast_load_small" />
@@ -3698,6 +3702,12 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_DIVINE_JUMP">
     <OnCastFinished name="Play_grail_divine_jump" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HOLY_CELESTIAL_SPHERE">
+    <OnCastStart name="Play_holy_cast_load_medium" />
+    <OnCastCanceled name="Stop_holy_cast_load_medium" />
+    <OnCastInterrupted name="Stop_holy_cast_load_medium" />
+    <OnCastFinished name="Play_holy_cast_celestial_sphere" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_LIGHTNING_CAST_SMALL">
@@ -3762,6 +3772,12 @@
     <OnCastInterrupted name="Stop_nature_cast_load_damage" />
     <OnCastFinished name="Play_selfbuff_cast" />
     <OnDamagReflected name="Play_mob_stump_small_pierce" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_NATURE_HEAL_SMALL">
+    <OnSpellHit name="Play_nature_heal_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_NATURE_HEAL_ULTIMATE_END">
+    <OnSpellHit name="Play_nature_ultimate_end" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_NATURE_HIT_THORNS">
     <OnSpellHit name="Play_mob_stump_small_pierce" />
@@ -3834,6 +3850,10 @@
   <WwiseEventInfo name="SPELL_SELF_BUFF_STOMP">
     <OnCastStart name="Play_selfbuff_cast" />
     <OnCastFinished name="Play_melee_stomp_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_STOMP_DEL">
+    <OnCastStart name="Play_selfbuff_cast" />
+    <OnCastFinished name="Play_melee_stomp_small_del" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_CASTTIME">
     <OnCastStart name="Play_casttime_selfbuff" />
@@ -3917,6 +3937,9 @@
   </WwiseEventInfo>
     <WwiseEventInfo name="SPELL_DISAPPEAR">
     <OnSpellHit name="Play_mount_disappear" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_BURNAURA_CAST">
+    <OnCastFinished name="Play_fire_aura_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_GIANT" >

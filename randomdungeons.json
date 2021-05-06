@@ -1305,10 +1305,16 @@
                 {
                   "@tier": "3",
                   "@maxfillratio": "0.7",
-                  "RandomExit": {
-                    "@name": "T3_PORTAL_ROYAL_SOLO",
-                    "@weight": "1"
-                  }
+                  "RandomExit": [
+                    {
+                      "@name": "T2_PORTAL_ROYAL_SOLO",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "T3_PORTAL_ROYAL_SOLO",
+                      "@weight": "1"
+                    }
+                  ]
                 },
                 {
                   "@tier": "4",
@@ -6119,6 +6125,22 @@
                 "@weight": "1"
               }
             ]
+          },
+          "Visualization": {
+            "@ref": "PORTAL_SOLO"
+          }
+        },
+        {
+          "@name": "T2_PORTAL_ROYAL_SOLO",
+          "@activationtime": "60",
+          "@cooldown": "60",
+          "@lifetimeafterlastuse": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3",
+              "@tier": "2",
+              "@weight": "1"
+            }
           },
           "Visualization": {
             "@ref": "PORTAL_SOLO"
