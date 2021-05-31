@@ -296,6 +296,10 @@
     <CharType name="mount"/>
     <MountType name="ent"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_JUGGERNAUT">
+    <CharType name="mount"/>
+    <MountType name="juggernaut"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_LYNX">
     <CharType name="mount"/>
     <MountType name="lynx"/>
@@ -303,6 +307,10 @@
   <WwiseSwitchInfo name="MOUNT_BASTION">
     <CharType name="mount"/>
     <MountType name="bastion"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_CHIMERA">
+    <CharType name="mount"/>
+    <MountType name="chimera"/>
   </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
@@ -2691,6 +2699,9 @@
     <OnCastStart name="Play_melee_swoosh_medium" />
     <OnSpellHit name="Play_melee_impact_rock_big" />
   </WwiseEventInfo>
+    <WwiseEventInfo name="MELEE_SPELLHIT_ROCKIMPACT_SMALL">
+    <OnSpellHit name="Play_melee_impact_rock_small" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CAST_GEYSER">
     <OnCastStart name="Play_melee_hammer_swoosh_stab" />
   </WwiseEventInfo>
@@ -4200,7 +4211,32 @@
     <OnCastInterrupted name="Stop_ent_cast_damage" />
     <OnCastFinished name="Play_melee_impact_rock_medium" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_JUGGERNAUT_GROUND_SMASH">
+    <OnCastFinished name="Play_juggernaut_ground_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_JUGGERNAUT_ASSAULT">
+    <OnCastStart name="Play_juggernaut_spell_load_assault" />
+    <OnCastCanceled name="Stop_juggernaut_spell_load_assault" />
+    <OnCastInterrupted name="Stop_juggernaut_spell_load_assault" />
+    <OnCastFinished name="Play_melee_swoosh_dash_mob" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_JUGGERNAUT_TORNADO_CAST">
+    <OnCastStart name="Play_juggernaut_cast_tornado" />
+    <OnCastCanceled name="Stop_juggernaut_cast_tornado" />
+    <OnCastInterrupted name="Stop_juggernaut_cast_tornado" />
+    <OnCastFinished name="Play_juggernaut_smash_swoosh" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_JUGGERNAUT_TORNADO_CHANNEL">
+    <OnChannelingStart name="Play_rockaura_loop" />
+    <OnChannelingCancelled name="Stop_rockaura_loop" />
+    <OnChannelingEnd name="Stop_rockaura_loop" />
+    <OnChannelingInterrupted name="Stop_rockaura_loop" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_MOUNT_OWL_SHIELD">
     <OnCastFinished name="Play_owl_load" />
   </WwiseEventInfo>
@@ -4539,10 +4575,39 @@
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_ROAR">
-    <OnCastFinished name="Play_mob_damage_increase"/>
-    <OnSpellHit name="Play_keeper_chieftain_roar" />
+    <OnCastStart name="Play_keeper_chieftain_roar" />
+    <OnSpellHit name="Play_mob_damage_increase"/>
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_DASH">
+    <OnCastFinished name="Play_mob_keeper_chieftain_dash" />
+    <OnSpellHit name="Play_melee_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_SMASH">
+    <OnCastStart name="Play_melee_swoosh_load_big" />
+    <OnCastCanceled name="Stop_melee_swoosh_load_big" />
+    <OnCastInterrupted name="Stop_melee_swoosh_load_big" />
+    <OnCastFinished name="Play_mob_keeper_chieftain_smash" />
+    <OnSpellHit name="Play_melee_impact_rock_medium" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_SMASH_JUMP">
+    <OnCastStart name="Play_mob_keeper_chieftain_smash_jump" />
+    <OnCastCanceled name="Stop_mob_keeper_chieftain_smash_jump" />
+    <OnCastInterrupted name="Stop_mob_keeper_chieftain_smash_jump" />
+    <OnSpellHit name="Play_melee_impact_rock_medium" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_WHIRLWIND" >
+    <OnCastStart name="Play_melee_swoosh_load_big" />
+    <OnCastCanceled name="Stop_melee_swoosh_load_big" />
+    <OnCastInterrupted name="Stop_melee_swoosh_load_big" />
+    <OnCastFinished name="Stop_melee_swoosh_load_big"/>
+  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_KEEPER_EARTHCHILD_WARCRY">
     <OnCastStart name="Play_mob_keeper_earthchild_scream_short" />
   </WwiseEventInfo>

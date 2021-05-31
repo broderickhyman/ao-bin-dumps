@@ -27,39 +27,88 @@
     <questslot tags="goldsmuggler" />
   </questgivertype>
 
+  <questgivertype uniquename="SHIP_REPAIRMAN" mobfaction="ROYALARMY" level="2" tags="SHIP_REPAIRMAN" maxsilverpool="1000" secondspersilver="100"/>
+
+  
   <!--Royal Faction -->
   <questgivertype uniquename="COMBATAGENT_ROYAL" mobfaction="ROYALARMY" level="2" tags="COMBATAGENT_ROYAL">
   <questslot tags="debug" />
  </questgivertype>
-
-
-
+ 
   <!--Albion Highschool -->
 
   <questgivertype uniquename="ROYALCOMMANDER" mobfaction="ROYALARMY" level="2" tags="ROYALCOMMANDER">
     <!--<questgroup locatag="@BASIC_GATHERING_INTRO">
      <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER"></quest>
    </questgroup>-->
-   <questgroup locatag="@BASIC_COMBAT_INTRO">
-     <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT"></quest>
-   </questgroup>
-    <questgroup locatag="@BASIC_TUTORIAL_HINTS">
-      <quest uniquename="MISSIONS_T2_STT_HINT_DB"></quest>
-      <quest uniquename="MISSIONS_T2_STT_HINT_MAP"></quest>
-      <quest uniquename="MISSIONS_T2_STT_HINT_WHATYOUWEAR"></quest>
-      <quest uniquename="MISSIONS_T2_STT_HINT_WEAPONS"></quest>
+    <!--<questslot tags="commander"/>-->
+    <questgroup locatag="@MISSION_GROUP_INTRO">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_OPTIONS" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_FOREST" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_STEPPE" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_HIGHLAND" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_MOUNTAIN" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_COMBAT">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_GATHERANDCRAFT">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_SMUGGLER">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER" />
+    </questgroup>   
+   <questgroup locatag="@MISSION_GROUP_YOU_ARE_READY">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CITY"></quest>
     </questgroup>
  </questgivertype>
   
  <questgivertype uniquename="ROYALCRAFTER" mobfaction="ROYALARMY" level="2" tags="ROYALCRAFTER" secondspersilver="1" maxsilverpool="10000">
-  <questslot tags="crafter" />
+   <questgroup locatag="@MISSION_GROUP_CRAFTING">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_GATHERING_ADVANCED">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_GATHERING">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_CRAFTER_YOU_ARE_READY">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER"></quest>
+   </questgroup>
  </questgivertype>
- <questgivertype uniquename="ROYALSOLDIER" mobfaction="ROYALARMY" level="2" tags="ROYALSOLDIER">
+
+  
+
+  <!--<questgivertype uniquename="ROYALSOLDIER" mobfaction="ROYALARMY" level="2" tags="ROYALSOLDIER">
   <questslot tags="soldier" />
- </questgivertype>
+ </questgivertype>-->
   <questgivertype uniquename="ROYALHARBOURMASTER" mobfaction="ROYALARMY" level="2" tags="ROYALHARBOURMASTER">
     <questslot tags="royalharbour" />
   </questgivertype>
+
+  <!--CITY NPC-->
+  <questgivertype uniquename="ROYALEXPLORER" mobfaction="ROYALARMY" level="2" tags="ROYALEXPLORER">
+    <!--<questgroup locatag="@GUILDS">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GUILD" />
+    </questgroup>
+    <questgroup locatag="@ISLAND">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_ISLAND" />tags="adventurer"
+    </questgroup>-->
+    <questslot tags="adventurer" />
+  </questgivertype>
+
 
  <!--OpenWorld -->
  <!--<questgivertype uniquename="ROYALLUMBERJACK" mobfaction="ROYALARMY" level="2" tags="ROYALLUMBERJACK">
@@ -71,9 +120,9 @@
  <questgivertype uniquename="ROYALHUNTER" mobfaction="ROYALARMY" level="2" tags="ROYALHUNTER">
   <questslot tags="hunter" />
  </questgivertype>-->
- <questgivertype uniquename="ROYALCAPTAIN" mobfaction="ROYALARMY" level="2" tags="ROYALCAPTAIN">
+ <!--<questgivertype uniquename="ROYALCAPTAIN" mobfaction="ROYALARMY" level="2" tags="ROYALCAPTAIN">
   <questslot tags="captain" />
- </questgivertype>
+ </questgivertype>-->
 
  <!--Caravan Missions -->
  <!--Smuggler -->

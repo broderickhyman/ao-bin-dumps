@@ -617,6 +617,15 @@
         }
       },
       {
+        "@name": "MOUNT_JUGGERNAUT",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "juggernaut"
+        }
+      },
+      {
         "@name": "MOUNT_LYNX",
         "CharType": {
           "@name": "mount"
@@ -632,6 +641,15 @@
         },
         "MountType": {
           "@name": "bastion"
+        }
+      },
+      {
+        "@name": "MOUNT_CHIMERA",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "chimera"
         }
       },
       {
@@ -6744,6 +6762,12 @@
         }
       },
       {
+        "@name": "MELEE_SPELLHIT_ROCKIMPACT_SMALL",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_rock_small"
+        }
+      },
+      {
         "@name": "MELEE_CAST_GEYSER",
         "OnCastStart": {
           "@name": "Play_melee_hammer_swoosh_stab"
@@ -9778,6 +9802,57 @@
         }
       },
       {
+        "@name": "SPELL_JUGGERNAUT_GROUND_SMASH",
+        "OnCastFinished": {
+          "@name": "Play_juggernaut_ground_smash"
+        }
+      },
+      {
+        "@name": "SPELL_JUGGERNAUT_ASSAULT",
+        "OnCastStart": {
+          "@name": "Play_juggernaut_spell_load_assault"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_juggernaut_spell_load_assault"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_juggernaut_spell_load_assault"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_dash_mob"
+        }
+      },
+      {
+        "@name": "SPELL_JUGGERNAUT_TORNADO_CAST",
+        "OnCastStart": {
+          "@name": "Play_juggernaut_cast_tornado"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_juggernaut_cast_tornado"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_juggernaut_cast_tornado"
+        },
+        "OnCastFinished": {
+          "@name": "Play_juggernaut_smash_swoosh"
+        }
+      },
+      {
+        "@name": "SPELL_JUGGERNAUT_TORNADO_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_rockaura_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_rockaura_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_rockaura_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_rockaura_loop"
+        }
+      },
+      {
         "@name": "SPELL_MOUNT_OWL_SHIELD",
         "OnCastFinished": {
           "@name": "Play_owl_load"
@@ -10381,11 +10456,69 @@
       },
       {
         "@name": "SPELL_KEEPER_CHIEFTAIN_ROAR",
-        "OnCastFinished": {
-          "@name": "Play_mob_damage_increase"
+        "OnCastStart": {
+          "@name": "Play_keeper_chieftain_roar"
         },
         "OnSpellHit": {
-          "@name": "Play_keeper_chieftain_roar"
+          "@name": "Play_mob_damage_increase"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_CHIEFTAIN_DASH",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_chieftain_dash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_CHIEFTAIN_SMASH",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_big"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_swoosh_load_big"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_swoosh_load_big"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_chieftain_smash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_rock_medium"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_CHIEFTAIN_SMASH_JUMP",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_chieftain_smash_jump"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_chieftain_smash_jump"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_chieftain_smash_jump"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_rock_medium"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_CHIEFTAIN_WHIRLWIND",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_big"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_swoosh_load_big"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_swoosh_load_big"
+        },
+        "OnCastFinished": {
+          "@name": "Stop_melee_swoosh_load_big"
         }
       },
       {
