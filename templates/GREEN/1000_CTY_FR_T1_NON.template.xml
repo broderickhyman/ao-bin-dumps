@@ -505,6 +505,11 @@
         <realestate size="40 40" platepos="174.5 -32 -165" doorpos="175 -29.5 -170" doorsize="1 7 2" overridesaleprice="-1" plateorientation="NorthWest" locationquality="E" />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="questgiverobject_02" type="questgiverobject" layerId="">
+      <tile name="T2_AGENT_TUTORIAL_ROYAL_EXPLORER" pos="27.5 -4 -4.5" roty="341.86">
+        <questgiverobject reference="ROYALEXPLORER" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="exit_07" type="exit" layerId="">
       <tile name="Exit" pos="-134.5 -6 53.5" roty="90">
         <exit size="15 15" spawnpos="18.44755 9.542071" faction="None" kind="Cluster" roadtype="Primary">
@@ -1024,7 +1029,7 @@
     <criticaltile name="FASTTRAVEL_POINT" pos="-30 -4 51" id="fasttravelpoint_01" type="fasttravelpoint">
       <fasttravelpoint spawnpos="9.93 -1.02" />
     </criticaltile>
-    <tile name="MiniMapMarker" pos="-30 -4 51">
+    <tile name="MiniMapMarker" pos="-31 -4 51">
       <minimapmarker type="Harbor" />
     </tile>
     <tile name="FOREST_GREEN_TOWNHALL" pos="10 0 16" />
@@ -3330,7 +3335,7 @@
     <tile name="FOREST_GREEN_FILL_BONES_A" pos="41.84 -20 255.3" />
     <tile name="FOREST_GREEN_FILL_BONES_C" pos="-278.36 -20 -32.42" />
     <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="44.5 -16 206.5" rot="322 292 19" />
-    <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="-49.5 3 4.5" rot="0 177 12" />
+    <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="-49.5 5 4.5" rot="0 111.55 12" />
     <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="-12.5 -2 -53.5" roty="325" />
     <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="-66.5 4 11.5" rot="352 178 9" />
     <tile name="FOREST_GREEN_FILL_BRANCH_A" pos="-14.5 2 -65.5" roty="19" />
@@ -3732,7 +3737,7 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="-83.5 -12 -64.5" roty="180" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="23.5 0 -24.5" roty="270" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-95 -4 2" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-25 0 22" roty="90" />
+    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-25 0 22" roty="25.39" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-226 -28 -163" roty="90" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="23 -8 -33" roty="270" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_A" pos="-55.74 -28 -195.04" roty="180" />
@@ -6378,6 +6383,13 @@
     <tile name="FACTION_GUARD_FOREST" pos="-5.5 0 33.5" roty="309" />
     <tile name="FACTION_GUARD_FOREST" pos="45.5 -20 -146.5" roty="180" />
     <tile name="FACTION_GUARD_FOREST" pos="111.5 -20 221.5" roty="171" />
+    <tile name="ROYAL_EXPLORER_BANNER" pos="26.5 -4 -2.5" roty="234" />
+    <tile name="ROYAL_EXPLORER_LIGHT" pos="27.69 -0.13 -4.85">
+      <pointlight range="7" intensity="4" color="1 0.5137255 0.1411765" />
+    </tile>
+    <criticaltile name="T2_AGENT_TUTORIAL_ROYAL_EXPLORER" pos="27.5 -4 -4.5" roty="341.86" id="questgiverobject_02" type="questgiverobject">
+      <questgiverobject reference="ROYALEXPLORER" />
+    </criticaltile>
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-20 -40 -10" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-50 -40 -10" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-80 -40 -10" />
@@ -6517,7 +6529,7 @@
     <tile name="ARENA_ENTRANCE_POINT_LIGHT_A" pos="-116.66 2.76 18.81">
       <pointlight range="10" intensity="4" color="1 0.5137255 0.1411765" />
     </tile>
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_A" pos="-131.06 -1.78 20.51" roty="315">
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_A" pos="-138.06 -1.78 11.51" roty="315">
       <pointlight range="10" intensity="4" color="1 1 1" />
     </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_A" pos="-131.13 -1.78 50.48" roty="315">
@@ -6536,6 +6548,63 @@
     </tile>
     <tile name="MiniMapMarker" pos="-153.3 12 60.4">
       <minimapmarker type="Portal_Entrance_Lymhurst" />
+    </tile>
+    <tile name="LocationMarker" pos="-30.5 -1 -39.5">
+      <locationmarker locationid="ARTIFACTFOUNDRY" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-75.5 -4 -4.5">
+      <locationmarker locationid="FACTION_WARFARE" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-46.5 0 -26.5">
+      <locationmarker locationid="REPAIR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-61.5 -1 14.5">
+      <locationmarker locationid="VANITY" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-31.5 0 16.5">
+      <locationmarker locationid="MARKETPLACE" radius="8" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-48.5 -4 -0.5">
+      <locationmarker locationid="ISLAND" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-137.5 -5 13.5" roty="270">
+      <locationmarker locationid="CONQUERORSHALL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-26.5 0 -11.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-135.5 -5 55.5" roty="270">
+      <locationmarker locationid="CONQUERORSHALL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="15.5 -1 -25.5">
+      <locationmarker locationid="EXPEDITION" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="26.5 -5 -5.5">
+      <locationmarker locationid="EXPLORER" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-59.5 -1 42.5">
+      <locationmarker locationid="ARENA" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-137.5 -5 13.5" roty="270">
+      <locationmarker locationid="ENERGYMANIPULATOR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-135.5 -5 55.5" roty="270">
+      <locationmarker locationid="ENERGYMANIPULATOR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-137.5 -5 13.5" roty="270">
+      <locationmarker locationid="OUTLANDPORTAL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-135.5 -5 55.5" roty="270">
+      <locationmarker locationid="OUTLANDPORTAL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-15.5 0 -12.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-19.5 0 -2.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-31.5 -5 48.5">
+      <locationmarker locationid="TRAVEL" radius="7" visibleinworld="false" visibleonminimap="false" />
     </tile>
   </tiles>
 </template>

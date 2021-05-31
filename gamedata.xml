@@ -13,10 +13,11 @@
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
-	  guildlogochangecooldownminutes="2880"
-	  guildchangecooldownminutes="4320"
-	  guildlogochangegoldcosts="3000"
-	  guildlogochangesilvercosts="0"
+    guildlogochangecooldownminutes="2880"
+    guildchangecooldownminutes="4320"
+    newplayerguildlockgraceperiodminutes="10080"
+    guildlogochangegoldcosts="3000"
+    guildlogochangesilvercosts="0"
     maxhideouts="6"
     maxplayers="300"
     />
@@ -109,7 +110,7 @@
       <level requiredpoints="1500"   title="@REPUTATION_LEVEL_POSITIVE02"       nametagicon="REPUTATION_POSITIVE02" rewardicon="REPUTATION_POSITIVE02" recoveryperday="0"     pvegainfactor="0.006" gathergainfactor="0.03" candisablepvp="true" canenterexpedition="true"  attackpenalty="5"   knockdownpenalty="25"   killpenalty="500"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE02"/>
       <level requiredpoints="500"    title="@REPUTATION_LEVEL_POSITIVE01"       nametagicon="REPUTATION_POSITIVE01" rewardicon="REPUTATION_POSITIVE01" recoveryperday="0"     pvegainfactor="0.008" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="2.5" knockdownpenalty="12.5" killpenalty="250"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE01"/>
       <level requiredpoints="0"      title="@REPUTATION_LEVEL_NEUTRAL"          nametagicon=""                      rewardicon="REPUTATION_NEUTRAL"    recoveryperday="0"     pvegainfactor="0.01"  gathergainfactor="0.05" candisablepvp="true" canenterexpedition="true"  attackpenalty="1"   knockdownpenalty="5"    killpenalty="100"  cityaccessdisplay="safe" crimeprotectionbuff=""/>
-      <level requiredpoints="-1000"  title="@REPUTATION_LEVEL_NEUTRAL_NEGATIVE" nametagicon="REPUTATION_NEGATIVE00" rewardicon="REPUTATION_NEGATIVE00" recoveryperday="0.012" pvegainfactor="0.008" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe" crimeprotectionbuff=""/>
+      <level requiredpoints="-1000"  title="@REPUTATION_LEVEL_NEUTRAL_NEGATIVE" nametagicon="REPUTATION_NEGATIVE00" rewardicon="REPUTATION_NEGATIVE00" recoveryperday="0"     pvegainfactor="0.012" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe" crimeprotectionbuff=""/>
       <level requiredpoints="-3000"  title="@REPUTATION_LEVEL_NEGATIVE01"       nametagicon="REPUTATION_NEGATIVE01" rewardicon="REPUTATION_NEGATIVE01" recoveryperday="1000"  pvegainfactor="0.02"  gathergainfactor="0.1"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
       <level requiredpoints="-10000" title="@REPUTATION_LEVEL_NEGATIVE02"       nametagicon="REPUTATION_NEGATIVE02" rewardicon="REPUTATION_NEGATIVE02" recoveryperday="750"   pvegainfactor="0.04"  gathergainfactor="0.2"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
       <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03"       nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500"   pvegainfactor="0.06"  gathergainfactor="0.3"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
@@ -1898,4 +1899,10 @@
     <contributingmarket id="4006"/>
   </MarketPriceEstimation>
   <Loadouts maximumplayerloadouts="30" playerinventorysize="18"/>
+  <CrossPlatformRewards>
+    <Mail mailid="CROSSPLATFORM_REWARD_MAIL" sender="Albion Online">
+      <AttachedItem id="UNIQUE_LOOTCHEST_SKILLBOOKS_TELLAFRIEND" amount="1"/>
+    </Mail>
+    <VanityUnlock id="SKIN_HORSE_QUESTING_BEAST" type="Mount"/>
+  </CrossPlatformRewards>
 </AO-GameData>

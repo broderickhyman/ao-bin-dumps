@@ -51,6 +51,26 @@
         }
       ]
     },
+    "unlockachievementskippedtutorial": {
+      "achievement": [
+        {
+          "@id": "START",
+          "@masterylevel": "1"
+        },
+        {
+          "@id": "COMBAT_TRAINEE",
+          "@masterylevel": "1"
+        },
+        {
+          "@id": "CRAFT_TRAINEE",
+          "@masterylevel": "1"
+        },
+        {
+          "@id": "FARM_TRAINEE",
+          "@masterylevel": "1"
+        }
+      ]
+    },
     "startstate": {
       "@uniquename": "STARTTUTORIAL",
       "@triggerhint": "FIRSTSTEPS",
@@ -165,7 +185,7 @@
       {
         "@uniquename": "WHEREAREMYFRIENDS",
         "@previousstate": "DESTINYBOARDINTROCLEAR",
-        "@triggerhint": "WAMF",
+        "@triggerhint": "SOFTCLEAR",
         "@hidedestinyboard": "false",
         "@showdestinyboardflyout": "true"
       },
@@ -328,7 +348,7 @@
       {
         "@uniquename": "WHATYOUWEAR",
         "@previousstate": "INFO3",
-        "@triggerhint": "WHATYOUWEAR",
+        "@triggerhint": "SOFTCLEAR",
         "@hidedestinyboard": "false",
         "@showdestinyboardflyout": "true"
       },
@@ -377,6 +397,10 @@
       },
       {
         "@uniquename": "SHIPFIXED"
+      },
+      {
+        "@uniquename": "SOUNDSHIPARRIVES",
+        "@audiochange": "TUT_FINISH_SHIP_ARRIVES"
       }
     ],
     "endstate": {
@@ -386,10 +410,27 @@
     "hint": [
       {
         "@uniquename": "FOREST",
-        "@explanation": "Biome1",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_BIOME1_TITLE",
         "@blockworldinteraction": "true",
-        "@setnextstateonend": "true",
-        "@endtriggerui": "clear"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialForest2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME1_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME1_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialForest1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME1_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME1_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BIGHINTRECALL",
@@ -402,30 +443,95 @@
       },
       {
         "@uniquename": "MOUNTAIN",
-        "@explanation": "Biome2",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_BIOME2_TITLE",
         "@blockworldinteraction": "true",
-        "@setnextstateonend": "true",
-        "@endtriggerui": "clear",
-        "@completebutton": "true"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialMountain2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialMountain1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME2_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "INFO1",
-        "@explanation": "Info1",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_INFO1_TITLE",
         "@blockworldinteraction": "true",
-        "@completebutton": "true"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorPlate",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO1_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO1_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponSword",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO1_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO1_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "INFO2",
-        "@explanation": "Info2",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_INFO2_TITLE",
         "@blockworldinteraction": "true",
-        "@completebutton": "true"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorLeather",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponBow",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO2_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "INFO3",
-        "@explanation": "Info3",
-        "@blockworldinteraction": "true",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_INFO3_TITLE",
         "@nexthint": "BIGHINTRECALLAGAIN",
-        "@endtriggerui": "clear"
+        "@endtriggerui": "clear",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorCloth",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO3_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO3_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponFireStaff",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO3_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO3_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BIGHINTRECALLAGAIN",
@@ -442,48 +548,200 @@
         "@setnextstateonend": "true"
       },
       {
-        "@uniquename": "WAMF",
-        "@explanation": "AlbionTutorial",
+        "@uniquename": "WHATYOUWEAR_MOBILE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TITLE",
         "@blockworldinteraction": "true",
-        "@completebutton": "true"
+        "@setnextstateonend": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialYAWYW2",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "WAMF",
+        "@explanation": "HorizontalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WAMF_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/BANNER_META_FRIENDS_2",
+          "@scale": "1.8",
+          "content": {
+            "@text": "@TUTORIAL_BIGHINT_WAMF_TEXT_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "WAMF_MOBILE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WAMF_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_OPTIONS",
+          "@scale": "2",
+          "content": {
+            "@text": "@TUTORIAL_BIGHINT_WAMF_TEXT_INFO"
+          }
+        }
       },
       {
         "@uniquename": "SILVER",
-        "@explanation": "Silver",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_SILVER_TITLE",
         "@blockworldinteraction": "true",
-        "@completebutton": "true"
+        "@completebutton": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/SILVERCRAFT",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_SILVER_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_SILVER_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/SILVERMARKET",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_SILVER_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_SILVER_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BUTTONFOREST",
-        "@explanation": "Biome1",
-        "@completebutton": "true",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_BIOME1_TITLE",
         "@blockworldinteraction": "true",
-        "@endtriggerui": "clear"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialForest2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME1_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME1_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialForest1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME1_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME1_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BUTTONMOUNTAIN",
-        "@explanation": "Biome2",
-        "@completebutton": "true",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_BIOME2_TITLE",
         "@blockworldinteraction": "true",
-        "@endtriggerui": "clear"
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialMountain2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialMountain1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_BIOME2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_BIOME2_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BUTTONINFO1",
-        "@explanation": "Info1",
+        "@explanation": "VerticalTemplate",
         "@nexthint": "BUTTONINFO2",
-        "@blockworldinteraction": "true"
+        "@title": "@TUTORIAL_BIGHINT_INFO1_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorPlate",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO1_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO1_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponSword",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO1_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO1_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BUTTONINFO2",
-        "@explanation": "Info2",
+        "@explanation": "VerticalTemplate",
         "@nexthint": "BUTTONINFO3",
-        "@blockworldinteraction": "true"
+        "@title": "@TUTORIAL_BIGHINT_INFO2_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorLeather",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponBow",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO2_TEXT2_INFO"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "BUTTONINFO3",
-        "@explanation": "Info3",
+        "@explanation": "VerticalTemplate",
         "@nexthint": "BUTTONINFO1",
-        "@blockworldinteraction": "true"
+        "@title": "@TUTORIAL_BIGHINT_INFO3_TITLE",
+        "@endtriggerui": "clear",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArmorCloth",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO3_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO3_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialWeaponFireStaff",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INFO3_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INFO3_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "INTERACTIONBUTTONHIGHLIGHT",
+        "@triggerui": "dynamicinteraction"
+      },
+      {
+        "@uniquename": "MOUNTBUTTONHIGHLIGHT",
+        "@triggerui": "mountbutton"
+      },
+      {
+        "@uniquename": "INVENTORYBUTTONHIGHLIGHT",
+        "@triggerui": "inventorybutton"
       },
       {
         "@uniquename": "CLEAR",
@@ -492,6 +750,20 @@
       {
         "@uniquename": "DELAYEDCLEAR",
         "@triggerui": "clear"
+      },
+      {
+        "@uniquename": "INTERACTCLEAR",
+        "@triggerui": "clear",
+        "@delay": "3"
+      },
+      {
+        "@uniquename": "VERYDELAYEDCLEAR",
+        "@triggerui": "clear",
+        "@delay": "5"
+      },
+      {
+        "@uniquename": "SOFTCLEAR",
+        "@triggerui": "clearonlytriggeruis"
       },
       {
         "@uniquename": "STARTTUTORIAL",
@@ -534,7 +806,8 @@
       {
         "@uniquename": "FIRSTGATHER",
         "@title": "@HINT_TITLE_FIRSTGATHER",
-        "@infotext": "@HINT_INFO_FIRSTGATHER"
+        "@infotext": "@HINT_INFO_FIRSTGATHER",
+        "@triggerui": "dynamicinteraction"
       },
       {
         "@uniquename": "FIRSTCRAFT",
@@ -567,6 +840,7 @@
         "@uniquename": "EQUIPSHIELD",
         "@title": "@HINT_TITLE_EQUIPSHIELD",
         "@infotext": "@HINT_INFO_EQUIPSHIELD",
+        "@triggerui": "inventorybutton",
         "@setnextstateonend": "true"
       },
       {
@@ -600,7 +874,8 @@
         "@nexthint": "DESTINYBOARDINTRO_02",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "false",
-        "@triggerui": "destinyboardstart"
+        "@triggerui": "destinyboardstart",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "DESTINYBOARDINTRO_02",
@@ -609,7 +884,8 @@
         "@nexthint": "DESTINYBOARDINTRO_03",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardstart"
+        "@triggerui": "destinyboardstart",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "DESTINYBOARDINTRO_03",
@@ -618,7 +894,8 @@
         "@nexthint": "DESTINYBOARDINTRO_04",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardcombat"
+        "@triggerui": "destinyboardcombat",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "DESTINYBOARDINTRO_04",
@@ -627,7 +904,8 @@
         "@nexthint": "DESTINYBOARDINTRO_05",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardgather"
+        "@triggerui": "destinyboardgather",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "DESTINYBOARDINTRO_05",
@@ -637,6 +915,7 @@
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
         "@triggerui": "destinyboardcraft",
+        "@mobileposition": "BottomRight",
         "@endtriggerui": "destinyboardadventure"
       },
       {
@@ -646,7 +925,8 @@
         "@nexthint": "TRACKERINTRO_01",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardcombat"
+        "@triggerui": "destinyboardcombat",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "TRACKERINTRO_01",
@@ -655,7 +935,8 @@
         "@nexthint": "TRACKERINTRO_02",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardrequirements"
+        "@triggerui": "destinyboardrequirements",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "TRACKERINTRO_02",
@@ -664,7 +945,8 @@
         "@nexthint": "TRACKERINTRO_03",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardcombattrack"
+        "@triggerui": "destinyboardcombattrack",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "TRACKERINTRO_03",
@@ -676,10 +958,12 @@
         "@skiptonextstate": "true",
         "@completebutton": "true",
         "@setnextstateonend": "true",
+        "@mobileposition": "BottomRight",
         "@endtriggerui": "firstquest"
       },
       {
         "@uniquename": "DESTINYBOARDINTRO_08",
+        "@mobileposition": "BottomRight",
         "@triggerui": "firstquest"
       },
       {
@@ -687,6 +971,7 @@
         "@title": "@HINT_TITLE_MARKETPLACEINTRO_01",
         "@infotext": "@HINT_INFO_MARKETPLACEINTRO_01",
         "@nexthint": "BUYMOUNT_01",
+        "@mobileposition": "BottomRight",
         "@blockworldinteraction": "true"
       },
       {
@@ -695,7 +980,8 @@
         "@infotext": "@HINT_INFO_BUYMOUNT_01",
         "@triggerui": "marketplacesearch",
         "@blockworldinteraction": "true",
-        "@nexthint": "BUYMOUNT_02"
+        "@nexthint": "BUYMOUNT_02",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "BUYMOUNT_02",
@@ -703,13 +989,15 @@
         "@infotext": "@HINT_INFO_BUYMOUNT_02",
         "@triggerui": "marketplacebuy",
         "@blockworldinteraction": "true",
-        "@nexthint": "BUYMOUNT_03"
+        "@nexthint": "BUYMOUNT_03",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "BUYMOUNT_03",
         "@title": "@HINT_TITLE_BUYMOUNT_03",
         "@infotext": "@HINT_INFO_BUYMOUNT_03_PERCIVAL",
-        "@triggerui": "marketplacemount"
+        "@triggerui": "marketplacemount",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "BUYMOUNT_04",
@@ -717,11 +1005,13 @@
         "@infotext": "@HINT_INFO_BUYMOUNT_04",
         "@triggerui": "marketplacecollect",
         "@blockworldinteraction": "true",
-        "@nexthint": "BUYMOUNT_05"
+        "@nexthint": "BUYMOUNT_05",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "BUYMOUNT_05",
-        "@triggerui": "marketplacecollecttabhighlight"
+        "@triggerui": "marketplacecollecttabhighlight",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MOUNT",
@@ -729,7 +1019,8 @@
         "@infotext": "@HINT_INFO_MOUNT",
         "@completebutton": "true",
         "@triggerui": "inventorybutton",
-        "@delay": "1"
+        "@delay": "1",
+        "@nexthint": "INVENTORYBUTTONHIGHLIGHT"
       },
       {
         "@uniquename": "CRAFTTOOLSINFO",
@@ -763,7 +1054,8 @@
         "@nexthint": "MAPINTRO_01B",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "worldmap"
+        "@triggerui": "worldmap",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_01B",
@@ -772,7 +1064,8 @@
         "@nexthint": "MAPINTRO_02",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermap"
+        "@triggerui": "clustermap",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_02",
@@ -781,7 +1074,8 @@
         "@nexthint": "MAPINTRO_03",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermapinfo"
+        "@triggerui": "clustermapinfo",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_03",
@@ -790,7 +1084,8 @@
         "@nexthint": "MAPINTRO_04",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermapleftdetail"
+        "@triggerui": "clustermapleftdetail",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_04",
@@ -799,7 +1094,8 @@
         "@nexthint": "MAPINTRO_05",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermapmiddledetail"
+        "@triggerui": "clustermapmiddledetail",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_05",
@@ -808,7 +1104,8 @@
         "@nexthint": "MAPINTRO_07",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermaprightdetail"
+        "@triggerui": "clustermaprightdetail",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_07",
@@ -817,7 +1114,8 @@
         "@nexthint": "MAPINTRO_08",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "clustermaprightdetail"
+        "@triggerui": "clustermaprightdetail",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "MAPINTRO_08",
@@ -827,6 +1125,7 @@
         "@completebutton": "true",
         "@setnextstateonend": "true",
         "@triggerui": "clustermaprightdetail",
+        "@mobileposition": "BottomRight",
         "@endtriggerui": "clear"
       },
       {
@@ -854,7 +1153,8 @@
         "@blockworldinteraction": "true",
         "@skiptonextstate": "false",
         "@triggerui": "destinyboardlplocation",
-        "@delay": "2"
+        "@delay": "2",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "LEARNLP_03",
@@ -863,7 +1163,8 @@
         "@nexthint": "LEARNLP_04",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardlpthreshold"
+        "@triggerui": "destinyboardlpthreshold",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "LEARNLP_04",
@@ -872,7 +1173,8 @@
         "@nexthint": "LEARNLP_05",
         "@blockworldinteraction": "true",
         "@skiptonextstate": "true",
-        "@triggerui": "destinyboardlpthreshold"
+        "@triggerui": "destinyboardlpthreshold",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "LEARNLP_05",
@@ -882,7 +1184,8 @@
         "@skiptonextstate": "true",
         "@triggerui": "destinyboardcombat",
         "@completebutton": "true",
-        "@setnextstateonend": "true"
+        "@setnextstateonend": "true",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "USELP_01",
@@ -902,7 +1205,8 @@
         "@blockworldinteraction": "true",
         "@skiptonextstate": "false",
         "@triggerui": "destinyboardlplocation",
-        "@completebutton": "true"
+        "@completebutton": "true",
+        "@mobileposition": "BottomRight"
       },
       {
         "@uniquename": "USELP_03",
@@ -986,9 +1290,32 @@
       },
       {
         "@uniquename": "PREMIUM",
-        "@explanation": "PremiumStatus",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_PREMIUM_TITLE",
+        "@completebutton": "true",
         "@blockworldinteraction": "true",
-        "@completebutton": "true"
+        "@delay": "7",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialPremium",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_PREMIUM_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_PREMIUM_TEXT1_TEXT",
+              "@setplatformflag": "true"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/Buttons_bigmeta",
+            "@scale": "1.2",
+            "@setplatformflag": "true",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_PREMIUM_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_PREMIUM_TEXT2_TEXT",
+              "@setplatformflag": "true"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "USEITMES",
@@ -1181,135 +1508,1239 @@
         "@triggerui": "clear"
       },
       {
-        "@uniquename": "AFTER_WHATYOUWEAR",
-        "@explanation": "WhatYouWear",
+        "@uniquename": "BANK",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_BANK",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_BANK",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FORGE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_FORGE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_FORGE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "HUNTER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_HUNTER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_HUNTER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "LUMBER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_LUMBER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_LUMBER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "MAGE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_MAGE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_MAGE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "MARKETPLACE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_MARKET",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_MARKET",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "MASON",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_MASON",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_MASON",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "REPAIR",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_REPAIR",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_REPAIR",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "SMELTER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_SMELTER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_SMELTER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "STABLE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_STABLE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_STABLE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "TANNER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_TANNER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_TANNER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "TOOLMAKER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_TOOLMAKER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_TOOLMAKER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "WEAVER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_WEAVER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_WEAVER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "VANITY",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_VANITYSTORE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_VANITYSTORE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "ISLANDMERCHANT",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_ISLANDMERCHANT",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_ISLANDMERCHANT",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "OUTLANDPORTAL",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_OUTLANDPORTAL",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_OUTLANDPORTAL",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "ARTIFACTFOUNDRY",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_ARTIFACTFOUNDRY",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_ARTIFACTFOUNDRY",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "ARENA",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_ARENA",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_ARENA",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "EXPEDITION",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_EXPEDITION",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_EXPEDITION",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FACTION_WARFARE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FACTIONSTORE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FACTIONSTORE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "ENERGYMANIPULATOR",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_ENERGYMANIPULATOR",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_ENERGYMANIPULATOR",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "CONQUERORSHALL",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CONQUERORSHALL",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CONQUERORSHALL",
+        "@completebutton": "true",
+        "@delay": "3"
+      },
+      {
+        "@uniquename": "ISLANDMERCHANTSMALL",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_ISLANDMERCHANTSMALL",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_ISLANDMERCHANTSMALL",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "TRAVEL",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_CITYTOUR_TRAVEL",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_CITYTOUR_TRAVEL",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "T3_REFINE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_T3_REFINE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_T3_REFINE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS2_CLOTH",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FOCUS2_CLOTH",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FOCUS2_CLOTH",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS2_STONE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FOCUS2_STONE",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FOCUS2_STONE",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS2_BAR",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FOCUS2_BAR",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FOCUS2_BAR",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS2_PLANKS",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FOCUS2_PLANKS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FOCUS2_PLANKS",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "FOCUS2_LEATHER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_FOCUS2_LEATHER",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_FOCUS2_LEATHER",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "GAINED_FOCUS_PLANKS",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_GAINED_FOCUS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS",
+        "@nexthint": "FOCUS_PLANKS"
+      },
+      {
+        "@uniquename": "GAINED_FOCUS_CLOTH",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_GAINED_FOCUS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS",
+        "@nexthint": "FOCUS_CLOTH"
+      },
+      {
+        "@uniquename": "GAINED_FOCUS_BAR",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_GAINED_FOCUS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS",
+        "@nexthint": "FOCUS_BAR"
+      },
+      {
+        "@uniquename": "GAINED_FOCUS_LEATHER",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_GAINED_FOCUS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS",
+        "@nexthint": "FOCUS_LEATHER"
+      },
+      {
+        "@uniquename": "GAINED_FOCUS_STONE",
+        "@title": "@HINT_TITLE_T2_TUTORIAL_GAINED_FOCUS",
+        "@infotext": "@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS",
+        "@nexthint": "FOCUS_STONE"
+      },
+      {
+        "@uniquename": "INTERACTIONBUTTON",
+        "@title": "@HINT_TITLE_USE_INTERACT_BUTTON",
+        "@infotext": "@HINT_INFO_USE_INTERACT_BUTTON",
+        "@triggerui": "dynamicinteraction",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "T3_GEAR",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_T3_GEAR_TITLE",
         "@blockworldinteraction": "true",
-        "@setnextstateonend": "true"
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_T3_GEAR",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_T3_GEAR_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_T3_GEAR_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "REAVER",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_REAVER_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "4",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_REAVER",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_REAVER_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_REAVER_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "STUDY",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_STUDY_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STUDY_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STUDY_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STUDY_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STUDY_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STUDY_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STUDY_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "USE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_USE_TITLE",
+        "@completebutton": "true",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_USE_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_USE_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_USE_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_USE_2",
+            "@scale": "1.2",
+            "@setplatformflag": "true",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_USE_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_USE_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "CRAFTING",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_CRAFTING_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_CRAFTING",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_CRAFTING_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_CRAFTING_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "T2_WHERE_FIBER",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FIBER_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "3",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FIBER_T2_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FIBER_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FIBER_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FIBER_T2_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FIBER_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FIBER_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T2_WHERE_WOOD",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WOOD_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "3",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_WOOD_T2_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_WOOD_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_WOOD_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_WOOD_T2_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_WOOD_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_WOOD_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T2_WHERE_HIDE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_HIDE_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "3",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_HIDE_T2_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_HIDE_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_HIDE_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_HIDE_T2_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_HIDE_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_HIDE_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T2_WHERE_STONE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_STONE_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "3",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STONE_T2_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STONE_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STONE_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STONE_T2_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STONE_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STONE_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T2_WHERE_ORE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_ORE_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "3",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_ORE_T2_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_ORE_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_ORE_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_ORE_T2_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_ORE_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_ORE_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_WHERE_FIBER",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FIBER2_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "6",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FIBER_T3_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FIBER2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FIBER2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FIBER_T3_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FIBER2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FIBER2_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_WHERE_WOOD",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WOOD2_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "6",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_WOOD_T3_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_WOOD2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_WOOD2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_WOOD_T3_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_WOOD2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_WOOD2_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_WHERE_HIDE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_HIDE2_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "6",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_HIDE_T3_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_HIDE2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_HIDE2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_HIDE_T3_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_HIDE2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_HIDE2_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_WHERE_STONE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_STONE2_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "6",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STONE_T3_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STONE2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STONE2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_STONE_T3_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_STONE2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_STONE2_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_WHERE_ORE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_ORE2_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "6",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_ORE_T3_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_ORE2_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_ORE2_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_ORE_T3_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_ORE2_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_ORE2_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "T3_GATHERING",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_WHATTOGATHER",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "OPTIONS",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_OPTIONS_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_OPTIONS",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_OPTIONS_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_OPTIONS_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "FOCUS_CLOTH",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FOCUS_TITLE",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FOCUS2_CLOTH",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "FOCUS_STONE",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FOCUS_TITLE",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FOCUS2_STONE",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "FOCUS_BAR",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FOCUS_TITLE",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FOCUS2_BAR",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "FOCUS_PLANKS",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FOCUS_TITLE",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FOCUS2_PLANKS",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "FOCUS_LEATHER",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FOCUS_TITLE",
+        "@blockworldinteraction": "true",
+        "@nexthint": "FOCUS2_LEATHER",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FOCUS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_FOCUS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "END_OF_TUTORIAL",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_END_OF_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_ENDOFTUTORIAL",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_END_OF_TUTORIAL_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_END_OF_TUTORIAL_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "INTERACTION",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_INTERACTION_TITLE",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "@nexthint": "INTERACTIONBUTTONHIGHLIGHT",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_INTERACTION_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INTERACTION_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INTERACTION_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_INTERACTION_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_INTERACTION_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_INTERACTION_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "FAMEBOOK",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_FAMEBOOK_TITLE",
+        "@nexthint": "USE",
+        "@triggerui": "clear",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_FAMEBOOK",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_FAMEBOOK_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_FAMEBOOK_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "CARRYWEIGHT",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_CARRYWEIGHT_TITLE",
+        "@blockworldinteraction": "true",
+        "@completebutton": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_CARRYWEIGHT_1",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_CARRYWEIGHT_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_CARRYWEIGHT_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_CARRYWEIGHT_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_CARRYWEIGHT_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_CARRYWEIGHT_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "EXPEDITIONS",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_EXPEDITIONS_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_EXPEDITIONS",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_EXPEDITIONS_TEXT1_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_EXPEDITIONS_TEXT1_INFO"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TUTORIAL_EXPEDITIONS_2",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_BIGHINT_EXPEDITIONS_TEXT2_TITLE",
+              "@text": "@TUTORIAL_BIGHINT_EXPEDITIONS_TEXT2_INFO"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "OPENWORLD",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_OPENWORLD_TITLE",
+        "@blockworldinteraction": "true",
+        "@delay": "1",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TUTORIAL_OPENWORLD",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_OPENWORLD_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_OPENWORLD_TEXT1_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "AFTER_WHATYOUWEAR",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TITLE",
+        "@blockworldinteraction": "true",
+        "@setnextstateonend": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialYAWYW2",
+          "@scale": "2",
+          "content": {
+            "@title": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_TITLE",
+            "@text": "@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_INFO"
+          }
+        }
       },
       {
         "@uniquename": "NOMOREQUESTS",
-        "@title": "@HINT_TITLE_NOMOREQUESTS_01",
+        "@title": "@HFINT_TITLE_NOMOREQUESTS_01",
         "@infotext": "@HINT_INFO_NOMOREQUESTS_01",
         "@blockworldinteraction": "true",
         "@completebutton": "true"
       },
       {
         "@uniquename": "CRYSTAL_LEAGUE_INFO",
-        "@explanation": "CrystalLeagueInfo",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@CRYSTAL_LEAGUE_UI_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialCrystalLeague",
+          "@scale": "2",
+          "content": {
+            "@text": "@CRYSTAL_LEAGUE_UI_TUTORIAL"
+          }
+        }
       },
       {
         "@uniquename": "CLUSTER_QUEUE_INFO",
-        "@explanation": "SmartClusterQueue",
-        "@blockworldinteraction": "true"
-      },
-      {
-        "@uniquename": "AVALONIAN_SEASON_INFO",
-        "@explanation": "AvalonianSeason",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@SCQ_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialClusterQueue",
+          "@scale": "2",
+          "content": {
+            "@text": "@SMART_CLUSTER_QUEUE_TUTORIAL_LIST"
+          }
+        }
       },
       {
         "@uniquename": "ALLIANCE_INFO",
-        "@explanation": "AllianceInfo",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@ALLIANCE_INFO_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialAlliance",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@ALLIANCE_INFO_TUTORIAL_SUBTITLE_01",
+              "@text": "@ALLIANCE_INFO_TUTORIAL_TEXT_01"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialEnergyStorage",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@ALLIANCE_INFO_TUTORIAL_SUBTITLE_02",
+              "@text": "@ALLIANCE_INFO_TUTORIAL_TEXT_02"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "PORTAL_INFO",
-        "@explanation": "PortalInfo",
-        "@blockworldinteraction": "true"
-      },
-      {
-        "@uniquename": "JOYSTICK_INFO",
-        "@explanation": "JoystickInfo",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@PORTAL_BINDING_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialPortalBinding",
+          "@scale": "2",
+          "content": {
+            "@text": "@PORTAL_BINDING_TUTORIAL_DESC"
+          }
+        }
       },
       {
         "@uniquename": "PREMIUM_SUBSCRIPTION_INFO",
-        "@explanation": "PremiumSubscriptions",
+        "@explanation": "MobilePremiumSubscriptions",
         "@blockworldinteraction": "true"
       },
       {
         "@uniquename": "ENERGY_STORAGE_INFO",
-        "@explanation": "EnergyStorageInfo",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@ENERGY_STORAGE_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialEnergyStorage",
+          "@scale": "2",
+          "content": {
+            "@text": "@ENERGY_STORAGE_TUTORIAL_CONTENT"
+          }
+        }
       },
       {
         "@uniquename": "LOCAL_PRODUCTION_INFO",
-        "@explanation": "LocalProductionBonusesInfo",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@CLUSTERMAP_PRODUCTIONBONUS_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialLocalProductionBonuses",
+          "@scale": "2",
+          "content": {
+            "@text": "@LOCAL_PRODUCTION_BONUSES_TUTORIAL_CONTENT"
+          }
+        }
       },
       {
         "@uniquename": "CORRUPTED_DUNGEON_INFO",
-        "@explanation": "CorruptedDungeons",
-        "@dontshow_decisiontag": "CorruptedDungeonTutorial",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@CORRUPTED_DUNGEON_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialCorruptedDungeonsPVE",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@CORRUPTED_DUNGEON_TUTORIAL_SUB_TITLE_PVE",
+              "@text": "@CORRUPTED_DUNGEON_TUTORIAL_CONTENT_PVE"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialCorruptedDungeonsPVP",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@CORRUPTED_DUNGEON_TUTORIAL_SUB_TITLE_PVP",
+              "@text": "@CORRUPTED_DUNGEON_TUTORIAL_CONTENT_PVP"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "PERSONAL_SEASON_INFO",
-        "@explanation": "PersonalSeason",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_ADC_TITLE",
         "@dontshow_decisiontag": "PersonalSeasonInfo",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_ADC_POINTS_SUB_TITLE",
+              "@text": "@TUTORIAL_ADC_POINTS_TEXT"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/ADVENTURER_CHALLENGE_DAILY_BONUS",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@TUTORIAL_ADC_DAILY_BONUS_SUB_TITLE",
+              "@text": "@TUTORIAL_ADC_DAILY_BONUS_TEXT"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "ROADS_HIDEOUT_PLACEMENT_INFO",
-        "@explanation": "RoadsHideoutPlacement",
-        "@blockworldinteraction": "true"
-      },
-      {
-        "@uniquename": "EXTRA_GOLD_ON_NATIVE",
-        "@explanation": "ExtraGoldOnNative",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@ROADS_OF_AVALON_HIDEOUTS_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialRoAHideouts",
+          "@scale": "2",
+          "content": {
+            "@text": "@ROADS_OF_AVALON_HIDEOUTS_TUTORIAL_CONTENT"
+          }
+        }
       },
       {
         "@uniquename": "CLUSTER_ACCESS_PRIORITY_INFO",
-        "@explanation": "ClusterAccessPriority",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@CLUSTER_ACCESS_PRIORITY_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialClusterQueue",
+          "@scale": "2",
+          "content": {
+            "@text": "@CLUSTER_ACCESS_PRIORITY_TUTORIAL_LIST"
+          }
+        }
       },
       {
         "@uniquename": "LOADOUTS_BASIC_INFO",
-        "@explanation": "LoadoutsBasic",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@LOADOUTS_UI_MAIN_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialYAWYW1",
+          "@scale": "2",
+          "content": {
+            "@text": "@LOADOUTS_UI_MAIN_TUTORIAL_LIST"
+          }
+        }
+      },
+      {
+        "@uniquename": "JOYSTICK_CONTROLS_DRAG_TARGETING",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TITLE_DRAG_TARGETING",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/Mobile/Tutorial/Tutorial_Mobile_Spell_Drag",
+            "@scale": "1.2",
+            "content": {
+              "@text": "@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TEXT_DRAG_TARGETING_A"
+            }
+          },
+          {
+            "@imagepath": "Gui/Mobile/Tutorial/Tutorial_Mobile_Spell_Cancel",
+            "@scale": "3.265625",
+            "content": {
+              "@text": "@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TEXT_DRAG_TARGETING_B"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "HELLGATE_BASIC_INFO",
-        "@explanation": "Hellgates",
-        "@blockworldinteraction": "true"
+        "@explanation": "VerticalTemplate",
+        "@title": "@HELLGATES_TUTORIAL_TITLE",
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialHellgatePvP",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@HELLGATES_TUTORIAL_SUBTITLE_PVP",
+              "@text": "@HELLGATES_TUTORIAL_DESC_PVP"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialHellgateChain",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@HELLGATES_TUTORIAL_SUBTITLE_PVE",
+              "@text": "@HELLGATES_TUTORIAL_DESC_PVE"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO",
-        "@explanation": "FactionWarfareBasic",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_1_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO_2",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWEnlist",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_1_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_1_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWConquer",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_1_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_1_DESC_2"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO_2",
-        "@explanation": "FactionWarfareGetStarted",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_2_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO_3",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWMapOverlay",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_2_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_2_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWGroup",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_2_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_2_DESC_2"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO_3",
-        "@explanation": "FactionWarfareConquest",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_3_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO_4",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWFrontline",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_3_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_3_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWValue",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_3_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_3_DESC_2"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO_4",
-        "@explanation": "FactionWarfarePoints",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_4_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO_5",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWPoints",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_4_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_4_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWGroup",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_4_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_4_DESC_2"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO_5",
-        "@explanation": "FactionWarfareCaerleon",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO_6",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWCaerleon",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWLoot",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_DESC_2"
+            }
+          }
+        ]
       },
       {
         "@uniquename": "FACTION_WARFARE_INFO_6",
-        "@explanation": "FactionWarfareRedZoneEvent",
+        "@explanation": "VerticalTemplate",
+        "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_6_TITLE",
         "@nexthint": "FACTION_WARFARE_INFO",
-        "@blockworldinteraction": "true"
+        "@blockworldinteraction": "true",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWRedZoneEvent",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_6_SUBTITLE_1",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_5_DESC_1"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialFWRedZoneEventConclusion",
+            "@scale": "1.2",
+            "content": {
+              "@title": "@FACTION_WARFARE_TUTORIAL_SCREEN_6_SUBTITLE_2",
+              "@text": "@FACTION_WARFARE_TUTORIAL_SCREEN_6_DESC_2"
+            }
+          }
+        ]
       }
     ],
     "startgear": {

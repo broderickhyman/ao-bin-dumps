@@ -1,276 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quests.xsd">
   <!-- MISSIONS -->
-  
-  
-  <!--COMBAT-->
-  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_COMBAT_COMPLETIONTEXT" cancelable="true">
-    <!--Fighting Quest - GOTO_Soldier-->
-    <variables>
-      <dynamicquestgiver name ="SOLDIER">
-        <distancefromquestgiver mindistance="1" maxdistance="1"/>
-        <questgivertag tag="ROYALSOLDIER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="SOLDIER" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
+  <!--ONLY IF TUTORIAL WAS PLAYED-->
+  <!--PREMIUM-->
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT2" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT2_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT2_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT2_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT"  completetext="@MISSIONS_T2_TUTORIAL_COMBAT2_COMPLETIONTEXT" cancelable="true">
-    <!--Fighting Quest - Collect Silver-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <gathersilver value="200" textloca="@MISSIONS_T2_TUTORIAL_ROYAL_COLLECT_SILVER"/>
-        <unlockachievement achievement="PVE_T3" masterylevel="0" textloca="@MISSIONS_T2_TUTORIAL_COMBAT2_UNLOCK"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT3" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT3_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT3_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT3_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="soldier" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT2" completetext="@MISSIONS_T2_TUTORIAL_COMBAT3_COMPLETIONTEXT" cancelable="true">
-    <!--Fighting Quest - Go Captain-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_NEWORDERS" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_NEWORDERS_TITLE" offertext="@MISSIONS_T2_TUTORIAL_NEWORDERS_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_NEWORDERS_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_NEWORDERS_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_STT_TEST_X">
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="1"/>
       </dynamiccluster>
-      <dynamicquestgiver name ="CAPTAIN">
+      <dynamicquestgiver name ="COMMANDER">
         <distancefromquestgiver mindistance="0" maxdistance="1"/>
-        <questgivertag tag="ROYALCAPTAIN"/>
+        <questgivertag tag="ROYALCOMMANDER"/>
       </dynamicquestgiver>
     </variables>
     <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="CAPTAIN" />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_COMBAT4" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_COMBAT4_TITLE" offertext="@MISSIONS_T2_TUTORIAL_COMBAT4_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_COMBAT4_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captain" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_COMBAT3" completetext="@MISSIONS_T2_TUTORIAL_COMBAT4_COMPLETIONTEXT" completehintbox="NOMOREQUESTS" cancelable="true">
-    <!--Fighting Quest - T4 Reaver-->
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <or textloca="@MISSIONS_T2_TUTORIALCOMBAT4_ANY_HERETIC_BOSS_OR_MOBS">
-          <killmob mobid="T2_MOB_HERETIC_ARCHER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_ARCHER_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_MAGE_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_TANK_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_THIEF_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T2_MOB_HERETIC_THIEF_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_EXP_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_EXP_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_ARCHER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_ARCHER_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_BALLISTA_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_GIBSON_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_HEALER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_HEALER_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_MAGE_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_THIEF_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_ROAMING_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_ROAMING_HERETIC_TANK_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_HERETIC_THIEF_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_BALLISTA_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_BRAWLER_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_ARCHER_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_THIEF_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob mobid="T3_MOB_RD_HERETIC_MAGE_MINIBOSS" count="1" countpartykills="true"/>
-          <killmob faction="HERETIC" mintier="1" maxtier="3" count="10"/>
-        </or>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="1"/>
-    </rewards>
-  </quest>
-
-  <!--CRAFTING_START-->
-  <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_START" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_START_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_START_COMPLETIONTEXT" completehintbox="PREMIUM1">
-
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <unlockachievement achievement="CRAFT_TRAINEE" masterylevel="0"/>
-      </missionstep>
-      <completionstep>
-        <gotoquestgiver/>
-      </completionstep>
-    </tasks>
-    <rewards>
-      <item itemid="UNIQUE_FOCUSPOTION_TUTORIAL_01" count="1"/>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_START" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_COMPLETIONTEXT">
-
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-        <presentresource resourceid="HIDE" tier="2"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <missionstep>
-        <or textloca="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_ANYBUILDING" locationmarkerid="CRAFTINGBUILDING">
-          <interactwithbuilding buildingid="T3_FORGE"/>
-          <interactwithbuilding buildingid="T3_HUNTERSLODGE"/>
-          <interactwithbuilding buildingid="T3_MAGICITEMS"/>
-          <interactwithbuilding buildingid="T3_TOOLMAKER"/>
-        </or>  
-      </missionstep>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="FOCUS_2"/>
-        </preactions>
+      <extendedcompletionstep locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">
         <missions>
-        <usefocus value="1" textloca="@MISSIONS_T2_TUTORIAL_CRAFTING_BOWSWORDFIRESTAFF_FOCUS"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <preactions>
-          <openhintbox uniquename="FOCUS_3"/>
-        </preactions>
-        <missions>
-        <gotoquestgiver/>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-      <item itemid="UNIQUE_FOCUSPOTION_TUTORIAL_01" count="1"/>
-    </rewards>
-  </quest>
-      
-
-
-
-  <!--Revisit Tutorial Hints-->
-  <quest uniquename="MISSIONS_T2_STT_HINT_WEAPONS" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_WEAPONS_TITLE" offertext="@MISSIONS_T2_STT_HINT_WEAPONS_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_WEAPONS_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION"  completetext="@MISSIONS_T2_STT_HINT_WEAPONS_COMPLETIONTEXT" cancelable="true">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="BUTTONINFO1"/>
-        </preactions>
-        <missions>
-          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <missions>        
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_STT_HINT_WHATYOUWEAR" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_TITLE" offertext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_WHATYOUWEAR_COMPLETIONTEXT" cancelable="true">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="AFTER_WHATYOUWEAR"/>
-        </preactions>
-        <missions>
-          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <missions>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_STT_HINT_DB" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_DB_TITLE" offertext="@MISSIONS_T2_STT_HINT_DB_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_DB_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_DB_COMPLETIONTEXT" cancelable="true">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="AFTER_DESTINYBOARDINTRO_01"/>
-        </preactions>
-        <missions>
-          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <missions>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-
-  <quest uniquename="MISSIONS_T2_STT_HINT_MAP" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_HINT_MAP_TITLE" offertext="@MISSIONS_T2_STT_HINT_MAP_OFFERTEXT" progresstext="@MISSIONS_T2_STT_HINT_MAP_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" completetext="@MISSIONS_T2_STT_HINT_MAP_COMPLETIONTEXT" cancelable="true">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="AFTER_MAPINTRO_01"/>
-        </preactions>
-        <missions>
-          <haveplaytime seconds="10" hideinhud="true" hideindetailsui="true"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <missions>
+          <gotoquestgiver questgivervariable="COMMANDER"/>
         </missions>
       </extendedcompletionstep>
     </tasks>
@@ -278,31 +26,7 @@
     </rewards>
   </quest>
   
-  <!--GOLD AND PREMIUM-->
-  <quest uniquename="MISSIONS_T2_STT_TEST_X" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_X_TITLE" offertext="@MISSIONS_T2_STT_TEST_X_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_X_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="goldsmuggler" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_X_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q" completehintbox="GOLDMARKET">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <missions>
-            <gotolocation locationmarkerid="SMUGGLERTEST" seconds="5" textloca="@MISSIONS_T2_STT_TEST_X_ALL_CLEAR"/>   
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep>
-        <missions>
-          <gotoquestgiver/>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-      <gold amount="1"/>
-    </rewards>
-  </quest>
-
-
+  
   <quest uniquename="MISSIONS_T2_STT_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_A_TITLE" offertext="@MISSIONS_T2_STT_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_A_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -324,8 +48,9 @@
     </rewards>
   </quest>
 
-  <quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="true" completehintbox="PREMIUMSMALL" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
-     <variables>
+
+  <quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q" >
+    <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
       </dynamiccluster>
@@ -335,25 +60,1979 @@
       </dynamicquestgiver>
     </variables>
     <tasks>
-      <extendedcompletionstep locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">
+      <extendedmissionstep>
+        <missions>
+          <gotoquestgiver questgivervariable="COMMANDER" accepttext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" mustaccept="true" locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep applybuff="T3_PREMIUMITEM_3_NONTRADABLE_SPELL" locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">
+        <preactions>
+          <openhintbox uniquename="PREMIUM"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver questgivervariable="COMMANDER" markedinworld="true" markedonminimap="true" hideindetailsui="true" hideinhud="true"/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <!--<quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="false" completehintbox="PREMIUMSMALL" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="COMMANDER">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="ROYALCOMMANDER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+            <gotoquestgiver questgivervariable="COMMANDER" locationmarkerid="COMMANDER"></gotoquestgiver>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <receiveitem count="1" item="T3_PREMIUMITEM_3_NONTRADABLE"/>
+          <openhintbox uniquename ="PREMIUM" displayonplatform="desktop"/>
+          <openhintbox uniquename ="PREMIUMMOBILE" displayonplatform="mobile"/>
+        </preactions>
+        <missions>
+          <usefunction function ="OpenInventory"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">    
         <missions>
           <gotoquestgiver questgivervariable="COMMANDER"/>
         </missions>
       </extendedcompletionstep>
     </tasks>
     <rewards>
-      <item count="1" itemid="T3_PREMIUMITEM_3_NONTRADABLE"/>
+    </rewards>
+  </quest>-->
+
+  <!--GOLD-->
+  <quest uniquename="MISSIONS_T2_STT_TEST_X" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_X_TITLE" offertext="@MISSIONS_T2_STT_TEST_X_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_X_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="goldsmuggler" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_X_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS" completehintbox="GOLDMARKET">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <gotolocation locationmarkerid="SMUGGLERTEST" seconds="5" textloca="@MISSIONS_T2_STT_TEST_X_ALL_CLEAR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <gold amount="1"/>
     </rewards>
   </quest>
-  <!--TEST-->
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="3" mincount="200"/>
+      </dynamiccluster>
+      <dynamiccluster name="LOCATION_B">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="FIBER" tier="3" mincount="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="SMELTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="SMELTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="WEAVER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="WEAVER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TANNER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TANNER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LUMBER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="LUMBER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MASON" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MASON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FORGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FORGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TOOLMAKER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TOOLMAKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STABLE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="STABLE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="HUNTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="HUNTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MAGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MAGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_FOREST" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="3" mincount="200"/>
+      </dynamiccluster>
+      <dynamiccluster name="LOCATION_B">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="3" mincount="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="SMELTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="SMELTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="WEAVER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="WEAVER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TANNER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TANNER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LUMBER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="LUMBER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MASON" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MASON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TOOLMAKER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TOOLMAKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STABLE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="STABLE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="HUNTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="HUNTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MAGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MAGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FORGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FORGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
 
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_STEPPE" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="3" mincount="200"/>
+      </dynamiccluster>
+      <dynamiccluster name="LOCATION_B">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ROCK" tier="3" mincount="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="SMELTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="SMELTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="WEAVER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="WEAVER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TANNER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TANNER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LUMBER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="LUMBER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MASON" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MASON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TOOLMAKER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TOOLMAKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STABLE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="STABLE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="HUNTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="HUNTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MAGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MAGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FORGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FORGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_HIGHLAND" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ROCK" tier="3" mincount="200"/>
+      </dynamiccluster>
+      <dynamiccluster name="LOCATION_B">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="FIBER" tier="3" mincount="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="SMELTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="SMELTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="WEAVER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="WEAVER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TANNER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TANNER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LUMBER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="LUMBER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MASON" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MASON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TOOLMAKER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TOOLMAKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STABLE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="STABLE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="HUNTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="HUNTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MAGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MAGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FORGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FORGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_MOUNTAIN" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier="3" mincount="200"/>
+      </dynamiccluster>
+      <dynamiccluster name="LOCATION_B">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier="3" mincount="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="FORGE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FORGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MAGE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MAGE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="HUNTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="HUNTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STABLE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="STABLE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="SMELTER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="SMELTER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TOOLMAKER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TOOLMAKER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MASON" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MASON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LUMBER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="LUMBER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TANNER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TANNER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="WEAVER" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="WEAVER"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <!--YOU ARE DONE WITH THE TUTORIAL_ YOU KNOW WHAT TO DO_  IF YOU WANT SOME GUIDANCE, COME HERE-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_OPTIONS" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_OPTIONS_TITLE" offertext="@MISSIONS_T2_TUTORIAL_OPTIONS_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_OPTIONS_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_OPTIONS_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP,MISSIONS_T2_TUTORIAL_CITYTOUR_FOREST,MISSIONS_T2_TUTORIAL_CITYTOUR_STEPPE,MISSIONS_T2_TUTORIAL_CITYTOUR_HIGHLAND,MISSIONS_T2_TUTORIAL_CITYTOUR_MOUNTAIN" requiresonlyonepreviousquest="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OPTIONS"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds ="5" textloca="@MISSIONS_T2_TUTORIAL_OPTIONS_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <completionstep>
+        <gotoquestgiver />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <!--CRAFTING GATHERING THING-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_COMPLETIONTEXT" cancelable="true"  requiredachievementboardunlock="COMBAT_TRAINEE" requiredachievementboardunlockmasterylevel="1" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+      <dynamicquestgiver name ="ROYALCRAFTER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="ROYALCRAFTER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoquestgiver questgivervariable="ROYALCRAFTER" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+  <!--GOLD THING-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+      <dynamicquestgiver name ="GOLD_SMUGGLER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="GOLD_SMUGGLER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoquestgiver questgivervariable="GOLD_SMUGGLER" locationmarkerid="SMUGGLERTEST" markedinworld="true" markedonminimap="true"/>
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <!--COMBAT THING-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_COMPLETIONTEXT" cancelable="true" completehintbox="FAMEBOOK" requiredachievementboardunlock="COMBAT_TRAINEE" requiredachievementboardunlockmasterylevel="1">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <unlockachievement achievement="PVE_T3" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_SIDETEXT" locationmarkerid="EXPEDITION" markedonminimap="true" markedinworld="true"/>
+      </missionstep>
+      <extendedmissionstep applybuff="TUTORIAL_MOB_INVISIBILITY_NODELAY">
+        <preactions>
+          <openhintbox uniquename="REAVER"/>
+        </preactions>
+        <missions>
+          <finishexpedition name="T3_STANDARD" count="1" type="any" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_SIDETEXT" hideindetailsui ="true"  locationmarkerid="EXPEDITION" markedonminimap="true" markedinworld="true"/>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <or  textloca="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_SIDETEXT" hideindetailsui="true" locationmarkerid ="EXPEDITION" markedinworld="false" markedonminimap="false">
+          <gotolocation locationmarkerid="EXPEDITION" seconds="2" markedinworld="false" markedonminimap="false"/>
+          <gotolocation locationmarkerid="COMMANDER"  markedinworld="false" markedonminimap="false"/>
+        </or>  
+      </missionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename ="EXPEDITIONS"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver />
+        </missions>    
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T2_SKILLBOOK_NONTRADABLE" count="1"/>
+    </rewards>
+  </quest>
+  
+    <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT"  completetext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_COMPLETIONTEXT" cancelable="true" completehintbox="OPENWORLD">
+    <!--Fighting Quest - Collect Silver-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT_UNLOCK_T3_WEAPON" hideindetailsui="true">
+             <unlockachievement achievement="COMBAT_WARRIOR" masterylevel="1"/>
+             <unlockachievement achievement="COMBAT_HUNTER" masterylevel="1"/>
+             <unlockachievement achievement="COMBAT_MAGE" masterylevel="1"/>
+          </or>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT_UNLOCK_T3_ARMOR" hideindetailsui="true">
+            <unlockachievement achievement="COMBAT_CLOTH" masterylevel="1"/>
+            <unlockachievement achievement="COMBAT_PLATE" masterylevel="1"/>
+            <unlockachievement achievement="COMBAT_LEATHER" masterylevel="1"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="T3_GEAR"/>
+        </preactions>
+      <missions>
+         <haveavgitempower itempower="450" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT_GET_T3_GEAR"/>
+        <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT" count="1" listtype="or" hideindetailsui="true">
+          <item id="T3_HEAD_CLOTH_SET1"/>
+          <item id="T3_HEAD_LEATHER_SET1"/>
+          <item id="T3_HEAD_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT1" count="1" listtype="or" hideindetailsui="true">
+          <item id="T3_ARMOR_CLOTH_SET1"/>
+          <item id="T3_ARMOR_LEATHER_SET1"/>
+          <item id="T3_ARMOR_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT2" count="1" listtype="or" hideindetailsui="true">
+          <item id="T3_SHOES_CLOTH_SET1"/>
+          <item id="T3_SHOES_LEATHER_SET1"/>
+          <item id="T3_SHOES_PLATE_SET1"/>
+        </acquireitem>
+        <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT3" hideindetailsui="true">
+          <acquireitem count="1">
+            <item id="T3_2H_BOW"/>
+            <item id="T3_2H_CROSSBOW"/>
+            <item id="T3_2H_QUARTERSTAFF"/>         
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+        </or>
+      </missions>
+      </extendedmissionstep>
+       <extendedmissionstep>
+        <preactions>
+          <receiveitem item="T3_RANDOM_DUNGEON_SOLO_TOKEN_1" count="1" enchantmentlevel="0"/>
+        </preactions>
+        <missions>
+          <usefunction function ="OpenInventory" count ="1" textloca ="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT9" hideindetailsui="true"/>
+          <usefunction function="UseRandomDungeonMap" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT4"/>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <gotocluster clustertype="RandomDungeon" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT5"/>
+      </missionstep>
+      <extendedmissionstep applybuff="REMOVE_T3_RANDOMDUNGEONMAP_BUFF">
+        <missions>
+          <unlocklootchest count="1" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT6" hideindetailsui="true">
+            <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD"/>
+            <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON"/>
+            <validchest name="HERETIC_SOLO_BOOKCHEST_RARE"/>
+            <validchest name="HERETIC_SOLO_BOOKCHEST_LEGENDARY"/>
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON"/>
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE"/>
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY"/>
+            <validchest name="HERETIC_SOLO_CHEST_STANDARD"/>
+            <validchest name="HERETIC_SOLO_CHEST_UNCOMMON"/>
+            <validchest name="HERETIC_SOLO_CHEST_RARE"/>
+            <validchest name="HERETIC_SOLO_CHEST_LEGENDARY"/>
+          </unlocklootchest>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT7" hideindetailsui="true">
+            <killmob mobid="T3_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename ="MOUNTBUTTONHIGHLIGHT"/>
+        </preactions>
+        <missions>
+          <gotocluster clustertype="World"  textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT8" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename ="SOFTCLEAR"/>
+        </preactions>
+        <missions>
+        <gotoquestgiver />
+        </missions>
+          </extendedcompletionstep>
+    
+  </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CITY" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2,MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_COMPLETIONTEXT" requiresonlyonepreviousquest="true" cancelable="true">
+    <!--Fighting Quest - Go Captain-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="3"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="ROYALEXPLORER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="ROYALEXPLORER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <or locationmarkerid="CITY" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_SIDETEXT">
+            <gotocluster clusterdirect="0000"/>
+            <gotocluster clusterdirect="1000"/>
+            <gotocluster clusterdirect="2000"/>
+            <gotocluster clusterdirect="3004"/>
+            <gotocluster clusterdirect="4000"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <completionstep>
+        <gotoquestgiver questgivervariable="ROYALEXPLORER" locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true"/>
+      </completionstep>
+    </tasks>
+    <rewards>
+      <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="1"/>
+    </rewards>
+  </quest>
+  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" completetext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_COMPLETIONTEXT" requiresonlyonepreviousquest="true"  cancelable="true">
+    <!--Fighting Quest - Go Captain-->
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="3"/>
+      </dynamiccluster>
+      <dynamicquestgiver name ="ROYALCOMMANDER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="ROYALCOMMANDER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <completionstep>
+        <gotoquestgiver questgivervariable="ROYALCOMMANDER" textloca="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_SIDETEXT" />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+
+<!--GATHERING AND CRAFTING-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier="2"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="STUDY"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+ 
+<!--GATHERING-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"  completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="T3_GATHERING"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_COMPLETIONTEXT" hideifquestactive=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="FIBER" tier ="3" mincount="1" />     
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_SICKLE" count="1"/>
+        <acquireitem itemid="T2_2H_TOOL_SICKLE" count="1"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_FIBER"/>
+        </preactions>
+        <missions>
+        <or  textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_SIDETEXT1" locationmarkerid="T2_FIBER" markedonminimap="true">
+          <gotocluster clusterdirect="0214"/>
+          <gotocluster clusterdirect="0205"/>
+          <gotocluster clusterdirect="0202"/>
+
+          <gotocluster clusterdirect="4202"/>
+          <gotocluster clusterdirect="4210"/>
+          <gotocluster clusterdirect="4203"/>
+
+          <gotocluster clusterdirect="2215"/>
+          <gotocluster clusterdirect="2214"/>
+          <gotocluster clusterdirect="2202"/>
+        </or>
+      </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_FIBER" markedinworld="false" >
+        <missions>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_SIDETEXT2"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T3_FIBER" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T3_WHERE_FIBER"/>
+        </preactions>
+        <missions>
+            <acquireitem itemid="T2_FIBER" count="80"/>
+            <acquireitem itemid="T3_FIBER" count="40"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CARRYWEIGHT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="FIBER" tier ="3" mincount="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>      
+        <missions>
+          <interactwithbuilding buildingid="T3_WEAVINGMILL" locationmarkerid="WEAVER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_SIDETEXT1"/> 
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="UNIQUE_FOCUSPOTION_TUTORIAL_01_SPELL">
+        <preactions>
+          <openhintbox uniquename="FOCUS_CLOTH"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_SIDETEXT2">
+            <unlockachievement achievement="CRAFT_REFINE" masterylevel ="1"/>
+            <acquireitem itemid="T2_CLOTH" count="80"/>
+          </or>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING_SIDETEXT3">
+            <acquireitem itemid="T3_CLOTH" count="20" />
+            <acquireitem itemid="T3_CLOTH" count="20" />
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="T3_REFINE"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+ 
+
+  <!--ROYAL EXPLORER-->
+  
+  
+   <!--<quest uniquename="MISSIONS_T2_TUTORIAL_GUILD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GUILD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GUILD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GUILD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GUILD_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="GUILDS"/>
+        </preactions>
+        <missions>
+          <haveplaytime seconds ="5" textloca="@MISSIONS_T2_TUTORIAL_GUILD_SIDETEXT1"/>
+        </missions>
+      </extendedmissionstep>
+      <completionstep>
+        <gotoquestgiver />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+   <quest uniquename="MISSIONS_T2_TUTORIAL_ISLAND" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ISLAND_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ISLAND_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ISLAND_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ISLAND_COMPLETIONTEXT" cancelable="true"  previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="ISLAND"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" textloca="@MISSIONS_T2_TUTORIAL_ISLAND_SIDETEXT1" seconds="5" markedinworld="true" markedonminimap="true"/>
+        </missions>
+      </extendedmissionstep>
+      <completionstep>
+        <gotoquestgiver />
+      </completionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>-->
+  
+  <quest uniquename="MISSIONS_T2_BRIDGEWATCH_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+    <variables>
+      <dynamiccluster name ="CLUSTER_A">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="HIDE" tier="3" mincount ="200"/>
+      </dynamiccluster>
+    <dynamiccluster name ="CLUSTER_B">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="HIDE" tier="5" mincount ="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+      <extendedmissionstep>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ISLANDMERCHANTSMALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="VANITY"/>
+        </preactions>
+        <missions>
+         <gotocluster clusterdirect="2010-HALL-01" locationmarkerid="CONQUERORSHALL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="CONQUERORSHALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="OUTLANDPORTAL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OUTLANDPORTAL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENERGYMANIPULATOR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ENERGYMANIPULATOR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FACTION_WARFARE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"/>
+        </missions>
+      </extendedmissionstep>
+       <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FACTION_WARFARE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARENA" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARENA"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARTIFACTFOUNDRY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARTIFACTFOUNDRY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="EXPEDITION"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
+        </missions>
+      </extendedmissionstep>
+     <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true"  />
+      </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+      
+        <quest uniquename="MISSIONS_T2_LYMHURST_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+    <variables>
+       <dynamiccluster name ="CLUSTER_A">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="WOOD" tier="3" mincount ="200"/>
+      </dynamiccluster>
+    <dynamiccluster name ="CLUSTER_B">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="WOOD" tier="5" mincount ="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="EXPEDITION"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARTIFACTFOUNDRY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARTIFACTFOUNDRY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FACTION_WARFARE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FACTION_WARFARE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ISLANDMERCHANTSMALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="VANITY"/>
+        </preactions>
+        <missions>
+         <gotocluster clusterdirect="1013-HALL-01" locationmarkerid="CONQUERORSHALL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="CONQUERORSHALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="OUTLANDPORTAL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OUTLANDPORTAL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENERGYMANIPULATOR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ENERGYMANIPULATOR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARENA" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARENA"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true"/>
+      </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+    
+  <quest uniquename="MISSIONS_T2_FORTSTERLING_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+    <variables>
+       <dynamiccluster name ="CLUSTER_A">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="ORE" tier="3" mincount ="200"/>
+      </dynamiccluster>
+    <dynamiccluster name ="CLUSTER_B">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="ORE" tier="5" mincount ="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+       <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+         <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="VANITY"/>
+        </preactions>
+        <missions>
+          <gotocluster clusterdirect="4007-HALL-01" locationmarkerid="CONQUERORSHALL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="CONQUERORSHALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="OUTLANDPORTAL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OUTLANDPORTAL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENERGYMANIPULATOR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ENERGYMANIPULATOR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ISLANDMERCHANTSMALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARENA" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARENA"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="EXPEDITION"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FACTION_WARFARE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FACTION_WARFARE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARTIFACTFOUNDRY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARTIFACTFOUNDRY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true" />
+      </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+    
+  <quest uniquename="MISSIONS_T2_MARTLOCK_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+    <variables>
+      <dynamiccluster name ="CLUSTER_A">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="ROCK" tier="3" mincount ="200"/>
+      </dynamiccluster>
+    <dynamiccluster name ="CLUSTER_B">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="ROCK" tier="5" mincount ="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="VANITY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ISLANDMERCHANTSMALL"/>
+        </preactions>
+        <missions>
+         <gotocluster clusterdirect="3014-HALL-01" locationmarkerid="CONQUERORSHALL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="CONQUERORSHALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="OUTLANDPORTAL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OUTLANDPORTAL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENERGYMANIPULATOR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ENERGYMANIPULATOR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARENA" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARENA"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="EXPEDITION"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FACTION_WARFARE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"/>
+        </missions>
+      </extendedmissionstep>
+            <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FACTION_WARFARE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARTIFACTFOUNDRY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
+        </missions>
+      </extendedmissionstep> 
+        <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true" />
+      </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+  <quest uniquename="MISSIONS_T2_THETFORT_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" >
+    <variables>
+      <dynamiccluster name ="CLUSTER_A">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="FIBER" tier="3" mincount ="200"/> 
+      </dynamiccluster>
+    <dynamiccluster name ="CLUSTER_B">
+        <distancetocluster mindistance="1" maxdistance ="1"/>
+        <presentresource resourceid ="FIBER" tier="5" mincount ="200"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+      <extendedmissionstep >
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ISLANDMERCHANTSMALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="VANITY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARENA" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARENA"/>
+        </preactions>
+        <missions>
+           <gotocluster clusterdirect="0360-HALL-01" locationmarkerid="CONQUERORSHALL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="CONQUERORSHALL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="OUTLANDPORTAL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="OUTLANDPORTAL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ENERGYMANIPULATOR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ENERGYMANIPULATOR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="MARKETPLACE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="MARKETPLACE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="ARTIFACTFOUNDRY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="ARTIFACTFOUNDRY"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
+        </missions>     
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="TRAVEL"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="EXPEDITION"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="REPAIR" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="REPAIR"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="FACTION_WARFARE" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep >
+        <preactions>
+          <openhintbox uniquename="FACTION_WARFARE"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
+        </missions>
+      </extendedmissionstep>  
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="BANK"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver locationmarkerid="EXPLORER" markedinworld="true" markedonminimap="true"/>
+      </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
 
 
 
 
 <!--TUTORIAL OBERON-->
 
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_A_COMPLETIONTEXT" cancelable="false" playcompletesoundonce="true" completesound="Play_NPC_VO_P1_Silas_Welcome">
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_A_COMPLETIONTEXT" cancelable="false" playcompletesoundonce="true" completesound="Play_NPC_VO_P1_Silas_Welcome" completehintbox="SOFTCLEAR" >
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -383,7 +2062,8 @@
       </extendedmissionstep>
       <extendedcompletionstep>
         <preactions>
-          <openhintbox uniquename="CLEAR"/>
+          <openhintbox uniquename="INTERACTIONBUTTON" displayonplatform="mobile"/>
+          <openhintbox uniquename ="CLEAR" displayonplatform="desktop"/>
         </preactions>
         <missions>
           <gotoquestgiver questgivervariable="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT" />
@@ -394,16 +2074,21 @@
     </rewards>
   </quest>
 
-    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_B_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_A" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">
+    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_B_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_A" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion" audiochangeonaccept="TUT_FIRST_QUEST_ACCEPTED">
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <gotolocation locationmarkerid="LIGHTHOUSEUP"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" />
-      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="CLEAR"/>   
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="LIGHTHOUSEUP"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" />
+        </missions>
+      </extendedmissionstep>
       <missionstep>
         <gotolocation locationmarkerid="LIGHTHOUSEUP2"  textloca="@MISSIONS_T2_TUTORIAL_TEST_B_SIDETEXT" markedinworld="false" markedonminimap="true" hideindetailsui="true" />
       </missionstep>
@@ -440,7 +2125,7 @@
     </rewards>
   </quest>
   
-      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">  
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion" audiochangeonaccept="TUT_CLEAR_MUSIC">  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -456,17 +2141,23 @@
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
-        <preactions>
-          <settutorialstate state="HARDCLEARPREDB"/>
+        <preactions>         
+          <openhintbox uniquename ="INTERACTIONBUTTONHIGHLIGHT" />
+          <openhintbox uniquename ="VERYDELAYEDCLEAR"/>
         </preactions>
         <missions>
           <acquireitem itemid="T1_ROCK" count="6" locationmarkerid="T1_ROCK" markedonminimap="false" markedinworld="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT_01"/>
           <acquireitem itemid="T1_WOOD" count="6" locationmarkerid="T1_WOOD" markedonminimap="false" markedinworld="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_D_SIDETEXT_02"/>
         </missions>
       </extendedmissionstep>
-      <completionstep>
-        <gotoquestgiver/>
-      </completionstep>
+      <extendedcompletionstep >
+        <preactions>
+          <openhintbox uniquename="SOFTCLEAR" displayonplatform="mobile"/>
+        </preactions>
+      <missions>
+        <gotoquestgiver />
+      </missions>
+      </extendedcompletionstep>
       </tasks>
     <rewards>
     </rewards>
@@ -522,7 +2213,8 @@
       </extendedmissionstep>
       <extendedcompletionstep>
         <preactions>
-          <settutorialstate state="HARDCLEARPREDB"/>
+          <openhintbox uniquename="DELAYEDCLEAR" displayonplatform="desktop"/>
+          <openhintbox uniquename="SOFTCLEAR" displayonplatform="mobile"/>
         </preactions>
         <missions>
           <gotoquestgiver/>
@@ -604,6 +2296,8 @@
       <extendedcompletionstep>
         <preactions>
           <settutorialstate state="WHEREAREMYFRIENDS"/>
+          <openhintbox uniquename="WAMF" displayonplatform="desktop"/>
+          <openhintbox uniquename="WAMF_MOBILE" displayonplatform="mobile"/>
         </preactions>
         <missions>
           <gotoquestgiver questgivervariable="CAPTAIN" locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
@@ -616,7 +2310,7 @@
   </quest>
   
   
-  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_H" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_H_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_H_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_H_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_H_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_F" cancelable="false" offersound="Play_NPC_VO_P1_Tia_Offer" acceptsound="Play_NPC_VO_P1_Tia_Accept" progresssound="Play_NPC_VO_P1_Tia_Progress" completesound="Play_NPC_VO_P2_Silas_Welcome" playcompletesoundonce="true" completehintbox="CLEAR">  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_H" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_H_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_H_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_H_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_H_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_F" cancelable="false" offersound="Play_NPC_VO_P1_Tia_Offer" acceptsound="Play_NPC_VO_P1_Tia_Accept" progresssound="Play_NPC_VO_P1_Tia_Progress" completesound="Play_NPC_VO_P2_Silas_Welcome" playcompletesoundonce="true" nextquest="MISSIONS_T2_TUTORIAL_TEST_I">  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -657,10 +2351,16 @@
           <openhintbox uniquename="MOUNT"/>
         </preactions>
         <missions>
-          <gotolocation locationmarkerid="MOUNTREMINDER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT" hideindetailsui="true"/>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT" hideindetailsui="true">
+            <gotolocation locationmarkerid="MOUNTREMINDER" markedinworld="false" markedonminimap="false" />
+            <mount itemid="T2_MOUNT_MULE" />
+          </or>
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="SOFTCLEAR"/>
+        </preactions>
         <missions>
           <gotoquestgiver questgivervariable="CRAFTER" locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT"/>
         </missions>
@@ -701,7 +2401,7 @@
       <item itemid="T1_2H_TOOL_KNIFE" count="1"/>
     </rewards>
   </quest>
-  
+ 
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_J" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_J_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_J_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_J_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_J_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_I" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -821,6 +2521,10 @@
         <distancefromquestgiver mindistance="0" maxdistance="0"/>
         <questgivertag tag="CAPTAIN_TIA"/>
       </dynamicquestgiver>
+      <dynamicquestgiver name ="SHIPREPAIR">
+        <distancefromquestgiver mindistance="0" maxdistance="0"/>
+        <questgivertag tag="SHIP_REPAIRMAN"/>
+      </dynamicquestgiver>
     </variables>
     <tasks>
       <extendedmissionstep>
@@ -845,10 +2549,12 @@
           <settutorialblocker id="BLOCKSHIP" statetoset="0"/>
         </preactions>
         <missions>
-          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_PLANKS" count="6" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L7_SIDETEXT"/>
-          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_METALBAR" count="6" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L5_SIDETEXT"/>
-          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_CLOTH" count="4" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L8_SIDETEXT"/>
-          <installitem building="T1_TUTORIAL_SHIP_CRANE_A" item="T2_LEATHER" count="4" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_L6_SIDETEXT"/>
+          <gotoquestgiver questgivervariable="SHIPREPAIR" mustaccept="true" accepttext="@MISSIONS_T2_TUTORIAL_TEST_L_TRADETEXT" textloca="@MISSIONS_T2_TUTORIAL_TEST_L10_SIDETEXT">
+            <item itemid="T2_PLANKS" count="6" />
+            <item itemid="T2_METALBAR" count="6" />
+            <item itemid="T2_CLOTH" count="4" />
+            <item itemid="T2_LEATHER" count="4" />
+          </gotoquestgiver>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -858,7 +2564,7 @@
           <settutorialstate state="HARDCLEARAFTERDB"/>
         </preactions>
         <missions>
-          <haveplaytime seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_L9_SIDETEXT" hideinhud="true"/>
+          <haveplaytime seconds="10" textloca="@MISSIONS_T2_TUTORIAL_TEST_L9_SIDETEXT" hideindetailsui="true" hideinhud="true"/>
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
@@ -895,8 +2601,8 @@
         </missions>
       </extendedmissionstep>
        <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="COMBAT2"/>
+        <preactions>       
+          <openhintbox uniquename="COMBAT2" displayonplatform="desktop"/>
         </preactions>
         <missions>
           <or locationmarkerid="CAMP_A" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
@@ -972,7 +2678,7 @@
       </extendedmissionstep>
       <extendedmissionstep>
         <preactions>
-          <openhintbox uniquename="COMBAT2"/>
+          <openhintbox uniquename="COMBAT2" displayonplatform="desktop"/>
         </preactions>
         <missions>
           <or locationmarkerid="CAMP_B" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
@@ -1047,7 +2753,7 @@
       </extendedmissionstep>
       <extendedmissionstep>
         <preactions>
-          <openhintbox uniquename="COMBAT2"/>
+          <openhintbox uniquename="COMBAT2" displayonplatform="desktop"/>
         </preactions>
         <missions>
           <or locationmarkerid="CAMP_C" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT" markedinworld="true" markedonminimap="true">
@@ -1115,6 +2821,8 @@
         <preactions>
           <settutorialblocker id="BLOCKCRAFTERS" statetoset="0"/>
           <settutorialstate state="WHATYOUWEAR"/>
+          <openhintbox uniquename="WHATYOUWEAR" displayonplatform="desktop"/>
+          <openhintbox uniquename="WHATYOUWEAR_MOBILE" displayonplatform="mobile"/>
         </preactions>
         <missions>
           <interactwithbuilding buildingid="T2_FORGE_TUTORIAL" locationmarkerid="FORGE"  markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_NA1_SIDETEXT"/>
@@ -1268,6 +2976,7 @@
       </extendedmissionstep>
       <extendedmissionstep>
         <preactions>
+          <settutorialstate state="SOUNDSHIPARRIVES"/>
           <settutorialblocker id="SIGNALFIRE" statetoset="0"/>
           <settutorialblocker id="SHIPGATE" statetoset="0"/>
           <settutorialblocker id="ENDING" statetoset="0"/>
@@ -1278,6 +2987,9 @@
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="FINALDEBRIS" statetoset="0"/>
+        </preactions>
         <missions>
           <gotolocation locationmarkerid="EXIT" seconds="0" textloca="@MISSIONS_T2_TUTORIAL_TEST_P4_SIDETEXT"/>
         </missions>
@@ -2992,6 +4704,415 @@ Light-->
     </failconditions>
   </playerfactionquest>
     
+
+<!--Resource Quests-->
+<!--Resource Quests-->
+<!--Resource Quests-->
+<!--Resource Quests-->
+  
+   <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_COMPLETIONTEXT" hideifquestactive="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier ="3" mincount="1" />     
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_PICK" count="1"/>
+        <acquireitem itemid="T2_2H_TOOL_PICK" count="1"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_ORE"/>
+        </preactions>
+        <missions> 
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_SIDETEXT1" locationmarkerid="T2_ORE" markedonminimap="true" >
+            <gotocluster clusterdirect="3209"/>
+            <gotocluster clusterdirect="3210"/>
+            <gotocluster clusterdirect="3215"/>
+
+            <gotocluster clusterdirect="4202"/>
+            <gotocluster clusterdirect="4210"/>
+            <gotocluster clusterdirect="4203"/>
+
+            <gotocluster clusterdirect="2215"/>
+            <gotocluster clusterdirect="2214"/>
+            <gotocluster clusterdirect="2202"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ORE" markedinworld="false" >   
+        <missions>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_SIDETEXT2"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T3_ORE" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T3_WHERE_ORE"/>
+        </preactions>
+        <missions>
+            <acquireitem itemid="T2_ORE" count="80"/>
+            <acquireitem itemid="T3_ORE" count="40"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CARRYWEIGHT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ORE" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ORE" tier ="3" mincount="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <interactwithbuilding buildingid="T3_SMELTER"  locationmarkerid="SMELTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_SIDETEXT1"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="UNIQUE_FOCUSPOTION_TUTORIAL_01_SPELL">
+        <preactions>
+          <openhintbox uniquename="FOCUS_BAR"/>
+        </preactions>
+        <missions>          
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_SIDETEXT2">
+            <unlockachievement achievement="CRAFT_REFINE" masterylevel ="1"/>
+            <acquireitem itemid="T2_METALBAR" count="80"/>
+          </or>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING_SIDETEXT3">
+            <acquireitem itemid="T3_METALBAR" count="20" />
+            <acquireitem itemid="T3_METALBAR" count="20" />
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="T3_REFINE"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+ <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_COMPLETIONTEXT" hideifquestactive="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD " hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD ">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ROCK" tier ="3" mincount="1" />     
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_HAMMER" count="1"/>
+        <acquireitem itemid="T2_2H_TOOL_HAMMER" count="1"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_STONE"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_SIDETEXT1" locationmarkerid="T2_ROCK" markedonminimap="true">
+            <gotocluster clusterdirect="1201"/>
+            <gotocluster clusterdirect="1208"/>
+            <gotocluster clusterdirect="1212"/>
+
+            <gotocluster clusterdirect="3209"/>
+            <gotocluster clusterdirect="3210"/>
+            <gotocluster clusterdirect="3215"/>
+
+            <gotocluster clusterdirect="4202"/>
+            <gotocluster clusterdirect="4210"/>
+            <gotocluster clusterdirect="4203"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ROCK" markedinworld="false" >
+        <missions>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_SIDETEXT2"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T3_ROCK" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T3_WHERE_STONE"/>
+        </preactions>
+        <missions>
+            <acquireitem itemid="T2_ROCK" count="80"/>
+            <acquireitem itemid="T3_ROCK" count="40"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CARRYWEIGHT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ROCK" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="ROCK" tier ="3" mincount="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <interactwithbuilding buildingid="T3_STONEMASONRY" locationmarkerid="MASON" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_SIDETEXT1"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="UNIQUE_FOCUSPOTION_TUTORIAL_01_SPELL">
+        <preactions>
+          <openhintbox uniquename="FOCUS_STONE"/>
+        </preactions>
+        <missions>
+        
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_SIDETEXT2">
+            <unlockachievement achievement="CRAFT_REFINE" masterylevel ="1"/>
+            <acquireitem itemid="T2_STONEBLOCK" count="80"/>
+          </or>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING_SIDETEXT3">
+            <acquireitem itemid="T3_STONEBLOCK" count="20" />
+            <acquireitem itemid="T3_STONEBLOCK" count="20" />
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="T3_REFINE"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+ <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_COMPLETIONTEXT" hideifquestactive="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier ="3" mincount="1" />     
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_AXE" count="1"/>
+        <acquireitem itemid="T2_2H_TOOL_AXE" count="1"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_WOOD"/>
+        </preactions>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_SIDETEXT1" locationmarkerid="T2_WOOD" markedonminimap="true">
+            <gotocluster clusterdirect="0214"/>
+            <gotocluster clusterdirect="0205"/>
+            <gotocluster clusterdirect="0202"/>
+
+            <gotocluster clusterdirect="1201"/>
+            <gotocluster clusterdirect="1208"/>
+            <gotocluster clusterdirect="1212"/>
+
+            <gotocluster clusterdirect="3209"/>
+            <gotocluster clusterdirect="3210"/>
+            <gotocluster clusterdirect="3215"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_WOOD" markedinworld="false" >
+       
+        <missions>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_SIDETEXT2"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T3_WOOD" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T3_WHERE_WOOD"/>
+        </preactions>
+        <missions>
+            <acquireitem itemid="T2_WOOD" count="80"/>
+            <acquireitem itemid="T3_WOOD" count="40"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CARRYWEIGHT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_WOOD" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="WOOD" tier ="3" mincount="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <extendedmissionstep>
+        <missions>
+          <interactwithbuilding buildingid="T3_CARPENTERSWORKSHOP" locationmarkerid="LUMBER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_SIDETEXT1"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep applybuff="UNIQUE_FOCUSPOTION_TUTORIAL_01_SPELL">
+        <preactions>
+          <openhintbox uniquename="FOCUS_PLANKS"/>
+        </preactions>
+        <missions>
+      
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_SIDETEXT2">
+            <unlockachievement achievement="CRAFT_REFINE" masterylevel ="1"/>
+            <acquireitem itemid="T2_PLANKS" count="80"/>
+          </or>
+          <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING_SIDETEXT3">
+            <acquireitem itemid="T3_PLANKS" count="20" />
+            <acquireitem itemid="T3_PLANKS" count="20" />
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="T3_REFINE"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+  
+<quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_COMPLETIONTEXT" hideifquestactive="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier ="3" mincount="1" />     
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>
+        <acquireitem itemid="T1_2H_TOOL_KNIFE" count="1"/>
+        <acquireitem itemid="T2_2H_TOOL_KNIFE" count="1"/>
+      </missionstep>
+      <extendedmissionstep>
+      <preactions>
+        <openhintbox uniquename="T2_WHERE_HIDE"/>
+      </preactions>
+      <missions>
+        <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_SIDETEXT1"  locationmarkerid="T2_HIDE" markedonminimap="true">
+          <gotocluster clusterdirect="0214"/>
+          <gotocluster clusterdirect="0205"/>
+          <gotocluster clusterdirect="0202"/>
+
+          <gotocluster clusterdirect="1201"/>
+          <gotocluster clusterdirect="1208"/>
+          <gotocluster clusterdirect="1212"/>
+          
+          <gotocluster clusterdirect="2215"/>
+          <gotocluster clusterdirect="2214"/>
+          <gotocluster clusterdirect="2202"/>
+        </or>
+      </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_HIDE" markedinworld="false" >   
+        <missions>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_SIDETEXT2"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T3_HIDE" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T3_WHERE_HIDE"/>
+        </preactions>
+        <missions>
+            <acquireitem itemid="T2_HIDE" count="80"/>
+            <acquireitem itemid="T3_HIDE" count="40"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="CARRYWEIGHT"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_HIDE" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="1" maxdistance="1" />
+        <presentresource resourceid="HIDE" tier ="3" mincount="1" />
+      </dynamiccluster>
+    </variables>
+    <tasks>   
+        <extendedmissionstep>
+          <missions>
+            <interactwithbuilding buildingid="T3_TANNERY"  locationmarkerid="TANNER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_SIDETEXT1"/>
+          </missions>
+        </extendedmissionstep>
+        <extendedmissionstep applybuff="UNIQUE_FOCUSPOTION_TUTORIAL_01_SPELL">
+          <preactions>
+            <openhintbox uniquename="FOCUS_LEATHER"/>
+          </preactions>
+          <missions>        
+            <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_SIDETEXT2">
+              <unlockachievement achievement="CRAFT_REFINE" masterylevel ="1"/>
+              <acquireitem itemid="T2_LEATHER" count="80"/>
+            </or>
+            <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING_SIDETEXT3">
+              <acquireitem itemid="T3_LEATHER" count="20" />
+              <acquireitem itemid="T3_LEATHER" count="20" />
+            </or>
+          </missions>
+        </extendedmissionstep>
+        <extendedcompletionstep>
+          <preactions>
+            <openhintbox uniquename="T3_REFINE"/>
+          </preactions>
+          <missions>
+            <gotoquestgiver/>
+          </missions>
+        </extendedcompletionstep>    
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
+
 </quests>
 
 

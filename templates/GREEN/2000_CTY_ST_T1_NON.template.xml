@@ -515,6 +515,11 @@
         <realestate size="20 20" platepos="204.5 -8 -85" doorpos="205 -5.5 -89" doorsize="1 7 2" overridesaleprice="-1" plateorientation="NorthWest" locationquality="E" />
       </tile>
     </criticalscenemember>
+    <criticalscenemember id="questgiverobject_02" type="questgiverobject" layerId="">
+      <tile name="T2_AGENT_TUTORIAL_ROYAL_EXPLORER" pos="-11.5 -1 -42.5" roty="290">
+        <questgiverobject reference="ROYALEXPLORER" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="exit_08" type="exit" layerId="">
       <tile name="Exit" pos="-63.5 -4 84.5">
         <exit size="15 15" spawnpos="18.56327 -9.447174" faction="None" kind="Cluster" roadtype="Primary">
@@ -913,6 +918,18 @@
     </criticaltile>
     <tile name="MiniMapMarker" pos="-22 -4 36" roty="90">
       <minimapmarker type="Outpost_Steppe" />
+    </tile>
+    <tile name="LocationMarker" pos="-67.5 -5 85.5">
+      <locationmarker locationid="ENERGYMANIPULATOR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-22.5 -5 84.5">
+      <locationmarker locationid="ENERGYMANIPULATOR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-67.5 -5 85.5">
+      <locationmarker locationid="OUTLANDPORTAL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-22.5 -5 84.5">
+      <locationmarker locationid="OUTLANDPORTAL" radius="7" visibleinworld="false" visibleonminimap="false" />
     </tile>
     <tile name="STEPPE_GREEN_CONSTRUCTION" pos="-120 -4 -180" />
     <tile name="STEPPE_GREEN_CONSTRUCTION" pos="180 -8 -80" />
@@ -2001,6 +2018,9 @@
     <tile name="FACTION_GUARD_STEPPE" pos="-109.5 1 -146.5" roty="154" />
     <tile name="FACTION_GUARD_STEPPE" pos="47.5 2 -39.5" roty="211" />
     <tile name="FACTION_GUARD_STEPPE" pos="36.5 -4 -33.5" roty="121" />
+    <criticaltile name="T2_AGENT_TUTORIAL_ROYAL_EXPLORER" pos="-11.5 -1 -42.5" roty="290" id="questgiverobject_02" type="questgiverobject">
+      <questgiverobject reference="ROYALEXPLORER" />
+    </criticaltile>
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="10 -68 0" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-20 -68 0" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-50 -68 0" />
@@ -6154,15 +6174,12 @@
     <tile name="STEPPE_GREEN_FILL_LIGHT_WALL_TORCHHOLDER_B" pos="33.5 -5 23.5" />
     <tile name="STEPPE_GREEN_FILL_LIGHT_WALL_TORCHHOLDER_B" pos="26.5 -5 23.5" roty="180" />
     <tile name="STEPPE_GREEN_FILL_CITY_BUNTING_20M_A" pos="25.5 3 7" roty="270" />
-    <tile name="STEPPE_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="24.5 -4 3.5" />
+    <tile name="STEPPE_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="23.5 -4 3.5" />
     <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_HANGING_A" pos="34 -1 23" />
-    <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_HANGING_A" pos="35 1 5" />
     <tile name="STEPPE_GREEN_FILL_BONES_A" pos="34.5 -4 2.5" roty="180" />
-    <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_HANGING_A" pos="25 1 5" />
     <tile name="STEPPE_GREEN_T1_TREE_UNIVERSAL_SLIM_A" pos="37.5 -4 -1.5" roty="329" />
     <tile name="STEPPE_GREEN_ROCK_SHEET_MEDIUM_A" pos="29 -8 20" roty="53" />
-    <tile name="STEPPE_GREEN_CITY_COLUMN_A" pos="25 -5 6" />
-    <tile name="STEPPE_GREEN_FILL_PILE_F" pos="36 -4 3" roty="180" />
+    <tile name="STEPPE_GREEN_FILL_PILE_F" pos="37 -4 3" roty="180" />
     <tile name="STEPPE_GREEN_T1_TREE_UNIVERSAL_SLIM_A" pos="22.5 -4 5.5" roty="329" />
     <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_HANGING_A" pos="26 -1 23" roty="325.82" />
     <tile name="STEPPE_GREEN_CITY_COLUMN_A" pos="35 -5 6" />
@@ -6280,6 +6297,7 @@
     <tile name="STEPPE_GREEN_CITY_BANNER_LARGE_A" pos="-48 7 -16" roty="180" />
     <tile name="STEPPE_GREEN_CITY_BANNER_LARGE_A" pos="-20 7 39" roty="180" />
     <tile name="STEPPE_GREEN_CITY_BANNER_LARGE_A" pos="-20 7 30" roty="180" />
+    <tile name="STEPPE_GREEN_CITY_COLUMN_A" pos="25 -5 6" />
     <tile name="STEPPE_GREEN_CITY_WALL_STRAIGHT_A" pos="-20 -32 50" roty="180" />
     <tile name="STEPPE_GREEN_CITY_WALL_RAILING_STRAIGHT_A" pos="-20 -4 50" roty="180" />
     <tile name="STEPPE_GREEN_ROAD_ROAD_CORNER_PLACE_A" pos="-10 -8 100" />
@@ -6312,7 +6330,6 @@
     <tile name="STEPPE_GREEN_CITYWALL_WOOD_STRAIGHT_A_NO_WOOD" pos="-20.5 -6 26" roty="270" />
     <tile name="STEPPE_GREEN_CITY_FACTION_TRADER_ST_CRATE_A_NOCOL" pos="-21.5 -4 27.5" roty="359" scale="0.8393551 0.8393551 0.8393551" />
     <tile name="STEPPE_GREEN_FILL_CITY_LANTERN_HANGING_A" pos="3 2 29" roty="180" />
-    <tile name="STEPPE_GREEN_FILL_CITY_LANTERN_B" pos="-12.5 -3 -39.5" />
     <tile name="STEPPE_GREEN_FILL_CITY_LANTERN_B" pos="-7.5 -3 -44.5" />
     <tile name="STEPPE_GREEN_FILL_CITY_LANTERN_HANGING_A" pos="-9 1 -34" roty="90" />
     <tile name="STEPPE_GREEN_CITY_GATE_LIGHT_A" pos="-48 0 -21" />
@@ -6501,6 +6518,9 @@
     <tile name="STEPPE_GREEN_FILL_HILL_BASE_SUB_01_C" pos="45 -44 87" />
     <tile name="STEPPE_GREEN_FILL_HILL_BASE_SUB_01_C" pos="33 -44 85" />
     <tile name="STEPPE_GREEN_FILL_ROCK_FORMATION_B" pos="36 -44 91" roty="90" />
+    <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_A" pos="25 -4 4" />
+    <tile name="STEPPE_GREEN_ARENA_BANNER_NEUTRAL_A" pos="35 -4 4" />
+    <tile name="ROYAL_EXPLORER_BANNER" pos="-12.5 -1 -40.5" roty="205" />
     <tile name="STEPPE_GREEN_GROUND" pos="40 -44 80" />
     <tile name="STEPPE_GREEN_GROUND" pos="80 -44 90" />
     <tile name="STEPPE_GREEN_GROUND" pos="80 -44 100" />
@@ -7031,5 +7051,50 @@
     <tile name="INVISIBLE_COLLISON_A" pos="71 -4 -3.5" roty="180" />
     <tile name="INVISIBLE_COLLISON_A" pos="-10 -4 53.5" roty="180" />
     <tile name="INVISIBLE_COLLISON_A" pos="0 -12 -72.5" />
+    <tile name="LocationMarker" pos="43.5 -1 -6.5">
+      <locationmarker locationid="ARTIFACTFOUNDRY" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-18.5 -3 35.5">
+      <locationmarker locationid="FACTION_WARFARE" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="6.5 -4 9.5">
+      <locationmarker locationid="REPAIR" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-57.5 -1 16.5">
+      <locationmarker locationid="VANITY" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-20.5 0 8.5">
+      <locationmarker locationid="MARKETPLACE" radius="8" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-47.5 -4 -6.5">
+      <locationmarker locationid="ISLAND" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-65.5 -1 84.5">
+      <locationmarker locationid="CONQUERORSHALL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="6.5 -4 -12.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-25.5 -1 84.5">
+      <locationmarker locationid="CONQUERORSHALL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="82.5 7 -16.5">
+      <locationmarker locationid="EXPEDITION" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-11.5 -1 -41.5">
+      <locationmarker locationid="EXPLORER" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="29.5 -1 2.5">
+      <locationmarker locationid="ARENA" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-0.5 -3 22.5">
+      <locationmarker locationid="TRAVEL" radius="7" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-7.5 -4 -13.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
+    <tile name="LocationMarker" pos="-3.5 -4 -2.5">
+      <locationmarker locationid="BANK" radius="10" visibleinworld="false" visibleonminimap="false" />
+    </tile>
   </tiles>
 </template>
