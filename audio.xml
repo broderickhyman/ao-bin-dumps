@@ -2157,6 +2157,18 @@
     <WeaponType name="claw_hide_big"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_ARCANE_SPIDER_BOSS">
+    <CharType name="mob"/>
+    <MobFaction name="arcane"/>
+    <MobType name="arcane_spider_boss"/>
+    <Size name="small"/>
+    <ArmorType name="crystal"/>
+    <WeaponType name="blade_small"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_ARCANE_SPIDER_BOSS">
+    <OnMobDied name="Die"/>
+  </WwiseEventInfo>
 
   <!--TERRITORY-->
   <WwiseSwitchInfo name="MOB_TERRITORY_COLLECTOR">
@@ -4368,7 +4380,23 @@
   <WwiseEventInfo name="SPELL_ARCANE_BOSS_TORNADO">
     <OnCastFinished name="Play_mob_arcane_elemental_boss_tornado"/>
   </WwiseEventInfo>
- 
+  <WwiseEventInfo name="SPELL_ARCANE_SPIDER_DASH">
+    <OnCastStart name="Play_mob_arcane_spider_dash"/>
+    <OnCastFinished name="Play_melee_swoosh_dash_mob"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_SPIDER_CAST_PUDDLE" >
+    <OnCastStart name="Play_arcane_spider_cast_load_B" />
+    <OnCastCanceled name="Stop_arcane_spider_cast_load_B"/>
+    <OnCastInterrupted name="Stop_arcane_spider_cast_load_B" />
+    <OnCastFinished name="Play_frost_cast_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_SPIDER_CAST_PRISON" >
+    <OnCastStart name="Play_mob_arcane_spider_cast_prison" />
+    <OnCastCanceled name="Stop_mob_arcane_spider_cast_prison"/>
+    <OnCastInterrupted name="Stop_mob_arcane_spider_cast_prison" />
+    <OnCastFinished name="Play_mob_arcane_spider_prison_beam" />
+  </WwiseEventInfo>
+  
   <WwiseEventInfo name="SPELL_GUARDS_SUMMON">
     <OnCastStart name="Play_mob_castlelord_support_whistle" />
   </WwiseEventInfo>
@@ -5226,6 +5254,23 @@
     <OnCastCanceled name="Stop_mob_avalon_builder_orb_load" />
     <OnCastInterrupted name="Stop_mob_avalon_builder_orb_load" />
     <OnCastFinished name="Play_mob_avalon_builder_orb_shoot" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_TREASURE_DRONE_LASER_CAST">
+    <OnCastStart name="Play_mob_avalon_treasuredrone_beamload" />
+    <OnCastCanceled name="Stop_mob_avalon_treasuredrone_beamload" />
+    <OnCastInterrupted name="Stop_mob_avalon_treasuredrone_beamload" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_TREASURE_DRONE_LASER_CHANNEL">
+    <OnChannelingStart name="Play_mob_avalon_treasuredrone_laser" />
+    <OnChannelingEnd name="Stop_mob_avalon_treasuredrone_laser" />
+    <OnChannelingCancelled name="Stop_mob_avalon_treasuredrone_laser" />
+    <OnChannelingInterrupted name="Stop_mob_avalon_treasuredrone_laser" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_TREASURE_DRONE_KNOCKBACK">
+    <OnSpellHit name="Play_mob_avalon_drone_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_AVALON_KNIGHT_ROTATINBLADES_CHANNEL">
