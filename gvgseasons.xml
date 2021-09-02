@@ -4306,7 +4306,7 @@
     </seasontimes>
   </season>
 
-  <season uniquename="GVG_SEASON_14" displayname="@SEASONS_SEASONNAME_SEASON_14" startdatetime="2021-09-25T11:00:00Z" enddatetime="2021-12-20T10:59:00Z">
+  <season uniquename="GVG_SEASON_ENERGY_RUSH" displayname="@SEASONS_SEASONNAME_SEASON_ENERGY_RUSH" startdatetime="2021-09-25T11:00:00Z" enddatetime="2021-11-08T10:59:00Z">
 
     <guildmemberrewards minimumparticipationpercentage="75" >
       <guildmemberreward rank="1">
@@ -4379,10 +4379,10 @@
     </guildmemberrewards>
     <currencyreward type="GVGTOKEN_GENERIC" pointspercurrency="1" />
     <bracketsettings>
-      <bracket level="crystal" pointsthreshold="250000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
-      <bracket level="gold" pointsthreshold="80000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
-      <bracket level="silver" pointsthreshold="25000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
-      <bracket level="bronze" pointsthreshold="7500" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
+      <bracket level="crystal" pointsthreshold="200000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="15000" />
+      <bracket level="gold" pointsthreshold="70000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="5000"/>
+      <bracket level="silver" pointsthreshold="20000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="1000"/>
+      <bracket level="bronze" pointsthreshold="5000" currencytype1="GVGTOKEN_GENERIC" currencyamount1="20"/>
       <bracket level="iron" pointsthreshold="1000"/>
     </bracketsettings>
     <guildchallenge>
@@ -4537,6 +4537,55 @@
           <enable_portalbindingremoval/>
         </eventtime>
       </day>
+      <day number="15">
+        <eventtimecastle>
+          <castlescoringend/>
+        </eventtimecastle>
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <territorybattleend/>
+          <territoryscoringend/>
+          <territorystoragepayout/>
+        </eventtime>
+        <eventtime utctime="11:00:00Z">
+          <territoriesunclaimable/>
+          <resetterritories/>
+          <scoremultiplier newmultiplier="2"/>
+          <disable_portalbindingremoval/>
+        </eventtime>
+        <eventtime utctime="18:00:00Z">
+          <clusterfilter>
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_15_00" />
+            <timeregion name="EU_RU_18_00" />
+            <timeregion name="EU_21_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="960"/>
+        </eventtime>
+      </day>
+      <day number="16">
+        <eventtimecastle>
+          <castlescoringstart/>
+        </eventtimecastle>
+        <eventtime utctime="01:00:00Z">
+          <clusterfilter>
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_03_00" />
+            <timeregion name="US_05_00" />
+          </clusterfilter>
+          <spawninvader/>
+          <!-- Should run until downtime -->
+          <territoriesclaimable claimlimitoverrideminutes="540"/>
+        </eventtime>
+        <eventtime utctime="15:00:00Z">
+          <territorybattlestart/>
+          <enable_portalbindingremoval/>
+        </eventtime>
+        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
+          <territoryscoringstart/>
+        </eventtime>
+      </day>
       <day number="29">
         <eventtimecastle>
           <castlescoringend/>
@@ -4549,6 +4598,7 @@
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable/>
           <resetterritories/>
+          <scoremultiplier newmultiplier="3"/>
           <disable_portalbindingremoval/>
         </eventtime>
         <eventtime utctime="18:00:00Z">
@@ -4585,56 +4635,12 @@
           <territoryscoringstart/>
         </eventtime>
       </day>
-      <day number="57">
-        <eventtimecastle>
-          <castlescoringend/>
-        </eventtimecastle>
-        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
-          <territorybattleend/>
-          <territoryscoringend/>
-          <territorystoragepayout/>
-        </eventtime>
+      <day number="36">
         <eventtime utctime="11:00:00Z">
-          <territoriesunclaimable/>
-          <resetterritories/>
-          <scoremultiplier newmultiplier="2"/>
-          <disable_portalbindingremoval/>
-        </eventtime>
-        <eventtime utctime="18:00:00Z">
-          <clusterfilter>
-            <timeregion name="RU_ASIA_12_00" />
-            <timeregion name="RU_15_00" />
-            <timeregion name="EU_RU_18_00" />
-            <timeregion name="EU_21_00" />
-          </clusterfilter>
-          <spawninvader/>
-          <!-- Should run until downtime -->
-          <territoriesclaimable claimlimitoverrideminutes="960"/>
+          <scoremultiplier newmultiplier="4"/>
         </eventtime>
       </day>
-      <day number="58">
-        <eventtimecastle>
-          <castlescoringstart/>
-        </eventtimecastle>
-        <eventtime utctime="01:00:00Z">
-          <clusterfilter>
-            <timeregion name="BR_00_00" />
-            <timeregion name="US_03_00" />
-            <timeregion name="US_05_00" />
-          </clusterfilter>
-          <spawninvader/>
-          <!-- Should run until downtime -->
-          <territoriesclaimable claimlimitoverrideminutes="540"/>
-        </eventtime>
-        <eventtime utctime="15:00:00Z">
-          <territorybattlestart/>
-          <enable_portalbindingremoval/>
-        </eventtime>
-        <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
-          <territoryscoringstart/>
-        </eventtime>
-      </day>
-      <day number="85">
+      <day number="43">
         <eventtimecastle>
           <castlescoringend/>
         </eventtimecastle>
