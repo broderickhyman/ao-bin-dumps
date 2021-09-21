@@ -280,6 +280,10 @@
     <CharType name="mount"/>
     <MountType name="beetle"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_BEETLE_TANK">
+    <CharType name="mount"/>
+    <MountType name="beetle_tank"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_SPIDER">
     <CharType name="mount"/>
     <MountType name="spider"/>
@@ -1678,6 +1682,18 @@
     <WeaponType name="cursed"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_DEMON_IMP_ANTIRESET">
+    <CharType name="mob"/>
+    <MobFaction name="demon"/>
+    <MobType name="demon_imp_antireset"/>
+    <Size name="wing_small"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="cursed"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_DEMON_IMP_ANTIRESET">
+    <OnMobDied name="Die"/>
+  </WwiseEventInfo>
   <WwiseSwitchInfo name="MOB_DEMON_SPIKED">
     <CharType name="mob"/>
     <MobFaction name="demon"/>
@@ -2662,6 +2678,9 @@
   <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
     <OnCastFinished name="Play_melee_swoosh_big_double" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_DASH">
+    <OnCastFinished name="Play_melee_hamstring_jump" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_MEDIUMCAST">
     <OnCastStart name="Play_melee_swoosh_medium" />
@@ -2848,6 +2867,9 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPINATTACK">
+    <OnCastFinished name="Play_spinning_blades" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SPINATTACK_IMPACT">
     <OnSpellHit name="Play_melee_impact_big" >
       <ImpactType/>
     </OnSpellHit>
@@ -3121,6 +3143,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SCYTHESWING">
     <OnCastStart name="Play_melee_scytheswing" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SCYTHESWING_FINALE">
+    <OnCastFinished name="Play_melee_scytheswing_finale" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_DUALAXE_CRAWLER">
     <OnCastStart name="Play_melee_dualaxe_crawler" />
@@ -3607,6 +3632,9 @@
     <OnChannelingEnd name="Stop_fire_contagious_impact_loop" />
     <OnChannelingInterrupted name="Stop_fire_contagious_impact_loop" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_BUFF_IMPACT">
+    <OnSpellHit name="Play_fire_buff_impact" />
+  </WwiseEventInfo>
     
   <WwiseEventInfo name="SPELL_FROST_START_MEDIUM">
     <OnCastStart name="Play_frost_cast_medium" />
@@ -4025,6 +4053,10 @@
     <OnSpellRemoved name="Play_end_invisibility" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_HELLGATE_MATCH_START">
+    <OnCastFinished name="Play_hellgate_cooldown_reset"/>
+  </WwiseEventInfo>
+
   <!-- Mounts -->
   <WwiseEventInfo name="SPELL_RAGECLAW" >
     <OnCastFinished name="Play_rageclaw_cast_buff_speed" />
@@ -4181,6 +4213,33 @@
     <OnChannelingCancelled name="Stop_beetle_flight_loop" />
     <OnChannelingEnd name="Stop_beetle_flight_loop" />
     <OnChannelingInterrupted name="Stop_beetle_flight_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TANKBEETLE_ARROWRAIN_CAST">
+    <OnCastStart name="Play_mount_tankbeetle_load_arrowrain" />
+    <OnCastFinished name="Play_mount_tankbeetle_shoot_arrowrain" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TANKBEETLE_SPEARS_CAST">
+    <OnCastStart name="Play_mount_tankbeetle_spears_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TANKBEETLE_CHANNEL_SPEARS">
+    <OnChannelingStart name="Play_mount_tankbeetle_spears_sequence" />
+    <OnChannelingCancelled name="Stop_mount_tankbeetle_spears_loop" />
+    <OnChannelingEnd name="Play_mount_tankbeetle_spears_end" />
+    <OnChannelingInterrupted name="Stop_mount_tankbeetle_spears_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TANKBEETLE_BARRAGE_CAST">
+    <OnCastStart name="Play_mount_tankbeetle_barrage_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TANKBEETLE_CHANNEL_BARRAGE">
+    <OnChannelingStart name="Play_mount_tankbeetle_barrage_cast_sequence" />
+    <OnChannelingCancelled name="Stop_mount_tankbeetle_barrage" />
+    <OnChannelingEnd name="Play_mount_tankbeetle_barrage_end" />
+    <OnChannelingInterrupted name="Stop_mount_tankbeetle_barrage" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_MOUNT_HUSKY_HOWL">

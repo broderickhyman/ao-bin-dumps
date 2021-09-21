@@ -581,6 +581,15 @@
         }
       },
       {
+        "@name": "MOUNT_BEETLE_TANK",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "beetle_tank"
+        }
+      },
+      {
         "@name": "MOUNT_SPIDER",
         "CharType": {
           "@name": "mount"
@@ -4184,6 +4193,30 @@
         }
       },
       {
+        "@name": "MOB_DEMON_IMP_ANTIRESET",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "demon"
+        },
+        "MobType": {
+          "@name": "demon_imp_antireset"
+        },
+        "Size": {
+          "@name": "wing_small"
+        },
+        "ArmorType": {
+          "@name": "hide"
+        },
+        "WeaponType": {
+          "@name": "cursed"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_DEMON_SPIKED",
         "CharType": {
           "@name": "mob"
@@ -6484,6 +6517,12 @@
         }
       },
       {
+        "@name": "MOB_DEMON_IMP_ANTIRESET",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
         "@name": "MOB_DEMON_HERETIC_BRAWLER",
         "OnMobDied": {
           "@name": "Die"
@@ -6703,6 +6742,12 @@
         "@name": "MELEE_SWORD_MIGHTY_BLOW",
         "OnCastFinished": {
           "@name": "Play_melee_swoosh_big_double"
+        }
+      },
+      {
+        "@name": "MELEE_SWORD_HAMSTRING_DASH",
+        "OnCastFinished": {
+          "@name": "Play_melee_hamstring_jump"
         }
       },
       {
@@ -7046,6 +7091,12 @@
       },
       {
         "@name": "MELEE_SPINATTACK",
+        "OnCastFinished": {
+          "@name": "Play_spinning_blades"
+        }
+      },
+      {
+        "@name": "MELEE_SPINATTACK_IMPACT",
         "OnSpellHit": {
           "@name": "Play_melee_impact_big",
           "ImpactType": null
@@ -7576,6 +7627,12 @@
         "@name": "MELEE_SCYTHESWING",
         "OnCastStart": {
           "@name": "Play_melee_scytheswing"
+        }
+      },
+      {
+        "@name": "MELEE_SCYTHESWING_FINALE",
+        "OnCastFinished": {
+          "@name": "Play_melee_scytheswing_finale"
         }
       },
       {
@@ -8607,6 +8664,12 @@
         }
       },
       {
+        "@name": "SPELL_FIRE_BUFF_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_fire_buff_impact"
+        }
+      },
+      {
         "@name": "SPELL_FROST_START_MEDIUM",
         "OnCastStart": {
           "@name": "Play_frost_cast_medium"
@@ -9472,6 +9535,12 @@
         }
       },
       {
+        "@name": "SPELL_HELLGATE_MATCH_START",
+        "OnCastFinished": {
+          "@name": "Play_hellgate_cooldown_reset"
+        }
+      },
+      {
         "@name": "SPELL_RAGECLAW",
         "OnCastFinished": {
           "@name": "Play_rageclaw_cast_buff_speed"
@@ -9748,6 +9817,57 @@
         },
         "OnChannelingInterrupted": {
           "@name": "Stop_beetle_flight_loop"
+        }
+      },
+      {
+        "@name": "SPELL_TANKBEETLE_ARROWRAIN_CAST",
+        "OnCastStart": {
+          "@name": "Play_mount_tankbeetle_load_arrowrain"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mount_tankbeetle_shoot_arrowrain"
+        }
+      },
+      {
+        "@name": "SPELL_TANKBEETLE_SPEARS_CAST",
+        "OnCastStart": {
+          "@name": "Play_mount_tankbeetle_spears_cast"
+        }
+      },
+      {
+        "@name": "SPELL_TANKBEETLE_CHANNEL_SPEARS",
+        "OnChannelingStart": {
+          "@name": "Play_mount_tankbeetle_spears_sequence"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mount_tankbeetle_spears_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_mount_tankbeetle_spears_end"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mount_tankbeetle_spears_loop"
+        }
+      },
+      {
+        "@name": "SPELL_TANKBEETLE_BARRAGE_CAST",
+        "OnCastStart": {
+          "@name": "Play_mount_tankbeetle_barrage_load"
+        }
+      },
+      {
+        "@name": "SPELL_TANKBEETLE_CHANNEL_BARRAGE",
+        "OnChannelingStart": {
+          "@name": "Play_mount_tankbeetle_barrage_cast_sequence"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mount_tankbeetle_barrage"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_mount_tankbeetle_barrage_end"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mount_tankbeetle_barrage"
         }
       },
       {
