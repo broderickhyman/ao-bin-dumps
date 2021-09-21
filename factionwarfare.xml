@@ -23,7 +23,8 @@
   <global bonuspointmodifier="0.25"
           killbonuspointmodifier="0.25"
           killvalue="0.05"
-          maxkillvalue="500"
+          nonlethalmaxkillvalue="500"
+          lethalmaxkillvalue="1500"
           killatrophy="0.2"
           defensecap="10000" 
           payoutinterval="900"
@@ -147,7 +148,7 @@
   </factioncampaign>
 
   <!-- ranks -->
-  <factionstanding max="7500000" standingmultiplier="0.4" rankretentionmultiplier="2" rankretentionmax="240000" protected="1400000">
+  <factionstanding max="7500000" standingmultiplier="0.4" rankretentionmultiplier="0.9" rankretentionmax="240000" protected="1400000">
     <rank minstanding="0" pointmultiplier="1" standingmultiplier="1" weeklyupkeep="0" usedByNameplate="true">
       <byfaction faction="Highland" icon="ICON_FACTION_RANK_01_HIGHLANDS" maletitle="@FACTIONWARFARE_RANK_1_NONPRESTIGE_MALE" femaletitle="@FACTIONWARFARE_RANK_1_NONPRESTIGE_FEMALE"/>
       <byfaction faction="Steppe" icon="ICON_FACTION_RANK_01_STEPPE" maletitle="@FACTIONWARFARE_RANK_1_NONPRESTIGE_MALE" femaletitle="@FACTIONWARFARE_RANK_1_NONPRESTIGE_FEMALE"/>
@@ -378,12 +379,12 @@
     <level requirement="24106.69" bankingfactor="0.6000"/>
     <level requirement="40114.56" bankingfactor="1.0000"/>
   </clustertype>
-  <clustertype uniquename="FW_LETHAL_1" groupsize="20" caerleongroupsize="10" regenrate="7.6977">
+  <clustertype uniquename="FW_LETHAL_1" groupsize="20" caerleongroupsize="10" regenrate="7.6977" redzoneeventminclustervalue="12857.84">
     <level requirement="4427.97" bankingfactor="0.2094"/>
     <level requirement="12857.84" bankingfactor="0.6667"/>
     <level requirement="24106.69" bankingfactor="1.0000"/>
   </clustertype>
-  <clustertype uniquename="FW_LETHAL_3" groupsize="20" caerleongroupsize="10" regenrate="23.0932">
+  <clustertype uniquename="FW_LETHAL_3" groupsize="20" caerleongroupsize="10" regenrate="23.0932" redzoneeventminclustervalue="24106.69">
     <level requirement="4427.97" bankingfactor="0.0481"/>
     <level requirement="12857.84" bankingfactor="0.1532"/>
     <level requirement="24106.69" bankingfactor="0.2298"/>

@@ -1,97 +1,84 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <loginpopups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="loginpopups.xsd">
+ 
+  <loginpopupconsentlist headnote="@LOGINGUI_CONSENTLIST_TERMS_AND_PRIVACY">
 
-  <loginpopup title="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_TITLE" tag="GTaC" tobeaccepted="true" alsobeforelogin="true" mustscroll="false">
-    <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS"/>
-    <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_2"/>
-    <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_3"/>
-    <version language="EN-US" version="6.2"/>
-    <version language="DE-DE" version="6.2"/>
-    <version language="FR-FR" version="6.2"/>
-    <version language="RU-RU" version="6.2"/>
-    <version language="PL-PL" version="6.2"/>
-    <version language="ES-ES" version="6.2"/>
-    <version language="PT-BR" version="6.2"/>
-    <version language="ZH-CN" version="6.2"/>
-    <version language="KO-KR" version="6.2"/>
-  </loginpopup>
-
-  <loginpopup title="@LOGIN_POPUP_PRIVACY_POLICY_TITLE" tag="PP" tobeaccepted="true" alsobeforelogin="true">
-    <text tag="@LOGIN_POPUP_PRIVACY_POLICY"/>
-    <text tag="@LOGIN_POPUP_PRIVACY_POLICY_2"/>
-    <version language="EN-US" version="1.6"/>
-    <version language="DE-DE" version="1.6"/>
-    <version language="FR-FR" version="1.6"/>
-    <version language="RU-RU" version="1.6"/>
-    <version language="PL-PL" version="1.6"/>
-    <version language="ES-ES" version="1.6"/>
-    <version language="PT-BR" version="1.6"/>
-    <version language="ZH-CN" version="1.6"/>
-    <version language="KO-KR" version="1.6"/>
-  </loginpopup>
-
-  <!-- Referral & Goldseller Policy Warning removed for RoA Patch#10 -->
-  <!--loginpopup title="@LOGIN_POPUP_REFERRAL_TERMS_AND_CONDITIONS_TITLE" tag="RTaC" tobeaccepted="true">
-    <text tag="@LOGIN_POPUP_REFERRAL_TERMS_AND_CONDITIONS"/>
-    <version language="EN-US" version="1.0"/>
-    <version language="DE-DE" version="1.0"/>
-    <version language="FR-FR" version="1.0"/>
-    <version language="RU-RU" version="1.0"/>
-    <version language="PL-PL" version="1.0"/>
-    <version language="ES-ES" version="1.0"/>
-    <version language="PT-BR" version="1.0"/>
-    <version language="ZH-CN" version="1.0"/>
-    <version language="KO-KR" version="1.0"/>
-  </loginpopup-->
-
-  <!--loginpopup title="@LOGIN_POPUP_GOLDSELLER_TITLE" tag="GS" tobeaccepted="true" secondstowait = "3">
-    <text tag="@LOGIN_POPUP_GOLDSELLER_INFO"/>
-    <version language="EN-US" version="1.1"/>
-    <version language="DE-DE" version="1.1"/>
-    <version language="FR-FR" version="1.1"/>
-    <version language="RU-RU" version="1.1"/>
-    <version language="PL-PL" version="1.1"/>
-    <version language="ES-ES" version="1.1"/>
-    <version language="PT-BR" version="1.1"/>
-    <version language="ZH-CN" version="1.1"/>
-    <version language="KO-KR" version="1.1"/>
-  </loginpopup>-->
-
-  <loginpopup title="@LOGIN_POPUP_SOCIAL_MEDIA_TITLE" tag="SM" tobeaccepted="true" acceptingoptional="true">
-    <text tag="@LOGIN_POPUP_SOCIAL_MEDIA_CONTENT"/>
-    <version language="EN-US" version="1.1"/>
-    <version language="DE-DE" version="1.1"/>
-    <version language="FR-FR" version="1.1"/>
-    <version language="RU-RU" version="1.1"/>
-    <version language="PL-PL" version="1.1"/>
-    <version language="ES-ES" version="1.1"/>
-    <version language="PT-BR" version="1.1"/>
-    <version language="ZH-CN" version="1.1"/>
-    <version language="KO-KR" version="1.1"/>
-  </loginpopup>
-
-  <loginpopupconsentlist title="@MOBILE_CONSENT_DIALOGUE_TITLE"
-                         tobeaccepted="true"
-                         footnote="@LOGIN_POPUP_MOBILE_DETAILS_FOOTNOTE">
-    <consentpoint tag="MT"
-                  mobileonly="true"
-                  togglelabel="@LOGIN_POPUP_MOBILE_APPSFLYER_LABEL">
-      <text tag="@LOGIN_POPUP_MOBILE_APPSFLYER_DETAILS"/>
-      <version language="EN-US" version="1.0"/>
-      <version language="DE-DE" version="1.0"/>
-      <version language="FR-FR" version="1.0"/>
-      <version language="RU-RU" version="1.0"/>
-      <version language="PL-PL" version="1.0"/>
-      <version language="ES-ES" version="1.0"/>
-      <version language="PT-BR" version="1.0"/>
-      <version language="ZH-CN" version="1.0"/>
-      <version language="KO-KR" version="1.0"/>
+    <consentpoint togglelabel="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_TITLE" tag="GTaC" toggledefaultstate="false" >
+      <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS"/>
+      <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_2"/>
+      <text tag="@LOGIN_POPUP_GENERAL_TERMS_AND_CONDITIONS_3"/>
+      <version language="EN-US" version="6.2"/>
+      <version language="DE-DE" version="6.2"/>
+      <version language="FR-FR" version="6.2"/>
+      <version language="RU-RU" version="6.2"/>
+      <version language="PL-PL" version="6.2"/>
+      <version language="ES-ES" version="6.2"/>
+      <version language="PT-BR" version="6.2"/>
+      <version language="ZH-CN" version="6.2"/>
+      <version language="KO-KR" version="6.2"/>
     </consentpoint>
-<!--
-    <consentpoint tag="CR"
-                  togglelabel="@LOGIN_POPUP_MOBILE_CRASHREPORTS_LABEL">
-      <text tag="@LOGIN_POPUP_MOBILE_CRASHREPORTS_DETAILS"/>
+
+    <consentpoint togglelabel="@LOGIN_POPUP_PRIVACY_POLICY_TITLE" tag="PP" toggledefaultstate="false">
+      <text tag="@LOGIN_POPUP_PRIVACY_POLICY"/>
+      <text tag="@LOGIN_POPUP_PRIVACY_POLICY_2"/>
+      <version language="EN-US" version="1.7"/>
+      <version language="DE-DE" version="1.7"/>
+      <version language="FR-FR" version="1.7"/>
+      <version language="RU-RU" version="1.7"/>
+      <version language="PL-PL" version="1.7"/>
+      <version language="ES-ES" version="1.7"/>
+      <version language="PT-BR" version="1.7"/>
+      <version language="ZH-CN" version="1.7"/>
+      <version language="KO-KR" version="1.7"/>
+    </consentpoint>
+  </loginpopupconsentlist>
+
+  <loginpopupconsentlist headnote="@LOGINGUI_CONSENTLIST_STAY_INFORMED">
+    
+    <consentpoint togglelabel="@LOGIN_POPUP_NEWSLETTER_TITLE" tag="News" acceptingoptional="true" showonguestaccounts="false" toggledefaultstate="false">
+      <version language="EN-US" version="6.2"/>
+      <version language="DE-DE" version="6.2"/>
+      <version language="FR-FR" version="6.2"/>
+      <version language="RU-RU" version="6.2"/>
+      <version language="PL-PL" version="6.2"/>
+      <version language="ES-ES" version="6.2"/>
+      <version language="PT-BR" version="6.2"/>
+      <version language="ZH-CN" version="6.2"/>
+      <version language="KO-KR" version="6.2"/>
+    </consentpoint>
+ 
+    <consentpoint togglelabel="@LOGIN_POPUP_SOCIAL_MEDIA_TITLE" tag="SM" acceptingoptional="true" toggledefaultstate="false">
+      <text tag="@LOGIN_POPUP_SOCIAL_MEDIA_CONTENT"/>
+      <version language="EN-US" version="1.1"/>
+      <version language="DE-DE" version="1.1"/>
+      <version language="FR-FR" version="1.1"/>
+      <version language="RU-RU" version="1.1"/>
+      <version language="PL-PL" version="1.1"/>
+      <version language="ES-ES" version="1.1"/>
+      <version language="PT-BR" version="1.1"/>
+      <version language="ZH-CN" version="1.1"/>
+      <version language="KO-KR" version="1.1"/>
+    </consentpoint>
+  </loginpopupconsentlist>
+  
+  <loginpopupconsentlist headnote="@LOGINGUI_CONSENTLIST_COLLECT_DATA">
+
+    <consentpoint togglelabel="@LOGIN_POPUP_APPSFLYER_LABEL" tag="MT" mobileonly="true" acceptingoptional="true" toggledefaultstate="false">
+      <text tag="@LOGIN_POPUP_MOBILE_APPSFLYER_DETAILS"/>
+      <version language="EN-US" version="1.1"/>
+      <version language="DE-DE" version="1.1"/>
+      <version language="FR-FR" version="1.1"/>
+      <version language="RU-RU" version="1.1"/>
+      <version language="PL-PL" version="1.1"/>
+      <version language="ES-ES" version="1.1"/>
+      <version language="PT-BR" version="1.1"/>
+      <version language="ZH-CN" version="1.1"/>
+      <version language="KO-KR" version="1.1"/>
+    </consentpoint>
+
+    <!--
+    <consentpoint tag="CR" togglelabel="@LOGIN_POPUP_MOBILE_CRASHREPORTS_LABEL">
+      <fronttext tag="@LOGIN_POPUP_MOBILE_CRASHREPORTS_DETAILS"/>
       <version language="EN-US" version="1.0"/>
       <version language="DE-DE" version="1.0"/>
       <version language="FR-FR" version="1.0"/>
