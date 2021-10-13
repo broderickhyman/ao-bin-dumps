@@ -3016,7 +3016,7 @@
     <OnCastInterrupted name="Stop_shrinking_smash" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_QUADRUNE_CAST">
-    <OnCastStart name="Play_cast_load_buff" />
+    <OnCastStart name="Play_cast_guard_rune" />
     <OnCastFinished name="Play_magicrune_cast" />
   </WwiseEventInfo>
 
@@ -3444,6 +3444,11 @@
     <OnCastCanceled name="Stop_arcane_cast_load_short" />
     <OnCastFinished name="Play_arcane_cast_medium" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_LOAD_CHANNEL">
+    <OnCastStart name="Play_arcane_cast_load_short" />
+    <OnCastInterrupted name="Stop_arcane_cast_load_short" />
+    <OnCastCanceled name="Stop_arcane_cast_load_short" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARCANE_HIT_MEDIUM">
     <OnSpellHit name="Play_arcane_impact_medium" />
   </WwiseEventInfo>
@@ -3493,7 +3498,10 @@
     <OnCastStart name="Play_cursed_cast_start_enfeeble" />
     <OnCastInterrupted name="Stop_cursed_cast_start_enfeeble" />
     <OnCastCanceled name="Stop_cursed_cast_start_enfeeble" />
-    <OnCastFinished name="Play_cursed_cast_medium_stomp" />
+    <OnCastFinished name="Stop_cursed_cast_start_enfeeble" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_CURSED_CHANNEL_ENFEEBLEBLADES">
+    <OnChannelingStart name="Play_cursed_cast_medium_blade" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_HAUTINGSCREAMS">
     <OnCastStart name="Play_cursed_cast_start_standard" />
