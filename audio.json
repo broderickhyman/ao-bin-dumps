@@ -7398,7 +7398,7 @@
       {
         "@name": "MELEE_MACE_QUADRUNE_CAST",
         "OnCastStart": {
-          "@name": "Play_cast_load_buff"
+          "@name": "Play_cast_guard_rune"
         },
         "OnCastFinished": {
           "@name": "Play_magicrune_cast"
@@ -8232,6 +8232,18 @@
         }
       },
       {
+        "@name": "SPELL_ARCANE_CAST_LOAD_CHANNEL",
+        "OnCastStart": {
+          "@name": "Play_arcane_cast_load_short"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_arcane_cast_load_short"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_arcane_cast_load_short"
+        }
+      },
+      {
         "@name": "SPELL_ARCANE_HIT_MEDIUM",
         "OnSpellHit": {
           "@name": "Play_arcane_impact_medium"
@@ -8345,7 +8357,13 @@
           "@name": "Stop_cursed_cast_start_enfeeble"
         },
         "OnCastFinished": {
-          "@name": "Play_cursed_cast_medium_stomp"
+          "@name": "Stop_cursed_cast_start_enfeeble"
+        }
+      },
+      {
+        "@name": "SPELL_CURSED_CHANNEL_ENFEEBLEBLADES",
+        "OnChannelingStart": {
+          "@name": "Play_cursed_cast_medium_blade"
         }
       },
       {
