@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <questgivertypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="questgivertypes.xsd">
 
-  <!--Tutorial Oberon -->
-
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--BASE TUTORIAL NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  
+    <!--INVISIBLE QUESTGIVER-->
   <questgivertype uniquename="GOTO_A" mobfaction="ROYALARMY" level="2" tags="GOTO_A">
     <questslot tags="gotoa" />
   </questgivertype>
 
+  <!--SILAS-->
   <questgivertype uniquename="WOUNDEDCRAFTER" mobfaction="ROYALARMY" level="2" tags="WOUNDEDCRAFTER">
     <questslot tags="woundedcrafter" />
   </questgivertype>
@@ -15,6 +19,7 @@
     <questslot tags="woundedcrafter" />
   </questgivertype>
 
+<!--TIA-->
   <questgivertype uniquename="CAPTAIN_TIA" mobfaction="ROYALARMY" level="2" tags="CAPTAIN_TIA" maxsilverpool="1000" secondspersilver="100">
     <questslot tags="captaintia" />
   </questgivertype>
@@ -23,25 +28,28 @@
     <questslot tags="captaintia2" />
   </questgivertype>
 
-  <questgivertype uniquename="GOLD_SMUGGLER" mobfaction="ROYALARMY" level="2" tags="GOLD_SMUGGLER" maxsilverpool="1000" secondspersilver="100">
-    <questslot tags="goldsmuggler" />
+  <!--SHIP REPAIR NPC-->
+   <questgivertype uniquename="SHIP_REPAIRMAN" mobfaction="ROYALARMY" level="2" tags="SHIP_REPAIRMAN" maxsilverpool="1000" secondspersilver="100"/>
+    
+  
+  
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--STARTER TOWN NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  
+  <!--TEST-->
+  <questgivertype uniquename="COMBATAGENT_ROYAL" mobfaction="ROYALARMY" level="2" tags="COMBATAGENT_ROYAL">
+    <questslot tags="debug" />
+  </questgivertype>
+ 
+  
+  <!--HABOUR MASTER-->
+  <questgivertype uniquename="ROYALHARBOURMASTER" mobfaction="ROYALARMY" level="2" tags="ROYALHARBOURMASTER">
+    <questslot tags="royalharbour" />
   </questgivertype>
 
-  <questgivertype uniquename="SHIP_REPAIRMAN" mobfaction="ROYALARMY" level="2" tags="SHIP_REPAIRMAN" maxsilverpool="1000" secondspersilver="100"/>
-
-  
-  <!--Royal Faction -->
-  <questgivertype uniquename="COMBATAGENT_ROYAL" mobfaction="ROYALARMY" level="2" tags="COMBATAGENT_ROYAL">
-  <questslot tags="debug" />
- </questgivertype>
- 
-  <!--Albion Highschool -->
-
+  <!--ROYAL COMMANDER-->
   <questgivertype uniquename="ROYALCOMMANDER" mobfaction="ROYALARMY" level="2" tags="ROYALCOMMANDER">
-    <!--<questgroup locatag="@BASIC_GATHERING_INTRO">
-     <quest uniquename="MISSIONS_T2_TUTORIAL_ROYAL_COMMANDER_GOTO_CRAFTER"></quest>
-   </questgroup>-->
-    <!--<questslot tags="commander"/>-->
     <questgroup locatag="@MISSION_GROUP_INTRO">
       <quest uniquename="MISSIONS_T2_TUTORIAL_OPTIONS" />
       <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP" />
@@ -65,6 +73,7 @@
     </questgroup>
  </questgivertype>
   
+  <!--ROYAL CRAFTER-->
  <questgivertype uniquename="ROYALCRAFTER" mobfaction="ROYALARMY" level="2" tags="ROYALCRAFTER" secondspersilver="1" maxsilverpool="10000">
    <questgroup locatag="@MISSION_GROUP_CRAFTING">
      <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" />
@@ -89,56 +98,30 @@
    </questgroup>
  </questgivertype>
 
-  
-
-  <!--<questgivertype uniquename="ROYALSOLDIER" mobfaction="ROYALARMY" level="2" tags="ROYALSOLDIER">
-  <questslot tags="soldier" />
- </questgivertype>-->
-  <questgivertype uniquename="ROYALHARBOURMASTER" mobfaction="ROYALARMY" level="2" tags="ROYALHARBOURMASTER">
-    <questslot tags="royalharbour" />
+   <!--GOLD SMUGGLER NPC-->
+ <questgivertype uniquename="GOLD_SMUGGLER" mobfaction="ROYALARMY" level="2" tags="GOLD_SMUGGLER" maxsilverpool="1000" secondspersilver="100">
+    <questslot tags="goldsmuggler" />
   </questgivertype>
 
-  <!--CITY NPC-->
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--BIOME CITY NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
   <questgivertype uniquename="ROYALEXPLORER" mobfaction="ROYALARMY" level="2" tags="ROYALEXPLORER">
-    <!--<questgroup locatag="@GUILDS">
-      <quest uniquename="MISSIONS_T2_TUTORIAL_GUILD" />
-    </questgroup>
-    <questgroup locatag="@ISLAND">
-      <quest uniquename="MISSIONS_T2_TUTORIAL_ISLAND" />tags="adventurer"
-    </questgroup>-->
     <questslot tags="adventurer" />
   </questgivertype>
 
-
- <!--OpenWorld -->
- <!--<questgivertype uniquename="ROYALLUMBERJACK" mobfaction="ROYALARMY" level="2" tags="ROYALLUMBERJACK">
-  <questslot tags="lumberjack" />
- </questgivertype>
- <questgivertype uniquename="ROYALMINER" mobfaction="ROYALARMY" level="2" tags="ROYALMINER">
-  <questslot tags="miner" />
- </questgivertype>
- <questgivertype uniquename="ROYALHUNTER" mobfaction="ROYALARMY" level="2" tags="ROYALHUNTER">
-  <questslot tags="hunter" />
- </questgivertype>-->
- <!--<questgivertype uniquename="ROYALCAPTAIN" mobfaction="ROYALARMY" level="2" tags="ROYALCAPTAIN">
-  <questslot tags="captain" />
- </questgivertype>-->
-
- <!--Caravan Missions -->
- <!--Smuggler -->
+ <!--FACTION WARFARE - Caravan Missions -->
+ <!--OPEN WORLD NPCS - Smuggler -->
  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_SWAMP" playerfaction="Swamp" tags="faction_outside" />
  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_FOREST" playerfaction="Forest" tags="faction_outside" />
  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_STEPPE" playerfaction="Steppe" tags="faction_outside" />
  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_HIGHLAND" playerfaction="Highland" tags="faction_outside" />
  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_MOUNTAIN" playerfaction="Mountain" tags="faction_outside" />
-
   <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_CAERLEON" playerfaction="Caerleon" tags="faction_outside" />
 
-
-  <!--FactionStore -->
-
   
-  
+  <!--FactionStore --> 
   <factionquestgivertype uniquename="FACTIONSTORE_SWAMP_DEBUG" playerfaction="Swamp" tags="faction_store">
   <questgroup locatag="@MISSION_GROUP_LIGHTPACKS">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DEBUG">
@@ -173,10 +156,7 @@
    </quest>
   </questgroup>
  </factionquestgivertype>
-
  <factionquestgivertype uniquename="FACTIONSTORE_SWAMP" playerfaction="Swamp" tags="faction_store">
-
-   <!--TO CAERLEON TEST QUEST-->
    <questgroup locatag="@MISSION_GROUP_CAERLEON">
      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
@@ -188,9 +168,6 @@
        <factionvariable name="FACTION_B" value="Caerleon" />
      </quest>
    </questgroup>
-   <!--TO CAERLEON TEST QUEST-->
-   
-   
    <questgroup locatag="@MISSION_GROUP_HIGHLAND">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
     <factionvariable name="FACTION_B" value="Highland" />
@@ -238,8 +215,6 @@
  </factionquestgivertype>
 
  <factionquestgivertype uniquename="FACTIONSTORE_FOREST" playerfaction="Forest" tags="faction_store">
-  
-   <!--TO CAERLEON TEST QUEST-->
    <questgroup locatag="@MISSION_GROUP_CAERLEON">
      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
@@ -250,10 +225,7 @@
      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
      </quest>
-   </questgroup>
-   <!--TO CAERLEON TEST QUEST-->
-   
-   
+   </questgroup> 
    <questgroup locatag="@MISSION_GROUP_STEPPE">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
     <factionvariable name="FACTION_B" value="Steppe" />
@@ -301,8 +273,6 @@
  </factionquestgivertype>
 
  <factionquestgivertype uniquename="FACTIONSTORE_STEPPE" playerfaction="Steppe" tags="faction_store">
-
-   <!--TO CAERLEON TEST QUEST-->
    <questgroup locatag="@MISSION_GROUP_CAERLEON">
      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
@@ -314,8 +284,6 @@
        <factionvariable name="FACTION_B" value="Caerleon" />
      </quest>
    </questgroup>
-   <!--TO CAERLEON TEST QUEST-->
-
    <questgroup locatag="@MISSION_GROUP_FOREST">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
     <factionvariable name="FACTION_B" value="Forest" />
@@ -363,8 +331,6 @@
  </factionquestgivertype>
 
  <factionquestgivertype uniquename="FACTIONSTORE_HIGHLAND" playerfaction="Highland" tags="faction_store">
-
-   <!--TO CAERLEON TEST QUEST-->
    <questgroup locatag="@MISSION_GROUP_CAERLEON">
      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
@@ -376,8 +342,6 @@
        <factionvariable name="FACTION_B" value="Caerleon" />
      </quest>
    </questgroup>
-   <!--TO CAERLEON TEST QUEST-->
-
    <questgroup locatag="@MISSION_GROUP_STEPPE">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
     <factionvariable name="FACTION_B" value="Steppe" />
@@ -425,8 +389,6 @@
  </factionquestgivertype>
 
  <factionquestgivertype uniquename="FACTIONSTORE_MOUNTAIN" playerfaction="Mountain" tags="faction_store">
-
-   <!--TO CAERLEON TEST QUEST-->
    <questgroup locatag="@MISSION_GROUP_CAERLEON">
      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
        <factionvariable name="FACTION_B" value="Caerleon" />
@@ -438,8 +400,6 @@
        <factionvariable name="FACTION_B" value="Caerleon" />
      </quest>
    </questgroup>
-   <!--TO CAERLEON TEST QUEST-->
-
    <questgroup locatag="@MISSION_GROUP_SWAMP">
    <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
     <factionvariable name="FACTION_B" value="Swamp" />
