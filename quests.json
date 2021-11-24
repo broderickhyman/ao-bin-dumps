@@ -185,6 +185,56 @@
         "rewards": ""
       },
       {
+        "@uniquename": "MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER",
+        "@mobfaction": "ROYALARMY",
+        "@title": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_TITLE",
+        "@offertext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_OFFERTEXT",
+        "@progresstext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_PROGRESSTEXT",
+        "@priority": "1",
+        "@minlevel": "1",
+        "@maxlevel": "2",
+        "@tags": "commander",
+        "@offertimeout": "0",
+        "@questtimeout": "3600000",
+        "@questslotcooldown": "0",
+        "@uicategory": "PROMOTION",
+        "@onceonly": "true",
+        "@completetext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_COMPLETIONTEXT",
+        "@previousquests": "MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS",
+        "@cancelable": "true",
+        "@hideifquestcompleted": "MISSIONS_T2_STT_TEST_X",
+        "variables": {
+          "dynamiccluster": {
+            "@name": "LOCATION_A",
+            "distancetocluster": {
+              "@mindistance": "0",
+              "@maxdistance": "0"
+            }
+          },
+          "dynamicquestgiver": {
+            "@name": "GOLD_SMUGGLER",
+            "distancefromquestgiver": {
+              "@mindistance": "0",
+              "@maxdistance": "3"
+            },
+            "questgivertag": {
+              "@tag": "GOLD_SMUGGLER"
+            }
+          }
+        },
+        "tasks": {
+          "completionstep": {
+            "gotoquestgiver": {
+              "@questgivervariable": "GOLD_SMUGGLER",
+              "@locationmarkerid": "SMUGGLERTEST",
+              "@markedinworld": "true",
+              "@markedonminimap": "true"
+            }
+          }
+        },
+        "rewards": ""
+      },
+      {
         "@uniquename": "MISSIONS_T2_STT_TEST_X",
         "@mobfaction": "ROYALARMY",
         "@title": "@MISSIONS_T2_STT_TEST_X_TITLE",
@@ -1646,56 +1696,6 @@
           "completionstep": {
             "gotoquestgiver": {
               "@questgivervariable": "ROYALCRAFTER"
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
-        "@uniquename": "MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_TITLE",
-        "@offertext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "commander",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_COMPLETIONTEXT",
-        "@previousquests": "MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS",
-        "@cancelable": "true",
-        "@hideifquestcompleted": "MISSIONS_T2_STT_TEST_X",
-        "variables": {
-          "dynamiccluster": {
-            "@name": "LOCATION_A",
-            "distancetocluster": {
-              "@mindistance": "0",
-              "@maxdistance": "0"
-            }
-          },
-          "dynamicquestgiver": {
-            "@name": "GOLD_SMUGGLER",
-            "distancefromquestgiver": {
-              "@mindistance": "0",
-              "@maxdistance": "3"
-            },
-            "questgivertag": {
-              "@tag": "GOLD_SMUGGLER"
-            }
-          }
-        },
-        "tasks": {
-          "completionstep": {
-            "gotoquestgiver": {
-              "@questgivervariable": "GOLD_SMUGGLER",
-              "@locationmarkerid": "SMUGGLERTEST",
-              "@markedinworld": "true",
-              "@markedonminimap": "true"
             }
           }
         },
@@ -4599,7 +4599,6 @@
         "@acceptsound": "Play_NPC_VO_P1_Silas_Accept",
         "@progresssound": "Play_NPC_VO_P1_Silas_Progress",
         "@completesound": "Play_NPC_VO_P1_Silas_Completion",
-        "@audiochangeonaccept": "TUT_CLEAR_MUSIC",
         "variables": {
           "dynamiccluster": {
             "@name": "LOCATION_A",

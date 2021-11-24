@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quests.xsd">
-  <!-- MISSIONS -->
-  <!--ONLY IF TUTORIAL WAS PLAYED-->
-  <!--PREMIUM-->
+ 
 
-
+<!--QUEST MIGRATION FOR PATCH 5 SAGRAMORE-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_NEWORDERS" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_NEWORDERS_TITLE" offertext="@MISSIONS_T2_TUTORIAL_NEWORDERS_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_NEWORDERS_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_NEWORDERS_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_STT_TEST_X">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -25,8 +23,13 @@
     <rewards>
     </rewards>
   </quest>
-  
-  
+
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  <!-- GUIDING/MAIN LAND TUTORIAL QUESTS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+  <!--QUEST GIVEN TO PLAYERS AFTER ARRIVING AT THE STARTERTOWN-->
   <quest uniquename="MISSIONS_T2_STT_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_A_TITLE" offertext="@MISSIONS_T2_STT_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_A_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -48,7 +51,7 @@
     </rewards>
   </quest>
 
-
+<!--PREMIUM QUEST FOR TUTORIAL COMPLETERS-->
   <quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q" >
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -78,43 +81,27 @@
     </rewards>
   </quest>
 
-  <!--<quest uniquename="MISSIONS_T2_STT_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_B_TITLE" offertext="@MISSIONS_T2_STT_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="royalharbour" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_B_COMPLETIONTEXT" cancelable="false" completehintbox="PREMIUMSMALL" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
+  <!--GO TO THE GOLD SMUGGLER-->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS" cancelable="true" hideifquestcompleted="MISSIONS_T2_STT_TEST_X">
     <variables>
       <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0"/>
+        <distancetocluster mindistance="0" maxdistance="0" />
       </dynamiccluster>
-      <dynamicquestgiver name ="COMMANDER">
-        <distancefromquestgiver mindistance="0" maxdistance="0"/>
-        <questgivertag tag="ROYALCOMMANDER"/>
+      <dynamicquestgiver name ="GOLD_SMUGGLER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="GOLD_SMUGGLER"/>
       </dynamicquestgiver>
     </variables>
     <tasks>
-      <extendedmissionstep>
-        <missions>
-            <gotoquestgiver questgivervariable="COMMANDER" locationmarkerid="COMMANDER"></gotoquestgiver>
-        </missions>
-      </extendedmissionstep>
-      <extendedmissionstep>
-        <preactions>
-          <receiveitem count="1" item="T3_PREMIUMITEM_3_NONTRADABLE"/>
-          <openhintbox uniquename ="PREMIUM" displayonplatform="desktop"/>
-          <openhintbox uniquename ="PREMIUMMOBILE" displayonplatform="mobile"/>
-        </preactions>
-        <missions>
-          <usefunction function ="OpenInventory"/>
-        </missions>
-      </extendedmissionstep>
-      <extendedcompletionstep locationmarkerid="COMMANDER" markedinworld="true" markedonminimap="true">    
-        <missions>
-          <gotoquestgiver questgivervariable="COMMANDER"/>
-        </missions>
-      </extendedcompletionstep>
+      <completionstep>
+        <gotoquestgiver questgivervariable="GOLD_SMUGGLER" locationmarkerid="SMUGGLERTEST" markedinworld="true" markedonminimap="true"/>
+      </completionstep>
     </tasks>
     <rewards>
     </rewards>
-  </quest>-->
+  </quest>
 
-  <!--GOLD-->
+  <!--GOLD QUESTS FOR TUTORIAL COMPLETERS-->
   <quest uniquename="MISSIONS_T2_STT_TEST_X" mobfaction="ROYALARMY" title="@MISSIONS_T2_STT_TEST_X_TITLE" offertext="@MISSIONS_T2_STT_TEST_X_OFFERTEXT" progresstext="@MISSIONS_T2_STT_TEST_X_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="goldsmuggler" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_STT_TEST_X_COMPLETIONTEXT" cancelable="true" playcompletesoundonce="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS" completehintbox="GOLDMARKET">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -138,6 +125,7 @@
     </rewards>
   </quest>
   
+  <!--STARTER TOWN TOURS-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CITYTOUR_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_CITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -792,7 +780,7 @@
     </rewards>
   </quest>
 
-  <!--CRAFTING GATHERING THING-->
+  <!--GO TO THE ROYAL CRAFTER TO START CRAFTER QUEST -->
   <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER_COMPLETIONTEXT" cancelable="true"  requiredachievementboardunlock="COMBAT_TRAINEE" requiredachievementboardunlockmasterylevel="1" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -812,27 +800,9 @@
     </rewards>
   </quest>
   
-  <!--GOLD THING-->
-  <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_Q,MISSIONS_T2_TUTORIAL_OPTIONS" cancelable="true"  hideifquestcompleted="MISSIONS_T2_STT_TEST_X">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="GOLD_SMUGGLER">
-        <distancefromquestgiver mindistance="0" maxdistance="3"/>
-        <questgivertag tag="GOLD_SMUGGLER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <completionstep>
-        <gotoquestgiver questgivervariable="GOLD_SMUGGLER" locationmarkerid="SMUGGLERTEST" markedinworld="true" markedonminimap="true"/>
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
 
-  <!--COMBAT THING-->
+
+  <!-- START OF COMBAT QUEST - DO EXPEDITION-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT_COMPLETIONTEXT" cancelable="true" completehintbox="FAMEBOOK" requiredachievementboardunlock="COMBAT_TRAINEE" requiredachievementboardunlockmasterylevel="1">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -871,8 +841,9 @@
     </rewards>
   </quest>
   
+  
+  <!--COMBAT QUEST - GET T3 GEAR AND DO A RANDOM DUNGEON-->
     <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT"  completetext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_COMPLETIONTEXT" cancelable="true" completehintbox="OPENWORLD">
-    <!--Fighting Quest - Collect Silver-->
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0" />
@@ -1128,15 +1099,15 @@
         <missions>
         <gotoquestgiver />
         </missions>
-          </extendedcompletionstep>
-    
+          </extendedcompletionstep>   
   </tasks>
     <rewards>
     </rewards>
   </quest>
 
+  
+  <!--GO TO ONE OF THE BIOME CITIES-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CITY" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2,MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_COMPLETIONTEXT" requiresonlyonepreviousquest="true" cancelable="true">
-    <!--Fighting Quest - Go Captain-->
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="3"/>
@@ -1167,8 +1138,9 @@
     </rewards>
   </quest>
   
+  
+  <!--RETURN TO THE COMMANDER AFTER GATHERER CRAFTER QUEST-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" completetext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_COMPLETIONTEXT" requiresonlyonepreviousquest="true"  cancelable="true">
-    <!--Fighting Quest - Go Captain-->
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="3"/>
@@ -1188,7 +1160,7 @@
   </quest>
   
 
-<!--GATHERING AND CRAFTING-->
+<!--LEARN HOW TO STUDY-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -1211,7 +1183,7 @@
   </quest>
   
  
-<!--GATHERING-->
+<!--GATHERING - SHOW OPTIONS WHAT TO GATHER-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"  completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED_COMPLETIONTEXT">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -1232,6 +1204,9 @@
     </rewards>
   </quest>
 
+  
+  <!--DECIDE WHAT TO GATHER-->
+  <!--ALL THE OTHER GATHER QUESTS ARE AT THE BUTTOM OF THE XML-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_COMPLETIONTEXT" hideifquestactive=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -1332,56 +1307,8 @@
     </rewards>
   </quest>
  
-
-  <!--ROYAL EXPLORER-->
   
-  
-   <!--<quest uniquename="MISSIONS_T2_TUTORIAL_GUILD" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GUILD_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GUILD_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GUILD_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_GUILD_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="GUILDS"/>
-        </preactions>
-        <missions>
-          <haveplaytime seconds ="5" textloca="@MISSIONS_T2_TUTORIAL_GUILD_SIDETEXT1"/>
-        </missions>
-      </extendedmissionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
-  
-   <quest uniquename="MISSIONS_T2_TUTORIAL_ISLAND" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_ISLAND_TITLE" offertext="@MISSIONS_T2_TUTORIAL_ISLAND_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_ISLAND_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_ISLAND_COMPLETIONTEXT" cancelable="true"  previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="0" />
-      </dynamiccluster>
-    </variables>
-    <tasks>
-      <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="ISLAND"/>
-        </preactions>
-        <missions>
-          <gotolocation locationmarkerid="ISLAND" textloca="@MISSIONS_T2_TUTORIAL_ISLAND_SIDETEXT1" seconds="5" markedinworld="true" markedonminimap="true"/>
-        </missions>
-      </extendedmissionstep>
-      <completionstep>
-        <gotoquestgiver />
-      </completionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>-->
-  
+  <!--CITY TOURS FOR BIOME CITIES-->
   <quest uniquename="MISSIONS_T2_BRIDGEWATCH_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
     <variables>
       <dynamiccluster name ="CLUSTER_A">
@@ -2028,10 +1955,14 @@
   </quest>
 
 
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--BASE TUTORIAL-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
 
-
-<!--TUTORIAL OBERON-->
-
+<!--TUTORIAL OBERON - THE BASE TUTORIAL ON THE ISLAND-->
+  
+  
+<!--LEARN TO MOVE; GET TO THE SURVIVOR-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_A" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_A_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_A_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_A_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_A_COMPLETIONTEXT" cancelable="false" playcompletesoundonce="true" completesound="Play_NPC_VO_P1_Silas_Welcome" completehintbox="SOFTCLEAR" >
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2074,6 +2005,7 @@
     </rewards>
   </quest>
 
+<!--LEARN ABOUT YOUR SITUATION;LEARN ABOUT USING SPELLS-->
     <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_B" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_B_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_B_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_B_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_B_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_A" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion" audiochangeonaccept="TUT_FIRST_QUEST_ACCEPTED">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2125,7 +2057,8 @@
     </rewards>
   </quest>
   
-      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion" audiochangeonaccept="TUT_CLEAR_MUSIC">  
+  <!--LEARN HOW TO GATHER-->
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_C" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_C_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_C_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_C_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_C_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_B" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
@@ -2163,6 +2096,7 @@
     </rewards>
   </quest>
   
+  <!--LEARN HOW TO CRAFT AND SELECT SPELLS-->
         <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_D" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_D_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_D_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_D_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_D_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_C" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress" completesound="Play_NPC_VO_P1_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2226,6 +2160,7 @@
     </rewards>
   </quest>
   
+  <!--LEARN HOW TO COMBAT AND UNLOCK DESTINY BOARD-->
       <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_E" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_E_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_E_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_E_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_E_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_D" cancelable="false" offersound="Play_NPC_VO_P1_Silas_Offer" acceptsound="Play_NPC_VO_P1_Silas_Accept" progresssound="Play_NPC_VO_P1_Silas_Progress">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2282,6 +2217,7 @@
     </rewards>
   </quest>
   
+  <!--LEARN ABOUT TUTORIAL INSTANCES AND MEET TIA-->
         <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_F" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_F_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_F_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_F_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_F_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_E" cancelable="false" completesound="Play_NPC_VO_P1_Tia_Welcome" playcompletesoundonce="true">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2309,7 +2245,7 @@
     </rewards>
   </quest>
   
-  
+  <!--LEARN MARKET PLACE GO TO SILAS-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_H" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_H_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_H_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_H_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_H_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_F" cancelable="false" offersound="Play_NPC_VO_P1_Tia_Offer" acceptsound="Play_NPC_VO_P1_Tia_Accept" progresssound="Play_NPC_VO_P1_Tia_Progress" completesound="Play_NPC_VO_P2_Silas_Welcome" playcompletesoundonce="true" nextquest="MISSIONS_T2_TUTORIAL_TEST_I">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2370,6 +2306,7 @@
     </rewards>
   </quest>
   
+  <!--LEARN ABOUT CRAFTING TOOLS-->
    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_I" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_I_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_I_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_I_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_I_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_H" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer"  acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2401,7 +2338,8 @@
       <item itemid="T1_2H_TOOL_KNIFE" count="1"/>
     </rewards>
   </quest>
- 
+  
+  <!--LEARN ABOUT THE WORLDMAP AND CLUSTERMAP-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_J" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_J_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_J_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_J_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_J_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_I" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2430,7 +2368,7 @@
     </rewards>
   </quest>
   
-  
+  <!--GATHER WOOD AND HIDE-->
    <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_K" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_K_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_K_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_K_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_K_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_J" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2469,6 +2407,7 @@
     </rewards>
   </quest>
 
+  <!--GATHER FIBER AND ORE-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_KA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_KA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_KA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_KA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_KA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_K" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" completesound="Play_NPC_VO_P2_Silas_Completion">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2512,6 +2451,7 @@
     </rewards>
   </quest>
    
+  <!--LEARN TO REFINE FIX THE SHIP-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_L" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_L_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_L_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_L_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="woundedcrafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_L_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_KA" cancelable="false" offersound="Play_NPC_VO_P2_Silas_Offer" acceptsound="Play_NPC_VO_P2_Silas_Accept" progresssound="Play_NPC_VO_P2_Silas_Progress" playcompletesoundonce="true" completesound="Play_NPC_VO_P2_Tia_Welcome">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2579,8 +2519,9 @@
     </rewards>
   </quest>
 
-  <!--TRIPPLE QUEST-->
   
+  <!--LEARN ABOUT LEARNINGPOINTS AND UNLOCK FIRST COMBAT NODE-->
+  <!--TRIPPLE QUEST - THERE ARE 3 POSSIBLE QUEST TO SORT PLAYERS INTO DIFFERENT AREAS ON THE ISLAND SO THEY DO NOT CLUMP-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_MA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_MA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_MA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_MA_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_MA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_L" cancelable="false" nextquest="MISSIONS_T2_TUTORIAL_TEST_NA" offersound="Play_NPC_VO_P2B_Tia_Offer"  acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2807,9 +2748,9 @@
     </rewards>
   </quest>
 
-  <!-- END - TRIPPLE QUEST-->
+ 
 
-
+<!--LEARN ABOUT T2 ARMOR AND WEAPONS AND CRAFTING STATIONS-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_NA" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_NA_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_NA_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_NA_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_NA_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_MA,MISSIONS_T2_TUTORIAL_TEST_MB,MISSIONS_T2_TUTORIAL_TEST_MC" cancelable="false" requiresonlyonepreviousquest="true"  offersound="Play_NPC_VO_P2_Tia_Offer"  acceptsound="Play_NPC_VO_P2_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2_Tia_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2857,6 +2798,7 @@
     </rewards>
   </quest>
     
+<!--GET T2 GEAR BY BUYING OR CRAFTING-->  
       <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_O" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_O_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_O_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_O_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_O_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_NA" cancelable="false"  offersound="Play_NPC_VO_P2_Tia_Offer" acceptsound="Play_NPC_VO_P2_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2_Tia_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -2926,7 +2868,7 @@
     </rewards>
   </quest>
   
-  
+  <!--FINAL QUEST OF TUTORIAL; KILL MOBS; LIGHT FIRES; GO TO STARTER TOWNS-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_P" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_P_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_P_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_P_PROGRESSTEXT" priority="2" minlevel="1" maxlevel="2" tags="captaintia" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_P_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_O" cancelable="false" offersound="Play_NPC_VO_P2B_Tia_Offer"   acceptsound="Play_NPC_VO_P2B_Tia_Accept" progresssound="Play_NPC_VO_P2_Tia_Progress" completesound="Play_NPC_VO_P2B_Tia_Completion">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -3008,6 +2950,7 @@
     </rewards>
   </quest>
   
+  <!--PICK A STARTER TOWN-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_Q" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_Q_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_Q_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_Q_PROGRESSTEXT" priority="3" minlevel="1" maxlevel="2" tags="captaintia2" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_Q_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_P" cancelable="false"  offersound="Play_NPC_VO_P2_Tia_Finale" progresssound="Play_NPC_VO_P2_Tia_Finale">  
     <variables>
       <dynamiccluster name="LOCATION_A">
@@ -3033,6 +2976,11 @@
     </rewards>
   </quest>
    
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  <!--F A C T I O N   Q U E S T S-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
   <!--CAERLEON-->
   <!--FACTIONS TOWARDS CAERLEON-->
   <playerfactionquest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON" title="@MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_TITLE"
@@ -4703,12 +4651,11 @@ Light-->
       <changeflagging/>
     </failconditions>
   </playerfactionquest>
-    
 
-<!--Resource Quests-->
-<!--Resource Quests-->
-<!--Resource Quests-->
-<!--Resource Quests-->
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  <!--RESOURCE GATHER QUESTS -->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
   
    <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_COMPLETIONTEXT" hideifquestactive="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted="MISSIONS_T2_TUTORIAL_GATHERING_FIBER MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
     <variables>

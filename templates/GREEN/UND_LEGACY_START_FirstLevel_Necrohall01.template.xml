@@ -38,7 +38,7 @@
     </criticalscenemember>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="ExitTrigger_10x10_EXIT" pos="5 -4 -127" roty="270">
-        <exit size="10 10" spawnpos="12.00082 -9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
+        <exit size="10 10" spawnpos="12.00082 -9.536743E-07" faction="None" kind="Cluster" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
           <guards>
             <guard pos="1.999999 -109.9992" />
             <guard pos="8.034482 -110.0224" />
@@ -611,9 +611,6 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="96.44 -8 -36.77" roty="45">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="-7.5 -4 -77.5" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
-        </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ARCHER" pos="-22.5 -8 -80" roty="270">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ARCHER" />
         </tile>
@@ -995,9 +992,6 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_MELEE" pos="5 -32 40">
           <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_MELEE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MINIBOSS" pos="5 -4 -84.71" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MINIBOSS" />
-        </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_MELEE" pos="-5 -32 75">
           <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_MELEE" />
         </tile>
@@ -1019,7 +1013,7 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="-90 -8 -80" roty="225">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MAGE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="-5 -4 -75" roty="135">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="-4.18 -4 -104.42" roty="42.68">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MAGE" pos="72.5 -16 12.5">
@@ -1210,7 +1204,7 @@
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="15 -4 -75" roty="225">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="14.47 -4 -103.15" roty="315">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ARCHER" pos="25 -16 -35">
@@ -1227,9 +1221,6 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_CURSED" pos="35 -28 25" roty="270">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SKELETON_CURSED" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SOLDIER" pos="17.5 -4 -77.5" roty="270">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_SOLDIER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_MELEE" pos="15 -32 75">
           <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_MELEE" />
@@ -1351,6 +1342,12 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_SKELETON_MELEE" pos="0 -32 40">
           <mobspawnpoint spawnbehavior="UNDEAD_SKELETON_MELEE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ARCHER" pos="-7.5 -4 -77.5" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ARCHER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_ARCHER" pos="17.5 -4 -77.5" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_ARCHER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_PULLER" pos="-22.5 -28 30" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_PULLER" />
@@ -2649,11 +2646,20 @@
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MINIBOSS" pos="55 -24 -35" roty="315">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MINIBOSS" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MINIBOSS" pos="5 -4 -84.71" roty="180">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MINIBOSS" />
-        </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_ENDBOSS_RARE" pos="5.32 -32 88.31" roty="180">
           <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_ENDBOSS_RARE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="-5 -4 -105" roty="315">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="12 -4 -73" roty="135">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="-2 -4 -73" roty="45">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="15 -4 -104" roty="225">
+          <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
         </tile>
       </layer>
     </layergroup>
@@ -2687,7 +2693,7 @@
     </layergroup>
     <tile name="FOREST_GREEN_UND_CRYPT_RAILING_LONG_B" pos="5 -32 100" roty="90" />
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="5 -4 -127" roty="270" id="exit_01" type="exit">
-      <exit size="10 10" spawnpos="12.00082 -9.536743E-07" faction="None" kind="Cluster" roadtype="Primary">
+      <exit size="10 10" spawnpos="12.00082 -9.536743E-07" faction="None" kind="Cluster" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
         <guards>
           <guard pos="1.999999 -109.9992" />
           <guard pos="8.034482 -110.0224" />
@@ -3100,7 +3106,6 @@
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_A_OBJ" pos="-95 -16 -55" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_A_OBJ" pos="35 0 -115" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_A_OBJ" pos="85 -24 -35" roty="180" />
-    <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_B_OBJECT" pos="-5 -4 -105" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_BROKEN_A" pos="-5 -32 85" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_BROKEN_A" pos="-55 -24 -35" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_BROKEN_A" pos="115 -8 55" roty="180" />
@@ -3902,6 +3907,7 @@
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 -56 105" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 -56 115" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 -56 125" />
+    <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_A" pos="-5 -4 -105" />
     <tile name="FOREST_GREEN_FILL_RUIN_PLATEAU_ARCH_FRONT_A" pos="125 -64 -25" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_PLATEAU_ARCH_FRONT_A" pos="115 -64 -25" roty="270" />
     <tile name="FOREST_GREEN_UND_RUIN_ARCH_A" pos="5 -32 100.5" roty="90" />
@@ -5560,22 +5566,10 @@
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="-35 -80 -15" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="65 -72 5" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="45 -80 -15" roty="270" />
-    <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="-5 -4 -105" roty="315">
-      <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
-    </tile>
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="35 -80 -15" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="-55 -72 5" />
     <tile name="FOREST_GREEN_CASTLE_WALL_ARCH_SIDE_CLOSED_EXTENSION_A" pos="-25 -80 -15" roty="270" />
-    <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="12 -4 -73" roty="135">
-      <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
-    </tile>
     <tile name="FOREST_GREEN_CASTLE_WALL_STRAIGHT_A" pos="5 -60 95" roty="270" />
-    <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="-2 -4 -73" roty="45">
-      <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_STATUE" pos="15 -4 -104" roty="225">
-      <mobspawnpoint spawnbehavior="UNDEAD_VETERAN_STATUE" />
-    </tile>
     <tile name="FOREST_GREEN_UND_CRYPT_RAILING_STAIRS_4M_A" pos="-15 -8 -80" roty="90" />
     <tile name="FOREST_GREEN_UND_POINT_LIGHT_STD" pos="12.5 1 -79.5" />
   </tiles>

@@ -43,11 +43,6 @@
         <shrine shrinetype="MORGANA_SHRINE_FAME_STANDARD" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="actionbuilding_01" type="actionbuilding" layerId="">
-      <tile name="BLACKMARKET" pos="314 0 295">
-        <actionbuilding />
-      </tile>
-    </criticalscenemember>
     <criticalscenemember id="lootchest_04" type="lootchest" layerId="">
       <tile name="FOREST_GREEN_LOOTCHEST_HERETIC_BOOKCHEST_STANDARD" pos="27 0 62.7" roty="46.71" />
     </criticalscenemember>
@@ -78,12 +73,29 @@
     </criticalscenemember>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="FOREST_GREEN_UND_ENTRANCE_DUNGEON_A" pos="60 0 80">
-        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" roadtype="Primary" />
+        <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="islandaccesspoint_01" type="islandaccesspoint" layerId="">
       <tile name="ISLAND_SELLER" pos="296 0 293" roty="270">
         <islandaccesspoint />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="monolith_05" type="monolith" layerId="">
+      <tile name="monolith_resource" pos="190 0 190">
+        <watchtower territorybarrierpos="0 0" territorybarriersize="150 150" resourcetype="Resource">
+          <guardspawnpoint behavior="GUARD" pos="181.2456 181.7709" roty="0" mobname="T6_MOB_WATCHTOWER_SOLDIER" guardtype="BASIC" />
+          <guardspawnpoint behavior="GUARD" pos="181.4847 184.4249" roty="315" mobname="T6_MOB_WATCHTOWER_ARCHER" guardtype="BASIC" />
+          <invaderspawnpoint pos="183.21 178.99" roty="0" mobType="BOSS" />
+          <invaderspawnpoint pos="194.54 177.66" roty="0" mobType="HELPER" />
+          <invaderspawnpoint pos="171.8 177.66" roty="0" mobType="HELPER" />
+          <invaderspawnpoint pos="171.8 190.61" roty="0" mobType="HELPER" />
+          <invaderspawnpoint pos="185.99 168.37" roty="0" mobType="HELPER" />
+          <boosterspawnpoint pos="191.91 178.08" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
+          <boosterspawnpoint pos="188.74 174.91" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
+          <boosterspawnpoint pos="194.33 180.5" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
+          <boosterspawnpoint pos="190.01 179.98" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
+        </watchtower>
       </tile>
     </criticalscenemember>
     <criticalscenemember id="actionbuilding_03" type="actionbuilding" layerId="">
@@ -111,21 +123,9 @@
         <actionbuilding />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="monolith_05" type="monolith" layerId="">
-      <tile name="monolith_resource" pos="190 0 190">
-        <watchtower territorybarrierpos="0 0" territorybarriersize="150 150" resourcetype="Resource">
-          <guardspawnpoint behavior="GUARD" pos="181.2456 181.7709" roty="0" mobname="T6_MOB_WATCHTOWER_SOLDIER" guardtype="BASIC" />
-          <guardspawnpoint behavior="GUARD" pos="181.4847 184.4249" roty="315" mobname="T6_MOB_WATCHTOWER_ARCHER" guardtype="BASIC" />
-          <invaderspawnpoint pos="183.21 178.99" roty="0" mobType="BOSS" />
-          <invaderspawnpoint pos="194.54 177.66" roty="0" mobType="HELPER" />
-          <invaderspawnpoint pos="171.8 177.66" roty="0" mobType="HELPER" />
-          <invaderspawnpoint pos="171.8 190.61" roty="0" mobType="HELPER" />
-          <invaderspawnpoint pos="185.99 168.37" roty="0" mobType="HELPER" />
-          <boosterspawnpoint pos="191.91 178.08" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
-          <boosterspawnpoint pos="188.74 174.91" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
-          <boosterspawnpoint pos="194.33 180.5" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
-          <boosterspawnpoint pos="190.01 179.98" roty="315" mobname="T6_MOB_WATCHTOWER_ARCANECOLLECTOR_VETERAN" />
-        </watchtower>
+    <criticalscenemember id="shrine_03" type="shrine" layerId="">
+      <tile name="SHRINE_AVA_KNIGHT_BOSS_BUFF" pos="596.86 0 595.37">
+        <shrine shrinetype="AVALON_SHRINE_KNIGHT_BOSS_BUFF" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="questgiverobject_01" type="questgiverobject" layerId="">
@@ -163,13 +163,35 @@
         <questgiverobject reference="FACTIONAGENT_OUTSIDE_SWAMP2" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="shrine_03" type="shrine" layerId="">
-      <tile name="SHRINE_AVA_KNIGHT_BOSS_BUFF" pos="596.86 0 595.37">
-        <shrine shrinetype="AVALON_SHRINE_KNIGHT_BOSS_BUFF" />
-      </tile>
-    </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_A" pos="305 1 434" roty="270" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="297 0 467" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="340 -8 450" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="350 -8 430" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="292 0 462" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="334 0 468" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_C" pos="336 1 447" roty="90" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="341 0 461" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_B" pos="349 1 457" roty="270" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="335 0 462" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="298 0 461" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_B" pos="306 1 457" roty="270" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_A" pos="348 1 434" roty="270" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="291 0 468" />
+    <tile name="FOREST_GREEN_FILL_RUIN_COLUMN_BROKEN_B" pos="340 0 467" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_DEBRIS_C" pos="293 1 447" roty="90" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="350 -8 450" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="360 -8 450" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="330 -8 440" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="330 -8 450" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="330 -8 460" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="330 -8 470" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="340 -8 470" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="340 -8 460" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="350 -8 460" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="360 -8 460" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="350 -8 470" />
     <tile name="Orb" pos="498 0 278">
       <orb type="ORB_GVG" />
     </tile>
@@ -205,18 +227,6 @@
     </tile>
     <tile name="Orb" pos="420 0 369">
       <orb type="ORB_GVG" />
-    </tile>
-    <tile name="ARENA_ORB" pos="118 0 523">
-      <orb type="ORB_ARENA_ZONE_CONSTANT" />
-    </tile>
-    <tile name="ARENA_ORB" pos="115 0 346">
-      <orb type="ORB_ARENA_ZONE_CONSTANT" />
-    </tile>
-    <tile name="ARENA_ORB" pos="298 0 528">
-      <orb type="ORB_ARENA_ZONE_CONSTANT" />
-    </tile>
-    <tile name="ARENA_ORB" pos="210 0 340">
-      <orb type="ORB_ARENA_ZONE_CONSTANT" />
     </tile>
     <tile name="FOREST_GREEN_T2_TREE_A" pos="403.5 0 289.5" roty="90" />
     <tile name="FOREST_GREEN_T2_TREE_A" pos="416.5 0 289.5" roty="180" />
@@ -293,16 +303,13 @@
     <criticaltile name="BUFF_SHRINE_PROTOTYPE" pos="11.04 0 46.16" id="shrine_02" type="shrine">
       <shrine shrinetype="MORGANA_SHRINE_FAME_STANDARD" />
     </criticaltile>
-    <criticaltile name="BLACKMARKET" pos="314 0 295" id="actionbuilding_01" type="actionbuilding">
-      <actionbuilding />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="315 0 295">
-      <minimapmarker type="Blackmarket" />
-    </tile>
     <criticaltile name="FOREST_GREEN_LOOTCHEST_HERETIC_BOOKCHEST_STANDARD" pos="27 0 62.7" roty="46.71" id="lootchest_04" type="lootchest" />
     <criticaltile name="EXPEDITION_AGENCY" pos="336.5 0 314.5" id="expeditionagent_01" type="expeditionagent">
       <expeditionagent agenttype="T6_EXPAGENT_ROYAL_CITY" />
     </criticaltile>
+    <tile name="MiniMapMarker" pos="333.45 0 316.5">
+      <minimapmarker type="Expedition" />
+    </tile>
     <criticaltile name="ARENA_AGENCY" pos="323 0 323" id="actionbuilding_08" type="actionbuilding">
       <actionbuilding />
     </criticaltile>
@@ -325,8 +332,8 @@
       <minimapmarker type="Harbor" />
     </tile>
     <tile name="FOREST_GREEN_FILL_TREE_GIANT_A" pos="470 0 324" />
-    <tile name="FOREST_GREEN_FILL_TREE_GIANT_B" pos="470 0 338" />
-    <tile name="FOREST_GREEN_FILL_TREE_GIANT_C" pos="470 0 352" />
+    <tile name="FOREST_GREEN_T1_TREE_GIANT_B" pos="470 0 338" />
+    <tile name="FOREST_GREEN_T1_TREE_GIANT_C" pos="470 0 352" />
     <tile name="FOREST_GREEN_FILL_TREE_MAMMOTH_A" pos="442 0 325" />
     <tile name="FOREST_GREEN_FILL_TREE_MAMMOTH_B" pos="441 0 347" />
     <tile name="FOREST_GREEN_FILL_TREE_MAMMOTH_C" pos="445 0 378" />
@@ -525,34 +532,6 @@
     <tile name="FOREST_GREEN_T4_ROCK" pos="62 0 564" />
     <tile name="FOREST_GREEN_T4_TREE_A" pos="61.5 0 575.5" />
     <tile name="FOREST_GREEN_T4_TREE_B" pos="62 0 594" />
-    <tile name="FOREST_GREEN_T5_BUSH_A" pos="72.5 0 584.5" />
-    <tile name="FOREST_GREEN_T5_ROCK" pos="73 0 564" />
-    <tile name="FOREST_GREEN_T5_TREE_A" pos="72 0 574" />
-    <tile name="FOREST_GREEN_T5_TREE_B" pos="72 0 594" />
-    <tile name="FOREST_GREEN_T6_BUSH_A" pos="85.5 0 585.5" />
-    <tile name="FOREST_GREEN_T6_ROCK" pos="86 0 564" />
-    <tile name="FOREST_GREEN_T6_TREE_A" pos="86 0 576" />
-    <tile name="FOREST_GREEN_T6_TREE_B" pos="86 0 594" />
-    <tile name="FOREST_GREEN_T7_BUSH_A" pos="99.5 0 583.5" />
-    <tile name="FOREST_GREEN_T7_ROCK" pos="99 0 564" />
-    <tile name="FOREST_GREEN_T7_TREE_A" pos="100 0 576" />
-    <tile name="FOREST_GREEN_T7_TREE_B" pos="100 0 594" />
-    <tile name="FOREST_GREEN_T8_BUSH_A" pos="128.5 0 587.5" />
-    <tile name="FOREST_GREEN_T8_ROCK" pos="119 0 564" />
-    <tile name="FOREST_GREEN_T8_TREE_A" pos="120 0 578" />
-    <tile name="FOREST_GREEN_T8_TREE_B" pos="122 0 597" />
-    <criticaltile name="FOREST_GREEN_UND_ENTRANCE_DUNGEON_A" pos="60 0 80" id="exit_01" type="exit">
-      <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" roadtype="Primary" />
-    </criticaltile>
-    <tile name="HIGHLAND_GREEN_T3_ORE" pos="48 0 554" />
-    <tile name="HIGHLAND_GREEN_T4_ORE" pos="62 0 554" />
-    <tile name="HIGHLAND_GREEN_T5_ORE" pos="73 0 554" />
-    <tile name="HIGHLAND_GREEN_T6_ORE" pos="85 0 553" />
-    <tile name="HIGHLAND_GREEN_T7_ORE" pos="100 0 553" />
-    <tile name="HIGHLAND_GREEN_T8_ORE" pos="119 0 553" />
-    <criticaltile name="ISLAND_SELLER" pos="296 0 293" roty="270" id="islandaccesspoint_01" type="islandaccesspoint">
-      <islandaccesspoint />
-    </criticaltile>
     <tile name="FOREST_GREEN_GROUND" pos="600 0 170" />
     <tile name="FOREST_GREEN_GROUND" pos="400 0 550" />
     <tile name="FOREST_GREEN_GROUND" pos="370 0 600" />
@@ -2024,46 +2003,28 @@
     <tile name="FOREST_GREEN_GROUND" pos="40 0 80" />
     <tile name="FOREST_GREEN_GROUND" pos="40 0 70" />
     <tile name="FOREST_GREEN_GROUND" pos="30 0 70" />
-    <criticaltile name="MARKETPLACE_MINIATURE" pos="430 0 190" id="actionbuilding_03" type="actionbuilding">
-      <actionbuilding />
+    <tile name="FOREST_GREEN_T5_BUSH_A" pos="72.5 0 584.5" />
+    <tile name="FOREST_GREEN_T5_ROCK" pos="73 0 564" />
+    <tile name="FOREST_GREEN_T5_TREE_A" pos="72 0 574" />
+    <tile name="FOREST_GREEN_T5_TREE_B" pos="72 0 594" />
+    <tile name="FOREST_GREEN_T6_BUSH_A" pos="85.5 0 585.5" />
+    <tile name="FOREST_GREEN_T6_ROCK" pos="86 0 564" />
+    <tile name="FOREST_GREEN_T6_TREE_A" pos="86 0 576" />
+    <tile name="FOREST_GREEN_T6_TREE_B" pos="86 0 594" />
+    <tile name="FOREST_GREEN_T7_BUSH_A" pos="99.5 0 583.5" />
+    <tile name="FOREST_GREEN_T7_ROCK" pos="99 0 564" />
+    <tile name="FOREST_GREEN_T7_TREE_A" pos="100 0 576" />
+    <tile name="FOREST_GREEN_T7_TREE_B" pos="100 0 594" />
+    <tile name="FOREST_GREEN_T8_BUSH_A" pos="128.5 0 587.5" />
+    <tile name="FOREST_GREEN_T8_ROCK" pos="119 0 564" />
+    <tile name="FOREST_GREEN_T8_TREE_A" pos="120 0 578" />
+    <tile name="FOREST_GREEN_T8_TREE_B" pos="122 0 597" />
+    <criticaltile name="FOREST_GREEN_UND_ENTRANCE_DUNGEON_A" pos="60 0 80" id="exit_01" type="exit">
+      <exit size="9 9" spawnpos="0 -10" faction="None" kind="DungeonSandbox" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit" />
     </criticaltile>
-    <criticaltile name="MARKETPLACE_MINIATURE" pos="410 0 430" id="actionbuilding_04" type="actionbuilding">
-      <actionbuilding />
+    <criticaltile name="ISLAND_SELLER" pos="296 0 293" roty="270" id="islandaccesspoint_01" type="islandaccesspoint">
+      <islandaccesspoint />
     </criticaltile>
-    <criticaltile name="MARKETPLACE_MINIATURE" pos="200 -2 420" id="actionbuilding_05" type="actionbuilding">
-      <actionbuilding />
-    </criticaltile>
-    <criticaltile name="MARKETPLACE_MINIATURE" pos="200 0 190" id="actionbuilding_06" type="actionbuilding">
-      <actionbuilding />
-    </criticaltile>
-    <criticaltile name="MARKETPLACE_SMALL" pos="303 0 315" id="actionbuilding_07" type="actionbuilding">
-      <actionbuilding />
-    </criticaltile>
-    <tile name="MiniMapMarker" pos="303 0 315">
-      <minimapmarker type="Marketplace" />
-    </tile>
-    <tile name="ROAMING_MEDIUM_NODE" pos="552 0 260">
-      <resourcenode nodetype="medium" resourcetype="roamingmob" />
-    </tile>
-    <tile name="ROAMING_MEDIUM_NODE" pos="294 0 126">
-      <resourcenode nodetype="medium" resourcetype="roamingmob" />
-    </tile>
-    <tile name="ROAMING_MEDIUM_NODE" pos="141 0 220">
-      <resourcenode nodetype="medium" resourcetype="roamingmob" />
-    </tile>
-    <tile name="SpawnPoint_BEAR" pos="195.4 0 564.5" />
-    <tile name="SpawnPoint_BEAR" pos="354.91 0 159.96" />
-    <tile name="SpawnPoint_BOAR" pos="184.05 0 563.84" />
-    <tile name="SpawnPoint_BOAR" pos="400.66 0 127.28" />
-    <tile name="SpawnPoint_DIREBEAR" pos="456.03 0 157.78" />
-    <tile name="SpawnPoint_DIREBEAR" pos="244.59 0 563.9" />
-    <tile name="SpawnPoint_DIREBOAR" pos="466.9 0 100.71" />
-    <tile name="SpawnPoint_DIREBOAR" pos="226.26 0 563.24" />
-    <tile name="SpawnPoint_DIREWOLF" pos="210.98 0 563.69" />
-    <tile name="SpawnPoint_FOX" pos="505.71 0 199.7" />
-    <tile name="SpawnPoint_FOX" pos="159.35 0 564.98" />
-    <tile name="SpawnPoint_RABBIT" pos="147.25 0 565.18" />
-    <tile name="SpawnPoint_RABBIT" pos="526.69 0 168.49" />
     <criticaltile name="monolith_resource" pos="190 0 190" id="monolith_05" type="monolith">
       <watchtower territorybarrierpos="0 0" territorybarriersize="150 150" resourcetype="Resource">
         <guardspawnpoint behavior="GUARD" pos="181.2456 181.7709" roty="0" mobname="T6_MOB_WATCHTOWER_SOLDIER" guardtype="BASIC" />
@@ -2532,7 +2493,7 @@
     <tile name="FOREST_GREEN_GROUND" pos="100 0 270" />
     <tile name="FOREST_GREEN_GROUND" pos="90 0 120" />
     <tile name="FOREST_GREEN_GROUND" pos="200 0 160" />
-    <tile name="FOREST_GREEN_RIVER_8M_CORNER" pos="230 -8 240" />
+    <tile name="FOREST_GREEN_RIVER_8M_CORNER" pos="230 -8 240" roty="180" />
     <tile name="FOREST_GREEN_GROUND" pos="150 0 270" />
     <tile name="FOREST_GREEN_GROUND" pos="180 0 190" />
     <tile name="FOREST_GREEN_RIVER_8M_STRAIGHT_C" pos="230 -8 290" roty="180" />
@@ -2608,6 +2569,37 @@
     <tile name="FOREST_GREEN_CONSTRUCTION_SIDE" pos="290 0 280" roty="270" />
     <tile name="FOREST_GREEN_RIVER_8M_INNERCORNER" pos="300 -8 230" roty="180" />
     <tile name="FOREST_GREEN_GROUND" pos="90 0 300" />
+    <criticaltile name="MARKETPLACE_MINIATURE" pos="430 0 190" id="actionbuilding_03" type="actionbuilding">
+      <actionbuilding />
+    </criticaltile>
+    <criticaltile name="MARKETPLACE_MINIATURE" pos="410 0 430" id="actionbuilding_04" type="actionbuilding">
+      <actionbuilding />
+    </criticaltile>
+    <criticaltile name="MARKETPLACE_MINIATURE" pos="200 -2 420" id="actionbuilding_05" type="actionbuilding">
+      <actionbuilding />
+    </criticaltile>
+    <criticaltile name="MARKETPLACE_MINIATURE" pos="200 0 190" id="actionbuilding_06" type="actionbuilding">
+      <actionbuilding />
+    </criticaltile>
+    <criticaltile name="MARKETPLACE_SMALL" pos="303 0 315" id="actionbuilding_07" type="actionbuilding">
+      <actionbuilding />
+    </criticaltile>
+    <tile name="MiniMapMarker" pos="303 0 315">
+      <minimapmarker type="Marketplace" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="552 0 260">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="294 0 126">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="ROAMING_MEDIUM_NODE" pos="141 0 220">
+      <resourcenode nodetype="medium" resourcetype="roamingmob" />
+    </tile>
+    <tile name="SpawnPoint_BEAR" pos="195.4 0 564.5" />
+    <tile name="SpawnPoint_BEAR" pos="354.91 0 159.96" />
+    <tile name="SpawnPoint_BOAR" pos="184.05 0 563.84" />
+    <tile name="SpawnPoint_BOAR" pos="400.66 0 127.28" />
     <tile name="FOREST_GREEN_CONSTRUCTION" pos="270 0 380" />
     <tile name="FOREST_GREEN_GROUND" pos="170 0 390" />
     <tile name="FOREST_GREEN_CONSTRUCTION" pos="250 0 380" />
@@ -3125,7 +3117,7 @@
     <tile name="FOREST_GREEN_CONSTRUCTION_SIDE" pos="240 0 350" roty="180" />
     <tile name="FOREST_GREEN_GROUND" pos="170 0 530" />
     <tile name="FOREST_GREEN_RIVER_8M_INNERCORNER" pos="300 -8 410" roty="90" />
-    <tile name="FOREST_GREEN_RIVER_8M_CORNER" pos="230 -8 400" roty="90" />
+    <tile name="FOREST_GREEN_RIVER_8M_CORNER" pos="230 -8 400" roty="270" />
     <tile name="FOREST_GREEN_RIVER_8M_INNERCORNER" pos="220 -8 340" />
     <tile name="FOREST_GREEN_CONSTRUCTION_SIDE" pos="300 0 390" roty="270" />
     <tile name="FOREST_GREEN_GROUND" pos="190 0 420" />
@@ -3137,9 +3129,6 @@
     <tile name="FOREST_GREEN_RIVER_8M_INNERCORNER" pos="290 -8 400" roty="270" />
     <tile name="FOREST_GREEN_RIVER_8M_INNERCORNER" pos="270 -8 400" roty="270" />
     <tile name="FOREST_GREEN_GROUND" pos="230 0 440" />
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="240.83 0 219.05" roty="90">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
     <tile name="FOREST_GREEN_GROUND" pos="440 0 290" />
     <tile name="FOREST_GREEN_GROUND" pos="340 0 80" />
     <tile name="FOREST_GREEN_GROUND" pos="400 0 260" />
@@ -3669,10 +3658,11 @@
     <tile name="FOREST_GREEN_CONSTRUCTION_SIDE" pos="360 0 250" roty="90" />
     <tile name="FOREST_GREEN_GROUND" pos="370 0 110" />
     <tile name="FOREST_GREEN_CONSTRUCTION_SIDE" pos="380 0 250" roty="90" />
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="240.23 0 216">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_WOLF" pos="450.32 0 200.11" />
+    <tile name="SpawnPoint_DIREWOLF" pos="210.98 0 563.69" />
+    <tile name="SpawnPoint_FOX" pos="505.71 0 199.7" />
+    <tile name="SpawnPoint_FOX" pos="159.35 0 564.98" />
+    <tile name="SpawnPoint_RABBIT" pos="147.25 0 565.18" />
+    <tile name="SpawnPoint_RABBIT" pos="526.69 0 168.49" />
     <tile name="FOREST_GREEN_GROUND" pos="530 0 370" />
     <tile name="FOREST_GREEN_GROUND" pos="510 0 310" />
     <tile name="FOREST_GREEN_GROUND" pos="530 0 490" />
@@ -4202,15 +4192,6 @@
     <tile name="FOREST_GREEN_FARMLAND_CORNER" pos="380 0 390" roty="270" />
     <tile name="FOREST_GREEN_FARMLAND_CORNER" pos="380 0 350" />
     <tile name="FOREST_GREEN_FARMLAND_CORNER" pos="330 0 350" roty="90" />
-    <tile name="SpawnPoint_WOLF" pos="171.84 0 564.55" />
-    <tile name="SWAMP_GREEN_T3_FIBER" pos="48.5 0 544.5" />
-    <tile name="SWAMP_GREEN_T4_FIBER" pos="61.5 0 544.5" />
-    <tile name="T1_SILVERCOINS_NODE" pos="318.5 0 283.5" />
-    <tile name="T1_SILVERCOINS_NODE" pos="323.5 0 283.5" />
-    <tile name="FOREST_GREEN_HER_WATER_RIVER_DIRTY_SMALL" pos="40 1 30" />
-    <tile name="FOREST_GREEN_WATER_river" pos="60 1 30" />
-    <tile name="FOREST_GREEN_HER_WATER_SEALEVEL_DIRTY_SMALL" pos="50 0 30" />
-    <tile name="SWAMP_GREEN_T5_FIBER" pos="72.5 0 544.5" />
     <tile name="HALLOWEEN_BANNER_A" pos="327.5 0 71.5" />
     <tile name="HALLOWEEN_BANNER_B" pos="325.5 2 70.5" />
     <tile name="HALLOWEEN_BUNTING_A" pos="315 0 84.5" />
@@ -4259,68 +4240,9 @@
     <tile name="HALLOWEEN_STAND_E" pos="308 0 58" roty="270" />
     <tile name="HALLOWEEN_STAND_E" pos="331 0 80" roty="90" />
     <compoundtile name="_FOREST_GREEN_UNDEAD_HALLOWEEN_CAMP_01" pos="321 0 144" />
-    <tile name="SWAMP_GREEN_T6_FIBER" pos="85.5 0 544.5" />
-    <tile name="SWAMP_GREEN_T7_FIBER" pos="98.5 0 544.5" />
-    <tile name="SWAMP_GREEN_T8_FIBER" pos="118.5 0 544.5" />
-    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="319.5 0 315.5" id="questgiverobject_01" type="questgiverobject">
-      <questgiverobject reference="COMBATAGENT_ROYAL" />
-    </criticaltile>
-    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="317.5 0 321.5" id="questgiverobject_02" type="questgiverobject">
-      <questgiverobject reference="COMBATAGENT_ROYAL" />
-    </criticaltile>
-    <tile name="Atmosphere_WRL_NONE_DL_NONE" pos="6.38 0 6.68" />
-    <tile name="FOREST_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="36.73 0 46.89" scale="1.2 1.2 1.2" />
-    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="317.95 0 348.07" id="questgiverobject_03" type="questgiverobject">
-      <questgiverobject reference="FACTIONAGENT_MOUNTAIN" />
-    </criticaltile>
-    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="317.95 0 355.47" id="questgiverobject_06" type="questgiverobject">
-      <questgiverobject reference="FACTIONAGENT_SWAMP" />
-    </criticaltile>
-    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 355.61" id="questgiverobject_04" type="questgiverobject">
-      <questgiverobject reference="FACTIONAGENT_OUTSIDE_SWAMP" />
-    </criticaltile>
-    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 361.94" id="questgiverobject_05" type="questgiverobject">
-      <questgiverobject reference="FACTIONAGENT_OUTSIDE_HIGHLAND" />
-    </criticaltile>
-    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 348.15" id="questgiverobject_07" type="questgiverobject">
-      <questgiverobject reference="FACTIONAGENT_OUTSIDE_SWAMP2" />
-    </criticaltile>
-    <tile name="SHRINE_MORGANA_ATTACKSPEED_UNCOMMON" pos="154.8 0.88 27.48">
-      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
+    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="240.83 0 219.05" roty="90">
+      <mobspawnpoint behavior="GUARD" />
     </tile>
-    <tile name="SHRINE_MORGANA_ATTACKSPEED_STANDARD" pos="134.42 0.88 27.51">
-      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
-    </tile>
-    <tile name="SHRINE_MORGANA_ATTACKSPEED_RARE" pos="113.3 0.88 27.96">
-      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
-    </tile>
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="375 0 190" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="345 0 190" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="345 0 220" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="375 0 220" />
-    <tile name="FixedExit_10x10_EXIT_RND-DNG" pos="365 0 315" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="70 0 245" roty="90" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="33 0 295" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="30 0 455" roty="90" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="69 0 271" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="51 0 400" roty="90" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="20 0 322" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="67 0 355" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="19 0 515" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="68 0 173" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="57 0 452" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="49 0 284" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="36 0 342" roty="90" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="45 0 221" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="65 0 212" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="24 0 252" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="35 0 152" roty="90" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="66 0 338" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="44 0 484" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="64 0 309" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="30 0 121" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="19 0 414" roty="180" />
-    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="28 0 484" />
     <criticaltile name="SHRINE_AVA_KNIGHT_BOSS_BUFF" pos="596.86 0 595.37" id="shrine_03" type="shrine">
       <shrine shrinetype="AVALON_SHRINE_KNIGHT_BOSS_BUFF" />
     </criticaltile>
@@ -7949,20 +7871,8 @@
     <tile name="FOREST_GREEN_GROUND" pos="850 0 160" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_4M_STRAIGHT_A" pos="710 0 70" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_4M_RAMP" pos="690 0 90" roty="180" />
-    <tile name="TILESWITCH_TEST_GATE" pos="700.5 0 69.5">
-      <tileswitch mode="MobTracker" trackerid="DEBUG" />
-    </tile>
     <tile name="SpawnPoint_RABBIT" pos="700.05 0 63.45" roty="180">
       <mobspawnpoint trackerid="DEBUG" />
-    </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="691.5 0 89.5" roty="90">
-      <tileswitch mode="MobTracker" trackerid="DEBUG3" triggerevent="true" />
-    </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="709.5 1 97.5" roty="180">
-      <tileswitch mode="MobTracker" trackerid="DEBUG2" triggerevent="true" />
-    </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="720.5 0 80.5" roty="270">
-      <tileswitch mode="MobTracker" trackerid="DEBUG1" />
     </tile>
     <tile name="SpawnPoint_RABBIT" pos="697.51 0 63.45" roty="180">
       <mobspawnpoint trackerid="DEBUG" />
@@ -7979,9 +7889,6 @@
     <tile name="SpawnPoint_RABBIT" pos="709.82 0 106.99" roty="180">
       <mobspawnpoint trackerid="DEBUG2" />
     </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="726.5 0 74.5" roty="180">
-      <tileswitch mode="MobTracker" trackerid="DEBUG1" />
-    </tile>
     <tile name="SpawnPoint_RABBIT" pos="729.37 0 79.67" roty="180">
       <mobspawnpoint trackerid="DEBUG1" />
     </tile>
@@ -7990,12 +7897,6 @@
     </tile>
     <tile name="SpawnPoint_RABBIT" pos="730.21 0 81.93" roty="180">
       <mobspawnpoint trackerid="DEBUG1" />
-    </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="733.5 0 100.5" roty="180">
-      <tileswitch mode="MobTracker" trackerid="DEBUG_NONE" triggerevent="true" />
-    </tile>
-    <tile name="TILESWITCH_TEST_GATE" pos="664.38 0 41.53">
-      <tileswitch mode="MobTracker" trackerid="DEBUG_MORTAR" />
     </tile>
     <tile name="SpawnPoint_T3_HERETIC_MORTAR_VETERAN" pos="663.8 0 41.83">
       <mobspawnpoint behavior="GUARD" trackerid="DEBUG_MORTAR" />
@@ -8027,6 +7928,89 @@
     <tile name="SpawnPoint_RANDOM_TRAP_SPIKE_A_COMMANDER" pos="342.4 0 258.21">
       <mobspawnpoint behavior="GUARD" spawnbehavior="TRAP_DEMON_SPIKE_A_COMMANDER" />
     </tile>
+    <tile name="SpawnPoint_RANDOM_DEBUG" pos="247.8 0 243.63">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="DEBUG_STUFF" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_DEBUG" pos="238.38 0 242.76">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="DEBUG_STUFF" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_DEBUG" pos="247.36 0 256.71">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="DEBUG_STUFF" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_DEBUG" pos="237.89 0 257.09">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="DEBUG_STUFF" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_DEBUG" pos="243.09 0 250.69">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="DEBUG_STUFF" />
+    </tile>
+    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="240.23 0 216">
+      <mobspawnpoint behavior="GUARD" />
+    </tile>
+    <tile name="SpawnPoint_WOLF" pos="450.32 0 200.11" />
+    <tile name="SpawnPoint_WOLF" pos="171.84 0 564.55" />
+    <tile name="T1_SILVERCOINS_NODE" pos="318.5 0 283.5" />
+    <tile name="T1_SILVERCOINS_NODE" pos="323.5 0 283.5" />
+    <tile name="FOREST_GREEN_HER_WATER_RIVER_DIRTY_SMALL" pos="40 1 30" />
+    <tile name="FOREST_GREEN_WATER_river" pos="60 1 30" />
+    <tile name="FOREST_GREEN_HER_WATER_SEALEVEL_DIRTY_SMALL" pos="50 0 30" />
+    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="319.5 0 315.5" id="questgiverobject_01" type="questgiverobject">
+      <questgiverobject reference="COMBATAGENT_ROYAL" />
+    </criticaltile>
+    <criticaltile name="T2_AGENT_ROYALARMY_COMBAT_M" pos="317.5 0 321.5" id="questgiverobject_02" type="questgiverobject">
+      <questgiverobject reference="COMBATAGENT_ROYAL" />
+    </criticaltile>
+    <tile name="Atmosphere_WRL_NONE_DL_NONE" pos="6.38 0 6.68" />
+    <tile name="FOREST_GREEN_FILL_NPCS_CONSTRUCTOR_A" pos="36.73 0 46.89" scale="1.2 1.2 1.2" />
+    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="317.95 0 348.07" id="questgiverobject_03" type="questgiverobject">
+      <questgiverobject reference="FACTIONAGENT_MOUNTAIN" />
+    </criticaltile>
+    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="317.95 0 355.47" id="questgiverobject_06" type="questgiverobject">
+      <questgiverobject reference="FACTIONAGENT_SWAMP" />
+    </criticaltile>
+    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 355.61" id="questgiverobject_04" type="questgiverobject">
+      <questgiverobject reference="FACTIONAGENT_OUTSIDE_SWAMP" />
+    </criticaltile>
+    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 361.94" id="questgiverobject_05" type="questgiverobject">
+      <questgiverobject reference="FACTIONAGENT_OUTSIDE_HIGHLAND" />
+    </criticaltile>
+    <criticaltile name="T2_AGENT_MOUNTAIN_FACTION_M" pos="308.78 0 348.15" id="questgiverobject_07" type="questgiverobject">
+      <questgiverobject reference="FACTIONAGENT_OUTSIDE_SWAMP2" />
+    </criticaltile>
+    <tile name="SHRINE_MORGANA_ATTACKSPEED_UNCOMMON" pos="154.8 0.88 27.48">
+      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
+    </tile>
+    <tile name="SHRINE_MORGANA_ATTACKSPEED_STANDARD" pos="134.42 0.88 27.51">
+      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
+    </tile>
+    <tile name="SHRINE_MORGANA_ATTACKSPEED_RARE" pos="113.3 0.88 27.96">
+      <spellzone spell="SPELLZONE_SHRINE_BONUSFAME_STANDARD" />
+    </tile>
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="375 0 190" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="345 0 190" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="345 0 220" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="375 0 220" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="70 0 245" roty="90" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="33 0 295" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="30 0 455" roty="90" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="69 0 271" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="51 0 400" roty="90" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="20 0 322" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="67 0 355" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="19 0 515" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="68 0 173" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="57 0 452" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="49 0 284" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="36 0 342" roty="90" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="45 0 221" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="65 0 212" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="24 0 252" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="35 0 152" roty="90" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="66 0 338" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="44 0 484" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="64 0 309" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="30 0 121" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="19 0 414" roty="180" />
+    <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="28 0 484" />
     <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="47 0 239" roty="180" />
     <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="64 0 286" />
     <tile name="RandomExitPositionMarker_10x10_EXIT_RND-DNG" pos="53 0 184" roty="90" />

@@ -2,7 +2,7 @@
   <criticalscenemembers>
     <criticalscenemember id="exit_01" type="exit" layerId="">
       <tile name="Exit" pos="10.5 18 80.5" roty="90">
-        <exit size="15 15" spawnpos="15.00009 -0.4679899" faction="Heretic" kind="DungeonSolo" roadtype="Primary">
+        <exit size="15 15" spawnpos="15.00009 -0.4679899" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
           <guards>
             <guard pos="15.03201 65.49991" />
             <guard pos="5.032008 65.49991" />
@@ -13,7 +13,7 @@
   </criticalscenemembers>
   <tiles>
     <criticaltile name="Exit" pos="10.5 18 80.5" roty="90" id="exit_01" type="exit">
-      <exit size="15 15" spawnpos="15.00009 -0.4679899" faction="Heretic" kind="DungeonSolo" roadtype="Primary">
+      <exit size="15 15" spawnpos="15.00009 -0.4679899" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
         <guards>
           <guard pos="15.03201 65.49991" />
           <guard pos="5.032008 65.49991" />
@@ -98,6 +98,18 @@
     <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-47 12 -41" roty="270">
       <mobspawnpoint behavior="GUARD" />
     </tile>
+    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-81 22 10" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="10.02 22 102.16" roty="161">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="72.24 18 -71.82" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-60 22 -51" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
+    </tile>
     <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-11 22 87" roty="45">
       <mobspawnpoint behavior="GUARD" />
     </tile>
@@ -141,18 +153,6 @@
           <waypoint pos="-59 56" idle="3" pace="WALK" />
           <waypoint pos="-50.00001 56" idle="0" pace="WALK" />
           <waypoint pos="-44 55" idle="0" pace="WALK" />
-        </path>
-      </mobspawnpoint>
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-8 22 70">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="-8 71" idle="0" pace="WALK" />
-          <waypoint pos="-8 85" idle="0" pace="WALK" />
-          <waypoint pos="-0.999999 92" idle="0" pace="WALK" />
-          <waypoint pos="10 94" idle="0" pace="WALK" />
-          <waypoint pos="-0.999999 92" idle="0" pace="WALK" />
-          <waypoint pos="-8 85" idle="0" pace="WALK" />
         </path>
       </mobspawnpoint>
     </tile>
@@ -216,6 +216,18 @@
     <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-58 22 -45" roty="45">
       <mobspawnpoint behavior="GUARD" />
     </tile>
+    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-8 22 70.45">
+      <mobspawnpoint behavior="PATROL">
+        <path>
+          <waypoint pos="-8 71.45" idle="0" pace="WALK" />
+          <waypoint pos="-8 85.45" idle="0" pace="WALK" />
+          <waypoint pos="-0.999999 92.45" idle="0" pace="WALK" />
+          <waypoint pos="10 94.45" idle="0" pace="WALK" />
+          <waypoint pos="-0.999999 92.45" idle="0" pace="WALK" />
+          <waypoint pos="-8 85.45" idle="0" pace="WALK" />
+        </path>
+      </mobspawnpoint>
+    </tile>
     <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-82 28 -65" roty="90">
       <mobspawnpoint behavior="GUARD" />
     </tile>
@@ -269,18 +281,6 @@
     </tile>
     <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-27 12 -84" roty="270">
       <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-81 22 10" roty="90">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="10.02 22 102.16" roty="161">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="72.24 18 -71.82" roty="270">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-60 22 -51" roty="90">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
     </tile>
     <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-31 14 -70" roty="90">
       <mobspawnpoint behavior="GUARD" />
@@ -343,18 +343,6 @@
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="29 22 70">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="29 71" idle="0" pace="WALK" />
-          <waypoint pos="29 84.99999" idle="0" pace="WALK" />
-          <waypoint pos="22 92" idle="0" pace="WALK" />
-          <waypoint pos="11 94" idle="0" pace="WALK" />
-          <waypoint pos="22 92" idle="0" pace="WALK" />
-          <waypoint pos="29 84.99999" idle="0" pace="WALK" />
-        </path>
-      </mobspawnpoint>
-    </tile>
     <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-59 12 -28">
       <mobspawnpoint behavior="GUARD" />
     </tile>
@@ -366,6 +354,18 @@
     </tile>
     <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="11 12 -62">
       <mobspawnpoint behavior="GUARD" />
+    </tile>
+    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="29 22 70.62">
+      <mobspawnpoint behavior="PATROL">
+        <path>
+          <waypoint pos="29 71.62" idle="0" pace="WALK" />
+          <waypoint pos="29 85.62" idle="0" pace="WALK" />
+          <waypoint pos="22 92.62" idle="0" pace="WALK" />
+          <waypoint pos="11 94.62" idle="0" pace="WALK" />
+          <waypoint pos="22 92.62" idle="0" pace="WALK" />
+          <waypoint pos="29 85.62" idle="0" pace="WALK" />
+        </path>
+      </mobspawnpoint>
     </tile>
     <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="33 12 -33" roty="270">
       <mobspawnpoint behavior="GUARD" />
@@ -618,150 +618,71 @@
     <tile name="FOREST_GREEN_GROUND_SUB_02_CORNER_A" pos="-45 12 5" roty="180" />
     <tile name="FOREST_GREEN_GROUND_SUB_02_INNERCORNER_A" pos="-45 12 -5" roty="180" />
     <tile name="FOREST_GREEN_GROUND_SUB_02" pos="5 20 -25" roty="180" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 10" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -30" />
-    <tile name="FOREST_GREEN_GROUND" pos="105 12 -25" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 12 55" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 0 -115" roty="90" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 -15" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="75 12 85" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 -5" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="65 0 145" />
-    <tile name="FOREST_GREEN_GROUND" pos="25 12 -95" />
-    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -25" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 -90" />
-    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -75" />
-    <tile name="FOREST_GREEN_GROUND" pos="-125 0 25" roty="90" />
-    <tile name="FOREST_GREEN_GROUND" pos="-15 12 -25" />
-    <tile name="FOREST_GREEN_GROUND" pos="35 12 -95" />
-    <tile name="FOREST_GREEN_GROUND" pos="-65 12 65" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-145 0 -5" />
-    <tile name="FOREST_GREEN_GROUND" pos="-135 0 -105" roty="90" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="20 0 -140" />
-    <tile name="FOREST_GREEN_GROUND" pos="-145 0 -15" />
-    <tile name="FOREST_GREEN_GROUND" pos="-95 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-75 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -35" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 0 -95" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 0 -105" />
-    <tile name="FOREST_GREEN_GROUND" pos="-145 0 -35" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 0 -115" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="140 0 20" />
     <tile name="FOREST_GREEN_GROUND" pos="-55 12 -75" />
-    <tile name="FOREST_GREEN_GROUND" pos="75 12 45" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 -25" />
-    <tile name="FOREST_GREEN_GROUND" pos="65 12 -45" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -45" />
-    <tile name="FOREST_GREEN_GROUND" pos="105 0 45" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 -35" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -25" />
-    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -85" />
+    <tile name="FOREST_GREEN_GROUND" pos="75 0 55" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="95 12 -15" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -55" roty="90" />
     <tile name="FOREST_GREEN_GROUND" pos="45 12 45" roty="90" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 0 145" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -65" />
-    <tile name="FOREST_GREEN_GROUND" pos="105 12 -15" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 0 145" />
-    <tile name="FOREST_GREEN_GROUND" pos="-65 0 -115" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 0 -135" />
-    <tile name="FOREST_GREEN_GROUND" pos="95 0 45" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -55" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 12 -95" />
-    <tile name="FOREST_GREEN_GROUND" pos="75 0 55" />
-    <tile name="FOREST_GREEN_GROUND" pos="135 0 -45" />
-    <tile name="FOREST_GREEN_GROUND" pos="-145 0 -25" />
-    <tile name="FOREST_GREEN_GROUND" pos="-15 12 95" roty="270" />
-    <tile name="FOREST_GREEN_GROUND" pos="75 0 145" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="-125 0 35" roty="90" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="0 0 140" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 12 65" />
-    <tile name="FOREST_GREEN_GROUND" pos="-145 0 -105" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 5" />
-    <tile name="FOREST_GREEN_GROUND" pos="105 12 -35" />
-    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -5" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 0 125" roty="180" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 -45" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="45 12 -95" />
-    <tile name="FOREST_GREEN_GROUND" pos="15 0 -125" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 0 45" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-80 12 70" />
-    <tile name="FOREST_GREEN_GROUND" pos="125 0 105" />
-    <tile name="FOREST_GREEN_GROUND" pos="-35 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-25 12 65" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 12 75" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 0 95" roty="270" />
-    <tile name="FOREST_GREEN_GROUND" pos="95 12 -15" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="75 0 -135" />
-    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 0 -145" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="45 12 55" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="-95 0 -135" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -75" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 45" roty="90" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -35" />
-    <tile name="FOREST_GREEN_GROUND" pos="65 12 -5" />
-    <tile name="FOREST_GREEN_GROUND" pos="-65 12 -35" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="135 0 85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -5" />
-    <tile name="FOREST_GREEN_GROUND" pos="135 0 105" roty="0" />
-    <tile name="FOREST_GREEN_GROUND" pos="45 12 35" roty="90" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="140 0 -60" />
-    <tile name="FOREST_GREEN_GROUND" pos="45 12 -65" />
-    <tile name="FOREST_GREEN_GROUND" pos="5 12 -65" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-90 12 10" />
-    <tile name="FOREST_GREEN_GROUND" pos="-65 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -35" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 30" />
-    <tile name="FOREST_GREEN_GROUND" pos="15 12 -65" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="15 0 115" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="60 12 100" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 -50" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 0 105" roty="270" />
-    <tile name="FOREST_GREEN_GROUND_40x40" pos="130 0 50" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-120 0 50" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="100 0 140" />
-    <tile name="FOREST_GREEN_GROUND" pos="145 0 105" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -85" />
-    <tile name="FOREST_GREEN_GROUND" pos="85 12 85" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 50" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="-5 0 -135" />
+    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -85" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -45" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-35 12 -85" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="75 12 85" roty="180" />
     <tile name="FOREST_GREEN_GROUND" pos="-35 12 -75" />
-    <tile name="FOREST_GREEN_GROUND_40x40" pos="-130 0 80" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 10" />
-    <tile name="FOREST_GREEN_GROUND" pos="135 0 5" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 -10" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -50" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-40 0 140" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="40 0 -140" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -45" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -70" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 100" />
+    <tile name="FOREST_GREEN_GROUND" pos="-65 12 -35" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="45 12 35" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -75" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="45 12 -95" />
+    <tile name="FOREST_GREEN_GROUND" pos="105 12 -35" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -25" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -5" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-75 12 5" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="55 12 55" />
+    <tile name="FOREST_GREEN_GROUND" pos="35 12 -95" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="15 12 -65" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -65" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-65 12 -85" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="85 12 85" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-125 0 25" />
+    <tile name="FOREST_GREEN_GROUND" pos="-5 12 -85" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -85" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-25 12 65" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -45" />
+    <tile name="FOREST_GREEN_GROUND" pos="65 12 -5" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="45 12 55" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 45" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="55 0 75" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="85 12 75" roty="90" />
+    <tile name="FOREST_GREEN_GROUND" pos="-45 12 65" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-15 12 -25" />
+    <tile name="FOREST_GREEN_GROUND" pos="-15 12 95" />
+    <tile name="FOREST_GREEN_GROUND" pos="105 12 -15" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-55 12 65" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -75" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-95 12 -85" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-55 12 -35" />
+    <tile name="FOREST_GREEN_GROUND" pos="25 12 -95" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-35 12 65" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="5 12 -65" />
+    <tile name="FOREST_GREEN_GROUND" pos="75 12 45" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="55 12 -95" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -85" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -35" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -5" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 -35" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="105 12 -25" roty="90" />
     <tile name="FOREST_GREEN_GROUND" pos="-25 12 -15" />
-    <tile name="FOREST_GREEN_GROUND" pos="-35 12 65" />
-    <tile name="FOREST_GREEN_GROUND_40x40" pos="130 0 130" />
-    <tile name="FOREST_GREEN_GROUND" pos="-75 12 5" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="140 0 -80" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-140 0 -70" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="20 0 140" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 12 65" />
-    <tile name="FOREST_GREEN_GROUND_60x60" pos="120 0 -120" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="115 0 -75" />
-    <tile name="FOREST_GREEN_GROUND" pos="55 0 75" />
-    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -15" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="40 0 140" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="-65 0 -135" />
-    <tile name="FOREST_GREEN_GROUND_20x20" pos="-20 0 140" />
-    <tile name="FOREST_GREEN_GROUND" pos="-55 0 -115" />
-    <tile name="FOREST_GREEN_GROUND" pos="-85 12 55" roty="90" />
-    <tile name="FOREST_GREEN_GROUND_40x40" pos="-130 0 -130" />
-    <tile name="FOREST_GREEN_GROUND" pos="-45 0 115" roty="270" />
-    <tile name="FOREST_GREEN_GROUND_50x50" pos="-125 0 125" />
-    <tile name="FOREST_GREEN_GROUND_50x50" pos="-75 0 125" />
-    <tile name="FOREST_GREEN_GROUND_30x30" pos="-35 0 -135" />
+    <tile name="FOREST_GREEN_GROUND" pos="-105 12 -15" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="65 12 -45" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="45 12 -65" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-85 12 55" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-75 12 -85" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="-25 12 -25" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="85 0 45" roty="270" />
+    <tile name="FOREST_GREEN_GROUND" pos="95 0 45" roty="180" />
+    <tile name="FOREST_GREEN_GROUND" pos="-65 12 65" roty="270" />
     <tile name="FOREST_GREEN_CANYON_28M_END_20X20_A" pos="10 12 -80" roty="90" />
     <tile name="FOREST_GREEN_CANYON_28M_END_20X20_A" pos="50 12 -80" roty="270" />
     <tile name="FOREST_GREEN_CANYON_28M_NATURAL_BRIDGE_20X20_A" pos="30 12 -80" roty="90" />
-    <tile name="FOREST_GREEN_PLATEAU_8M_CORNER" pos="25 4 -25" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER" pos="45 4 25" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER" pos="-55 4 5" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER" pos="-65 4 5" roty="270" />
@@ -769,8 +690,6 @@
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER" pos="25 4 -35" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER_NOCOL" pos="45 4 15" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER_NOCOL" pos="5 4 -35" roty="270" />
-    <tile name="FOREST_GREEN_PLATEAU_8M_STRAIGHT_A" pos="35 4 -15" roty="180" />
-    <tile name="FOREST_GREEN_PLATEAU_8M_STRAIGHT_A" pos="15 4 -35" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_12M_CORNER" pos="-25 4 5" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_12M_BRIDGE_START" pos="55 0 85" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_12M_BRIDGE_START" pos="55 0 65" roty="270" />
@@ -787,6 +706,9 @@
     <tile name="FOREST_GREEN_PLATEAU_12M_INNERCORNER" pos="65 0 55" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_12M_STRAIGHT_B" pos="75 0 -45" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_8M_INNERCORNER" pos="35 4 -5" roty="90" />
+    <compoundtile name="_FOREST_GREEN_PLATEAU_8M_STRAIGHT_A" pos="35 4 -15" roty="180" />
+    <compoundtile name="_FOREST_GREEN_PLATEAU_8M_STRAIGHT_A" pos="15 4 -35" roty="270" />
+    <compoundtile name="_FOREST_GREEN_PLATEAU_8M_CORNER" pos="25 4 -25" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_PLUG_ROCK_8M_B_DEBRIS_01" pos="-74 12 -81" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_PLUG_ROCK_8M_B_DEBRIS_01" pos="-73 12 64" />
     <tile name="FOREST_GREEN_PLATEAU_PLUG_ROCK_8M_B_DEBRIS_01" pos="40 12 38" roty="90" />
@@ -795,7 +717,6 @@
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-96 12 6" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="-106 12 -30" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="38 12 -4" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="121 0 44" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_16M_A_DEBRIS_NOCOL" pos="-90 12 -53" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_16M_DIAGONAL_A_DEBRIS_NOCOL" pos="-96 12 -75" roty="270" />
     <tile name="FOREST_GREEN_PLATEAU_PLUG_ROCK_8M_A_DEBRIS" pos="89 0 -47" roty="270" />
@@ -807,8 +728,6 @@
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="102 0 -50" roty="90" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="107 12 -36" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="108 0 70" roty="90" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="-62 0 -125" roty="90" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="-114 0 -124" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-98 23 -70" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="16 0 127" />
     <tile name="FOREST_GREEN_PLATEAU_PLUG_ROCK_8M_A_DEBRIS" pos="-7 12 -83" roty="270" />
@@ -818,11 +737,8 @@
     <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="-110 0 36" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="0 0 119" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-120 0 26" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-139 0 -41" roty="180" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-130 0 2" roty="180" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_A_DEBRIS" pos="-5 0 143" roty="180" />
-    <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_A_DEBRIS" pos="12 0 117" roty="180" />
     <tile name="FOREST_GREEN_PLATEAU_ROCK_12M_DIAGONAL_A" pos="-49 0 94" />
+    <tile name="FOREST_GREEN_PLATEAU_ROCK_4M_A_DEBRIS" pos="12 0 117" roty="180" />
     <tile name="FOREST_GREEN_CLIFF_12M_CORNER_A" pos="-120 0 -100" roty="90" />
     <tile name="FOREST_GREEN_CLIFF_12M_CORNER_A" pos="-110 0 30" roty="180" />
     <tile name="FOREST_GREEN_CLIFF_12M_CORNER_A" pos="-100 0 90" roty="180" />
@@ -1449,114 +1365,132 @@
     <tile name="FOREST_GREEN_FILL_RUIN_TOWER_ROUND_B" pos="78 -8 125" roty="270" />
     <tile name="FOREST_GREEN_CASTLE_STRAIGHT_RAILING_C_HIGH" pos="68 13 84" roty="180" />
     <tile name="FOREST_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_B" pos="-82 -1 20" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_10x10_A_COMP_01" pos="130 0 -107" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-72 0 103" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-63 0 126" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="138 0 60" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="121 0 -136" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="141 0 -123" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="115 0 -107" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="119 0 -89" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-100 0 105" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="136 0 -49" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="130 0 -95" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="95 0 -138" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-119 0 83" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="137 0 -75" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="30 0 131" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="140 0 83" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="104 0 140" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="142 0 39" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="135 0 108" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="140 0 119" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="143 0 142" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-80 0 124" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="127 0 -70" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-33 0 132" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="121 0 129" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="125 0 72" roty="90" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="140 0 72" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="128 0 -86" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="105 0 -134" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-71 0 113" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-88 0 124" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="43 0 133" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-109 0 81" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="22 0 -137" roty="270" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="121 0 143" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="14 0 -136" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="139 0 43" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_TRUNK_MEDIUM_B_MUSHROOMS_COMP_01" pos="46 0 -143" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_10x10_A_COMP_01" pos="125 0 118" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="62 0 -141" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_TRUNK_MEDIUM_A_MUSHROOMS_COMP_01" pos="87 0 -134" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_C_COMP_01" pos="21 0 -118" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="3 0 -138" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="118 0 -66" roty="270" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="54 0 -145" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="101 0 -70" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="110 0 -121" roty="180" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="145 0 -108" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 85" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 55" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 55" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="15 -40 35" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="25 -40 35" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="5 -40 35" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="5 -40 25" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="15 -40 25" />
+    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-5 -40 35" />
+    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 85" />
+    <tile name="FOREST_GREEN_GROUND" pos="-45 0 95" roty="180" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="60 12 100" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="-80 12 70" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 100" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 10" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_10x20" pos="20 0 135" roty="90" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -30" roty="180" />
+    <tile name="FOREST_GREEN_GROUND_10x30" pos="-55 0 105" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -50" roty="270" />
+    <tile name="FOREST_GREEN_GROUND_10x20" pos="-115 0 50" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="-100 12 -70" />
+    <tile name="FOREST_GREEN_GROUND_30x30" pos="15 0 115" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="80 12 -10" roty="180" />
+    <tile name="FOREST_GREEN_GROUND_20x20" pos="-90 12 10" roty="270" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-90 0 145" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_A" pos="-5 0 -135" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="-110 0 140" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="85 0 -105" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="140 0 5" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="45 0 -135" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="-125 0 95" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="0 0 140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-125 0 50" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_30x30_DIAGONAL_A" pos="115 0 -75" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="40 0 140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_C" pos="-35 0 135" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="-115 0 125" roty="180" />
+    <compoundtile name="_FOREST_GREEN_30x30_B" pos="115 0 -135" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-40 0 145" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_10x20_A" pos="-100 0 -125" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="145 0 -15" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="120 0 145" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="100 0 -95" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="-145 0 -25" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-145 0 -10" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="-105 0 115" roty="0" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="-85 0 -135" roty="0" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="-140 0 50" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_D" pos="-145 0 -85" roty="270" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="140 0 -80" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="-90 0 115" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="140 0 20" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="145 0 135" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_10x10_A" pos="-115 0 -115" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="125 0 65" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_C" pos="-35 0 -125" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="-100 0 -140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_10x20_A" pos="-90 0 105" roty="270" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="80 0 145" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="-130 0 110" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="-50 0 120" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="140 0 -65" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_B" pos="145 0 -5" roty="180" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="-140 0 10" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="-45 0 -140" roty="0" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-145 0 -70" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="-135 0 -75" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="100 0 140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_B" pos="15 0 -125" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="45 0 -145" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="-135 0 35" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="-25 0 145" roty="180" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="-60 0 140" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="-145 0 75" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="105 0 45" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x30_C" pos="135 0 105" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_D" pos="35 0 -135" roty="270" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="-145 0 95" roty="180" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="145 0 40" roty="0" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_C" pos="-65 0 -135" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="-60 0 -115" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="-30 0 -140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="140 0 -50" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="145 0 -30" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="95 0 -135" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="-145 0 -35" roty="180" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-140 0 25" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="-140 0 -100" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="-115 0 110" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_B" pos="135 0 85" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="-45 0 -115" roty="180" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="-90 0 130" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_A" pos="135 0 -105" roty="90" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_10x30_A" pos="-75 0 115" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="-115 0 -145" roty="180" />
+    <compoundtile name="_FOREST_GREEN_30x30_B" pos="-135 0 135" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_30x30_A" pos="-125 0 75" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_A" pos="20 0 -140" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_A" pos="145 0 115" roty="90" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-15 0 140" roty="0" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="145 0 60" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_20x20_B" pos="-140 0 -50" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_30x30_DIAGONAL_A" pos="125 0 125" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_C" pos="-135 0 -135" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_30x30_A" pos="125 0 45" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_B" pos="-135 0 -115" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x10_C" pos="135 0 145" roty="180" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="20 0 145" roty="90" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_30x30_A" pos="75 0 -135" roty="90" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_10x10_B" pos="55 0 -135" roty="90" />
+    <compoundtile name="_FOREST_GREEN_BLOCKER_20x20_B" pos="100 0 -110" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-75 0 140" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="-65 0 120" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_A" pos="-145 0 110" roty="180" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_B" pos="-115 0 -130" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x30_C" pos="115 0 -105" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_20x20_C" pos="140 0 -140" roty="270" activelayers="1 4" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="60 0 145" roty="270" activelayers="1" />
+    <compoundtile name="_FOREST_GREEN_10x20_C" pos="140 0 -125" roty="90" activelayers="1" />
     <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="2 0 -116" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="94 0 -125" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-20 0 129" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="140 0 -142" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-20 0 -143" roty="90" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_C_COMP_01" pos="111 0 -61" roty="90" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-5 0 -142" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="140 0 -4" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="127 0 -39" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="110 0 109" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="127 0 10" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="117 0 54" roty="180" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="140 0 109" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="126 0 83" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="102 0 48" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-60 12 -86" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-107 12 -63" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="139 0 13" roty="180" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-83 12 -98" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-96 12 16" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-71 12 75" />
     <compoundtile name="_FOREST_GREEN_T1_TREE_B_COMP_01" pos="-92 12 -91" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-128 0 125" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-106 0 135" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-130 0 67" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-136 0 11" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-127 0 37" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-145 0 125" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_TRUNK_MEDIUM_B_MUSHROOMS_COMP_01" pos="-122 0 113" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_TRUNK_MEDIUM_B_MUSHROOMS_COMP_01" pos="-66 0 136" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_TRUNK_MEDIUM_B_MUSHROOMS_COMP_01" pos="135 0 16" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-110 0 -144" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-139 0 -61" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-136 0 -77" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-128 0 101" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-71 0 -137" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="75 0 -117" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_A_COMP_01" pos="-86 0 -135" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-58 0 -145" roty="90" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-74 0 -112" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-141 0 -109" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP" pos="-53 0 -134" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-137 0 32" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-147 0 68" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-145 0 120" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-91 0 145" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-51 0 144" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="-17 0 144" roty="180" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="50 0 146" roty="270" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_SMALL_A_MUSHROOMS_COMP_01" pos="105 0 32" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_10x10_COMP_01" pos="-93 0 -119" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_10x30_COMP_01" pos="-124 0 140" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_20x20_COMP_01" pos="-138 0 -95" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_30x30_COMP_01" pos="-136 0 85" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_30x30_COMP_02" pos="-137 0 -135" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_10x10_A_COMP_01" pos="-109 0 117" />
-    <compoundtile name="_FOREST_GREEN_FILL_DEAD_STUMP_20x20_A_COMP_02" pos="-139 0 43" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_B_COMP_01" pos="-118 0 69" />
-    <compoundtile name="_FOREST_GREEN_T1_TREE_B_COMP_01" pos="-76 0 139" />
-    <compoundtile name="_FOREST_GREEN_T1_FOREST_30x30_COMP_02" pos="86 0 -101" />
     <tile name="FOREST_GREEN_FILL_CITY_CRANE_LARGE_A" pos="-52.5 22 -41.5" roty="139" />
     <tile name="FOREST_GREEN_FILL_CITY_CRANE_LARGE_A" pos="25.5 21 -28.5" roty="250" />
     <tile name="FOREST_GREEN_FILL_CITY_CRANE_LARGE_A" pos="-36.5 32 66.5" roty="119" />
@@ -1712,7 +1646,6 @@
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_PATCH_STRAIGHT_A" pos="-50 20 45" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_ROAD_CITY_PATCH_STRAIGHT_B" pos="-50 20 25" roty="270" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_CLOSED_LARGE_A" pos="-57.5 22 -40.5" scale="1.5 1.5 1.5" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="119 0 -114" rot="14 248 341" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_TURNED_A" pos="-56.5 22 -42.5" roty="315" scale="1.5 1.5 1.5" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="5.5 12 -58.5" roty="180" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="50.5 16 -45.5" roty="180" />
@@ -1751,17 +1684,13 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELSTACK_LARGE_A" pos="50 13 43" rot="343 94 23" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_B" pos="41.5 12 -14.5" roty="180" scale="1.425362 1.425362 1.425362" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_B" pos="-67.5 12 -22.5" roty="270" scale="1.42536 1.42536 1.42536" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_BROKEN_A" pos="118.5 0 -114.5" roty="211.23" scale="1.425362 1.425362 1.425362" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="-71 12 0" roty="256.09" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="49 13 41" rot="16 11 1" />
     <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="79 12 -19" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_WINE_LARGE_A" pos="78.5 13 -17.5" roty="180" />
-    <tile name="FOREST_GREEN_FILL_WAGON_BROKEN_A" pos="41 0 -134" />
     <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="-57 22 -45" roty="90" />
     <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="18 22 72" roty="136" scale="1 2.010957 1" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="79.5 13 -15.5" />
-    <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="100 0 -83" roty="90" />
-    <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_SMALL_A" pos="103 0 -77" roty="333.97" />
     <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_SMALL_A" pos="-15 20 -20" roty="270" scale="1 16.59983 1" />
     <tile name="FOREST_GREEN_FILL_WOOD_PILE_A" pos="2 12 -66" />
     <tile name="FOREST_GREEN_HER_CAMP_TENT_A" pos="-61 20 36" />
@@ -2243,8 +2172,7 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-47.5 0 -115.5" roty="180" scale="1.33755 1.33755 1.33755" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="59.5 0 -121.5" roty="90" scale="1.33755 1.33755 1.33755" />
     <tile name="FOREST_GREEN_HER_STOCKADE_CORNER" pos="119 9 -5" roty="90" />
-    <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="-129 0 19" roty="270" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_A" pos="-138.5 0 -17.5" roty="243.84" scale="1.42536 1.42536 1.42536" />
+    <tile name="FOREST_GREEN_FILL_STORAGE_TRANSPORT_CART_A" pos="-138.5 0 -17.5" roty="244" scale="1.42536 1.42536 1.42536" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-138.5 0 -20.5" roty="152.45" scale="1.33755 1.33755 1.33755" />
     <tile name="FOREST_GREEN_HER_WALKWAYS_FLOOR_10_A_OBJ" pos="68 16 6" roty="270" />
     <tile name="FOREST_GREEN_HER_WALKWAYS_FLOOR_RAMP_4M_10_A_OBJ" pos="68 12 -4" roty="90" />
@@ -2255,7 +2183,6 @@
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_LARGE_BROKEN_B" pos="5 0 132" roty="90" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_B" pos="-8 0 127.5" roty="180" />
     <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-4.5 0 127.5" roty="180" scale="1.33755 1.33755 1.33755" />
-    <tile name="FOREST_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-1.5 0 137.5" scale="1.33755 1.33755 1.33755" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_C" pos="-13.5 0 128.5" />
     <tile name="FOREST_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_B" pos="10.5 0 138" roty="90" />
     <tile name="FOREST_GREEN_HER_WALKWAYS_RAILINGS_RAMP_4_RIGHT_A" pos="52 8 66" roty="90" />
@@ -2266,6 +2193,7 @@
     <tile name="FOREST_GREEN_HER_WALKWAYS_RAILING_10_B" pos="-35 20 39" roty="180" />
     <tile name="FOREST_GREEN_GROUND_STONES_C" pos="84 12 89" roty="307.2" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="78 11 127" roty="270" />
+    <tile name="FOREST_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="-129 0 19" roty="270" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="76 12 125" roty="180" />
     <tile name="FOREST_GREEN_HER_STOCKADE_CORNER" pos="98 9 75" roty="180" />
     <tile name="FOREST_GREEN_FILL_RUIN_DEBRIS_A" pos="86 0 128" roty="180" />
@@ -2333,7 +2261,6 @@
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="41.5 12 -15.5" roty="180" />
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="2.5 12 -86.5" roty="180" />
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="3.5 12 -83.5" roty="270" />
-    <tile name="FOREST_GREEN_T1_BUSH_A" pos="-97.5 0 103.5" roty="17.84" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-65.5 20 -75.5" roty="180" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-57.5 24 -71.5" roty="90" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-83.5 31 -55.5" roty="90" />
@@ -2523,8 +2450,7 @@
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_SMALL_A" pos="-81.5 27 -63.5" rot="0 0 270" scale="1 3.200058 1" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="45.5 7 -111.5" roty="291" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="37.5 9 -111.5" roty="111" />
-    <tile name="FOREST_GREEN_T1_BUSH_B" pos="39.5 3 -121.5" roty="111" />
-    <tile name="FOREST_GREEN_T1_BUSH_B" pos="103.5 2 70.5" roty="293.39" />
+    <tile name="FOREST_GREEN_T1_BUSH_B" pos="103.5 2 70.5" roty="293" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="100.5 7 84.5" roty="201" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_SMALL_A" pos="-71.5 15 6.5" rot="0 35 270" scale="1 3.200062 1" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-78.5 32 -59.5" roty="180" />
@@ -2559,20 +2485,16 @@
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-91.5 18 -40.5" roty="146" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-93.5 23 -47.5" roty="56" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-83.5 28 -42.5" roty="146" />
+    <tile name="FOREST_GREEN_T1_BUSH_B" pos="39.5 3 -121.5" roty="111" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-87.5 28 -33.5" roty="236" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_A" pos="44.5 11 66.5" rot="310 0 270" scale="1 3.282612 1.000001" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_A" pos="44.5 16 64.5" rot="271.37 180 90" scale="1 3.282612 1" />
-    <tile name="FOREST_GREEN_T1_BUSH_B" pos="-134.5 0 -39.5" roty="280" />
-    <tile name="FOREST_GREEN_T1_BUSH_A" pos="-124.5 0 28.5" roty="180" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="32.5 12 -114.5" roty="201" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="132.5 1 -7.5" roty="291" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="117.5 11 -28.5" roty="21" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="-5.5 0 127.5" roty="169" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="6.5 0 136.5" roty="259" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="29.5 0 -124.5" roty="94" />
-    <tile name="FOREST_GREEN_VEG_SOIL_B" pos="133.5 0 -30.5" roty="4" />
-    <tile name="FOREST_GREEN_VEG_SOIL_B" pos="-128.5 0 5.5" roty="94" />
-    <tile name="FOREST_GREEN_VEG_SOIL_B" pos="-134.5 0 -41.5" roty="274" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="-26.5 0 -118.5" roty="274" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-12.5 7 -101.5" roty="21" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="6.5 5 -100.5" roty="111" />
@@ -2585,7 +2507,6 @@
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="81.5 12 123.5" roty="201" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="86.5 12 106.5" roty="21.1" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="74.5 14 74.5" roty="219.08" />
-    <tile name="FOREST_GREEN_T1_BUSH_B" pos="78.5 0 136.5" roty="201" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_A" pos="45.5 14 2.5" rot="299 0 270" scale="1 3.282612 1" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_A" pos="44.5 14 8.5" rot="14 0 270" scale="1 3.282612 1" />
     <tile name="FOREST_GREEN_VEG_MOSS_GREEN_A" pos="45.5 19 6.5" rot="305 180 90" scale="1 3.28261 1" />
@@ -2593,66 +2514,11 @@
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="-74.5 36 -47.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="48.5 12 36.5" roty="165" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="48.5 12 49.5" roty="111" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-2.5 0 126.5" roty="270" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-7.5 0 143.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-39.5 0 109.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="54.5 0 134.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="-38.5 12 2.5" roty="173.84" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="125.5 0 0.5" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="79.5 0 -88.5" roty="90" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="74.5 0 -118.5" roty="90" />
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="-1.5 0 -109.5" roty="90" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-51.5 0 -103.5" roty="90" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-120.5 0 -116.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-124.5 0 -103.5" roty="90" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-124.5 0 -65.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-139.5 0 -40.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-132.5 0 -6.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-114.5 0 53.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-103.5 0 94.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-77.5 0 97.5" roty="270" />
-    <tile name="FOREST_GREEN_VEG_FERN_B" pos="-63.5 0 101.5" roty="180" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-68.5 0 -105.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-61.5 0 -104.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-78.5 0 -115.5" />
     <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-32.5 0 -116.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-53.5 0 -119.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-58.5 0 -116.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-47.5 0 -105.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-103.5 0 -124.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-112.5 0 -104.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-121.5 0 -105.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-127.5 0 -100.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-125.5 0 -70.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-124.5 0 -63.5" />
     <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-107.5 12 -40.5" />
     <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-107.5 12 -53.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-133.5 0 -3.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-137.5 0 -9.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-122.5 0 24.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-121.5 0 33.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-117.5 0 43.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-108.5 0 69.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-84.5 0 97.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="81.5 0 135.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="95.5 0 126.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="101.5 0 125.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="106.5 0 112.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="112.5 0 104.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="108.5 0 66.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="102.5 0 41.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="102.5 0 34.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="101.5 0 28.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="109.5 0 26.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="123.5 0 34.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="127.5 0 40.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="119.5 0 52.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="113.5 0 50.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="124.5 0 5.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="127.5 0 19.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="125.5 0 -42.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="118.5 0 -56.5" />
-    <tile name="FOREST_GREEN_VEG_GRASS_B" pos="73.5 0 -117.5" />
     <tile name="FOREST_GREEN_VEG_SOIL_B" pos="18.5 20 -10.5" roty="90" />
     <tile name="FOREST_GREEN_T1_BUSH_B" pos="25.5 20 -8.5" roty="201" />
     <tile name="FOREST_GREEN_VEG_GRASS_B" pos="-19.5 16 20.5" />
@@ -2778,18 +2644,8 @@
     <tile name="FOREST_GREEN_FILL_HILL_BASE_D_NOCOL" pos="55 11 90" roty="190" scale="1.394624 0.6555393 1.394624" />
     <tile name="FOREST_GREEN_FILL_HILL_BASE_D_NOCOL" pos="55 11 59" roty="190" scale="1.39462 0.65554 1.39462" />
     <tile name="INVISIBLE_COLLISON_A" pos="10 15 80.5" />
-    <tile name="LevelMarker_Mobcamp_Heretics_30x30_FR" pos="0 0 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Heretics_30x30_FR" />
+    <tile name="LevelMarker_Mobcamp_Heretics_15x15_FR" pos="0 0 0">
+      <worldmapmarker type="LevelMarker_Mobcamp_Heretics_15x15_FR" />
     </tile>
-    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 85" />
-    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 55" />
-    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 55" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="15 -40 35" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="25 -40 35" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="5 -40 35" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="5 -40 25" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="15 -40 25" />
-    <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-5 -40 35" />
-    <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 85" />
   </tiles>
 </template>

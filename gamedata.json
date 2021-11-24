@@ -10,7 +10,8 @@
       "MiniMap": {
         "@zergcellsize": "40.0",
         "@zergmingroupsize": "11",
-        "@maxplayerspermsg": "30"
+        "@maxplayerspermsg": "30",
+        "@staticdungeonminimapdisplayinterestareamodifier": "115"
       },
       "ClientUpdate": {
         "@moveupdateinms": "100"
@@ -39,7 +40,7 @@
         "@EarlyRetreatTimeWindowInSeconds": "60",
         "@EarlyRetreatPenaltyInSeconds": "600",
         "@SkipClusterCooldownInSeconds": "60",
-        "@MinActiveTimeBeforeSkippingAllowed": "120",
+        "@DefaultMinActiveTimeBeforeSkippingAllowed": "120",
         "@MinDeactivatedTimeBeforeActiveTimerResets": "150",
         "@ReservedFactionSeats": "300",
         "@MinSeatsPerFaction": "50"
@@ -51,14 +52,6 @@
           "@GoldTransactionLimitPaidUntrustedPerDay": "2000",
           "@GoldTransactionLimitLimitedPerDay": "4000"
         }
-      },
-      "SiegeCamp": {
-        "@vaultsize": "64",
-        "@battlevaultsize": "64",
-        "@weightlimit": "10000.0",
-        "@siegecampclaimtimeinsec": "15",
-        "@cooldowninmin": "360",
-        "@costfactor": "2.5"
       },
       "Territory": {
         "@territoryclaimtimeinsec": "15"
@@ -194,7 +187,36 @@
       },
       "SpellCooldowns": {
         "@onequipmentchange": "10",
-        "@onmount": "5"
+        "OnMountUp": {
+          "@mainhand1": "0",
+          "@mainhand2": "0",
+          "@offhandormainhand3": "0",
+          "@armor": "0",
+          "@head": "0",
+          "@shoes": "0",
+          "@potion": "0",
+          "@food": "0"
+        },
+        "OnDismount": {
+          "@mainhand1": "0",
+          "@mainhand2": "0",
+          "@offhandormainhand3": "0",
+          "@armor": "5",
+          "@head": "5",
+          "@shoes": "5",
+          "@potion": "5",
+          "@food": "5"
+        },
+        "OnHostileDismount": {
+          "@mainhand1": "5",
+          "@mainhand2": "5",
+          "@offhandormainhand3": "5",
+          "@armor": "5",
+          "@head": "5",
+          "@shoes": "5",
+          "@potion": "5",
+          "@food": "5"
+        }
       },
       "CrowdControlDiminishingReturns": {
         "@breaksondamagefactor": "0.7",
@@ -868,15 +890,15 @@
         "qualitylevel": [
           {
             "@level": "2",
-            "@itempowerbonus": "10"
-          },
-          {
-            "@level": "3",
             "@itempowerbonus": "20"
           },
           {
+            "@level": "3",
+            "@itempowerbonus": "40"
+          },
+          {
             "@level": "4",
-            "@itempowerbonus": "50"
+            "@itempowerbonus": "60"
           },
           {
             "@level": "5",
@@ -1867,16 +1889,16 @@
       "@realestateupkeepwarningchecktimespaninhours": "24",
       "Sale": {
         "@squaremeterpricenormal": "0.0",
-        "@squaremeterpricebuildingarea": "250.0",
+        "@squaremeterpricebuildingarea": "100000.0",
         "@overallpricefactor": "1",
         "LocationQuality": [
           {
             "@locationType": "A",
-            "@factor": "3"
+            "@factor": "2"
           },
           {
             "@locationType": "B",
-            "@factor": "2"
+            "@factor": "1.5"
           },
           {
             "@locationType": "C",
@@ -1884,11 +1906,11 @@
           },
           {
             "@locationType": "D",
-            "@factor": "0.5"
+            "@factor": "0.75"
           },
           {
             "@locationType": "E",
-            "@factor": "0.25"
+            "@factor": "0.5"
           }
         ]
       },
@@ -1943,7 +1965,8 @@
     "MountSettings": {
       "@halfmountvfx": "FX/ClientPrefabs/fx_spell_mount_radius",
       "@halfmountvfx_originalSize": "15",
-      "@combatmountcooldown": "10"
+      "@combatmountcooldown": "10",
+      "@hostiledismountdetectionradius": "40"
     },
     "VfxSettings": {
       "@fadeouttime": "1.0"
@@ -1985,6 +2008,26 @@
       },
       "DuelNotificationRadius": {
         "@value": "30"
+      }
+    },
+    "PartySettings": {
+      "AcceptPartyInviteCountDownInSeconds": {
+        "@value": "60"
+      },
+      "AcceptPartyInviteButtonDelayInSeconds": {
+        "@value": "0"
+      },
+      "PartyInvitationCooldownInSeconds": {
+        "@value": "60"
+      },
+      "PartyInvitationSnoozeDurationInSeconds": {
+        "@value": "180"
+      },
+      "PartySnoozeDurationUpperLimitInMinutes": {
+        "@value": "180"
+      },
+      "PartySnoozeDurationLowerLimitInMinutes": {
+        "@value": "1"
       }
     },
     "WeightLimits": {
@@ -2121,6 +2164,110 @@
         }
       ]
     },
+    "RerollQualityChances": {
+      "InitialQuality": [
+        {
+          "@level": "1",
+          "ResultQuality": [
+            {
+              "@level": "1",
+              "@weight": "0"
+            },
+            {
+              "@level": "2",
+              "@weight": "1600"
+            },
+            {
+              "@level": "3",
+              "@weight": "300"
+            },
+            {
+              "@level": "4",
+              "@weight": "99"
+            },
+            {
+              "@level": "5",
+              "@weight": "1"
+            }
+          ]
+        },
+        {
+          "@level": "2",
+          "ResultQuality": [
+            {
+              "@level": "1",
+              "@weight": "0"
+            },
+            {
+              "@level": "2",
+              "@weight": "1200"
+            },
+            {
+              "@level": "3",
+              "@weight": "2400"
+            },
+            {
+              "@level": "4",
+              "@weight": "397"
+            },
+            {
+              "@level": "5",
+              "@weight": "3"
+            }
+          ]
+        },
+        {
+          "@level": "3",
+          "ResultQuality": [
+            {
+              "@level": "1",
+              "@weight": "0"
+            },
+            {
+              "@level": "2",
+              "@weight": "0"
+            },
+            {
+              "@level": "3",
+              "@weight": "500"
+            },
+            {
+              "@level": "4",
+              "@weight": "499"
+            },
+            {
+              "@level": "5",
+              "@weight": "1"
+            }
+          ]
+        },
+        {
+          "@level": "4",
+          "ResultQuality": [
+            {
+              "@level": "1",
+              "@weight": "0"
+            },
+            {
+              "@level": "2",
+              "@weight": "0"
+            },
+            {
+              "@level": "3",
+              "@weight": "0"
+            },
+            {
+              "@level": "4",
+              "@weight": "199"
+            },
+            {
+              "@level": "5",
+              "@weight": "1"
+            }
+          ]
+        }
+      ]
+    },
     "FameGainFactors": {
       "@itemvaluetofameprogressionfactor": "1.5",
       "@progressionstarttier": "3",
@@ -2140,17 +2287,11 @@
     "StudyFame": {
       "@factor": "2"
     },
-    "SilverToItemValue": {
-      "@factor": "0.2"
-    },
     "SilverDropFromPvp": {
       "@factor": "0.75"
     },
-    "ResourceValueToItemValue": {
-      "@factor": "2.0"
-    },
     "ItemValueToNutrition": {
-      "@factor": "0.225"
+      "@factor": "0.1125"
     },
     "CraftNutrition": {
       "@minimumpercent": "0"
@@ -2163,6 +2304,9 @@
     },
     "CraftCapacityFreeCrafting": {
       "@maxTier": "2"
+    },
+    "BuildingConsumptionBalanceFactor": {
+      "@factor": "1"
     },
     "ActionFocus": {
       "@costreductionconstant": "1.00695555005672",
@@ -2182,116 +2326,6 @@
     },
     "PortalSettings": {
       "@bindingresetdays": "7"
-    },
-    "NutritionConsumption": {
-      "PerTimeBuilding": {
-        "Building": [
-          {
-            "@tier": "1",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "2",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "3",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "4",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "5",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "6",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "7",
-            "@secondsperpoint": "86400"
-          },
-          {
-            "@tier": "8",
-            "@secondsperpoint": "86400"
-          }
-        ]
-      },
-      "BuildingOnCraftedItem": {
-        "Item": [
-          {
-            "@tier": "1",
-            "@itemvaluefactor": "0"
-          },
-          {
-            "@tier": "2",
-            "@itemvaluefactor": "0"
-          },
-          {
-            "@tier": "3",
-            "@itemvaluefactor": "0.5"
-          },
-          {
-            "@tier": "4",
-            "@itemvaluefactor": "0.5"
-          },
-          {
-            "@tier": "5",
-            "@itemvaluefactor": "0.5"
-          },
-          {
-            "@tier": "6",
-            "@itemvaluefactor": "0.5"
-          },
-          {
-            "@tier": "7",
-            "@itemvaluefactor": "0.5"
-          },
-          {
-            "@tier": "8",
-            "@itemvaluefactor": "0.5"
-          }
-        ]
-      },
-      "NutritionStorage": {
-        "Building": [
-          {
-            "@tier": "1",
-            "@storage": "1"
-          },
-          {
-            "@tier": "2",
-            "@storage": "1"
-          },
-          {
-            "@tier": "3",
-            "@storage": "1"
-          },
-          {
-            "@tier": "4",
-            "@storage": "1"
-          },
-          {
-            "@tier": "5",
-            "@storage": "1"
-          },
-          {
-            "@tier": "6",
-            "@storage": "1"
-          },
-          {
-            "@tier": "7",
-            "@storage": "1"
-          },
-          {
-            "@tier": "8",
-            "@storage": "1"
-          }
-        ]
-      }
     },
     "DurabilityData": {
       "Durability": {
@@ -2524,31 +2558,31 @@
             },
             {
               "@tier": "2",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "3",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "4",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "5",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "6",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "7",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             },
             {
               "@tier": "8",
-              "@durabilityloss": "1"
+              "@durabilityloss": "0.5"
             }
           ]
         },
@@ -3393,7 +3427,7 @@
             "@upper": "1"
           },
           "Modifier": {
-            "@silver": "3"
+            "@silver": "15"
           },
           "Time": {
             "@crafttimefactor": "0.1"
@@ -3457,12 +3491,24 @@
       },
       "RerollQuality": {
         "Items": {
-          "CostModifier": {
-            "@silver": "1.0"
-          },
-          "Time": {
-            "@crafttimefactor": "0.1"
-          }
+          "CostModifier": [
+            {
+              "@level": "1",
+              "@silver": "4"
+            },
+            {
+              "@level": "2",
+              "@silver": "5"
+            },
+            {
+              "@level": "3",
+              "@silver": "6"
+            },
+            {
+              "@level": "4",
+              "@silver": "25.0"
+            }
+          ]
         }
       },
       "DurabilityIndicators": {
@@ -3621,174 +3667,6 @@
         }
       ]
     },
-    "CraftItemModificator": {
-      "Item": [
-        {
-          "@tier": "1",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "1.5"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "2",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "3",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "4",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "5",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "6",
-              "@factor": "1"
-            }
-          ]
-        },
-        {
-          "@tier": "2",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "2"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "1.5"
-            },
-            {
-              "@tierdifference": "2",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "3",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "4",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "5",
-              "@factor": "1"
-            }
-          ]
-        },
-        {
-          "@tier": "3",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "3"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "2"
-            },
-            {
-              "@tierdifference": "2",
-              "@factor": "1.5"
-            },
-            {
-              "@tierdifference": "3",
-              "@factor": "1"
-            },
-            {
-              "@tierdifference": "4",
-              "@factor": "1"
-            }
-          ]
-        },
-        {
-          "@tier": "4",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "5"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "3"
-            },
-            {
-              "@tierdifference": "2",
-              "@factor": "2"
-            },
-            {
-              "@tierdifference": "3",
-              "@factor": "1.5"
-            }
-          ]
-        },
-        {
-          "@tier": "5",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "10"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "5"
-            },
-            {
-              "@tierdifference": "2",
-              "@factor": "3"
-            }
-          ]
-        },
-        {
-          "@tier": "6",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "20"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "10"
-            }
-          ]
-        },
-        {
-          "@tier": "7",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "20"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "10"
-            }
-          ]
-        },
-        {
-          "@tier": "8",
-          "crafttimefactor": [
-            {
-              "@tierdifference": "0",
-              "@factor": "20"
-            },
-            {
-              "@tierdifference": "1",
-              "@factor": "10"
-            }
-          ]
-        }
-      ]
-    },
     "ActionSplitSettings": {
       "@defaultcraftstacksize": "40",
       "@defaultstudystacksize": "40",
@@ -3866,7 +3744,7 @@
           },
           {
             "@attribute": "learningpoints",
-            "@change": "350"
+            "@change": "500"
           }
         ]
       }
@@ -3905,84 +3783,84 @@
         {
           "@type": "safe",
           "@icon": "safe",
-          "@famefactor": "1.8",
+          "@famefactor": "2.15",
           "@moblootfactor": "1.25",
           "@mobsilverlootfactor": "1.45"
         },
         {
           "@type": "yellow",
           "@icon": "yellow",
-          "@famefactor": "2",
+          "@famefactor": "2.4",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53"
         },
         {
           "@type": "red",
           "@icon": "red",
-          "@famefactor": "2.75",
+          "@famefactor": "3.3",
           "@moblootfactor": "2.25",
           "@mobsilverlootfactor": "2.6"
         },
         {
           "@type": "black",
           "@icon": "black",
-          "@famefactor": "3.5",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3"
         },
         {
           "@type": "hell_nonlethal_2v2",
           "@icon": "hellnonlethal2v2",
-          "@famefactor": "2",
+          "@famefactor": "2.4",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53"
         },
         {
           "@type": "hell_nonlethal_5v5",
           "@icon": "hellnonlethal5v5",
-          "@famefactor": "2",
+          "@famefactor": "2.4",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53"
         },
         {
           "@type": "hell_nonlethal_10v10",
           "@icon": "hellnonlethal10v10",
-          "@famefactor": "2",
+          "@famefactor": "2.4",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53"
         },
         {
           "@type": "hell_lethal_2v2",
           "@icon": "helllethal2v2",
-          "@famefactor": "3.5",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3"
         },
         {
           "@type": "hell_lethal_5v5",
           "@icon": "helllethal5v5",
-          "@famefactor": "3.5",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3"
         },
         {
           "@type": "hell_lethal_10v10",
           "@icon": "helllethal10v10",
-          "@famefactor": "3.5",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3"
         },
         {
           "@type": "corrupted_beginner",
           "@icon": "corruptedbeginner",
-          "@famefactor": "2",
+          "@famefactor": "3.2",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53"
         },
         {
           "@type": "corrupted_intermediate",
           "@icon": "corruptedintermediate",
-          "@famefactor": "3.5",
+          "@famefactor": "5.1",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3"
         },
@@ -4003,7 +3881,7 @@
         {
           "@type": "tunnel",
           "@icon": "black",
-          "@famefactor": "5",
+          "@famefactor": "6",
           "@moblootfactor": "7.1",
           "@mobsilverlootfactor": "8.17"
         }
@@ -4055,15 +3933,6 @@
     },
     "PersonalStatement": {
       "@characterlimit": "270"
-    },
-    "SiegeCampBank": {
-      "@size": "64",
-      "@weightlimit": "10000.0",
-      "DefaultTab": {
-        "@Name": "@SIEGECAMP_VAULT_TITLE",
-        "@Icon": "icon_tag_chest",
-        "@IconColorBg": "2B2C29FF"
-      }
     },
     "CityBank": {
       "@size": "128",
@@ -5702,10 +5571,10 @@
     },
     "CombatFameToSilverConversion": {
       "@silverfamefactor": "0.19",
-      "@silverfamex": "0.007",
-      "@silverfamey": "1.156",
-      "@fameeffbase": "1.2218",
-      "@fameeffconst": "0.015"
+      "@silverfamex": "0.004",
+      "@silverfamey": "0.9938",
+      "@fameeffbase": "1.23998",
+      "@fameeffconst": "0.1996"
     },
     "MarketPriceEstimation": {
       "contributingmarket": [
@@ -5746,7 +5615,9 @@
     },
     "Loadouts": {
       "@maximumplayerloadouts": "30",
-      "@playerinventorysize": "18"
+      "@maximumguildloadouts": "100",
+      "@marketplacepurchaseLimit": "100",
+      "@marketplacamountlimit": "10"
     },
     "CrossPlatformRewards": {
       "Mail": {
@@ -5760,6 +5631,28 @@
       "VanityUnlock": {
         "@id": "SKIN_HORSE_QUESTING_BEAST",
         "@type": "Mount"
+      }
+    },
+    "MapValueVisualization": {
+      "ClusterValueColors": {
+        "@invalidcolor": "292929BF",
+        "@name": "@WORLDMAP_OVERLAY_CLUSTERVALUE_LEGEND_NAME_NEUTRAL",
+        "ColorState": [
+          {
+            "@color": "1fc600f2",
+            "@name": "@WORLDMAP_OVERLAY_CLUSTERVALUE_LEGEND_NAME_HIGHEST"
+          },
+          {
+            "@color": "089000f2"
+          },
+          {
+            "@color": "0a5d00f2"
+          },
+          {
+            "@color": "063b00f2",
+            "@name": "@WORLDMAP_OVERLAY_CLUSTERVALUE_LEGEND_NAME_LOWEST"
+          }
+        ]
       }
     }
   }

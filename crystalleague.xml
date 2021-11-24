@@ -237,7 +237,7 @@
           startdatetime="2021-09-25T11:00:00Z"
           enddatetime="2021-11-08T10:59:00Z"
           showindailylimitui="true"
-          ruleset="CRYSTAL_LEAGUE"
+          ruleset="CRYSTAL_LEAGUE_ENERGY_RUSH"
           tokenuioverlay2="icon_item_season_energy_rush"
           tokenseasonabbreviation="ENERGY_RUSH"/>
 
@@ -417,7 +417,7 @@
           arenacategory="crystal_league_city"
           startdatetime="2021-09-25T11:00:00Z"
           enddatetime="2021-11-08T10:59:00Z"
-          ruleset="CRYSTAL_LEAGUE_CITY"
+          ruleset="CRYSTAL_LEAGUE_CITY_ENERGY_RUSH"
           tokenuioverlay2="icon_item_season_energy_rush"
           tokenseasonabbreviation="ENERGY_RUSH"
           color="#FFC300"
@@ -1419,10 +1419,10 @@
         </week>
       </times>
       <rewards>      
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL1" gvgseasonpoints="1" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL1" />
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_01" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL1" gvgseasonpoints="2" territorypowerpoints="60" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL1" territorypowerpoints="60" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_BONUS" />
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_01" tokentype="category" />
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" territorypowerpoints="240" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 2-->
@@ -1441,14 +1441,14 @@
         </week>
       </times>
       <rewards>     
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL2" gvgseasonpoints="1" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL2" gvgseasonpoints="1"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL2" gvgseasonpoints="2" territorypowerpoints="300" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL2_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL2" gvgseasonpoints="2" territorypowerpoints="300" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL2_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2" gvgseasonpoints="4" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2" gvgseasonpoints="8" territorypowerpoints="1200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL2_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 3-->
-    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="2">
+    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1.6">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
@@ -1463,14 +1463,14 @@
         </week>
       </times>
       <rewards>        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="3" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="3"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="5" territorypowerpoints="750" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL3_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="5" territorypowerpoints="750" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL3_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3" gvgseasonpoints="12" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3" gvgseasonpoints="20" territorypowerpoints="3000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL3_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 4-->
-    <match level="4" itempowersoftcap="1200" itempowerscalingfactor="0.2" dailypointfactor="2">
+    <match level="4" itempowersoftcap="1200" itempowerscalingfactor="0.2" dailypointfactor="1.5">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
       <times>
         <week weeknumber="1 3 5 7 9 11 13">        
@@ -1549,10 +1549,10 @@
         </week>      
       </times>
       <rewards>        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="8" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="8"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="8" territorypowerpoints="1200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL4_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="8" territorypowerpoints="1200" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL4_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" gvgseasonpoints="32" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season"/>  
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" gvgseasonpoints="32" territorypowerpoints="4800" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL4_NOMATCH"/>  
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL4"/>  
       </rewards>
     </match>
@@ -1578,10 +1578,10 @@
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="20" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="20"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="20" territorypowerpoints="2250" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL5_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="20" territorypowerpoints="2250" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL5_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" gvgseasonpoints="80" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" gvgseasonpoints="80" territorypowerpoints="9000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL5_NOMATCH"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL5"/>  
       </rewards>
     </match>
@@ -1600,10 +1600,10 @@
         </week>      
       </times>
       <rewards>    
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="50" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="50"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="50" territorypowerpoints="3750" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL6_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="50" territorypowerpoints="3750" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL6_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" gvgseasonpoints="200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" gvgseasonpoints="200" territorypowerpoints="15000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL6_NOMATCH"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL6"/>  
       </rewards>
     </match>
@@ -1622,10 +1622,10 @@
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="120" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="120"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="120" territorypowerpoints="6300" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL7_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="120" territorypowerpoints="6300" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL7_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" gvgseasonpoints="480" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" gvgseasonpoints="480" territorypowerpoints="25200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL7_NOMATCH"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL7"/>  
       </rewards>
     </match>
@@ -1633,18 +1633,17 @@
     <match level="8" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="1">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
       <times>
-<!--        <week weeknumber="6 10 13"> -->
-        <week weeknumber="5 7">
+        <week weeknumber="6 10 13">
           <weekday day="Sunday">
             <timeslot utctime="19:00:00"/>
           </weekday>
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="320" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="320"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="320" territorypowerpoints="9600" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL8_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="320" territorypowerpoints="9600" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL8_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" gvgseasonpoints="1280" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" gvgseasonpoints="1280" territorypowerpoints="38400" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL8_NOMATCH"/>
         <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL8"/>  
       </rewards>
     </match>
@@ -1652,18 +1651,17 @@
     <match level="9" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1.4">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season"/>
       <times>
-<!--        <week weeknumber="13"> -->
-        <week weeknumber="7">        
+        <week weeknumber="13">
           <weekday day="Sunday">
             <timeslot utctime="20:00:00"/>
           </weekday>
         </week>
       </times>
       <rewards>       
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9" gvgseasonpoints="1000"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL9" gvgseasonpoints="1000"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9" gvgseasonpoints="1000" territorypowerpoints="12000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL9_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL9" gvgseasonpoints="1000" territorypowerpoints="12000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL9_BONUS"/>
         <draw lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL9" gvgseasonpoints="4000"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL9" gvgseasonpoints="4000" territorypowerpoints="48000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL9_NOMATCH"/>
       </rewards>
     </match>
   </ruleset>
@@ -1697,14 +1695,14 @@
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1" gvgseasonpoints="2" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1" gvgseasonpoints="0" />
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1" gvgseasonpoints="2" territorypowerpoints="120" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL1_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1" gvgseasonpoints="0" territorypowerpoints="120" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL1_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" territorypowerpoints="480" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL1_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 2-->
-    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2" dailypointfactor="2.5">
+    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2" dailypointfactor="2">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
@@ -1719,14 +1717,14 @@
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2" gvgseasonpoints="3" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" gvgseasonpoints="3"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2" gvgseasonpoints="6" territorypowerpoints="3600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL2_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" gvgseasonpoints="6" territorypowerpoints="3600" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL2_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2" gvgseasonpoints="12" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2" gvgseasonpoints="24" territorypowerpoints="14400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL2_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 3-->
-    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1.5">
+    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
@@ -1753,14 +1751,14 @@
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3" gvgseasonpoints="7" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3" gvgseasonpoints="7"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3" gvgseasonpoints="12" territorypowerpoints="5400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL3_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3" gvgseasonpoints="12" territorypowerpoints="5400" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL3_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL3" gvgseasonpoints="28" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL3" gvgseasonpoints="48" territorypowerpoints="21600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL3_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 4-->
-    <match level="4" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1">
+    <match level="4" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1.3">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
       <times>
         <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
@@ -1774,14 +1772,14 @@
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4" gvgseasonpoints="12" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4" gvgseasonpoints="12"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4" gvgseasonpoints="20" territorypowerpoints="6000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL4_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4" gvgseasonpoints="20" territorypowerpoints="6000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL4_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL4" gvgseasonpoints="48" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL4" gvgseasonpoints="80" territorypowerpoints="24000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL4_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 5-->
-    <match level="5" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="1.25">
+    <match level="5" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="0.75">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
       <times>
         <week weeknumber="2 4 6 8 10 12 13">
@@ -1795,46 +1793,44 @@
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5" gvgseasonpoints="40" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5" gvgseasonpoints="40"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5" gvgseasonpoints="40" territorypowerpoints="8400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL5_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5" gvgseasonpoints="40" territorypowerpoints="8400" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL5_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL5" gvgseasonpoints="160" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL5" gvgseasonpoints="160" territorypowerpoints="33600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL5_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 6-->
     <match level="6" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="0.8">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
       <times>
-<!--     <week weeknumber="6 10 13"> -->
-       <week weeknumber="5 7">       
+        <week weeknumber="6 10 13">     
           <weekday day="Saturday">
             <timeslot utctime="17:00:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" gvgseasonpoints="150" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" gvgseasonpoints="150"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" gvgseasonpoints="100" territorypowerpoints="12000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL6_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" gvgseasonpoints="100" territorypowerpoints="12000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL6_BONUS"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6" gvgseasonpoints="600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6" gvgseasonpoints="400" territorypowerpoints="48000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL6_NOMATCH"/>
       </rewards>
     </match>
     <!--LEVEL 7-->
-    <match level="7" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1">
+    <match level="7" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1.08">
       <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
       <times>
-<!--        <week weeknumber="13"> -->
-        <week weeknumber="7">          
+        <week weeknumber="13">          
           <weekday day="Saturday">
             <timeslot utctime="18:00:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" gvgseasonpoints="500"/>
-        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7" gvgseasonpoints="500"/>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" gvgseasonpoints="500" territorypowerpoints="21000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL7_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7" gvgseasonpoints="500" territorypowerpoints="21000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL7_BONUS"/>
         <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" />
-        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL7" gvgseasonpoints="2000"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL7" gvgseasonpoints="2000" territorypowerpoints="84000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL7_NOMATCH"/>
       </rewards>
     </match>
   </ruleset>
@@ -1900,7 +1896,7 @@
   </ruleset>
 
   <!--20v20 CRYSTAL LEAGUE INTERIM-->
-
+ 
   <ruleset name="CRYSTAL_LEAGUE_CITY_INTERIM" limitedpointsperday="true">
     <matchtimers prebattlewarninginssec="10"
                  signupperiodinsec="1740"
@@ -2055,11 +2051,10 @@
       </rewards>
     </match>
   </ruleset>
-  
-  <!-- TESTING - DEBUG RULESET  -->
-  
-  <!--
-  <ruleset name="RULESET_DEBUG">
+
+  <!--5v5 CRYSTAL LEAGUE - Energy Rush Season -->
+
+  <ruleset name="CRYSTAL_LEAGUE_ENERGY_RUSH" limitedpointsperday="true">
     <matchtimers prebattlewarninginssec="10"
                  signupperiodinsec="1740"
                  dcendqueueinsec="90"
@@ -2070,962 +2065,438 @@
                     crystalwinnerbonus="0.25"
                     bonuslootlistamount="4"/>
 
-    <match level="1" itempowersoftcap="700" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01" tokentype="category"/>
+    <!--LEVEL 1-->
+    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false" dailypointfactor="0">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_01" tokentype="category"/>
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52">
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
           <weekday>
-            <timeslot utctime="01:00:00"/>
-            <timeslot utctime="01:10:00"/>
-            <timeslot utctime="01:20:00"/>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="01:40:00"/>
-            <timeslot utctime="01:50:00"/>
-
             <timeslot utctime="02:00:00"/>
-            <timeslot utctime="02:10:00"/>
-            <timeslot utctime="02:20:00"/>
             <timeslot utctime="02:30:00"/>
-            <timeslot utctime="02:40:00"/>
-            <timeslot utctime="02:50:00"/>
-
-            <timeslot utctime="03:00:00"/>
-            <timeslot utctime="03:10:00"/>
-            <timeslot utctime="03:20:00"/>
-            <timeslot utctime="03:30:00"/>
-            <timeslot utctime="03:40:00"/>
-            <timeslot utctime="03:50:00"/>
-
-            <timeslot utctime="04:00:00"/>
-            <timeslot utctime="04:10:00"/>
-            <timeslot utctime="04:20:00"/>
-            <timeslot utctime="04:30:00"/>
-            <timeslot utctime="04:40:00"/>
-            <timeslot utctime="04:50:00"/>
-
-            <timeslot utctime="05:00:00"/>
-            <timeslot utctime="05:10:00"/>
-            <timeslot utctime="05:20:00"/>
-            <timeslot utctime="05:30:00"/>
-            <timeslot utctime="05:40:00"/>
-            <timeslot utctime="05:50:00"/>
-
-            <timeslot utctime="06:00:00"/>
-            <timeslot utctime="06:10:00"/>
-            <timeslot utctime="06:20:00"/>
-            <timeslot utctime="06:30:00"/>
-            <timeslot utctime="06:40:00"/>
-            <timeslot utctime="06:50:00"/>
-
-            <timeslot utctime="07:00:00"/>
-            <timeslot utctime="07:10:00"/>
-            <timeslot utctime="07:20:00"/>
-            <timeslot utctime="07:30:00"/>
-            <timeslot utctime="07:40:00"/>
-            <timeslot utctime="07:50:00"/>
-
-            <timeslot utctime="08:00:00"/>
-            <timeslot utctime="08:10:00"/>
-            <timeslot utctime="08:20:00"/>
-            <timeslot utctime="08:30:00"/>
-            <timeslot utctime="08:40:00"/>
-            <timeslot utctime="08:50:00"/>
-
-            <timeslot utctime="09:00:00"/>
-            <timeslot utctime="09:10:00"/>
-            <timeslot utctime="09:20:00"/>
-            <timeslot utctime="09:30:00"/>
-            <timeslot utctime="09:40:00"/>
-            <timeslot utctime="09:50:00"/>
-
-            <timeslot utctime="10:00:00"/>
-            <timeslot utctime="10:10:00"/>
-            <timeslot utctime="10:20:00"/>
-            <timeslot utctime="10:30:00"/>
-            <timeslot utctime="10:40:00"/>
-            <timeslot utctime="10:50:00"/>
-
-            <timeslot utctime="11:00:00"/>
-            <timeslot utctime="11:10:00"/>
-            <timeslot utctime="11:20:00"/>
-            <timeslot utctime="11:30:00"/>
-            <timeslot utctime="11:40:00"/>
-            <timeslot utctime="11:50:00"/>
-
-            <timeslot utctime="12:00:00"/>
-            <timeslot utctime="12:10:00"/>
-            <timeslot utctime="12:20:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="12:40:00"/>
-            <timeslot utctime="12:50:00"/>
-
             <timeslot utctime="13:00:00"/>
-            <timeslot utctime="13:10:00"/>
-            <timeslot utctime="13:20:00"/>
             <timeslot utctime="13:30:00"/>
-            <timeslot utctime="13:40:00"/>
-            <timeslot utctime="13:50:00"/>
-
-            <timeslot utctime="14:00:00"/>
-            <timeslot utctime="14:10:00"/>
-            <timeslot utctime="14:20:00"/>
-            <timeslot utctime="14:30:00"/>
-            <timeslot utctime="14:40:00"/>
-            <timeslot utctime="14:50:00"/>
-
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="15:10:00"/>
-            <timeslot utctime="15:20:00"/>
-            <timeslot utctime="15:30:00"/>
-            <timeslot utctime="15:40:00"/>
-            <timeslot utctime="15:50:00"/>
-
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="16:10:00"/>
-            <timeslot utctime="16:20:00"/>
-            <timeslot utctime="16:30:00"/>
-            <timeslot utctime="16:40:00"/>
-            <timeslot utctime="16:50:00"/>
-
-            <timeslot utctime="17:00:00"/>
-            <timeslot utctime="17:10:00"/>
-            <timeslot utctime="17:20:00"/>
-            <timeslot utctime="17:30:00"/>
-            <timeslot utctime="17:40:00"/>
-            <timeslot utctime="17:50:00"/>
-
-            <timeslot utctime="18:00:00"/>
-            <timeslot utctime="18:10:00"/>
-            <timeslot utctime="18:20:00"/>
-            <timeslot utctime="18:30:00"/>
-            <timeslot utctime="18:40:00"/>
-            <timeslot utctime="18:50:00"/>
-
-            <timeslot utctime="19:00:00"/>
-            <timeslot utctime="19:10:00"/>
-            <timeslot utctime="19:20:00"/>
-            <timeslot utctime="19:30:00"/>
-            <timeslot utctime="19:40:00"/>
-            <timeslot utctime="19:50:00"/>
-
             <timeslot utctime="20:00:00"/>
-            <timeslot utctime="20:10:00"/>
-            <timeslot utctime="20:20:00"/>
             <timeslot utctime="20:30:00"/>
-            <timeslot utctime="20:40:00"/>
-            <timeslot utctime="20:50:00"/>
-
-            <timeslot utctime="21:00:00"/>
-            <timeslot utctime="21:10:00"/>
-            <timeslot utctime="21:20:00"/>
-            <timeslot utctime="21:30:00"/>
-            <timeslot utctime="21:40:00"/>
-            <timeslot utctime="21:50:00"/>
-
-            <timeslot utctime="22:00:00"/>
-            <timeslot utctime="22:10:00"/>
-            <timeslot utctime="22:20:00"/>
-            <timeslot utctime="22:30:00"/>
-            <timeslot utctime="22:40:00"/>
-            <timeslot utctime="22:50:00"/>
-
-            <timeslot utctime="23:00:00"/>
-            <timeslot utctime="23:10:00"/>
-            <timeslot utctime="23:20:00"/>
-            <timeslot utctime="23:30:00"/>
-            <timeslot utctime="23:40:00"/>
-            <timeslot utctime="23:50:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL1" gvgseasonpoints="1" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL1" gvgseasonpoints="1"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_01" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL1" gvgseasonpoints="2" territorypowerpoints="60" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL1" territorypowerpoints="60"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_01" tokentype="category" />
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" territorypowerpoints="240" token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_NOMATCH"/>
       </rewards>
     </match>
-    <match level="2" itempowersoftcap="800" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
+    <!--LEVEL 2-->
+    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2" dailypointfactor="2">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52">
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
           <weekday>
-            <timeslot utctime="01:00:00"/>
-            <timeslot utctime="01:10:00"/>
-            <timeslot utctime="01:20:00"/>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="01:40:00"/>
-            <timeslot utctime="01:50:00"/>
-
             <timeslot utctime="02:00:00"/>
-            <timeslot utctime="02:10:00"/>
-            <timeslot utctime="02:20:00"/>
             <timeslot utctime="02:30:00"/>
-            <timeslot utctime="02:40:00"/>
-            <timeslot utctime="02:50:00"/>
-
-            <timeslot utctime="03:00:00"/>
-            <timeslot utctime="03:10:00"/>
-            <timeslot utctime="03:20:00"/>
-            <timeslot utctime="03:30:00"/>
-            <timeslot utctime="03:40:00"/>
-            <timeslot utctime="03:50:00"/>
-
-            <timeslot utctime="04:00:00"/>
-            <timeslot utctime="04:10:00"/>
-            <timeslot utctime="04:20:00"/>
-            <timeslot utctime="04:30:00"/>
-            <timeslot utctime="04:40:00"/>
-            <timeslot utctime="04:50:00"/>
-
-            <timeslot utctime="05:00:00"/>
-            <timeslot utctime="05:10:00"/>
-            <timeslot utctime="05:20:00"/>
-            <timeslot utctime="05:30:00"/>
-            <timeslot utctime="05:40:00"/>
-            <timeslot utctime="05:50:00"/>
-
-            <timeslot utctime="06:00:00"/>
-            <timeslot utctime="06:10:00"/>
-            <timeslot utctime="06:20:00"/>
-            <timeslot utctime="06:30:00"/>
-            <timeslot utctime="06:40:00"/>
-            <timeslot utctime="06:50:00"/>
-
-            <timeslot utctime="07:00:00"/>
-            <timeslot utctime="07:10:00"/>
-            <timeslot utctime="07:20:00"/>
-            <timeslot utctime="07:30:00"/>
-            <timeslot utctime="07:40:00"/>
-            <timeslot utctime="07:50:00"/>
-
-            <timeslot utctime="08:00:00"/>
-            <timeslot utctime="08:10:00"/>
-            <timeslot utctime="08:20:00"/>
-            <timeslot utctime="08:30:00"/>
-            <timeslot utctime="08:40:00"/>
-            <timeslot utctime="08:50:00"/>
-
-            <timeslot utctime="09:00:00"/>
-            <timeslot utctime="09:10:00"/>
-            <timeslot utctime="09:20:00"/>
-            <timeslot utctime="09:30:00"/>
-            <timeslot utctime="09:40:00"/>
-            <timeslot utctime="09:50:00"/>
-
-            <timeslot utctime="10:00:00"/>
-            <timeslot utctime="10:10:00"/>
-            <timeslot utctime="10:20:00"/>
-            <timeslot utctime="10:30:00"/>
-            <timeslot utctime="10:40:00"/>
-            <timeslot utctime="10:50:00"/>
-
-            <timeslot utctime="11:00:00"/>
-            <timeslot utctime="11:10:00"/>
-            <timeslot utctime="11:20:00"/>
-            <timeslot utctime="11:30:00"/>
-            <timeslot utctime="11:40:00"/>
-            <timeslot utctime="11:50:00"/>
-
-            <timeslot utctime="12:00:00"/>
-            <timeslot utctime="12:10:00"/>
-            <timeslot utctime="12:20:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="12:40:00"/>
-            <timeslot utctime="12:50:00"/>
-
             <timeslot utctime="13:00:00"/>
-            <timeslot utctime="13:10:00"/>
-            <timeslot utctime="13:20:00"/>
             <timeslot utctime="13:30:00"/>
-            <timeslot utctime="13:40:00"/>
-            <timeslot utctime="13:50:00"/>
-
-            <timeslot utctime="14:00:00"/>
-            <timeslot utctime="14:10:00"/>
-            <timeslot utctime="14:20:00"/>
-            <timeslot utctime="14:30:00"/>
-            <timeslot utctime="14:40:00"/>
-            <timeslot utctime="14:50:00"/>
-
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="15:10:00"/>
-            <timeslot utctime="15:20:00"/>
-            <timeslot utctime="15:30:00"/>
-            <timeslot utctime="15:40:00"/>
-            <timeslot utctime="15:50:00"/>
-
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="16:10:00"/>
-            <timeslot utctime="16:20:00"/>
-            <timeslot utctime="16:30:00"/>
-            <timeslot utctime="16:40:00"/>
-            <timeslot utctime="16:50:00"/>
-
-            <timeslot utctime="17:00:00"/>
-            <timeslot utctime="17:10:00"/>
-            <timeslot utctime="17:20:00"/>
-            <timeslot utctime="17:30:00"/>
-            <timeslot utctime="17:40:00"/>
-            <timeslot utctime="17:50:00"/>
-
-            <timeslot utctime="18:00:00"/>
-            <timeslot utctime="18:10:00"/>
-            <timeslot utctime="18:20:00"/>
-            <timeslot utctime="18:30:00"/>
-            <timeslot utctime="18:40:00"/>
-            <timeslot utctime="18:50:00"/>
-
-            <timeslot utctime="19:00:00"/>
-            <timeslot utctime="19:10:00"/>
-            <timeslot utctime="19:20:00"/>
-            <timeslot utctime="19:30:00"/>
-            <timeslot utctime="19:40:00"/>
-            <timeslot utctime="19:50:00"/>
-
             <timeslot utctime="20:00:00"/>
-            <timeslot utctime="20:10:00"/>
-            <timeslot utctime="20:20:00"/>
             <timeslot utctime="20:30:00"/>
-            <timeslot utctime="20:40:00"/>
-            <timeslot utctime="20:50:00"/>
-
-            <timeslot utctime="21:00:00"/>
-            <timeslot utctime="21:10:00"/>
-            <timeslot utctime="21:20:00"/>
-            <timeslot utctime="21:30:00"/>
-            <timeslot utctime="21:40:00"/>
-            <timeslot utctime="21:50:00"/>
-
-            <timeslot utctime="22:00:00"/>
-            <timeslot utctime="22:10:00"/>
-            <timeslot utctime="22:20:00"/>
-            <timeslot utctime="22:30:00"/>
-            <timeslot utctime="22:40:00"/>
-            <timeslot utctime="22:50:00"/>
-
-            <timeslot utctime="23:00:00"/>
-            <timeslot utctime="23:10:00"/>
-            <timeslot utctime="23:20:00"/>
-            <timeslot utctime="23:30:00"/>
-            <timeslot utctime="23:40:00"/>
-            <timeslot utctime="23:50:00"/>
           </weekday>
         </week>
       </times>
-      <rewards>   
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL2" gvgseasonpoints="3" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL2" gvgseasonpoints="2"/>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL2" gvgseasonpoints="2" territorypowerpoints="300" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL2_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL2" gvgseasonpoints="2" territorypowerpoints="300"/>
         <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_02" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL2" gvgseasonpoints="8" territorypowerpoints="1200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL2_NOMATCH"/>
       </rewards>
     </match>
-    <match level="3" itempowersoftcap="900" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03_S11" tokentype="category"/>
+    <!--LEVEL 3-->
+    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1.6">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52">
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
           <weekday>
-            <timeslot utctime="01:00:00"/>
-            <timeslot utctime="01:10:00"/>
-            <timeslot utctime="01:20:00"/>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="01:40:00"/>
-            <timeslot utctime="01:50:00"/>
-
             <timeslot utctime="02:00:00"/>
-            <timeslot utctime="02:10:00"/>
-            <timeslot utctime="02:20:00"/>
             <timeslot utctime="02:30:00"/>
-            <timeslot utctime="02:40:00"/>
-            <timeslot utctime="02:50:00"/>
-
-            <timeslot utctime="03:00:00"/>
-            <timeslot utctime="03:10:00"/>
-            <timeslot utctime="03:20:00"/>
-            <timeslot utctime="03:30:00"/>
-            <timeslot utctime="03:40:00"/>
-            <timeslot utctime="03:50:00"/>
-
-            <timeslot utctime="04:00:00"/>
-            <timeslot utctime="04:10:00"/>
-            <timeslot utctime="04:20:00"/>
-            <timeslot utctime="04:30:00"/>
-            <timeslot utctime="04:40:00"/>
-            <timeslot utctime="04:50:00"/>
-
-            <timeslot utctime="05:00:00"/>
-            <timeslot utctime="05:10:00"/>
-            <timeslot utctime="05:20:00"/>
-            <timeslot utctime="05:30:00"/>
-            <timeslot utctime="05:40:00"/>
-            <timeslot utctime="05:50:00"/>
-
-            <timeslot utctime="06:00:00"/>
-            <timeslot utctime="06:10:00"/>
-            <timeslot utctime="06:20:00"/>
-            <timeslot utctime="06:30:00"/>
-            <timeslot utctime="06:40:00"/>
-            <timeslot utctime="06:50:00"/>
-
-            <timeslot utctime="07:00:00"/>
-            <timeslot utctime="07:10:00"/>
-            <timeslot utctime="07:20:00"/>
-            <timeslot utctime="07:30:00"/>
-            <timeslot utctime="07:40:00"/>
-            <timeslot utctime="07:50:00"/>
-
-            <timeslot utctime="08:00:00"/>
-            <timeslot utctime="08:10:00"/>
-            <timeslot utctime="08:20:00"/>
-            <timeslot utctime="08:30:00"/>
-            <timeslot utctime="08:40:00"/>
-            <timeslot utctime="08:50:00"/>
-
-            <timeslot utctime="09:00:00"/>
-            <timeslot utctime="09:10:00"/>
-            <timeslot utctime="09:20:00"/>
-            <timeslot utctime="09:30:00"/>
-            <timeslot utctime="09:40:00"/>
-            <timeslot utctime="09:50:00"/>
-
-            <timeslot utctime="10:00:00"/>
-            <timeslot utctime="10:10:00"/>
-            <timeslot utctime="10:20:00"/>
-            <timeslot utctime="10:30:00"/>
-            <timeslot utctime="10:40:00"/>
-            <timeslot utctime="10:50:00"/>
-
-            <timeslot utctime="11:00:00"/>
-            <timeslot utctime="11:10:00"/>
-            <timeslot utctime="11:20:00"/>
-            <timeslot utctime="11:30:00"/>
-            <timeslot utctime="11:40:00"/>
-            <timeslot utctime="11:50:00"/>
-
-            <timeslot utctime="12:00:00"/>
-            <timeslot utctime="12:10:00"/>
-            <timeslot utctime="12:20:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="12:40:00"/>
-            <timeslot utctime="12:50:00"/>
-
             <timeslot utctime="13:00:00"/>
-            <timeslot utctime="13:10:00"/>
-            <timeslot utctime="13:20:00"/>
             <timeslot utctime="13:30:00"/>
-            <timeslot utctime="13:40:00"/>
-            <timeslot utctime="13:50:00"/>
-
-            <timeslot utctime="14:00:00"/>
-            <timeslot utctime="14:10:00"/>
-            <timeslot utctime="14:20:00"/>
-            <timeslot utctime="14:30:00"/>
-            <timeslot utctime="14:40:00"/>
-            <timeslot utctime="14:50:00"/>
-
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="15:10:00"/>
-            <timeslot utctime="15:20:00"/>
-            <timeslot utctime="15:30:00"/>
-            <timeslot utctime="15:40:00"/>
-            <timeslot utctime="15:50:00"/>
-
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="16:10:00"/>
-            <timeslot utctime="16:20:00"/>
-            <timeslot utctime="16:30:00"/>
-            <timeslot utctime="16:40:00"/>
-            <timeslot utctime="16:50:00"/>
-
-            <timeslot utctime="17:00:00"/>
-            <timeslot utctime="17:10:00"/>
-            <timeslot utctime="17:20:00"/>
-            <timeslot utctime="17:30:00"/>
-            <timeslot utctime="17:40:00"/>
-            <timeslot utctime="17:50:00"/>
-
-            <timeslot utctime="18:00:00"/>
-            <timeslot utctime="18:10:00"/>
-            <timeslot utctime="18:20:00"/>
-            <timeslot utctime="18:30:00"/>
-            <timeslot utctime="18:40:00"/>
-            <timeslot utctime="18:50:00"/>
-
-            <timeslot utctime="19:00:00"/>
-            <timeslot utctime="19:10:00"/>
-            <timeslot utctime="19:20:00"/>
-            <timeslot utctime="19:30:00"/>
-            <timeslot utctime="19:40:00"/>
-            <timeslot utctime="19:50:00"/>
-
             <timeslot utctime="20:00:00"/>
-            <timeslot utctime="20:10:00"/>
-            <timeslot utctime="20:20:00"/>
             <timeslot utctime="20:30:00"/>
-            <timeslot utctime="20:40:00"/>
-            <timeslot utctime="20:50:00"/>
-
-            <timeslot utctime="21:00:00"/>
-            <timeslot utctime="21:10:00"/>
-            <timeslot utctime="21:20:00"/>
-            <timeslot utctime="21:30:00"/>
-            <timeslot utctime="21:40:00"/>
-            <timeslot utctime="21:50:00"/>
-
-            <timeslot utctime="22:00:00"/>
-            <timeslot utctime="22:10:00"/>
-            <timeslot utctime="22:20:00"/>
-            <timeslot utctime="22:30:00"/>
-            <timeslot utctime="22:40:00"/>
-            <timeslot utctime="22:50:00"/>
-
-            <timeslot utctime="23:00:00"/>
-            <timeslot utctime="23:10:00"/>
-            <timeslot utctime="23:20:00"/>
-            <timeslot utctime="23:30:00"/>
-            <timeslot utctime="23:40:00"/>
-            <timeslot utctime="23:50:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="6" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="5"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="category"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL3" gvgseasonpoints="5" territorypowerpoints="750" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL3_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL3" gvgseasonpoints="5" territorypowerpoints="750"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_03" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL3" gvgseasonpoints="20" territorypowerpoints="3000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL3_NOMATCH"/>
       </rewards>
     </match>
-    <match level="4" itempowersoftcap="1000" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
+    <!--LEVEL 4-->
+    <match level="4" itempowersoftcap="1200" itempowerscalingfactor="0.2" dailypointfactor="1.5">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
       <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52">
-          <weekday>
-            <timeslot utctime="01:00:00"/>
-            <timeslot utctime="01:10:00"/>
-            <timeslot utctime="01:20:00"/>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="01:40:00"/>
-            <timeslot utctime="01:50:00"/>
-
-            <timeslot utctime="02:00:00"/>
-            <timeslot utctime="02:10:00"/>
-            <timeslot utctime="02:20:00"/>
-            <timeslot utctime="02:30:00"/>
-            <timeslot utctime="02:40:00"/>
-            <timeslot utctime="02:50:00"/>
-
-            <timeslot utctime="03:00:00"/>
-            <timeslot utctime="03:10:00"/>
-            <timeslot utctime="03:20:00"/>
-            <timeslot utctime="03:30:00"/>
-            <timeslot utctime="03:40:00"/>
-            <timeslot utctime="03:50:00"/>
-
-            <timeslot utctime="04:00:00"/>
-            <timeslot utctime="04:10:00"/>
-            <timeslot utctime="04:20:00"/>
-            <timeslot utctime="04:30:00"/>
-            <timeslot utctime="04:40:00"/>
-            <timeslot utctime="04:50:00"/>
-
-            <timeslot utctime="05:00:00"/>
-            <timeslot utctime="05:10:00"/>
-            <timeslot utctime="05:20:00"/>
-            <timeslot utctime="05:30:00"/>
-            <timeslot utctime="05:40:00"/>
-            <timeslot utctime="05:50:00"/>
-
-            <timeslot utctime="06:00:00"/>
-            <timeslot utctime="06:10:00"/>
-            <timeslot utctime="06:20:00"/>
-            <timeslot utctime="06:30:00"/>
-            <timeslot utctime="06:40:00"/>
-            <timeslot utctime="06:50:00"/>
-
-            <timeslot utctime="07:00:00"/>
-            <timeslot utctime="07:10:00"/>
-            <timeslot utctime="07:20:00"/>
-            <timeslot utctime="07:30:00"/>
-            <timeslot utctime="07:40:00"/>
-            <timeslot utctime="07:50:00"/>
-
-            <timeslot utctime="08:00:00"/>
-            <timeslot utctime="08:10:00"/>
-            <timeslot utctime="08:20:00"/>
-            <timeslot utctime="08:30:00"/>
-            <timeslot utctime="08:40:00"/>
-            <timeslot utctime="08:50:00"/>
-
-            <timeslot utctime="09:00:00"/>
-            <timeslot utctime="09:10:00"/>
-            <timeslot utctime="09:20:00"/>
-            <timeslot utctime="09:30:00"/>
-            <timeslot utctime="09:40:00"/>
-            <timeslot utctime="09:50:00"/>
-
-            <timeslot utctime="10:00:00"/>
-            <timeslot utctime="10:10:00"/>
-            <timeslot utctime="10:20:00"/>
-            <timeslot utctime="10:30:00"/>
-            <timeslot utctime="10:40:00"/>
-            <timeslot utctime="10:50:00"/>
-
-            <timeslot utctime="11:00:00"/>
-            <timeslot utctime="11:10:00"/>
-            <timeslot utctime="11:20:00"/>
-            <timeslot utctime="11:30:00"/>
-            <timeslot utctime="11:40:00"/>
-            <timeslot utctime="11:50:00"/>
-
-            <timeslot utctime="12:00:00"/>
-            <timeslot utctime="12:10:00"/>
-            <timeslot utctime="12:20:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="12:40:00"/>
-            <timeslot utctime="12:50:00"/>
-
+        <week weeknumber="1 3 5 7 9 11 13">
+          <weekday day="Monday">
             <timeslot utctime="13:00:00"/>
-            <timeslot utctime="13:10:00"/>
-            <timeslot utctime="13:20:00"/>
             <timeslot utctime="13:30:00"/>
-            <timeslot utctime="13:40:00"/>
-            <timeslot utctime="13:50:00"/>
-
-            <timeslot utctime="14:00:00"/>
-            <timeslot utctime="14:10:00"/>
-            <timeslot utctime="14:20:00"/>
-            <timeslot utctime="14:30:00"/>
-            <timeslot utctime="14:40:00"/>
-            <timeslot utctime="14:50:00"/>
-
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="15:10:00"/>
-            <timeslot utctime="15:20:00"/>
-            <timeslot utctime="15:30:00"/>
-            <timeslot utctime="15:40:00"/>
-            <timeslot utctime="15:50:00"/>
-
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="16:10:00"/>
-            <timeslot utctime="16:20:00"/>
-            <timeslot utctime="16:30:00"/>
-            <timeslot utctime="16:40:00"/>
-            <timeslot utctime="16:50:00"/>
-
-            <timeslot utctime="17:00:00"/>
-            <timeslot utctime="17:10:00"/>
-            <timeslot utctime="17:20:00"/>
-            <timeslot utctime="17:30:00"/>
-            <timeslot utctime="17:40:00"/>
-            <timeslot utctime="17:50:00"/>
-
-            <timeslot utctime="18:00:00"/>
-            <timeslot utctime="18:10:00"/>
-            <timeslot utctime="18:20:00"/>
-            <timeslot utctime="18:30:00"/>
-            <timeslot utctime="18:40:00"/>
-            <timeslot utctime="18:50:00"/>
-
-            <timeslot utctime="19:00:00"/>
-            <timeslot utctime="19:10:00"/>
-            <timeslot utctime="19:20:00"/>
-            <timeslot utctime="19:30:00"/>
-            <timeslot utctime="19:40:00"/>
-            <timeslot utctime="19:50:00"/>
-
             <timeslot utctime="20:00:00"/>
-            <timeslot utctime="20:10:00"/>
-            <timeslot utctime="20:20:00"/>
             <timeslot utctime="20:30:00"/>
-            <timeslot utctime="20:40:00"/>
-            <timeslot utctime="20:50:00"/>
-
-            <timeslot utctime="21:00:00"/>
-            <timeslot utctime="21:10:00"/>
-            <timeslot utctime="21:20:00"/>
-            <timeslot utctime="21:30:00"/>
-            <timeslot utctime="21:40:00"/>
-            <timeslot utctime="21:50:00"/>
-
-            <timeslot utctime="22:00:00"/>
-            <timeslot utctime="22:10:00"/>
-            <timeslot utctime="22:20:00"/>
-            <timeslot utctime="22:30:00"/>
-            <timeslot utctime="22:40:00"/>
-            <timeslot utctime="22:50:00"/>
-
-            <timeslot utctime="23:00:00"/>
-            <timeslot utctime="23:10:00"/>
-            <timeslot utctime="23:20:00"/>
-            <timeslot utctime="23:30:00"/>
-            <timeslot utctime="23:40:00"/>
-            <timeslot utctime="23:50:00"/>
           </weekday>
-        </week>
-      </times>
-      <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="15" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="11"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-      </rewards>
-    </match>
-    <match level="5" itempowersoftcap="1100" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-      <times>
-        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52">
-          <weekday>
-            <timeslot utctime="01:00:00"/>
-            <timeslot utctime="01:10:00"/>
-            <timeslot utctime="01:20:00"/>
-            <timeslot utctime="01:30:00"/>
-            <timeslot utctime="01:40:00"/>
-            <timeslot utctime="01:50:00"/>
-
+          <weekday day="Tuesday">
             <timeslot utctime="02:00:00"/>
-            <timeslot utctime="02:10:00"/>
-            <timeslot utctime="02:20:00"/>
             <timeslot utctime="02:30:00"/>
-            <timeslot utctime="02:40:00"/>
-            <timeslot utctime="02:50:00"/>
-
-            <timeslot utctime="03:00:00"/>
-            <timeslot utctime="03:10:00"/>
-            <timeslot utctime="03:20:00"/>
-            <timeslot utctime="03:30:00"/>
-            <timeslot utctime="03:40:00"/>
-            <timeslot utctime="03:50:00"/>
-
-            <timeslot utctime="04:00:00"/>
-            <timeslot utctime="04:10:00"/>
-            <timeslot utctime="04:20:00"/>
-            <timeslot utctime="04:30:00"/>
-            <timeslot utctime="04:40:00"/>
-            <timeslot utctime="04:50:00"/>
-
-            <timeslot utctime="05:00:00"/>
-            <timeslot utctime="05:10:00"/>
-            <timeslot utctime="05:20:00"/>
-            <timeslot utctime="05:30:00"/>
-            <timeslot utctime="05:40:00"/>
-            <timeslot utctime="05:50:00"/>
-
-            <timeslot utctime="06:00:00"/>
-            <timeslot utctime="06:10:00"/>
-            <timeslot utctime="06:20:00"/>
-            <timeslot utctime="06:30:00"/>
-            <timeslot utctime="06:40:00"/>
-            <timeslot utctime="06:50:00"/>
-
-            <timeslot utctime="07:00:00"/>
-            <timeslot utctime="07:10:00"/>
-            <timeslot utctime="07:20:00"/>
-            <timeslot utctime="07:30:00"/>
-            <timeslot utctime="07:40:00"/>
-            <timeslot utctime="07:50:00"/>
-
-            <timeslot utctime="08:00:00"/>
-            <timeslot utctime="08:10:00"/>
-            <timeslot utctime="08:20:00"/>
-            <timeslot utctime="08:30:00"/>
-            <timeslot utctime="08:40:00"/>
-            <timeslot utctime="08:50:00"/>
-
-            <timeslot utctime="09:00:00"/>
-            <timeslot utctime="09:10:00"/>
-            <timeslot utctime="09:20:00"/>
-            <timeslot utctime="09:30:00"/>
-            <timeslot utctime="09:40:00"/>
-            <timeslot utctime="09:50:00"/>
-
-            <timeslot utctime="10:00:00"/>
-            <timeslot utctime="10:10:00"/>
-            <timeslot utctime="10:20:00"/>
-            <timeslot utctime="10:30:00"/>
-            <timeslot utctime="10:40:00"/>
-            <timeslot utctime="10:50:00"/>
-
-            <timeslot utctime="11:00:00"/>
-            <timeslot utctime="11:10:00"/>
-            <timeslot utctime="11:20:00"/>
-            <timeslot utctime="11:30:00"/>
-            <timeslot utctime="11:40:00"/>
-            <timeslot utctime="11:50:00"/>
-
-            <timeslot utctime="12:00:00"/>
-            <timeslot utctime="12:10:00"/>
-            <timeslot utctime="12:20:00"/>
-            <timeslot utctime="12:30:00"/>
-            <timeslot utctime="12:40:00"/>
-            <timeslot utctime="12:50:00"/>
-
-            <timeslot utctime="13:00:00"/>
-            <timeslot utctime="13:10:00"/>
-            <timeslot utctime="13:20:00"/>
-            <timeslot utctime="13:30:00"/>
-            <timeslot utctime="13:40:00"/>
-            <timeslot utctime="13:50:00"/>
-
-            <timeslot utctime="14:00:00"/>
-            <timeslot utctime="14:10:00"/>
-            <timeslot utctime="14:20:00"/>
-            <timeslot utctime="14:30:00"/>
-            <timeslot utctime="14:40:00"/>
-            <timeslot utctime="14:50:00"/>
-
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="15:10:00"/>
-            <timeslot utctime="15:20:00"/>
-            <timeslot utctime="15:30:00"/>
-            <timeslot utctime="15:40:00"/>
-            <timeslot utctime="15:50:00"/>
-
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="16:10:00"/>
-            <timeslot utctime="16:20:00"/>
-            <timeslot utctime="16:30:00"/>
-            <timeslot utctime="16:40:00"/>
-            <timeslot utctime="16:50:00"/>
-
-            <timeslot utctime="17:00:00"/>
-            <timeslot utctime="17:10:00"/>
-            <timeslot utctime="17:20:00"/>
-            <timeslot utctime="17:30:00"/>
-            <timeslot utctime="17:40:00"/>
-            <timeslot utctime="17:50:00"/>
-
-            <timeslot utctime="18:00:00"/>
-            <timeslot utctime="18:10:00"/>
-            <timeslot utctime="18:20:00"/>
-            <timeslot utctime="18:30:00"/>
-            <timeslot utctime="18:40:00"/>
-            <timeslot utctime="18:50:00"/>
-
-            <timeslot utctime="19:00:00"/>
-            <timeslot utctime="19:10:00"/>
-            <timeslot utctime="19:20:00"/>
-            <timeslot utctime="19:30:00"/>
-            <timeslot utctime="19:40:00"/>
-            <timeslot utctime="19:50:00"/>
-
-            <timeslot utctime="20:00:00"/>
-            <timeslot utctime="20:10:00"/>
-            <timeslot utctime="20:20:00"/>
-            <timeslot utctime="20:30:00"/>
-            <timeslot utctime="20:40:00"/>
-            <timeslot utctime="20:50:00"/>
-
-            <timeslot utctime="21:00:00"/>
-            <timeslot utctime="21:10:00"/>
-            <timeslot utctime="21:20:00"/>
-            <timeslot utctime="21:30:00"/>
-            <timeslot utctime="21:40:00"/>
-            <timeslot utctime="21:50:00"/>
-
-            <timeslot utctime="22:00:00"/>
-            <timeslot utctime="22:10:00"/>
-            <timeslot utctime="22:20:00"/>
-            <timeslot utctime="22:30:00"/>
-            <timeslot utctime="22:40:00"/>
-            <timeslot utctime="22:50:00"/>
-
-            <timeslot utctime="23:00:00"/>
-            <timeslot utctime="23:10:00"/>
-            <timeslot utctime="23:20:00"/>
-            <timeslot utctime="23:30:00"/>
-            <timeslot utctime="23:40:00"/>
-            <timeslot utctime="23:50:00"/>
           </weekday>
-        </week>
-      </times>
-      <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="50" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="38"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-      </rewards>
-    </match>
-    <match level="6" itempowersoftcap="1200" itempowerscalingfactor="0.5">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-      <times>
-        <week weeknumber="2 6 10 12">
+          <weekday day="Wednesday">
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
+          <weekday day="Thursday">
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
+          </weekday>
+          <weekday day="Friday">
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
           <weekday day="Saturday">
-            <timeslot utctime="15:00:00"/>
-            <timeslot utctime="22:00:00"/>
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
           </weekday>
           <weekday day="Sunday">
-            <timeslot utctime="04:00:00"/>
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
           </weekday>
         </week>
-      </times>
-      <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="125" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="94"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
-      </rewards>
-    </match>
-    <match level="7" itempowersoftcap="1300" itempowerscalingfactor="0.2">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
-      <times>
-        <week weeknumber="2 6 10 12">
+        <week weeknumber="2 4 6 8 10 12">
+          <weekday day="Monday">
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
+          </weekday>
+          <weekday day="Tuesday">
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
+          <weekday day="Wednesday">
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
+          </weekday>
+          <weekday day="Thursday">
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
+          <weekday day="Friday">
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
+          </weekday>
           <weekday day="Saturday">
-            <timeslot utctime="16:00:00"/>
-            <timeslot utctime="23:00:00"/>
+            <timeslot utctime="13:00:00"/>
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:00:00"/>
+            <timeslot utctime="20:30:00"/>
           </weekday>
           <weekday day="Sunday">
-            <timeslot utctime="05:00:00"/>
+            <timeslot utctime="02:00:00"/>
+            <timeslot utctime="02:30:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="500" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_08" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="375"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_08" tokentype="season"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL4" gvgseasonpoints="8" territorypowerpoints="1200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL4_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL4" gvgseasonpoints="8" territorypowerpoints="1200"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_04" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL4" gvgseasonpoints="32" territorypowerpoints="4800" token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL4_NOMATCH"/>
+        <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL4"/>
       </rewards>
     </match>
-    <match level="8" itempowersoftcap="1400" itempowerscalingfactor="0.2">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_08" tokentype="season"/>
+    <!--LEVEL 5-->
+    <match level="5" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1.8">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season"/>
       <times>
-        <week weeknumber="12">
+        <week weeknumber="2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday day="Tuesday">
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
+          <weekday day="Wednesday">
+            <timeslot utctime="02:30:00"/>
+          </weekday>
+          <weekday day="Saturday">
+            <timeslot utctime="13:30:00"/>
+            <timeslot utctime="20:30:00"/>
+          </weekday>
           <weekday day="Sunday">
-            <timeslot utctime="17:00:00"/>
+            <timeslot utctime="02:30:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="1000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_09" tokentype="season"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="750"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_08" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_09" tokentype="season"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL5" gvgseasonpoints="20" territorypowerpoints="2250" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL5_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL5" gvgseasonpoints="20" territorypowerpoints="2250"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_05" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL5" gvgseasonpoints="80" territorypowerpoints="9000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL5_NOMATCH"/>
+        <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL5"/>
       </rewards>
     </match>
-    <match level="9" itempowersoftcap="1500" itempowerscalingfactor="0.2">
-      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_09" tokentype="season"/>
+    <!--LEVEL 6-->
+    <match level="6" itempowersoftcap="1400" itempowerscalingfactor="0.2" dailypointfactor="2">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season"/>
       <times>
-        <week weeknumber="12">
+        <week weeknumber="2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday day="Saturday">
+            <timeslot utctime="14:00:00"/>
+            <timeslot utctime="21:00:00"/>
+          </weekday>
           <weekday day="Sunday">
-            <timeslot utctime="18:00:00"/>
+            <timeslot utctime="03:00:00"/>
           </weekday>
         </week>
       </times>
       <rewards>
-        
-        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9" gvgseasonpoints="2500"/>
-        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL9" gvgseasonpoints="1875"/>
-        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_09" tokentype="season"/>
-        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL9"/>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL6" gvgseasonpoints="50" territorypowerpoints="3750" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL6_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL6" gvgseasonpoints="50" territorypowerpoints="3750"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_06" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL6" gvgseasonpoints="200" territorypowerpoints="15000" token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL6_NOMATCH"/>
+        <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL6"/>
+      </rewards>
+    </match>
+    <!--LEVEL 7-->
+    <match level="7" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="1">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season"/>
+      <times>
+        <week weeknumber="3 5 7 9 11 13">
+          <weekday day="Saturday">
+            <timeslot utctime="14:30:00"/>
+            <timeslot utctime="21:30:00"/>
+          </weekday>
+          <weekday day="Sunday">
+            <timeslot utctime="03:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL7" gvgseasonpoints="120" territorypowerpoints="6300" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL7_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL7" gvgseasonpoints="120" territorypowerpoints="6300"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_07" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL7" gvgseasonpoints="480" territorypowerpoints="25200" token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL7_NOMATCH"/>
+        <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL7"/>
+      </rewards>
+    </match>
+    <!--LEVEL 8-->
+    <match level="8" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="1">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
+      <times>
+        <week weeknumber="6 7">
+          <weekday day="Sunday">
+            <timeslot utctime="19:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL8" gvgseasonpoints="320" territorypowerpoints="9600" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL8_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL8" gvgseasonpoints="320" territorypowerpoints="9600"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_LVL_08" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL8" gvgseasonpoints="1280" territorypowerpoints="38400" token="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL8_NOMATCH"/>
+        <towerwin lootlist="CRYSTALLEAGUE_LOOT_TERRITORY_LVL8"/>
+      </rewards>
+    </match>
+    <!--LEVEL 9-->
+    <match level="9" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1.4">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_09" tokentype="season"/>
+      <times>
+        <week weeknumber="7">
+          <weekday day="Sunday">
+            <timeslot utctime="20:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9" gvgseasonpoints="1000" territorypowerpoints="12000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL9_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_LOOT_BONUS_LVL9" gvgseasonpoints="1000" territorypowerpoints="12000"/>
+        <draw lootlist="CRYSTALLEAGUE_LOOT_WINNER_LVL9"/>
+        <nomatch lootlist="CRYSTALLEAGUE_LOOT_NOSHOW_LVL9" gvgseasonpoints="4000" territorypowerpoints="48000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL9_NOMATCH"/>
       </rewards>
     </match>
   </ruleset>
-  -->
+
+  <!--20v20 CRYSTAL LEAGUE - Energy Rush Season -->
+
+  <ruleset name="CRYSTAL_LEAGUE_CITY_ENERGY_RUSH" limitedpointsperday="true">
+    <matchtimers prebattlewarninginssec="10"
+                 signupperiodinsec="1740"
+                 dcendqueueinsec="90"
+                 restrictiondurationinsec="43200"/>
+
+    <rewardsettings crystalprizepool="1000"
+                    crystalshareamount="0.75"
+                    crystalwinnerbonus="0.25"
+                    bonuslootlistamount="4"/>
+
+    <!--LEVEL 1-->
+    <match level="1" itempowersoftcap="900" itempowerscalingfactor="0" playersarelethal="false" dailypointfactor="0">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01" tokentype="category"/>
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
+          <weekday>
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="01:30:00"/>
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:00:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL1" gvgseasonpoints="2" territorypowerpoints="120" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL1_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL1" gvgseasonpoints="0" territorypowerpoints="120" />
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL1" gvgseasonpoints="1" territorypowerpoints="480" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL1_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 2-->
+    <match level="2" itempowersoftcap="900" itempowerscalingfactor="0.2" dailypointfactor="2">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
+          <weekday>
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="01:30:00"/>
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:00:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL2" gvgseasonpoints="6" territorypowerpoints="3600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL2_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL2" gvgseasonpoints="6" territorypowerpoints="3600"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" tokentype="category"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL2" gvgseasonpoints="24" territorypowerpoints="14400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL2_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 3-->
+    <match level="3" itempowersoftcap="1100" itempowerscalingfactor="0.2" dailypointfactor="1">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13 14">
+          <weekday day="Tuesday">
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:00:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+          <weekday day="Wednesday">
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="01:30:00"/>
+          </weekday>
+          <weekday day="Friday">
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:00:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+          <weekday day="Saturday">
+            <timeslot utctime="01:00:00"/>
+            <timeslot utctime="01:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL3" gvgseasonpoints="12" territorypowerpoints="5400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL3_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL3" gvgseasonpoints="12" territorypowerpoints="5400"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_03" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL3" gvgseasonpoints="48" territorypowerpoints="21600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL3_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 4-->
+    <match level="4" itempowersoftcap="1300" itempowerscalingfactor="0.2" dailypointfactor="1.3">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
+      <times>
+        <week weeknumber="1 2 3 4 5 6 7 8 9 10 11 12 13">
+          <weekday day="Saturday">
+            <timeslot utctime="12:00:00"/>
+            <timeslot utctime="19:00:00"/>
+          </weekday>
+          <weekday day="Sunday">
+            <timeslot utctime="01:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL4" gvgseasonpoints="20" territorypowerpoints="6000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL4_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL4" gvgseasonpoints="20" territorypowerpoints="6000"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_04" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL4" gvgseasonpoints="80" territorypowerpoints="24000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL4_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 5-->
+    <match level="5" itempowersoftcap="1500" itempowerscalingfactor="0.2" dailypointfactor="0.75">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
+      <times>
+        <week weeknumber="2 4 6 8 10 12 13">
+          <weekday day="Saturday">
+            <timeslot utctime="12:30:00"/>
+            <timeslot utctime="19:30:00"/>
+          </weekday>
+          <weekday day="Sunday">
+            <timeslot utctime="01:30:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL5" gvgseasonpoints="40" territorypowerpoints="8400" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL5_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL5" gvgseasonpoints="40" territorypowerpoints="8400"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_05" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL5" gvgseasonpoints="160" territorypowerpoints="33600" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL5_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 6-->
+    <match level="6" itempowersoftcap="1600" itempowerscalingfactor="0.2" dailypointfactor="0.8">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
+      <times>
+        <week weeknumber="6 7">
+          <weekday day="Saturday">
+            <timeslot utctime="17:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL6" gvgseasonpoints="100" territorypowerpoints="12000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL6_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL6" gvgseasonpoints="100" territorypowerpoints="12000"/>
+        <draw token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_06" tokentype="season"/>
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL6" gvgseasonpoints="400" territorypowerpoints="48000" token="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL6_NOMATCH"/>
+      </rewards>
+    </match>
+    <!--LEVEL 7-->
+    <match level="7" itempowersoftcap="1700" itempowerscalingfactor="0.2" dailypointfactor="1.08">
+      <requiredtoken uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_07" tokentype="season"/>
+      <times>
+        <week weeknumber="7">
+          <weekday day="Saturday">
+            <timeslot utctime="18:00:00"/>
+          </weekday>
+        </week>
+      </times>
+      <rewards>
+        <winner lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" gvgseasonpoints="500" territorypowerpoints="21000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL7_WIN"/>
+        <bonus lootlist="CRYSTALLEAGUE_CITY_LOOT_BONUS_LVL7" gvgseasonpoints="500" territorypowerpoints="21000"/>
+        <draw lootlist="CRYSTALLEAGUE_CITY_LOOT_WINNER_LVL7" />
+        <nomatch lootlist="CRYSTALLEAGUE_CITY_LOOT_NOSHOW_LVL7" gvgseasonpoints="2000" territorypowerpoints="84000" mightreward="PVPCHALLENGE_CRYSTALLEAGUE_20V20_LVL7_NOMATCH"/>
+      </rewards>
+    </match>
+  </ruleset>
+
+
 
 </crystalleague>
