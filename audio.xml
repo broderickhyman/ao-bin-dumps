@@ -334,6 +334,10 @@
     <CharType name="mount"/>
     <MountType name="chimera"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_HELLHOUND">
+	<CharType name="mount"/>
+	<MountType name="hellhound"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -3106,6 +3110,12 @@
     <OnCastStart name="Play_cast_guard_rune" />
     <OnCastFinished name="Play_magicrune_cast" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MACE_PULL" >
+	<OnCastFinished name="Play_mace_pull_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MACE_PULL_HIT" >
+	<OnSpellHit name="Play_pull_displacement_hit" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_IRONBREAKER">
     <OnCastStart name="Play_hammer_ironbreaker" />
@@ -4178,7 +4188,9 @@
   </WwiseEventInfo>
   
   <!-- Misc -->
-
+  <WwiseEventInfo name="OPEN_SILVERBAG_OR_TOME" >
+	<OnSpellHit name="Play_open_silver_bag" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="CHARGE_INCREASE" >
     <OnCastFinished name="Play_charge_increase" />
   </WwiseEventInfo>

@@ -9,7 +9,7 @@
     <Items vanishtimeforunuseditems="432000" />
     <Guild 
     cost="100000" 
-    guildinvitationdelayinseconds="60" 
+    guildinvitationdelayinseconds="300" 
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
     territorybuff="GUILD_TERRITORY_BUFF"
@@ -20,7 +20,14 @@
     guildlogochangesilvercosts="0"
     maxhideouts="6"
     maxplayers="300"
-    />
+    >
+      <guildinvitationlimits declinedinvitefalloffseconds="3600">
+        <invitesdeclined amount="0" cooldownafternewdecline="0" maximumsimultaneousinvites="300"/>
+        <invitesdeclined amount="5" cooldownafternewdecline="60" maximumsimultaneousinvites="10"/>
+        <invitesdeclined amount="10" cooldownafternewdecline="180" maximumsimultaneousinvites="5"/>
+        <invitesdeclined amount="15" cooldownafternewdecline="300" maximumsimultaneousinvites="1"/>
+      </guildinvitationlimits>
+    </Guild>
 
     <!-- DefaultMinActiveTimeBeforeSkippingAllowed is just a default, usually overwritten in worldsettings.xml -->
     <SmartClusterQueue
@@ -134,16 +141,16 @@
     <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="9" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
-      <level requiredpoints="10000"  title="@REPUTATION_LEVEL_POSITIVE04"       nametagicon="REPUTATION_POSITIVE04" rewardicon="REPUTATION_POSITIVE04" recoveryperday="0"     pvegainfactor="0.002" gathergainfactor="0.01" candisablepvp="true" canenterexpedition="true"  attackpenalty="10"  knockdownpenalty="50"   killpenalty="1000" cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE04"/>
-      <level requiredpoints="5000"   title="@REPUTATION_LEVEL_POSITIVE03"       nametagicon="REPUTATION_POSITIVE03" rewardicon="REPUTATION_POSITIVE03" recoveryperday="0"     pvegainfactor="0.004" gathergainfactor="0.02" candisablepvp="true" canenterexpedition="true"  attackpenalty="7.5" knockdownpenalty="37.5" killpenalty="750"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE03"/>
-      <level requiredpoints="1500"   title="@REPUTATION_LEVEL_POSITIVE02"       nametagicon="REPUTATION_POSITIVE02" rewardicon="REPUTATION_POSITIVE02" recoveryperday="0"     pvegainfactor="0.006" gathergainfactor="0.03" candisablepvp="true" canenterexpedition="true"  attackpenalty="5"   knockdownpenalty="25"   killpenalty="500"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE02"/>
-      <level requiredpoints="500"    title="@REPUTATION_LEVEL_POSITIVE01"       nametagicon="REPUTATION_POSITIVE01" rewardicon="REPUTATION_POSITIVE01" recoveryperday="0"     pvegainfactor="0.008" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="2.5" knockdownpenalty="12.5" killpenalty="250"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE01"/>
-      <level requiredpoints="0"      title="@REPUTATION_LEVEL_NEUTRAL"          nametagicon=""                      rewardicon="REPUTATION_NEUTRAL"    recoveryperday="0"     pvegainfactor="0.01"  gathergainfactor="0.05" candisablepvp="true" canenterexpedition="true"  attackpenalty="1"   knockdownpenalty="5"    killpenalty="100"  cityaccessdisplay="safe" crimeprotectionbuff=""/>
-      <level requiredpoints="-1000"  title="@REPUTATION_LEVEL_NEUTRAL_NEGATIVE" nametagicon="REPUTATION_NEGATIVE00" rewardicon="REPUTATION_NEGATIVE00" recoveryperday="0"     pvegainfactor="0.012" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe" crimeprotectionbuff=""/>
-      <level requiredpoints="-3000"  title="@REPUTATION_LEVEL_NEGATIVE01"       nametagicon="REPUTATION_NEGATIVE01" rewardicon="REPUTATION_NEGATIVE01" recoveryperday="1000"  pvegainfactor="0.02"  gathergainfactor="0.1"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
-      <level requiredpoints="-10000" title="@REPUTATION_LEVEL_NEGATIVE02"       nametagicon="REPUTATION_NEGATIVE02" rewardicon="REPUTATION_NEGATIVE02" recoveryperday="750"   pvegainfactor="0.04"  gathergainfactor="0.2"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
-      <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03"       nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500"   pvegainfactor="0.06"  gathergainfactor="0.3"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
-      <level requiredpoints="-50000" title="@REPUTATION_LEVEL_NEGATIVE04"       nametagicon="REPUTATION_NEGATIVE04" rewardicon="REPUTATION_NEGATIVE04" recoveryperday="2000"  pvegainfactor="0.09"  gathergainfactor="0.45" candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="10000"  title="@REPUTATION_LEVEL_POSITIVE04"       nametagicon="REPUTATION_POSITIVE04" rewardicon="REPUTATION_POSITIVE04" recoveryperday="0"     pvegainfactor="0.0014" gathergainfactor="0.01" candisablepvp="true" canenterexpedition="true"  attackpenalty="10"  knockdownpenalty="50"   killpenalty="1000" cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE04"/>
+      <level requiredpoints="5000"   title="@REPUTATION_LEVEL_POSITIVE03"       nametagicon="REPUTATION_POSITIVE03" rewardicon="REPUTATION_POSITIVE03" recoveryperday="0"     pvegainfactor="0.0028" gathergainfactor="0.02" candisablepvp="true" canenterexpedition="true"  attackpenalty="7.5" knockdownpenalty="37.5" killpenalty="750"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE03"/>
+      <level requiredpoints="1500"   title="@REPUTATION_LEVEL_POSITIVE02"       nametagicon="REPUTATION_POSITIVE02" rewardicon="REPUTATION_POSITIVE02" recoveryperday="0"     pvegainfactor="0.0042" gathergainfactor="0.03" candisablepvp="true" canenterexpedition="true"  attackpenalty="5"   knockdownpenalty="25"   killpenalty="500"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE02"/>
+      <level requiredpoints="500"    title="@REPUTATION_LEVEL_POSITIVE01"       nametagicon="REPUTATION_POSITIVE01" rewardicon="REPUTATION_POSITIVE01" recoveryperday="0"     pvegainfactor="0.0056" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="2.5" knockdownpenalty="12.5" killpenalty="250"  cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE01"/>
+      <level requiredpoints="0"      title="@REPUTATION_LEVEL_NEUTRAL"          nametagicon=""                      rewardicon="REPUTATION_NEUTRAL"    recoveryperday="0"     pvegainfactor="0.007"  gathergainfactor="0.05" candisablepvp="true" canenterexpedition="true"  attackpenalty="1"   knockdownpenalty="5"    killpenalty="100"  cityaccessdisplay="safe" crimeprotectionbuff=""/>
+      <level requiredpoints="-1000"  title="@REPUTATION_LEVEL_NEUTRAL_NEGATIVE" nametagicon="REPUTATION_NEGATIVE00" rewardicon="REPUTATION_NEGATIVE00" recoveryperday="0"     pvegainfactor="0.0084" gathergainfactor="0.04" candisablepvp="true" canenterexpedition="true"  attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe" crimeprotectionbuff=""/>
+      <level requiredpoints="-3000"  title="@REPUTATION_LEVEL_NEGATIVE01"       nametagicon="REPUTATION_NEGATIVE01" rewardicon="REPUTATION_NEGATIVE01" recoveryperday="1000"  pvegainfactor="0.014"  gathergainfactor="0.1"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-10000" title="@REPUTATION_LEVEL_NEGATIVE02"       nametagicon="REPUTATION_NEGATIVE02" rewardicon="REPUTATION_NEGATIVE02" recoveryperday="750"   pvegainfactor="0.028"  gathergainfactor="0.2"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03"       nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500"   pvegainfactor="0.042"  gathergainfactor="0.3"  candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
+      <level requiredpoints="-50000" title="@REPUTATION_LEVEL_NEGATIVE04"       nametagicon="REPUTATION_NEGATIVE04" rewardicon="REPUTATION_NEGATIVE04" recoveryperday="2000"  pvegainfactor="0.063"  gathergainfactor="0.45" candisablepvp="true" canenterexpedition="false" attackpenalty="0"   knockdownpenalty="0"    killpenalty="0"    cityaccessdisplay="safe"  crimeprotectionbuff=""/>
     </Reputation>
   </ServerSettings>
   <ClientSettings>
