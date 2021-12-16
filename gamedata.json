@@ -21,7 +21,7 @@
       },
       "Guild": {
         "@cost": "100000",
-        "@guildinvitationdelayinseconds": "60",
+        "@guildinvitationdelayinseconds": "300",
         "@initialclaimterritoryguildfamerequirement": "1000000",
         "@claimterritoryguildfamerequirement": "1000000",
         "@territorybuff": "GUILD_TERRITORY_BUFF",
@@ -31,7 +31,32 @@
         "@guildlogochangegoldcosts": "3000",
         "@guildlogochangesilvercosts": "0",
         "@maxhideouts": "6",
-        "@maxplayers": "300"
+        "@maxplayers": "300",
+        "guildinvitationlimits": {
+          "@declinedinvitefalloffseconds": "3600",
+          "invitesdeclined": [
+            {
+              "@amount": "0",
+              "@cooldownafternewdecline": "0",
+              "@maximumsimultaneousinvites": "300"
+            },
+            {
+              "@amount": "5",
+              "@cooldownafternewdecline": "60",
+              "@maximumsimultaneousinvites": "10"
+            },
+            {
+              "@amount": "10",
+              "@cooldownafternewdecline": "180",
+              "@maximumsimultaneousinvites": "5"
+            },
+            {
+              "@amount": "15",
+              "@cooldownafternewdecline": "300",
+              "@maximumsimultaneousinvites": "1"
+            }
+          ]
+        }
       },
       "SmartClusterQueue": {
         "@EntranceRadius": "300",
@@ -270,7 +295,7 @@
             "@nametagicon": "REPUTATION_POSITIVE04",
             "@rewardicon": "REPUTATION_POSITIVE04",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.002",
+            "@pvegainfactor": "0.0014",
             "@gathergainfactor": "0.01",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -286,7 +311,7 @@
             "@nametagicon": "REPUTATION_POSITIVE03",
             "@rewardicon": "REPUTATION_POSITIVE03",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.004",
+            "@pvegainfactor": "0.0028",
             "@gathergainfactor": "0.02",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -302,7 +327,7 @@
             "@nametagicon": "REPUTATION_POSITIVE02",
             "@rewardicon": "REPUTATION_POSITIVE02",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.006",
+            "@pvegainfactor": "0.0042",
             "@gathergainfactor": "0.03",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -318,7 +343,7 @@
             "@nametagicon": "REPUTATION_POSITIVE01",
             "@rewardicon": "REPUTATION_POSITIVE01",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.008",
+            "@pvegainfactor": "0.0056",
             "@gathergainfactor": "0.04",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -334,7 +359,7 @@
             "@nametagicon": "",
             "@rewardicon": "REPUTATION_NEUTRAL",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.01",
+            "@pvegainfactor": "0.007",
             "@gathergainfactor": "0.05",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -350,7 +375,7 @@
             "@nametagicon": "REPUTATION_NEGATIVE00",
             "@rewardicon": "REPUTATION_NEGATIVE00",
             "@recoveryperday": "0",
-            "@pvegainfactor": "0.012",
+            "@pvegainfactor": "0.0084",
             "@gathergainfactor": "0.04",
             "@candisablepvp": "true",
             "@canenterexpedition": "true",
@@ -366,7 +391,7 @@
             "@nametagicon": "REPUTATION_NEGATIVE01",
             "@rewardicon": "REPUTATION_NEGATIVE01",
             "@recoveryperday": "1000",
-            "@pvegainfactor": "0.02",
+            "@pvegainfactor": "0.014",
             "@gathergainfactor": "0.1",
             "@candisablepvp": "true",
             "@canenterexpedition": "false",
@@ -382,7 +407,7 @@
             "@nametagicon": "REPUTATION_NEGATIVE02",
             "@rewardicon": "REPUTATION_NEGATIVE02",
             "@recoveryperday": "750",
-            "@pvegainfactor": "0.04",
+            "@pvegainfactor": "0.028",
             "@gathergainfactor": "0.2",
             "@candisablepvp": "true",
             "@canenterexpedition": "false",
@@ -398,7 +423,7 @@
             "@nametagicon": "REPUTATION_NEGATIVE03",
             "@rewardicon": "REPUTATION_NEGATIVE03",
             "@recoveryperday": "500",
-            "@pvegainfactor": "0.06",
+            "@pvegainfactor": "0.042",
             "@gathergainfactor": "0.3",
             "@candisablepvp": "true",
             "@canenterexpedition": "false",
@@ -414,7 +439,7 @@
             "@nametagicon": "REPUTATION_NEGATIVE04",
             "@rewardicon": "REPUTATION_NEGATIVE04",
             "@recoveryperday": "2000",
-            "@pvegainfactor": "0.09",
+            "@pvegainfactor": "0.063",
             "@gathergainfactor": "0.45",
             "@candisablepvp": "true",
             "@canenterexpedition": "false",
