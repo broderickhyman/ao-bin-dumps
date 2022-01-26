@@ -97,6 +97,9 @@
       "Respawn": {
         "@autorespawntimerinsecs": "600"
       },
+      "PveFameSession": {
+        "@sessionconclusiondelaysecs": "600"
+      },
       "Fame": {
         "@pvpfamesharingradius": "50",
         "@pvefamesharingradius": "50",
@@ -245,13 +248,13 @@
       },
       "CrowdControlDiminishingReturns": {
         "@breaksondamagefactor": "0.7",
-        "@diminishingreturnmax": "0.75",
-        "@typefactorstun": "0.1",
-        "@typefactorroot": "0.05",
+        "@diminishingreturnmax": "0.8",
+        "@typefactorstun": "0.3",
+        "@typefactorroot": "0.3",
         "@typefactorknockback": "0.04",
-        "@typefactorsilence": "0.05",
-        "@typefactorslow": "0.08",
-        "@typefactorforcedmovement": "0.1",
+        "@typefactorsilence": "0.3",
+        "@typefactorslow": "0.3",
+        "@typefactorforcedmovement": "0.3",
         "@decreasetimestun": "20",
         "@decreasetimeroot": "20",
         "@decreasetimeknockback": "20",
@@ -270,7 +273,7 @@
       },
       "AoeEscalation": {
         "@defaulttargetcountthresholdmin": "1",
-        "@defaulttargetcountthresholdmax": "9"
+        "@defaulttargetcountthresholdmax": "7"
       },
       "RealEstateAuctionSettings": {
         "@auctioncycledurationdays": "28",
@@ -467,7 +470,8 @@
         "@resistanceprogression": "0.336554399",
         "@hitpointprogression": "0.663445601",
         "@loadprogression": "2.264101591",
-        "@ccdurationfactor": "0.5"
+        "@ccdurationfactorplayers": "0.7",
+        "@ccdurationfactormobs": "0.5"
       },
       "ItemPowerProgression": {
         "mainhand_1h": {
@@ -475,6 +479,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0825",
           "@abilitypowerprogression": "1.0825",
+          "@ccpowerprogression": "1.0474",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -507,6 +512,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -539,6 +545,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -571,6 +578,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -603,6 +611,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -635,6 +644,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -667,6 +677,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -699,6 +710,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -731,6 +743,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -763,6 +776,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -795,6 +809,7 @@
           "@ccrbase": "100",
           "@attackdamageprogression": "1.0918",
           "@abilitypowerprogression": "1.0918",
+          "@ccpowerprogression": "1.0564",
           "@hitpointsprogression": "1.06",
           "@energyprogression": "1.0918",
           "@armorprogression": "1.03",
@@ -1030,11 +1045,6 @@
           "@min": "-0.5",
           "@max": "2",
           "@absolutemin": "1"
-        },
-        {
-          "@name": "AbilityPowerBonus",
-          "@min": "-0.5",
-          "@max": "2"
         },
         {
           "@name": "PhysicalArmor",
@@ -3913,8 +3923,8 @@
       "@tutorial_idletime_till_highlight": "30"
     },
     "SilverDropSettings": {
-      "@silver": "COINS",
-      "@silverpremium": "COINS_PREMIUM",
+      "@prefab": "COINS",
+      "@premiumprefab": "COINS_PREMIUM",
       "@decaytimemob": "300.0",
       "@decaytimeplayer": "300.0",
       "@dropvisibilitydelay": "0.5"

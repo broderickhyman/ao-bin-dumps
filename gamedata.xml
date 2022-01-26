@@ -53,6 +53,7 @@
     <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080" maxplayers="30000" maxguilds="100"/>
     <GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
     <Respawn autorespawntimerinsecs="600" />
+    <PveFameSession sessionconclusiondelaysecs="600"/>
     <Fame pvpfamesharingradius="50" pvefamesharingradius="50">
       <GroupBonus>
         <Group size="3" bonusfactor="1.17"/>
@@ -123,13 +124,13 @@
     </SpellCooldowns> 
     <CrowdControlDiminishingReturns
       breaksondamagefactor="0.7"
-      diminishingreturnmax="0.75"
-      typefactorstun="0.1"
-      typefactorroot="0.05"
+      diminishingreturnmax="0.8"
+      typefactorstun="0.3"
+      typefactorroot="0.3"
       typefactorknockback="0.04"
-      typefactorsilence="0.05"
-      typefactorslow="0.08"
-      typefactorforcedmovement="0.1"
+      typefactorsilence="0.3"
+      typefactorslow="0.3"
+      typefactorforcedmovement="0.3"
       decreasetimestun="20"
       decreasetimeroot="20"
       decreasetimeknockback="20"
@@ -138,7 +139,7 @@
       decreasetimeforcedmovement="20"/>
     <ReflectedDamage maxReflectCapacityFactorOfMaxHp="2"/>
     <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" mintoggledurationbeforecancelpossible="0.5" />
-    <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="9" />
+    <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="7" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
       <level requiredpoints="10000"  title="@REPUTATION_LEVEL_POSITIVE04"       nametagicon="REPUTATION_POSITIVE04" rewardicon="REPUTATION_POSITIVE04" recoveryperday="0"     pvegainfactor="0.0014" gathergainfactor="0.01" candisablepvp="true" canenterexpedition="true"  attackpenalty="10"  knockdownpenalty="50"   killpenalty="1000" cityaccessdisplay="safe" crimeprotectionbuff="CRIMEPROTECTION_POSITIVE04"/>
@@ -164,7 +165,8 @@
     resistanceprogression="0.336554399"
     hitpointprogression="0.663445601"
     loadprogression="2.264101591"
-    ccdurationfactor="0.5"
+    ccdurationfactorplayers="0.7"
+    ccdurationfactormobs="0.5"
     />
     <ItemPowerProgression>
       <mainhand_1h
@@ -172,6 +174,7 @@
         ccrbase="100"
         attackdamageprogression="1.0825"
         abilitypowerprogression="1.0825"
+        ccpowerprogression="1.0474"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -204,6 +207,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -236,6 +240,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -268,6 +273,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -300,6 +306,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -332,6 +339,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -364,6 +372,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -396,6 +405,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -428,6 +438,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -460,6 +471,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -492,6 +504,7 @@
         ccrbase="100"
         attackdamageprogression="1.0918"
         abilitypowerprogression="1.0918"
+        ccpowerprogression="1.0564"
         hitpointsprogression="1.06"
         energyprogression="1.0918"
         armorprogression="1.03"
@@ -555,7 +568,6 @@
     <attribute name="HealModifier" min="-0.7" max="unrestricted"/>
 
     <attribute name="AbilityPower" min="-0.5" max="2" absolutemin="1"/>
-    <attribute name="AbilityPowerBonus" min="-0.5" max="2"/>
 
     <attribute name="PhysicalArmor" min="-0.6" max="unrestricted" absolutemin="100"/>
     <attribute name="MagicResistance" min="-0.6" max="unrestricted" absolutemin="100"/>
@@ -635,7 +647,6 @@
        CraftingFocusCostReduction,
 
        AbilityPower,
-       AbilityPowerBonus,
 
        ItemPower,
 
@@ -1393,7 +1404,12 @@
     <ClusterDangerBonus type="tunnel"                 icon="black"                 famefactor="6"    moblootfactor="7.1"  mobsilverlootfactor="8.17"/>
   </ClusterDangerBonusTypes>
   <AchievementHud tutorial_idletime_till_highlight="30"/>
-  <SilverDropSettings silver="COINS" silverpremium="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5"/>
+  <SilverDropSettings
+    prefab="COINS"
+    premiumprefab="COINS_PREMIUM" 
+    decaytimemob="300.0" 
+    decaytimeplayer="300.0" 
+    dropvisibilitydelay="0.5"/>
   <buildingrenovationsettings downgradedelay="86400" destroydelay="86400" ownerdowngradedestroydelay="60" lootprotection="86400" lootlifetime="172800" />
   <constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400"/>
   <ExitSettings channeledexitusagetime="2" defaultexitusagedistance="5"/>
