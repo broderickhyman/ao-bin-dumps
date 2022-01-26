@@ -147,6 +147,15 @@
         }
       },
       {
+        "@name": "MOUNT_HORSE_JESTER",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "horse_jester"
+        }
+      },
+      {
         "@name": "MOUNT_OX",
         "CharType": {
           "@name": "mount"
@@ -3210,6 +3219,30 @@
         }
       },
       {
+        "@name": "MOB_MORGANA_KNIGHT_STANDARD",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "morgana"
+        },
+        "MobType": {
+          "@name": "morgana_soldier"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "plate"
+        },
+        "WeaponType": {
+          "@name": "mace_medium"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_MORGANA_KNIGHT",
         "CharType": {
           "@name": "mob"
@@ -4293,6 +4326,24 @@
         }
       },
       {
+        "@name": "MOB_UNDEAD_GHOST_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "undead"
+        },
+        "MobType": {
+          "@name": "undead_ghost_boss"
+        },
+        "Size": {
+          "@name": "incorporeal_medium"
+        },
+        "ArmorType": {
+          "@name": "incorporeal"
+        }
+      },
+      {
         "@name": "MOB_DEMON_IMP",
         "CharType": {
           "@name": "mob"
@@ -5115,6 +5166,30 @@
         },
         "Size": {
           "@name": "huge"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "swoosh_rock"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_GIANT_STANDARD",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_giant"
+        },
+        "Size": {
+          "@name": "heavy"
         },
         "ArmorType": {
           "@name": "leather"
@@ -7688,8 +7763,7 @@
           "@name": "Play_melee_backslash"
         },
         "OnSpellHit": {
-          "@name": "Play_melee_impact_medium",
-          "ImpactType": null
+          "@name": "Play_melee_merciless_finish_swoosh"
         }
       },
       {
@@ -7847,6 +7921,10 @@
         },
         "OnChannelingCancelled": {
           "@name": "Stop_melee_axe_whirlwind"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small",
+          "ImpactType": null
         }
       },
       {
@@ -8516,6 +8594,15 @@
         }
       },
       {
+        "@name": "SPELL_ARROW_CAST_BIG_HIT_NOAUTO",
+        "OnCastStart": {
+          "@name": "Play_arrow_cast_big_instant"
+        },
+        "OnSpellHit": {
+          "@name": "Play_arrow_impact_medium"
+        }
+      },
+      {
         "@name": "SPELL_ARROW_UNDEAD_MINE",
         "OnCastStart": {
           "@name": "Play_arrow_cast_swoosh_big"
@@ -8939,7 +9026,7 @@
       {
         "@name": "SPELL_CURSED_CHANNEL_ENFEEBLEBLADES",
         "OnChannelingStart": {
-          "@name": "Play_cursed_cast_medium_blade"
+          "@name": "Play_cursed_castfinished_enfeeble_blades"
         }
       },
       {
@@ -9795,9 +9882,15 @@
         }
       },
       {
-        "@name": "OPEN_SILVERBAG_OR_TOME",
+        "@name": "OPEN_SILVERBAG",
         "OnSpellHit": {
           "@name": "Play_open_silver_bag"
+        }
+      },
+      {
+        "@name": "OPEN_TOME",
+        "OnSpellHit": {
+          "@name": "Play_open_tome"
         }
       },
       {
@@ -12045,6 +12138,9 @@
         "@name": "SPELL_MORGANA_KNIGHT_SHIELDBASH",
         "OnCastStart": {
           "@name": "Play_mob_morgana_knight_shieldbash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_knockback"
         }
       },
       {
@@ -12803,21 +12899,27 @@
         }
       },
       {
-        "@name": "SPELL_UNDEAD_SARCOPHAGUS_BLIZZARD",
+        "@name": "SPELL_UNDEAD_SARCOPHAGUS_GHOST_ICESTORM",
         "OnCastStart": {
-          "@name": "Play_undead_sarcophagus_blizzard_vo"
+          "@name": "Play_undead_sarcophagus_ghost_icestorm_vo"
         },
         "OnCastFinished": {
-          "@name": "Play_frost_cast_big"
+          "@name": "Play_undead_sacrophagus_ghost_cast_icestorm"
         }
       },
       {
-        "@name": "SPELL_UNDEAD_SARCOPHAGUS_FROSTBOMB",
+        "@name": "SPELL_UNDEAD_SARCOPHAGUS_GHOST_FROSTBOMB",
         "OnCastStart": {
-          "@name": "Play_undead_sarcophagus_frostbomb_vo"
+          "@name": "Play_undead_sarcophagus_ghost_frostbomb_load_vo"
         },
         "OnCastFinished": {
-          "@name": "Play_frost_cast_medium"
+          "@name": "Play_undead_sarcophagus_ghost_cast_frostbomb"
+        }
+      },
+      {
+        "@name": "SPELL_UNDEAD_GHOST_SARCOPHAGUS_FROSTBOLT_CAST",
+        "OnCastFinished": {
+          "@name": "Play_undead_sarcophagus_ghost_frostbolt_cast"
         }
       },
       {
@@ -14815,7 +14917,7 @@
     ],
     "WwiseGlobalEnvironmentEffect": [
       {
-        "@name": "dungeon_morgana",
+        "@name": "barracks",
         "ClusterTypes": {
           "@name": "Dungeon"
         },
@@ -14830,6 +14932,24 @@
         },
         "MobFaction": {
           "@name": "Heretic"
+        }
+      },
+      {
+        "@name": "castle",
+        "ClusterTypes": {
+          "@name": "Dungeon"
+        },
+        "MobFaction": {
+          "@name": "Undead"
+        }
+      },
+      {
+        "@name": "cave",
+        "ClusterTypes": {
+          "@name": "Dungeon"
+        },
+        "MobFaction": {
+          "@name": "Keeper"
         }
       },
       {
@@ -15068,7 +15188,7 @@
           "@name": "Bank"
         },
         "Biom": {
-          "@name": "Forest"
+          "@name": "Highland"
         },
         "SubBiom": {
           "@name": "Dead"
@@ -15077,7 +15197,7 @@
           "@name": "None"
         },
         "Music": {
-          "@name": "None"
+          "@name": "City"
         },
         "GlobalEnvironmentEffect": {
           "@name": "hall_of_fame"
@@ -15089,7 +15209,7 @@
           "@name": "Bank"
         },
         "Biom": {
-          "@name": "Forest"
+          "@name": "Highland"
         },
         "SubBiom": {
           "@name": "Dead"
@@ -15098,7 +15218,7 @@
           "@name": "None"
         },
         "Music": {
-          "@name": "None"
+          "@name": "City"
         },
         "GlobalEnvironmentEffect": {
           "@name": "hall_of_fame"
@@ -15110,7 +15230,7 @@
           "@name": "Bank"
         },
         "Biom": {
-          "@name": "Forest"
+          "@name": "Highland"
         },
         "SubBiom": {
           "@name": "Dead"
@@ -15119,7 +15239,7 @@
           "@name": "None"
         },
         "Music": {
-          "@name": "None"
+          "@name": "City"
         },
         "GlobalEnvironmentEffect": {
           "@name": "hall_of_fame"
@@ -15546,103 +15666,7 @@
         }
       },
       {
-        "@clustername": "FOCUS-DNG-004-MAIN_DNG_.*_.*_T8_MOR_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Morgana_Barracks"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Morgana"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "barracks"
-        }
-      },
-      {
-        "@clustername": "FOCUS-DNG-003-SUB_DNG_.*_.*_T6_MOR_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Morgana_Barracks"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Morgana"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "barracks"
-        }
-      },
-      {
-        "@clustername": "DNG-0602_DNG_.*_.*_T6_MOR_SOLO",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Morgana_Barracks"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Morgana"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "barracks"
-        }
-      },
-      {
-        "@clustername": "FOCUS-DNG-003-MAIN_DNG_.*_.*_T6_MOR_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Morgana_Barracks"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Morgana"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "barracks"
-        }
-      },
-      {
-        "@clustername": "Torturer_EXP_.*_.*_T6_MOR",
+        "@clustername": "DNG-MOR-01-SUB-.*_DNG_.*_.*_T6_MOR_*",
         "Environment": {
           "@name": "Dungeon"
         },
@@ -15666,7 +15690,7 @@
         }
       },
       {
-        "@clustername": "Torturer-HRD_EXP_.*_.*_T6_MOR",
+        "@clustername": "DNG-MOR-01-SUB-.*_DNG_.*_.*_T8_MOR_*",
         "Environment": {
           "@name": "Dungeon"
         },
@@ -15690,12 +15714,12 @@
         }
       },
       {
-        "@clustername": "FOCUS-DNG-002_DNG_.*_.*_T5_KPR_GROUP",
+        "@clustername": "Torturer-.*_EXP_.*_.*_T6_MOR",
         "Environment": {
           "@name": "Dungeon"
         },
         "SubEnvironment": {
-          "@name": "Keeper_Tentcave"
+          "@name": "Morgana_Prison"
         },
         "Biom": {
           "@name": "Default"
@@ -15704,37 +15728,37 @@
           "@name": "None"
         },
         "MobFaction": {
-          "@name": "Keeper"
+          "@name": "Morgana"
         },
         "Music": {
           "@name": "Dungeon"
         },
         "GlobalEnvironmentEffect": {
-          "@name": "cave"
+          "@name": "barracks"
         }
       },
       {
-        "@clustername": "FOCUS-DNG-000_DNG_.*_.*_T5_KPR_GROUP",
+        "@clustername": "ThreeSisters-.*_EXP_.*_.*_T6_MOR",
         "Environment": {
           "@name": "Dungeon"
         },
         "SubEnvironment": {
-          "@name": "Keeper_Tentcave"
+          "@name": "Morgana_Barracks"
         },
         "Biom": {
-          "@name": "Default"
+          "@name": "Mountain"
         },
         "SubBiom": {
-          "@name": "None"
+          "@name": "Red"
         },
         "MobFaction": {
-          "@name": "Keeper"
+          "@name": "Morgana"
         },
         "Music": {
           "@name": "Dungeon"
         },
         "GlobalEnvironmentEffect": {
-          "@name": "cave"
+          "@name": "barracks"
         }
       },
       {
@@ -15810,7 +15834,7 @@
         }
       },
       {
-        "@clustername": "TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_SOLO",
+        "@clustername": "TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_ROY",
         "Environment": {
           "@name": "Dungeon"
         },
@@ -15834,7 +15858,7 @@
         }
       },
       {
-        "@clustername": "TUT-WINECELLAR_DNG_.*_.*_T2_HER_SOLO",
+        "@clustername": "TUT-WINECELLAR_DNG_.*_.*_T2_HER_ROY",
         "Environment": {
           "@name": "Dungeon"
         },
@@ -15954,150 +15978,6 @@
         }
       },
       {
-        "@clustername": "STUB-0702_DNG_.*_.*_T7_UND_SOLO",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
-        "@clustername": "FOCUS-DNG-002-SUB_DNG_.*_.*_T7_UND_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
-        "@clustername": "FOCUS-DNG-002-MAIN_DNG_.*_.*_T7_UND_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
-        "@clustername": "FOCUS-DNG-001-SUB_DNG_.*_.*_T4_UND_GROUP",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
-        "@clustername": "DNG-0702_DNG_.*_.*_T7_UND_SOLO",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
-        "@clustername": "DNG-0402_DNG_.*_.*_T4_UND_SOLO",
-        "Environment": {
-          "@name": "Dungeon"
-        },
-        "SubEnvironment": {
-          "@name": "Undead_Crypt"
-        },
-        "Biom": {
-          "@name": "Default"
-        },
-        "SubBiom": {
-          "@name": "None"
-        },
-        "MobFaction": {
-          "@name": "Undead"
-        },
-        "Music": {
-          "@name": "Dungeon"
-        },
-        "GlobalEnvironmentEffect": {
-          "@name": "castle"
-        }
-      },
-      {
         "@clustername": "SewersMaintenance-SOLO_EXP_.*_.*_T5_UND",
         "Environment": {
           "@name": "Dungeon"
@@ -16158,6 +16038,27 @@
         },
         "SubBiom": {
           "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "Undead"
+        },
+        "Music": {
+          "@name": "Dungeon"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "dungeon_heretic"
+        }
+      },
+      {
+        "@clustername": "EternalBattle-.*_EXP_HL_RED_T6_UND",
+        "Environment": {
+          "@name": "World"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Red"
         },
         "MobFaction": {
           "@name": "Undead"

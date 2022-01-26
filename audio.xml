@@ -86,6 +86,10 @@
     <CharType name="mount"/>
     <MountType name="horse_hell"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_HORSE_JESTER">
+    <CharType name="mount"/>
+    <MountType name="horse_jester"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_OX">
     <CharType name="mount"/>
     <MountType name="ox"/>
@@ -1311,6 +1315,15 @@
     <WeaponType name="bolt_big"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_MORGANA_KNIGHT_STANDARD">
+	<CharType name="mob"/>
+	<MobFaction name="morgana"/>
+	<MobType name="morgana_soldier"/>
+	<Size name="medium"/>
+	<ArmorType name="plate"/>
+	<WeaponType name="mace_medium"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_MORGANA_KNIGHT">
     <CharType name="mob"/>
     <MobFaction name="morgana"/>
@@ -1723,6 +1736,13 @@
     <Size name="incorporeal_medium"/>
     <ArmorType name="incorporeal"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_UNDEAD_GHOST_BOSS">
+	<CharType name="mob"/>
+	<MobFaction name="undead"/>
+	<MobType name="undead_ghost_boss"/>
+	<Size name="incorporeal_medium"/>
+	<ArmorType name="incorporeal"/>
+  </WwiseSwitchInfo>
   
   <!--DEMON-->
   <WwiseSwitchInfo name="MOB_DEMON_IMP">
@@ -2094,6 +2114,15 @@
     <ArmorType name="leather"/>
     <WeaponType name="swoosh_rock"/>
     <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_GIANT_STANDARD">
+	<CharType name="mob"/>
+	<MobFaction name="keeper"/>
+	<MobType name="keeper_giant"/>
+	<Size name="heavy"/>
+	<ArmorType name="leather"/>
+	<WeaponType name="swoosh_rock"/>
+	<MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_KEEPER_ANCIENT_GIANT">
     <CharType name="mob"/>
@@ -3143,9 +3172,7 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CAST_BACKSLASH">
     <OnCastFinished name="Play_melee_backslash" />
-    <OnSpellHit name="Play_melee_impact_medium" >
-      <ImpactType/>
-    </OnSpellHit>
+	  <OnSpellHit name="Play_melee_merciless_finish_swoosh" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_POISON_COATING">
     <OnCastStart name="Play_poison_coating_cast" />
@@ -3235,6 +3262,9 @@
     <OnChannelingEnd name="Stop_melee_axe_whirlwind" />
     <OnChannelingInterrupted name="Stop_melee_axe_whirlwind" />
     <OnChannelingCancelled name="Stop_melee_axe_whirlwind" />
+	<OnSpellHit name="Play_melee_impact_small" >
+		  <ImpactType/>
+	  </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_TEARAPART">
     <OnCastStart name="Play_axe_tearapart" />
@@ -3605,6 +3635,10 @@
     <OnCastStart name="Play_arrow_cast_big" />
     <OnSpellHit name="Play_arrow_impact_medium" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARROW_CAST_BIG_HIT_NOAUTO">
+	<OnCastStart name="Play_arrow_cast_big_instant" />
+	<OnSpellHit name="Play_arrow_impact_medium" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_UNDEAD_MINE">
     <OnCastStart name="Play_arrow_cast_swoosh_big" />
     <OnCastFinished name="Play_arrow_undead_mine" />
@@ -3808,7 +3842,7 @@
     <OnCastFinished name="Stop_cursed_cast_start_enfeeble" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CHANNEL_ENFEEBLEBLADES">
-    <OnChannelingStart name="Play_cursed_cast_medium_blade" />
+    <OnChannelingStart name="Play_cursed_castfinished_enfeeble_blades" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_HAUTINGSCREAMS">
     <OnCastStart name="Play_cursed_cast_start_standard" />
@@ -4191,8 +4225,11 @@
   </WwiseEventInfo>
   
   <!-- Misc -->
-  <WwiseEventInfo name="OPEN_SILVERBAG_OR_TOME" >
+  <WwiseEventInfo name="OPEN_SILVERBAG" >
 	<OnSpellHit name="Play_open_silver_bag" />
+  </WwiseEventInfo>
+ <WwiseEventInfo name="OPEN_TOME" >
+	<OnSpellHit name="Play_open_tome" />
   </WwiseEventInfo>
   <WwiseEventInfo name="CHARGE_INCREASE" >
     <OnCastFinished name="Play_charge_increase" />
@@ -5397,6 +5434,7 @@
 
   <WwiseEventInfo name="SPELL_MORGANA_KNIGHT_SHIELDBASH">
     <OnCastStart name="Play_mob_morgana_knight_shieldbash" />
+    <OnSpellHit name="Play_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_MORGANA_KNIGHT_ORDER">
@@ -5799,18 +5837,21 @@
   <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_HEAL">
     <OnSpellHit name="Play_undead_sarcophagus_heal"/>
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_BLIZZARD">
-    <OnCastStart name="Play_undead_sarcophagus_blizzard_vo"/>
-    <OnCastFinished name="Play_frost_cast_big" />
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_GHOST_ICESTORM">
+    <OnCastStart name="Play_undead_sarcophagus_ghost_icestorm_vo"/>
+    <OnCastFinished name="Play_undead_sacrophagus_ghost_cast_icestorm" />
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_FROSTBOMB">
-    <OnCastStart name="Play_undead_sarcophagus_frostbomb_vo"/>
-    <OnCastFinished name="Play_frost_cast_medium" />
+  <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_GHOST_FROSTBOMB">
+    <OnCastStart name="Play_undead_sarcophagus_ghost_frostbomb_load_vo"/>
+    <OnCastFinished name="Play_undead_sarcophagus_ghost_cast_frostbomb" />
+  </WwiseEventInfo>
+	<WwiseEventInfo name="SPELL_UNDEAD_GHOST_SARCOPHAGUS_FROSTBOLT_CAST">
+		<OnCastFinished name="Play_undead_sarcophagus_ghost_frostbolt_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_DISASSEMBLE">
     <OnCastFinished name="Play_undead_sarcophagus_explode"/>
   </WwiseEventInfo>
-  
+
   <WwiseEventInfo name="SPELL_UNDEAD_NECROMANCER_SUMMON">
     <OnCastStart name="Play_undead_necromancer_summening" />
   </WwiseEventInfo>
@@ -7191,17 +7232,35 @@
   -->
 
   <!--*************************************************************************************************************************************************************-->
-  <!--CLUSTER EFFECTS -->
+  <!--CLUSTER REVERB EFFECTS -->
   <!--*************************************************************************************************************************************************************-->
 
-  <WwiseGlobalEnvironmentEffect name="dungeon_morgana">
+	<!--Morgana Default = Barracks -->
+	
+  <WwiseGlobalEnvironmentEffect name="barracks">
     <ClusterTypes name="Dungeon"/>
     <MobFaction name="Morgana"/>
   </WwiseGlobalEnvironmentEffect>
 
+	<!--Heretic Default = Openmines -->
+
   <WwiseGlobalEnvironmentEffect name="dungeon_heretic">
     <ClusterTypes name="Dungeon"/>
     <MobFaction name="Heretic"/>
+  </WwiseGlobalEnvironmentEffect>
+
+	<!--Undead Default = Crypt -->
+
+  <WwiseGlobalEnvironmentEffect name="castle">
+	<ClusterTypes name="Dungeon"/>
+	<MobFaction name="Undead"/>
+  </WwiseGlobalEnvironmentEffect>
+
+	<!--Keeper Default = Homecave -->
+
+  <WwiseGlobalEnvironmentEffect name="cave">
+	<ClusterTypes name="Dungeon"/>
+	<MobFaction name="Keeper"/>
   </WwiseGlobalEnvironmentEffect>
   
   <WwiseGlobalEnvironmentEffect name="dungeon_hell">
@@ -7318,29 +7377,29 @@
   <!--Carleon Auction House-->
   <WwiseClusterStateOverwrite clustername="3005_CTY_.*_.*_T7_NON">
     <Environment name="Bank"/>
-    <Biom name="Forest"/>
+    <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
-    <Music name="None"/>
+    <Music name="City"/>
     <GlobalEnvironmentEffect name="hall_of_fame"/>
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="3013-Auction2_CTY_.*_.*_T7_NON">
     <Environment name="Bank"/>
-    <Biom name="Forest"/>
+    <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
-    <Music name="None"/>
+    <Music name="City"/>
     <GlobalEnvironmentEffect name="hall_of_fame"/>
   </WwiseClusterStateOverwrite>
   
   <!--Carleon Bank-->
   <WwiseClusterStateOverwrite clustername="3006_CTY_.*_.*_T7_NON">
     <Environment name="Bank"/>
-    <Biom name="Forest"/>
+    <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
-    <Music name="None"/>
+    <Music name="City"/>
     <GlobalEnvironmentEffect name="hall_of_fame"/>
   </WwiseClusterStateOverwrite>
 
@@ -7550,60 +7609,55 @@
     <Music name="Dungeon"/>
     <GlobalEnvironmentEffect name="castle"/>
   </WwiseClusterStateOverwrite>
-  
+
+	<!--STATIC and EXPEDITION Dungeons-->
+	
     <!--Morgana Dungeons-->
-      
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-004-MAIN_DNG_.*_.*_T8_MOR_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Morgana_Barracks"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Morgana"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="barracks"/>
+	<!--Static Dungeons -->
+	<!-- those that are barracks use the generic MORGANA Dungeon overwrite, custom overwrite is only listed here for later reference 
+
+  <WwiseClusterStateOverwrite clustername="DNG-MOR-01-MAIN-.*_DNG_.*_.*_T6_MOR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Morgana_Barracks"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Morgana"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-003-SUB_DNG_.*_.*_T6_MOR_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Morgana_Barracks"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Morgana"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="barracks"/>
+
+  <WwiseClusterStateOverwrite clustername="DNG-MOR-01-MAIN-.*_DNG_.*_.*_T8_MOR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Morgana_Barracks"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Morgana"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="DNG-0602_DNG_.*_.*_T6_MOR_SOLO">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Morgana_Barracks"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Morgana"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="barracks"/>
+  -->
+
+  <WwiseClusterStateOverwrite clustername="DNG-MOR-01-SUB-.*_DNG_.*_.*_T6_MOR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Morgana_Prison"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Morgana"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-003-MAIN_DNG_.*_.*_T6_MOR_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Morgana_Barracks"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Morgana"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="barracks"/>
+
+  <WwiseClusterStateOverwrite clustername="DNG-MOR-01-SUB-.*_DNG_.*_.*_T8_MOR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Morgana_Prison"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Morgana"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="Torturer_EXP_.*_.*_T6_MOR">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Morgana_Prison"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Morgana"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="barracks"/>
-  </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="Torturer-HRD_EXP_.*_.*_T6_MOR">
+	
+  <WwiseClusterStateOverwrite clustername="Torturer-.*_EXP_.*_.*_T6_MOR">
     <Environment name="Dungeon"/>
     <SubEnvironment name="Morgana_Prison"/>
     <Biom name="Default"/>
@@ -7612,29 +7666,43 @@
     <Music name="Dungeon"/>
     <GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-      <!--Keeper Dungeons-->
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-002_DNG_.*_.*_T5_KPR_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Keeper_Tentcave"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Keeper"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="cave"/>
+
+  <WwiseClusterStateOverwrite clustername="ThreeSisters-.*_EXP_.*_.*_T6_MOR">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Morgana_Barracks"/>
+	<Biom name="Mountain"/>
+	<SubBiom name="Red"/>
+	<MobFaction name="Morgana"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-000_DNG_.*_.*_T5_KPR_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Keeper_Tentcave"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Keeper"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="cave"/>
+ 
+	<!--Keeper Dungeons-->
+	  <!--Static Dungeons -->
+	<!-- - they are all tentcaves, so the generic KEEPER Dungeon overwrite and default applies, custom overwrite is only listed here for later reference
+	  DNG-KPR-02 has several areas and thus could also use any of the other settings
+
+  <WwiseClusterStateOverwrite clustername="DNG-KPR-01-MAIN-.*_DNG_.*_.*_T5_KPR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Keeper_Tentcave"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Keeper"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="cave"/>
   </WwiseClusterStateOverwrite>
-    
+
+  <WwiseClusterStateOverwrite clustername="DNG-KPR-02-MAIN-.*_DNG_.*_.*_T5_KPR_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Keeper_Tentcave"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Keeper"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="cave"/>
+  </WwiseClusterStateOverwrite>
+  -->
+	
   <WwiseClusterStateOverwrite clustername="MushroomCave-SOLO_EXP_.*_.*_T6_KPR">
     <Environment name="Dungeon"/>
     <SubEnvironment name="Keeper_Magiccave"/>
@@ -7667,7 +7735,7 @@
   
       <!--Heretic Dungeons-->
   
-  <WwiseClusterStateOverwrite clustername="TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_SOLO">
+  <WwiseClusterStateOverwrite clustername="TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_ROY">
     <Environment name="Dungeon"/>
     <SubEnvironment name="Heretic_Castle"/>
     <Biom name="Default"/>
@@ -7677,7 +7745,7 @@
     <GlobalEnvironmentEffect name="castle"/>
   </WwiseClusterStateOverwrite> 
   
-  <WwiseClusterStateOverwrite clustername="TUT-WINECELLAR_DNG_.*_.*_T2_HER_SOLO">
+  <WwiseClusterStateOverwrite clustername="TUT-WINECELLAR_DNG_.*_.*_T2_HER_ROY">
     <Environment name="Dungeon"/>
     <SubEnvironment name="Heretic_Basement"/>
     <Biom name="Default"/>
@@ -7727,68 +7795,61 @@
     <GlobalEnvironmentEffect name="dungeon_heretic"/>
   </WwiseClusterStateOverwrite> 
   
-      <!--Undead Dungeons-->
-  
-  <WwiseClusterStateOverwrite clustername="STUB-0702_DNG_.*_.*_T7_UND_SOLO">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-002-SUB_DNG_.*_.*_T7_UND_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-002-MAIN_DNG_.*_.*_T7_UND_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
-  <WwiseClusterStateOverwrite clustername="FOCUS-DNG-001-SUB_DNG_.*_.*_T4_UND_GROUP">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
-  <WwiseClusterStateOverwrite clustername="DNG-0702_DNG_.*_.*_T7_UND_SOLO">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
-  <WwiseClusterStateOverwrite clustername="DNG-0402_DNG_.*_.*_T4_UND_SOLO">
-    <Environment name="Dungeon"/>
-    <SubEnvironment name="Undead_Crypt"/>
-    <Biom name="Default"/>
-    <SubBiom name="None"/>
-    <MobFaction name="Undead"/>
-    <Music name="Dungeon"/>
-    <GlobalEnvironmentEffect name="castle"/>
-  </WwiseClusterStateOverwrite> 
-  
+    <!--Undead Dungeons-->
+	<!--Static Dungeons -->
+	<!-- they are all crypts, so the generic UNDEAD Dungeon overwrite and default applies, custom overwrite is only listed here for later reference 
+
+  <WwiseClusterStateOverwrite clustername="DNG-UND-01-MAIN-.*_DNG_.*_.*_T7_UND_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Undead_Crypt"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Undead"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="DNG-UND-01-MAIN-.*_DNG_.*_.*_T4_UND_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Undead_Crypt"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Undead"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="DNG-UND-02-MAIN-.*_DNG_.*_.*_T4_UND_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Undead_Crypt"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Undead"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="DNG-UND-01-SUB-.*_DNG_.*_.*_T7_UND_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Undead_Crypt"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Undead"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="DNG-UND-01-SUB-.*_DNG_.*_.*_T4_UND_*">
+	<Environment name="Dungeon"/>
+	<SubEnvironment name="Undead_Crypt"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Undead"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+-->
+	
   <WwiseClusterStateOverwrite clustername="SewersMaintenance-SOLO_EXP_.*_.*_T5_UND">
     <Environment name="Dungeon"/>
     <SubEnvironment name="Undead_Sewer"/>
@@ -7818,6 +7879,15 @@
     <Music name="Dungeon"/>
     <GlobalEnvironmentEffect name="dungeon_heretic"/>
   </WwiseClusterStateOverwrite>
+	
+ <WwiseClusterStateOverwrite clustername="EternalBattle-.*_EXP_HL_RED_T6_UND">
+    <Environment name="World"/>
+    <Biom name="Highland"/>
+    <SubBiom name="Red"/>
+    <MobFaction name="Undead"/>
+    <Music name="Dungeon"/>
+    <GlobalEnvironmentEffect name="dungeon_heretic"/>
+ </WwiseClusterStateOverwrite>
 
   <!--Corrupted Dungeons-->
 
