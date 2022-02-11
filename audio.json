@@ -8286,6 +8286,12 @@
         }
       },
       {
+        "@name": "SPELL_KNUCKLES_PUMMELING_IMPACT_LIMITED",
+        "OnSpellHit": {
+          "@name": "Play_melee_kick_impact_quick_pummeling_limited"
+        }
+      },
+      {
         "@name": "SPELL_KNUCKLES_BOULDER_CAST",
         "OnCastStart": {
           "@name": "Play_melee_bouldertoss_cast_load"
@@ -10194,9 +10200,9 @@
         }
       },
       {
-        "@name": "SPELL_ROOT_IMPACT",
+        "@name": "SPELL_DEMONIC_ROOT_IMPACT",
         "OnSpellHit": {
-          "@name": "Play_root_loop"
+          "@name": "Play_demon_root_fx_impact"
         }
       },
       {
@@ -10327,6 +10333,18 @@
         "@name": "SPELL_HELLGATE_MATCH_START",
         "OnCastFinished": {
           "@name": "Play_hellgate_cooldown_reset"
+        }
+      },
+      {
+        "@name": "SPELL_KILL_EMOTE_TOMBSTONE",
+        "OnCastFinished": {
+          "@name": "Play_kill_emote_tombstone"
+        }
+      },
+      {
+        "@name": "SPELL_KILL_EMOTE_FLAG",
+        "OnCastFinished": {
+          "@name": "Play_kill_emote_banner"
         }
       },
       {
@@ -11093,6 +11111,12 @@
         },
         "OnCastFinished": {
           "@name": "Play_cougar_pounce_cast"
+        }
+      },
+      {
+        "@name": "SPELL_CRITTER_COUGAR_POUNCE_LAND",
+        "OnCastFinished": {
+          "@name": "Play_cougar_pounce_land"
         }
       },
       {
@@ -11976,6 +12000,15 @@
         },
         "OnCastFinished": {
           "@name": "Play_melee_stomp_small"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_BEAR_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_bear_cast_knockback"
+        },
+        "OnCastFinished": {
+          "@name": "Play_rhino_charge_start"
         }
       },
       {
@@ -13127,6 +13160,9 @@
       {
         "@name": "SPELL_UNDEAD_HERO_CLEAVE",
         "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_medium"
+        },
+        "OnCastFinished": {
           "@name": "Play_undead_melee_swoosh"
         },
         "OnSpellHit": {
@@ -15740,7 +15776,7 @@
       {
         "@clustername": "ThreeSisters-.*_EXP_.*_.*_T6_MOR",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "World"
         },
         "SubEnvironment": {
           "@name": "Morgana_Barracks"

@@ -2,6 +2,26 @@
 <eventbasedpopups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eventbasedpopups.xsd">
 
     <frequencyrules>
+
+        <!-- Order is important if more frequencyrules would match, first rules first -->
+        <!-- Rules are always evaluated after a Trigger is invoked, means those can change on the fly -->
+        <!-- own rule for guest accounts other do not match properly -->
+        <!--<frequencyrule uniquename="GUEST_ACCOUNT">
+            <timeframes>
+                <timeframe range="1-4" minutes="45" />
+            </timeframes>
+            <conditions>
+                <and>
+                    <IfIsGuestAccount />
+                </and>
+            </conditions>
+            <blockedpopups>
+                <BlockedPopupType type="Premium" />
+                <BlockedPopupType type="Vanity" />
+                <BlockedPopupType type="Gold" />
+            </blockedpopups>
+        </frequencyrule>-->
+
         <frequencyrule uniquename="NONE_PREMIUM">
             <timeframes>
                 <timeframe range="1-2" minutes="15" />
@@ -9,9 +29,11 @@
                 <timeframe range="3-4" minutes="45" />
             </timeframes>
             <conditions>
-                <not>
-                    <IfHasPremium />
-                </not>
+                <and>
+                    <not>
+                        <IfHasPremium />
+                    </not>
+                </and>
             </conditions>
         </frequencyrule>
 
@@ -20,11 +42,13 @@
                 <timeframe range="1-2" minutes="15" />
             </timeframes>
             <conditions>
-                <IfHasPremium />
-                <IfHasPremiumDays operation="less" value="7" />
-                <not>
-                    <IfHasRecurringSubscription />
-                </not>
+                <and>
+                    <IfHasPremium />
+                    <IfHasPremiumDays operation="less" value="7" />
+                    <not>
+                        <IfHasRecurringSubscription />
+                    </not>
+                </and>
             </conditions>
         </frequencyrule>
 
@@ -123,7 +147,7 @@
             </conditions>
         </popup>
 
-        <popup uniquename="DONT_MISS_OUT" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_DONT_MISS_OUT_TITLE"
+        <popup uniquename="DONT_MISS_OUT" priority="6" type="Premium" title="@EVENT_BASED_POPUPS_DONT_MISS_OUT_TITLE"
                description="@EVENT_BASED_POPUPS_DONT_MISS_OUT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_DONT_MISS_OUT">
             <categories>
                 <category name="Premium" />
@@ -154,28 +178,28 @@
             </conditions>
         </popup>
 
-        <!--popup uniquename="STAY_FOCUSED_PREMIUM" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_TITLE"
-                 description="@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_PREMIUM">
-              <categories>
-                  <category name="Premium" />
-              </categories>
-              <triggers>
-                  <trigger action="CompletedCraftingWithFocus" />
-              </triggers>
-              <conditions>
-                  <and>
-                      <IfTutorialCompleted />
-                      <IfHasPremiumDays operation="less" value="7" />
-                      <not>
-                          <IfHasRecurringSubscription />
-                      </not>
-                      <IfHasSeenPopup uniquename="STAY_FOCUSED_PREMIUM" frequency="Today" operation="less" amount="1" />
-                      <IfHasSeenPopup uniquename="STAY_FOCUSED_PREMIUM" frequency="ThisWeek" operation="less" amount="2" />
-                  </and>
-              </conditions>
-          </popup-->
+        <popup uniquename="STAY_FOCUSED_PREMIUM" priority="4" type="Premium" title="@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_TITLE"
+               description="@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_PREMIUM">
+            <categories>
+                <category name="Premium" />
+            </categories>
+            <triggers>
+                <trigger action="CompletedCraftingWithFocus" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <IfHasPremiumDays operation="less" value="7" />
+                    <not>
+                        <IfHasRecurringSubscription />
+                    </not>
+                    <IfHasSeenPopup uniquename="STAY_FOCUSED_PREMIUM" frequency="Today" operation="less" amount="1" />
+                    <IfHasSeenPopup uniquename="STAY_FOCUSED_PREMIUM" frequency="ThisWeek" operation="less" amount="2" />
+                </and>
+            </conditions>
+        </popup>
 
-        <!--popup uniquename="STAY_FOCUSED_NONE_PREMIUM" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_STAY_FOCUSED_NONE_PREMIUM_TITLE"
+        <popup uniquename="STAY_FOCUSED_NONE_PREMIUM" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_STAY_FOCUSED_NONE_PREMIUM_TITLE"
                description="@EVENT_BASED_POPUPS_STAY_FOCUSED_NONE_PREMIUM_DESCRIPTION"
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_NONE_PREMIUM">
             <categories>
@@ -194,7 +218,7 @@
                     <IfHasSeenPopup uniquename="STAY_FOCUSED_NONE_PREMIUM" frequency="ThisWeek" operation="less" amount="2" />
                 </and>
             </conditions>
-        </popup-->
+        </popup>
 
         <popup uniquename="PLAY_THE_MARKET" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_PLAY_THE_MARKET_TITLE"
                description="@EVENT_BASED_POPUPS_PLAY_THE_MARKET_DESCRIPTION"
@@ -252,9 +276,9 @@
                         <IfHasPremium />
                     </not>
                     <not>
-                        <IfHasSeenSinceNewPersonalSeasonChest uniquename="ADVENTURE_AWAITS" />
+                        <IfHasSeenSinceNewPersonalSeasonChest uniquename="ADVENTURE_AWAITS" targetfilter="character" />
                     </not>
-                    <IfHasSeenAnyPopupFromCategory amount="1" operation="greaterOrEqual" frequency="AllTime" category="Premium" />
+                    <IfHasSeenAnyPopupFromCategory amount="0" operation="equals" frequency="AllTime" category="Premium" />
                 </and>
             </conditions>
         </popup>
@@ -278,7 +302,7 @@
                     <not>
                         <IfHasSeenSinceNewFactionChest uniquename="SPOILS_OF_WAR" />
                     </not>
-                    <IfHasSeenAnyPopupFromCategory amount="1" operation="greaterOrEqual" frequency="AllTime" category="Premium" />
+                    <IfHasSeenAnyPopupFromCategory amount="0" operation="equals" frequency="AllTime" category="Premium" />
                 </and>
             </conditions>
         </popup>
@@ -301,7 +325,7 @@
                     <not>
                         <IfHasSeenSinceNewSeasonStart uniquename="ARISE_CONQUER" />
                     </not>
-                    <IfHasSeenAnyPopupFromCategory amount="1" operation="greaterOrEqual" frequency="AllTime" category="Premium" />
+                    <IfHasSeenAnyPopupFromCategory amount="0" operation="equals" frequency="AllTime" category="Premium" />
                 </and>
             </conditions>
         </popup>
@@ -322,5 +346,194 @@
             </conditions>
         </popup>
 
+        <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
+        <!-- Guest Account Incentivization -->
+        <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="1" type="GuestAccount">
+            <categories>
+                <category name="GuestAccount" />
+            </categories>
+            <triggers>
+                <trigger action="OpenFastTravelUi" />
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <or>
+                    <!-- initial -->
+                    <and>
+                        <IfIsGuestAccount />
+                        <IfTriggeredThrough action="OpenFastTravelUi" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="lessOrEqual" amount="1" />
+                    </and>
+                    <and>
+                        <not>
+                            <IfTutorialCompleted />
+                        </not>
+                        <not>
+                            <IfTriggeredThrough action="OpenFastTravelUi" />
+                        </not>
+                        <IfIsGuestAccount />
+                        <IfGuestLoginCount operation="equals" value="2" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="equals" amount="0" />
+                    </and>
+                    <!---->
+                    <!-- regular remainder -->
+                    <and>
+                        <IfIsGuestAccount />
+                        <IfTutorialCompleted />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="greaterOrEqual" amount="1" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="Hours" timefactor="12" operation="equals" amount="0" />
+                    </and>
+                    <!---->
+                </or>
+            </conditions>
+        </popup>
+
+        <!-- GvG Season Winner -->
+        <popup uniquename="SEASON_WINNER" priority="4" type="SeasonWinner">
+            <categories>
+                <category name="SeasonWinner" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasSeenSeasonWinnerPopup uniquename="SEASON_WINNER" />
+                    </not>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Cross Platform -->
+        <popup uniquename="CROSS_PLATFORM" priority="1" type="CrossPlatform">
+            <categories>
+                <category name="CrossPlatform" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfReceivedCrossPlatformReward />
+                    </not>
+                    <or>
+                        <and>
+                            <IfOnPlatform platform="Mobile" />
+                            <IfAccountAgeDays operation="greaterOrEqual" value="3" />
+                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="AllTime" operation="equals" amount="0" />
+                        </and>
+                        <and>
+                            <not>
+                                <IfOnPlatform platform="Mobile" />
+                            </not>
+                            <IfAccountAgeDays operation="greaterOrEqual" value="7" />
+                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="AllTime" operation="equals" amount="0" />
+                        </and>
+                        <and>
+                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="AllTime" operation="greaterOrEqual" amount="1" />
+                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="Days" timefactor="20" operation="equals" amount="0" />
+                        </and>
+                    </or>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Adventurers Challenge -->
+        <popup uniquename="ADVENTURERS_CHALLENGE" priority="8" type="AdventurersChallenge">
+            <categories>
+                <category name="AdventurersChallenge" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasSeenSinceNewPersonalSeasonChest uniquename="ADVENTURERS_CHALLENGE" targetfilter="character" />
+                    </not>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Featured Feature -->
+        <!-- NOTE : uniquename does change based on featured feature (FEATURED_FEATURE_ContentId see cstool for ContentId)-->
+        <!-- NOTE : See CS Tool for specific setup of each individual popup -->
+        <popup uniquename="FEATURED_FEATURE" priority="10" type="FeaturedFeature">
+            <categories>
+                <category name="FeaturedFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasSeenFeaturedFeature />
+                    </not>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Conquerors Challenge -->
+        <popup uniquename="CONQUERORS_CHALLENGE" priority="7" type="ConquerorsChallenge">
+            <categories>
+                <category name="ConquerorsChallenge" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasSeenSinceNewSeasonStart uniquename="CONQUERORS_CHALLENGE" />
+                    </not>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Faction Warfare -->
+        <popup uniquename="FACTION_WARFARE_UNLOCK" priority="7" type="FactionWarfareUnlock">
+            <categories>
+                <category name="FactionWarfare" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfHasUnlockedFactionWarfare />
+                    <IfHasSeenPopup uniquename="FACTION_WARFARE_UNLOCK" frequency="AllTime" operation="equals" amount="0" targetfilter="character" />
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Mobile Store Rating -->
+        <popup uniquename="MOBILE_STORE_RATING" priority="9" type="MobileStoreRating">
+            <categories>
+                <category name="MobileStoreRating" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfOnPlatform platform="MobileStore" />
+                    <IfTutorialCompleted />
+                    <IfCharacterOnlineHours operation="greaterOrEqual" value="5" />
+                    <IfHasSeenPopup uniquename="MOBILE_STORE_RATING" frequency="Days" timefactor="7" operation="equals" amount="0" />
+                </and>
+            </conditions>
+        </popup>
     </popups>
 </eventbasedpopups>

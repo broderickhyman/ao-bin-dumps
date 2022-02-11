@@ -27,8 +27,10 @@
             ]
           },
           "conditions": {
-            "not": {
-              "IfHasPremium": null
+            "and": {
+              "not": {
+                "IfHasPremium": null
+              }
             }
           }
         },
@@ -41,13 +43,15 @@
             }
           },
           "conditions": {
-            "IfHasPremium": null,
-            "IfHasPremiumDays": {
-              "@operation": "less",
-              "@value": "7"
-            },
-            "not": {
-              "IfHasRecurringSubscription": null
+            "and": {
+              "IfHasPremium": null,
+              "IfHasPremiumDays": {
+                "@operation": "less",
+                "@value": "7"
+              },
+              "not": {
+                "IfHasRecurringSubscription": null
+              }
             }
           }
         },
@@ -217,7 +221,7 @@
         },
         {
           "@uniquename": "DONT_MISS_OUT",
-          "@priority": "5",
+          "@priority": "6",
           "@type": "Premium",
           "@title": "@EVENT_BASED_POPUPS_DONT_MISS_OUT_TITLE",
           "@description": "@EVENT_BASED_POPUPS_DONT_MISS_OUT_DESCRIPTION",
@@ -269,6 +273,90 @@
               "not": {
                 "IfHasRecurringSubscription": null
               }
+            }
+          }
+        },
+        {
+          "@uniquename": "STAY_FOCUSED_PREMIUM",
+          "@priority": "4",
+          "@type": "Premium",
+          "@title": "@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_DESCRIPTION",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_PREMIUM",
+          "categories": {
+            "category": {
+              "@name": "Premium"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "CompletedCraftingWithFocus"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "IfHasPremiumDays": {
+                "@operation": "less",
+                "@value": "7"
+              },
+              "not": {
+                "IfHasRecurringSubscription": null
+              },
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "STAY_FOCUSED_PREMIUM",
+                  "@frequency": "Today",
+                  "@operation": "less",
+                  "@amount": "1"
+                },
+                {
+                  "@uniquename": "STAY_FOCUSED_PREMIUM",
+                  "@frequency": "ThisWeek",
+                  "@operation": "less",
+                  "@amount": "2"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "STAY_FOCUSED_NONE_PREMIUM",
+          "@priority": "5",
+          "@type": "Premium",
+          "@title": "@EVENT_BASED_POPUPS_STAY_FOCUSED_NONE_PREMIUM_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_STAY_FOCUSED_NONE_PREMIUM_DESCRIPTION",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_NONE_PREMIUM",
+          "categories": {
+            "category": {
+              "@name": "Premium"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "OpenAnyBuildingUiWithCraftFocus"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasPremium": null
+              },
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "STAY_FOCUSED_NONE_PREMIUM",
+                  "@frequency": "Today",
+                  "@operation": "less",
+                  "@amount": "1"
+                },
+                {
+                  "@uniquename": "STAY_FOCUSED_NONE_PREMIUM",
+                  "@frequency": "ThisWeek",
+                  "@operation": "less",
+                  "@amount": "2"
+                }
+              ]
             }
           }
         },
@@ -364,13 +452,14 @@
                 },
                 {
                   "IfHasSeenSinceNewPersonalSeasonChest": {
-                    "@uniquename": "ADVENTURE_AWAITS"
+                    "@uniquename": "ADVENTURE_AWAITS",
+                    "@targetfilter": "character"
                   }
                 }
               ],
               "IfHasSeenAnyPopupFromCategory": {
-                "@amount": "1",
-                "@operation": "greaterOrEqual",
+                "@amount": "0",
+                "@operation": "equals",
                 "@frequency": "AllTime",
                 "@category": "Premium"
               }
@@ -413,8 +502,8 @@
                 }
               ],
               "IfHasSeenAnyPopupFromCategory": {
-                "@amount": "1",
-                "@operation": "greaterOrEqual",
+                "@amount": "0",
+                "@operation": "equals",
                 "@frequency": "AllTime",
                 "@category": "Premium"
               }
@@ -452,8 +541,8 @@
                 }
               ],
               "IfHasSeenAnyPopupFromCategory": {
-                "@amount": "1",
-                "@operation": "greaterOrEqual",
+                "@amount": "0",
+                "@operation": "equals",
                 "@frequency": "AllTime",
                 "@category": "Premium"
               }
@@ -485,6 +574,342 @@
                 "@frequency": "Today",
                 "@operation": "less",
                 "@amount": "1"
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
+          "@priority": "1",
+          "@type": "GuestAccount",
+          "categories": {
+            "category": {
+              "@name": "GuestAccount"
+            }
+          },
+          "triggers": {
+            "trigger": [
+              {
+                "@action": "OpenFastTravelUi"
+              },
+              {
+                "@action": "GameLogin"
+              }
+            ]
+          },
+          "conditions": {
+            "or": {
+              "and": [
+                {
+                  "IfIsGuestAccount": null,
+                  "IfTriggeredThrough": {
+                    "@action": "OpenFastTravelUi"
+                  },
+                  "IfHasSeenPopup": {
+                    "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
+                    "@frequency": "AllTime",
+                    "@operation": "lessOrEqual",
+                    "@amount": "1"
+                  }
+                },
+                {
+                  "not": [
+                    {
+                      "IfTutorialCompleted": null
+                    },
+                    {
+                      "IfTriggeredThrough": {
+                        "@action": "OpenFastTravelUi"
+                      }
+                    }
+                  ],
+                  "IfIsGuestAccount": null,
+                  "IfGuestLoginCount": {
+                    "@operation": "equals",
+                    "@value": "2"
+                  },
+                  "IfHasSeenPopup": {
+                    "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
+                    "@frequency": "AllTime",
+                    "@operation": "equals",
+                    "@amount": "0"
+                  }
+                },
+                {
+                  "IfIsGuestAccount": null,
+                  "IfTutorialCompleted": null,
+                  "IfHasSeenPopup": [
+                    {
+                      "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
+                      "@frequency": "AllTime",
+                      "@operation": "greaterOrEqual",
+                      "@amount": "1"
+                    },
+                    {
+                      "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
+                      "@frequency": "Hours",
+                      "@timefactor": "12",
+                      "@operation": "equals",
+                      "@amount": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "SEASON_WINNER",
+          "@priority": "4",
+          "@type": "SeasonWinner",
+          "categories": {
+            "category": [
+              {
+                "@name": "SeasonWinner"
+              },
+              {
+                "@name": "GameFeature"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasSeenSeasonWinnerPopup": {
+                  "@uniquename": "SEASON_WINNER"
+                }
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "CROSS_PLATFORM",
+          "@priority": "1",
+          "@type": "CrossPlatform",
+          "categories": {
+            "category": {
+              "@name": "CrossPlatform"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfReceivedCrossPlatformReward": null
+              },
+              "or": {
+                "and": [
+                  {
+                    "IfOnPlatform": {
+                      "@platform": "Mobile"
+                    },
+                    "IfAccountAgeDays": {
+                      "@operation": "greaterOrEqual",
+                      "@value": "3"
+                    },
+                    "IfHasSeenPopup": {
+                      "@uniquename": "CROSS_PLATFORM",
+                      "@frequency": "AllTime",
+                      "@operation": "equals",
+                      "@amount": "0"
+                    }
+                  },
+                  {
+                    "not": {
+                      "IfOnPlatform": {
+                        "@platform": "Mobile"
+                      }
+                    },
+                    "IfAccountAgeDays": {
+                      "@operation": "greaterOrEqual",
+                      "@value": "7"
+                    },
+                    "IfHasSeenPopup": {
+                      "@uniquename": "CROSS_PLATFORM",
+                      "@frequency": "AllTime",
+                      "@operation": "equals",
+                      "@amount": "0"
+                    }
+                  },
+                  {
+                    "IfHasSeenPopup": [
+                      {
+                        "@uniquename": "CROSS_PLATFORM",
+                        "@frequency": "AllTime",
+                        "@operation": "greaterOrEqual",
+                        "@amount": "1"
+                      },
+                      {
+                        "@uniquename": "CROSS_PLATFORM",
+                        "@frequency": "Days",
+                        "@timefactor": "20",
+                        "@operation": "equals",
+                        "@amount": "0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "ADVENTURERS_CHALLENGE",
+          "@priority": "8",
+          "@type": "AdventurersChallenge",
+          "categories": {
+            "category": [
+              {
+                "@name": "AdventurersChallenge"
+              },
+              {
+                "@name": "GameFeature"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasSeenSinceNewPersonalSeasonChest": {
+                  "@uniquename": "ADVENTURERS_CHALLENGE",
+                  "@targetfilter": "character"
+                }
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "FEATURED_FEATURE",
+          "@priority": "10",
+          "@type": "FeaturedFeature",
+          "categories": {
+            "category": {
+              "@name": "FeaturedFeature"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasSeenFeaturedFeature": null
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "CONQUERORS_CHALLENGE",
+          "@priority": "7",
+          "@type": "ConquerorsChallenge",
+          "categories": {
+            "category": [
+              {
+                "@name": "ConquerorsChallenge"
+              },
+              {
+                "@name": "GameFeature"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasSeenSinceNewSeasonStart": {
+                  "@uniquename": "CONQUERORS_CHALLENGE"
+                }
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "FACTION_WARFARE_UNLOCK",
+          "@priority": "7",
+          "@type": "FactionWarfareUnlock",
+          "categories": {
+            "category": [
+              {
+                "@name": "FactionWarfare"
+              },
+              {
+                "@name": "GameFeature"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfHasUnlockedFactionWarfare": null,
+              "IfHasSeenPopup": {
+                "@uniquename": "FACTION_WARFARE_UNLOCK",
+                "@frequency": "AllTime",
+                "@operation": "equals",
+                "@amount": "0",
+                "@targetfilter": "character"
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "MOBILE_STORE_RATING",
+          "@priority": "9",
+          "@type": "MobileStoreRating",
+          "categories": {
+            "category": {
+              "@name": "MobileStoreRating"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfOnPlatform": {
+                "@platform": "MobileStore"
+              },
+              "IfTutorialCompleted": null,
+              "IfCharacterOnlineHours": {
+                "@operation": "greaterOrEqual",
+                "@value": "5"
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "MOBILE_STORE_RATING",
+                "@frequency": "Days",
+                "@timefactor": "7",
+                "@operation": "equals",
+                "@amount": "0"
               }
             }
           }

@@ -3471,6 +3471,10 @@
   <WwiseEventInfo name="SPELL_KNUCKLES_PUMMELING_CAST" >
     <OnCastStart name="Play_melee_pummeling_strike_cast" />
   </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_KNUCKLES_PUMMELING_IMPACT_LIMITED" >
+	<OnSpellHit name="Play_melee_kick_impact_quick_pummeling_limited" />
+  </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_KNUCKLES_BOULDER_CAST" >
     <OnCastStart name="Play_melee_bouldertoss_cast_load" />
@@ -4374,8 +4378,8 @@
   <WwiseEventInfo name="SPELL_FISH_IMPACT" >
     <OnCastFinished name="Play_rotten_fish_impact" />
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_ROOT_IMPACT">
-    <OnSpellHit name="Play_root_loop" />
+  <WwiseEventInfo name="SPELL_DEMONIC_ROOT_IMPACT">
+    <OnSpellHit name="Play_demon_root_fx_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SMOKEBOMB">
     <OnSpellHit name="Play_cast_smokebomb" />
@@ -4451,6 +4455,17 @@
     <OnCastFinished name="Play_hellgate_cooldown_reset"/>
   </WwiseEventInfo>
 
+
+  <!-- Kill Emotes -->
+  <WwiseEventInfo name="SPELL_KILL_EMOTE_TOMBSTONE" >
+	<OnCastFinished name="Play_kill_emote_tombstone" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KILL_EMOTE_FLAG" >
+	<OnCastFinished name="Play_kill_emote_banner" />
+  </WwiseEventInfo>
+	
+	
   <!-- Mounts -->
   <WwiseEventInfo name="SPELL_RAGECLAW" >
     <OnCastFinished name="Play_rageclaw_cast_buff_speed" />
@@ -4866,6 +4881,9 @@
     <OnCastCanceled name="Stop_cougar_pounce_load" />
     <OnCastInterrupted name="Stop_cougar_pounce_load"/>
     <OnCastFinished name="Play_cougar_pounce_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_CRITTER_COUGAR_POUNCE_LAND">
+	<OnCastFinished name="Play_cougar_pounce_land" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CRITTER_FORESTSPIRIT_START" >
     <OnCastStart name="Play_mob_forestspirit_start_cast" />
@@ -5351,6 +5369,11 @@
     <OnCastCanceled name="Stop_mob_keeper_bear_cast_knockback"/>
     <OnCastInterrupted name="Stop_mob_keeper_bear_cast_knockback"/>
     <OnCastFinished name="Play_melee_stomp_small" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BEAR_DASH">
+	<OnCastStart name="Play_mob_keeper_bear_cast_knockback" />
+	<OnCastFinished name="Play_rhino_charge_start" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_STUMP_CHANNEL_HIT">
@@ -5947,7 +5970,8 @@
     <OnCastInterrupted name="Stop_undead_knight_splittingstrike_castfinished" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_HERO_CLEAVE">
-    <OnCastStart name="Play_undead_melee_swoosh" />
+    <OnCastStart name="Play_melee_swoosh_load_medium" />
+	<OnCastFinished name="Play_undead_melee_swoosh" />
     <OnSpellHit>
       <ImpactType/>
     </OnSpellHit>
@@ -7668,7 +7692,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ThreeSisters-.*_EXP_.*_.*_T6_MOR">
-	<Environment name="Dungeon"/>
+	<Environment name="World"/>
 	<SubEnvironment name="Morgana_Barracks"/>
 	<Biom name="Mountain"/>
 	<SubBiom name="Red"/>
