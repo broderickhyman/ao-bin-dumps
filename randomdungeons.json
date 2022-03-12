@@ -52,6 +52,164 @@
         }
       ]
     },
+    "RandomLevelRerolls": {
+      "RandomLevelReroll": [
+        {
+          "@name": "T3_SOLO_ROYAL",
+          "@rerolltimesecondsmin": "150",
+          "@rerolltimesecondsmax": "450",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "5500"
+            },
+            {
+              "@level": "1",
+              "@weight": "3000"
+            },
+            {
+              "@level": "2",
+              "@weight": "1500"
+            }
+          ]
+        },
+        {
+          "@name": "SOLO_ROYAL",
+          "@rerolltimesecondsmin": "150",
+          "@rerolltimesecondsmax": "450",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "9800"
+            },
+            {
+              "@level": "1",
+              "@weight": "135"
+            },
+            {
+              "@level": "2",
+              "@weight": "45"
+            },
+            {
+              "@level": "3",
+              "@weight": "15"
+            },
+            {
+              "@level": "4",
+              "@weight": "5"
+            }
+          ]
+        },
+        {
+          "@name": "SOLO_OUTLANDS",
+          "@rerolltimesecondsmin": "300",
+          "@rerolltimesecondsmax": "900",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "9800"
+            },
+            {
+              "@level": "1",
+              "@weight": "135"
+            },
+            {
+              "@level": "2",
+              "@weight": "45"
+            },
+            {
+              "@level": "3",
+              "@weight": "15"
+            },
+            {
+              "@level": "4",
+              "@weight": "5"
+            }
+          ]
+        },
+        {
+          "@name": "VETERAN_ROYAL",
+          "@rerolltimesecondsmin": "150",
+          "@rerolltimesecondsmax": "450",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "9800"
+            },
+            {
+              "@level": "1",
+              "@weight": "135"
+            },
+            {
+              "@level": "2",
+              "@weight": "45"
+            },
+            {
+              "@level": "3",
+              "@weight": "15"
+            },
+            {
+              "@level": "4",
+              "@weight": "5"
+            }
+          ]
+        },
+        {
+          "@name": "VETERAN_OUTLANDS",
+          "@rerolltimesecondsmin": "300",
+          "@rerolltimesecondsmax": "900",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "9800"
+            },
+            {
+              "@level": "1",
+              "@weight": "135"
+            },
+            {
+              "@level": "2",
+              "@weight": "45"
+            },
+            {
+              "@level": "3",
+              "@weight": "15"
+            },
+            {
+              "@level": "4",
+              "@weight": "5"
+            }
+          ]
+        },
+        {
+          "@name": "ELITE_OUTLANDS",
+          "@rerolltimesecondsmin": "300",
+          "@rerolltimesecondsmax": "900",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "9400"
+            },
+            {
+              "@level": "1",
+              "@weight": "405"
+            },
+            {
+              "@level": "2",
+              "@weight": "135"
+            },
+            {
+              "@level": "3",
+              "@weight": "45"
+            },
+            {
+              "@level": "4",
+              "@weight": "15"
+            }
+          ]
+        }
+      ]
+    },
     "ClusterTypeMappings": {
       "@defaultClustertype": "DUNGEON_SAFEAREA",
       "ClusterTypeMapping": [
@@ -1324,11 +1482,13 @@
                   "RandomExit": [
                     {
                       "@name": "T2_PORTAL_ROYAL_SOLO",
-                      "@weight": "0"
+                      "@weight": "0",
+                      "@randomlevelrerollref": "T3_SOLO_ROYAL"
                     },
                     {
                       "@name": "T3_PORTAL_ROYAL_SOLO",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "T3_SOLO_ROYAL"
                     },
                     {
                       "@name": "T2_PORTAL_ROYAL_CONSUMABLE_SOLO",
@@ -1350,7 +1510,8 @@
                     },
                     {
                       "@name": "T4_PORTAL_ROYAL_SOLO",
-                      "@weight": "2"
+                      "@weight": "2",
+                      "@randomlevelrerollref": "SOLO_ROYAL"
                     },
                     {
                       "@name": "T4_PORTAL_CONSUMABLE_SOLO",
@@ -1376,7 +1537,8 @@
                     },
                     {
                       "@name": "T5_PORTAL_ROYAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_ROYAL"
                     },
                     {
                       "@name": "T5_PORTAL_CONSUMABLE_SOLO",
@@ -1410,7 +1572,8 @@
                     },
                     {
                       "@name": "T6_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_ROYAL"
                     },
                     {
                       "@name": "T6_PORTAL_CONSUMABLE_SOLO",
@@ -1444,7 +1607,8 @@
                     },
                     {
                       "@name": "T7_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_ROYAL"
                     },
                     {
                       "@name": "T7_PORTAL_CONSUMABLE_SOLO",
@@ -1474,7 +1638,8 @@
                     },
                     {
                       "@name": "T8_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_ROYAL"
                     },
                     {
                       "@name": "T8_PORTAL_CONSUMABLE_SOLO",
@@ -1505,15 +1670,18 @@
                   "RandomExit": [
                     {
                       "@name": "T4_HERETIC",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_UNDEAD",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_PORTAL",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_PORTAL_CONSUMABLE",
@@ -1527,23 +1695,28 @@
                   "RandomExit": [
                     {
                       "@name": "T4_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T4_PORTAL_CONSUMABLE",
@@ -1557,23 +1730,28 @@
                   "RandomExit": [
                     {
                       "@name": "T5_HERETIC",
-                      "@weight": "6"
+                      "@weight": "6",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T5_UNDEAD",
-                      "@weight": "6"
+                      "@weight": "6",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T5_KEEPER",
-                      "@weight": "6"
+                      "@weight": "6",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T5_MORGANA",
-                      "@weight": "6"
+                      "@weight": "6",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T5_PORTAL",
-                      "@weight": "6"
+                      "@weight": "6",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T5_PORTAL_CONSUMABLE",
@@ -1587,23 +1765,28 @@
                   "RandomExit": [
                     {
                       "@name": "T6_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T6_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T6_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T6_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T6_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T6_PORTAL_CONSUMABLE",
@@ -1621,23 +1804,28 @@
                   "RandomExit": [
                     {
                       "@name": "T7_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T7_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T7_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T7_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T7_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T7_PORTAL_CONSUMABLE",
@@ -1651,23 +1839,28 @@
                   "RandomExit": [
                     {
                       "@name": "T8_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T8_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T8_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T8_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T8_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_ROYAL"
                     },
                     {
                       "@name": "T8_PORTAL_CONSUMABLE",
@@ -1770,7 +1963,8 @@
                     },
                     {
                       "@name": "T5_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_OUTLANDS"
                     },
                     {
                       "@name": "T5_PORTAL_CONSUMABLE_SOLO",
@@ -1824,7 +2018,8 @@
                     },
                     {
                       "@name": "T6_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_OUTLANDS"
                     },
                     {
                       "@name": "T6_PORTAL_CONSUMABLE_SOLO",
@@ -1874,7 +2069,8 @@
                     },
                     {
                       "@name": "T7_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_OUTLANDS"
                     },
                     {
                       "@name": "T7_PORTAL_CONSUMABLE_SOLO",
@@ -1920,7 +2116,8 @@
                     },
                     {
                       "@name": "T8_PORTAL_SOLO",
-                      "@weight": "40"
+                      "@weight": "40",
+                      "@randomlevelrerollref": "SOLO_OUTLANDS"
                     },
                     {
                       "@name": "T8_PORTAL_CONSUMABLE_SOLO",
@@ -1963,23 +2160,28 @@
                   "RandomExit": [
                     {
                       "@name": "T5_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T5_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T5_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T5_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T5_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T5_PORTAL_CONSUMABLE",
@@ -2021,23 +2223,28 @@
                   "RandomExit": [
                     {
                       "@name": "T6_HERETIC",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T6_UNDEAD",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T6_KEEPER",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T6_MORGANA",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T6_PORTAL",
-                      "@weight": "1"
+                      "@weight": "1",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T6_PORTAL_CONSUMABLE",
@@ -2079,23 +2286,28 @@
                   "RandomExit": [
                     {
                       "@name": "T7_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T7_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T7_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T7_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T7_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T7_PORTAL_CONSUMABLE",
@@ -2133,23 +2345,28 @@
                   "RandomExit": [
                     {
                       "@name": "T8_HERETIC",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T8_UNDEAD",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T8_KEEPER",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T8_MORGANA",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T8_PORTAL",
-                      "@weight": "9"
+                      "@weight": "9",
+                      "@randomlevelrerollref": "VETERAN_OUTLANDS"
                     },
                     {
                       "@name": "T8_PORTAL_CONSUMABLE",
@@ -2184,7 +2401,8 @@
                   "RandomExit": [
                     {
                       "@name": "T6_AVALON_ELITE",
-                      "@weight": "12"
+                      "@weight": "12",
+                      "@randomlevelrerollref": "ELITE_OUTLANDS"
                     },
                     {
                       "@name": "T6_AVALON_ELITE_CONSUMABLE",
@@ -2222,7 +2440,8 @@
                   "RandomExit": [
                     {
                       "@name": "T7_AVALON_ELITE",
-                      "@weight": "12"
+                      "@weight": "12",
+                      "@randomlevelrerollref": "ELITE_OUTLANDS"
                     },
                     {
                       "@name": "T7_AVALON_ELITE_CONSUMABLE",
@@ -2256,7 +2475,8 @@
                   "RandomExit": [
                     {
                       "@name": "T8_AVALON_ELITE",
-                      "@weight": "12"
+                      "@weight": "12",
+                      "@randomlevelrerollref": "ELITE_OUTLANDS"
                     },
                     {
                       "@name": "T8_AVALON_ELITE_CONSUMABLE",
