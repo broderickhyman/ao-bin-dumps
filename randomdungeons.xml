@@ -14,6 +14,49 @@
     <difficulty level="3" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_03" silverfactor="2.4332" lootfactor="2.4332" mobfamefactor="2.133"/>
     <difficulty level="4" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_04" silverfactor="3.1832" lootfactor="3.1832" mobfamefactor="2.7416"/>     
   </DifficultyLevels>
+  
+  <RandomLevelRerolls>
+    <RandomLevelReroll name="T3_SOLO_ROYAL" rerolltimesecondsmin="150" rerolltimesecondsmax="450">
+      <level level="0" weight="5500"/>
+      <level level="1" weight="3000"/>
+      <level level="2" weight="1500"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="SOLO_ROYAL" rerolltimesecondsmin="150" rerolltimesecondsmax="450">
+      <level level="0" weight="9800"/>
+      <level level="1" weight="135"/>
+      <level level="2" weight="45"/>
+      <level level="3" weight="15"/>
+      <level level="4" weight="5"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="SOLO_OUTLANDS" rerolltimesecondsmin="300" rerolltimesecondsmax="900">
+      <level level="0" weight="9800"/>
+      <level level="1" weight="135"/>
+      <level level="2" weight="45"/>
+      <level level="3" weight="15"/>
+      <level level="4" weight="5"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="VETERAN_ROYAL" rerolltimesecondsmin="150" rerolltimesecondsmax="450">
+      <level level="0" weight="9800"/>
+      <level level="1" weight="135"/>
+      <level level="2" weight="45"/>
+      <level level="3" weight="15"/>
+      <level level="4" weight="5"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="VETERAN_OUTLANDS" rerolltimesecondsmin="300" rerolltimesecondsmax="900">
+      <level level="0" weight="9800"/>
+      <level level="1" weight="135"/>
+      <level level="2" weight="45"/>
+      <level level="3" weight="15"/>
+      <level level="4" weight="5"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="ELITE_OUTLANDS" rerolltimesecondsmin="300" rerolltimesecondsmax="900">
+      <level level="0" weight="9400"/>
+      <level level="1" weight="405"/>
+      <level level="2" weight="135"/>
+      <level level="3" weight="45"/>
+      <level level="4" weight="15"/>
+    </RandomLevelReroll>
+  </RandomLevelRerolls>
 
   <ClusterTypeMappings defaultClustertype="DUNGEON_SAFEAREA">
     <!--Open World Cluster-->
@@ -357,15 +400,15 @@
 	  <Continent name="Royal">
       <Subtype name="SOLO">
         <ClusterTier tier="3" maxfillratio="0.7">
-          <RandomExit name="T2_PORTAL_ROYAL_SOLO" weight="0" />
-          <RandomExit name="T3_PORTAL_ROYAL_SOLO" weight="1" />
+          <RandomExit name="T2_PORTAL_ROYAL_SOLO" weight="0" randomlevelrerollref="T3_SOLO_ROYAL"/>
+          <RandomExit name="T3_PORTAL_ROYAL_SOLO" weight="1" randomlevelrerollref="T3_SOLO_ROYAL"/>
 
           <RandomExit name="T2_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T3_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="4" maxfillratio="0.84">
 		      <RandomExit name="CORRUPTED_SOLO" weight="1" />
-          <RandomExit name="T4_PORTAL_ROYAL_SOLO" weight="2" />
+          <RandomExit name="T4_PORTAL_ROYAL_SOLO" weight="2" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T4_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
@@ -374,7 +417,7 @@
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.84">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T5_PORTAL_ROYAL_SOLO" weight="40" />
+          <RandomExit name="T5_PORTAL_ROYAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
@@ -386,7 +429,7 @@
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.78">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T6_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
@@ -398,7 +441,7 @@
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.72">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T7_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T7_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
@@ -409,7 +452,7 @@
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.33">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T8_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T8_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
           
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
@@ -421,54 +464,54 @@
       </Subtype>
       <Subtype name="VETERAN">
         <ClusterTier tier="3" maxfillratio="0.5">
-          <RandomExit name="T4_HERETIC" weight="1" />
-          <RandomExit name="T4_UNDEAD" weight="1" />
-          <RandomExit name="T4_PORTAL" weight="1" />
+          <RandomExit name="T4_HERETIC" weight="1" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_UNDEAD" weight="1" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_PORTAL" weight="1" randomlevelrerollref="VETERAN_ROYAL"/>
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
         </ClusterTier>
         <ClusterTier tier="4" maxfillratio="0.5">
-          <RandomExit name="T4_HERETIC" weight="9" />
-          <RandomExit name="T4_UNDEAD" weight="9" />
-          <RandomExit name="T4_KEEPER" weight="9" />
-          <RandomExit name="T4_MORGANA" weight="9" />
-          <RandomExit name="T4_PORTAL" weight="9" />
+          <RandomExit name="T4_HERETIC" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_UNDEAD" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_KEEPER" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_MORGANA" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T4_PORTAL" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
 
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.5">
-          <RandomExit name="T5_HERETIC" weight="6" />
-          <RandomExit name="T5_UNDEAD" weight="6" />
-          <RandomExit name="T5_KEEPER" weight="6" />
-          <RandomExit name="T5_MORGANA" weight="6" />
-          <RandomExit name="T5_PORTAL" weight="6" />
+          <RandomExit name="T5_HERETIC" weight="6" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T5_UNDEAD" weight="6" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T5_KEEPER" weight="6" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T5_MORGANA" weight="6" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T5_PORTAL" weight="6" randomlevelrerollref="VETERAN_ROYAL"/>
 
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.4">
-          <RandomExit name="T6_HERETIC" weight="9" />
-          <RandomExit name="T6_UNDEAD" weight="9" />
-          <RandomExit name="T6_KEEPER" weight="9" />
-          <RandomExit name="T6_MORGANA" weight="9" />
-          <RandomExit name="T6_PORTAL" weight="9" />
+          <RandomExit name="T6_HERETIC" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T6_UNDEAD" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T6_KEEPER" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T6_MORGANA" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T6_PORTAL" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
 
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />          
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.3">
-          <RandomExit name="T7_HERETIC" weight="9" />
-          <RandomExit name="T7_UNDEAD" weight="9" />
-          <RandomExit name="T7_KEEPER" weight="9" />
-          <RandomExit name="T7_MORGANA" weight="9" />
-          <RandomExit name="T7_PORTAL" weight="9" />
+          <RandomExit name="T7_HERETIC" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T7_UNDEAD" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T7_KEEPER" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T7_MORGANA" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T7_PORTAL" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
 
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.2">
-          <RandomExit name="T8_HERETIC" weight="9" />
-          <RandomExit name="T8_UNDEAD" weight="9" />
-          <RandomExit name="T8_KEEPER" weight="9" />
-          <RandomExit name="T8_MORGANA" weight="9" />
-          <RandomExit name="T8_PORTAL" weight="9" />
+          <RandomExit name="T8_HERETIC" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T8_UNDEAD" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T8_KEEPER" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T8_MORGANA" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
+          <RandomExit name="T8_PORTAL" weight="9" randomlevelrerollref="VETERAN_ROYAL"/>
 
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
         </ClusterTier>
@@ -523,7 +566,7 @@
         <ClusterTier tier="5" maxfillratio="0.84">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
           
-          <RandomExit name="T5_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T5_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
@@ -541,7 +584,7 @@
         <ClusterTier tier="6" maxfillratio="0.78">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
           
-          <RandomExit name="T6_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
@@ -558,7 +601,7 @@
         <ClusterTier tier="7" maxfillratio="0.72">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
           
-          <RandomExit name="T7_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T7_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
@@ -574,7 +617,7 @@
         <ClusterTier tier="8" maxfillratio="0.66">
           <RandomExit name="CORRUPTED_SOLO" weight="40" />
           
-          <RandomExit name="T8_PORTAL_SOLO" weight="40" />
+          <RandomExit name="T8_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
@@ -589,11 +632,11 @@
       </Subtype>
       <Subtype name="VETERAN">      
         <ClusterTier tier="5" maxfillratio="0.5">
-          <RandomExit name="T5_HERETIC" weight="9" />
-          <RandomExit name="T5_UNDEAD" weight="9" />
-          <RandomExit name="T5_KEEPER" weight="9" />
-          <RandomExit name="T5_MORGANA" weight="9" />
-          <RandomExit name="T5_PORTAL" weight="9" />
+          <RandomExit name="T5_HERETIC" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T5_UNDEAD" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T5_KEEPER" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T5_MORGANA" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T5_PORTAL" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
           
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
@@ -606,11 +649,11 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.4">
-          <RandomExit name="T6_HERETIC" weight="1" />
-          <RandomExit name="T6_UNDEAD" weight="1" />
-          <RandomExit name="T6_KEEPER" weight="1" />
-          <RandomExit name="T6_MORGANA" weight="1" />
-          <RandomExit name="T6_PORTAL" weight="1" />
+          <RandomExit name="T6_HERETIC" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T6_UNDEAD" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T6_KEEPER" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T6_MORGANA" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T6_PORTAL" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
           
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
@@ -623,11 +666,11 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.3">
-          <RandomExit name="T7_HERETIC" weight="9" />
-          <RandomExit name="T7_UNDEAD" weight="9" />
-          <RandomExit name="T7_KEEPER" weight="9" />
-          <RandomExit name="T7_MORGANA" weight="9" />
-          <RandomExit name="T7_PORTAL" weight="9" />  
+          <RandomExit name="T7_HERETIC" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T7_UNDEAD" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T7_KEEPER" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T7_MORGANA" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T7_PORTAL" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>  
           
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
@@ -639,11 +682,11 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.2">
-          <RandomExit name="T8_HERETIC" weight="9" />
-          <RandomExit name="T8_UNDEAD" weight="9" />
-          <RandomExit name="T8_KEEPER" weight="9" />
-          <RandomExit name="T8_MORGANA" weight="9" />
-          <RandomExit name="T8_PORTAL" weight="9" />
+          <RandomExit name="T8_HERETIC" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T8_UNDEAD" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T8_KEEPER" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T8_MORGANA" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
+          <RandomExit name="T8_PORTAL" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
           
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
           
@@ -655,7 +698,7 @@
       </Subtype>
       <Subtype name="ELITE">
         <ClusterTier tier="6" maxfillratio="0.25">
-          <RandomExit name="T6_AVALON_ELITE" weight="12" />
+          <RandomExit name="T6_AVALON_ELITE" weight="12" randomlevelrerollref="ELITE_OUTLANDS"/>
           
           <RandomExit name="T6_AVALON_ELITE_CONSUMABLE" weight="0"/>
           <RandomExit name="T7_AVALON_ELITE_CONSUMABLE" weight="0"/>
@@ -668,7 +711,7 @@
        
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.25">
-          <RandomExit name="T7_AVALON_ELITE" weight="12" />
+          <RandomExit name="T7_AVALON_ELITE" weight="12" randomlevelrerollref="ELITE_OUTLANDS"/>
           
           <RandomExit name="T7_AVALON_ELITE_CONSUMABLE" weight="0"/>
           <RandomExit name="T8_AVALON_ELITE_CONSUMABLE" weight="0"/>
@@ -680,7 +723,7 @@
           
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.25">
-          <RandomExit name="T8_AVALON_ELITE" weight="12" />
+          <RandomExit name="T8_AVALON_ELITE" weight="12" randomlevelrerollref="ELITE_OUTLANDS"/>
           
           <RandomExit name="T8_AVALON_ELITE_CONSUMABLE" weight="0"/>
 
