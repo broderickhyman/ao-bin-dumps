@@ -723,6 +723,15 @@
         }
       },
       {
+        "@name": "MOUNT_BUNNY",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "bunny"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -1839,6 +1848,30 @@
         },
         "Size": {
           "@name": "huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "swoosh_rock"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ELEMENTAL_SUMMON_ROCK",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "critter"
+        },
+        "MobType": {
+          "@name": "critter_rock_summon"
+        },
+        "Size": {
+          "@name": "rock_medium"
         },
         "ArmorType": {
           "@name": "rock"
@@ -6504,6 +6537,24 @@
         }
       },
       {
+        "@name": "FARMABLE_BUNNY",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "bunny"
+        }
+      },
+      {
+        "@name": "FARMABLE_BUNNY_BABY",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "bunny_baby"
+        }
+      },
+      {
         "@name": "NPC_ALCHEMIST",
         "NpcType": {
           "@name": "alchemist"
@@ -6763,6 +6814,12 @@
       }
     ],
     "WwiseEventInfo": [
+      {
+        "@name": "MOB_ELEMENTAL_SUMMON_ROCK",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
       {
         "@name": "MOB_AVALON_CAPTAIN_BOSS",
         "OnMobDied": {
@@ -10459,6 +10516,12 @@
         }
       },
       {
+        "@name": "SPELL_BUNNY_LEAP",
+        "OnCastFinished": {
+          "@name": "Play_mount_bunny_leap"
+        }
+      },
+      {
         "@name": "SPELL_SUMMON_FOX",
         "OnCastFinished": {
           "@name": "Play_summon_fox"
@@ -11198,6 +11261,12 @@
         "@name": "SPELL_GUARDIAN_STEPPE_AVALANCHE",
         "OnCastFinished": {
           "@name": "Play_rock_avalanche"
+        }
+      },
+      {
+        "@name": "SPELL_GUARDIAN_SUMMON_ROCK_AVALANCHE",
+        "OnCastFinished": {
+          "@name": "Play_rock_elemental_avalanche"
         }
       },
       {
@@ -14843,6 +14912,24 @@
         }
       },
       {
+        "@name": "FARMABLE_BUNNY",
+        "OnOpened": {
+          "@name": "Play_ui_open_bunny"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_bunny"
+        }
+      },
+      {
+        "@name": "FARMABLE_BUNNY_BABY",
+        "OnOpened": {
+          "@name": "Play_ui_open_bunny_baby"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_bunny_baby"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "OnPlaceItemStarted": {
           "@name": "Play_ui_action_place_hideout_start"
@@ -15473,10 +15560,10 @@
           "@name": "Hideout"
         },
         "Hideout_Safety": {
-          "@name": "safe"
+          "@name": "None"
         },
         "Hideout_Attackstate": {
-          "@name": "Secure"
+          "@name": "None"
         },
         "GlobalEnvironmentEffect": {
           "@name": "cave"
@@ -15503,10 +15590,10 @@
           "@name": "Hideout"
         },
         "Hideout_Safety": {
-          "@name": "safe"
+          "@name": "None"
         },
         "Hideout_Attackstate": {
-          "@name": "Secure"
+          "@name": "None"
         },
         "GlobalEnvironmentEffect": {
           "@name": "cave"
@@ -15533,10 +15620,10 @@
           "@name": "Hideout"
         },
         "Hideout_Safety": {
-          "@name": "safe"
+          "@name": "None"
         },
         "Hideout_Attackstate": {
-          "@name": "Secure"
+          "@name": "None"
         },
         "GlobalEnvironmentEffect": {
           "@name": "cave"

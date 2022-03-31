@@ -368,9 +368,6 @@
                         <not>
                             <IfTutorialCompleted />
                         </not>
-                        <not>
-                            <IfTriggeredThrough action="OpenFastTravelUi" />
-                        </not>
                         <IfIsGuestAccount />
                         <IfGuestLoginCount operation="equals" value="2" />
                         <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="equals" amount="0" />
@@ -535,5 +532,8 @@
                 </and>
             </conditions>
         </popup>
+
+        <!-- end old popups -->
+
     </popups>
 </eventbasedpopups>

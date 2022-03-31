@@ -342,6 +342,10 @@
 	<CharType name="mount"/>
 	<MountType name="hellhound"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_BUNNY">
+	<CharType name="mount"/>
+	<MountType name="bunny"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -789,6 +793,18 @@
     <WeaponType name="swoosh_rock"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_ELEMENTAL_SUMMON_ROCK">
+	<CharType name="mob"/>
+	<MobFaction name="critter"/>
+	<MobType name="critter_rock_summon"/>
+	<Size name="rock_medium"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="swoosh_rock"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_ELEMENTAL_SUMMON_ROCK">
+	<OnMobDied name="Die"/>
+  </WwiseEventInfo>
   <WwiseSwitchInfo name="MOB_STUMP">
     <CharType name="mob"/>
     <MobFaction name="critter"/>
@@ -4536,6 +4552,10 @@
     <OnCastStart name="Play_bat_blink" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_BUNNY_LEAP" >
+	<OnCastFinished name="Play_mount_bunny_leap" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_SUMMON_FOX" >
     <OnCastFinished name="Play_summon_fox" />
   </WwiseEventInfo>
@@ -4926,6 +4946,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_STEPPE_AVALANCHE" >
     <OnCastFinished name="Play_rock_avalanche" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_GUARDIAN_SUMMON_ROCK_AVALANCHE" >
+	<OnCastFinished name="Play_rock_elemental_avalanche" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_ROCK_GIANT_TREMOR_CAST" >
     <OnCastStart name="Play_melee_swoosh_load_big" />
@@ -7078,6 +7101,26 @@
      <FarmAnimalType name="moa_baby"/>
    </WwiseSwitchInfo>
 
+  <WwiseEventInfo name="FARMABLE_BUNNY">
+	<OnOpened name="Play_ui_open_bunny"/>
+	<OnPlaceItemStarted name="Play_ui_open_bunny"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="FARMABLE_BUNNY">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="bunny"/>
+  </WwiseSwitchInfo>
+
+  <WwiseEventInfo name="FARMABLE_BUNNY_BABY">
+	<OnOpened name="Play_ui_open_bunny_baby"/>
+	<OnPlaceItemStarted name="Play_ui_open_bunny_baby"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="FARMABLE_BUNNY_BABY">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="bunny_baby"/>
+  </WwiseSwitchInfo>
+
   <!-- FURNITURE -->
    <WwiseEventInfo name="HIDEOUT_PLACEABLE_ITEM">
     <OnPlaceItemStarted name="Play_ui_action_place_hideout_start" />
@@ -7515,8 +7558,8 @@
     <SubBiom name="None"/>
     <MobFaction name="None"/>
     <Music name="Hideout"/>
-    <Hideout_Safety name="safe"/>
-    <Hideout_Attackstate name="Secure"/>
+    <Hideout_Safety name="None"/>
+    <Hideout_Attackstate name="None"/>
     <GlobalEnvironmentEffect name="cave"/>
   </WwiseClusterStateOverwrite>
   
@@ -7529,8 +7572,8 @@
     <SubBiom name="None"/>
     <MobFaction name="None"/>
     <Music name="Hideout"/>
-    <Hideout_Safety name="safe"/>
-    <Hideout_Attackstate name="Secure"/>
+    <Hideout_Safety name="None"/>
+    <Hideout_Attackstate name="None"/>
     <GlobalEnvironmentEffect name="cave"/>
   </WwiseClusterStateOverwrite>
 
@@ -7542,8 +7585,8 @@
     <SubBiom name="None"/>
     <MobFaction name="None"/>
     <Music name="Hideout"/>
-    <Hideout_Safety name="safe"/>
-    <Hideout_Attackstate name="Secure"/>
+    <Hideout_Safety name="None"/>
+    <Hideout_Attackstate name="None"/>
     <GlobalEnvironmentEffect name="cave"/>
   </WwiseClusterStateOverwrite>
   
