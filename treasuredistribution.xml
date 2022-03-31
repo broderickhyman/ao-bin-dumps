@@ -2,8 +2,11 @@
   <!--####################################################################################-->
   <!--Distribution Setup based on Continent and Subtype-->
   <!--the following prefabs will get distributed by the resource distribution system and are referenced in the resourceprefabmappings.xml-->
-  <!--prefab adressed by subtype resource:  TreasureSpawnpointHarvestable-->
-  <!--prefab adressed by subtype chest:     TreasureSpawnpointLootchest-->
+  <!--prefab adressed by subtype resource:      TreasureSpawnpointHarvestable-->
+  <!--prefab adressed by subtype chest:         TreasureSpawnpointLootchest-->
+  <!--prefab adressed by subtype powercore:     TreasureSpawnpointPowercore-->
+  <!--prefab adressed by subtype energycrystal: TreasureSpawnpointEnergycrystal-->
+  <!--prefab adressed by subtype easter:        TreasureSpawnpointEaster-->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!--maxslotsused:          how many treasures can be active in a cluster at once-->
   <!--activationtimemin:     minimum number of seconds until treasure respawn-->
@@ -14,39 +17,39 @@
     <Continent name="Royal" subtype="CHEST">
       <ClusterTier tier="5" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
-        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Forest" weight="80" name="FOREST_RED_CHEST_SOLO" />
         <!--Highland-->
-        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Highland" weight="80" name="HIGHLAND_RED_CHEST_SOLO" />
         <!--Mountain-->
-        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Mountain" weight="80" name="MOUNTAIN_RED_CHEST_SOLO" />
         <!--Steppe-->
-        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_RED_CHEST_SOLO" />
         <!--Swamp-->
-        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_RED_CHEST_SOLO" />
       </ClusterTier>
       <ClusterTier tier="6" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
-        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Forest" weight="80" name="FOREST_RED_CHEST_SOLO" />
         <!--Highland-->
-        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Highland" weight="80" name="HIGHLAND_RED_CHEST_SOLO" />
         <!--Mountain-->
-        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Mountain" weight="80" name="MOUNTAIN_RED_CHEST_SOLO" />
         <!--Steppe-->
-        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_RED_CHEST_SOLO" />
         <!--Swamp-->
-        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_SOLO" />
+        <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_RED_CHEST_SOLO" />
       </ClusterTier>
       <ClusterTier tier="7" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
-        <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_SOLO" />
+        <TreasureLootchest biome="Forest" weight="80" name="FOREST_DEAD_CHEST_SOLO" />
         <!--Highland-->
-        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_SOLO" />
+        <TreasureLootchest biome="Highland" weight="80" name="HIGHLAND_DEAD_CHEST_SOLO" />
         <!--Mountain-->
-        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_SOLO" />
+        <TreasureLootchest biome="Mountain" weight="80" name="MOUNTAIN_DEAD_CHEST_SOLO" />
         <!--Steppe-->
-        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_SOLO" />
+        <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_DEAD_CHEST_SOLO" />
         <!--Swamp-->
-        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_SOLO" />
+        <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_DEAD_CHEST_SOLO" />
       </ClusterTier>
     </Continent>
     <Continent name="Outlands" subtype="CHEST">
@@ -1105,6 +1108,60 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
       </ClusterTier>
     </Continent>
+    <!--Events-->
+    <Continent name="Royal" subtype="EASTER">
+      <ClusterTier tier="5" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+      <ClusterTier tier="6" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+      <ClusterTier tier="7" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="EASTER">
+      <ClusterTier tier="5" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+      <ClusterTier tier="6" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+      <ClusterTier tier="7" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+      <ClusterTier tier="8" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+        <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
+        <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+      </ClusterTier>
+    </Continent>
   </GameobjectDistribution>
 
   <!--####################################################################################-->
@@ -1138,9 +1195,9 @@
     
     <!--*******************************************-->
     <!--Veteran - Forest-->
-    <TreasureLootchest uniquename="FOREST_GREEN_CHEST_VETERAN" worldmaprange="1" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_GREEN_TREASURE_VETERAN"/>
-    <TreasureLootchest uniquename="FOREST_RED_CHEST_VETERAN" worldmaprange="1" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_RED_TREASURE_VETERAN"/>
-    <TreasureLootchest uniquename="FOREST_DEAD_CHEST_VETERAN" worldmaprange="1" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_DEAD_TREASURE_VETERAN"/>
+    <TreasureLootchest uniquename="FOREST_GREEN_CHEST_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_GREEN_TREASURE_VETERAN"/>
+    <TreasureLootchest uniquename="FOREST_RED_CHEST_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_RED_TREASURE_VETERAN"/>
+    <TreasureLootchest uniquename="FOREST_DEAD_CHEST_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_DEAD_TREASURE_VETERAN"/>
     <!--Veteran - Highland-->
     <TreasureLootchest uniquename="HIGHLAND_GREEN_CHEST_VETERAN" worldmaprange="1" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="HIGHLAND_GREEN_TREASURE_VETERAN"/>
     <TreasureLootchest uniquename="HIGHLAND_RED_CHEST_VETERAN" worldmaprange="1" worldmaptreasure="WORLDMAP_TREASURE_CHEST_VETERAN" title="@TREASURE_CHEST_VETERAN_TITLE" description="@TREASURE_CHEST_VETERAN_DESC" minimapicon="treasure_chest_veteran" killeventloggingradius="40" maxlifetime="86400" lootchest="HIGHLAND_RED_TREASURE_VETERAN"/>
@@ -1179,7 +1236,29 @@
     <TreasureLootchest uniquename="SWAMP_GREEN_CHEST_ELITE" worldmaprange="2" worldmaptreasure="WORLDMAP_TREASURE_CHEST_ELITE" title="@TREASURE_CHEST_ELITE_TITLE" description="@TREASURE_CHEST_ELITE_DESC" minimapicon="treasure_chest_elite" killeventloggingradius="80" maxlifetime="86400" lootchest="SWAMP_GREEN_TREASURE_ELITE"/>
     <TreasureLootchest uniquename="SWAMP_RED_CHEST_ELITE" worldmaprange="2" worldmaptreasure="WORLDMAP_TREASURE_CHEST_ELITE" title="@TREASURE_CHEST_ELITE_TITLE" description="@TREASURE_CHEST_ELITE_DESC" minimapicon="treasure_chest_elite" killeventloggingradius="80" maxlifetime="86400" lootchest="SWAMP_RED_TREASURE_ELITE"/>
     <TreasureLootchest uniquename="SWAMP_DEAD_CHEST_ELITE" worldmaprange="2" worldmaptreasure="WORLDMAP_TREASURE_CHEST_ELITE" title="@TREASURE_CHEST_ELITE_TITLE" description="@TREASURE_CHEST_ELITE_DESC" minimapicon="treasure_chest_elite" killeventloggingradius="80" maxlifetime="86400" lootchest="SWAMP_DEAD_TREASURE_ELITE"/>
-    
+
+    <!--*******************************************-->
+    <!--Veteran Easter- Forest-->
+    <TreasureLootchest uniquename="FOREST_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_GREEN_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="FOREST_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_RED_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="FOREST_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="FOREST_DEAD_TREASURE_EASTER_VETERAN"/>
+    <!--Veteran Easter - Highland-->
+    <TreasureLootchest uniquename="HIGHLAND_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="HIGHLAND_GREEN_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="HIGHLAND_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="HIGHLAND_RED_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="HIGHLAND_DEAD_TREASURE_EASTER_VETERAN"/>
+    <!--Veteran Easter - Mountain-->
+    <TreasureLootchest uniquename="MOUNTAIN_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="MOUNTAIN_GREEN_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="MOUNTAIN_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="MOUNTAIN_RED_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="MOUNTAIN_DEAD_TREASURE_EASTER_VETERAN"/>
+    <!--Veteran Easter - Steppe-->
+    <TreasureLootchest uniquename="STEPPE_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="STEPPE_GREEN_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="STEPPE_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="STEPPE_RED_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="STEPPE_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="STEPPE_DEAD_TREASURE_EASTER_VETERAN"/>
+    <!--Veteran Easter - Swamp-->
+    <TreasureLootchest uniquename="SWAMP_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_GREEN_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="SWAMP_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_RED_TREASURE_EASTER_VETERAN"/>
+    <TreasureLootchest uniquename="SWAMP_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_DEAD_TREASURE_EASTER_VETERAN"/>
+
   </TreasureLootchests>
 
   <!--####################################################################################-->

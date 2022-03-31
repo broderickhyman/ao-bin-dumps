@@ -1,2540 +1,605 @@
 <?xml version="1.0" encoding="utf-8"?>
 <personalseasons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="personalseasons.xsd">
-  
-  <!-- October Season 2018 -->
-  <personalseason uniquename="ADCSEASON_01" displayname="@PERSONALSEASON_SEASONNAME_01" displayname_subtitle="@PERSONALSEASON_SEASONSUBTITLE_01" header_name="10_OCT" startdatetime="2018-10-01T10:01:00Z" enddatetime="2018-11-01T10:00:00Z" pve="0.1" gathering="1.2" fishing="0.5" farming="0" pspflatteningcurveexponent="1">
+
+  <!-- January Season -->
+  <personalseason uniquename="ADCSEASON_01" displayname="@ADCSEASON_01_NEW_NAME" displayname_subtitle="@ADCSEASON_01_NEW_SUBTITLE" header_name="01_JAN" activemonth="1" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
     <psptrackers>
-      <psptracker uniquename="ADCSEASON_01_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_DAILY_01" psp="2000" unlockday="0" >
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+        <rewardtrigger psp="1200" unlockday="0" >
           <rewards>
-            <pspreward id="ADCSEASON_01_REWARD_DAILY_01" amount="10000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
 
-      <psptracker uniquename="ADCSEASON_01_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_MAIN_01" psp="200000" unlockday="0" >
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+        <rewardtrigger psp="600000" unlockday="0" >
           <rewards>
-            <itemreward id="ADCSEASON_01_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_01" itemref="T6_MOUNT_FROSTRAM_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
 
-      <psptracker uniquename="ADCSEASON_01_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_SECONDARY_01" unlockday="0" psp="40000">
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
           <rewards>
-            <itemreward id="ADCSEASON_01_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2018_01" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_SECONDARY_02" unlockday="7" psp="80000">
+        
+        <rewardtrigger unlockday="7" psp="300000">
           <rewards>
-            <itemreward id="ADCSEASON_01_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2018_01" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_SECONDARY_03" unlockday="14" psp="120000">
+        
+        <rewardtrigger unlockday="14" psp="450000">
           <rewards>
-            <itemreward id="ADCSEASON_01_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2018_01" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_01_TRIGGER_SECONDARY_04" unlockday="21" psp="160000">
+        
+        <rewardtrigger unlockday="21" psp="600000">
           <rewards>
-            <itemreward id="ADCSEASON_01_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2018_01" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- November Season 2018 -->
-  <personalseason uniquename="ADCSEASON_02" displayname="@ADCSEASON_02_NAME" displayname_subtitle="@ADCSEASON_02_SUBTITLE" header_name="11_NOV" startdatetime="2018-11-01T10:01:00Z" enddatetime="2018-12-01T10:00:00Z" pve="1.6" gathering="1.8" fishing="3" farming="1.7" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_02_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_DAILY_01" psp="1500" unlockday="0" >
-          <rewards>
-            <pspreward id="ADCSEASON_02_REWARD_DAILY_01" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_02_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_02_REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-            <itemreward id="ADCSEASON_02_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1"  boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_02_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_02_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_02_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_02_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_02_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_02_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- December Season 2018 -->
-  <personalseason uniquename="ADCSEASON_03" displayname="@ADCSEASON_03_NAME" displayname_subtitle="@ADCSEASON_03_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" startdatetime="2018-12-01T10:01:00Z" enddatetime="2019-01-01T10:00:00Z" pve="1.6" gathering="1.8" fishing="3" farming="1.7" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_03_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_DAILY_01" psp="1500" unlockday="0" >
-          <rewards>
-            <pspreward id="ADCSEASON_03_REWARD_DAILY_01" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_03_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_03_REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-            <itemreward id="ADCSEASON_03_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_03_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_03_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_03_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_03_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_03_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_03_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
     </psptrackers>
   </personalseason>
   
-  <!-- January Season 2019 -->
-  <personalseason uniquename="ADCSEASON_04" displayname="@ADCSEASON_04_NAME" displayname_subtitle="@ADCSEASON_04_SUBTITLE" header_name="01_JAN" startdatetime="2019-01-01T10:01:00Z" enddatetime="2019-02-01T10:00:00Z" pve="1.6" gathering="1.8" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+  <!-- February Season -->
+  <personalseason uniquename="ADCSEASON_02" displayname="@ADCSEASON_02_NEW_NAME" displayname_subtitle="@ADCSEASON_02_NEW_SUBTITLE" header_name="02_FEB" activemonth="02" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
     <psptrackers>
-      <psptracker uniquename="ADCSEASON_04_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+        <rewardtrigger psp="1200" unlockday="0" >
           <rewards>
-            <pspreward id="ADCSEASON_04_REWARD_DAILY_01" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
 
-      <psptracker uniquename="ADCSEASON_04_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
           <rewards>
-            <itemreward id="ADCSEASON_04_REWARD_MAIN_01" itemref="T6_MOUNT_FROSTRAM_ADC" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-            <itemreward id="ADCSEASON_04_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JAN2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_01" itemref="T7_MOUNT_TERRORBIRD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
 
-      <psptracker uniquename="ADCSEASON_04_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
           <rewards>
-            <itemreward id="ADCSEASON_04_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
 
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
+        <rewardtrigger unlockday="7" psp="300000">
           <rewards>
-            <itemreward id="ADCSEASON_04_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
 
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
+        <rewardtrigger unlockday="14" psp="450000">
           <rewards>
-            <itemreward id="ADCSEASON_04_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
 
-        <rewardtrigger id="ADCSEASON_04_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
+        <rewardtrigger unlockday="21" psp="600000">
           <rewards>
-            <itemreward id="ADCSEASON_04_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
           </rewards>
         </rewardtrigger>
       </psptracker>
     </psptrackers>
   </personalseason>
-
-  <!-- February Season 2019 -->
-  <personalseason uniquename="ADCSEASON_05" displayname="@ADCSEASON_05_NAME" displayname_subtitle="@ADCSEASON_05_SUBTITLE" header_name="02_FEB" startdatetime="2019-02-01T10:01:00Z" enddatetime="2019-03-01T10:00:00Z" pve="1.6" gathering="1.8" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_05_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <pspreward id="ADCSEASON_05_REWARD_DAILY_01" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_05_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_05_REWARD_MAIN_01" itemref="T7_MOUNT_TERRORBIRD_ADC" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-            <itemreward id="ADCSEASON_05_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_FEB2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_05_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_05_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_05_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_05_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_05_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_05_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-  <!-- March Season 2019 -->
-  <personalseason uniquename="ADCSEASON_06" displayname="@ADCSEASON_06_NAME" displayname_subtitle="@ADCSEASON_06_SUBTITLE" header_name="03_MAR" startdatetime="2019-03-01T10:01:00Z" enddatetime="2019-04-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_06_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <pspreward id="ADCSEASON_06_REWARD_DAILY_01" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_06_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_06_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BEAR_KEEPER_ADC" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-            <itemreward id="ADCSEASON_06_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAR2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_06_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_06_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_06_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_06_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_06_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_06_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="true" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- April Season 2019 -->
-  <personalseason uniquename="ADCSEASON_07" displayname="@ADCSEASON_07_NAME" displayname_subtitle="@ADCSEASON_07_SUBTITLE" header_name="04_APR" startdatetime="2019-04-01T10:01:00Z" enddatetime="2019-05-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_07_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_07_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_07_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_07_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BLACK_PANTHER_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_07_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_07_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_07_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_07_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- May Season 2019 -->
-  <personalseason uniquename="ADCSEASON_08" displayname="@ADCSEASON_08_NAME" displayname_subtitle="@ADCSEASON_08_SUBTITLE" header_name="05_MAY" startdatetime="2019-05-01T10:01:00Z" enddatetime="2019-06-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_08_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_08_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_08_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_08_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_MORGANA_RAVEN_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_08_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_08_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_08_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_08_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- June Season 2019 -->
-  <personalseason uniquename="ADCSEASON_09" displayname="@ADCSEASON_09_NAME" displayname_subtitle="@ADCSEASON_09_SUBTITLE" header_name="06_JUN" startdatetime="2019-06-01T10:01:00Z" enddatetime="2019-07-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_09_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_09_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_09_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_09_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_GIANT_HORSE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_09_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_09_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_09_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_09_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- July Season 2019 -->
-  <personalseason uniquename="ADCSEASON_10" displayname="@ADCSEASON_10_NAME" displayname_subtitle="@ADCSEASON_10_SUBTITLE" header_name="07_JUL" startdatetime="2019-07-01T10:01:00Z" enddatetime="2019-08-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_10_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_10_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_10_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_10_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_UNDEAD_DIREBOAR_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_10_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_10_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_10_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_10_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- August Season 2019 -->
-  <personalseason uniquename="ADCSEASON_11" displayname="@ADCSEASON_11_NAME" displayname_subtitle="@ADCSEASON_11_SUBTITLE" header_name="08_AUG" startdatetime="2019-08-01T10:01:00Z" enddatetime="2019-09-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_11_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_11_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_11_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_11_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_MAIN_01" itemref="UNIQUE_UNLOCK_SKIN_GIANTSTAG_DIVINE" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_11_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_11_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_11_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_11_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- September Season 2019 -->
-  <personalseason uniquename="ADCSEASON_12" displayname="@ADCSEASON_12_NAME" displayname_subtitle="@ADCSEASON_12_SUBTITLE" header_name="09_SEP" startdatetime="2019-09-01T10:01:00Z" enddatetime="2019-10-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_12_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_12_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_12_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_12_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_MAIN_01" itemref="UNIQUE_UNLOCK_SKIN_OX_CART_HERETIC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_12_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_12_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_12_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_12_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- October Season 2019 -->
-  <personalseason uniquename="ADCSEASON_13" displayname="@ADC_NAME_HARVEST" displayname_subtitle="@ADCSEASON_13_SUBTITLE" header_name="10_OCT" startdatetime="2019-10-01T10:01:00Z" enddatetime="2019-11-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_13_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_13_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_13_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_13_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_13_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_13_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_13_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_13_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- November Season 2019 -->
-  <personalseason uniquename="ADCSEASON_14" displayname="@ADCSEASON_02_NAME" displayname_subtitle="@ADCSEASON_14_SUBTITLE" header_name="11_NOV" startdatetime="2019-11-01T10:01:00Z" enddatetime="2019-12-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-
-      <psptracker uniquename="ADCSEASON_14_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_14_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_14_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_14_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_14_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_14_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_14_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_14_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- December Season 2019 -->
-  <personalseason uniquename="ADCSEASON_15" displayname="@ADCSEASON_03_NAME" displayname_subtitle="@ADCSEASON_15_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" startdatetime="2019-12-01T10:01:00Z" enddatetime="2020-01-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_15_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_15_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_15_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_15_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_15_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_15_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_15_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_15_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- January Season 2020 -->
-  <personalseason uniquename="ADCSEASON_16" displayname="@ADCSEASON_04_NAME" displayname_subtitle="@ADCSEASON_16_SUBTITLE" header_name="01_JAN" startdatetime="2020-01-01T10:01:00Z" enddatetime="2020-02-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_16_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward id="ADCSEASON_16_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_16_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_16_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_MAIN_01" itemref="T6_MOUNT_FROSTRAM_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_16_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_16_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_16_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_16_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- February Season 2020 -->
-  <personalseason uniquename="ADCSEASON_17" displayname="@ADCSEASON_05_NAME" displayname_subtitle="@ADCSEASON_17_SUBTITLE" header_name="02_FEB" startdatetime="2020-02-01T10:01:00Z" enddatetime="2020-03-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_17_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward id="ADCSEASON_17_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_17_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_17_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_MAIN_01" itemref="T7_MOUNT_TERRORBIRD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_17_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_17_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_17_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_17_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-  <!-- March Season 2020 -->
-  <personalseason uniquename="ADCSEASON_18" displayname="@ADCSEASON_06_NAME" displayname_subtitle="@ADCSEASON_18_SUBTITLE" header_name="03_MAR" startdatetime="2020-03-01T10:01:00Z" enddatetime="2020-04-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_18_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward id="ADCSEASON_18_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_18_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_18_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BEAR_KEEPER_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_18_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_18_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_18_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_18_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- April Season 2020 -->
-  <personalseason uniquename="ADCSEASON_19" displayname="@ADCSEASON_07_NAME" displayname_subtitle="@ADCSEASON_19_SUBTITLE" header_name="04_APR" startdatetime="2020-04-01T10:01:00Z" enddatetime="2020-05-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_19_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_19_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_19_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_19_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BLACK_PANTHER_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_19_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_19_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_19_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_19_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- May Season 2020 -->
-  <personalseason uniquename="ADCSEASON_20" displayname="@ADCSEASON_08_NAME" displayname_subtitle="@ADCSEASON_20_SUBTITLE" header_name="05_MAY" startdatetime="2020-05-01T10:01:00Z" enddatetime="2020-06-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_20_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_20_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_20_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_20_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_MORGANA_RAVEN_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_20_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_20_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_20_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_20_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- June Season 2020 -->
-  <personalseason uniquename="ADCSEASON_21" displayname="@ADCSEASON_09_NAME" displayname_subtitle="@ADCSEASON_21_SUBTITLE" header_name="06_JUN" startdatetime="2020-06-01T10:01:00Z" enddatetime="2020-07-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_21_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_21_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_21_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_21_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_GIANT_HORSE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_21_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_21_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_21_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_21_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- July Season 2020 -->
-  <personalseason uniquename="ADCSEASON_22" displayname="@ADCSEASON_10_NAME" displayname_subtitle="@ADCSEASON_22_SUBTITLE" header_name="07_JUL" startdatetime="2020-07-01T10:01:00Z" enddatetime="2020-08-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_22_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_22_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_22_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_22_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_UNDEAD_DIREBOAR_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_22_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_22_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_22_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_22_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- August Season 2020 -->
-  <personalseason uniquename="ADCSEASON_23" displayname="@ADCSEASON_11_NAME" displayname_subtitle="@ADCSEASON_23_SUBTITLE" header_name="08_AUG" startdatetime="2020-08-01T10:01:00Z" enddatetime="2020-09-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_23_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_23_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_23_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_23_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_DIVINE_OWL_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_23_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_23_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_23_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_23_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- September Season 2020 -->
-  <personalseason uniquename="ADCSEASON_24" displayname="@ADCSEASON_12_NAME" displayname_subtitle="@ADCSEASON_24_SUBTITLE" header_name="09_SEP" startdatetime="2020-09-01T10:01:00Z" enddatetime="2020-10-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_24_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_24_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_24_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_24_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_HERETIC_MULE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_24_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_24_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_24_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_24_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- October Season 2020 -->
-  <personalseason uniquename="ADCSEASON_25" displayname="@ADC_NAME_HARVEST" displayname_subtitle="@ADCSEASON_25_SUBTITLE" header_name="10_OCT" startdatetime="2020-10-01T10:01:00Z" enddatetime="2020-11-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_25_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_25_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_25_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_25_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_25_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_25_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_25_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_25_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- November Season 2020 -->
-  <personalseason uniquename="ADCSEASON_26" displayname="@ADCSEASON_02_NAME" displayname_subtitle="@ADCSEASON_26_SUBTITLE" header_name="11_NOV" startdatetime="2020-11-01T10:01:00Z" enddatetime="2020-12-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-
-      <psptracker uniquename="ADCSEASON_26_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_26_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_26_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_26_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_26_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_26_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_26_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_26_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-
-  <!-- December Season 2020 -->
-  <personalseason uniquename="ADCSEASON_27" displayname="@ADCSEASON_03_NAME" displayname_subtitle="@ADCSEASON_27_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" startdatetime="2020-12-01T10:01:00Z" enddatetime="2021-01-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-    <psptrackers>
-      <psptracker uniquename="ADCSEASON_27_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <pspreward  id="ADCSEASON_27_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-            <learningpointsreward id="ADCSEASON_27_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_27_PSPTRACKER_MAIN_01"  type="main">
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-            <itemreward id="ADCSEASON_27_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-
-      <psptracker uniquename="ADCSEASON_27_PSPTRACKER_SECONDARY_01" type="secondary">
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-
-        <rewardtrigger id="ADCSEASON_27_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-          <rewards>
-            <itemreward id="ADCSEASON_27_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-          </rewards>
-        </rewardtrigger>
-      </psptracker>
-    </psptrackers>
-  </personalseason>
-	
-  <!-- January Season 2021 -->
-  <personalseason uniquename="ADCSEASON_28" displayname="@ADCSEASON_04_NAME" displayname_subtitle="@ADCSEASON_28_SUBTITLE" header_name="01_JAN" startdatetime="2021-01-01T10:01:00Z" enddatetime="2021-02-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-  	<psptrackers>
-  	  <psptracker uniquename="ADCSEASON_28_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-  		<rewardtrigger id="ADCSEASON_28_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-  		  <rewards>
-  			<itemreward id="ADCSEASON_28_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-  			<pspreward id="ADCSEASON_28_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-  			<learningpointsreward id="ADCSEASON_28_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-  		  </rewards>
-  		</rewardtrigger>
-  	  </psptracker>
   
-  	  <psptracker uniquename="ADCSEASON_28_PSPTRACKER_MAIN_01"  type="main">
-  		<rewardtrigger id="ADCSEASON_28_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-  	      <rewards>
-  			<itemreward id="ADCSEASON_28_REWARD_MAIN_01" itemref="T6_MOUNT_FROSTRAM_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  			<itemreward id="ADCSEASON_28_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  		  </rewards>
-  		</rewardtrigger>
-  	  </psptracker>
-  
-  		<psptracker uniquename="ADCSEASON_28_PSPTRACKER_SECONDARY_01" type="secondary">
-  			<rewardtrigger id="ADCSEASON_28_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-  				<rewards>
-  					<itemreward id="ADCSEASON_28_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  				</rewards>
-  			</rewardtrigger>
-  
-  			<rewardtrigger id="ADCSEASON_28_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-  				<rewards>
-  					<itemreward id="ADCSEASON_28_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  				</rewards>
-  			</rewardtrigger>
-  
-  			<rewardtrigger id="ADCSEASON_28_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-  				<rewards>
-  					<itemreward id="ADCSEASON_28_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  				</rewards>
-  			</rewardtrigger>
-  
-  			<rewardtrigger id="ADCSEASON_28_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-  				<rewards>
-  					<itemreward id="ADCSEASON_28_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-  				</rewards>
-  			</rewardtrigger>
-  		</psptracker>
-  	</psptrackers>
+  <!-- March Season -->
+  <personalseason uniquename="ADCSEASON_03" displayname="@ADCSEASON_03_NEW_NAME" displayname_subtitle="@ADCSEASON_03_NEW_SUBTITLE" header_name="03_MAR" activemonth="03" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BEAR_KEEPER_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
   </personalseason>
-	<!-- February Season 2021 -->
-	<personalseason uniquename="ADCSEASON_29" displayname="@ADCSEASON_05_NAME" displayname_subtitle="@ADCSEASON_29_SUBTITLE" header_name="02_FEB" startdatetime="2021-02-01T10:01:00Z" enddatetime="2021-03-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_29_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward id="ADCSEASON_29_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_29_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_29_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_MAIN_01" itemref="T7_MOUNT_TERRORBIRD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_29_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_29_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_29_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_29_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-	<!-- March Season 2021 -->
-	<personalseason uniquename="ADCSEASON_30" displayname="@ADCSEASON_06_NAME" displayname_subtitle="@ADCSEASON_30_SUBTITLE" header_name="03_MAR" startdatetime="2021-03-01T10:01:00Z" enddatetime="2021-04-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_30_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward id="ADCSEASON_30_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_30_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_30_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BEAR_KEEPER_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_30_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_30_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_30_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_30_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- April Season 2021 -->
-	<personalseason uniquename="ADCSEASON_31" displayname="@ADCSEASON_07_NAME" displayname_subtitle="@ADCSEASON_31_SUBTITLE" header_name="04_APR" startdatetime="2021-04-01T10:01:00Z" enddatetime="2021-05-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_31_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_31_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_31_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_31_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BLACK_PANTHER_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_31_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_31_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_31_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_31_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- May Season 2021 -->
-	<personalseason uniquename="ADCSEASON_32" displayname="@ADCSEASON_08_NAME" displayname_subtitle="@ADCSEASON_32_SUBTITLE" header_name="05_MAY" startdatetime="2021-05-01T10:01:00Z" enddatetime="2021-06-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_32_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_32_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_32_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_32_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_MORGANA_RAVEN_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_32_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_32_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_32_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_32_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- June Season 2021 -->
-	<personalseason uniquename="ADCSEASON_33" displayname="@ADCSEASON_09_NAME" displayname_subtitle="@ADCSEASON_33_SUBTITLE" header_name="06_JUN" startdatetime="2021-06-01T10:01:00Z" enddatetime="2021-07-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_33_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_33_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_33_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_33_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_GIANT_HORSE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_33_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_33_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_33_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_33_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- July Season 2021 -->
-	<personalseason uniquename="ADCSEASON_34" displayname="@ADCSEASON_10_NAME" displayname_subtitle="@ADCSEASON_34_SUBTITLE" header_name="07_JUL" startdatetime="2021-07-01T10:01:00Z" enddatetime="2021-08-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_34_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_34_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_34_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_34_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_UNDEAD_DIREBOAR_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_34_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_34_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_34_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_34_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- August Season 2021 -->
-	<personalseason uniquename="ADCSEASON_35" displayname="@ADCSEASON_11_NAME" displayname_subtitle="@ADCSEASON_35_SUBTITLE" header_name="08_AUG" startdatetime="2021-08-01T10:01:00Z" enddatetime="2021-09-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_35_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_35_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_35_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_35_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_DIVINE_OWL_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_35_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_35_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_35_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_35_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- September Season 2021 -->
-	<personalseason uniquename="ADCSEASON_36" displayname="@ADCSEASON_12_NAME" displayname_subtitle="@ADCSEASON_36_SUBTITLE" header_name="09_SEP" startdatetime="2021-09-01T10:01:00Z" enddatetime="2021-10-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_36_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_36_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_36_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_36_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_HERETIC_MULE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_36_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_36_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_36_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_36_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- October Season 2021 -->
-	<personalseason uniquename="ADCSEASON_37" displayname="@ADC_NAME_HARVEST" displayname_subtitle="@ADCSEASON_37_SUBTITLE" header_name="10_OCT" startdatetime="2021-10-01T10:01:00Z" enddatetime="2021-11-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_37_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_37_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_37_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_37_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_37_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_37_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_37_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_37_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- November Season 2021 -->
-	<personalseason uniquename="ADCSEASON_38" displayname="@ADCSEASON_02_NAME" displayname_subtitle="@ADCSEASON_38_SUBTITLE" header_name="11_NOV" startdatetime="2021-11-01T10:01:00Z" enddatetime="2021-12-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-
-			<psptracker uniquename="ADCSEASON_38_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_DAILY_01" amount="1" itemref="T2_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_38_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_38_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_38_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_38_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_38_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_38_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_38_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- December Season 2021 -->
-	<personalseason uniquename="ADCSEASON_39" displayname="@ADCSEASON_03_NAME" displayname_subtitle="@ADCSEASON_39_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" startdatetime="2021-12-01T10:01:00Z" enddatetime="2022-01-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_39_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_39_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_39_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_39_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_39_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_39_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_39_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_39_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- January Season 2022 -->
-	<personalseason uniquename="ADCSEASON_40" displayname="@ADCSEASON_04_NAME" displayname_subtitle="@ADCSEASON_40_SUBTITLE" header_name="01_JAN" startdatetime="2022-01-01T10:01:00Z" enddatetime="2022-02-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_40_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward id="ADCSEASON_40_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_40_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_40_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_MAIN_01" itemref="T6_MOUNT_FROSTRAM_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_40_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_40_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_40_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_40_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JAN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- February Season 2022-->
-	<personalseason uniquename="ADCSEASON_41" displayname="@ADCSEASON_05_NAME" displayname_subtitle="@ADCSEASON_41_SUBTITLE" header_name="02_FEB" startdatetime="2022-02-01T10:01:00Z" enddatetime="2022-03-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_41_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward id="ADCSEASON_41_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_41_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_41_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_MAIN_01" itemref="T7_MOUNT_TERRORBIRD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_41_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_41_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_41_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_41_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_FEB2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- March Season 2022 -->
-	<personalseason uniquename="ADCSEASON_42" displayname="@ADCSEASON_06_NAME" displayname_subtitle="@ADCSEASON_42_SUBTITLE" header_name="03_MAR" startdatetime="2022-03-01T10:01:00Z" enddatetime="2022-04-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_42_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward id="ADCSEASON_42_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_42_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_42_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BEAR_KEEPER_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_42_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_42_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_42_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_42_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- April Season 2022 -->
-	<personalseason uniquename="ADCSEASON_43" displayname="@ADCSEASON_07_NAME" displayname_subtitle="@ADCSEASON_43_SUBTITLE" header_name="04_APR" startdatetime="2022-04-01T10:01:00Z" enddatetime="2022-05-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_43_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_43_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_43_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_43_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BLACK_PANTHER_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_43_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_43_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_43_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_43_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- May Season 2022 -->
-	<personalseason uniquename="ADCSEASON_44" displayname="@ADCSEASON_08_NAME" displayname_subtitle="@ADCSEASON_44_SUBTITLE" header_name="05_MAY" startdatetime="2022-05-01T10:01:00Z" enddatetime="2022-06-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_44_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_44_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_44_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_44_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_MORGANA_RAVEN_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_44_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_44_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_44_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_44_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- June Season 2022 -->
-	<personalseason uniquename="ADCSEASON_45" displayname="@ADCSEASON_09_NAME" displayname_subtitle="@ADCSEASON_45_SUBTITLE" header_name="06_JUN" startdatetime="2022-06-01T10:01:00Z" enddatetime="2022-07-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_45_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_45_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_45_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_45_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_GIANT_HORSE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_45_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_45_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_45_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_45_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- July Season 2022 -->
-	<personalseason uniquename="ADCSEASON_46" displayname="@ADCSEASON_10_NAME" displayname_subtitle="@ADCSEASON_46_SUBTITLE" header_name="07_JUL" startdatetime="2022-07-01T10:01:00Z" enddatetime="2022-08-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_46_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_46_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_46_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_46_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_UNDEAD_DIREBOAR_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_46_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_46_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_46_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_46_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- August Season 2022 -->
-	<personalseason uniquename="ADCSEASON_47" displayname="@ADCSEASON_11_NAME" displayname_subtitle="@ADCSEASON_47_SUBTITLE" header_name="08_AUG" startdatetime="2022-08-01T10:01:00Z" enddatetime="2022-09-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_47_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_47_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_47_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_47_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_DIVINE_OWL_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_47_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_47_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_47_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_47_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- September Season 2022 -->
-	<personalseason uniquename="ADCSEASON_48" displayname="@ADCSEASON_12_NAME" displayname_subtitle="@ADCSEASON_48_SUBTITLE" header_name="09_SEP" startdatetime="2022-09-01T10:01:00Z" enddatetime="2022-10-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_48_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_48_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_48_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_48_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_HERETIC_MULE_ADC" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_48_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_48_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_48_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_48_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- October Season 2022 -->
-	<personalseason uniquename="ADCSEASON_49" displayname="@ADC_NAME_HARVEST" displayname_subtitle="@ADCSEASON_49_SUBTITLE" header_name="10_OCT" startdatetime="2022-10-01T10:01:00Z" enddatetime="2022-11-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_49_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_49_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_49_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_49_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_49_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_49_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_49_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_49_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- November Season 2022 -->
-	<personalseason uniquename="ADCSEASON_50" displayname="@ADCSEASON_02_NAME" displayname_subtitle="@ADCSEASON_50_SUBTITLE" header_name="11_NOV" startdatetime="2022-11-01T10:01:00Z" enddatetime="2022-12-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-
-			<psptracker uniquename="ADCSEASON_50_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_50_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_50_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_50_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_50_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1"  boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_50_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_50_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_50_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
-
-	<!-- December Season 2022 -->
-	<personalseason uniquename="ADCSEASON_51" displayname="@ADCSEASON_03_NAME" displayname_subtitle="@ADCSEASON_51_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" startdatetime="2022-12-01T10:01:00Z" enddatetime="2023-01-01T10:00:00Z" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
-		<psptrackers>
-			<psptracker uniquename="ADCSEASON_51_PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_DAILY_01" psp="1200" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<pspreward  id="ADCSEASON_51_REWARD_DAILY_02" amount="50000"  boughtpremium="true" premium="true" nonpremium="true"/>
-						<learningpointsreward id="ADCSEASON_51_REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_51_PSPTRACKER_MAIN_01"  type="main">
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_MAIN_01" psp="600000" unlockday="0" >
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-						<itemreward id="ADCSEASON_51_REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-
-			<psptracker uniquename="ADCSEASON_51_PSPTRACKER_SECONDARY_01" type="secondary">
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_SECONDARY_01" unlockday="0" psp="150000">
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_SECONDARY_02" unlockday="7" psp="300000">
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_SECONDARY_03" unlockday="14" psp="450000">
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-
-				<rewardtrigger id="ADCSEASON_51_TRIGGER_SECONDARY_04" unlockday="21" psp="600000">
-					<rewards>
-						<itemreward id="ADCSEASON_51_REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
-					</rewards>
-				</rewardtrigger>
-			</psptracker>
-		</psptrackers>
-	</personalseason>
+
+  <!-- April Season -->
+  <personalseason uniquename="ADCSEASON_04" displayname="@ADCSEASON_04_NEW_NAME" displayname_subtitle="@ADCSEASON_04_NEW_SUBTITLE" header_name="04_APR" activemonth="04" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BLACK_PANTHER_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_APR2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- May Season -->
+  <personalseason uniquename="ADCSEASON_05" displayname="@ADCSEASON_05_NEW_NAME" displayname_subtitle="@ADCSEASON_05_NEW_SUBTITLE" header_name="05_MAY" activemonth="05" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_MORGANA_RAVEN_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_MAY2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- June Season -->
+  <personalseason uniquename="ADCSEASON_06" displayname="@ADCSEASON_06_NEW_NAME" displayname_subtitle="@ADCSEASON_06_NEW_SUBTITLE" header_name="06_JUN" activemonth="06" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_GIANT_HORSE_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUN2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- July Season -->
+  <personalseason uniquename="ADCSEASON_07" displayname="@ADCSEASON_07_NEW_NAME" displayname_subtitle="@ADCSEASON_07_NEW_SUBTITLE" header_name="07_JUL" activemonth="07" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+        <rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_UNDEAD_DIREBOAR_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_JUL2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- August Season -->
+  <personalseason uniquename="ADCSEASON_08" displayname="@ADCSEASON_08_NEW_NAME" displayname_subtitle="@ADCSEASON_08_NEW_SUBTITLE" header_name="08_AUG" activemonth="08" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_DIVINE_OWL_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_AUG2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- September Season -->
+  <personalseason uniquename="ADCSEASON_09" displayname="@ADCSEASON_09_NEW_NAME" displayname_subtitle="@ADCSEASON_09_NEW_SUBTITLE" header_name="09_SEP" activemonth="09" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_HERETIC_MULE_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_SEP2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- October Season -->
+  <personalseason uniquename="ADCSEASON_10" displayname="@ADCSEASON_10_NEW_NAME" displayname_subtitle="@ADCSEASON_10_NEW_SUBTITLE" header_name="10_OCT" activemonth="10" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="UNIQUE_MOUNT_BAT_PERSONAL" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_OCT2019" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- November Season -->
+  <personalseason uniquename="ADCSEASON_11" displayname="@ADCSEASON_11_NEW_NAME" displayname_subtitle="@ADCSEASON_11_NEW_SUBTITLE" header_name="11_NOV" activemonth="11" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="T7_MOUNT_MONITORLIZARD_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_NOV2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
+  <!-- December Season -->
+  <personalseason uniquename="ADCSEASON_12" displayname="@ADCSEASON_12_NEW_NAME" displayname_subtitle="@ADCSEASON_12_NEW_SUBTITLE" header_name="12_DEC" displaytext_color="255, 177, 37, 255" activemonth="12" pve="1.5" gathering="1.5" fishing="3" farming="1.3" pspflatteningcurveexponent="0.5">
+    <psptrackers>
+      <psptracker uniquename="PSPTRACKER_DAILY_01" resetintervalindays="1" type="daily">
+		<rewardtrigger psp="1200" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_DAILY_01" amount="1" itemref="T4_SKILLBOOK_NONTRADABLE" boughtpremium="true" premium="true" nonpremium="true"/>
+            <pspreward  id="REWARD_DAILY_02" amount="50000" boughtpremium="true" premium="true" nonpremium="true"/>
+            <learningpointsreward id="REWARD_DAILY_03" amount="10" boughtpremium="false" premium="false" nonpremium="true"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_MAIN_01" type="main">
+		<rewardtrigger psp="600000" unlockday="0" >
+          <rewards>
+            <itemreward id="REWARD_MAIN_01" itemref="T7_MOUNT_HUSKY_ADC" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+            <itemreward id="REWARD_MAIN_02" itemref="UNIQUE_AVATARRING_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+
+      <psptracker uniquename="PSPTRACKER_SECONDARY_01" type="secondary">
+        <rewardtrigger unlockday="0" psp="150000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_01" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="7" psp="300000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_02" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="14" psp="450000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_03" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+
+        <rewardtrigger unlockday="21" psp="600000">
+          <rewards>
+            <itemreward id="REWARD_SECONDARY_04" itemref="UNIQUE_LOOTCHEST_ADC_DEC2018" amount="1" boughtpremium="true" premium="false" nonpremium="false"/>
+          </rewards>
+        </rewardtrigger>
+      </psptracker>
+    </psptrackers>
+  </personalseason>
+
 </personalseasons>
