@@ -187,7 +187,7 @@
           "@type": "Premium",
           "@title": "@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_TITLE",
           "@description": "@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_DESCRIPTION",
-          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_FRUITS_EXTEND_PREMIUM",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_FRUITS_NONE_PREMIUM",
           "categories": {
             "category": {
               "@name": "Premium"
@@ -572,6 +572,39 @@
               "IfHasSeenPopup": {
                 "@uniquename": "FUNDS_LOW",
                 "@frequency": "Today",
+                "@operation": "less",
+                "@amount": "1"
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "SET_OFF_RIGHT",
+          "@priority": "6",
+          "@type": "Bundles",
+          "@title": "@EVENT_BASED_POPUPS_SET_OFF_RIGHT_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_SET_OFF_RIGHT_DESCRIPTION",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_SET_OFF_RIGHT",
+          "categories": {
+            "category": {
+              "@name": "Premium"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "not": {
+                "IfHasPremium": null
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "SET_OFF_RIGHT",
+                "@frequency": "Hours",
+                "@timefactor": "68",
                 "@operation": "less",
                 "@amount": "1"
               }

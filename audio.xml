@@ -114,6 +114,10 @@
     <CharType name="mount"/>
     <MountType name="direwolf_armored"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_DIREWOLF_UNDEAD">
+	<CharType name="mount"/>
+	<MountType name="direwolf_undead"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_DIREBOAR">
     <CharType name="mount"/>
     <MountType name="direboar"/>
@@ -193,6 +197,10 @@
   <WwiseSwitchInfo name="MOUNT_IMPALA">
     <CharType name="mount"/>
     <MountType name="impala"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_DEER">
+	<CharType name="mount"/>
+	<MountType name="deer"/>
   </WwiseSwitchInfo>
  <WwiseSwitchInfo name="MOUNT_BALLISTA">
     <CharType name="mount"/>
@@ -3535,6 +3543,10 @@
     <OnCastFinished name="Play_melee_knuckles_triple_roundhouse" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_KNUCKLES_W_ROUNDHOUSE" > <!-- W version of roundhouse kick which was originally an E spell-->
+	<OnCastFinished name="Play_melee_knuckles_roundhouse_kick_W" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_KNUCKLES_IMPACT_BIG_PUNCH">
     <OnSpellHit name="Play_melee_knuckles_impact_big_punch" >
       <ImpactType/>
@@ -4313,6 +4325,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_DAMAGE_DECREASE">
     <OnSpellHit name="Play_damage_reduction" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DAMAGE_DECREASE_REPEATED">
+    <OnSpellHit name="Play_damage_reduction_repeat" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_STOMP">
     <OnCastStart name="Play_selfbuff_cast" />

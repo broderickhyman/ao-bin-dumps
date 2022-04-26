@@ -127,7 +127,7 @@
         </popup>
 
         <popup uniquename="FRUITS_EXTEND_PREMIUM" priority="5" type="Premium" title="@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_TITLE"
-               description="@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FRUITS_EXTEND_PREMIUM">
+               description="@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FRUITS_NONE_PREMIUM">
             <categories>
                 <category name="Premium" />
             </categories>
@@ -345,6 +345,25 @@
                 </and>
             </conditions>
         </popup>
+
+      <popup uniquename="SET_OFF_RIGHT" priority="6" type="Bundles" title="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_TITLE"
+               description="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_SET_OFF_RIGHT">
+        <categories>
+          <category name="Premium" />
+        </categories>
+        <triggers>
+          <trigger action="GameLogin" />
+        </triggers>
+        <conditions>
+          <and>
+            <IfTutorialCompleted />
+            <not>
+              <IfHasPremium />
+            </not>
+            <IfHasSeenPopup uniquename="SET_OFF_RIGHT" frequency="Hours" timefactor="68" operation="less" amount="1" />
+          </and>
+        </conditions>
+      </popup>
 
         <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
         <!-- Guest Account Incentivization -->
