@@ -1724,6 +1724,8 @@
           <layercontrol type="solo:encounter|hard" layers="Layer_20" />
           <layercontrol type="veteran:encounter|hard" layers="Layer_23" />
         </template>
+      </info>
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BQ==">
         <template name="UND_MULTIFLAG_BASIC_STRAIGHT">
           <weightedlayerblock name="shrine" flag="solo">
             <layer id="Layer_15" weight="2" />
@@ -1756,6 +1758,8 @@
           <layercontrol type="solo:encounter|hard" layers="Layer_06" />
           <layercontrol type="veteran:encounter|hard" layers="Layer_07" />
         </template>
+      </info>
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="Aw==">
         <template name="UND_MULTIFLAG_BASIC_CORNER">
           <weightedlayerblock name="shrine_solo" flag="solo">
             <layer id="Layer_11" weight="2" />
@@ -2233,6 +2237,8 @@
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_07" />
           <layercontrol type="veteran:encounter|hard" layers="Layer_01" />
         </template>
+      </info>
+      <info size="1 2" pathsize="1" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" endbosshighlight="true" pathdata="BQA=">
         <template name="UND_MULTIFLAG_HIGHLIGHT_END">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
@@ -2491,7 +2497,7 @@
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_10" />
         </template>
       </info>
-      <info size="5 5" pathsize="3" factionsubset="castle" environment="indoor" flags="" templateusage="Enforce" dungeonlevelusage="First" pathdata="AAAAAAAAAAAAAAAAAQAAAAAFAAAAAAUAAA==">
+      <info size="5 5" pathsize="3" factionsubset="castle" environment="indoor" flags="legacy_group|legacy_solo" templateusage="Enforce" dungeonlevelusage="First" pathdata="AAAAAAAAAAAAAAAAAQAAAAAFAAAAAAUAAA==">
         <template name="UND_LEGACY_START_FirstLevel_Necrohall01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
@@ -2500,10 +2506,10 @@
           <layercontrol type="all:environment|outdoor|mountain" layers="Layer_03" />
           <layercontrol type="all:environment|outdoor|steppe" layers="Layer_07" />
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_08" />
-          <layercontrol type="solo" layers="Layer_11" />
-          <layercontrol type="solo:encounter|standard" layers="Layer_01" />
-          <layercontrol type="veteran" layers="Layer_09" />
-          <layercontrol type="veteran:encounter|standard" layers="Layer_10" />
+          <layercontrol type="legacy_group" layers="Layer_09" />
+          <layercontrol type="legacy_group:encounter|standard" layers="Layer_10" />
+          <layercontrol type="legacy_solo" layers="Layer_11" />
+          <layercontrol type="legacy_solo:encounter|standard" layers="Layer_01" />
         </template>
       </info>
       <info size="11 11" pathsize="6" factionsubset="castle" environment="indoor" flags="halloween" templateusage="Enforce" dungeonlevelusage="First" pathdata="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAFAAAAAAAAAAAAAAUAAAAAAAAAAAAABQAAAAAAAAAAAAAFAAAAAAAAAAAAAAUAAAAAAA==">
@@ -2530,7 +2536,7 @@
       </info>
     </type>
     <type name="Exit">
-      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo" pathdata="BA==">
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BA==">
         <template name="UND_MULTIFLAG_EXIT">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_07" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
@@ -2570,7 +2576,7 @@
       </info>
     </type>
     <type name="Backdrop">
-      <info size="1 1" pathsize="0" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|solo|veteran">
+      <info size="1 1" pathsize="0" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo|solo|veteran">
         <template name="UND_DEFAULT_BACKDROP_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_02" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_01" />
@@ -2583,11 +2589,6 @@
       </info>
     </type>
     <type name="Master">
-      <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="">
-        <template name="UND_CASTLE_MASTER_LEGACY_01">
-          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
-        </template>
-      </info>
       <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo">
         <template name="UND_CASTLE_MASTER_HALLOWEEN_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
@@ -2602,6 +2603,11 @@
           <layercontrol type="all:environment|outdoor|mountain" layers="Layer_05" />
           <layercontrol type="all:environment|outdoor|steppe" layers="Layer_06" />
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_07" />
+        </template>
+      </info>
+      <info size="10 10" pathsize="0" factionsubset="castle" environment="indoor" flags="legacy_group|legacy_solo">
+        <template name="UND_CASTLE_MASTER_LEGACY_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
         </template>
       </info>
     </type>

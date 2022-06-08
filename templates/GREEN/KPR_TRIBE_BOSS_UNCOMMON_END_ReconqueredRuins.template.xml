@@ -1,21 +1,9 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_BOSS_UNCOMMON_END_ReconqueredRuins.unity" unityguid="3d0c3258b86f5354b86fd5d27583d194" editorBoundsMin="-80 -120" editorBoundsMax="80 120" colBoundsMin="-83 -125" colBoundsMax="84 121">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_06">
-      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_UNCOMMON" pos="4.5 -6 72.5" />
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_07">
-      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_UNCOMMON" pos="4.5 -6 72.5" />
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_05" type="lootchest" layerId="Layer_13">
-      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_STANDARD" pos="34.5 0 -77.5" />
-    </criticalscenemember>
     <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_14">
       <tile name="SHRINE_NON_COMBAT_BUFF" pos="35 0 -78">
         <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
       </tile>
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_03" type="lootchest" layerId="Layer_16">
-      <tile name="FOREST_GREEN_LOOTCHEST_KEEPER_STANDARD" pos="34.5 0 -77.5" />
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
@@ -182,10 +170,10 @@
     </layergroup>
     <layergroup name="Rewards">
       <layer id="Layer_06" name="Reward_Solo">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_UNCOMMON" pos="4.5 -6 72.5" id="lootchest_02" type="lootchest" />
+        <tile name="SpawnPoint_LOOTCHEST_KEEPER_SOLO_BOSS_UNCOMMON" pos="4.5 -6 72.5" />
       </layer>
       <layer id="Layer_07" name="Reward_Veteran">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_UNCOMMON" pos="4.5 -6 72.5" id="lootchest_01" type="lootchest" />
+        <tile name="SpawnPoint_LOOTCHEST_KEEPER_VETERAN_BOSS_UNCOMMON" pos="4.5 -6 72.5" />
       </layer>
     </layergroup>
     <layergroup name="SECRET">
@@ -193,13 +181,13 @@
         <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_DIAGONAL" pos="-14 0 -80" roty="180" />
       </layer>
       <layer id="Layer_13" name="Secret_Solo_Chest">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_STANDARD" pos="34.5 0 -77.5" id="lootchest_05" type="lootchest" />
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="36.7 0 -82.1" rot="0 330.76 0">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="31.2 0 -82.1" roty="44">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
         </tile>
+        <tile name="SpawnPoint_LOOTCHEST_KEEPER_SOLO_STANDARD" pos="34.5 0 -77.5" />
       </layer>
       <layer id="Layer_14" name="Secret_Solo_Shrine">
         <criticaltile name="SHRINE_NON_COMBAT_BUFF" pos="35 0 -78" id="shrine_01" type="shrine">
@@ -216,7 +204,6 @@
         <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_DIAGONAL" pos="-14 0 -80" roty="180" />
       </layer>
       <layer id="Layer_16" name="Secret_Veteran_On">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_KEEPER_STANDARD" pos="34.5 0 -77.5" id="lootchest_03" type="lootchest" />
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="33.52 0 -82.76" roty="9">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_GIANT" />
         </tile>
@@ -226,6 +213,7 @@
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_FEMALE" pos="37.48 0 -81.85" roty="321">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_UNPROVEN_FEMALE" />
         </tile>
+        <tile name="SpawnPoint_LOOTCHEST_KEEPER_VETERAN_STANDARD" pos="34.5 0 -77.5" />
       </layer>
     </layergroup>
     <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -85" roty="90" />
@@ -811,8 +799,8 @@
     </tile>
     <tile name="FOREST_GREEN_KPR_THREAT_INDICATOR_GROUND" pos="21 -6 41" />
     <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A_POINTLIGHT" pos="56 0 -2" />
-    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_LARGE_A_POINTLIGHT" pos="45 0 -2" />
-    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_LARGE_A_POINTLIGHT" pos="-4 0 -13" />
+    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_LARGE_B" pos="45 0 -2" />
+    <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_LARGE_B" pos="-4 0 -13" />
     <tile name="FOREST_GREEN_CASTLE_BALCONY_20X10_RAILING_LARGE_A" pos="50 0 55" roty="90" />
     <tile name="FOREST_GREEN_CASTLE_BALCONY_20X10_RAILING_LARGE_A" pos="-40 0 55" roty="90" />
     <tile name="FOREST_GREEN_CASTLE_CORNER_ROUNDED_20x20_B" pos="-20 -34 70" roty="180" />
@@ -1006,8 +994,7 @@
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="-1 -6 76" roty="180" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="-36 0 -36" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="9 -6 74" roty="90" />
-    <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="4 0 -27" roty="270" />
-    <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="-23 0 -15" roty="180" />
+    <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="-22 0 -14" roty="180" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="-12 -6 53" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="44.5 0 14.5" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="40 0 45" roty="180" />
@@ -1114,6 +1101,7 @@
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="45.5 0 -83.5" roty="180" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="25.5 0 -92.5" roty="180" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="27.5 -6 45.5" roty="180" />
+    <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_B" pos="4 0 -27" roty="270" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="49.5 0 -99.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="14.5 -6 70.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_VEGETATION_PATCH_C" pos="-7.5 -6 75.5" roty="180" />
@@ -1207,8 +1195,7 @@
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_BROKEN_A_CORNER" pos="59 0 20" roty="270" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_BROKEN_A_CORNER" pos="-49 0 20" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_BROKEN_A_CORNER" pos="-31 0 20" roty="270" />
-    <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_A" pos="-37 0 -31" roty="180" />
-    <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_B" pos="-30 0 -18" roty="86.53" />
+    <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_B" pos="-30 0 -18" roty="87" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_B" pos="7 0 -10" roty="90" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_B" pos="55 0 -28" roty="180" />
     <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_B" pos="-54 0 -16" />
@@ -1231,6 +1218,7 @@
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="-51.5 0 -13.5" />
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="-47.5 0 -30.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_FERN_B" pos="-40.5 0 -24.5" roty="270" />
+    <tile name="FOREST_GREEN_UND_CRYPT_COLUMN_FALLEN_DIAGONAL_A" pos="-37 0 -31" roty="180" />
     <tile name="FOREST_GREEN_VEG_FERN_C" pos="-38.5 0 -52.5" />
     <tile name="FOREST_GREEN_VEG_FERN_C" pos="-12.5 0 -79.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_FERN_C" pos="-35.24 0 -13.46" roty="270" />

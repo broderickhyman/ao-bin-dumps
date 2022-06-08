@@ -2,20 +2,28 @@
   <!--####################################################################################-->
   <!--Distribution Setup based on Continent and Subtype-->
   <!--the following prefabs will get distributed by the resource distribution system and are referenced in the resourceprefabmappings.xml-->
-  <!--prefab adressed by subtype resource:      TreasureSpawnpointHarvestable-->
-  <!--prefab adressed by subtype chest:         TreasureSpawnpointLootchest-->
-  <!--prefab adressed by subtype powercore:     TreasureSpawnpointPowercore-->
-  <!--prefab adressed by subtype energycrystal: TreasureSpawnpointEnergycrystal-->
-  <!--prefab adressed by subtype easter:        TreasureSpawnpointEaster-->
+  <!--prefab adressed by subtype resource:            TreasureSpawnpointHarvestable-->
+  <!--prefab adressed by subtype chest:               TreasureSpawnpointLootchest-->
+  <!--prefab adressed by subtype powercore:           TreasureSpawnpointPowercore-->
+  <!--prefab adressed by subtype energycrystal:       TreasureSpawnpointEnergycrystal-->
+  <!--prefab adressed by subtype easter:              TreasureSpawnpointEaster-->
+  <!--prefab adressed by subtype castle:              TreasureSpawnpointCastle-->
+  <!--prefab adressed by subtype castle_outpost:      TreasureSpawnpointCastleOutpost-->
+  <!--prefab adressed by subtype dynamic_event_fiber: TreasureSpawnpointFiber-->
+  <!--prefab adressed by subtype dynamic_event_hide:  TreasureSpawnpointHide-->
+  <!--prefab adressed by subtype dynamic_event_ore:   TreasureSpawnpointOre-->
+  <!--prefab adressed by subtype dynamic_event_rock:  TreasureSpawnpointRock-->
+  <!--prefab adressed by subtype dynamic_event_wood:  TreasureSpawnpointWood-->
   <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!--maxslotsused:          how many treasures can be active in a cluster at once-->
   <!--activationtimemin:     minimum number of seconds until treasure respawn-->
   <!--activationtimemax:     maximum number of seconds until treasure respawn-->
-  <!--positioncooldown:      how long a spot that had a treasure can't receive a new treasure-->
+  <!--positioncooldown:      how long a spot that had a treasure can't receive a new treasure--> 
   <!--####################################################################################-->
-  <GameobjectDistribution>    
+  <GameobjectDistribution>        
     <Continent name="Royal" subtype="CHEST">
-      <ClusterTier tier="5" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="80" name="FOREST_RED_CHEST_SOLO" />
         <!--Highland-->
@@ -26,8 +34,10 @@
         <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_RED_CHEST_SOLO" />
         <!--Swamp-->
         <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_RED_CHEST_SOLO" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="6" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="80" name="FOREST_RED_CHEST_SOLO" />
         <!--Highland-->
@@ -38,8 +48,10 @@
         <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_RED_CHEST_SOLO" />
         <!--Swamp-->
         <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_RED_CHEST_SOLO" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="7" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="80" name="FOREST_DEAD_CHEST_SOLO" />
         <!--Highland-->
@@ -50,10 +62,12 @@
         <TreasureLootchest biome="Steppe" weight="80" name="STEPPE_DEAD_CHEST_SOLO" />
         <!--Swamp-->
         <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_DEAD_CHEST_SOLO" />
+        </Random>
       </ClusterTier>
     </Continent>
     <Continent name="Outlands" subtype="CHEST">
-      <ClusterTier tier="5" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="745" name="FOREST_RED_CHEST_SOLO" />
         <TreasureLootchest biome="Forest" weight="225" name="FOREST_RED_CHEST_VETERAN" />
@@ -74,8 +88,10 @@
         <TreasureLootchest biome="Swamp" weight="745" name="SWAMP_RED_CHEST_SOLO" />
         <TreasureLootchest biome="Swamp" weight="225" name="SWAMP_RED_CHEST_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="30"  name="SWAMP_RED_CHEST_ELITE" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="6" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="745" name="FOREST_RED_CHEST_SOLO" />
         <TreasureLootchest biome="Forest" weight="225" name="FOREST_RED_CHEST_VETERAN" />
@@ -96,8 +112,10 @@
         <TreasureLootchest biome="Swamp" weight="745" name="SWAMP_RED_CHEST_SOLO" />
         <TreasureLootchest biome="Swamp" weight="225" name="SWAMP_RED_CHEST_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="30"  name="SWAMP_RED_CHEST_ELITE" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="7" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="745" name="FOREST_DEAD_CHEST_SOLO" />
         <TreasureLootchest biome="Forest" weight="225" name="FOREST_DEAD_CHEST_VETERAN" />
@@ -118,8 +136,10 @@
         <TreasureLootchest biome="Swamp" weight="745" name="SWAMP_DEAD_CHEST_SOLO" />
         <TreasureLootchest biome="Swamp" weight="225" name="SWAMP_DEAD_CHEST_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="30"  name="SWAMP_DEAD_CHEST_ELITE" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
+      <ClusterTier tier="8" >
+        <Random maxslotsused="1" activationtimemin="400" activationtimemax="2800" positioncooldown="300" >
         <!--Forest-->
         <TreasureLootchest biome="Forest" weight="745" name="FOREST_DEAD_CHEST_SOLO" />
         <TreasureLootchest biome="Forest" weight="225" name="FOREST_DEAD_CHEST_VETERAN" />
@@ -140,79 +160,13 @@
         <TreasureLootchest biome="Swamp" weight="745" name="SWAMP_DEAD_CHEST_SOLO" />
         <TreasureLootchest biome="Swamp" weight="225" name="SWAMP_DEAD_CHEST_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="30"  name="SWAMP_DEAD_CHEST_ELITE" />
+        </Random>
       </ClusterTier>
     </Continent>
     
     <Continent name="Royal" subtype="RESOURCE">
-      <ClusterTier tier="5" maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
-        <!--Forest-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Forest"   weight="100" />
-        <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T5"    biome="Forest"   weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Forest"   weight="33" />
-        <!--Highland-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Highland" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Highland" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Highland" weight="33" />
-        <!--Mountain-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Mountain" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Mountain" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Mountain" weight="33" />
-        <!--Steppe-->
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T5"         biome="Steppe"   weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Steppe"   weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Steppe"   weight="33" />
-        <!--Swamp-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Swamp"    weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Swamp"    weight="67" />
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T5"         biome="Swamp"    weight="33" />
-      </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
-        <!--Forest-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Forest"   weight="100" />
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T6"    biome="Forest"   weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Forest"   weight="33" />
-        <!--Highland-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Highland" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Highland" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Highland" weight="33" />
-        <!--Mountain-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Mountain" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Mountain" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Mountain" weight="33" />
-        <!--Steppe-->
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T6"         biome="Steppe"   weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Steppe"   weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Steppe"   weight="67" />
-        <!--Swamp-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Swamp"    weight="67" />
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T6"         biome="Swamp"    weight="33" />
-      </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
-        <!--Forest-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Forest"   weight="100" />
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T7"    biome="Forest"   weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Forest"   weight="33" />
-        <!--Highland-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Highland" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Highland" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Highland" weight="33" />
-        <!--Mountain-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Mountain" weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Mountain" weight="67" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Mountain" weight="33" />
-        <!--Steppe-->
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T7"    biome="Steppe"   weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Steppe"   weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Steppe"   weight="67" />
-        <!--Swamp-->
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Swamp"    weight="100" />
-        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Swamp"    weight="67" />
-        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T7"     biome="Swamp"    weight="33" />
-      </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="RESOURCE">
-      <ClusterTier tier="5" maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
         <!--Forest-->
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Forest"   weight="100" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T5"    biome="Forest"   weight="67" />
@@ -233,8 +187,84 @@
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Swamp"    weight="100" />
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Swamp"    weight="67" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T5"     biome="Swamp"    weight="33" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+      <ClusterTier tier="6" >
+        <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+        <!--Forest-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Forest"   weight="100" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T6"    biome="Forest"   weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Forest"   weight="33" />
+        <!--Highland-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Highland" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Highland" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Highland" weight="33" />
+        <!--Mountain-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Mountain" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6"  biome="Mountain" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Mountain" weight="33" />
+        <!--Steppe-->
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T6"         biome="Steppe"   weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Steppe"   weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6"   biome="Steppe"   weight="67" />
+        <!--Swamp-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Swamp"    weight="67" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T6"         biome="Swamp"    weight="33" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+        <!--Forest-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Forest"   weight="100" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T7"    biome="Forest"   weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Forest"   weight="33" />
+        <!--Highland-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Highland" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Highland" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Highland" weight="33" />
+        <!--Mountain-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Mountain" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7"  biome="Mountain" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Mountain" weight="33" />
+        <!--Steppe-->
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T7"    biome="Steppe"   weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Steppe"   weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7"   biome="Steppe"   weight="67" />
+        <!--Swamp-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Swamp"    weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Swamp"    weight="67" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T7"     biome="Swamp"    weight="33" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="RESOURCE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+        <!--Forest-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Forest"   weight="100" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T5"    biome="Forest"   weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Forest"   weight="33" />
+        <!--Highland-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Highland" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Highland" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Highland" weight="33" />
+        <!--Mountain-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Mountain" weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5"  biome="Mountain" weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Mountain" weight="33" />
+        <!--Steppe-->
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T5"    biome="Steppe"   weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Steppe"   weight="67" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5"   biome="Steppe"   weight="33" />
+        <!--Swamp-->
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Swamp"    weight="100" />
+        <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5"  biome="Swamp"    weight="67" />
+        <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T5"     biome="Swamp"    weight="33" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
         <!--Forest-->
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Forest"   weight="100" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T6"    biome="Forest"   weight="67" />
@@ -255,8 +285,10 @@
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="100" />
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6"  biome="Swamp"    weight="67" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T6"     biome="Swamp"    weight="33" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
         <!--Forest-->
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Forest"   weight="100" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T7"    biome="Forest"   weight="67" />
@@ -277,8 +309,10 @@
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Swamp"    weight="100" />
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7"  biome="Swamp"    weight="67" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T7"     biome="Swamp"    weight="33" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
         <!--Forest-->
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8"  biome="Forest"   weight="100" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T8"    biome="Forest"   weight="67" />
@@ -299,164 +333,214 @@
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Swamp"    weight="100" />
         <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8"  biome="Swamp"    weight="67" />
         <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T8"     biome="Swamp"    weight="33" />
+        </Random>
       </ClusterTier>
     </Continent>
     
     <!--Hideout: Power Cores-->
     <Continent name="Outlands" subtype="POWERCORE"> 
       <!--Tier 5-->
-      <ClusterTier tier="5" clusterquality="Q1" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q2" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q3" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q4" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q5" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q6" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
       <!--Tier 6-->
-      <ClusterTier tier="6" clusterquality="Q1" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q2" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q3" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q4" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q5" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q6" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
       <!--Tier 7-->
-      <ClusterTier tier="7" clusterquality="Q1" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q2" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q3" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q4" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q5" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q6" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
       <!--Tier 8-->
-      <ClusterTier tier="8" clusterquality="Q1" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q2" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q3" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q4" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q5" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q6" maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R0" weight="59"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R1" weight="30"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R2" weight="10"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
+        </Random>
       </ClusterTier>
     </Continent>
     <!--Territory: Energy Crystals-->
     <Continent name="Outlands" subtype="ENERGYCRYSTAL">
       <!--Tier 5-->
-      <ClusterTier tier="5" clusterquality="Q1" maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="816008"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="153069"/>
@@ -482,8 +566,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="153069"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="30923"/>
         <!--<TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="0"/>-->
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q2" maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="799000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="143571"/>
@@ -509,8 +595,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="143571"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="45464"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="11964"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q3" maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="558487"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="309231"/>
@@ -536,8 +624,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="309231"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="97923"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="34359"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q4" maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="529139"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="318250"/>
@@ -563,8 +653,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="318250"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="106083"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="46528"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q5" maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="467722"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="335000"/>
@@ -590,8 +682,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="335000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="141444"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="55833"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="5" clusterquality="Q6" maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
+      <ClusterTier tier="5" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="428529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="336971"/>
@@ -617,9 +711,11 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="336971"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="165529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
+        </Random>
       </ClusterTier>
       <!--Tier 6-->
-      <ClusterTier tier="6" clusterquality="Q1" maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="816008"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="153069"/>
@@ -645,8 +741,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="153069"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="30923"/>
         <!--<TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="0"/>-->
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q2" maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="799000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="143571"/>
@@ -672,8 +770,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="143571"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="45464"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="11964"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q3" maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="558487"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="309231"/>
@@ -699,8 +799,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="309231"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="97923"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="34359"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q4" maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="529139"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="318250"/>
@@ -726,8 +828,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="318250"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="106083"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="46528"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q5" maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="467722"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="335000"/>
@@ -753,8 +857,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="335000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="141444"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="55833"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" clusterquality="Q6" maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
+      <ClusterTier tier="6" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="428529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="336971"/>
@@ -780,9 +886,11 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="336971"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="165529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
+        </Random>
       </ClusterTier>
       <!--Tier 7-->
-      <ClusterTier tier="7" clusterquality="Q1" maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="816008"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="153069"/>
@@ -808,8 +916,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="153069"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="30923"/>
         <!--<TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="0"/>-->
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q2" maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="799000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="143571"/>
@@ -835,8 +945,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="143571"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="45464"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="11964"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q3" maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="558487"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="309231"/>
@@ -862,8 +974,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="309231"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="97923"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="34359"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q4" maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="529139"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="318250"/>
@@ -889,8 +1003,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="318250"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="106083"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="46528"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q5" maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="467722"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="335000"/>
@@ -916,8 +1032,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="335000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="141444"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="55833"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" clusterquality="Q6" maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
+      <ClusterTier tier="7" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="428529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="336971"/>
@@ -943,9 +1061,11 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="336971"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="165529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
+        </Random>
       </ClusterTier>
       <!--Tier 8-->
-      <ClusterTier tier="8" clusterquality="Q1" maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q1" >
+        <Random maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="816008"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="153069"/>
@@ -971,8 +1091,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="153069"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="30923"/>
         <!--<TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="0"/>-->
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q2" maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q2" >
+        <Random maxslotsused="1" activationtimemin="17613" activationtimemax="123294" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="799000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="143571"/>
@@ -998,8 +1120,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="143571"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="45464"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="11964"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q3" maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q3" >
+        <Random maxslotsused="1" activationtimemin="17394" activationtimemax="121760" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="558487"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="309231"/>
@@ -1025,8 +1149,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="309231"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="97923"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="34359"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q4" maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q4" >
+        <Random maxslotsused="1" activationtimemin="17334" activationtimemax="121341" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="529139"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="318250"/>
@@ -1052,8 +1178,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="318250"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="106083"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="46528"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q5" maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q5" >
+        <Random maxslotsused="1" activationtimemin="17252" activationtimemax="120761" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="467722"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="335000"/>
@@ -1079,8 +1207,10 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="335000"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="141444"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="55833"/>
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" clusterquality="Q6" maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
+      <ClusterTier tier="8" clusterquality="Q6" >
+        <Random maxslotsused="1" activationtimemin="17173" activationtimemax="120213" positioncooldown="10">
         <!--Forest-->
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R0" biome="Forest" weight="428529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Forest" weight="336971"/>
@@ -1106,64 +1236,524 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R1" biome="Swamp" weight="336971"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R2" biome="Swamp" weight="165529"/>
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
+        </Random>
       </ClusterTier>
     </Continent>
     <!--Events-->
     <Continent name="Royal" subtype="EASTER">
-      <ClusterTier tier="5" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="6" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="7" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
     </Continent>
     <Continent name="Outlands" subtype="EASTER">
-      <ClusterTier tier="5" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="6" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="6" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_RED_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_RED_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="7" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="7" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
-      <ClusterTier tier="8" maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
+      <ClusterTier tier="8" >
+        <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Highland" weight="1" name="HIGHLAND_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Mountain" weight="1" name="MOUNTAIN_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Steppe" weight="1" name="STEPPE_DEAD_CHEST_EASTER_VETERAN" />
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
+        </Random>
       </ClusterTier>
     </Continent>
+    <!--Castles-->
+    <Continent name="Outlands" subtype="CASTLE_OUTPOST">      
+      <ClusterTier tier="5" >
+        <Event name="CASTLE_OUTPOST_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Swamp"/>
+          <None weight="33" biome="Forest"/>
+          <None weight="33" biome="Highland"/>
+          <None weight="33" biome="Mountain"/>
+          <None weight="33" biome="Steppe"/>
+          <None weight="33" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_OUTPOST_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Event name="CASTLE_OUTPOST_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Swamp"/>
+          <None weight="33" biome="Forest"/>
+          <None weight="33" biome="Highland"/>
+          <None weight="33" biome="Mountain"/>
+          <None weight="33" biome="Steppe"/>
+          <None weight="33" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_OUTPOST_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Event name="CASTLE_OUTPOST_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Swamp"/>
+          <None weight="33" biome="Forest"/>
+          <None weight="33" biome="Highland"/>
+          <None weight="33" biome="Mountain"/>
+          <None weight="33" biome="Steppe"/>
+          <None weight="33" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_OUTPOST_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Event name="CASTLE_OUTPOST_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_GENERAL" weight="67" biome="Swamp"/>
+          <None weight="33" biome="Forest"/>
+          <None weight="33" biome="Highland"/>
+          <None weight="33" biome="Mountain"/>
+          <None weight="33" biome="Steppe"/>
+          <None weight="33" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_OUTPOST_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_OUTPOST_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="CASTLE">
+      <ClusterTier tier="5" >
+        <Event name="CASTLE_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Swamp"/>
+          <None weight="60" biome="Forest"/>
+          <None weight="60" biome="Highland"/>
+          <None weight="60" biome="Mountain"/>
+          <None weight="60" biome="Steppe"/>
+          <None weight="60" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Event name="CASTLE_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Swamp"/>
+          <None weight="60" biome="Forest"/>
+          <None weight="60" biome="Highland"/>
+          <None weight="60" biome="Mountain"/>
+          <None weight="60" biome="Steppe"/>
+          <None weight="60" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Event name="CASTLE_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Swamp"/>
+          <None weight="60" biome="Forest"/>
+          <None weight="60" biome="Highland"/>
+          <None weight="60" biome="Mountain"/>
+          <None weight="60" biome="Steppe"/>
+          <None weight="60" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Event name="CASTLE_STANDARD" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_GENERAL" weight="40" biome="Swamp"/>
+          <None weight="60" biome="Forest"/>
+          <None weight="60" biome="Highland"/>
+          <None weight="60" biome="Mountain"/>
+          <None weight="60" biome="Steppe"/>
+          <None weight="60" biome="Swamp"/>
+        </Event>
+        <Event name="CASTLE_WEEKEND" maxslotsused="1" positioncooldown="1">
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Forest"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Highland"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Mountain"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Steppe"/>
+          <TreasureLootchest name="CHEST_CASTLE_EVENT" weight="1" biome="Swamp"/>
+        </Event>
+      </ClusterTier>
+    </Continent>
+    <!--Dynamic Events-->
+    <!--Dynamic Events: Resource Fiber-->
+    <Continent name="Royal" subtype="DYNAMIC_EVENT_FIBER">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="DYNAMIC_EVENT_FIBER">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <!--Dynamic Events: Resource Hide-->
+    <Continent name="Royal" subtype="DYNAMIC_EVENT_HIDE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T5" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T5" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T6" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T6" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T6" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T6" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="DYNAMIC_EVENT_HIDE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T5" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T5" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T6" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T6" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T7" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T7" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T7" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T8" biome="Forest" weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_STEPPE_T8" biome="Steppe"   weight="1" />
+          <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T8" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <!--Dynamic Events: Resource Ore-->
+    <Continent name="Royal" subtype="DYNAMIC_EVENT_ORE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="DYNAMIC_EVENT_ORE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T5" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T7" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T8" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T8" biome="Steppe"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T8" biome="Highland"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <!--Dynamic Events: Resource Rock-->
+    <Continent name="Royal" subtype="DYNAMIC_EVENT_ROCK">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="DYNAMIC_EVENT_ROCK">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T5" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T7" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T8" biome="Mountain" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T8" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T8" biome="Forest"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <!--Dynamic Events: Resource Wood-->
+    <Continent name="Royal" subtype="DYNAMIC_EVENT_WOOD">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+    <Continent name="Outlands" subtype="DYNAMIC_EVENT_WOOD">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T5" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T7" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8" biome="Forest" weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8" biome="Highland"   weight="1" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8" biome="Swamp"    weight="1" />
+        </Random>
+      </ClusterTier>
+    </Continent>
+  
   </GameobjectDistribution>
-
+  
   <!--####################################################################################-->
   <!--Treasure Objects that can be distributed -->
   <!--Loot Chests: references loot chest spawn points found in lootchest.xml and can be split by biome and sub biome -->
@@ -1258,6 +1848,12 @@
     <TreasureLootchest uniquename="SWAMP_GREEN_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_GREEN_TREASURE_EASTER_VETERAN"/>
     <TreasureLootchest uniquename="SWAMP_RED_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_RED_TREASURE_EASTER_VETERAN"/>
     <TreasureLootchest uniquename="SWAMP_DEAD_CHEST_EASTER_VETERAN" worldmaprange="0" worldmaptreasure="WORLDMAP_TREASURE_CHEST_EASTER_VETERAN" title="@TREASURE_CHEST_EASTER_VETERAN_TITLE" description="@TREASURE_CHEST_EASTER_VETERAN_DESC" minimapicon="treasure_chest_easter" killeventloggingradius="40" maxlifetime="86400" lootchest="SWAMP_DEAD_TREASURE_EASTER_VETERAN"/>
+
+    <!--*******************************************-->
+    <TreasureLootchest uniquename="CHEST_CASTLE_OUTPOST_GENERAL" lootchest="SPAWNPOINT_TREASURE_CASTLE_OUTPOST_GENERAL" worldmaptreasure="WORLDMAP_TREASURE_CHEST_CASTLE_OUTPOST" minimapicon="treasure_chest_castle_legendary_locked" title="@TREASURE_CHEST_CASTLE_OUTPOST_TITLE" description="@TREASURE_CHEST_CASTLE_OUTPOST_DESC" killeventloggingradius="40" maxlifetime="86400" allowrotation="true"/>
+    <TreasureLootchest uniquename="CHEST_CASTLE_OUTPOST_EVENT" lootchest="SPAWNPOINT_TREASURE_CASTLE_OUTPOST_EVENT" worldmaptreasure="WORLDMAP_TREASURE_CHEST_CASTLE_OUTPOST" minimapicon="treasure_chest_castle_legendary_locked" title="@TREASURE_CHEST_CASTLE_OUTPOST_TITLE" description="@TREASURE_CHEST_CASTLE_OUTPOST_DESC" killeventloggingradius="40" maxlifetime="86400" allowrotation="true"/>
+    <TreasureLootchest uniquename="CHEST_CASTLE_GENERAL" lootchest="SPAWNPOINT_TREASURE_CASTLE_GENERAL" worldmaptreasure="WORLDMAP_TREASURE_CHEST_CASTLE" minimapicon="treasure_chest_castle_legendary_locked" title="@TREASURE_CHEST_CASTLE_TITLE" description="@TREASURE_CHEST_CASTLE_DESC" killeventloggingradius="40" maxlifetime="86400" allowrotation="true"/>
+    <TreasureLootchest uniquename="CHEST_CASTLE_EVENT" lootchest="SPAWNPOINT_TREASURE_CASTLE_EVENT" worldmaptreasure="WORLDMAP_TREASURE_CHEST_CASTLE" minimapicon="treasure_chest_castle_legendary_locked" title="@TREASURE_CHEST_CASTLE_TITLE" description="@TREASURE_CHEST_CASTLE_DESC" killeventloggingradius="40" maxlifetime="86400" allowrotation="true"/>
 
   </TreasureLootchests>
 
@@ -2142,4 +2738,197 @@
       </Rarities>
     </TreasureMob>
   </TreasureMobs>
+  
+  <!--####################################################################################-->
+  <!--Treasure Events-->
+  <!--utc takes xs time format: hours:minutes:seconds-->
+  <Events>
+    <Event name="CASTLE_OUTPOST_STANDARD">
+      <Disable subtype="CASTLE_OUTPOST"/>
+      <Weekdays clustertime="false">
+        <Weekday day="Monday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Tuesday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Wednesday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Thursday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Friday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Saturday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <End     utc="12:28:00"/>
+
+          <Start   utc="15:29:00"/>
+          <Respawn utc="15:30:00"/>
+          <End     utc="18:28:00"/>
+
+          <Start   utc="21:29:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Sunday">
+          <End     utc="00:28:00"/>
+          
+          <Start   utc="03:29:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+      </Weekdays>
+    </Event>
+    <Event name="CASTLE_OUTPOST_WEEKEND">
+      <Disable subtype="CASTLE_OUTPOST"/>
+      <Weekdays clustertime="false">
+        <Weekday day="Saturday">
+          <Start   utc="12:29:00"/>
+          <Respawn utc="12:30:00"/>
+          <End     utc="15:28:00"/>
+
+          <Start   utc="18:29:00"/>
+          <Respawn utc="18:30:00"/>
+          <End     utc="21:28:00"/>
+        </Weekday>
+        <Weekday day="Sunday">
+          <Start   utc="00:29:00"/>
+          <Respawn utc="00:30:00"/>
+          <End     utc="03:28:00"/>          
+        </Weekday>
+      </Weekdays>
+    </Event>
+    <Event name="CASTLE_STANDARD">
+      <Disable subtype="CASTLE"/>
+      <Weekdays clustertime="false">
+        <Weekday day="Monday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Tuesday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Wednesday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Thursday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Friday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Saturday">
+          <Respawn utc="00:30:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <End     utc="12:28:00"/>
+
+          <Start   utc="15:29:00"/>
+          <Respawn utc="15:30:00"/>
+          <End     utc="18:28:00"/>
+
+          <Start   utc="21:29:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+        <Weekday day="Sunday">
+          <End     utc="00:28:00"/>
+          
+          <Start   utc="03:29:00"/>
+          <Respawn utc="03:30:00"/>
+          <Respawn utc="06:30:00"/>
+          <Respawn utc="12:30:00"/>
+          <Respawn utc="15:30:00"/>
+          <Respawn utc="18:30:00"/>
+          <Respawn utc="21:30:00"/>
+        </Weekday>
+      </Weekdays>
+    </Event>
+    <Event name="CASTLE_WEEKEND">
+      <Disable subtype="CASTLE"/>
+      <Weekdays clustertime="false">
+        <Weekday day="Saturday">
+          <Start   utc="12:29:00"/>
+          <Respawn utc="12:30:00"/>
+          <End     utc="15:28:00"/>
+
+          <Start   utc="18:29:00"/>
+          <Respawn utc="18:30:00"/>
+          <End     utc="21:28:00"/>
+        </Weekday>
+        <Weekday day="Sunday">
+          <Start   utc="00:29:00"/>
+          <Respawn utc="00:30:00"/>
+          <End     utc="03:28:00"/>          
+        </Weekday>
+      </Weekdays>
+    </Event>
+  </Events>
+  
 </TreasureDistribution>

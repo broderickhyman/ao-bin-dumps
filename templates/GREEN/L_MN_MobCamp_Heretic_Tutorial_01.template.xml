@@ -1,25 +1,49 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/L_MN_MobCamp_Heretic_Tutorial_01.unity" unityguid="88d470d3d5cc32d4f9b2d9505909a486" editorBoundsMin="-150 -150" editorBoundsMax="150 150" colBoundsMin="-150 -150" colBoundsMax="150 150">
+<template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/L_MN_MobCamp_Heretic_Tutorial_01.unity" unityguid="88d470d3d5cc32d4f9b2d9505909a486" editorBoundsMin="-150 -150" editorBoundsMax="150 150" colBoundsMin="-150 -150" colBoundsMax="151 150">
   <criticalscenemembers>
-    <criticalscenemember id="exit_01" type="exit" layerId="">
-      <tile name="Exit" pos="10.5 18 80.5" roty="90">
-        <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
+    <criticalscenemember id="exit_01" type="exit" layerId="Layer_01">
+      <tile name="Exit" pos="10.5 22 79.5" roty="90">
+        <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="Main">
           <guards>
-            <guard pos="14.9574 65.49991" />
-            <guard pos="4.9574 65.49991" />
+            <guard pos="14.9574 64.49991" />
+            <guard pos="4.9574 64.49991" />
+          </guards>
+        </exit>
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="exit_02" type="exit" layerId="Layer_02">
+      <tile name="Exit" pos="10.5 22 79.5" roty="90">
+        <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="Side">
+          <guards>
+            <guard pos="14.9574 64.49991" />
+            <guard pos="4.9574 64.49991" />
           </guards>
         </exit>
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
-    <criticaltile name="Exit" pos="10.5 18 80.5" roty="90" id="exit_01" type="exit">
-      <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit">
-        <guards>
-          <guard pos="14.9574 65.49991" />
-          <guard pos="4.9574 65.49991" />
-        </guards>
-      </exit>
-    </criticaltile>
+    <layergroup name="Exit">
+      <layer id="Layer_01" name="StaticDungeonExit_Main">
+        <criticaltile name="Exit" pos="10.5 22 79.5" roty="90" id="exit_01" type="exit">
+          <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="Main">
+            <guards>
+              <guard pos="14.9574 64.49991" />
+              <guard pos="4.9574 64.49991" />
+            </guards>
+          </exit>
+        </criticaltile>
+      </layer>
+      <layer id="Layer_02" name="StaticDungeonExit_Side">
+        <criticaltile name="Exit" pos="10.5 22 79.5" roty="90" id="exit_02" type="exit">
+          <exit size="15 15" spawnpos="15.00009 -0.5425978" faction="Heretic" kind="DungeonSolo" roadtype="Primary" staticdungeonentrance="Side">
+            <guards>
+              <guard pos="14.9574 64.49991" />
+              <guard pos="4.9574 64.49991" />
+            </guards>
+          </exit>
+        </criticaltile>
+      </layer>
+    </layergroup>
     <tile name="MOUNTAIN_GREEN_MOR_FX_GODRAY_ROOF_20X20_A" pos="0 22 20" />
     <tile name="MOUNTAIN_GREEN_MOR_FX_GODRAY_ROOF_30X30_A" pos="5 22 65" />
     <tile name="MOUNTAIN_GREEN_MOR_FX_GODRAY_ROOF_A" pos="-5 22 55" />
@@ -71,125 +95,61 @@
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 -35" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="45 12 35" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="45 12 45" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="125 0 105" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="55 0 -135" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="45 12 -95" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 105" roty="270" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-95 12 -85" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="135 0 105" roty="0" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-5 12 -85" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 95" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="85 0 -115" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="85 0 145" roty="0" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="55 0 -145" roty="0" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -5" roty="0" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-15 12 95" roty="270" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="45 12 -65" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="85 0 -95" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="105 12 -15" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="105 12 -25" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="105 12 -35" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 115" roty="270" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-25 12 -5" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="25 12 -95" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="45 12 55" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="100 0 140" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="25 12 -95" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-115 0 55" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-25 12 -25" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="5 12 -65" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="15 12 -65" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-35 12 -85" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-80 12 70" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="85 0 -105" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -25" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-35 0 -135" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-135 0 -105" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -35" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-5 12 -75" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 -75" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 125" roty="180" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-75 12 -85" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="65 0 145" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-65 0 -115" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-125 0 35" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-125 0 25" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="15 0 -125" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="85 0 45" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 0 -115" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 -115" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 5" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 45" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="65 12 -45" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 55" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 65" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 -25" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="65 12 -5" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="55 0 145" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-105 12 -5" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-120 0 50" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 12 65" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-35 12 65" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -25" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-115 0 45" roty="90" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-105 12 -15" />
-    <tile name="MOUNTAIN_GREEN_GROUND_40x40" pos="130 0 130" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 -45" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-25 12 -35" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="135 0 5" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 -35" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="135 0 -45" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-40 0 140" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -15" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 30" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-65 12 -85" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="0 0 140" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 50" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="135 0 85" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 -55" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 -70" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 -45" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-5 0 -135" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-90 12 10" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -35" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="20 0 -140" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="75 0 145" roty="0" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="75 0 -135" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-25 12 65" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-35 12 -75" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="75 12 45" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -45" roty="0" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="60 12 100" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-100 12 -30" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="140 0 -80" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="40 0 -140" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="80 12 100" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -15" roty="0" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="20 0 140" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="140 0 -60" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 -50" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="140 0 20" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="115 0 -75" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-20 0 140" />
     <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="15 0 115" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 -90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_60x60" pos="120 0 -120" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="80 12 -10" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-85 12 -85" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="80 12 10" />
-    <tile name="MOUNTAIN_GREEN_GROUND_40x40" pos="-130 0 80" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-100 12 -70" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -5" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-5 12 -65" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 105" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="40 0 140" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-95 0 -135" />
-    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -105" roty="0" />
-    <tile name="MOUNTAIN_GREEN_GROUND_50x50" pos="-75 0 125" />
-    <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-140 0 10" />
-    <tile name="MOUNTAIN_GREEN_GROUND_40x40" pos="130 0 50" />
-    <tile name="MOUNTAIN_GREEN_GROUND_30x30" pos="-65 0 -135" />
     <tile name="MOUNTAIN_GREEN_GROUND_20x20" pos="-100 12 -50" />
     <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 12 -85" />
-    <tile name="MOUNTAIN_GREEN_GROUND_50x50" pos="-125 0 125" />
-    <tile name="MOUNTAIN_GREEN_GROUND_40x40" pos="-130 0 -130" />
     <tile name="MOUNTAIN_GREEN_GROUND_OBJECT" pos="25 4 -15" />
     <tile name="MOUNTAIN_GREEN_GROUND_OBJECT" pos="-65 4 15" />
     <tile name="MOUNTAIN_GREEN_GROUND_OBJECT" pos="15 4 -25" />
@@ -381,7 +341,6 @@
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-96 12 6" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="-106 12 -30" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="38 12 -4" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="121 0 44" roty="90" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_16M_A_DEBRIS_NOCOL" pos="-90 12 -53" roty="90" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_16M_DIAGONAL_A_DEBRIS_NOCOL" pos="-96 12 -75" roty="270" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_PLUG_ROCK_8M_A_DEBRIS" pos="89 0 -47" roty="270" />
@@ -393,8 +352,6 @@
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="102 0 -50" roty="90" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="107 12 -36" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="108 0 70" roty="90" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="-62 0 -125" roty="90" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="-114 0 -124" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-98 23 -70" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="16 0 127" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_PLUG_ROCK_8M_A_DEBRIS" pos="-7 12 -83" roty="270" />
@@ -404,19 +361,10 @@
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="-110 0 36" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_B_DEBRIS" pos="0 0 119" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-120 0 26" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-139 0 -41" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-130 0 2" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_A_DEBRIS" pos="-5 0 143" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_A_DEBRIS" pos="12 0 117" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="118 0 -96" roty="90" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="123 0 -104" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="84 0 -117" />
     <tile name="MOUNTAIN_GREEN_FILL_PLATEAU_BORDER_PATCH_A" pos="100 12 -43" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_PLATEAU_BORDER_PATCH_A" pos="81 12 67" roty="90" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_DEBRIS" pos="-121 0 107" roty="270" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_DEBRIS" pos="-113 0 112" roty="180" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-110 0 129" roty="270" />
-    <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-44 0 124" roty="180" />
     <tile name="MOUNTAIN_GREEN_PLATEAU_ROCK_4M_B_DEBRIS" pos="-81 0 98" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_PLATEAU_BORDER_PATCH_A" pos="60 12 63" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_PLATEAU_BORDER_PATCH_A" pos="50 12 87" roty="90" />
@@ -991,22 +939,14 @@
     <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="5 -6 95" roty="270" />
     <tile name="MOUNTAIN_GREEN_CASTLE_WALL_THICK_STRAIGHT_SHORT_A" pos="31.5 6 5" roty="180" />
     <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="15 -6 95" roty="270" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="4 22 14" scale="0.7408479 0.7408481 0.7408481" />
     <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_C_BLEND" pos="10 10 102.5" roty="270" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="16 22 14" roty="270" scale="0.7408482 0.7408481 0.7408483" />
     <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_C" pos="-22.5 6 34" />
     <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="16 30 28" roty="90" scale="0.7408482 0.7408481 0.7408483" />
     <tile name="MOUNTAIN_GREEN_CASTLE_GATE_MAIN_C" pos="-22.5 6 16" roty="180" />
     <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="4 30 28" scale="0.7408479 0.7408481 0.7408481" />
     <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="4 30 42" roty="270" scale="0.7408482 0.7408481 0.7408483" />
     <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="4 26 55" scale="0.7408479 0.7408481 0.7408481" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="16 22 55" roty="270" scale="0.7408482 0.7408481 0.7408483" />
     <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="16 30 42" roty="90" scale="0.7408482 0.7408481 0.7408483" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="41 26 42" roty="90" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="45 28 7" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="-39 16 10" roty="270" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="-80 28 -60" roty="90" />
-    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A" pos="-71 21 9" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_THICK_STRAIGHT_A_BLEND" pos="25 7 102.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_THICK_STRAIGHT_A_BLEND" pos="-5 7 102.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_CASTLE_8M_STAIRS_A_OBJ" pos="10 -6 75" roty="180" />
@@ -1047,31 +987,27 @@
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_THICK_CORNER_A" pos="-85 0 -35" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_C" pos="29 20 -15" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_TOWER_ROUND_B" pos="78 -8 125" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="-39 16 10" roty="270" />
     <tile name="MOUNTAIN_GREEN_CASTLE_STRAIGHT_RAILING_C_HIGH" pos="68 13 84" roty="180" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="16 22 14" roty="270" scale="0.7408482 0.7408481 0.7408483" />
     <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_B" pos="-82 -1 20" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_01" pos="131 0 -44" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="118 0 58" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="114 0 30" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="131 0 51" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="134 0 -4" roty="180" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="45 34 7" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="-71 21 9" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_WALL_STRAIGHT_A_NOCOL" pos="-55 -8 45" roty="90" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="-80 28 -60" roty="90" />
+    <tile name="MOUNTAIN_GREEN_CASTLE_STAIRS_ROUNDED_DECO_TOWER_TOP_A" pos="41 31 42" roty="270" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="16 22 55" roty="270" scale="0.7408482 0.7408481 0.7408483" />
+    <tile name="MOUNTAIN_GREEN_UND_CRYPT_COLUMN_LARGE_EXTENSION_BROKEN_A_NO_BLEND" pos="4 22 14" scale="0.7408479 0.7408481 0.7408481" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="108 12 -15" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="107 12 -31" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="84 12 12" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="95 12 12" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="133 0 -53" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="79 0 -95" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="53 0 -126" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="87 12 72" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="87 12 -9" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="25 12 -90" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="35 12 -90" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="60 12 -81" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="53 0 142" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="18 0 -139" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-26 0 -127" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-59 0 -136" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-138 0 -53" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-145 0 -16" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-88 12 76" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-74 12 78" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-31 12 71" roty="90" />
@@ -1080,34 +1016,17 @@
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-107 12 -61" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-62 12 -86" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-94 12 -92" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_20x20_COMP_02" pos="34 0 133" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_20x20_COMP_02" pos="104 0 46" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_20x20_COMP_02" pos="134 0 25" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="-127 0 65" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="-138 0 -89" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="-78 0 -127" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="-131 0 -140" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="2 0 -118" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="104 0 -101" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="116 0 -82" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="127 0 99" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="114 0 119" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="118 0 134" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="115 0 -120" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="139 0 -30" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="106 0 109" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="103 0 30" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="126 0 6" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="101 0 -55" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="97 0 -71" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="75 0 -117" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="61 0 -117" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="31 0 -125" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="20 0 -117" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-1 0 -108" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-32 0 -116" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-22 0 -118" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-109 0 -134" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-111 0 -106" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-129 0 -100" roty="180" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-137 0 -10" roty="270" />
@@ -1118,7 +1037,6 @@
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-41 0 110" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-36 0 122" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-54 0 111" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="8 0 137" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="80 0 136" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="85 12 106" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="52 12 96" />
@@ -1130,28 +1048,7 @@
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="80 12 -19" roty="90" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="-5 0 128" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x10_COMP_01" pos="63 12 -8" roty="180" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="144 0 3" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="140 0 -69" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="20 0 141" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="74 0 143" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="140 0 142" roty="270" />
     <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="-65 0 -108" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_10x20_COMP_01" pos="140 0 49" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYGRASS_20x20_COMP_01" pos="135 0 -95" roty="270" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-140 0 4" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-124 0 85" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-54 0 133" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="64 0 -136" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="94 0 -132" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-44 0 -132" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-141 0 -44" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-82 0 115" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-24 0 137" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_THIN_40x40_COMP_01" pos="-104 0 128" roty="90" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-131 0 99" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_DRYBRUSH_10x10_COMP_02" pos="-48 0 120" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-81 0 137" />
-    <compoundtile name="_MOUNTAIN_GREEN_SB_SNOWDRIFT_30x30_COMP_01" pos="-138 0 119" />
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_GRASS_B" pos="69.5 12 106.5" roty="84" />
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_GRASS_B" pos="-69.5 12 -23.5" roty="292" />
     <tile name="MOUNTAIN_GREEN_VEG_SNOW_GRASS_B" pos="-63.5 20 -71.5" roty="272" />
@@ -1619,9 +1516,9 @@
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_ROAD_CITY_PATCH_STRAIGHT_A" pos="-40 20 25" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_ROAD_CITY_PATCH_STRAIGHT_A" pos="-40 20 35" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_CLOSED_LARGE_A" pos="-57.5 22 -40.5" scale="1.5 1.5 1.5" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-148 0 74" rot="14 68 341" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-117 0 57" rot="14 68 341" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_TURNED_A" pos="-56.5 22 -42.5" roty="315" scale="1.5 1.5 1.5" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="5.5 12 -58.5" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="0.5 12 -57.5" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WEAPONS_A" pos="50.5 16 -45.5" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WINE_LARGE_A" pos="18.5 22 72.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WINE_LARGE_A" pos="79.5 13 -19.5" roty="90" />
@@ -1660,7 +1557,7 @@
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_A" pos="-51.5 12 4.5" roty="291" scale="1.42536 1.42536 1.42536" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_B" pos="41.5 12 -14.5" roty="180" scale="1.425362 1.425362 1.425362" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_B" pos="-67.5 12 -22.5" roty="270" scale="1.42536 1.42536 1.42536" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_BROKEN_A" pos="-147.5 0 74.5" roty="31.23" scale="1.425362 1.425362 1.425362" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_BROKEN_A" pos="-116.5 0 57.5" roty="31.23" scale="1.425362 1.425362 1.425362" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="-49 12 -36" roty="353" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="33 12 -29" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="-71 12 0" roty="256.09" />
@@ -1671,7 +1568,6 @@
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="-57 22 -45" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="18 22 72" roty="136" scale="1 2.010957 1" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="79.5 13 -15.5" />
-    <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_LARGE_A" pos="100 0 -83" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_SMALL_A" pos="103 0 -77" roty="333.97" />
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_SMALL_A" pos="-15 20 -20" roty="270" scale="1 16.59983 1" />
     <tile name="MOUNTAIN_GREEN_FILL_WOOD_PILE_A" pos="2 12 -66" />
@@ -1749,17 +1645,6 @@
     <tile name="MOUNTAIN_GREEN_HER_FILL_WOOD_HUT_B" pos="79.5 26 8.5" />
     <tile name="MOUNTAIN_GREEN_HER_LOW_WALKWAYS_FLOOR_20_B_OBJECT" pos="17 12 -15" scale="0.6 0.6 0.6" />
     <tile name="MOUNTAIN_GREEN_HER_LOW_WALKWAYS_FLOOR_20_B_OBJECT" pos="15 9 -29" rot="18 81 339" scale="0.6000004 0.6 0.6000004" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-24 12 -74" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-86 12 -14" roty="357" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="57 12 49" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="68 12 -30" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-24 12 -62" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-24 12 -67" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-24 12 -83" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-25 12 -89" roty="94.04" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-93 12 -14" roty="183" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="59 12 -30" roty="177" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="75 12 -30" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="35 12 -76" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_A" pos="30 12 -19" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="-33 14 -78" roty="180" />
@@ -1773,12 +1658,7 @@
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILINGS_RAMP_4_RIGHT_A" pos="-45 23 60" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_LARGE_A" pos="33 22 64" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-28 12 -27" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="58 12 28" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="57 12 20" roty="95.87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="56 12 12" roty="287.52" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="81.5 16 1.5" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="53 12 5" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="51 12 -12" roty="98" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_WINE_LARGE_A" pos="79.5 16 2.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="75 16 -11" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="81 12 -11" roty="180" />
@@ -1789,11 +1669,8 @@
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_B" pos="73 16 -4" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_C" pos="63 16 6" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_WALL_5_A" pos="83.5 14 -1" rot="0 0 270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="58 12 41" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="51 12 -8" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="48 12 8" roty="271" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="71 19 -77" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="76 19 -66" />
+    <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="76 19 -66" rot="350.64 346.77 16.36" />
     <tile name="MOUNTAIN_GREEN_HER_CAMP_TENT_B" pos="101 12 -38" roty="270" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_WOOD_HUT_B" pos="-23.5 20 -23.5" roty="207" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_WOOD_HUT_B" pos="-82.5 29 35.5" roty="300" />
@@ -1807,27 +1684,6 @@
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-86 22 49" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-56 26 60" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_CITY_DRINKING_C" pos="-54 20 16" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-75 12 -20" roty="92" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-41 12 -13" roty="31" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-38 12 -21" roty="93" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-38 12 -39" roty="273" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="52 12 -20" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="52 12 -29" roty="278" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="51 12 -32" roty="100" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="0 12 -50" roty="8" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="25 12 -49" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="39 12 -62" roty="188" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="40 12 -67" roty="8" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="100 12 0" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="97 12 0" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="7 12 -50" roty="188" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-27 12 -51" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-27 12 -54" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="40 12 -40" roty="337" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="37 12 -42" roty="331" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-50 12 -57" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-16 12 -50" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-45 12 -66" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="110 12 -29" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="110 12 -18" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="86 12 6" roty="180" />
@@ -1899,7 +1755,6 @@
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_A" pos="-39 20 25" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WATCHTOWER_A" pos="115 14 -9" roty="90" />
     <tile name="MOUNTAIN_GREEN_MOR_CASTLE_FURNITURE_TABLE_A" pos="-17 22 78" roty="85.78" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-8 12 -49" roty="180" />
     <tile name="MOUNTAIN_GREEN_MOR_CASTLE_FURNITURE_TABLE_A_FOOD_A" pos="-17 22 78" roty="93.3" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_SIDE_A_NOCOL" pos="-79 20 -69" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_C_SIDE" pos="-51 13 -49" roty="270" />
@@ -1909,12 +1764,6 @@
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-72.5 12 -3.5" roty="180" scale="1.33755 1.33755 1.33755" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-26.5 12 -55.5" roty="180" scale="1.33755 1.33755 1.33755" />
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_SMALL_A" pos="53 12 53" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-78 12 -13" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-56 12 -11" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-38 12 -25" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-37 12 -44" roty="237" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-38 12 -36" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-43 12 -59" roty="187" />
     <tile name="MOUNTAIN_GREEN_FILL_HANGING_ROPES_LAUNDRY_15M_A" pos="84 19 72" roty="286" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-31 11 -98" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="-29 13 -82" rot="358 219 14" />
@@ -1927,7 +1776,7 @@
     <tile name="MOUNTAIN_GREEN_FILL_WINE_SPLATTER_SMALL_B" pos="-28 12 -58" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_TRANSPORT_CART_WAGON_EMPTY_LARGE_A" pos="55 12 -33" roty="98" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="50 12 -35" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="2 22 74" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="2 22 73" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="4 22 58" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="55 13 -33" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_TURNED_A" pos="57 13 -33" roty="113" />
@@ -1942,17 +1791,11 @@
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-90 28 -69" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A" pos="-82 12 -22" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_WALL_5_A" pos="83.5 18 -1" rot="0 0 270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="64 12 -39" roty="267" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-12 12 -36" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-2 12 -37" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-5 12 -31" roty="98" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="1 12 -40" roty="98" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="-20 0 -116" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="-31 0 -116" roty="270" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="84 0 134" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="72 0 134" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="133 0 -22" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="15 12 -51" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="133 0 -34" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_WATCHTOWER_A" pos="124 2 0" rot="344 322 255" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_B" pos="124 0 2.5" roty="180" />
@@ -1989,7 +1832,6 @@
     <tile name="MOUNTAIN_GREEN_FILL_FARM_HAY_A" pos="-15.5 22 79.5" roty="224" />
     <tile name="MOUNTAIN_GREEN_FILL_FARM_GROUND_STRAW_A" pos="-18.5 22 67.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_FARM_GROUND_STRAW_A" pos="-16.5 22 79.5" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="46 12 -35" roty="318" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-15 22 7" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="16.5 26 70.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_BARREL_BURNING" pos="5.5 26 70.5" />
@@ -2006,16 +1848,11 @@
     <tile name="MOUNTAIN_GREEN_HER_FILL_FLAG_A" pos="46.5 10 46.5" rot="9 29 359" scale="1.91937 1.91937 1.91937" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_FLAG_LARGE_HANGING_A" pos="49.5 7 86.5" roty="32" />
     <tile name="MOUNTAIN_GREEN_FILL_PILE_F" pos="69 14 53" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-64 12 -11" roty="177" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-71 12 -12" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-48 12 -10" roty="8.39" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-2 12 -43" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-6 12 -43" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-67 20 -77" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_C_SIDE" pos="-54 13 -38" roty="180" />
+    <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="4 12 -65" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_WALL_C_SIDE" pos="-54 13 -38" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-49 12 -68" roty="90" />
-    <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="4 12 -68" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="48 12 -41" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="41 12 -49" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="46 12 -45" roty="180" />
@@ -2158,214 +1995,250 @@
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_FLOOR_5_A_OBJ" pos="75.5 16 6" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_FLOOR_5_A_OBJ" pos="78 16 -11.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WATCHTOWER_A" pos="33 10 -112" roty="270" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_BROKEN_B" pos="5 0 132" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_B" pos="-8 0 127.5" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-4.5 0 127.5" roty="180" scale="1.33755 1.33755 1.33755" />
-    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_BROKEN_C" pos="-1.5 0 137.5" scale="1.33755 1.33755 1.33755" />
     <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_C" pos="-13.5 0 128.5" />
-    <tile name="MOUNTAIN_GREEN_HER_FILL_STORAGE_CRATE_BROKEN_B" pos="10.5 0 138" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILINGS_RAMP_4_RIGHT_A" pos="52 8 66" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_C" pos="52 10 74" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_FLOOR_5_A_OBJ" pos="55 12 87.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_FLOOR_5_A_OBJ" pos="55 12 62.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILINGS_RAMP_4_RIGHT_A" pos="52 9 84" roty="270" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILING_10_B" pos="-35 20 39" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="84 12 89" roty="307.2" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="78 11 127" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="76 12 125" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_CORNER" pos="98 9 75" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="86 0 128" roty="180" />
     <tile name="MOUNTAIN_GREEN_HER_WATCHTOWER_A" pos="79 12 124" />
     <tile name="MOUNTAIN_GREEN_FILL_HANGING_ROPES_15M_A" pos="-26 23 29" roty="337" scale="1.023757 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="53 12 5" roty="90" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="90 12 84" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="72 12 89" roty="246.04" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="77 12 90" roty="96.54" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="56 12 90" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="56 12 59" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="54 16 -50" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="20 20 -24" roty="90" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_STOCKADE_STRAIGHT_C" pos="32.5 0 -125.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_FILL_SHOOTING_TARGET_A" pos="11.5 12 -38.5" roty="180" scale="1.2 1.2 1.2" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-25 12 -89" roty="94.04" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_FILL_SHOOTING_TARGET_B" pos="15.5 12 -38.5" roty="180" scale="1.2 1.2 1.2" />
     <tile name="MOUNTAIN_GREEN_HER_WALKWAYS_RAILINGS_RAMP_4_LEFT_C" pos="63 12 -4" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_CITY_BORDERSTONE_C" pos="10 22 71.5" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-37 12 -3" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_HANGING_ROPES_LAUNDRY_10M_B" pos="85 18 4" roty="279.08" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-12 12 -36" roty="180" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_FILL_HANGING_ROPES_LAUNDRY_15M_A" pos="76 21 -14" rot="2 118.2 2" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_A_NOCOL" pos="8 21 82" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-75 20 -49" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-64 20 -69" roty="177" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-75 20 -76" roty="357" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-61 20 -63" roty="183" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-70 20 -56" roty="331.4" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-75 20 -34" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-75 20 -42" roty="273" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="20 20 -11" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="12 20 -15" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="3 20 -10" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="20 20 -24" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-12 20 -16" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-9 20 -24" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="5 20 -29" roty="278" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="14 20 -25" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-3 20 -25" roty="270" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-75 12 -20" roty="92" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="12 20 -27" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-17 12 -50" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="40 12 -40" roty="337" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="20 20 -11" roty="270" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="24.5 22 35" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="23 20 -18" roty="278" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-47 20 15" roty="267" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-7 20 -27" roty="90" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_SMALL_A" pos="-16.5 22 55" roty="180" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-45 20 25" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-47 20 31" roty="267" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-5 12 -31" roty="98" scale="0.6 1 0.9999999" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_A" pos="10 22 1.5" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-47 20 41" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-65 20 47" roty="87" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-12 20 -16" roty="270" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_C" pos="10 22 48.5" roty="90" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-55 20 50" roty="267" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_C" pos="10 22 53.5" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="52 16 -57" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-78 20 24" roty="267" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="-51 26 57" roty="183" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-78 20 35" roty="87" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="54 16 -50" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="-66 26 55" roty="357" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-43 12 -59" roty="187" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_B" pos="-23.5 22 55" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-52 26 53" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="49 16 -68" roty="188" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="50 16 -63" roty="8" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="3 20 -10" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="84 12 89" roty="307.2" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="12 20 -15" roty="90" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_A" pos="10 22 63.5" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_A" pos="64 16 -52" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-2 12 -37" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="-14.5 22 55" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="10 22 -3.5" roty="90" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="10 22 68.5" roty="270" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_B" pos="-70 20 17" roty="153" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-75 20 -34" roty="87" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_B" pos="29.5 22 35" />
-    <tile name="MOUNTAIN_GREEN_GROUND_STONES_C" pos="60 16 -65" roty="203.18" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_ROUND_A" pos="-80 22 10" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-75 20 -49" roty="87" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="34.5 22 35" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-70 20 -56" roty="331.4" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_SMALL_A" pos="10 22 8.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="49 16 -68" roty="188" scale="0.6 1 0.9999999" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_C" pos="10 22 19.5" roty="270" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_C" pos="10 22 14.5" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-65 20 47" roty="87" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_HER_CARPET_END_A" pos="-28.5 22 55" roty="180" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="51 12 -32" roty="100" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="38 22 95" roty="180" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-45 12 -66" scale="0.6 1 1" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-19 22 93" roty="180" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-18 22 96" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="72 12 89" roty="246.04" scale="0.6 1 0.9999999" />
     <tile name="MOUNTAIN_GREEN_FILL_RUIN_DEBRIS_A" pos="-15 22 99" roty="90" />
     <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARRELS_LARGE_BROKEN_C_NOCOL" pos="-4 6 40" roty="270" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-27 12 -51" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="52 12 -20" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="0 12 -50" roty="8" scale="0.6 1 0.9999996" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="64 16 -52" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-78 20 35" roty="87" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-64 20 -69" roty="177" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-38 12 -36" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="5 20 -29" roty="278" scale="0.6 1 1.000001" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-38 12 -25" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="40 12 -67" roty="8" scale="0.6 1 1.000001" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="56 12 59" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-64 12 -11" roty="177" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-37 12 -3" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="57 12 20" roty="95.87" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-24 12 -83" roty="87" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-54 26 58" roty="93" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-93 12 -14" roty="183" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-45 20 25" roty="87" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="59 12 -30" roty="177" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="56 12 90" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-38 12 -21" roty="93" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="46 12 -35" roty="318" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-47 20 15" roty="267" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="39 12 -62" roty="188" scale="0.6 1 0.9999999" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-86 12 -14" roty="357" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="15 12 -51" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="64 12 -39" roty="267" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="100 12 0" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-75 20 -76" roty="357" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-55 20 50" roty="267" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="97 12 0" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-70 20 17" roty="153" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-78 20 24" roty="267" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-61 20 -63" roty="183" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="52 16 -57" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="36 12 -43" roty="331" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-48 12 -10" roty="8.39" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="60 16 -65" roty="203" scale="0.6 1 0.9999999" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="57 12 49" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-78 12 -13" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="52 12 -29" roty="278" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="50 16 -63" roty="8" scale="0.6 1 1.000001" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-7 12 -43" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-75 20 -42" roty="273" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-56 12 -11" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-38 12 -39" roty="273" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-24 12 -67" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-24 12 -74" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="7 12 -50" roty="188" scale="0.6 1 0.9999999" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="75 12 -30" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-52 26 53" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="51 12 -8" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="77 12 90" roty="96.54" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="23 20 -18" roty="278" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-66 26 55" roty="357" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-50 12 -57" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-24 12 -62" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="58 12 41" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="51 12 -12" roty="98" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-27 12 -54" roty="90" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="1 12 -40" roty="98" scale="0.6 1 0.9999996" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="58 12 28" roty="270" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="68 12 -30" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-47 20 41" roty="87" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-71 12 -12" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-37 12 -44" roty="237" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-41 12 -13" roty="31" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="25 12 -49" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="56 12 12" roty="287.52" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="48 12 8" roty="271" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_A" pos="-8 12 -50" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_B" pos="-2 12 -43" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-45 20 33" roty="177" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_GROUND_STONES_FLAT_C" pos="-5 20 -19" roty="180" scale="0.6 1 1" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="28.5 12 -15.5" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="33.5 12 -17.5" roty="270" />
+    <tile name="MOUNTAIN_GREEN_FILL_STORAGE_BARREL_LARGE_CLOSED_A" pos="31.5 12 -17.5" roty="334" />
     <tile name="INVISIBLE_COLLISON_A" pos="10 15 80.5" />
-    <tile name="SpawnPoint_T3_MOB_HERETIC_CHEST" pos="-85 28 -62" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_BOSS" pos="9.23 22 100.19" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_BOSS" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="50 12 -96">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_BOSS" pos="70.1 18 -70.68" roty="317">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_BOSS" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-30 22 54" roty="225">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_BOSS" pos="-76.58 22 12.84" roty="52">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_BOSS" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-76 20 28" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-25 12 -57">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-63 20 -65" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="45 12 -17">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-60 20 14" roty="315">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-45.66 12 -39.37" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-80 22 49">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="21.29 20 -17.21" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="99 12 -3" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-55.15 12 0.08">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="72 14 50" roty="135">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-27 12 -84" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="50 12 32" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="26 20 -11" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="72 16 4" roty="315">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-31 12 -53">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-76 20 31" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="53 12 47" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="77 12 24" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="97 12 -16.41">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="15 12 -91" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="56 12 -30" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-45 12 -36" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="51 12 39" roty="315">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-11 20 -20" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-28 12 -52">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-11 22 36" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_RAT" pos="-58 22 -45" roty="45">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_RAT" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="28 22 88" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" pos="29 22 70.62">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" animswitch="work">
+        <path>
+          <waypoint pos="29 71.62" idle="1" pace="WALK" />
+          <waypoint pos="29 85.62" idle="0" pace="WALK" />
+          <waypoint pos="22 92.62" idle="0" pace="WALK" />
+          <waypoint pos="12.17 93.88" idle="1" pace="WALK" />
+          <waypoint pos="22 92.62" idle="0" pace="WALK" />
+          <waypoint pos="29 85.62" idle="0" pace="WALK" />
+        </path>
+      </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="23 20 -14" roty="225">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" pos="-49.9 20 36.6" roty="180">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" animswitch="work">
+        <path>
+          <waypoint pos="-49.9 36.6" idle="0" pace="WALK" />
+          <waypoint pos="-49.9 26.6" idle="0" pace="WALK" />
+          <waypoint pos="-54.9 21.6" idle="0" pace="WALK" />
+          <waypoint pos="-64.9 21.6" idle="0" pace="WALK" />
+          <waypoint pos="-69.9 26.6" idle="0" pace="WALK" />
+          <waypoint pos="-69.9 36.6" idle="0" pace="WALK" />
+          <waypoint pos="-64.9 41.6" idle="0" pace="WALK" />
+          <waypoint pos="-54.9 41.6" idle="0" pace="WALK" />
+        </path>
+      </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-86 28 -65" roty="135">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" pos="-6.46 20 -14.26" roty="90">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" animswitch="work">
+        <path>
+          <waypoint pos="-5.46 -14.26" idle="3" pace="WALK" />
+          <waypoint pos="20.54001 -13.86" idle="3" pace="WALK" />
+        </path>
+      </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-64 20 45">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="55 12 104" roty="90">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-61 12 1" roty="225">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="90 12 110" roty="90">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="31 12 -34" roty="45">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-47 12 -41" roty="270">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-11 22 87" roty="45">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="39 12 -18">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_HEALER" pos="74 16 -2">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="-13 12 -37" roty="315">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="13 22 -5" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="53 16 -51" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_THIEF" pos="76.2 14 79.47" roty="45">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="70.34 18 -72.97">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-45 20 15" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-57 26 52" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-37 22 51" roty="270">
-      <mobspawnpoint behavior="PATROL">
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" pos="-37 22 51" roty="270">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" animswitch="work">
         <path>
           <waypoint pos="-37 51" idle="3" pace="WALK" />
           <waypoint pos="-44 55" idle="0" pace="WALK" />
           <waypoint pos="-50.00001 56" idle="0" pace="WALK" />
           <waypoint pos="-59 56" idle="3" pace="WALK" />
           <waypoint pos="-71.00002 56" idle="0" pace="WALK" />
-          <waypoint pos="-78.00002 51" idle="3" pace="WALK" />
+          <waypoint pos="-79.25001 51.16999" idle="3" pace="WALK" />
           <waypoint pos="-71.00002 56" idle="0" pace="WALK" />
           <waypoint pos="-59 56" idle="3" pace="WALK" />
           <waypoint pos="-50.00001 56" idle="0" pace="WALK" />
@@ -2373,296 +2246,284 @@
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-8 22 70">
-      <mobspawnpoint behavior="PATROL">
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" pos="-8 22 70.45">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TANK_NO_CHAMPION" animswitch="work">
         <path>
-          <waypoint pos="-8 71" idle="0" pace="WALK" />
-          <waypoint pos="-8 85" idle="0" pace="WALK" />
-          <waypoint pos="-0.999999 92" idle="0" pace="WALK" />
-          <waypoint pos="10 94" idle="0" pace="WALK" />
-          <waypoint pos="-0.999999 92" idle="0" pace="WALK" />
-          <waypoint pos="-8 85" idle="0" pace="WALK" />
+          <waypoint pos="-8 71.45" idle="1" pace="WALK" />
+          <waypoint pos="-8 85.45" idle="0" pace="WALK" />
+          <waypoint pos="-0.999999 92.45" idle="0" pace="WALK" />
+          <waypoint pos="7.850009 93.96001" idle="1" pace="WALK" />
+          <waypoint pos="-0.999999 92.45" idle="0" pace="WALK" />
+          <waypoint pos="-8 85.45" idle="0" pace="WALK" />
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="5 20 -26" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="30.6 22 90.76" roty="32.77">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="8 22 -5" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-63.12 20 17.26" roty="45">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-75 20 -50" roty="135">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" pos="-13 22 19" roty="72.49">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-9 22 37" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-76 20 28" roty="282.18">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-9 22 89" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="10.16 22 -3.41" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="30 22 87" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-76 20 31" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="79 14 78" roty="315">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="50.9 12 29.18" roty="93">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-31 12 -53">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-65.68 20 -67.45" roty="74">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_HEALER" pos="53 16 -56" roty="90">
-      <mobspawnpoint behavior="PATROL">
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" pos="-5.96 22 52.35" roty="126">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="9.11 22 53.33" roty="224">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" pos="17.72 22 38.87" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" pos="-9.59 22 91.05" roty="14">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="5 20 -24.46" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-11 22 36" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="6.72 22 22.73" rot="0 23.06 0">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="-33.67 22 51.92" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" pos="53 16 -51" rot="0 137.18 0">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_THIEF_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-42.11 20 19.6" rot="0 93.09 0">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="23.15 20 -11.96" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="69.51 16 6.14" roty="315">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" pos="76.77 16 -6.67">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_HEALER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="-81 22 51" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="6.4 12 -59.62" roty="149.05">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-58.9 26 57.63" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="-29 12 -12" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-58.39 24 -52.17" roty="281">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-61 24 -50.14" roty="153">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="72.83 14 84.35" roty="135">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="24.21 12 -57.91" roty="204">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="75.04 14 47.52" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="100 12 -33">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="16.71 12 -44.63">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="90 12 110" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="-25.24 14 -70.12" roty="264.2">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="-12.86 12 -39.17" roty="315">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="91.49 12 -6.77" rot="0 67.82 0">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="-45 12 -36" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_TANK" pos="-34.65 14 -43.25" roty="270">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_TANK" animswitch="work">
         <path>
-          <waypoint pos="55 -55" idle="3" pace="WALK" />
-          <waypoint pos="62 -55" idle="0" pace="WALK" />
-          <waypoint pos="66 -60" idle="0" pace="WALK" />
-          <waypoint pos="67 -69" idle="3" pace="WALK" />
-          <waypoint pos="60 -66" idle="0" pace="WALK" />
-          <waypoint pos="55 -62" idle="0" pace="WALK" />
+          <waypoint pos="-33.38 -41.75" idle="3" pace="WALK" />
+          <waypoint pos="-33.99 -34.29" idle="0" pace="WALK" />
+          <waypoint pos="-35.1 -27.52999" idle="0" pace="WALK" />
+          <waypoint pos="-37.54 -21.46999" idle="0" pace="WALK" />
+          <waypoint pos="-37.74001 -13.55999" idle="0" pace="WALK" />
+          <waypoint pos="-31.93 -12.61999" idle="3" pace="WALK" />
+          <waypoint pos="-37.74001 -13.55999" idle="0" pace="WALK" />
+          <waypoint pos="-37.54 -21.46999" idle="0" pace="WALK" />
+          <waypoint pos="-35.1 -27.52999" idle="0" pace="WALK" />
+          <waypoint pos="-33.99 -34.29" idle="0" pace="WALK" />
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-65 12 3">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="72 14 50" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="53 12 47" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="-59 12 -28">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_HEALER" pos="-13 22 19" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="55.12 12 105.88" rot="0 124.48 0">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_HEALER" pos="-10 22 53">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="-105 12 -2" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="51 12 39" roty="315">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="39.38 12 -17.05" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_HEALER" pos="30 23 90" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="-77.17 12 -8.68" roty="339.03">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-54 22 -45" roty="315">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="83.63 14 78.59" roty="315">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-58 22 -45" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="33 12 -33" roty="270">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-82 28 -65" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="-61 12 1" roty="225">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="-62 22 -53" roty="270">
-      <mobspawnpoint behavior="PATROL">
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="47.02 12 -93.6" roty="25">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" pos="77 12 24" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_SCAVENGER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="56.84 12 -85.29" roty="261">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="15 12 -91" roty="90">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" pos="72.72 12 97.25" roty="180">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_WOODGATHERER" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="-11.55 23 93.46" roty="93.25">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
+    </tile>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_TANK" pos="37.24 16 -65.2" roty="90">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_TANK" animswitch="work">
         <path>
-          <waypoint pos="-63 -54" idle="3" pace="WALK" />
-          <waypoint pos="-67 -62" idle="0" pace="WALK" />
-          <waypoint pos="-78 -76" idle="0" pace="WALK" />
-          <waypoint pos="-82 -76" idle="0" pace="WALK" />
-          <waypoint pos="-85 -74" idle="0" pace="WALK" />
-          <waypoint pos="-85.12001 -67.93001" idle="3" pace="WALK" />
-          <waypoint pos="-85 -74" idle="0" pace="WALK" />
-          <waypoint pos="-82 -76" idle="0" pace="WALK" />
-          <waypoint pos="-78 -76" idle="0" pace="WALK" />
-          <waypoint pos="-67 -62" idle="0" pace="WALK" />
+          <waypoint pos="37.13911 -65.08048" idle="3" pace="WALK" />
+          <waypoint pos="44.83225 -64.53695" idle="0" pace="WALK" />
+          <waypoint pos="51.31289 -62.94814" idle="0" pace="WALK" />
+          <waypoint pos="54.32325 -58.97614" idle="0" pace="WALK" />
+          <waypoint pos="55.703 -55.38043" idle="0" pace="WALK" />
+          <waypoint pos="53.61247 -52.03558" idle="3" pace="WALK" />
+          <waypoint pos="56.53921 -54.66969" idle="0" pace="WALK" />
+          <waypoint pos="63.35433 -53.08089" idle="0" pace="WALK" />
+          <waypoint pos="64.94313 -50.19595" idle="0" pace="WALK" />
+          <waypoint pos="65.2358 -45.88947" idle="0" pace="WALK" />
+          <waypoint pos="65.57029 -41.20669" idle="0" pace="WALK" />
+          <waypoint pos="65.36002 -37.77999" idle="3" pace="WALK" />
+          <waypoint pos="65.57029 -41.20669" idle="0" pace="WALK" />
+          <waypoint pos="65.2358 -45.88947" idle="0" pace="WALK" />
+          <waypoint pos="64.94313 -50.19595" idle="0" pace="WALK" />
+          <waypoint pos="63.35433 -53.08089" idle="0" pace="WALK" />
+          <waypoint pos="56.53921 -54.66969" idle="0" pace="WALK" />
+          <waypoint pos="53.61247 -52.03558" idle="3" pace="WALK" />
+          <waypoint pos="55.703 -55.38043" idle="0" pace="WALK" />
+          <waypoint pos="54.32325 -58.97614" idle="0" pace="WALK" />
+          <waypoint pos="51.31289 -62.94814" idle="0" pace="WALK" />
+          <waypoint pos="44.83225 -64.53695" idle="0" pace="WALK" />
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="-78 22 11" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_MAGE" pos="31 12 -34" roty="45">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_MAGE" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-28 12 -52">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="74 14 47" roty="270">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="-12 22 17">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="97 12 -15">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="12 22 21" roty="225">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-8 20 -18" roty="90">
-      <mobspawnpoint behavior="PATROL">
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_TRASH_TANK" pos="55.12 12 87.21" roty="175">
+      <mobspawnpoint behavior="PATROL" spawnbehavior="STATIC_HERETIC_VETERAN_TRASH_TANK" animswitch="work">
         <path>
-          <waypoint pos="-7 -18" idle="3" pace="WALK" />
-          <waypoint pos="19.00002 -17" idle="3" pace="WALK" />
+          <waypoint pos="54.84047 87.27737" idle="1" pace="WALK" />
+          <waypoint pos="54.77243 62.95741" idle="1" pace="WALK" />
         </path>
       </mobspawnpoint>
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_MAGE" pos="-10 22 92" roty="45">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-86.81 28 -62.87" roty="135">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-25 12 -57">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-61.74 20 43.04" roty="340">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-27 12 -84" roty="270">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" pos="-10.2 20 -17.51" roty="45">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_ARCHER_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-31 14 -70" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="-11.09 22 16.39">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-51 20 37" roty="180">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="-51 37" idle="0" pace="WALK" />
-          <waypoint pos="-51 27" idle="0" pace="WALK" />
-          <waypoint pos="-56 22" idle="0" pace="WALK" />
-          <waypoint pos="-66 22" idle="0" pace="WALK" />
-          <waypoint pos="-71 27" idle="0" pace="WALK" />
-          <waypoint pos="-71 37" idle="0" pace="WALK" />
-          <waypoint pos="-66 42" idle="0" pace="WALK" />
-          <waypoint pos="-56 42" idle="0" pace="WALK" />
-        </path>
-      </mobspawnpoint>
+    <tile name="SpawnPoint_RANDOM_STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" pos="-75.97 20 -52.82" roty="94">
+      <mobspawnpoint behavior="GUARD" spawnbehavior="STATIC_HERETIC_VETERAN_MAGE_NO_CHAMPION" animswitch="work" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-55 22 -50" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="SpawnPoint_LOOTCHEST_STATIC_HERETIC_VETERAN" pos="9 22 105" />
+    <tile name="SpawnPoint_LOOTCHEST_STATIC_HERETIC_VETERAN_POI" pos="75 18 -70" roty="90" />
+    <tile name="SpawnPoint_LOOTCHEST_STATIC_HERETIC_VETERAN_POI" pos="-82 22 8" roty="225" />
+    <tile name="LocationMarker" pos="126.3 12 -17.8">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-81 22 51" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="43.7 12 -115">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-9 22 15" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="-14.5 12 -109.4">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-10 22 57" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="4.5 12 -38.2">
+      <locationmarker locationid="STATIC_DUNGEON" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="9 22 21" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="109.7 12 84.5">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="45 12 -17">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="65.5 12 131.7">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="56 12 -30" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="-119.3 12 -19.8">
+      <locationmarker locationid="STATIC_DUNGEON_TRIGGER" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="26 20 -11" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="10.3 12 83.68">
+      <locationmarker locationid="STATIC_DUNGEON_2" radius="10" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="19 20 -20" roty="90">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="48.69 12 7.98">
+      <locationmarker locationid="STATIC_DUNGEON_1" radius="5" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_WORKER" pos="-63 20 13" roty="180">
-      <mobspawnpoint behavior="GUARD" />
+    <tile name="LocationMarker" pos="48.69 12 7.98">
+      <locationmarker locationid="STATIC_DUNGEON_3" radius="5" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="-71 20 27">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="-71 27" idle="0" pace="WALK" />
-          <waypoint pos="-71 37" idle="0" pace="WALK" />
-          <waypoint pos="-66 42" idle="0" pace="WALK" />
-          <waypoint pos="-56 42" idle="0" pace="WALK" />
-          <waypoint pos="-51 37" idle="0" pace="WALK" />
-          <waypoint pos="-51 27" idle="0" pace="WALK" />
-          <waypoint pos="-56 22" idle="0" pace="WALK" />
-          <waypoint pos="-66 22" idle="0" pace="WALK" />
-        </path>
-      </mobspawnpoint>
+    <tile name="LocationMarker" pos="10.9 12 -3.1">
+      <locationmarker locationid="STATIC_DUNGEON_3" radius="5" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_TANK" pos="29 22 70">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="29 71" idle="0" pace="WALK" />
-          <waypoint pos="29 84.99999" idle="0" pace="WALK" />
-          <waypoint pos="22 92" idle="0" pace="WALK" />
-          <waypoint pos="11 94" idle="0" pace="WALK" />
-          <waypoint pos="22 92" idle="0" pace="WALK" />
-          <waypoint pos="29 84.99999" idle="0" pace="WALK" />
-        </path>
-      </mobspawnpoint>
+    <tile name="LocationMarker" pos="-34.1 12 -2.1">
+      <locationmarker locationid="STATIC_DUNGEON_3" radius="5" visibleinworld="false" visibleonminimap="false" />
     </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-59 12 -28">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-29 12 -12" roty="270">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="15 12 -62" roty="270">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="11 12 -62">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="33 12 -33" roty="270">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="97 12 -3" roty="45">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="100 12 -33">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="55 12 -90" roty="225">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="-105 12 -2" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-81 22 10" roty="90">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="10.02 22 102.16" roty="161">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="72.24 18 -71.82" roty="270">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_RANDOM_HERETIC_ANY_BOSS" pos="-60 22 -51" roty="90">
-      <mobspawnpoint behavior="GUARD" spawnbehavior="HERETIC_ANY_BOSS" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="57 12 106" roty="180">
-      <mobspawnpoint behavior="GUARD" />
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_RAT" pos="-43.22 0 -115.92">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="-43.22 -115.92" idle="0" pace="WALK" />
-          <waypoint pos="-44.22 -111.92" idle="0" pace="WALK" />
-          <waypoint pos="-41.22 -110.92" idle="3" pace="WALK" />
-          <waypoint pos="-38.22 -111.92" idle="0" pace="WALK" />
-          <waypoint pos="-38.22 -114.92" idle="0" pace="WALK" />
-          <waypoint pos="-40.22 -113.92" idle="0" pace="WALK" />
-          <waypoint pos="-41.22 -116.92" idle="0" pace="WALK" />
-          <waypoint pos="-44.22 -116.92" idle="0" pace="WALK" />
-          <waypoint pos="-45.22 -119.92" idle="0" pace="WALK" />
-          <waypoint pos="-48.22 -117.92" idle="3" pace="WALK" />
-          <waypoint pos="-51.22 -117.92" idle="0" pace="WALK" />
-          <waypoint pos="-50.22 -114.92" idle="0" pace="WALK" />
-          <waypoint pos="-52.22 -110.92" idle="0" pace="WALK" />
-          <waypoint pos="-45.22 -111.92" idle="3" pace="WALK" />
-        </path>
-      </mobspawnpoint>
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_RAT" pos="-125 0 19" roty="270">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="-125 19" idle="0" pace="WALK" />
-          <waypoint pos="-129 18" idle="0" pace="WALK" />
-          <waypoint pos="-130 21" idle="3" pace="WALK" />
-          <waypoint pos="-129 24" idle="0" pace="WALK" />
-          <waypoint pos="-126 24" idle="0" pace="WALK" />
-          <waypoint pos="-127 22" idle="0" pace="WALK" />
-          <waypoint pos="-124 21" idle="0" pace="WALK" />
-          <waypoint pos="-124 18" idle="0" pace="WALK" />
-          <waypoint pos="-121 17" idle="0" pace="WALK" />
-          <waypoint pos="-123 14" idle="3" pace="WALK" />
-          <waypoint pos="-123 11" idle="0" pace="WALK" />
-          <waypoint pos="-126 12" idle="0" pace="WALK" />
-          <waypoint pos="-130 9.999998" idle="0" pace="WALK" />
-          <waypoint pos="-129 17" idle="3" pace="WALK" />
-        </path>
-      </mobspawnpoint>
-    </tile>
-    <tile name="SpawnPoint_T3_HERETIC_RAT" pos="141 0 -21" />
-    <tile name="SpawnPoint_T3_HERETIC_ARCHER" pos="57 16 -65" roty="270">
-      <mobspawnpoint behavior="PATROL">
-        <path>
-          <waypoint pos="57 -65" idle="3" pace="WALK" />
-          <waypoint pos="48 -65" idle="3" pace="WALK" />
-        </path>
-      </mobspawnpoint>
-    </tile>
+    <tile name="StaticDungeonAreaTrigger" pos="0 0 0" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 85" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="25 -40 55" />
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 55" />
@@ -2673,9 +2534,106 @@
     <tile name="BLOCK_CONSTRUCTIONS_30x30" pos="-5 -40 85" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="5 -40 25" />
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="15 -40 25" />
-    <tile name="LevelMarker_Mobcamp_Heretics_15x15_MN" pos="0 43 0">
-      <worldmapmarker type="LevelMarker_Mobcamp_Heretics_15x15_MN" />
-    </tile>
     <tile name="SoundBubble_HERETIC_115_135" pos="10.5 0 -1.1" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_20x20_A" pos="-100 0 -130" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_20x20_B" pos="-90 0 130" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_20x20_C" pos="-130 0 110" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_20x20_E" pos="100 0 -110" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_30x30_A" pos="125 0 45" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_30x30_B" pos="125 0 125" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_30x30_DIAGONAL_A" pos="115 0 -75" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_BLOCKER_30x30_DIAGONAL_A" pos="-125 0 75" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-45 0 120" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-45 0 -140" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="145 0 -30" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-90 0 105" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="20 0 145" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-145 0 -70" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-15 0 140" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="140 0 5" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-100 0 -145" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-140 0 25" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-90 0 115" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-115 0 -130" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="-125 0 50" roty="0" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="100 0 -95" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_A" pos="60 0 145" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-115 0 110" roty="180" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-60 0 -115" roty="270" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-145 0 110" roty="0" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-75 0 140" roty="180" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="120 0 145" roty="270" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="140 0 -125" roty="90" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="80 0 145" roty="270" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="145 0 40" roty="180" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="140 0 -65" roty="90" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-40 0 145" roty="270" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-90 0 145" roty="90" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="40 0 -145" roty="270" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="-145 0 -10" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x20_B" pos="145 0 60" roty="0" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="-135 0 35" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="-85 0 -135" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="-105 0 115" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="-145 0 75" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="115 0 -105" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="-135 0 -75" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="85 0 -105" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_A" pos="135 0 105" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="145 0 135" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="-35 0 -125" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="125 0 65" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="-135 0 -115" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="-35 0 135" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="95 0 -135" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="-75 0 115" roty="0" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_10x30_B" pos="-125 0 95" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_A" pos="-60 0 120" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_A" pos="-140 0 -100" roty="270" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_A" pos="-140 0 -50" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_A" pos="0 0 140" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_B" pos="-140 0 50" roty="180" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_B" pos="140 0 -80" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_B" pos="-110 0 140" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="20 0 -140" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="100 0 140" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="140 0 -50" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="-30 0 -140" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="140 0 20" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="-60 0 140" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="-140 0 10" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="140 0 -140" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_20x20_C" pos="40 0 140" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_A" pos="115 0 -135" roty="270" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_A" pos="75 0 -135" roty="180" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_B" pos="-5 0 -135" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_B" pos="-135 0 -135" roty="180" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_C" pos="135 0 -105" roty="270" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_C" pos="-135 0 135" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_C" pos="-65 0 -135" roty="180" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_GREEN_SUB_30x30_C" pos="135 0 85" roty="270" activelayers="3 4" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-115 0 -115" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 115" roty="270" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="55 0 -145" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -15" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-115 0 -145" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="15 0 -125" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="135 0 145" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 95" roty="270" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-45 0 -115" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -25" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-55 0 105" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="55 0 -135" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="15 0 135" roty="180" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-65 0 105" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 95" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -85" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="45 0 -135" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="25 0 135" roty="180" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-115 0 125" roty="90" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-145 0 -35" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="35 0 -135" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="145 0 -5" />
+    <tile name="MOUNTAIN_GREEN_GROUND" pos="-25 0 145" roty="180" />
   </tiles>
 </template>

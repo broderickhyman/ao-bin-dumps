@@ -791,13 +791,13 @@
           }
         },
         {
-          "@uniquename": "ADVENTURERS_CHALLENGE",
+          "@uniquename": "ACTIVITY_HUB",
           "@priority": "8",
-          "@type": "AdventurersChallenge",
+          "@type": "ActivityHUB",
           "categories": {
             "category": [
               {
-                "@name": "AdventurersChallenge"
+                "@name": "ActivityHUB"
               },
               {
                 "@name": "GameFeature"
@@ -812,11 +812,14 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
-              "not": {
-                "IfHasSeenSinceNewPersonalSeasonChest": {
-                  "@uniquename": "ADVENTURERS_CHALLENGE",
-                  "@targetfilter": "character"
-                }
+              "IfEnabledActivityPopupOnLogin": null,
+              "IfHasSeenPopup": {
+                "@uniquename": "ACTIVITY_HUB",
+                "@frequency": "Days",
+                "@timefactor": "1",
+                "@operation": "less",
+                "@amount": "1",
+                "@targetfilter": "character"
               }
             }
           }
@@ -840,36 +843,6 @@
               "IfTutorialCompleted": null,
               "not": {
                 "IfHasSeenFeaturedFeature": null
-              }
-            }
-          }
-        },
-        {
-          "@uniquename": "CONQUERORS_CHALLENGE",
-          "@priority": "7",
-          "@type": "ConquerorsChallenge",
-          "categories": {
-            "category": [
-              {
-                "@name": "ConquerorsChallenge"
-              },
-              {
-                "@name": "GameFeature"
-              }
-            ]
-          },
-          "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
-          },
-          "conditions": {
-            "and": {
-              "IfTutorialCompleted": null,
-              "not": {
-                "IfHasSeenSinceNewSeasonStart": {
-                  "@uniquename": "CONQUERORS_CHALLENGE"
-                }
               }
             }
           }
@@ -936,6 +909,33 @@
                 "@timefactor": "7",
                 "@operation": "equals",
                 "@amount": "0"
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "PORTAL_CITY_INFO",
+          "@priority": "10",
+          "@type": "GenericTutorial",
+          "categories": {
+            "category": [
+              {
+                "@name": "GenericTutorial"
+              },
+              {
+                "@name": "CityPortal"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "ClusterChange"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfInCityType": {
+                "@citytype": "PortalCity"
               }
             }
           }
