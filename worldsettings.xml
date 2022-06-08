@@ -699,7 +699,7 @@
                 spellcooldownsonenteringseconds="0"
                 buildingcraftcapacityregenfactor="1"
                 itempowersoftcap="700"
-                itempowerscalingfactor="0.2"
+                itempowerscalingfactor="0.05"
                 animalgrowthfactor="0.5"
                 cropyieldfactor="2"
                 clusterdangerbonustype="yellow"
@@ -744,8 +744,8 @@
                 showhostilecount="false"
                 spellcooldownsonenteringseconds="0"
                 buildingcraftcapacityregenfactor="1"
-                itempowersoftcap="1000"
-                itempowerscalingfactor="0.5"
+                itempowersoftcap="900"
+                itempowerscalingfactor="0.2"
                 animalgrowthfactor="0.5"
                 cropyieldfactor="2"
                 clusterdangerbonustype="yellow"
@@ -825,7 +825,8 @@
                      citytype="RoyalCity"
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
-                     allowmounts="true">
+                     allowmounts="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -841,7 +842,10 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
                      allowfactionrewards="false"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+			         doactionsdisabletownportal="false"
+					 enforceAsTownPortalDestination="true" >
+
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -862,7 +866,8 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
                      allowfactionrewards="false"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -878,7 +883,8 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
                      allowfactionrewards="false"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -893,7 +899,8 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -908,7 +915,8 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -923,7 +931,8 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
         </clustertype>
 
         <clustertype name="PLAYERCITY_BLACK_NOFURNITURE"
@@ -935,7 +944,8 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      showvanitymainoffhand="true"
-                     allowmounts="true">
+                     allowmounts="true"
+                     doactionsdisabletownportal="false">
         </clustertype>
 
         <clustertype name="PLAYERCITY_BLACK_ROYAL"
@@ -947,7 +957,8 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
-                     showvanitymainoffhand="true">
+                     showvanitymainoffhand="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -962,11 +973,25 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      showvanitymainoffhand="true"
-                     allowmounts="true">
+                     allowmounts="true"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
         </clustertype>
+
+      <clustertype name="PLAYERCITY_BLACK_PORTALCITY_NOFURNITURE"
+                    archetype="CITY-BLACK"
+                    logoutseconds="10"
+                    editorcolor="255, 0, 255"
+                    furnitureobjectsallowed="false"
+                    citytype="PortalCity"
+                    isdungeon="false"
+                    hasshortspawnbuffonleave="false"
+                    showvanitymainoffhand="true"
+                    allowmounts="true"
+                    doactionsdisabletownportal="false">
+      </clustertype>
 
         <clustertype name="PLAYERCITY_BLACK_ROYAL_NOFURNITURE_HALL_OF_FAME"
                      archetype="CITY-BLACK"
@@ -978,7 +1003,8 @@
                      showvanitymainoffhand="true"
                      allowmounts="true"
                      ishalloffame="true"
-                     maxduelheight="15">
+                     maxduelheight="15"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -996,7 +1022,9 @@
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="0"
                      allowmounts="true"
                      clustervaluelookup="Royal"
-                     tunnelpreset="SAFEZONE">
+                     tunnelpreset="SAFEZONE"
+                     townportalspell="TOWN_PORTAL_SHORT"
+					 townportalzonemodifier="0.25" >
             <spawnbuff>
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -1064,7 +1092,8 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
                      showvanitymainoffhand="true"
-                     allowfactionrewards="false">
+                     allowfactionrewards="false"
+			         doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -1081,7 +1110,8 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="true"
                      showvanitymainoffhand="true"
-                     allowfactionrewards="false">
+                     allowfactionrewards="false"
+			         doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
             </spawnbuff>
@@ -1098,7 +1128,8 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="true"
                      showvanitymainoffhand="true"
-                     allowfactionrewards="false">
+                     allowfactionrewards="false"
+                     doactionsdisabletownportal="false">
             <spawnbuff>
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" fromhideout="Must" />
             </spawnbuff>
@@ -1117,7 +1148,10 @@
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="0"
                      allowmounts="true"
                      clustervaluelookup="Royal"
-                     tunnelpreset="YELLOW">
+                     tunnelpreset="YELLOW"
+                     townportalspell="TOWN_PORTAL_SHORT"
+					 townportalzonemodifier="0.375">
+			        
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
@@ -1196,7 +1230,9 @@
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="0"
                      clustervaluelookup="Royal"
                      allowmounts="true"
-                     tunnelpreset="OPENPVP_RED">
+                     tunnelpreset="OPENPVP_RED"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="2.25">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
@@ -1246,9 +1282,9 @@
                      smartclusterqueue="true"
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="120"
                      allowfactionrewards="false"
-                     allowpowercrystals="true"
-                     clustervaluelookup="Default"
-
+                     allowpowercrystals="true"                     
+                     townportalspell="TOWN_PORTAL_LONG"
+                    townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_LOW">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1299,6 +1335,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_LOW">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1417,6 +1455,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+  					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_LOW">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1534,6 +1574,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_MEDIUM">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1651,6 +1693,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_MEDIUM">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1768,6 +1812,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_HIGH">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1885,6 +1931,8 @@
                      allowfactionrewards="false"
                      allowpowercrystals="true"
                      clustervaluelookup="Outlands"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
                      tunnelpreset="OPENPVP_BLACK_HIGH">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -1999,6 +2047,8 @@
                      escapedungeonspellavailable="false"
                      isdungeon="true"
                      hasshortspawnbuffonleave="false"
+                     townportalspell="TOWN_PORTAL_SHORT"
+					 townportalzonemodifier="0.25"
                      allowmounts="true">
             <spawnbuff>
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" />
@@ -2020,6 +2070,8 @@
                      hasshortspawnbuffonleave="false"
                      smartclusterqueue="true"
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="0"
+                     townportalspell="TOWN_PORTAL_SHORT"
+ 					 townportalzonemodifier="0.375"
                      allowmounts="true">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -2045,6 +2097,8 @@
                      hasshortspawnbuffonleave="false"
                      smartclusterqueue="true"
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="0"
+                     townportalspell="TOWN_PORTAL_LONG"
+					 townportalzonemodifier="2.25"
                      allowmounts="true">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -2071,6 +2125,8 @@
                      smartclusterqueue="true"
                      SmartClusterQueueMinActiveTimeBeforeSkippingAllowed="120"
                      allowpowercrystals="true"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5.0"
                      allowmounts="true">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
@@ -2098,6 +2154,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY" ispvppossible="Must" isclusterchange="Must" />
@@ -2120,6 +2177,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />     
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2144,6 +2202,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2162,13 +2221,13 @@
                      editorcolor2="64, 64, 64"
                      furnitureobjectsallowed="true"
                      escapedungeonspellavailable="true"
-                     isdungeon="true"
-                     clustervaluelookup="Default"
+                     isdungeon="true"                     
                      hasshortspawnbuffonleave="true"
                      allowpowercrystals="true"
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2190,6 +2249,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2215,6 +2275,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2240,6 +2301,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2265,6 +2327,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2290,6 +2353,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2315,6 +2379,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2338,6 +2403,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />        
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2355,8 +2421,7 @@
                      editorcolor2="0, 128, 0"
                      furnitureobjectsallowed="false"
                      escapedungeonspellavailable="true"
-                     isdungeon="true"
-                     clustervaluelookup="Default"
+                     isdungeon="true"                     
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <mobspawns defaulttimefactor="1.0" />
@@ -2374,6 +2439,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2395,6 +2461,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2417,6 +2484,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2452,6 +2520,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2473,6 +2542,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2495,6 +2565,7 @@
                      allowmounts="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2516,6 +2587,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="HELL_2V2_ENTER" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
@@ -2534,6 +2606,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
             <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
@@ -2551,6 +2624,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
             <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
@@ -2568,6 +2642,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="HELL_2V2_ENTER" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
@@ -2586,6 +2661,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
             <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
@@ -2603,6 +2679,7 @@
                      escapedungeonspellavailable="true"
                      persistsimulationtodatabase="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_HELL" ispvppossible="Must" isclusterchange="Must" />
             </spawnbuff>
             <mobspawns defaulttimefactor="9999.0" defaultinitialchargemultiplicator="1" defaultmaxchargemultiplicator="1" />
@@ -2619,6 +2696,7 @@
                      persistsimulationtodatabase="false">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
@@ -2639,6 +2717,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2657,6 +2736,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2675,6 +2755,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2693,6 +2774,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2712,6 +2794,7 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2730,6 +2813,7 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2748,6 +2832,7 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2766,6 +2851,7 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2785,6 +2871,7 @@
                      hasshortspawnbuffonleave="true"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2803,6 +2890,7 @@
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY_EXPEDITION" isrevive="Must" />
                 <buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
@@ -2818,6 +2906,9 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="false">
+            <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
+            </spawnbuff>          
             <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
         </clustertype>
@@ -2829,7 +2920,10 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true">
-            <mobspawns defaulttimefactor="1.0" />
+          <spawnbuff>
+            <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
+          </spawnbuff>
+          <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
         </clustertype>
         <!-- ARENA -->
@@ -2840,7 +2934,10 @@
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
                      allowmounts="true">
-            <mobspawns defaulttimefactor="1.0" />
+          <spawnbuff>
+            <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
+          </spawnbuff>
+          <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
         </clustertype>
 
@@ -2856,7 +2953,9 @@
                      allowmounts="false"
                      usegroupspawns="true">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="CORRUPTED_DUNGEON_ENTER" isclusterchange="Must" />
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
             </spawnbuff>
         </clustertype>
 
@@ -2871,7 +2970,9 @@
                      allowmounts="false"
                      usegroupspawns="true">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="CORRUPTED_DUNGEON_ENTER" isclusterchange="Must" />
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
             </spawnbuff>
         </clustertype>
 
@@ -2886,7 +2987,9 @@
                      allowmounts="false"
                      usegroupspawns="true">
             <spawnbuff>
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="CORRUPTED_DUNGEON_ENTER" isclusterchange="Must" />
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />     
             </spawnbuff>
         </clustertype>
 
@@ -2902,10 +3005,13 @@
                      smartclusterqueue="false"
                      allowmounts="true"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_ROYAL">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />    
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isingvg="Must" />
@@ -2924,10 +3030,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_BLACK_LOW">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -2951,10 +3060,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
-
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
+					 
                      tunnelpreset="TUNNEL_BLACK_MEDIUM">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -2978,10 +3090,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_BLACK_HIGH">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3008,10 +3123,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_LOW">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3035,10 +3153,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_MEDIUM">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3062,10 +3183,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_HIGH">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3092,10 +3216,13 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_DEEP">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3122,11 +3249,14 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+					 townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_HIDEOUT"
                      forceshowtimezone="true">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3151,11 +3281,14 @@
                      allowmounts="true"
                      smartclusterqueue="false"
                      allowfactionrewards="false"
+                     townportalspell="TOWN_PORTAL_LONG"
+ 					 townportalzonemodifier="5"
 
                      tunnelpreset="TUNNEL_HIDEOUT_DEEP"
                      forceshowtimezone="true">
             <spawnbuff>
                 <!-- The first buff makes you immune to invul shields for respawning in the open world -->
+                <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
                 <buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
                 <buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
@@ -3473,5 +3606,5 @@
             <settlement resource="Prefabs/MAP_ALBION/MAP_SETTLEMENT_SAFE_06" />
         </settlements>
     </worldmap>
-
+    
 </AO-WorldSettings>

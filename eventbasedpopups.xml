@@ -346,24 +346,24 @@
             </conditions>
         </popup>
 
-      <popup uniquename="SET_OFF_RIGHT" priority="6" type="Bundles" title="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_TITLE"
+        <popup uniquename="SET_OFF_RIGHT" priority="6" type="Bundles" title="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_TITLE"
                description="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_SET_OFF_RIGHT">
-        <categories>
-          <category name="Premium" />
-        </categories>
-        <triggers>
-          <trigger action="GameLogin" />
-        </triggers>
-        <conditions>
-          <and>
-            <IfTutorialCompleted />
-            <not>
-              <IfHasPremium />
-            </not>
-            <IfHasSeenPopup uniquename="SET_OFF_RIGHT" frequency="Hours" timefactor="68" operation="less" amount="1" />
-          </and>
-        </conditions>
-      </popup>
+            <categories>
+                <category name="Premium" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasPremium />
+                    </not>
+                    <IfHasSeenPopup uniquename="SET_OFF_RIGHT" frequency="Hours" timefactor="68" operation="less" amount="1" />
+                </and>
+            </conditions>
+        </popup>
 
         <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
         <!-- Guest Account Incentivization -->
@@ -459,10 +459,10 @@
             </conditions>
         </popup>
 
-        <!-- Adventurers Challenge -->
-        <popup uniquename="ADVENTURERS_CHALLENGE" priority="8" type="AdventurersChallenge">
+        <!-- Activity HUB -->
+        <popup uniquename="ACTIVITY_HUB" priority="8" type="ActivityHUB">
             <categories>
-                <category name="AdventurersChallenge" />
+                <category name="ActivityHUB" />
                 <category name="GameFeature" />
             </categories>
             <triggers>
@@ -471,9 +471,8 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
-                    <not>
-                        <IfHasSeenSinceNewPersonalSeasonChest uniquename="ADVENTURERS_CHALLENGE" targetfilter="character" />
-                    </not>
+                    <IfEnabledActivityPopupOnLogin />
+                    <IfHasSeenPopup uniquename="ACTIVITY_HUB" frequency="Days" timefactor="1" operation="less" amount="1" targetfilter="character" />
                 </and>
             </conditions>
         </popup>
@@ -493,25 +492,6 @@
                     <IfTutorialCompleted />
                     <not>
                         <IfHasSeenFeaturedFeature />
-                    </not>
-                </and>
-            </conditions>
-        </popup>
-
-        <!-- Conquerors Challenge -->
-        <popup uniquename="CONQUERORS_CHALLENGE" priority="7" type="ConquerorsChallenge">
-            <categories>
-                <category name="ConquerorsChallenge" />
-                <category name="GameFeature" />
-            </categories>
-            <triggers>
-                <trigger action="GameLogin" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfTutorialCompleted />
-                    <not>
-                        <IfHasSeenSinceNewSeasonStart uniquename="CONQUERORS_CHALLENGE" />
                     </not>
                 </and>
             </conditions>
@@ -553,6 +533,25 @@
         </popup>
 
         <!-- end old popups -->
+
+        <!---->
+        <!-- For a tutorial popup use same unique name as used in tutorial xml -->
+        <!---->
+        
+        <popup uniquename="PORTAL_CITY_INFO" priority="10" type="GenericTutorial">
+            <categories>
+                <category name="GenericTutorial" />
+                <category name="CityPortal" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfInCityType citytype="PortalCity" />
+                </and>
+            </conditions>
+        </popup>
 
     </popups>
 </eventbasedpopups>

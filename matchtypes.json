@@ -8,62 +8,6 @@
     "@xsi:noNamespaceSchemaLocation": "matchtypes.xsd",
     "matchtype": [
       {
-        "@uniquename": "MATCH_TEST",
-        "@matchdurationminutes": "25",
-        "@roundduration": "60",
-        "@ticketdefault": "150",
-        "@timeleftorbearlyreset": "60",
-        "@respawndelay": "10",
-        "@matchtimerespawnmultiplier": "1",
-        "@minplayerperteam": "1",
-        "@maxplayerperteam": "5",
-        "@ticketreductionbydeath": "4",
-        "@almostlostticketthreshold": "10",
-        "@advantageticketsdifference": "50",
-        "ticketreductionlookup": [
-          {
-            "@orbdifference": "0",
-            "@ticketreduction": "0"
-          },
-          {
-            "@orbdifference": "1",
-            "@ticketreduction": "10"
-          },
-          {
-            "@orbdifference": "2",
-            "@ticketreduction": "10"
-          },
-          {
-            "@orbdifference": "3",
-            "@ticketreduction": "20"
-          },
-          {
-            "@orbdifference": "4",
-            "@ticketreduction": "20"
-          }
-        ],
-        "warcamp": {
-          "defense": {
-            "@engageattackrange": "18.0",
-            "@disengageattackrange": "18.0",
-            "@attackinterval": "0.4",
-            "@attackdamage": "0.1",
-            "@attackdistancedelay": "24.0",
-            "@islethal": "true",
-            "@buffradius": "8.7",
-            "@buffspell": "WARCAMP_INVULNERABILITY",
-            "FriendlyFX": {
-              "@beam": "FX/ClientPrefabs/fx_beam_gvg_blue",
-              "@impact": "Prefabs/SpellEffects/MeleeHit"
-            },
-            "HostileFX": {
-              "@beam": "FX/ClientPrefabs/fx_beam_gvg_orange",
-              "@impact": "Prefabs/SpellEffects/MeleeHit"
-            }
-          }
-        }
-      },
-      {
         "@uniquename": "MATCH_ARENA",
         "@matchdurationminutes": "25",
         "@roundduration": "60",
@@ -76,6 +20,7 @@
         "@ticketreductionbydeath": "2",
         "@almostlostticketthreshold": "10",
         "@advantageticketsdifference": "50",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
         "ticketreductionlookup": [
           {
             "@orbdifference": "0",
@@ -125,13 +70,14 @@
         "@roundduration": "60",
         "@ticketdefault": "150",
         "@timeleftorbearlyreset": "0",
-        "@respawndelay": "15",
-        "@matchtimerespawnmultiplier": "0.75",
+        "@respawndelay": "18",
+        "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "5",
         "@maxplayerperteam": "5",
-        "@ticketreductionbydeath": "4",
+        "@ticketreductionbydeath": "6",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
         "ticketreductionlookup": [
           {
             "@orbdifference": "0",
@@ -180,11 +126,11 @@
         "@roundduration": "120",
         "@ticketdefault": "200",
         "@timeleftorbearlyreset": "0",
-        "@respawndelay": "10",
+        "@respawndelay": "15",
         "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "15",
         "@maxplayerperteam": "20",
-        "@ticketreductionbydeath": "2",
+        "@ticketreductionbydeath": "3",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
         "ticketreductionlookup": [
@@ -246,6 +192,7 @@
         "@ticketreductionbydeath": "4",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
         "ticketreductionlookup": [
           {
             "@orbdifference": "0",
@@ -295,12 +242,69 @@
         "@ticketdefault": "150",
         "@timeleftorbearlyreset": "0",
         "@respawndelay": "15",
-        "@matchtimerespawnmultiplier": "0.75",
+        "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "5",
         "@maxplayerperteam": "5",
         "@ticketreductionbydeath": "6",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
+        "ticketreductionlookup": [
+          {
+            "@orbdifference": "0",
+            "@ticketreduction": "0"
+          },
+          {
+            "@orbdifference": "1",
+            "@ticketreduction": "10"
+          },
+          {
+            "@orbdifference": "2",
+            "@ticketreduction": "10"
+          },
+          {
+            "@orbdifference": "3",
+            "@ticketreduction": "20"
+          },
+          {
+            "@orbdifference": "4",
+            "@ticketreduction": "20"
+          }
+        ],
+        "warcamp": {
+          "defense": {
+            "@engageattackrange": "18.0",
+            "@disengageattackrange": "18.0",
+            "@attackinterval": "0.4",
+            "@attackdamage": "0.1",
+            "@attackdistancedelay": "24.0",
+            "@buffradius": "8.7",
+            "@buffspell": "WARCAMP_INVULNERABILITY",
+            "FriendlyFX": {
+              "@beam": "FX/ClientPrefabs/fx_beam_gvg_blue",
+              "@impact": "Prefabs/SpellEffects/MeleeHit"
+            },
+            "HostileFX": {
+              "@beam": "FX/ClientPrefabs/fx_beam_gvg_orange",
+              "@impact": "Prefabs/SpellEffects/MeleeHit"
+            }
+          }
+        }
+      },
+      {
+        "@uniquename": "MATCH_CRYSTAL_GVG_NONLETHAL",
+        "@matchdurationminutes": "25",
+        "@roundduration": "60",
+        "@ticketdefault": "150",
+        "@timeleftorbearlyreset": "0",
+        "@respawndelay": "18",
+        "@matchtimerespawnmultiplier": "1",
+        "@minplayerperteam": "5",
+        "@maxplayerperteam": "5",
+        "@ticketreductionbydeath": "6",
+        "@almostlostticketthreshold": "0",
+        "@advantageticketsdifference": "0",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
         "ticketreductionlookup": [
           {
             "@orbdifference": "0",
@@ -349,13 +353,14 @@
         "@roundduration": "60",
         "@ticketdefault": "150",
         "@timeleftorbearlyreset": "0",
-        "@respawndelay": "15",
-        "@matchtimerespawnmultiplier": "0.75",
+        "@respawndelay": "18",
+        "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "1",
         "@maxplayerperteam": "2",
         "@ticketreductionbydeath": "6",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
+        "@doublehealerpenalty": "DOUBLEHEALER_PENALTY",
         "ticketreductionlookup": [
           {
             "@orbdifference": "0",
@@ -404,11 +409,11 @@
         "@roundduration": "120",
         "@ticketdefault": "200",
         "@timeleftorbearlyreset": "0",
-        "@respawndelay": "10",
+        "@respawndelay": "15",
         "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "15",
         "@maxplayerperteam": "20",
-        "@ticketreductionbydeath": "2",
+        "@ticketreductionbydeath": "3",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
         "ticketreductionlookup": [
