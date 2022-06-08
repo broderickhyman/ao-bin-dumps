@@ -1065,17 +1065,16 @@
       <extendedmissionstep applybuff="REMOVE_T3_RANDOMDUNGEONMAP_BUFF">
         <missions>
           <unlocklootchest count="1" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT6" hideindetailsui="true">
-            <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD"/>
-            <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON"/>
-            <validchest name="HERETIC_SOLO_BOOKCHEST_RARE"/>
-            <validchest name="HERETIC_SOLO_BOOKCHEST_LEGENDARY"/>
-            <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON"/>
-            <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE"/>
-            <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY"/>
-            <validchest name="HERETIC_SOLO_CHEST_STANDARD"/>
+            <validchest name="HERETIC_SOLO_CHEST_STANDARD"/>          
             <validchest name="HERETIC_SOLO_CHEST_UNCOMMON"/>
-            <validchest name="HERETIC_SOLO_CHEST_RARE"/>
-            <validchest name="HERETIC_SOLO_CHEST_LEGENDARY"/>
+            <validchest name="HERETIC_SOLO_CHEST_RARE" />
+            <validchest name="HERETIC_SOLO_CHEST_LEGENDARY" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+            <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD" />
+            <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON" />
+            <validchest name="HERETIC_SOLO_BOOKCHEST_RARE" />
           </unlocklootchest>
           <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT2_SIDETEXT7" hideindetailsui="true">
             <killmob mobid="T3_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
@@ -1106,6 +1105,82 @@
     </rewards>
   </quest>
 
+  <!--COMBAT QUEST - OPTIONAL - Look at Group Dungeon -->
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT3" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_PROGRESSTEXT" priority="1"
+     minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2"  completetext="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_COMPLETIONTEXT" cancelable="true">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="0"/>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <missionstep>     
+        <or locationmarkerid="CITY" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT">
+          <gotocluster clusterdirect="0202"/>
+          <gotocluster clusterdirect="1212"/>
+          <gotocluster clusterdirect="2214"/>
+          <gotocluster clusterdirect="3210"/>
+          <gotocluster clusterdirect="4203"/>
+        </or>
+      </missionstep>
+      <extendedmissionstep locationmarkerid="STATIC_DUNGEON" markedonminimap="true" markedinworld="true">
+        <missions>
+          <gotolocation locationmarkerid="STATIC_DUNGEON_TRIGGER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep locationmarkerid="STATIC_DUNGEON_1" markedinworld="true" markedonminimap="true">
+        <preactions>
+          <openhintbox uniquename="STATIC_DUNGEON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STATIC_DUNGEON_3" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT" hideindetailsui="true"/>
+        </missions>   
+      </extendedmissionstep>
+      <extendedmissionstep>
+       
+        <missions>
+        <or locationmarkerid="STATIC_DUNGEON_2" markedonminimap="true" hideindetailsui="false" hideinhud="false" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT1">
+          <gotocluster clusterdirect="DNG-HER-01-MAIN-01"/>
+          <gotocluster clusterdirect="DNG-HER-01-MAIN-02"/>
+          <gotocluster clusterdirect="DNG-HER-01-MAIN-03"/>
+          <gotocluster clusterdirect="DNG-HER-01-MAIN-04"/>
+          <gotocluster clusterdirect="DNG-HER-01-MAIN-05"/>
+        </or>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <missions>       
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT3" markedinworld="false" locationmarkerid="STATIC_DUNGEON_BOSS">
+            <killmob mobid="T3_MOB_HERETIC_THIEF_VETERAN_CHAMPION" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_HERETIC_THIEF_VETERAN_MINIBOSS" count="1" countpartykills="true"/>
+            
+            <killmob mobid="T3_MOB_HERETIC_ARCHER_VETERAN_CHAMPION" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_HERETIC_ARCHER_VETERAN_MINIBOSS" count="1" countpartykills="true"/>
+            
+            <killmob mobid="T3_MOB_HERETIC_MAGE_VETERAN_CHAMPION" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_HERETIC_MAGE_VETERAN_MINIBOSS" count="1" countpartykills="true"/>
+            
+            <killmob mobid="T3_MOB_HERETIC_TANK_VETERAN_CHAMPION" count="1" countpartykills="true"/>
+            <killmob mobid="T3_MOB_HERETIC_TANK_VETERAN_MINIBOSS" count="1" countpartykills="true"/>
+          </or>     
+          <unlocklootchest count="1" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT2" markedinworld="false" locationmarkerid="STATIC_DUNGEON_BOSS">
+            <validchest name="STATIC_HERETIC_POI" />                     
+            <validchest name="STATIC_HERETIC_CHAMPION"/>           
+            <validchest name="STATIC_HERETIC_MINIBOSS"/>
+            <validchest name="STATIC_HERETIC_BOSS"/>      
+          </unlocklootchest>
+      </missions>
+      </extendedmissionstep>
+      <extendedcompletionstep locationmarkerid="STATIC_DUNGEON_EXIT" markedinworld="true" markedonminimap="true">
+        <missions>
+          <gotoquestgiver />
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+      <item itemid="T5_SKILLBOOK_NONTRADABLE" count="1"/>
+    </rewards>
+  </quest>
   
   <!--GO TO ONE OF THE BIOME CITIES-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CITY" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2,MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING,MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" completetext="@MISSIONS_T2_TUTORIAL_GO_TO_CITY_COMPLETIONTEXT" requiresonlyonepreviousquest="true" cancelable="true">
@@ -1208,7 +1283,7 @@
   
   <!--DECIDE WHAT TO GATHER-->
   <!--ALL THE OTHER GATHER QUESTS ARE AT THE BUTTOM OF THE XML-->
-  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_COMPLETIONTEXT" hideifquestactive=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK">
+  <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" nextquest="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" previousquests="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" requiresonlyonepreviousquest="true" completetext="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_COMPLETIONTEXT" hideifquestactive=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" hideifquestcompleted=" MISSIONS_T2_TUTORIAL_GATHERING_ORE MISSIONS_T2_TUTORIAL_GATHERING_HIDE MISSIONS_T2_TUTORIAL_GATHERING_WOOD MISSIONS_T2_TUTORIAL_GATHERING_ROCK" >
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="1" maxdistance="1" />
@@ -1221,9 +1296,6 @@
         <acquireitem itemid="T2_2H_TOOL_SICKLE" count="1"/>
       </missionstep>
       <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="T2_WHERE_FIBER"/>
-        </preactions>
         <missions>
         <or  textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_SIDETEXT1" locationmarkerid="T2_FIBER" markedonminimap="true">
           <gotocluster clusterdirect="0214"/>
@@ -1240,7 +1312,15 @@
         </or>
       </missions>
       </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_GATHER_HINT" markedinworld="false" >
+        <missions>       
+            <gotolocation locationmarkerid="T2_GATHER" hideindetailsui="true" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_MOVE_SIDETEXT" />
+        </missions>
+      </extendedmissionstep>
       <extendedmissionstep markedonminimap="true" locationmarkerid="T2_FIBER" markedinworld="false" >
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_FIBER"/>
+        </preactions>
         <missions>
           <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_FIBER_SIDETEXT2"/>
         </missions>
@@ -1310,7 +1390,7 @@
  
   
   <!--CITY TOURS FOR BIOME CITIES-->
-  <quest uniquename="MISSIONS_T2_BRIDGEWATCH_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+  <quest uniquename="MISSIONS_T2_BRIDGEWATCH_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" hideifquestcompleted="MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR">
     <variables>
       <dynamiccluster name ="CLUSTER_A">
         <distancetocluster mindistance="1" maxdistance ="1"/>
@@ -1322,9 +1402,6 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
-      </missionstep>
       <extendedmissionstep>
         <missions>
           <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
@@ -1426,6 +1503,9 @@
           <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
         </missions>
       </extendedmissionstep>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
      <extendedcompletionstep>
         <preactions>
           <openhintbox uniquename="BANK"/>
@@ -1439,7 +1519,7 @@
     </rewards>
   </quest>
       
-        <quest uniquename="MISSIONS_T2_LYMHURST_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+        <quest uniquename="MISSIONS_T2_LYMHURST_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" hideifquestcompleted="MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR">
     <variables>
        <dynamiccluster name ="CLUSTER_A">
         <distancetocluster mindistance="1" maxdistance ="1"/>
@@ -1451,9 +1531,7 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
-      </missionstep>
+     
       <extendedmissionstep >
         <missions>
           <gotolocation locationmarkerid="EXPEDITION" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"/>
@@ -1555,6 +1633,9 @@
           <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
         </missions>
       </extendedmissionstep>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
       <extendedcompletionstep>
         <preactions>
           <openhintbox uniquename="BANK"/>
@@ -1568,7 +1649,7 @@
     </rewards>
   </quest>
     
-  <quest uniquename="MISSIONS_T2_FORTSTERLING_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+  <quest uniquename="MISSIONS_T2_FORTSTERLING_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" hideifquestcompleted="MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR">
     <variables>
        <dynamiccluster name ="CLUSTER_A">
         <distancetocluster mindistance="1" maxdistance ="1"/>
@@ -1580,9 +1661,7 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
-      </missionstep>
+      
        <extendedmissionstep >
         <missions>
           <gotolocation locationmarkerid="TRAVEL" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"/>
@@ -1684,6 +1763,9 @@
           <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
         </missions>
       </extendedmissionstep>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
       <extendedcompletionstep>
         <preactions>
           <openhintbox uniquename="BANK"/>
@@ -1697,7 +1779,7 @@
     </rewards>
   </quest>
     
-  <quest uniquename="MISSIONS_T2_MARTLOCK_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL">
+  <quest uniquename="MISSIONS_T2_MARTLOCK_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" hideifquestcompleted="MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR">
     <variables>
       <dynamiccluster name ="CLUSTER_A">
         <distancetocluster mindistance="1" maxdistance ="1"/>
@@ -1709,9 +1791,6 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
-      </missionstep>
       <extendedmissionstep >
         <missions>
           <gotolocation locationmarkerid="VANITY" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"/>
@@ -1812,8 +1891,11 @@
         <missions>
           <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
         </missions>
-      </extendedmissionstep> 
-        <extendedcompletionstep>
+      </extendedmissionstep>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
+      <extendedcompletionstep>
         <preactions>
           <openhintbox uniquename="BANK"/>
         </preactions>
@@ -1826,7 +1908,7 @@
     </rewards>
   </quest>
   
-  <quest uniquename="MISSIONS_T2_THETFORT_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL" >
+  <quest uniquename="MISSIONS_T2_THETFORT_CITYTOUR" mobfaction="ROYALARMY" title="@MISSIONS_T2_BIGCITYTOUR_TITLE" offertext="@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT" progresstext="@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="adventurer" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT" cancelable="true" previousquests="MISSIONS_T2_TUTORIAL_GO_TO_CITY" completehintbox="END_OF_TUTORIAL"  hideifquestcompleted="MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR">
     <variables>
       <dynamiccluster name ="CLUSTER_A">
         <distancetocluster mindistance="1" maxdistance ="1"/>
@@ -1838,9 +1920,7 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <missionstep>
-        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
-      </missionstep>
+   
       <extendedmissionstep >
         <missions>
           <gotolocation locationmarkerid="ISLAND" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"/>
@@ -1941,7 +2021,10 @@
         <missions>
           <gotolocation locationmarkerid="BANK" hideindetailsui="true" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"/>
         </missions>
-      </extendedmissionstep>  
+      </extendedmissionstep>
+      <missionstep>
+        <haveplaytime seconds="1" hideinhud="true" textloca="@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"/>
+      </missionstep>
       <extendedcompletionstep>
         <preactions>
           <openhintbox uniquename="BANK"/>
@@ -2200,7 +2283,7 @@
         </preactions>
         <missions>
           <killmob faction="HERETIC" count="3" textloca="@MISSIONS_T2_TUTORIAL_TEST_E2_SIDETEXT"/>
-          <unlockachievement achievement="START" masterylevel="0" hideindetailsui="true" hideinhud="true"/>
+          <unlockachievement achievement="START" masterylevel="1" hideindetailsui="true" hideinhud="true"/>
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
@@ -2570,7 +2653,7 @@
         </preactions>
         <missions>
           <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
-            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="1"/>
             <uselearningpoints value="1"/>
           </or>
         </missions>
@@ -2646,7 +2729,7 @@
         </preactions>
         <missions>
           <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
-            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="1"/>
             <uselearningpoints value="1"/>
           </or>
         </missions>
@@ -2721,7 +2804,7 @@
         </preactions>
         <missions>
           <or textloca="@MISSIONS_T2_TUTORIAL_TEST_MA3_SIDETEXT">
-            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="0"/>
+            <unlockachievement achievement="COMBAT_TRAINEE" masterylevel="1"/>
             <uselearningpoints value="1"/>
           </or>
         </missions>
@@ -3033,7 +3116,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem count="20" itemvariable="ITEM_B"/>
         </preactions>
@@ -3104,7 +3187,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem count="20" itemvariable="ITEM_B"/>
         </preactions>
@@ -3175,7 +3258,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem count="20" itemvariable="ITEM_B"/>
         </preactions>
@@ -3249,7 +3332,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3323,7 +3406,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3398,7 +3481,7 @@
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3482,7 +3565,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3564,7 +3647,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3646,7 +3729,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3728,7 +3811,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3811,7 +3894,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3893,7 +3976,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -3975,7 +4058,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4057,7 +4140,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4139,7 +4222,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4221,7 +4304,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4303,7 +4386,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4385,7 +4468,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4468,7 +4551,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_LIGHT_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4550,7 +4633,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_MEDIUM_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4632,7 +4715,7 @@ Light-->
           </gotoquestgiver>
         </missions>
       </extendedmissionstep>
-      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B">
+      <extendedcompletionstep applybuff="TRADE_PACK_BUFF_HEAVY_B" blocktownportalusage="true">
         <preactions>
           <receiveitem itemvariable="ITEM_B"/>
         </preactions>
@@ -4671,9 +4754,6 @@ Light-->
         <acquireitem itemid="T2_2H_TOOL_PICK" count="1"/>
       </missionstep>
       <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="T2_WHERE_ORE"/>
-        </preactions>
         <missions> 
           <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_SIDETEXT1" locationmarkerid="T2_ORE" markedonminimap="true" >
             <gotocluster clusterdirect="3209"/>
@@ -4690,7 +4770,15 @@ Light-->
           </or>
         </missions>
       </extendedmissionstep>
-      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ORE" markedinworld="false" >   
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_GATHER_HINT" markedinworld="false" >
+        <missions>
+            <gotolocation locationmarkerid="T2_GATHER" markedinworld="false" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_MOVE_SIDETEXT"/>          
+        </missions>
+      </extendedmissionstep>   
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ORE" markedinworld="false" >
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_ORE"/>
+        </preactions>
         <missions>
           <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ORE_SIDETEXT2"/>
         </missions>
@@ -4771,9 +4859,6 @@ Light-->
         <acquireitem itemid="T2_2H_TOOL_HAMMER" count="1"/>
       </missionstep>
       <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="T2_WHERE_STONE"/>
-        </preactions>
         <missions>
           <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_SIDETEXT1" locationmarkerid="T2_ROCK" markedonminimap="true">
             <gotocluster clusterdirect="1201"/>
@@ -4790,7 +4875,15 @@ Light-->
           </or>
         </missions>
       </extendedmissionstep>
-      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ROCK" markedinworld="false" >
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_GATHER_HINT" markedinworld="false" >
+        <missions>
+            <gotolocation locationmarkerid="T2_GATHER"  markedinworld="false" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_MOVE_SIDETEXT"/>      
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_ROCK" markedinworld="false">
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_STONE"/>
+        </preactions>
         <missions>
           <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_ROCK_SIDETEXT2"/>
         </missions>
@@ -4872,9 +4965,6 @@ Light-->
         <acquireitem itemid="T2_2H_TOOL_AXE" count="1"/>
       </missionstep>
       <extendedmissionstep>
-        <preactions>
-          <openhintbox uniquename="T2_WHERE_WOOD"/>
-        </preactions>
         <missions>
           <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_SIDETEXT1" locationmarkerid="T2_WOOD" markedonminimap="true">
             <gotocluster clusterdirect="0214"/>
@@ -4891,8 +4981,15 @@ Light-->
           </or>
         </missions>
       </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_GATHER_HINT" markedinworld="false"  >
+        <missions>        
+            <gotolocation locationmarkerid="T2_GATHER"  markedinworld="false" markedonminimap="false" hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_MOVE_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
       <extendedmissionstep markedonminimap="true" locationmarkerid="T2_WOOD" markedinworld="false" >
-       
+        <preactions>
+          <openhintbox uniquename="T2_WHERE_WOOD"/>
+        </preactions>
         <missions>
           <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_WOOD_SIDETEXT2"/>
         </missions>
@@ -4974,9 +5071,6 @@ Light-->
         <acquireitem itemid="T2_2H_TOOL_KNIFE" count="1"/>
       </missionstep>
       <extendedmissionstep>
-      <preactions>
-        <openhintbox uniquename="T2_WHERE_HIDE"/>
-      </preactions>
       <missions>
         <or textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_SIDETEXT1"  locationmarkerid="T2_HIDE" markedonminimap="true">
           <gotocluster clusterdirect="0214"/>
@@ -4993,7 +5087,15 @@ Light-->
         </or>
       </missions>
       </extendedmissionstep>
+      <extendedmissionstep markedonminimap="true" locationmarkerid="T2_GATHER_HINT" markedinworld="false" >
+        <missions>         
+            <gotolocation locationmarkerid="T2_GATHER" markedinworld="false" markedonminimap="false"  hideindetailsui="true" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_MOVE_SIDETEXT" />
+        </missions>
+      </extendedmissionstep>
       <extendedmissionstep markedonminimap="true" locationmarkerid="T2_HIDE" markedinworld="false" >   
+        <preactions>
+        <openhintbox uniquename="T2_WHERE_HIDE"/>
+      </preactions>
         <missions>
           <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_T2_TUTORIAL_GATHERING_HIDE_SIDETEXT2"/>
         </missions>

@@ -1,13 +1,8 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/S_MN_CastleOutpost.unity" unityguid="0814b67091c7bc04aba2c03e2b5b80e6" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-28 -26" colBoundsMax="26 28">
   <criticalscenemembers>
-    <criticalscenemember id="treasurechest_01" type="treasurechest" layerId="Layer_01">
-      <tile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-1 4 1" roty="90">
-        <treasurechest type="OUTLAND_COFFER_CASTLEOUTPOST" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="clustermonolith_01" type="clustermonolith" layerId="">
-      <tile name="T1_CLUSTERMONOLITH_OUTPOST" pos="-15 5 17">
-        <clustermonolith type="SMALLCASTLE">
+    <criticalscenemember id="castle_01" type="castle" layerId="">
+      <tile name="T1_CASTLE_OUTPOST" pos="0 4 0">
+        <castle type="SMALLCASTLE" capturezonepos="0 0 0" musicrange="100">
           <guardspawnpoint pos="-0.2999992 -5.400002" roty="0" mobname="MOB_CASTLE_BASIC_GUARD_ARCHER" guardtype="BASIC" />
           <guardspawnpoint pos="4.5 8.299995" roty="0" mobname="MOB_CASTLE_BASIC_GUARD_SOLDIER" guardtype="BASIC" />
           <guardspawnpoint pos="8.490002 0.7699966" roty="180" mobname="MOB_CASTLE_BASIC_GUARD_ARCHER" guardtype="BASIC" />
@@ -19,19 +14,14 @@
           <guardspawnpoint pos="-8.200001 -2.400002" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
           <guardspawnpoint pos="-2.299999 -7.599998" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
           <guardspawnpoint pos="6.299999 4.400002" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
-        </clustermonolith>
+        </castle>
       </tile>
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
     <layergroup name="">
       <layer id="Layer_01" name="Outland_Coffer" activationRule="X_X_X_X_Outlands_X">
-        <criticaltile name="MOUNTAIN_RED_RELIC_C_COFFER" pos="-1 4 1" roty="90" id="treasurechest_01" type="treasurechest">
-          <treasurechest type="OUTLAND_COFFER_CASTLEOUTPOST" />
-        </criticaltile>
-        <tile name="UnrestrictedPvpZone" pos="-1 4 1" roty="90">
-          <unrestrictedpvpzone radius="40" />
-        </tile>
+        <tile name="TreasureSpawnpointCastleOutpost" pos="-4 4 4" roty="45" />
       </layer>
     </layergroup>
     <tile name="MOUNTAIN_RED_CASTLE_STRAIGHT_RAILING_FORTIFIED_12M_A" pos="-20 5 0" roty="270" />
@@ -74,7 +64,7 @@
     <tile name="MOUNTAIN_RED_HILL_4M_BASE_TO_SUB_01_STAIRS_B" pos="20 0 0" />
     <tile name="MOUNTAIN_RED_CASTLE_WALL_SLOPE_6M_STRAIGHT_12M_B_SUB_01" pos="0 0 20" />
     <tile name="MOUNTAIN_RED_FACTION_WARFARE_OUTPOST_TOWER_DECO_A" pos="-17 4 17" />
-    <tile name="MOUNTAIN_RED_FILL_BLOOD_SPLATTER_A" pos="-7 4 2" />
+    <tile name="MOUNTAIN_RED_FILL_BLOOD_SPLATTER_A" pos="-4 4 2" />
     <tile name="MOUNTAIN_RED_FILL_BLOOD_SPLATTER_B" pos="4 4 -1" />
     <tile name="MOUNTAIN_RED_FILL_BLOOD_SPLATTER_SMALL_B" pos="-2 4 10" />
     <tile name="MOUNTAIN_RED_FILL_BLOOD_SPLATTER_SMALL_C" pos="6 4 0" roty="65" />
@@ -99,7 +89,6 @@
     <tile name="MOUNTAIN_RED_FILL_SPIKES_STOCKADE_A" pos="-10 0 -23.5" roty="180" />
     <tile name="MOUNTAIN_RED_CASTLE_WALL_SLOPE_8M_DOOR_SIEGE_A" pos="0 0 -21" roty="270" />
     <tile name="MOUNTAIN_RED_FILL_SPIKES_STOCKADE_A_DIAGONAL" pos="23 0 -23" roty="136" />
-    <tile name="MOUNTAIN_RED_FILL_PLATFORM_STONE_FLAT_B" pos="-1 4 1" />
     <tile name="MOUNTAIN_RED_FILL_HANGING_ROPES_10M_A" pos="-21 11 4" roty="106" scale="1.102157 1 1" />
     <tile name="MOUNTAIN_RED_FILL_FARM_GROUND_STRAW_A" pos="17.5 5 -19.5" roty="180" />
     <tile name="MOUNTAIN_RED_FILL_FARM_GROUND_STRAW_A" pos="-18.5 5 -16.5" roty="180" />
@@ -111,14 +100,14 @@
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-13 5 -17" roty="90" scale="0.750001 1 0.750001" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-19 5 -4" roty="270" scale="0.750001 1 0.4468914" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-18 5 1" roty="90" scale="0.750001 1 0.4468914" />
-    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="-13 4 -13" roty="180" scale="0.75 1 0.75" />
+    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="-13 4 -14" roty="180" scale="0.75 1 0.75" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="17 5 -13" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="6 4 16" roty="180" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="-13 4 14" roty="180" scale="0.75 1 0.75" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-14 4 10" roty="90" scale="0.7500005 1 0.7500005" />
-    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="5 4 -8" roty="270" scale="0.7500005 1 0.7500005" />
+    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="8 4 -9" roty="270" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="13 4 11" roty="90" scale="0.750001 1 0.750001" />
-    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="9 4 2" roty="270" scale="0.7500005 1 0.7500005" />
+    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="11 4 1" roty="270" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="19 5 17" roty="90" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_FILL_SPIKES_STOCKADE_A_DIAGONAL" pos="-23 0 -23" roty="226" />
     <tile name="MOUNTAIN_RED_FILL_FARM_GROUND_STRAW_A" pos="-18.5 5 10.5" roty="180" scale="0.5742031 1 1" />
@@ -126,7 +115,7 @@
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="18 5 -8" roty="90" scale="0.7500005 1 0.4482494" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="9 5 -18" scale="1.027614 1 0.5341814" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="16 5 -18" roty="180" scale="0.75 1 0.75" />
-    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="13 4 -11" roty="90" scale="0.750001 1 0.750001" />
+    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_A" pos="15 4 -12" roty="90" scale="0.750001 1 0.750001" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="8 4 -15" roty="90" scale="0.750001 1 0.750001" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-10 4 -6" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_C" pos="-17 5 -15" roty="180" scale="0.7500005 1 0.7500005" />
@@ -144,7 +133,7 @@
     <tile name="MOUNTAIN_RED_FILL_FARM_GROUND_STRAW_A" pos="15.5 5 17.5" />
     <tile name="MOUNTAIN_RED_FILL_CITY_TORCH_B_SMALL" pos="-3 8 20" roty="90" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_B" pos="-15 4 -6" roty="90" scale="0.7500005 1 0.7500005" />
-    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_B" pos="2 4 -9" roty="90" scale="0.7500005 1 0.7500005" />
+    <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_B" pos="2 4 -11" roty="90" scale="0.7500005 1 0.7500005" />
     <tile name="MOUNTAIN_RED_GROUND_STONES_FLAT_B" pos="-16 4 5" scale="0.75 1 0.75" />
     <tile name="MOUNTAIN_RED_FILL_CITY_TORCH_B_SMALL" pos="12 8 20" roty="270" />
     <tile name="MOUNTAIN_RED_FILL_CITY_TORCH_B_SMALL" pos="14 8 20" roty="90" />
@@ -201,8 +190,9 @@
     <tile name="castle_banner_hanging_01" pos="-19 3 -13" roty="270" />
     <tile name="castle_banner_hanging_01" pos="-19 3 4" roty="270" />
     <tile name="castle_banner_hanging_01" pos="-4 3 19" />
-    <criticaltile name="T1_CLUSTERMONOLITH_OUTPOST" pos="-15 5 17" id="clustermonolith_01" type="clustermonolith">
-      <clustermonolith type="SMALLCASTLE">
+    <tile name="MOUNTAIN_RED_CASTLE_FILL_GUILD_GROUND_STONES_B" pos="0 4 0" />
+    <criticaltile name="T1_CASTLE_OUTPOST" pos="0 4 0" id="castle_01" type="castle">
+      <castle type="SMALLCASTLE" capturezonepos="0 0 0" musicrange="100">
         <guardspawnpoint pos="-0.2999992 -5.400002" roty="0" mobname="MOB_CASTLE_BASIC_GUARD_ARCHER" guardtype="BASIC" />
         <guardspawnpoint pos="4.5 8.299995" roty="0" mobname="MOB_CASTLE_BASIC_GUARD_SOLDIER" guardtype="BASIC" />
         <guardspawnpoint pos="8.490002 0.7699966" roty="180" mobname="MOB_CASTLE_BASIC_GUARD_ARCHER" guardtype="BASIC" />
@@ -214,9 +204,9 @@
         <guardspawnpoint pos="-8.200001 -2.400002" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
         <guardspawnpoint pos="-2.299999 -7.599998" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
         <guardspawnpoint pos="6.299999 4.400002" roty="0" mobname="MOB_CASTLE_ELITE_GUARD_KNIGHT" guardtype="ELITE" />
-      </clustermonolith>
+      </castle>
     </criticaltile>
-    <tile name="MiniMapMarker" pos="-16 5 18">
+    <tile name="MiniMapMarker" pos="0 4 0">
       <minimapmarker type="Castle_Outpost" />
     </tile>
     <tile name="BLOCK_CONSTRUCTIONS_10x10" pos="-20 -4 -20" />

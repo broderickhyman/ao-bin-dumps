@@ -1,21 +1,9 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/MORGANA/MOR_MON_HIGH_UNCOM_STRAIGHT_DiningHall_01.unity" unityguid="bf0ca04361ec10945b9559bed717040f" editorBoundsMin="-80 -40" editorBoundsMax="80 40" colBoundsMin="-80 -41" colBoundsMax="80 41">
   <criticalscenemembers>
-    <criticalscenemember id="lootchest_02" type="lootchest" layerId="Layer_01">
-      <tile name="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_UNCOMMON" pos="-22.5 4 0.5" roty="270" />
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_01" type="lootchest" layerId="Layer_04">
-      <tile name="FOREST_GREEN_LOOTCHEST_MORGANA_UNCOMMON" pos="-22.5 4 0.5" roty="270" />
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_04" type="lootchest" layerId="Layer_12">
-      <tile name="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_STANDARD" pos="-44.5 12 17.5" roty="270" />
-    </criticalscenemember>
     <criticalscenemember id="shrine_01" type="shrine" layerId="Layer_15">
       <tile name="SHRINE_NON_COMBAT_BUFF" pos="-3 10 -25">
         <shrine shrinetype="GENERAL_SHRINE_COMBAT_BUFF" />
       </tile>
-    </criticalscenemember>
-    <criticalscenemember id="lootchest_03" type="lootchest" layerId="Layer_17">
-      <tile name="FOREST_GREEN_LOOTCHEST_MORGANA_STANDARD" pos="-44.5 12 17.5" roty="270" />
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
@@ -211,19 +199,19 @@
     </layergroup>
     <layergroup name="Reward">
       <layer id="Layer_01" name="reward_solo">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_UNCOMMON" pos="-22.5 4 0.5" roty="270" id="lootchest_02" type="lootchest" />
+        <tile name="SpawnPoint_LOOTCHEST_MORGANA_SOLO_UNCOMMON" pos="-22.5 4 0.5" roty="270" />
       </layer>
       <layer id="Layer_04" name="reward_veteran">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_MORGANA_UNCOMMON" pos="-22.5 4 0.5" roty="270" id="lootchest_01" type="lootchest" />
+        <tile name="SpawnPoint_LOOTCHEST_MORGANA_VETERAN_UNCOMMON" pos="-22.5 4 0.5" roty="270" />
       </layer>
     </layergroup>
     <layergroup name="SECRET">
       <layer id="Layer_12" name="solo_chest">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_STANDARD" pos="-44.5 12 17.5" roty="270" id="lootchest_04" type="lootchest" />
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MINIBOSS" pos="-41.32 10.08 19.9" roty="241">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MINIBOSS" />
         </tile>
         <tile name="FOREST_GREEN_MOR_CASTLE_DOOR_CLOSED_B" pos="35 0 -25" roty="180" scale="1 1.26566 1" />
+        <tile name="SpawnPoint_LOOTCHEST_MORGANA_SOLO_STANDARD" pos="-44.5 12 17.5" roty="270" />
       </layer>
       <layer id="Layer_15" name="solo_Shrine_01">
         <tile name="FOREST_GREEN_MOR_CASTLE_DOOR_CLOSED_B" pos="35 0 25" roty="180" scale="1 1.26566 1" />
@@ -237,11 +225,11 @@
         <tile name="FOREST_GREEN_MOR_CASTLE_DOOR_CLOSED_B" pos="35 0 -25" roty="180" scale="1 1.26566 1" />
       </layer>
       <layer id="Layer_17" name="veteran_chest">
-        <criticaltile name="FOREST_GREEN_LOOTCHEST_MORGANA_STANDARD" pos="-44.5 12 17.5" roty="270" id="lootchest_03" type="lootchest" />
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MINIBOSS" pos="-41.42 10.08 19.94" roty="248.32">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MINIBOSS" />
         </tile>
         <tile name="FOREST_GREEN_MOR_CASTLE_DOOR_CLOSED_B" pos="35 0 -25" roty="180" scale="1 1.26566 1" />
+        <tile name="SpawnPoint_LOOTCHEST_MORGANA_VETERAN_STANDARD" pos="-44.5 12 17.5" roty="270" />
       </layer>
       <layer id="Layer_18" name="veteran_none">
         <tile name="FOREST_GREEN_MOR_CASTLE_DOOR_CLOSED_B" pos="35 0 25" roty="180" scale="1 1.26566 1" />

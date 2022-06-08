@@ -1,130 +1,190 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/CRYSTAL/Master/CL_CrystalRealm_02.unity" unityguid="c5bebf1a7bd0f02469ac4e79b7ab1cbe" editorBoundsMin="-75 -75" editorBoundsMax="75 75" colBoundsMin="-555 -307" colBoundsMax="233 581">
   <criticalscenemembers />
   <tiles>
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="30 -3 35" roty="90" scale="1 1.25 1" />
+    <layergroup name="Matchtype">
+      <layer id="Layer_01" name="Lethal">
+        <tile name="WarCamp_Left_Crystalrealm" pos="60 -4 0" roty="90">
+          <warcamp isattacker="true">
+            <spawnpositions>
+              <position pos="64.88 -1.2499" />
+              <position pos="64.46 0.5361" />
+              <position pos="66.48 -1.1182" />
+              <position pos="65.43 -3.0399" />
+              <position pos="66.28 0.396" />
+              <position pos="65.52 1.8846" />
+              <position pos="64.97 4.1287" />
+              <position pos="63.57 -3.42" />
+              <position pos="61.92 -6.08" />
+              <position pos="61.9 -3.96" />
+              <position pos="63.93 -5.01" />
+              <position pos="54.06 -2.99" />
+              <position pos="54.58 -1.44" />
+              <position pos="53.1 -1.74" />
+              <position pos="54.35 -0.04" />
+              <position pos="52.79 -0.12" />
+              <position pos="54.09 1.38" />
+              <position pos="52.66 1.94" />
+              <position pos="53.46 3.02" />
+              <position pos="60.44 -6.25" />
+            </spawnpositions>
+          </warcamp>
+        </tile>
+        <tile name="WarCamp_Right_Crystalrealm" pos="0 -4 -60">
+          <warcamp isattacker="false">
+            <spawnpositions>
+              <position pos="5.22 -59.16" />
+              <position pos="0.57 -65.2" />
+              <position pos="-1.14 -65.13" />
+              <position pos="5.69 -57.21" />
+              <position pos="3.94 -57.93" />
+              <position pos="6.72 -60.72" />
+              <position pos="-3.31 -64.84" />
+              <position pos="2 -65.99" />
+              <position pos="-0.2 -66.64" />
+              <position pos="6.77 -59.04" />
+              <position pos="-1.88 -66.42" />
+              <position pos="4.35 -56.1567" />
+              <position pos="2.6 -54.85" />
+              <position pos="5.97 -55.22" />
+              <position pos="6.95 -57.65" />
+              <position pos="-3.3 -66.38" />
+              <position pos="1.24 -67.28" />
+              <position pos="4.34 -54.67" />
+              <position pos="-5.14 -65.36" />
+              <position pos="-4.32 -63.69" />
+            </spawnpositions>
+          </warcamp>
+        </tile>
+        <tile name="MatchLootChest_Arena_Winner" pos="-5 -1 5">
+          <matchlootchest iswinner="true">
+            <spawnpositions>
+              <position pos="1.5488 5" />
+              <position pos="-2.4376 10.7469" />
+              <position pos="-3.3149 -1.3873" />
+              <position pos="-11.812 2.6265" />
+              <position pos="-9.4255 9.7971" />
+            </spawnpositions>
+          </matchlootchest>
+        </tile>
+      </layer>
+      <layer id="Layer_02" name="Non-Lethal">
+        <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-5 0 5" />
+        <tile name="WarCamp_Left_Crystalrealm_NoChest" pos="60 -4 0" roty="90">
+          <warcamp isattacker="true">
+            <spawnpositions>
+              <position pos="64.88 -1.2499" />
+              <position pos="64.46 0.5361" />
+              <position pos="66.48 -1.1182" />
+              <position pos="65.43 -3.0399" />
+              <position pos="66.28 0.396" />
+              <position pos="65.52 1.8846" />
+              <position pos="64.97 4.1287" />
+              <position pos="63.57 -3.42" />
+              <position pos="61.92 -6.08" />
+              <position pos="61.9 -3.96" />
+              <position pos="63.93 -5.01" />
+              <position pos="54.06 -2.99" />
+              <position pos="54.58 -1.44" />
+              <position pos="53.1 -1.74" />
+              <position pos="54.35 -0.04" />
+              <position pos="52.79 -0.12" />
+              <position pos="54.09 1.38" />
+              <position pos="52.66 1.94" />
+              <position pos="53.46 3.02" />
+              <position pos="60.44 -6.25" />
+            </spawnpositions>
+          </warcamp>
+        </tile>
+        <tile name="WarCamp_Right_Crystalrealm _NoChest" pos="0 -4 -60">
+          <warcamp isattacker="false">
+            <spawnpositions>
+              <position pos="5.22 -59.16" />
+              <position pos="0.57 -65.2" />
+              <position pos="-1.14 -65.13" />
+              <position pos="5.69 -57.21" />
+              <position pos="3.94 -57.93" />
+              <position pos="6.72 -60.72" />
+              <position pos="-3.31 -64.84" />
+              <position pos="2 -65.99" />
+              <position pos="-0.2 -66.64" />
+              <position pos="6.77 -59.04" />
+              <position pos="-1.88 -66.42" />
+              <position pos="4.35 -56.1567" />
+              <position pos="2.6 -54.85" />
+              <position pos="5.97 -55.22" />
+              <position pos="6.95 -57.65" />
+              <position pos="-3.3 -66.38" />
+              <position pos="1.24 -67.28" />
+              <position pos="4.34 -54.67" />
+              <position pos="-5.14 -65.36" />
+              <position pos="-4.32 -63.69" />
+            </spawnpositions>
+          </warcamp>
+        </tile>
+      </layer>
+    </layergroup>
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="20 -3 45" roty="90" scale="1 1.25 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="5 -3 -5" scale="1 1.25 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="40 -2 60" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-65 -2 -30" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="30 -2 70" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-75 -2 -20" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_COLUMN_BROKEN_A" pos="20 -2 -45" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_COLUMN_BROKEN_A" pos="45 -3 -20" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="30 -2 65" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="20 -2 75" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="35 0 -35" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_ROUNDED_LARGE_A" pos="35 0 -35" roty="270" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_ROUNDED_LARGE_A" pos="55 -4 45" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="55 -4 45" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="20 -2 60" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-60 -2 -20" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-60 -2 -40" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="10 -2 70" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-70 -2 -10" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-70 -2 -30" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_ROUNDED_LARGE_A" pos="-45 -4 -55" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="-45 -4 -55" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="-15 -3 15" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-10 -4 -70" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="10 -4 -70" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="70 -4 -10" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-60 -4 0" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="70 -4 10" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-65 -4 10" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_20x20_B" pos="55 0 -55" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-10 -4 65" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="0 -4 60" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-35 -2 -25" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -2 -15" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-35 -2 -35" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -2 -45" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="45 -2 55" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="15 -2 55" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="25 -2 35" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="35 -2 35" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-45 -2 -15" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -2 -5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-45 -2 -25" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -2 -35" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="35 -2 65" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="5 -2 65" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="15 -2 45" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="25 -2 45" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 1 35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="15 1 55" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="45 1 55" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="35 1 35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="25 1 35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-35 1 -35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-35 1 -25" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 1 -15" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 1 -45" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="5 1 65" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="35 1 65" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="25 1 45" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="15 1 45" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-45 1 -25" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-45 1 -15" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-64 1 -5" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 1 -35" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -2 35" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="15 -1 66" roty="45" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="46 -1 63" roty="135" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="5 -1 76" roty="45" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="36 -1 73" roty="135" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="-73 -1 75" roty="45" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="-65 -1 -44" roty="315" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="-64 -1 -14" roty="45" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="-75 -1 -34" roty="315" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A" pos="-74 -1 -4" roty="45" />
     <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_A" pos="60 -4 0" />
     <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_A" pos="0 -4 -60" roty="180" />
     <tile name="CRYSTAL_FILL_SAND_GATHERING_A" pos="5 -4 -13" />
     <tile name="CRYSTAL_FILL_SAND_GATHERING_B" pos="13 -4 -5" roty="270" />
     <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="-1 -4 -15" />
     <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="15 -4 3" roty="270" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="44 -4 5" roty="270" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="54 -4 30" roty="270" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="-29 -4 -53" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-7 -4 -65" roty="338" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="67 -4 5" roty="172" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="10 -4 -60" roty="157" scale="0.87 1 0.87" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="66 -4 -6" roty="328" scale="0.7011 1 0.7011" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="48 -4 32" roty="58" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="1 -4 -52" roty="148" scale="0.7011 1 0.7011" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-31 -4 -13" roty="58" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="23 -4 -8" roty="337" scale="0.87 1 0.87" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-9 -4 -50" roty="328" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="50 -4 12" roty="58" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="14 -4 32" roty="358.66" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="27 -4 13" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-26 -4 -43" roty="328" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-17 -4 -38" roty="58" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-57 -4 15" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-14 -4 -23" roty="209.75" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-59 -4 0" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-11 -4 56" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-1 -4 60" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="40 0 -69" roty="94" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="69 0 -30" roty="4" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="37 0 -45" roty="310.74" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-15 -4 -31" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="35 -4 12" roty="344" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-31 -4 39" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-27 -4 61" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="46 0 -32" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="29 0 -50" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-17 -4 -47" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="40 -4 12" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="49 -4 23" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-48 -4 -2" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-1 -4 45" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-29 -4 49" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="28 0 -68" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="69 0 -41" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="52 0 -33" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-21 -4 -16" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="55 -4 45" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-45 -4 -55" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_INNERCORNER_SMALL_A" pos="-29 -4 29" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="18 -4 -30" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="18 -4 -40" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="30 -4 -18" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="40 -4 -18" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="64 -4 30" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="64 -4 20" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="10 -4 54" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-10 -4 32" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-20 -4 32" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-32 -4 20" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-32 -4 10" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-54 -4 -10" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-64 -4 10" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-31 -4 -64" roty="90" scale="1 1 0.763831" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-22 -4 -64" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="0 -4 -74" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-10 -4 64" roty="90" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="-35 -4 -31" />
+    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="43 -4 5" roty="270" />
+    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="-45 -4 -21" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="70 0 -30" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="70 0 -40" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="40 0 -70" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="30 0 -70" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="20 -4 -20" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="-30 -4 30" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-35 -3 -30" scale="1 1.25 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-45 -3 -20" scale="1 1.25 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="40 -4 -19" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="30 -4 -19" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="0 -4 -75" roty="270" />
@@ -134,43 +194,33 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="19 -4 -40" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-10 -4 31" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="75 -4 0" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-55 -4 -10" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-20 -4 31" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-31 -4 20" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-31 -4 10" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="10 -4 55" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="0 -4 65" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="65 -4 30" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="65 -4 20" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="23 0 -45" roty="270" scale="1 1 0.7477599" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="45 0 -23" roty="180" scale="1 1 0.74776" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-40 -2 -40" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-40 -2 -20" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-60 -2 -40" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-60 -2 -20" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-50 -2 -30" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-50 -2 -10" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-70 -2 -30" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-70 -2 -10" roty="270" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-40 -2 40" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="40 -2 40" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="40 -2 60" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="20 -2 60" roty="270" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="20 -2 40" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="30 -2 50" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="30 -2 70" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="10 -2 70" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="10 -2 50" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-10 -4 -70" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="10 -4 -70" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="70 -4 -10" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="70 -4 10" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="-60 -4 0" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="70 0 -40" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="70 0 -30" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="30 0 -70" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="40 0 -70" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND_CORNER_A" pos="0 -4 60" />
     <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="20 -4 -20" />
     <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="-30 -4 30" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="53 0 -53" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="35 0 -35" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="5 -2 -5" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-15 -2 15" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_INNERCORNER_SMALL_A" pos="21 -4 -21" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="30 -2 64" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="30 -2 36" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-5 -2 25" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-5 1 25" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="15 -2 5" />
@@ -183,12 +233,8 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-31 -1 5" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-5 -4 31" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-5 -1 31" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="5 -4 55" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="5 -1 55" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-15 -1 65" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-15 -4 65" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-5 -4 65" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-5 -1 65" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="45 0 -25" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="45 3 -25" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="65 0 -25" />
@@ -221,27 +267,23 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="5 -1 -75" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-35 -4 -65" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-35 -1 -65" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -4 -5" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 -1 -5" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -4 15" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 -1 15" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -4 5" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 -1 5" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-31 -4 20" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-31 -1 20" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-20 -4 31" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-20 -1 31" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -2 -35" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 1 -35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -2 -25" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 1 -25" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-75 -2 -25" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-75 1 -25" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-75 -2 -15" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-75 1 -15" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="65 0 -45" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="65 3 -45" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="45 0 -65" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="45 3 -65" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="35 -2 65" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="35 1 65" scale="1 0.5 1" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="25 -2 65" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="25 -2 75" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="25 1 75" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="15 -2 75" roty="90" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="15 -8 -67" rot="289 144 155" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="34 -8 -74" rot="297.64 128.03 305.57" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="68 -8 16" rot="309 339 286" />
@@ -250,14 +292,14 @@
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="55 -11 -42" rot="322 233 44" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="45 -11 -57" rot="322 143 44" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="68 -10 -43" rot="333.24 129.37 23.37" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="27 -9 68" rot="336.62 0 0" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="29 -12 67" rot="326.94 317.23 333.24" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="5 -12 56" rot="308 290 323" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="17 -9 78" rot="336.62 0 0" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="19 -12 77" rot="326.94 317.23 333.24" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="3 -12 65" rot="308 290 323" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-36 -14 19" rot="322 143 44" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-15 -16 9" rot="326 154 22" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-13 -15 3" rot="329 70 357" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-19 -6 -68" roty="270" scale="0.7847901 0.78479 0.7847901" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-63 -8 -39" roty="180" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-73 -8 -29" roty="180" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-59 -8 -48" rot="1 180 0" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="23 -24 -28" rot="319.41 0 0" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="26 -22 -25" rot="337.65 90 0" />
@@ -275,18 +317,18 @@
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="26 -12 -13" rot="13 150 356" scale="1 1 0.6225568" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="68 -5 31" rot="342 354 299" scale="0.62108 0.62108 0.6210802" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="66 -7 39" rot="20 35 353" scale="0.6210801 0.62108 0.62108" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="45 -10 63" rot="328 134 7" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="28 -10 65" rot="357.37 41.5 2.36" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="35 -10 73" rot="328 134 7" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="18 -10 75" rot="357.37 41.5 2.36" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-32 -13 26" rot="344 133 33" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-26 -18 35" rot="308 197 76" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-36 -10 9" rot="21.99 48.14 19.96" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-6 -10 33" rot="25.69 79.68 322.62" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-57 -10 -14" rot="314 197 338" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-67 -10 -4" rot="314 197 338" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-66 -10 3" rot="338 272 14" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-52 -8 78" rot="314 197 338" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-21 -15 37" rot="322 233 44" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-83 -9 75" rot="314 107 338" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="25 1 65" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="15 1 75" scale="1 0.5 1" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-41 -14 61" rot="314 313 338" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-39 -16 56" rot="300.85 172.23 39.38" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-51 -23 73" rot="301 82 39" />
@@ -295,7 +337,6 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="60 -5 50" roty="0" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-10 -5 -74" roty="157.72" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="11 -5 -72" roty="106" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-58 -5 -45" roty="180" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="40 -1 -73" roty="106" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="29 -1 -72" roty="174.88" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="69 -1 -43" roty="106" />
@@ -303,11 +344,9 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="70 -1 -27" roty="351.14" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="73 -5 -11" roty="73" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="72 -5 11" roty="16" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="38 -3 64" roty="341" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="19 -3 62" roty="280.08" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-64 -3 -20" roty="245" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-60 -5 -3" roty="175" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="0 -5 63" roty="343" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="28 -3 74" roty="341" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="9 -3 72" roty="280.08" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-74 -3 -10" roty="245" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-64 -3 60" roty="245" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-21 -5 62" roty="286" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_INNERCORNER_A_DNG_OBJ_NOCOL" pos="50 -1 -50" roty="90" />
@@ -321,9 +360,8 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-30 -5 -70" roty="180" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="50 -1 -60" roty="90" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="60 -1 -50" roty="180" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-70 -3 -30" roty="270" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-80 -3 -20" roty="270" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-70 -5 10" roty="270" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-60 -5 -10" roty="270" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-60 -5 30" roty="270" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-27 -5 17" roty="90" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-16 -5 27" roty="180" />
@@ -337,52 +375,36 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="50 -5 60" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="-20 -5 -70" roty="180" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="70 -5 30" roty="90" />
-    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="30 -3 70" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="20 -3 80" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="9.5 -4 -38.5" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-27.5 -4 -58.5" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-24.5 -4 -24.5" roty="180" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="13.5 -4 -16.5" roty="90" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="42.5 -4 -7.5" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="55.5 -4 41.5" roty="180" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="1.5 -4 43.5" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="-5 -4 28" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-21.5 -4 47.5" roty="90" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-47.5 -4 15.5" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-38.5 -4 23.5" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="-28 -4 5" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-41.5 -4 -2.5" roty="270" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-37.5 -4 -0.5" roty="270" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG" pos="-10 -5 70" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="35.5 0 -36.5" roty="270" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="55.5 0 -39.5" roty="98.51" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="35.5 0 -57.5" roty="279" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-62 -10 -14" rot="314 197 338" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="15 -10 64" rot="328 44 7" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-72 -10 -4" rot="314 197 338" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="5 -10 74" rot="328 44 7" />
     <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_ROUNDED_LARGE_A" pos="55 0 -55" roty="180" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-63 -5 20" roty="250.55" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="75 0 -35" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="18 -4 14" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="35 0 -75" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="35 3 -75" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="75 3 -35" scale="1 0.5 1" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="5 -2 15" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-15 -2 -5" roty="180" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="36.5 -2 43.5" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="24.5 -2 56.5" roty="90" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="26.5 -2 53.5" roty="270" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="14.5 -2 66.5" roty="90" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-43.5 -2 43.5" roty="90" />
     <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-67.5 -2 60.5" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-56.5 -2 -23.5" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-43.5 -2 -35.5" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-55 -2 -36" roty="328" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -2 -23" roty="238" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-45 -4 -10" roty="148" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-47 -2 42" roty="328" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -2 56" roty="238" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-57 -2 47" roty="328" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="20 -2 51" roty="238" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="37 -2 56" roty="249.9" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="29 -2 43" roty="58" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-64 -2 -30" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-36 -2 -30" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="74 -4 0" roty="180" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-66.5 -2 -13.5" roty="270" />
+    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="-53.5 -2 -25.5" roty="90" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="74 -10 -3" roty="121" scale="0.78479 0.78479 0.78479" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="-4 -10 -72" rot="294 164 192" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="22 -9 -56" rot="320 211 26" />
@@ -402,27 +424,17 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG" pos="20 -5 -60" roty="90" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="12 -13 -64" rot="341.11 114.65 38.67" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="26 -9 -67" rot="299.77 111.61 358.47" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-60 -4 28" roty="90" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="55 -8 -14" rot="41 322 55" scale="1 1 0.6225567" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="55 3 -25" roty="90" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="55 -4 -18" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_A" pos="55 0 -23" scale="1 1 0.7477599" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="55 0 -25" roty="90" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="28 -4 35" roty="270" />
-    <tile name="CRYSTAL_GROUND_CRACK_SAND_A" pos="34.5 -4 27.5" />
+    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="18 -4 45" roty="270" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-37 -10 -66" roty="224.35" scale="0.7847901 0.78479 0.7847901" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A_DIAG" pos="26 -15 -27" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A_DIAG" pos="-24 -17 24" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="8 -4 -51" roty="247" scale="0.87 1 0.87" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="52 -4 -7" roty="38.91" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-61 -4 23" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-20 -4 58" roty="178" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="8 -4 45" roty="148" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-3 -4 50" roty="54.35" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-50 -3 35" roty="90" scale="1 1.25 1" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-50 -2 36" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-35 -3 50" scale="1 1.25 1" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-36 -2 50" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-35 -2 55" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-35 1 55" roty="90" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_CORNER_ROUNDED_A" pos="-20 -4 70" roty="270" />
@@ -449,8 +461,6 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-75 -2 50" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-50 -2 75" roty="90" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-82 -5 59" rot="340 244 305" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-53 -2 64" roty="148" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-64 -2 51" roty="58" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-75 -2 35" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-75 1 35" scale="1 0.5 1" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-75 -2 45" />
@@ -461,7 +471,6 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-40 -2 75" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-35 -2 75" roty="90" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_CORNER_B_DNG_BACKDROP" pos="-70 -5 18" roty="175" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-50 -4 6" roty="58" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-80 -5 27" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-75 -4 30" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-35 1 75" roty="90" scale="1 0.5 1" />
@@ -473,21 +482,13 @@
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-40 -3 80" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-49 -3 80" />
     <tile name="CRYSTAL_CRYSTAL_REALM_COLUMN_BROKEN_C" pos="15 -4 -55" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="53 -2 29" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="-30 -2 -53" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="-15 -2 49" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="29 -2 -4" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="-49 -2 15" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="4 -2 -29" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="29 -2 -5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="5 -2 -30" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="23 2 -24" />
     <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING" pos="-21 0 21" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="-30 -4 -53" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="-15 -4 49" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="-49 -4 15" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="29 -4 -4" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="4 -4 -29" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="29 -4 -5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="5 -4 -30" />
     <tile name="CRYSTAL_CRYSTAL_REALM_COLUMN_BROKEN_C" pos="55 -1 -21" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_A" pos="53 -4 29" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_B" pos="-71 -2 35" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_4M_A_OBJECT" pos="20 -4 -50" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_4M_A_OBJECT" pos="50 -4 -20" roty="270" />
@@ -497,13 +498,13 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_B_BROKEN" pos="-68 -5 10" roty="18" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-74 -10 21" rot="279 35 81" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="75 -5 0" scale="1 1.25444 1" />
-    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="44 -4 6" roty="180" scale="1 1.425943 1" />
-    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="44 -4 -5" roty="180" scale="1 1.425731 1" />
-    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="56 -4 15" roty="180" scale="1 1.254445 1" />
+    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="43 -4 6" roty="180" scale="1 1.425943 1" />
+    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="43 -4 -5" roty="180" scale="1 1.425731 1" />
+    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="57.23 -3.6 15.89" roty="180" scale="1 1.254445 1" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="0 -5 -75" roty="90" scale="1 1.25444 1" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="6 -4 -44" roty="270" scale="1 1.425943 1" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="-5 -4 -44" roty="270" scale="1 1.425731 1" />
-    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="-15 -4 -55" roty="295" scale="1 1.25444 1" />
+    <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_A" pos="-16 -4 -58" roty="295" scale="1 1.25444 1" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_B" pos="-71 -3 35" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_B" pos="-35 -3 71" roty="270" />
     <tile name="CRYSTAL_FILL_RUIN_COLUMN_BROKEN_C" pos="72 -5 -12" roty="215" scale="1 1.25444 1" />
@@ -514,56 +515,46 @@
     <tile name="CRYSTAL_FILL_RUIN_DEBRIS_A" pos="-32 -4 73" roty="270" />
     <tile name="CRYSTAL_FILL_RUIN_DEBRIS_A" pos="-38 -2 73" roty="270" />
     <tile name="CRYSTAL_FILL_RUIN_DEBRIS_A" pos="-73 -2 39" roty="180" />
-    <tile name="CRYSTAL_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="44 -4 0" roty="314" />
+    <tile name="CRYSTAL_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="43 -4 0" roty="314" />
     <tile name="CRYSTAL_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="0 -4 -44" roty="44" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="60 -5 -20" roty="180" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="20 -1 -62" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_SMALL_B" pos="-35 -2 72" />
     <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_C_DNG_OBJECT" pos="-80 -3 50" roty="270" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="44.92 -4.4 4.71" roty="330" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="55.53 -4.4 13.51" roty="18" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="45 -4.4 6.64" roty="241" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="43.92 -4.4 4.71" roty="330" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="56.76 -4 14.4" roty="18" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="44 -4.4 6.64" roty="241" />
     <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-3.91 -4.4 -44.98" roty="303.79" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="57.27 -4.4 14.61" roty="289" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="58.5 -4 15.5" roty="289" />
     <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-5.54 -4.4 -45.35" roty="24.5" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-14.41 -4.4 -56.18" roty="340.05" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-15.41 -4.4 -59.18" roty="340" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-6 -14 64" rot="283.8 241.98 277.73" />
     <tile name="CRYSTAL_CRYSTAL_REALM_COLUMN_BROKEN_A" pos="55 -4 -15" roty="180" />
-    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-14.02 -4.4 -54.28" roty="250.39" />
+    <tile name="CRYSTAL_SHARD_TRADER_BANNER_HANGING_A" pos="-15.02 -4.4 -57.28" roty="250" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="58 -9 -22" rot="320 301 26" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_B" pos="-70 -3 32" roty="45" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_B" pos="-32 -3 70" roty="45" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-26 -24 25" rot="344 133 33" />
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="43 -4 -1" roty="270" />
+    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="42 -4 -1" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-30.29 7.95 68.37" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="44 -4 6" roty="270" />
+    <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="43 -4 6" roty="270" />
     <tile name="CRYSTAL_FILL_SAND_GATHERING_LARGE_A" pos="0 -4 -43" roty="270" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-80 -5 35" rot="319 158 332" />
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-68.41 7.95 30.43" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="60 -4 -14" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="60 0 -26" roty="270" />
-    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="43 0 -40" roty="117.94" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-72 -1 83" rot="356 286 2" />
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="23.02 4.2 -23.94" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-63 -2 80" rot="338 341 31" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="26 0 -61" roty="180" scale="1 1 0.7941887" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="72 -8 10" rot="332 322 313" scale="0.6210799 0.62108 0.62108" />
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-38.27 6.04 -65.91" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="52.98 0.2 29.1" roty="270">
-      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
-    </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="29.05 0.2 -4" roty="270">
-      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
-    </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-49.08 0.2 15.01" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="29.09 0.2 -4.91" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-80 -4 69" rot="8 318 351" />
@@ -571,13 +562,13 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="65.76 5.93 40.62" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="44.32 9.93 61.14" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="34.32 9.93 71.14" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-65.86 5.91 9.35" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-63.41 10.04 -42.38" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-73.41 10.04 -32.38" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-10.88 5.91 65.88" roty="270">
@@ -586,41 +577,53 @@
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-21.12 2.49 21.12" roty="270">
       <pointlight range="8" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-29.96 0.2 -52.96" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-72.46 9.72 -5.53" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-62.46 9.72 -15.53" roty="270">
-      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
-    </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="4.02 0.2 -28.95" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="5.22 0.2 -29.95" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
     <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-71.46 9.97 73.4" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="16.72 9.93 64.48" roty="270">
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="6.72 9.93 74.48" roty="270">
       <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
     </tile>
-    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-15.1 0.2 49.1" roty="270">
-      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
-    </tile>
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="17 -7 69" rot="310 358 4" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="7 -7 79" rot="310 358 4" />
     <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_A_NOCOL" pos="-56 -8 79" rot="320 257 273" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="14 -4 -61" roty="180" scale="1 1 0.8066" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="10 -10 -70" rot="333.45 124.03 312.51" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="69 -10 -11" rot="333 124 313" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="-14 -10 -67" rot="294 164 192" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-55 -4 -40" roty="180" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-60 -5 -40" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-60 -2 -35" roty="90" />
+    <tile name="CRYSTAL_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJ_NOCOL" pos="-60 -3 -40" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-60 -2 -5" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -2 -5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 1 -5" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="-65 -4 0" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-65 -4 5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-65 -1 5" scale="1 0.5 1" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-64 -4 0" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-60 -4 -4" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-54 -4 -40" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-26 -4 4" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-10 -4 64" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-10 -4 32" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="60 -4 -14" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="60 0 -26" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="43 0 -40" roty="117.94" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="26 0 -61" roty="180" scale="1 1 0.7941887" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-30 -4 74" roty="270" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-60 -2 74" roty="90" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-50 -2 74" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-40 -2 74" roty="90" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-74 -2 60" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-74 -2 50" roty="180" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-74 -2 40" roty="180" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-74 -4 30" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-4 -4 26" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-26 -4 4" roty="270" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="45 0 -25" roty="90" scale="1.1878 1 1.1878" />
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="44 0 -65" roty="180" scale="1 1 0.2376204" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="65 -4 15" roty="180" scale="1.1878 0.3578694 1.244577" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="70 0 -30" roty="180" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="70 0 -40" roty="270" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="40 0 -70" roty="270" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="30 0 -70" />
@@ -629,42 +632,174 @@
     <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="64 0 -44" roty="264.79" scale="1 1 0.4145051" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="55 0 -25" roty="180" scale="1.1878 1 1.034491" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="25 0 -55" scale="1.08502 1 1.028385" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="25 0 -45" roty="90" scale="1.1878 1 1.034491" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="55 -4 -15" roty="270" scale="1.06801 1 1.034491" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="15 -4 -55" roty="270" scale="1.06801 1 1.034491" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-10 -4 -70" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="10 -4 -70" roty="270" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-15 -4 -65" scale="1.195531 0.70562 1.140198" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="40 -2 60" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="20 -2 60" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="16 -2 54" roty="90" scale="0.7256983 0.3578694 0.7119725" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="44 -2 54" roty="180" scale="0.6708791 0.3578694 0.6758542" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="36 -2 36" scale="0.6056026 0.3578694 0.5229287" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="24 -2 36" roty="270" scale="0.5585291 0.3578694 0.6208209" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="0 -4 60" roty="180" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="4 -4 54" roty="180" scale="0.58179 1 0.55273" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="30 -2 70" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="10 -2 70" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="6 -2 54" roty="90" scale="0.7256982 0.3578694 0.7119725" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="34 -2 54" roty="180" scale="0.6708791 0.3578694 0.6758542" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="26 -2 46" scale="0.6056026 0.3578694 0.5229287" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="14 -2 46" roty="270" scale="0.5585291 0.3578694 0.6208209" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-16 -4 64" roty="180" scale="0.58179 1 0.55273" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-20 -4 70" roty="180" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-70 -2 70" roty="90" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-70 -4 20" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-60 -4 0" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-60 -2 -40" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-60 -2 -20" roty="90" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-36 -2 -24" roty="270" scale="0.6056026 0.3578694 0.5229287" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-36 -2 -36" roty="180" scale="0.5585291 0.3578694 0.6208209" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-54 -2 -44" scale="0.6211398 0.3578694 0.6751351" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-54 -2 -16" roty="90" scale="0.63441 0.3578694 0.5626621" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-70 -2 -30" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="-70 -2 -10" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-46 -2 -14" roty="270" scale="0.6056026 0.3578694 0.5229287" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-46 -2 -26" roty="180" scale="0.5585291 0.3578694 0.6208209" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-54 -2 -34" scale="0.6211398 0.3578694 0.6751351" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-54 -2 -6" roty="90" scale="0.63441 0.3578694 0.5626621" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-64 -4 16" scale="0.58179 1 0.55273" />
-    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-54 -4 -4" scale="0.58179 1 0.55273" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-36 -2 56" roty="270" scale="0.6056026 0.3578694 0.5229287" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-36 -2 44" roty="180" scale="0.5585291 0.3578694 0.6208209" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-56 -2 36" roty="270" scale="0.558529 0.3578694 0.6208208" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-44 -2 36" scale="0.6056026 0.3578694 0.5229287" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-32 -4 4" roty="180" scale="0.58179 1 0.55273" />
     <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="-4 -4 32" scale="0.58179 1 0.55273" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="10 -10 -70" rot="333.45 124.03 312.51" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="69 -10 -11" rot="333 124 313" />
-    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_A_NOCOL" pos="-14 -10 -67" rot="294 164 192" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="65 -4 15" roty="180" scale="1.1878 0.3578694 1.244577" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="28 0 -68" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-31 -4 39" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_SMALL_A" pos="25 0 -45" roty="90" scale="1.1878 1 1.034491" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-40 -2 74" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="14 -4 -61" roty="180" scale="1 1 0.8066" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-32 -4 10" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-36 -2 50" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-15 -2 -5" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-65 -2 -26" roty="328" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-54 -2 -13" roty="238" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-47 -2 42" roty="328" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -2 56" roty="238" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-57 -2 47" roty="328" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="10 -2 61" roty="238" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="27 -2 66" roty="249.9" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="19 -2 53" roty="58" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-74 -2 -20" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-46 -2 -20" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="74 -4 0" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-39 -4 31" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="8 -4 -51" roty="247" scale="0.87 1 0.87" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="52 -4 -7" roty="39" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-41 -4 26" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-10 -4 39" roty="158.86" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="8 -4 45" roty="148" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-3 -4 47" roty="54" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-50 -2 36" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-53 -2 64" roty="148" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-64 -2 51" roty="58" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -4 4" roty="75" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_ROUNDED_A" pos="70 0 -30" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-20 -4 -16" />
+    <tile name="CRYSTAL_GROUND_STONES_INNERCORNER_SMALL_A" pos="-29 -4 29" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="5 -2 15" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-7 -4 -65" roty="338" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="67 -4 5" roty="172" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="10 -4 -60" roty="157" scale="0.87 1 0.87" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="66 -4 -6" roty="328" scale="0.7011 1 0.7011" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="52 -4 26" roty="21" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="1 -4 -52" roty="148" scale="0.7011 1 0.7011" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-27 -4 -4" rot="0 26.05 0" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="29 -4 -5" roty="337" scale="0.87 1 0.87" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-12 -4 -51" roty="328" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="52 -4 9" roty="58" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="21 -4 8" roty="217.59" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-33 -4 -51" roty="328" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-13 -4 -22" roty="190.57" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -4 -39" roty="58" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="40 0 -69" roty="94" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="69 0 -30" roty="4" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="37 0 -45" roty="310.74" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-40 -4 -47" roty="23.64" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-24 -4 41" roty="342.49" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="46 0 -32" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="29 0 -50" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-21 -4 -51" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="50 -4 19" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-19 -4 41" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="69 0 -41" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="52 0 -33" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="55 -4 45" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-45 -4 -55" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="18 -4 -30" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="18 -4 -40" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-1 -4 42" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="30 -4 -18" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="40 -4 -18" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="64 -4 30" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="64 -4 20" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="0 -4 64" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-20 -4 32" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-32 -4 20" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-64 -4 10" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-31 -4 -64" roty="90" scale="1 1 0.763831" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-22 -4 -64" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="0 -4 -74" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="53 0 -53" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="35 0 -35" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="5 -2 -5" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_CORNER_LARGE_A" pos="-15 -2 15" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_INNERCORNER_SMALL_A" pos="21 -4 -21" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="6 -4 41" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="20 -2 74" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="20 -2 46" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="17 -4 17" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="36 -4 41" roty="317" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-11 -4 -45" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_A" pos="-44 -4 -6" roty="164" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="38 -4 48" roty="270" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="44 -4 14" roty="10.29" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="34 -2 60" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="6 -2 60" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-60 -2 -6" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="-60 -2 -34" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="39 -4 54" roty="90" />
+    <tile name="CRYSTAL_GROUND_STONES_STRAIGHT_SMALL_A" pos="4 -4 58" roty="180" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="44 -4 39" roty="195" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="51 -4 36" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_C" pos="-41 -4 17" roty="332.11" />
+    <tile name="CRYSTAL_GROUND_STONES_BLEND_D" pos="-51 -4 0" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="5 -2 60" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="35 -2 60" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_STRAIGHT_D" pos="40 -4 55" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="30 -4 30" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="40 -4 30" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="40 -4 20" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="30 -4 20" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="30 -4 30" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="40 -4 30" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="40 -4 20" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="30 -4 20" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="-30 -4 -30" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="-20 -4 -30" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="-20 -4 -40" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND_INNERCORNER_SMALL_A" pos="-30 -4 -40" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="-30 -4 -30" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="-20 -4 -30" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="-20 -4 -40" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_INNERCORNER_ROUNDED_SMALL_A" pos="-30 -4 -40" roty="270" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="-24 -14 -36" rot="317 130 5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-29 -4 -40" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-29 -1 -40" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-21 -1 -30" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-21 -4 -30" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="30 0 20" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="30 -3 20" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="39 0 29" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="39 -3 29" roty="270" />
+    <tile name="CRYSTAL_DNG_FILL_ROCK_FORMATION_SPIKES_LARGE_B_NOCOL" pos="37 -14 26" rot="317 130 5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-5 -4 65" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-5 -1 65" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="-55 -2 -35" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="-55 1 -35" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="5 -2 55" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="5 1 55" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_B_FLOATING" pos="35 1 55" scale="1 0.5 1" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A_DIAG" pos="35 -10 25" scale="0.64208 0.64208 0.64208" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_B" pos="35 -2 55" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STATUE_LARGE_A_DIAG" pos="-25 -10 -35" scale="0.64208 0.64208 0.64208" />
     <tile name="CRYSTAL_FILL_RUIN_DEBRIS_SIDE_A" pos="-117 8 154" roty="180" />
     <tile name="CRYSTAL_CRYSTAL_REALM_GROUND_SAND_CRYSTAL_PLATFORM_LOSER" pos="-135 8 155" />
     <tile name="CRYSTAL_CRYSTAL_REALM_RAILING_PILLAR_A" pos="-115 8 155" roty="180" />
@@ -729,59 +864,50 @@
     <tile name="CRYSTAL_GROUND_SAND_STRAIGHT_SMALL_A" pos="-10 -4 30" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_STRAIGHT_SMALL_A" pos="-20 -4 30" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-20 -4 0" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 -20" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-60 -4 -10" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 40" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-10 -4 -10" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-20 -4 -10" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 -40" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-60 -4 -30" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 20" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="30 -4 40" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="0 -4 -10" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="20 -4 40" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="30 -4 60" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 -40" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="40 -4 50" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="20 -4 50" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 -30" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="0 -4 -10" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 50" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="20 -4 70" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 -30" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="30 -4 60" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 60" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 -20" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 40" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 0" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 50" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="40 -4 40" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="30 -4 50" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 -10" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 -20" />
-    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-60 -4 -30" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="-37 -4 -17" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="-37 -4 -43" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="17 -4 37" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="43 -4 37" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-50 -4 -10" />
+    <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-70 -4 -20" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="-47 -4 -7" roty="270" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="-47 -4 -33" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="7 -4 47" roty="90" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="33 -4 47" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_LARGE_A_OBJ" pos="11 -4 21" roty="270" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_LARGE_A_OBJ" pos="-21 -4 -11" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_A_OBJ" pos="12 -4 50" roty="180" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_A_OBJ" pos="48 -4 50" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_A_OBJ" pos="-60 -4 32" roty="90" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_A_OBJ" pos="-50 -4 -12" roty="270" />
-    <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_A_OBJ" pos="-50 -4 -48" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="40 -2 50" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -2 -30" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="20 -2 50" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 50" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="30 -2 40" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -2 -30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="30 -2 60" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-70 -2 -20" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="10 -2 60" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 50" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="20 -2 50" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 -20" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="20 -2 70" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 -10" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-30 -4 40" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="40 -4 30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 -20" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 20" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-30 -4 -30" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 -30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="30 0 -50" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 0" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 0 -30" roty="270" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 20" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="40 -4 20" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 -10" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -4 10" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 0" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 -40" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 -40" roty="180" />
@@ -794,24 +920,19 @@
     <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 -20" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="30 -4 0" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-10 -4 40" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="30 -4 20" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 -10" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 30" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 -40" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 -30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 -30" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 -20" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 30" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 10" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND" pos="40 0 -60" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 -50" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="40 -4 -10" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 -50" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 -50" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 0 -40" roty="270" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-30 -4 -40" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-30 -4 -20" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 40" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 50" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 40" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 20" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 -10" roty="180" />
@@ -841,16 +962,13 @@
     <tile name="CRYSTAL_GROUND_SAND" pos="-10 -4 -60" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-40 -2 50" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="60 0 -30" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 -20" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 -40" roty="270" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 50" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -2 -10" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -2 -30" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 60" />
     <tile name="CRYSTAL_GROUND_SAND" pos="70 -4 0" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 20" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 10" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 0" roty="180" />
     <tile name="CRYSTAL_DNG_GROUND_OBJ" pos="-40 -5 -60" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -4 10" roty="90" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="0 -4 50" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -4 0" roty="90" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="10 -4 40" roty="270" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-10 -4 50" roty="270" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-20 -4 50" roty="270" />
     <tile name="CRYSTAL_DNG_GROUND_OBJ" pos="-50 -5 -50" />
@@ -858,14 +976,13 @@
     <tile name="CRYSTAL_DNG_GROUND_OBJ" pos="60 -5 40" />
     <tile name="CRYSTAL_DNG_GROUND_OBJ" pos="50 -5 50" />
     <tile name="CRYSTAL_GROUND_SAND" pos="60 -4 20" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -2 -30" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-60 -2 -20" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="-40 -4 -50" roty="180" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="30 -2 50" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="20 -2 60" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="0 -4 20" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="10 -4 10" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="50 -4 40" roty="180" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 10" />
-    <tile name="CRYSTAL_GROUND_SAND" pos="30 -4 30" roty="90" />
     <tile name="CRYSTAL_GROUND_SAND_OBJ" pos="40 0 -40" roty="90" />
     <tile name="CRYSTAL_CRYSTAL_REALM_STAIRS_2M_CORNER_ROUND_A_OBJ" pos="-37 -4 37" />
     <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 30" roty="180" />
@@ -904,6 +1021,44 @@
     <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 -50" />
     <tile name="CRYSTAL_GROUND_SAND" pos="50 -4 -20" />
     <tile name="CRYSTAL_CRYSTAL_REALM_PLATFORM_STONE_A" pos="-5 -2 5" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 0" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 -30" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 -20" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 -40" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 -40" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-30 -4 -20" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="20 -4 40" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="30 -4 40" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="40 -4 40" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="40 -4 50" roty="270" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 20" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-50 -4 10" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 10" roty="180" />
+    <tile name="CRYSTAL_GROUND_SAND" pos="-40 -4 20" roty="180" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-51.41 1.13 13.58" roty="270" scale="1.5276 1.5276 1.5276">
+      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
+    </tile>
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_LARGE_A" pos="-51.5 -3 13.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING_LARGE" pos="-51.5 -1 13.5" />
+    <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_SMALL_A" pos="-51.5 -4 13.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-13.48 1.2 51.55" roty="270" scale="1.5276 1.5276 1.5276">
+      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
+    </tile>
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_LARGE_A" pos="-13.5 -3 51.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING_LARGE" pos="-13.5 -1 51.5" />
+    <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_SMALL_A" pos="-13.5 -4 51.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="-21.58 1.2 -10.62" roty="270" scale="1.5276 1.5276 1.5276">
+      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
+    </tile>
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_LARGE_A" pos="-21.5 -3 -10.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING_LARGE" pos="-21.5 -1 -10.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_LIGHT_CRYSTAL_A" pos="10.49 1.2 21.49" roty="270" scale="1.5276 1.5276 1.5276">
+      <pointlight range="6" intensity="5" color="0.347 0.5477152 1" />
+    </tile>
+    <tile name="CRYSTAL_CRYSTAL_REALM_FIREBOWL_STONE_LARGE_A" pos="10.5 -3 21.5" />
+    <tile name="CRYSTAL_CRYSTAL_REALM_CRYSTAL_A_FLOATING_LARGE" pos="10.5 -1 21.5" />
+    <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_SMALL_A" pos="-21.5 -4 -10.5" />
+    <tile name="CRYSTAL_FILL_PLATFORM_STONE_FLAT_SMALL_A" pos="10.5 -4 21.5" />
     <tile name="CRYSTALREALM_SKYSPHERE_CRYSTAL_LEAGUE" pos="0 0 0" scale="20 20 20" />
     <tile name="CRYSTALREALM_FX_CLOUDS_MOVING_LARGE_A" pos="-234 -73 304" rot="354 73 315" scale="390.0957 390.0956 390.0957" />
     <tile name="CRYSTALREALM_FX_CLOUDS_MOVING_LARGE_A" pos="62 -36 363" rot="347 101 313" scale="369.4588 369.4586 369.4587" />
@@ -1057,80 +1212,17 @@
     <tile name="CrystalGvgExit" pos="-129 8 168" roty="13">
       <arenaexit />
     </tile>
-    <tile name="CRYSTALREALM_ORB" pos="-50 -2 -30" roty="90">
+    <tile name="CRYSTALREALM_ORB" pos="-60 -2 -20" roty="90">
       <orb type="ORB_CRYSTAL_GVG" />
     </tile>
-    <tile name="CRYSTALREALM_ORB" pos="30 -2 50" roty="180">
+    <tile name="CRYSTALREALM_ORB" pos="20 -2 60" roty="180">
       <orb type="ORB_CRYSTAL_GVG" />
     </tile>
     <tile name="CRYSTALREALM_ORB" pos="-55 -2 55" roty="270">
       <orb type="ORB_CRYSTAL_GVG" />
     </tile>
-    <tile name="WarCamp_Right_Crystalrealm" pos="0 -4 -60">
-      <warcamp isattacker="false">
-        <spawnpositions>
-          <position pos="5.22 -59.16" />
-          <position pos="0.57 -65.2" />
-          <position pos="-1.14 -65.13" />
-          <position pos="5.69 -57.21" />
-          <position pos="3.94 -57.93" />
-          <position pos="6.72 -60.72" />
-          <position pos="-3.31 -64.84" />
-          <position pos="2 -65.99" />
-          <position pos="-0.2 -66.64" />
-          <position pos="6.77 -59.04" />
-          <position pos="-1.88 -66.42" />
-          <position pos="4.35 -56.1567" />
-          <position pos="2.6 -54.85" />
-          <position pos="5.97 -55.22" />
-          <position pos="6.95 -57.65" />
-          <position pos="-3.3 -66.38" />
-          <position pos="1.24 -67.28" />
-          <position pos="4.34 -54.67" />
-          <position pos="-5.14 -65.36" />
-          <position pos="-4.32 -63.69" />
-        </spawnpositions>
-      </warcamp>
-    </tile>
-    <tile name="WarCamp_Left_Crystalrealm" pos="60 -4 0" roty="90">
-      <warcamp isattacker="true">
-        <spawnpositions>
-          <position pos="64.88 -1.2499" />
-          <position pos="64.46 0.5361" />
-          <position pos="66.48 -1.1182" />
-          <position pos="65.43 -3.0399" />
-          <position pos="66.28 0.396" />
-          <position pos="65.52 1.8846" />
-          <position pos="64.97 4.1287" />
-          <position pos="63.57 -3.42" />
-          <position pos="61.92 -6.08" />
-          <position pos="61.9 -3.96" />
-          <position pos="63.93 -5.01" />
-          <position pos="54.06 -2.99" />
-          <position pos="54.58 -1.44" />
-          <position pos="53.1 -1.74" />
-          <position pos="54.35 -0.04" />
-          <position pos="52.79 -0.12" />
-          <position pos="54.09 1.38" />
-          <position pos="52.66 1.94" />
-          <position pos="53.46 3.02" />
-          <position pos="60.44 -6.25" />
-        </spawnpositions>
-      </warcamp>
-    </tile>
     <tile name="CrystalGvgExit" pos="1 -2 18" roty="13">
       <arenaexit />
-    </tile>
-    <tile name="MatchLootChest_Arena_Winner" pos="-5 -1 5">
-      <matchlootchest iswinner="true">
-        <spawnpositions>
-          <position pos="1.5488 5" />
-          <position pos="-2.4376 10.7469" />
-          <position pos="-3.3149 -1.3873" />
-          <position pos="-11.812 2.6265" />
-          <position pos="-9.4255 9.7971" />
-        </spawnpositions>
-      </matchlootchest>
     </tile>
   </tiles>
 </template>

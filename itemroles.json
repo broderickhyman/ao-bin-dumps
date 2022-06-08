@@ -6,11 +6,39 @@
   "itemroles": {
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "@xsi:noNamespaceSchemaLocation": "itemroles.xsd",
+    "baserole": [
+      {
+        "@name": "Tank",
+        "@defaultuiorderpriority": "1",
+        "@uisprite": "icon_role_defender"
+      },
+      {
+        "@name": "DPS",
+        "@defaultuiorderpriority": "2",
+        "@uisprite": "icon_role_attacker"
+      },
+      {
+        "@name": "Support",
+        "@defaultuiorderpriority": "3",
+        "@uisprite": "icon_role_support"
+      },
+      {
+        "@name": "Heal",
+        "@defaultuiorderpriority": "4",
+        "@uisprite": "icon_role_healer"
+      },
+      {
+        "@name": "BattleMount",
+        "@defaultuiorderpriority": "5",
+        "@uisprite": "icon_role_battlemount"
+      }
+    ],
     "role": [
       {
         "@uniquename": "TANK",
         "@displayname": "@EXPEDITION_ROLE_DEFENSIVE",
         "@uisprite": "icon_role_defender",
+        "@baserole": "Tank",
         "category": [
           {
             "@value": "sword",
@@ -46,6 +74,7 @@
         "@uniquename": "DPS",
         "@displayname": "@EXPEDITION_ROLE_OFFENSIVE",
         "@uisprite": "icon_role_attacker",
+        "@baserole": "DPS",
         "category": [
           {
             "@value": "hammer",
@@ -121,6 +150,7 @@
         "@uniquename": "HEAL",
         "@displayname": "@EXPEDITION_ROLE_SUPPORTIVE",
         "@uisprite": "icon_role_healer",
+        "@baserole": "Heal",
         "category": [
           {
             "@value": "holystaff",
@@ -144,6 +174,7 @@
         "@uniquename": "ARENA_DPS",
         "@displayname": "@ARENA_ROLE_OFFENSIVE",
         "@uisprite": "icon_role_attacker",
+        "@baserole": "DPS",
         "category": [
           {
             "@value": "hammer",
@@ -219,6 +250,7 @@
         "@uniquename": "ARENA_HEAL",
         "@displayname": "@ARENA_ROLE_SUPPORTIVE",
         "@uisprite": "icon_role_healer",
+        "@baserole": "Heal",
         "category": [
           {
             "@value": "holystaff",
@@ -243,6 +275,7 @@
         "@displayname": "@EXPEDITION_ROLE_DEFENSIVE",
         "@uisprite": "icon_role_defender",
         "@context": "party",
+        "@baserole": "Tank",
         "category": [
           {
             "@value": "sword",
@@ -279,6 +312,7 @@
         "@displayname": "@ARENA_ROLE_OFFENSIVE",
         "@uisprite": "icon_role_attacker",
         "@context": "party",
+        "@baserole": "DPS",
         "category": [
           {
             "@value": "hammer",
@@ -351,6 +385,7 @@
         "@displayname": "@ARENA_ROLE_SUPPORTIVE",
         "@uisprite": "icon_role_healer",
         "@context": "party",
+        "@baserole": "Heal",
         "category": [
           {
             "@value": "holystaff",
@@ -375,6 +410,7 @@
         "@displayname": "@PARTY_ROLE_SUPPORT",
         "@uisprite": "icon_role_support",
         "@context": "party",
+        "@baserole": "Support",
         "category": {
           "@value": "arcanestaff",
           "@rating": "10"
@@ -385,6 +421,7 @@
         "@displayname": "@PARTY_ROLE_BATTLEMOUNT",
         "@uisprite": "icon_role_battlemount",
         "@context": "party",
+        "@baserole": "BattleMount",
         "category": {
           "@value": "arcanestaff",
           "@rating": "1"

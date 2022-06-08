@@ -15,7 +15,7 @@
   </tutorialbuilding>
   -->
 
-  <hideoutbuilding uniquename="UNIQUE_HIDEOUT" tier="4" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" unlocked="true" hideonclustermap="true">    
+  <hideoutbuilding uniquename="UNIQUE_HIDEOUT" tier="4" iconAtlas="RefItemAtlas" iconSprite="MAIN_SWORD" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uinpcspritename="Gui/Avatars/Buildings/NPC_WORKBENCH" unlocked="true" hideonclustermap="true" useautodemolish="true">    
     <AudioInfo name="HIDEOUT_PLACEABLE_ITEM" />
     <biome biome="Forest" subbiome="Green" prefab="HIDEOUT_FOREST_GREEN"/>
     <biome biome="Forest" subbiome="Red" prefab="HIDEOUT_FOREST_RED"/>
@@ -648,6 +648,11 @@
   <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_DEAD_T8_MELDBUILDING_CENTERCITY" />
   <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_DEAD_CENTER_CITY_MELDBUILDING" />
   <buildingreference template="T8_MELDBUILDING" uniquename="T8_MELDBUILDING_HIDEOUT" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="FOREST_GREEN_T8_MELDBUILDING_PORTAL" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="HIGHLAND_GREEN_T8_MELDBUILDING_PORTAL" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="MOUNTAIN_GREEN_T8_MELDBUILDING_PORTAL" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="STEPPE_GREEN_T8_MELDBUILDING_PORTAL" />
+  <buildingreference template="T8_MELDBUILDING" uniquename="SWAMP_GREEN_T8_MELDBUILDING_PORTAL" />
   
   <craftbuilding uniquename="TESTFORGE" tile="T1_FORGE" tier="1" placecost="0" durability="972000" durabilityloss="0" nutritionstorage="460500" craftcapacity="0" craftcapacityregeneration="0" category="none" displaygroup="1" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="craftforge" unlocked="false" iconAtlas="RefMiniMapAtlas" iconSprite="building_warrior_forge" uispritename="Gui/Avatars/Buildings/TYPE_FORGE" uisoundevent="Play_ui_select_forge" accessrightspreset="public">
     <craftingitemlist>
@@ -1917,6 +1922,11 @@
   <buildingreference template="T1_BANK" uniquename="HIGHLAND_DEAD_T1_BANK_CENTERCITY" />
   <buildingreference template="T1_BANK" uniquename="T1_BANK_HIDEOUT_A" />
   <buildingreference template="T1_BANK" uniquename="T1_BANK_HIDEOUT_BC" />
+  <buildingreference template="T1_BANK" uniquename="FOREST_GREEN_T1_BANK_PORTAL" />
+  <buildingreference template="T1_BANK" uniquename="HIGHLAND_GREEN_T1_BANK_PORTAL" />
+  <buildingreference template="T1_BANK" uniquename="MOUNTAIN_GREEN_T1_BANK_PORTAL" />
+  <buildingreference template="T1_BANK" uniquename="STEPPE_GREEN_T1_BANK_PORTAL" />
+  <buildingreference template="T1_BANK" uniquename="SWAMP_GREEN_T1_BANK_PORTAL" />
   
   <!--OUTLAND BANK-->
   <bankbuilding uniquename="T1_BANK_OUTLAND" tier="1" hideonclustermap="true" isblackmarketbank="true" />
@@ -1965,57 +1975,617 @@
   <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE_CENTERCITY" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="SWAMP_GREEN_MARKETPLACE_CENTERCITY" />
   <buildingreference template="MARKETPLACE_SMALL" uniquename="MOUNTAIN_GREEN_MARKETPLACE_CENTERCITY" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="FOREST_GREEN_MARKETPLACE_PORTAL" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="HIGHLAND_GREEN_MARKETPLACE_PORTAL" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="MOUNTAIN_GREEN_MARKETPLACE_PORTAL" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="STEPPE_GREEN_MARKETPLACE_PORTAL" />
+  <buildingreference template="MARKETPLACE_SMALL" uniquename="SWAMP_GREEN_MARKETPLACE_PORTAL" />
   
   <!--CASTLEGATE-->
-  <castlegate uniquename="T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
+  <castlegate uniquename="T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" >
+	<AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" >
+	  <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+	  <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+	  <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+	  <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <!--NEW CASTLE GATES-->
+  <!--main, basic and elite match the corresponding phases of destroy gates, kill basic mobs and kill elite mobs-->
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" >
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE_MAIN" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <!--Omni Directional Castle Gates - -->
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE_MAIN_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE_BASIC_OMNI" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE_BASIC" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_SMALL"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_LARGE_ELITE" tier="1" durability="6400" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE_LARGE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE_LARGE"/>
+  </castlegate>
   <!--CASTLE OUTPOST GATE-->
-  <castlegate uniquename="T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="3200" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
-  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" />
+  <castlegate uniquename="T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="SWAMP_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="STEPPE_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="MOUNTAIN_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="3200" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="FOREST_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_GREEN_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_RED_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
+  <castlegate uniquename="HIGHLAND_DEAD_T1_CASTLEGATE_OUTPOST" tier="1" durability="1600" recoverytime="60" surname="@BUILDINGS_T1_CASTLEGATE" descriptionlocatag="@BUILDINGS_T1_CASTLEGATE_DESC" uispritename="Gui/Avatars/Buildings/TYPE_CASTLE_GATE" useautodemolish="true">
+    <AudioInfo name="CASTLEGATE"/>
+  </castlegate>
   
   <!-- Set durability of farm buildings manually to 12000 (t3 building), so players don't accidently destroy them. -->
   
@@ -2277,22 +2847,40 @@
   <!--ARENA_AGENCY-->
   <craftbuilding uniquename="ARENA_AGENCY" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isarena="true" isshop="true" hideonclustermap="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="QUESTITEM_TOKEN_ARENA_UNRANKED" uispritename="Gui/Avatars/Buildings/NPC_ARENA" uisoundevent="Play_ui_select_arena">
     <craftingitemlist>
-      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_EYEPATCH" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
-      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
-      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
-      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
-      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />	  
-      <craftitem uniquename="UNIQUE_UNLOCK_T4_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
-      <craftitem uniquename="UNIQUE_UNLOCK_T6_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
-      <craftitem uniquename="UNIQUE_UNLOCK_T8_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />	  
-      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="4" />
-      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_02" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="4" />
-      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_03" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="4" />
-      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="3" />
-      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="3" />
-      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T4" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
-      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T5" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
-      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T6" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_GLADIATOR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_GLADIATOR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_GLADIATOR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
+      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_GLADIATOR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="1" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_EYEPATCH_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_SET_01_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_ARENA_SET_01_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_ARENA_SET_01_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />
+      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_ARENA_SET_01_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="2" />	  
+      <craftitem uniquename="UNIQUE_UNLOCK_T4_CAPE_ARENA_BANNER_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="3" />
+      <craftitem uniquename="UNIQUE_UNLOCK_T6_CAPE_ARENA_BANNER_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="3" />
+      <craftitem uniquename="UNIQUE_UNLOCK_T8_CAPE_ARENA_BANNER_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="3" />	  
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_04" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_05" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_06" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_ARENA_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="4" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_ARENA_COPY" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="4" />
+      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T4" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="6" />
+      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T5" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="6" />
+      <craftitem uniquename="QUESTITEM_TOKEN_ROYAL_T6" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="6" />
+      <!--old arena items - depricated-->
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_EYEPATCH" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="7" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="7" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="7" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="7" />
+      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_ARENA_SET_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="7" />
+      <craftitem uniquename="UNIQUE_UNLOCK_T4_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="8" />
+      <craftitem uniquename="UNIQUE_UNLOCK_T6_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="8" />
+      <craftitem uniquename="UNIQUE_UNLOCK_T8_CAPE_ARENA_BANNER" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="8" />
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_01" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="10" />
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_02" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="10" />
+      <craftitem uniquename="UNIQUE_FURNITUREITEM_VANITY_ARENA_BANNER_03" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="10" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="9" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_ARENA" category="@BUILDING_ITEMS_CATEGORY_ARENA" displaygroup="9" />
     </craftingitemlist>
     <AudioInfo name="NPC_ARENAMASTER" />
   </craftbuilding>
@@ -2301,10 +2889,9 @@
 	
   <!-- SEASONS_STORE -->
   <crystalleaguebuilding uniquename="SEASONS_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" isshop="true" hideonclustermap="true" craftanimation="none" randomidleanimoffset="false" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="UNIQUE_GVGTOKEN_GENERIC" uispritename="Gui/Avatars/Buildings/NPC_TERRITORY_SHARDTRADER" uisoundevent="Play_ui_select_vanitymerchant">
-    <craftingitemlist>
+    <craftingitemlist>      
+      <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_NONLETHAL_LVL_01" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />      
       <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_01" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />
-      <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_02" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />
-      <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_LVL_03" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />
       <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_01" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />
       <craftitem uniquename="T4_TOKEN_CRYSTALLEAGUE_CITY_LVL_02" category="@BUILDING_ITEMS_CATEGORY_CRYSTALTOKENS" displaygroup="6" />
       <craftitem uniquename="T6_MOUNT_SIEGE_BALLISTA" category="@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE" displaygroup="6" />      
@@ -2334,6 +2921,21 @@
   
   <buildingreference template="SEASONS_STORE" uniquename="SEASONS_STORE_HIDEOUT" />  
   <buildingreference template="SEASONS_STORE" uniquename="HIGHLAND_DEAD_CENTER_CITY_SEASONS_STORE" />  
+  <buildingreference template="SEASONS_STORE" uniquename="FOREST_GREEN_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="FOREST_RED_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="FOREST_DEAD_SEASONS_STORE_PORTAL" />   
+  <buildingreference template="SEASONS_STORE" uniquename="HIGHLAND_GREEN_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="HIGHLAND_RED_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="HIGHLAND_DEAD_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="MOUNTAIN_GREEN_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="MOUNTAIN_RED_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="MOUNTAIN_DEAD_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="STEPPE_GREEN_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="STEPPE_RED_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="STEPPE_DEAD_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="SWAMP_GREEN_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="SWAMP_RED_SEASONS_STORE_PORTAL" />  
+  <buildingreference template="SEASONS_STORE" uniquename="SWAMP_DEAD_SEASONS_STORE_PORTAL" />  
   
   <!--VANITY_STORE-->
   <craftbuilding uniquename="VANITY_STORE" tier="1" placecost="0" displaygroup="1" allowsstudy="false" animateonguiopen="true" randomidleanimoffset="false" isshop="true" craftanimation="none" defaultcostfactorfriends="0" defaultcostfactorusers="0" durability="1" durabilityloss="0" category="none" craftcapacity="0" craftcapacityregeneration="0" usesbuildingplacementrules="false" iconAtlas="RefItemAtlas" iconSprite="MAIN_STAFF_FIREWORKS_RED" uispritename="Gui/Avatars/Buildings/TYPE_VANITY_STORE" uisoundevent="Play_ui_select_vanitymerchant">
@@ -2350,6 +2952,63 @@
       <craftitem uniquename="T4_FURNITUREITEM_GUILDBANNER_SHIELD" category="@BUILDING_ITEMS_CATEGORY_FURNITURE" displaygroup="4" />
       <craftitem uniquename="T5_FURNITUREITEM_GUILDBANNER_FABRIC" category="@BUILDING_ITEMS_CATEGORY_FURNITURE" displaygroup="5" />
       <craftitem uniquename="T5_FURNITUREITEM_GUILDBANNER_SHIELD" category="@BUILDING_ITEMS_CATEGORY_FURNITURE" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_GIANTSTAG_ALPACA_BROWN" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_HYENA_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_VANITY_2H_CHICKENGUN_EASTER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_T8_GUILD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_OX_BISON_ROYAL_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_HORSE_UNICORN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="T1_KILL_EMOTE_TOMBSTONE_CHARGES_NONTRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="T1_KILL_EMOTE_GHOST_CHARGES_NONTRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_ENTERTAINER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_INNKEEPER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_PIRATE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_HORSE_KEEPER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_T6_GUILD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_T7_GUILD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_OX_BISON_AH_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_DRESS_GREEN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_OFF_VANITY_INNKEEPER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_OFF_VANITY_PIRATE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_HORSE_BROWN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_ARMORED_HORSE_T5_GUILD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SKIN_OX_BLACKMARKET_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_DRESS_BLUE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_DRESS_BLACK_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_PRIEST_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_WEDDING_DRESS_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_WEDDING_TUXEDO_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_ARMOR_VANITY_BARD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="T1_KILL_EMOTE_FLAG_CHARGES_NONTRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="T1_KILL_EMOTE_OVERGROWN_CHARGES_NONTRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_NIGHTGOWN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_DRESS_GREEN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_DRESS_BLUE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_DRESS_BLACK_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_PRIEST_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_WEDDING_DRESS_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_WEDDING_TUXEDO_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_BARD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_HEAD_VANITY_INNKEEPER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_DRESS_BLUE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_DRESS_BLACK_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_PRIEST_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_WEDDING_DRESS_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_WEDDING_TUXEDO_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_BARD_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_INNKEEPER_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_PIRATE_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_SHOES_VANITY_DRESS_GREEN_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_CAPE_VANITY_WEDDING_TUXEDO_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_OFF_VANITY_PRIEST_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_OFF_VANITY_WEDDING_DRESS_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+      <craftitem uniquename="UNIQUE_UNLOCK_OFF_VANITY_WEDDING_TUXEDO_NON_TRADABLE" category="@BUILDING_ITEMS_CATEGORY_COMMUNITY" displaygroup="5" />
+
+
+
+      
+      
       <!--<craftitem uniquename="UNIQUE_HEAD_VANITY_WEDDING_DRESS" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="4" />  
       <craftitem uniquename="UNIQUE_ARMOR_VANITY_WEDDING_DRESS" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="4" />      
       <craftitem uniquename="UNIQUE_SHOES_VANITY_WEDDING_DRESS" category="@BUILDING_ITEMS_CATEGORY_ARMOR" displaygroup="4" />      
@@ -9967,6 +10626,11 @@
   <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_GREEN_REPAIRSHOP_OUTPOST" />   
   <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_RED_REPAIRSHOP_OUTPOST" />
   <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_DEAD_REPAIRSHOP_OUTPOST" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="FOREST_GREEN_REPAIRSHOP_PORTAL" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="HIGHLAND_GREEN_REPAIRSHOP_PORTAL" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="MOUNTAIN_GREEN_REPAIRSHOP_PORTAL" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="STEPPE_GREEN_REPAIRSHOP_PORTAL" />  
+  <buildingreference template="T8_REPAIRSHOP" uniquename="SWAMP_GREEN_REPAIRSHOP_PORTAL" />  
   
   <!--STABLE-->
   <craftbuilding uniquename="T3_STABLE" tier="3" placecost="100" upgradeableto="T4_STABLE" allowsstudy="false" durability="12000" durabilityloss="240" nutritionstorage="795000" craftcapacity="69000" craftcapacityregeneration="1.25" displaygroup="3" defaultcostfactorfriends="0" defaultcostfactorusers="0" craftanimation="crafttalk" unlocked="false" iconAtlas="RefMiniMapAtlas" iconSprite="building_saddler" uispritename="Gui/Avatars/Buildings/TYPE_STABLE" uibuildmenutexture="Gui/BuildingIcons/building_saddler" uisoundevent="Play_ui_select_saddler" category="@BUILDING_CATEGORY_FARMING" accessrightspreset="public" repaircostfactor="0.9" destructionreturnfactor="0" initialnutrition="0.06528">
