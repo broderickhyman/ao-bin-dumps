@@ -5,22 +5,6 @@
 
         <!-- Order is important if more frequencyrules would match, first rules first -->
         <!-- Rules are always evaluated after a Trigger is invoked, means those can change on the fly -->
-        <!-- own rule for guest accounts other do not match properly -->
-        <!--<frequencyrule uniquename="GUEST_ACCOUNT">
-            <timeframes>
-                <timeframe range="1-4" minutes="45" />
-            </timeframes>
-            <conditions>
-                <and>
-                    <IfIsGuestAccount />
-                </and>
-            </conditions>
-            <blockedpopups>
-                <BlockedPopupType type="Premium" />
-                <BlockedPopupType type="Vanity" />
-                <BlockedPopupType type="Gold" />
-            </blockedpopups>
-        </frequencyrule>-->
 
         <frequencyrule uniquename="NONE_PREMIUM">
             <timeframes>
@@ -65,11 +49,23 @@
         </frequencyrule>
     </frequencyrules>
 
+    <popupqueue>
+        <allowedtriggers>
+            <trigger action="GameLogin" totalpopups="3" />
+        </allowedtriggers>
+        <allowedcategories>
+            <category name="Advertisement" totalpopups="1" />
+            <category name="GameFeature" totalpopups="1" />        
+            <category name="ActivityHUB" totalpopups="1" />
+        </allowedcategories>
+    </popupqueue>
+
     <popups>
         <popup uniquename="FULLY_ENJOY_ALBION" priority="4" type="Premium" title="@EVENT_BASED_POPUPS_FULLY_ENJOY_ALBION_TITLE"
                description="@EVENT_BASED_POPUPS_FULLY_ENJOY_ALBION_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FULLY_ENJOY_ALBION">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -81,6 +77,7 @@
                         <IfHasPremium />
                     </not>
                     <IfHasSeenPopup uniquename="FULLY_ENJOY_ALBION" frequency="Hours" timefactor="68" operation="less" amount="1" />
+                    <IfHasSeenSinceLoginsPast uniquename="FULLY_ENJOY_ALBION" amount="3" />
                 </and>
             </conditions>
         </popup>
@@ -89,6 +86,7 @@
                description="@EVENT_BASED_POPUPS_ISLAND_LIFE_LIVING_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_ISLAND_LIFE_LIVING">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenIslandMerchantUi" />
@@ -111,6 +109,7 @@
                description="@EVENT_BASED_POPUPS_FRUITS_NONE_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FRUITS_NONE_PREMIUM">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="FarmingActivity" />
@@ -130,6 +129,7 @@
                description="@EVENT_BASED_POPUPS_FRUITS_EXTEND_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FRUITS_NONE_PREMIUM">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="FarmingActivity" />
@@ -143,6 +143,7 @@
                         <IfHasRecurringSubscription />
                     </not>
                     <IfHasSeenPopup uniquename="FRUITS_EXTEND_PREMIUM" frequency="Hours" timefactor="68" operation="less" amount="1" />
+                    <IfHasSeenSinceLoginsPast uniquename="FRUITS_EXTEND_PREMIUM" amount="3" />
                 </and>
             </conditions>
         </popup>
@@ -151,6 +152,7 @@
                description="@EVENT_BASED_POPUPS_DONT_MISS_OUT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_DONT_MISS_OUT">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -182,6 +184,7 @@
                description="@EVENT_BASED_POPUPS_STAY_FOCUSED_PREMIUM_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_PREMIUM">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="CompletedCraftingWithFocus" />
@@ -204,6 +207,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_STAY_FOCUSED_NONE_PREMIUM">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenAnyBuildingUiWithCraftFocus" />
@@ -225,6 +229,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_PLAY_THE_MARKET">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="MarketplaceCreateSellOrder" />
@@ -245,6 +250,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_MASTER_GATHERER">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GatheringNodeLevelCompleted" />
@@ -265,6 +271,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_ADVENTURE_AWAITS">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenAdventuresChallengeUi" />
@@ -288,6 +295,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_SPOILS_OF_WAR">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenFactionWarfareUi" />
@@ -312,6 +320,7 @@
                imagepath="Gui/EventBasedPopups/EVENT_POPUP_ARISE_CONQUER">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenConquerorsChallengeUi" />
@@ -334,6 +343,7 @@
                description="@EVENT_BASED_POPUPS_FUNDS_LOW_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_FUNDS_LOW">
             <categories>
                 <category name="Gold" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="ClickingOkOnNotEnoughSilverMessage" />
@@ -350,6 +360,7 @@
                description="@EVENT_BASED_POPUPS_SET_OFF_RIGHT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_SET_OFF_RIGHT">
             <categories>
                 <category name="Premium" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -361,6 +372,7 @@
                         <IfHasPremium />
                     </not>
                     <IfHasSeenPopup uniquename="SET_OFF_RIGHT" frequency="Hours" timefactor="68" operation="less" amount="1" />
+                    <IfHasSeenSinceLoginsPast uniquename="SET_OFF_RIGHT" amount="3" />
                 </and>
             </conditions>
         </popup>
@@ -370,6 +382,7 @@
         <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="1" type="GuestAccount">
             <categories>
                 <category name="GuestAccount" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenFastTravelUi" />
@@ -427,6 +440,7 @@
         <popup uniquename="CROSS_PLATFORM" priority="1" type="CrossPlatform">
             <categories>
                 <category name="CrossPlatform" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -460,10 +474,9 @@
         </popup>
 
         <!-- Activity HUB -->
-        <popup uniquename="ACTIVITY_HUB" priority="8" type="ActivityHUB">
+        <popup uniquename="ACTIVITY_HUB" priority="1" type="ActivityHUB">
             <categories>
                 <category name="ActivityHUB" />
-                <category name="GameFeature" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -483,6 +496,7 @@
         <popup uniquename="FEATURED_FEATURE" priority="10" type="FeaturedFeature">
             <categories>
                 <category name="FeaturedFeature" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -518,6 +532,7 @@
         <popup uniquename="MOBILE_STORE_RATING" priority="9" type="MobileStoreRating">
             <categories>
                 <category name="MobileStoreRating" />
+                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
@@ -537,7 +552,7 @@
         <!---->
         <!-- For a tutorial popup use same unique name as used in tutorial xml -->
         <!---->
-        
+
         <popup uniquename="PORTAL_CITY_INFO" priority="10" type="GenericTutorial">
             <categories>
                 <category name="GenericTutorial" />

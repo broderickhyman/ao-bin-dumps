@@ -765,12 +765,24 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
-    <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_DEAD_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
-	  <Loot>
+    <Tier tier="3" item="T3_ROCK" tile="FOREST_GREEN_T3_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" notooltimefactor="2" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="3" />
+      <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="3" />
+    </Tier>
+    <Tier tier="5" item="T5_ROCK" tile="FOREST_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T5_ROCK_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="5" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="5" />
+    </Tier>
+    <Tier tier="7" item="T7_ROCK" tile="FOREST_DEAD_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="86400">
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
-	  <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="2" />
+	    <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="2" />
       <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
     </Tier>
   </Harvestable>
