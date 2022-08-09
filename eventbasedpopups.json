@@ -79,7 +79,7 @@
       "allowedtriggers": {
         "trigger": {
           "@action": "GameLogin",
-          "@totalpopups": "3"
+          "@totalpopups": "4"
         }
       },
       "allowedcategories": {
@@ -94,6 +94,10 @@
           },
           {
             "@name": "ActivityHUB",
+            "@totalpopups": "1"
+          },
+          {
+            "@name": "Mobile",
             "@totalpopups": "1"
           }
         ]
@@ -827,7 +831,7 @@
         },
         {
           "@uniquename": "CROSS_PLATFORM",
-          "@priority": "1",
+          "@priority": "9",
           "@type": "CrossPlatform",
           "categories": {
             "category": [
@@ -894,10 +898,10 @@
                       },
                       {
                         "@uniquename": "CROSS_PLATFORM",
-                        "@frequency": "Days",
-                        "@timefactor": "20",
-                        "@operation": "equals",
-                        "@amount": "0"
+                        "@frequency": "Hours",
+                        "@timefactor": "68",
+                        "@operation": "less",
+                        "@amount": "1"
                       }
                     ]
                   }
@@ -1005,14 +1009,19 @@
                 "@name": "MobileStoreRating"
               },
               {
-                "@name": "Advertisement"
+                "@name": "Mobile"
               }
             ]
           },
           "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
+            "trigger": [
+              {
+                "@action": "GameLogin"
+              },
+              {
+                "@action": "ClusterChange"
+              }
+            ]
           },
           "conditions": {
             "and": {
@@ -1026,10 +1035,10 @@
               },
               "IfHasSeenPopup": {
                 "@uniquename": "MOBILE_STORE_RATING",
-                "@frequency": "Days",
-                "@timefactor": "7",
-                "@operation": "equals",
-                "@amount": "0"
+                "@frequency": "Hours",
+                "@timefactor": "68",
+                "@operation": "less",
+                "@amount": "1"
               }
             }
           }
