@@ -3936,10 +3936,89 @@
   <WwiseEventInfo name="SPELL_ARCANE_CAST_BIG">
     <OnCastFinished name="Play_arcane_cast_big" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_BUFF_SMALL" >
+	<OnCastFinished name="Play_arcane_cast_buff_small_protection" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_SMALL_CHAINMISSILE" >
+	<OnCastStart name="Play_arcane_cast_load_damage_small" />
+    <OnCastInterrupted name="Stop_arcane_cast_load_damage_small" />
+    <OnCastCanceled name="Stop_arcane_cast_load_damage_small" />
+    <OnCastFinished name="Play_arcane_cast_damage_small_missile" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_IMPACT_DAMAGE_SMALL_CHAINMISSILE" >
+    <OnSpellHit name="Play_arcane_impact_damage_small_missile" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_IMPACT_DAMAGE_SMALL" >
+    <OnSpellHit name="Play_arcane_impact_damage_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_IMPACT_DAMAGE_SMALL_ADD" >
+	<OnSpellHit name="Play_arcane_impact_damage_small_add" /> 
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_IMPACT_DAMAGE_MEDIUM" >
+	<OnSpellHit name="Play_arcane_impact_damage_medium" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_SMALL_MAGICSHOCK">
+	<OnCastStart name="Play_arcane_cast_load_damage_small_magicshock" />
+	<OnCastInterrupted name="Stop_arcane_cast_load_damage_small_magicshock" />
+	<OnCastCanceled name="Stop_arcane_cast_load_damage_small_magicshock" />
+	<OnSpellHit name="Play_arcane_impact_damage_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_MEDIUM_FRAZZLE">
+	<OnCastStart name="Play_arcane_cast_load_damage_medium" />
+	<OnCastInterrupted name="Stop_arcane_cast_load_damage_medium" />
+	<OnCastCanceled name="Stop_arcane_cast_load_damage_medium" />
+	<OnCastFinished name="Play_arcane_cast_damage_medium" />
+    <OnSpellHit name="Play_arcane_impact_damage_small" />
+  </WwiseEventInfo>
+ <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_MEDIUM_ENIGMABLADE">
+    <OnCastFinished name="Play_arcane_cast_damage_medium_enigmablade" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CHANNEL_BUFF_EMPOWERINGBEAM">
+	<OnChannelingStart name="Play_arcane_channel_empoweringbeam_buff_loop" />
+	<OnChannelingCancelled name="Stop_arcane_channel_empoweringbeam_buff_loop" />
+	<OnChannelingInterrupted name="Stop_arcane_channel_empoweringbeam_buff_loop" />
+	<OnChannelingEnd name="Stop_arcane_channel_empoweringbeam_buff_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_CLEANSE">
+	<OnCastFinished name="Play_arcane_cast_buff_cleanse" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_MIMIC">
+	<OnCastFinished name="Play_arcance_cast_mimic" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_BIG_ARCANEORB">
+	<OnCastFinished name="Play_arcane_cast_damage_big_arcaneorb" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_ORB_DAMAGE_EXPLOSION">
+	<OnSpellHit name="Play_arcane_impact_damage_arcaneorb" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CHANNEL_INVULNERABILTY">
+	<OnChannelingStart name="Play_arcane_channel_shield_loop" />
+	<OnChannelingCancelled name="Stop_arcane_channel_shield_loop" />
+	<OnChannelingInterrupted name="Stop_arcane_channel_shield_loop" />
+	<OnChannelingEnd name="Stop_arcane_channel_shield_loop" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_BLACKHOLE">
+    <OnCastFinished name="Play_arcane_cast_damage_big_blackhole" />
+	<OnSpellHit name="Play_arcane_impact_damage_blackhole" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_BIG_BUFF_CORRIDOR">
+	<OnCastFinished name="Play_arcane_cast_buff_big_corridor" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_LOAD_VOID">
+	<OnCastStart name="Play_arcane_cast_load_buff_void" />
+	<OnCastInterrupted name="Stop_arcane_cast_load_buff_void" />
+	<OnCastCanceled name="Stop_arcane_cast_load_buff_void" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARCANE_CHANNEL_VOID">
-    <OnChannelingStart name="Play_arcane_cast_medium" />
-    <OnChannelingEnd name="Stop_arcane_void_loop" />
-    <OnSpellHit name="Play_arcane_impact_medium" />
+    <OnChannelingStart name="Play_arcane_channel_void_caster_loop" />
+    <OnChannelingEnd name="Stop_arcane_channel_void_caster_loop" />
+    <OnChannelingCancelled name="Stop_arcane_channel_void_caster_loop" />
+	<OnChannelingInterrupted name="Stop_arcane_channel_void_caster_loop" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_BUFF_RESISTANCE_INCREASE">
+	<OnSpellHit name="Play_arcane_buff_resistance_increase" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARCANE_CAST_LOAD_SMALL">
     <OnCastStart name="Play_arcane_cast_load" />
@@ -3977,15 +4056,18 @@
   <WwiseEventInfo name="SPELL_ARCANE_FINISH_INVULNERABILITY">
     <OnChannelingEnd name="Stop_arcane_snowglobe" />
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_ARCANE_TIMEFREEZE">
-    <OnCastFinished name="Play_arcane_timefreeze" />
+  <WwiseEventInfo name="SPELL_ARCANE_CAST_TIMEFREEZE">
+    <OnCastFinished name="Play_arcane_cast_timefreeze" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARCANE_IMPACT_TIMEFREEZE">
+	<OnSpellHit name="Play_arcane_impact_timefreeze" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARCANE_METEOR_CAST">
     <OnCastStart name="Play_arcane_meteor_castload" />
     <OnCastInterrupted name="Stop_arcane_meteor_castload" />
     <OnCastCanceled name="Stop_arcane_meteor_castload" />
     <OnCastFinished name="Play_arcane_meteor_cast" />
-    <OnSpellHit name="Play_arcane_impact_medium" />
+	<OnSpellHit name="Play_arcane_impact_damage_medium" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL_CURSEDDOT">
@@ -4342,6 +4424,18 @@
   <WwiseEventInfo name="SPELL_FROST_CAST_SMALL">
 	<OnCastFinished name="Play_frost_cast_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_SMALL_FROSTBITE">
+    <OnCastStart name="Play_frost_cast_load_small_frostbite" />
+	<OnCastCanceled name="Stop_frost_cast_load_small_frostbite" />
+	<OnCastInterrupted name="Stop_frost_cast_load_small_frostbite" />
+	<OnCastFinished name="Play_frost_cast_small_frostbite" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_MEDIUM_FROSTBOMB">
+	<OnCastFinished name="Play_frost_cast_medium_frostbomb" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_TELEPORT">
+	<OnCastFinished name="Play_frost_cast_teleport" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_SMALL_2S">
     <OnCastStart name="Play_frost_cast_load_small_long" />
     <OnCastCanceled name="Stop_frost_cast_load_small_long" />
@@ -4366,33 +4460,82 @@
     <OnCastInterrupted name="Stop_frost_cast_load_fast" />
     <OnCastFinished name="Play_frost_cast_big" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_ICESCULPTURE">
+	<OnCastStart name="Play_frost_cast_load_icesculpture" />
+	<OnCastCanceled name="Stop_frost_cast_load_icesculpture" />
+	<OnCastInterrupted name="Stop_frost_cast_load_icesculpture" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_ICESTORM">
+	<OnCastStart name="Play_frost_cast_load_icestorm" />
+	<OnCastCanceled name="Stop_frost_cast_load_icestorm" />
+	<OnCastInterrupted name="Stop_frost_cast_load_icestorm" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CHANNELING_BEAM">
+	<OnChannelingStart name="Play_frost_frost_beam_loop" />
+	<OnChannelingCancelled name="Stop_frost_frost_beam_loop" />
+	<OnChannelingEnd name="Stop_frost_frost_beam_loop" />
+	<OnChannelingInterrupted name="Stop_frost_frost_beam_loop" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_GLACIALFIELD">
     <OnCastFinished name="Play_frost_cast_glacialfield" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_SPAWN_ICEBLOCK">
     <OnCastFinished name="Play_frost_spawn_iceblock" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_BIG_HAIL">
+	<OnCastFinished name="Play_frost_cast_big_hail" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_BIG_AVALANCHE">
+	<OnCastFinished name="Play_frost_cast_big_avalanche" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_BIG_BLIZZARD_HELL">
+	<OnCastFinished name="Play_frost_cast_big_blizzard_hell" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_BIG_ICE_CRYSTAL_ULTIMATE">
+	<OnCastStart name="Play_frost_cast_load_big_ice_crystal_ultimate" />
+	<OnCastInterrupted name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
+	<OnCastCanceled name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_SMALL">
     <OnSpellHit name="Play_frost_impact_small" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_HIT_SMALL_ICECRYSTAL">
+	<OnSpellHit name="Play_frost_impact_small_icecrystal" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_MEDIUM">
     <OnSpellHit name="Play_frost_impact_medium" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_HIT_BIG">
+	<OnSpellHit name="Play_frost_impact_big" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_ICEROCK">
     <OnSpellHit name="Play_frost_icerock" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_IMPACT_AVALANCHE_BALL">
+	<OnSpellHit name="Play_frost_impact_avalanche_ball" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_HIT_BIG_HAIL">
+	<OnSpellHit name="Play_frost_impact_big_hail" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_EXPLOSION_MEDIUM_LANCE">
+	<OnSpellHit name="Play_frost_explosion_medium_lance" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_ICEBLOCK">
     <OnSpellHit name="Play_frost_cast_iceblock" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_ICESHARD">
-    <OnCastStart name="Play_frost_cast_load_small" />
-    <OnCastCanceled name="Stop_frost_cast_load_small" />
-    <OnCastInterrupted name="Stop_frost_cast_load_small" />
-    <OnCastFinished name="Play_frost_cast_small" />
+    <OnCastStart name="Play_frost_cast_load_small_iceshard" />
+    <OnCastCanceled name="Stop_frost_cast_load_small_iceshard" />
+    <OnCastInterrupted name="Stop_frost_cast_load_small_iceshard" />
     <OnSpellHit name="Play_frost_impact_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_LANCE">
+	<OnCastStart name="Play_frost_cast_load_medium_lance" />
+	<OnCastCanceled name="Stop_frost_cast_load_medium_lance" />
+	<OnCastInterrupted name="Stop_frost_cast_load_medium_lance" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_FROZENCRYSTAL_CAST">
-    <OnCastFinished name="Play_frost_frozen_crystal_shield" />
+    <OnCastFinished name="Play_frost_cast_big_frozencrystal" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_SHIELD_REFLECT">
     <OnCastStart name="Play_selfbuff_cast" />
@@ -4404,6 +4547,9 @@
   <WwiseEventInfo name="SPELL_FROST_FREEZINGWIND_CAST">
     <OnCastFinished name="Play_frost_freezingwind" />
     <OnSpellHit name="Play_frost_impact_medium" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_BUFF_DAMAGE_INCREASE">
+	<OnSpellHit name="Play_frost_buff_damage_increase" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_GENEROUSHEAL">
@@ -4716,6 +4862,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_CASTFINISHED">
     <OnCastFinished name="Play_selfbuff_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_FROST">
+	<OnCastFinished name="Play_cast_impact_buff_frost" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SMALL_DEBUFF">
     <OnSpellHit name="Play_small_debuff" />
