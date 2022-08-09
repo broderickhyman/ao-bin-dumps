@@ -51,12 +51,13 @@
 
     <popupqueue>
         <allowedtriggers>
-            <trigger action="GameLogin" totalpopups="3" />
+            <trigger action="GameLogin" totalpopups="4" />
         </allowedtriggers>
         <allowedcategories>
             <category name="Advertisement" totalpopups="1" />
             <category name="GameFeature" totalpopups="1" />        
             <category name="ActivityHUB" totalpopups="1" />
+            <category name="Mobile" totalpopups="1" />
         </allowedcategories>
     </popupqueue>
 
@@ -437,7 +438,7 @@
         </popup>
 
         <!-- Cross Platform -->
-        <popup uniquename="CROSS_PLATFORM" priority="1" type="CrossPlatform">
+        <popup uniquename="CROSS_PLATFORM" priority="9" type="CrossPlatform">
             <categories>
                 <category name="CrossPlatform" />
                 <category name="Advertisement" />
@@ -466,7 +467,7 @@
                         </and>
                         <and>
                             <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="AllTime" operation="greaterOrEqual" amount="1" />
-                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="Days" timefactor="20" operation="equals" amount="0" />
+                            <IfHasSeenPopup uniquename="CROSS_PLATFORM" frequency="Hours" timefactor="68" operation="less" amount="1" />
                         </and>
                     </or>
                 </and>
@@ -532,17 +533,18 @@
         <popup uniquename="MOBILE_STORE_RATING" priority="9" type="MobileStoreRating">
             <categories>
                 <category name="MobileStoreRating" />
-                <category name="Advertisement" />
+                <category name="Mobile" />
             </categories>
             <triggers>
                 <trigger action="GameLogin" />
+                <trigger action="ClusterChange" />
             </triggers>
             <conditions>
                 <and>
                     <IfOnPlatform platform="MobileStore" />
                     <IfTutorialCompleted />
                     <IfCharacterOnlineHours operation="greaterOrEqual" value="5" />
-                    <IfHasSeenPopup uniquename="MOBILE_STORE_RATING" frequency="Days" timefactor="7" operation="equals" amount="0" />
+                    <IfHasSeenPopup uniquename="MOBILE_STORE_RATING" frequency="Hours" timefactor="68" operation="less" amount="1" />
                 </and>
             </conditions>
         </popup>
