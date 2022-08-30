@@ -2639,69 +2639,42 @@
             {
               "missions": {
                 "or": {
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT3",
-                  "@markedinworld": "false",
-                  "@locationmarkerid": "STATIC_DUNGEON_BOSS",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT_KILL_MOBS",
                   "killmob": [
                     {
-                      "@mobid": "T3_MOB_HERETIC_THIEF_VETERAN_CHAMPION",
-                      "@count": "1",
-                      "@countpartykills": "true"
+                      "@count": "12",
+                      "@faction": "HERETIC",
+                      "@mintier": "3",
+                      "@countpartykills": "true",
+                      "@clusterdirect": "DNG-HER-01-MAIN-01"
                     },
                     {
-                      "@mobid": "T3_MOB_HERETIC_THIEF_VETERAN_MINIBOSS",
-                      "@count": "1",
-                      "@countpartykills": "true"
+                      "@count": "12",
+                      "@faction": "HERETIC",
+                      "@mintier": "3",
+                      "@countpartykills": "true",
+                      "@clusterdirect": "DNG-HER-01-MAIN-02"
                     },
                     {
-                      "@mobid": "T3_MOB_HERETIC_ARCHER_VETERAN_CHAMPION",
-                      "@count": "1",
-                      "@countpartykills": "true"
+                      "@count": "12",
+                      "@faction": "HERETIC",
+                      "@mintier": "3",
+                      "@countpartykills": "true",
+                      "@clusterdirect": "DNG-HER-01-MAIN-03"
                     },
                     {
-                      "@mobid": "T3_MOB_HERETIC_ARCHER_VETERAN_MINIBOSS",
-                      "@count": "1",
-                      "@countpartykills": "true"
+                      "@count": "12",
+                      "@faction": "HERETIC",
+                      "@mintier": "3",
+                      "@countpartykills": "true",
+                      "@clusterdirect": "DNG-HER-01-MAIN-04"
                     },
                     {
-                      "@mobid": "T3_MOB_HERETIC_MAGE_VETERAN_CHAMPION",
-                      "@count": "1",
-                      "@countpartykills": "true"
-                    },
-                    {
-                      "@mobid": "T3_MOB_HERETIC_MAGE_VETERAN_MINIBOSS",
-                      "@count": "1",
-                      "@countpartykills": "true"
-                    },
-                    {
-                      "@mobid": "T3_MOB_HERETIC_TANK_VETERAN_CHAMPION",
-                      "@count": "1",
-                      "@countpartykills": "true"
-                    },
-                    {
-                      "@mobid": "T3_MOB_HERETIC_TANK_VETERAN_MINIBOSS",
-                      "@count": "1",
-                      "@countpartykills": "true"
-                    }
-                  ]
-                },
-                "unlocklootchest": {
-                  "@count": "1",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT2",
-                  "@markedinworld": "false",
-                  "@locationmarkerid": "STATIC_DUNGEON_BOSS",
-                  "validchest": [
-                    {
-                      "@name": "STATIC_HERETIC_POI"
-                    },
-                    {
-                      "@name": "STATIC_HERETIC_CHAMPION"
-                    },
-                    {
-                      "@name": "STATIC_HERETIC_MINIBOSS"
-                    },
-                    {
-                      "@name": "STATIC_HERETIC_BOSS"
+                      "@count": "12",
+                      "@faction": "HERETIC",
+                      "@mintier": "3",
+                      "@countpartykills": "true",
+                      "@clusterdirect": "DNG-HER-01-MAIN-05"
                     }
                   ]
                 }
@@ -4954,7 +4927,8 @@
                 "acquireitem": {
                   "@itemid": "T1_MAIN_SWORD",
                   "@count": "1",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_D1_SIDETEXT"
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_D1_SIDETEXT",
+                  "@locationmarkerid": "FORGE"
                 }
               }
             },
@@ -5182,19 +5156,31 @@
               "@maxdistance": "0"
             }
           },
-          "dynamicquestgiver": {
-            "@name": "CAPTAIN",
-            "distancefromquestgiver": {
-              "@mindistance": "0",
-              "@maxdistance": "0"
+          "dynamicquestgiver": [
+            {
+              "@name": "CAPTAIN",
+              "distancefromquestgiver": {
+                "@mindistance": "0",
+                "@maxdistance": "0"
+              },
+              "questgivertag": {
+                "@tag": "CAPTAIN_TIA"
+              }
             },
-            "questgivertag": {
-              "@tag": "CAPTAIN_TIA"
+            {
+              "@name": "SHIP_REPAIR_GUY",
+              "distancefromquestgiver": {
+                "@mindistance": "0",
+                "@maxdistance": "0"
+              },
+              "questgivertag": {
+                "@tag": "SHIP_REPAIRMAN"
+              }
             }
-          }
+          ]
         },
         "tasks": {
-          "extendedcompletionstep": {
+          "extendedmissionstep": {
             "preactions": {
               "settutorialstate": {
                 "@state": "WHEREAREMYFRIENDS"
@@ -5210,6 +5196,15 @@
                 }
               ]
             },
+            "missions": {
+              "gotolocation": {
+                "@locationmarkerid": "TIA",
+                "@markedonminimap": "true",
+                "@markedinworld": "true"
+              }
+            }
+          },
+          "extendedcompletionstep": {
             "missions": {
               "gotoquestgiver": {
                 "@questgivervariable": "CAPTAIN",
