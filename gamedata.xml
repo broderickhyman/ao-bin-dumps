@@ -907,8 +907,8 @@
 
   <MarketPlace>
     <TaxValues>
-      <TaxFactor name="setupfee" value="0.015" />
-      <TaxFactor name="transactiontax" value="0.06" />
+      <TaxFactor name="setupfee" value="0.025" />
+      <TaxFactor name="transactiontax" value="0.08" />
       <AbsoluteTax name="minimumtax" value="1" />
     </TaxValues>
     <Settings>
@@ -968,7 +968,7 @@
     <CraftItem factor="1"/>
     <InstallResourceIv factor="1"/>
   </FameGainFactors>
-  <StudyFame factor="2"/>
+  <StudyFame factor="2.75"/>
   <SilverDropFromPvp factor="0.75"/>
   <ItemValueToNutrition factor="0.1125" />  <!--do not adjust uninformed - use BuildingConsumptionBalanceFactor instead-->
   <CraftNutrition minimumpercent="0" />
@@ -977,6 +977,7 @@
   <BuildingConsumptionBalanceFactor factor="1"/>
   <ActionFocus costreductionconstant="1.00695555005672">
     <CraftingEfficiency bonus="0.59" />
+    <StudyingEfficiency bonus="0.59" />
     <CraftingQuality bonus="50" />
   </ActionFocus>
   <LabourerSettings happinessperbarsegment="100" maxsafedistancefromhouse="1" maxsafedistancetimeout="3" maxbarsegments="9" maxyield="1.5"/>
@@ -1298,7 +1299,7 @@
     <Repair>
       <Items>
         <CostFactors lower="0.0" upper="1" />
-        <Modifier silver="15"/>
+        <Modifier silver="16.5"/>
         <Time crafttimefactor="0.1" />
       </Items>
     </Repair>
@@ -1320,10 +1321,10 @@
     </Salvage>
     <RerollQuality>
       <Items>
-        <CostModifier level="1" silver="4"/>
-        <CostModifier level="2" silver="5"/>
-        <CostModifier level="3" silver="6"/>
-        <CostModifier level="4" silver="25.0"/>
+        <CostModifier level="1" silver="4.4"/>
+        <CostModifier level="2" silver="5.5"/>
+        <CostModifier level="3" silver="6.6"/>
+        <CostModifier level="4" silver="27.5"/>
       </Items>
     </RerollQuality>
     <DurabilityIndicators trashhudcolor="56 56 56" hudalpha="180" >
@@ -1401,7 +1402,7 @@
    <GoldPurchasePackage name="GOLDPACKAGE4" gold="10000" price="49.95"/>
    <GoldPurchasePackage name="GOLDPACKAGE5" gold="21000" price="99.95"/>
   </GoldPurchasePackages>
-  <ClusterDangerBonusTypes>
+  <ClusterDangerBonusTypes globalmoblootfactor="0.9" globalmobsilverlootfactor="0.9">
     <ClusterDangerBonus type="safe"                   icon="safe"                  famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45"/>
     <ClusterDangerBonus type="yellow"                 icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
     <ClusterDangerBonus type="red"                    icon="red"                   famefactor="3.3"  moblootfactor="2.25" mobsilverlootfactor="2.6"/>
@@ -1417,7 +1418,7 @@
     <ClusterDangerBonus type="corrupted_pro"          icon="corruptedpro"          famefactor="3.5"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
     <ClusterDangerBonus type="expedition"             icon="safe"                  famefactor="1"    moblootfactor="0.5"  mobsilverlootfactor="0.5"/>
     <ClusterDangerBonus type="tunnel"                 icon="black"                 famefactor="6"    moblootfactor="7.1"  mobsilverlootfactor="8.17"/>
-  </ClusterDangerBonusTypes>
+  </ClusterDangerBonusTypes>                                                                                          
   <AchievementHud tutorial_idletime_till_highlight="30"/>
   <SilverDropSettings
     prefab="COINS"
@@ -1602,7 +1603,7 @@
     <Penalty territorythreshold="98" energydrainfactor="2.67" silverpenalty="0.79" famepenalty="0.79"/>
     <Penalty territorythreshold="99" energydrainfactor="2.70" silverpenalty="0.80" famepenalty="0.80"/>    
   </AlliancePenalty>
-  <AchievementProgressConversion silverConversionRatio="0.9" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
+  <AchievementProgressConversion silverConversionRatio="1" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8"/>
   <TerritoryBlockClaiming>
     <clustergroup startdate="2020-01-20T10:00:00Z" enddate="2020-02-01T18:00:00Z"> <!-- EU -->
       <cluster id="0302" />

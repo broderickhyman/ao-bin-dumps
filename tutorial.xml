@@ -20,7 +20,7 @@
         <achievement id="COMBAT_TRAINEE" masterylevel="1" />
         <achievement id="CRAFT_TRAINEE" masterylevel="1" />
         <achievement id="FARM_TRAINEE" masterylevel="1" />
-        <achievement id="GATHER_TRAINEE" masterylevel="1"/>
+        <achievement id="GATHER_TRAINEE" masterylevel="1" />
     </unlockachievementskippedtutorial>
 
     <!---->
@@ -419,6 +419,17 @@
     <hint uniquename="ISLANDMERCHANTSMALL" title="@HINT_TITLE_T2_TUTORIAL_ISLANDMERCHANTSMALL" infotext="@HINT_INFO_T2_TUTORIAL_ISLANDMERCHANTSMALL" completebutton="true" />
     <hint uniquename="TRAVEL" title="@HINT_TITLE_T2_TUTORIAL_CITYTOUR_TRAVEL" infotext="@HINT_INFO_T2_TUTORIAL_CITYTOUR_TRAVEL" completebutton="true" />
 
+    <!--Guild Finder-->
+    <hint uniquename="GUILDFINDERINTRO_01" title="@HINT_TITLE_GUILDFINDERINTRO_GUILD_FINDER" infotext="@HINT_INFO_GUILDFINDERINTRO_01" nexthint="GUILDFINDERINTRO_02" blockworldinteraction="true" triggerui="guildfinderhudbutton" mobileposition="BottomLeft" />
+    <hint uniquename="GUILDFINDERINTRO_02" title="@HINT_TITLE_GUILDFINDERINTRO_GUILD_FINDER" infotext="@HINT_INFO_GUILDFINDERINTRO_02" nexthint="GUILDFINDERINTRO_03" blockworldinteraction="true" triggerui="guildfinderstart" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_03" title="@HINT_TITLE_GUILDFINDERINTRO_SEARCH" infotext="@HINT_INFO_GUILDFINDERINTRO_03" nexthint="GUILDFINDERINTRO_04" blockworldinteraction="true" triggerui="guildfindernamesearch" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_04" title="@HINT_TITLE_GUILDFINDERINTRO_ADVANCED" infotext="@HINT_INFO_GUILDFINDERINTRO_04" nexthint="GUILDFINDERINTRO_05" blockworldinteraction="true" triggerui="guildfinderfiltersearch" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_05" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_05" nexthint="GUILDFINDERINTRO_06" blockworldinteraction="true" triggerui="guildfinderrecommendations" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_06" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_06" nexthint="GUILDFINDERINTRO_07" blockworldinteraction="false" triggerui="guildfinderrecommendationsselectlanguage" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_07" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_07" nexthint="GUILDFINDERINTRO_08" blockworldinteraction="true" triggerui="guildfinderrecommendationsresults" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_08" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_08" nexthint="GUILDFINDERINTRO_09" blockworldinteraction="true" triggerui="guildfinderrecommendationsmoreinfo" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_09" title="@HINT_TITLE_GUILDFINDERINTRO_GUILD_FINDER" infotext="@HINT_INFO_GUILDFINDERINTRO_09" completebutton="true" blockworldinteraction="true" triggerui="guildfinderend" mobileposition="BottomRight" />
+
     <!--<hint uniquename="OPTIONS" title="@HINT_TITLE_T2_TUTORIAL_OPTIONS" infotext="@HINT_INFO_T2_TUTORIAL_OPTIONS"  completebutton="true"  />-->
     <!--<hint uniquename="REAVER" title="@HINT_TITLE_T2_TUTORIAL_REAVER" infotext="@HINT_INFO_T2_TUTORIAL_REAVER"  completebutton="true"  />-->
     <!--<hint uniquename="T3_GEAR" title="@HINT_TITLE_T2_TUTORIAL_T3_GEAR" infotext="@HINT_INFO_T2_TUTORIAL_T3_GEAR"  completebutton="true"  />-->
@@ -625,31 +636,31 @@
             <content title="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_INFO" />
         </entry>
     </hint>
-  <hint uniquename="STATIC_DUNGEON" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TITLE" completebutton="true">
-    <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_1" scale="1.2">
-      <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_INFO" />
-    </entry>
-    <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_2" scale="1.2">
-      <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_INFO" />
-    </entry>
-  </hint>
-
-  <!--<hint uniquename="GUILDS" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_GUILDS_TITLE"  >
-      <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
-        <content title="@TUTORIAL_BIGHINT_GUILDS_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_GUILDS_TEXT1_INFO"/>
-      </entry>
-      <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
-        <content title="@TUTORIAL_BIGHINT_GUILDS_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_GUILDS_TEXT2_INFO"/>
-      </entry>
+    <hint uniquename="STATIC_DUNGEON" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TITLE" completebutton="true">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_1" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_INFO" />
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_2" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_INFO" />
+        </entry>
     </hint>
-    <hint uniquename="ISLAND" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_ISLAND_TITLE"  >
-      <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
-        <content title="@TUTORIAL_BIGHINT_ISLAND_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_ISLAND_TEXT1_INFO"/>
-      </entry>
-      <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
-        <content title="@TUTORIAL_BIGHINT_ISLAND_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_ISLAND_TEXT2_INFO"/>
-      </entry>
-    </hint>-->
+
+    <!--<hint uniquename="GUILDS" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_GUILDS_TITLE"  >
+        <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
+          <content title="@TUTORIAL_BIGHINT_GUILDS_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_GUILDS_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
+          <content title="@TUTORIAL_BIGHINT_GUILDS_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_GUILDS_TEXT2_INFO"/>
+        </entry>
+      </hint>
+      <hint uniquename="ISLAND" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_ISLAND_TITLE"  >
+        <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
+          <content title="@TUTORIAL_BIGHINT_ISLAND_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_ISLAND_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER">
+          <content title="@TUTORIAL_BIGHINT_ISLAND_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_ISLAND_TEXT2_INFO"/>
+        </entry>
+      </hint>-->
     <hint uniquename="FAMEBOOK" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_FAMEBOOK_TITLE" nexthint="USE" triggerui="clear" delay="1">
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_FAMEBOOK" scale="2">
             <content title="@TUTORIAL_BIGHINT_FAMEBOOK_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_FAMEBOOK_TEXT1_INFO" />
@@ -685,17 +696,17 @@
     </hint>
 
 
-  <!-- Portal City Infos -->
-  <hint uniquename="PORTAL_CITY_INFO" explanation="VerticalTemplate" title="@PORTAL_CITY_INFO_TITLE" delay="5" dontshow_decisiontag="EnteredPortalCity">
-    <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_01" scale="1.2">
-      <content title="@PORTAL_CITY_INFO_SUBTITLE_01" text="@PORTAL_CITY_INFO_TEXT_01" />
-    </entry>
-    <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_02" scale="1.2">
-      <content title="@PORTAL_CITY_INFO_SUBTITLE_02" text="@PORTAL_CITY_INFO_TEXT_02" />
-    </entry>
-  </hint>  
-  
-  <!--READY FOR WORLD-->
+    <!-- Portal City Infos -->
+    <hint uniquename="PORTAL_CITY_INFO" explanation="VerticalTemplate" title="@PORTAL_CITY_INFO_TITLE" delay="5" dontshow_decisiontag="EnteredPortalCity">
+        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_01" scale="1.2">
+            <content title="@PORTAL_CITY_INFO_SUBTITLE_01" text="@PORTAL_CITY_INFO_TEXT_01" />
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_02" scale="1.2">
+            <content title="@PORTAL_CITY_INFO_SUBTITLE_02" text="@PORTAL_CITY_INFO_TEXT_02" />
+        </entry>
+    </hint>
+
+    <!--READY FOR WORLD-->
     <hint uniquename="NOMOREQUESTS" title="@HFINT_TITLE_NOMOREQUESTS_01" infotext="@HINT_INFO_NOMOREQUESTS_01" blockworldinteraction="true" completebutton="true" />
 
     <!-- CRYSTAL LEAGUE -->
@@ -921,8 +932,8 @@
             <content title="@TUTORIAL_ARENA_RULES_TITLE" text="@TUTORIAL_ARENA_RULES_TEXT" />
         </entry>
     </hint>
-  
-  <!-- CRYSTAL ARENA MATCHES -->
+
+    <!-- CRYSTAL ARENA MATCHES -->
     <hint uniquename="CRYSTAL_ARENA_MATCH_INFO" explanation="VerticalTemplate" title="@TUTORIAL_CRYSTAL_ARENA_TITLE" nexthint="CRYSTAL_ARENA_RANKS_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialCrystalLeague" scale="1.0">
             <content title="@TUTORIAL_CRYSTAL_ARENA_SIGN_UP_TITLE" text="@TUTORIAL_CRYSTAL_ARENA_SIGN_UP_TEXT" />
@@ -932,12 +943,12 @@
         </entry>
     </hint>
     <hint uniquename="CRYSTAL_ARENA_RANKS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_CRYSTAL_ARENA_RANKS_AND_SEASONS_TITLE" nexthint="CRYSTAL_ARENA_MATCH_INFO">
-      <entry imagepath="Gui/TutorialExplanations/TutorialCrystalArenaRanks" scale="2.0">
-        <content text="@TUTORIAL_CRYSTAL_ARENA_RANKS_TEXT" />
-      </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialCrystalArenaRanks" scale="2.0">
+            <content text="@TUTORIAL_CRYSTAL_ARENA_RANKS_TEXT" />
+        </entry>
     </hint>
-  
-  
+
+
     <!-- CUSTOM MATCHES -->
     <hint uniquename="CUSTOM_MATCH_BASIC_INFO" explanation="VerticalTemplate" title="@CUSTOM_MATCH_UI_MAIN_TUTORIAL_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialCustomMatch" scale="1.0">
@@ -994,8 +1005,8 @@
 
     <!-- SURVIVAL TIPS -->
     <hint uniquename="SURVIVAL_TIPS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_SURVIVAL_TIPS_TITLE" blockworldinteraction="true">
-		<entry title="@TUTORIAL_SURVIVAL_TIPS_BASIC_TITLE" imagepath="Gui/TutorialExplanations/TutorialSurvivalEquipment" scale="0.65">
-          <content title="@TUTORIAL_SURVIVAL_TIPS_EQUIPMENT_TITLE" text="@TUTORIAL_SURVIVAL_TIPS_EQUIPMENT_TEXT" />
+        <entry title="@TUTORIAL_SURVIVAL_TIPS_BASIC_TITLE" imagepath="Gui/TutorialExplanations/TutorialSurvivalEquipment" scale="0.65">
+            <content title="@TUTORIAL_SURVIVAL_TIPS_EQUIPMENT_TITLE" text="@TUTORIAL_SURVIVAL_TIPS_EQUIPMENT_TEXT" />
         </entry>
         <entry imagepath="Gui/TutorialExplanations/TutorialSurvivalRun" scale="0.65">
             <content title="@TUTORIAL_SURVIVAL_TIPS_RUN_TITLE" text="@TUTORIAL_SURVIVAL_TIPS_RUN_TEXT" />
@@ -1019,7 +1030,7 @@
             <content title="@TUTORIAL_SURVIVAL_TIPS_DISMOUNT_TITLE" text="@TUTORIAL_SURVIVAL_TIPS_DISMOUNT_TEXT" />
         </entry>
     </hint>
-    
+
     <!-- KILL EMOTES -->
     <hint uniquename="KILL_EMOTES_TUTORIAL" explanation="VerticalTemplate" title="@TUTORIAL_KILL_EMOTE_INFO_TITLE" dontshow_decisiontag="KillEmotesTutorial" blockworldinteraction="true">
         <entry imagepath="Gui/TutorialExplanations/TutorialKillEmoteGhost" scale="1.2">

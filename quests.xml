@@ -1222,6 +1222,30 @@
       <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="1"/>
     </rewards>
   </quest>
+
+  <quest uniquename="MISSION_GUILD_FINDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="" requiresonlyonepreviousquest="false" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT">
+    <variables>
+      <dynamiccluster name="LOCATION_A">
+        <distancetocluster mindistance="0" maxdistance="1" />
+      </dynamiccluster>
+      <dynamicquestgiver name ="ROYALEXPLORER">
+        <distancefromquestgiver mindistance="0" maxdistance="3"/>
+        <questgivertag tag="ROYALEXPLORER"/>
+      </dynamicquestgiver>
+    </variables>
+    <tasks>
+      <extendedcompletionstep>
+        <preactions>
+          <openhintbox uniquename="GUILDFINDERINTRO_01"/>
+        </preactions>
+        <missions>
+          <gotoquestgiver/>
+        </missions>
+      </extendedcompletionstep>
+    </tasks>
+    <rewards>
+    </rewards>
+  </quest>
   
   <!--RETURN TO THE COMMANDER AFTER GATHERER CRAFTER QUEST-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" completetext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_COMPLETIONTEXT" requiresonlyonepreviousquest="true"  cancelable="true">
@@ -2310,12 +2334,12 @@
   </quest>
   
   <!--LEARN ABOUT TUTORIAL INSTANCES AND MEET TIA-->
-        <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_F" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_F_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_F_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_F_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_F_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_E" cancelable="false" completesound="Play_NPC_VO_P1_Tia_Welcome" playcompletesoundonce="true">  
+  <quest uniquename="MISSIONS_T2_TUTORIAL_TEST_F" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_TEST_F_TITLE" offertext="@MISSIONS_T2_TUTORIAL_TEST_F_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_TEST_F_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@MISSIONS_T2_TUTORIAL_TEST_F_COMPLETIONTEXT" previousquests="MISSIONS_T2_TUTORIAL_TEST_E" cancelable="false" completesound="Play_NPC_VO_P1_Tia_Welcome" playcompletesoundonce="true">  
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="0"/>
       </dynamiccluster>
-     <dynamicquestgiver name ="CAPTAIN">
+      <dynamicquestgiver name ="CAPTAIN">
         <distancefromquestgiver mindistance="0" maxdistance="0"/>
         <questgivertag tag="CAPTAIN_TIA"/>
       </dynamicquestgiver>
@@ -2324,18 +2348,13 @@
         <questgivertag tag="SHIP_REPAIRMAN"/>
       </dynamicquestgiver>
     </variables>
-          <tasks>
-            <extendedmissionstep>
-            <preactions>
-              <settutorialstate state="WHEREAREMYFRIENDS"/>
-              <openhintbox uniquename="WAMF" displayonplatform="desktop"/>
-              <openhintbox uniquename="WAMF_MOBILE" displayonplatform="mobile"/>
-            </preactions>
-              <missions>
-                  <gotolocation locationmarkerid="TIA" markedonminimap="true" markedinworld="true"/>
-              </missions>
-            </extendedmissionstep>
+    <tasks>
       <extendedcompletionstep>
+        <preactions>
+          <settutorialstate state="WHEREAREMYFRIENDS"/>
+          <openhintbox uniquename="WAMF" displayonplatform="desktop"/>
+          <openhintbox uniquename="WAMF_MOBILE" displayonplatform="mobile"/>
+        </preactions>
         <missions>
           <gotoquestgiver questgivervariable="CAPTAIN" locationmarkerid="TIA" markedinworld="true" markedonminimap="true"/>
         </missions>
