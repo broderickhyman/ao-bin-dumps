@@ -2779,6 +2779,57 @@
         }
       },
       {
+        "@uniquename": "MISSION_GUILD_FINDER",
+        "@mobfaction": "ROYALARMY",
+        "@title": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE",
+        "@offertext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT",
+        "@progresstext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT",
+        "@priority": "1",
+        "@minlevel": "1",
+        "@maxlevel": "2",
+        "@tags": "commander",
+        "@offertimeout": "0",
+        "@questtimeout": "3600000",
+        "@questslotcooldown": "0",
+        "@uicategory": "PROMOTION",
+        "@onceonly": "true",
+        "@previousquests": "",
+        "@requiresonlyonepreviousquest": "false",
+        "@completetext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT",
+        "variables": {
+          "dynamiccluster": {
+            "@name": "LOCATION_A",
+            "distancetocluster": {
+              "@mindistance": "0",
+              "@maxdistance": "1"
+            }
+          },
+          "dynamicquestgiver": {
+            "@name": "ROYALEXPLORER",
+            "distancefromquestgiver": {
+              "@mindistance": "0",
+              "@maxdistance": "3"
+            },
+            "questgivertag": {
+              "@tag": "ROYALEXPLORER"
+            }
+          }
+        },
+        "tasks": {
+          "extendedcompletionstep": {
+            "preactions": {
+              "openhintbox": {
+                "@uniquename": "GUILDFINDERINTRO_01"
+              }
+            },
+            "missions": {
+              "gotoquestgiver": null
+            }
+          }
+        },
+        "rewards": ""
+      },
+      {
         "@uniquename": "MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER",
         "@mobfaction": "ROYALARMY",
         "@title": "@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE",
@@ -5180,7 +5231,7 @@
           ]
         },
         "tasks": {
-          "extendedmissionstep": {
+          "extendedcompletionstep": {
             "preactions": {
               "settutorialstate": {
                 "@state": "WHEREAREMYFRIENDS"
@@ -5196,15 +5247,6 @@
                 }
               ]
             },
-            "missions": {
-              "gotolocation": {
-                "@locationmarkerid": "TIA",
-                "@markedonminimap": "true",
-                "@markedinworld": "true"
-              }
-            }
-          },
-          "extendedcompletionstep": {
             "missions": {
               "gotoquestgiver": {
                 "@questgivervariable": "CAPTAIN",
