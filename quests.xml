@@ -1222,30 +1222,6 @@
       <item itemid="QUESTITEM_TOKEN_ROYAL_T4" count="1"/>
     </rewards>
   </quest>
-
-  <quest uniquename="MISSION_GUILD_FINDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE" offertext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="commander" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" previousquests="" requiresonlyonepreviousquest="false" completetext="@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT">
-    <variables>
-      <dynamiccluster name="LOCATION_A">
-        <distancetocluster mindistance="0" maxdistance="1" />
-      </dynamiccluster>
-      <dynamicquestgiver name ="ROYALEXPLORER">
-        <distancefromquestgiver mindistance="0" maxdistance="3"/>
-        <questgivertag tag="ROYALEXPLORER"/>
-      </dynamicquestgiver>
-    </variables>
-    <tasks>
-      <extendedcompletionstep>
-        <preactions>
-          <openhintbox uniquename="GUILDFINDERINTRO_01"/>
-        </preactions>
-        <missions>
-          <gotoquestgiver/>
-        </missions>
-      </extendedcompletionstep>
-    </tasks>
-    <rewards>
-    </rewards>
-  </quest>
   
   <!--RETURN TO THE COMMANDER AFTER GATHERER CRAFTER QUEST-->
   <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER" mobfaction="ROYALARMY" title="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE" offertext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_OFFERTEXT" progresstext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_PROGRESSTEXT" priority="1" minlevel="1" maxlevel="2" tags="crafter" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true"   previousquests="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" completetext="@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_COMPLETIONTEXT" requiresonlyonepreviousquest="true"  cancelable="true">
@@ -5199,7 +5175,7 @@ Light-->
     </rewards>
   </quest>
 <!-- Guild Finder Tutorial -->
-  <!--<quest uniquename="MISSION_GUILD_FINDER" title="@MISSIONS_GUILD_FINDER_TITLE" offertext="@MISSIONS_GUILD_FINDER_OFFERTEXT" progresstext="@MISSIONS_GUILD_FINDER_PROGRESSTEXT" completetext="@MISSIONS_GUILD_FINDER_COMPLETIONTEXT" questtimeout="3600000" priority="1" tags="adventurer" mobfaction="ROYALARMY" minlevel="1" maxlevel="2" onceonly="true" cancelable="true">
+  <quest uniquename="MISSION_GUILD_FINDER" title="@MISSIONS_GUILD_FINDER_TITLE" offertext="@MISSIONS_GUILD_FINDER_OFFERTEXT" progresstext="@MISSIONS_GUILD_FINDER_PROGRESSTEXT" completetext="@MISSIONS_GUILD_FINDER_COMPLETIONTEXT" questtimeout="3600000" priority="1" tags="adventurer" mobfaction="ROYALARMY" minlevel="1" maxlevel="2" onceonly="true" cancelable="true" >
     <variables>
       <dynamiccluster name="LOCATION_A">
         <distancetocluster mindistance="0" maxdistance="1" />
@@ -5208,7 +5184,8 @@ Light-->
     <tasks>
       <extendedcompletionstep>
         <preactions>
-          <openhintbox uniquename="GUILDFINDERINTRO_01"/>
+          <openhintbox uniquename="GUILDFINDERINTRO_01" displayonplatform="desktop"/>
+          <openhintbox uniquename="GUILDFINDERINTRO_01" displayonplatform="mobile"/>
         </preactions>
         <missions>
           <gotoquestgiver/>
@@ -5217,11 +5194,61 @@ Light-->
     </tasks>
     <rewards>
     </rewards>
-  </quest>-->
+  </quest>
   
+  <!-- Below here are local quests, those only are only cluster/area local and use a different system than the quest system -->  
+  <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_HERETIC" name="@LOCAL_QUEST_CAMP_MEDIUM_HERETIC" type="mobcampquestbig" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="2275" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="2768" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="233" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
+  <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_UNDEAD" name="@LOCAL_QUEST_CAMP_MEDIUM_UNDEAD" type="mobcampquestbig" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="2275" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="2768" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="233" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
+  <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_MORGANA" name="@LOCAL_QUEST_CAMP_MEDIUM_MORGANA" type="mobcampquestbig" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="2275" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="2768" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="233" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
+  <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_HERETIC" name="@LOCAL_QUEST_CAMP_SMALL_HERETIC" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="1040" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="1265" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="106" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
+  <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_UNDEAD" name="@LOCAL_QUEST_CAMP_SMALL_UNDEAD" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="1040" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="1265" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="106" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
+  <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_MORGANA" name="@LOCAL_QUEST_CAMP_SMALL_MORGANA" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
+    <missions>
+      <killmobfame value="1040" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
+    </missions>
+    <rewards>
+      <pvekillfame tier="4" points="1265" scalewithclusterquestfactor="true"/>
+      <mistsfactionstanding points="106" scalewithclusterquestfactor="true"/>
+    </rewards>
+  </localquest>
 </quests>
-
-
-
-
-

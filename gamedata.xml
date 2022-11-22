@@ -131,18 +131,18 @@
       diminishingreturnmax="0.8"
       typefactorstun="0.3"
       typefactorroot="0.3"
-      typefactorknockback="0.04"
+      typefactorknockback="0.08"
       typefactorsilence="0.3"
       typefactorslow="0.3"
       typefactorforcedmovement="0.3"
-      decreasetimestun="20"
-      decreasetimeroot="20"
-      decreasetimeknockback="20"
-      decreasetimesilence="20"
-      decreasetimeslow="20"
-      decreasetimeforcedmovement="20"/>
+      decreasetimestun="15"
+      decreasetimeroot="15"
+      decreasetimeknockback="10"
+      decreasetimesilence="15"
+      decreasetimeslow="15"
+      decreasetimeforcedmovement="15"/>
     <ReflectedDamage maxReflectCapacityFactorOfMaxHp="2"/>
-    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.5" mintoggledurationbeforecancelpossible="0.5" />
+    <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.3" mintoggledurationbeforecancelpossible="0.5" />
     <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="7" />
     <RealEstateAuctionSettings auctioncycledurationdays="28" auctionlengthdays="7" auctioncyclereferencetimestamp="2017-07-03T12:00" ownerexclusivebidtimeinmin="1440" ownerbidmultiplier="2" />
     <Reputation attacktimeoutseconds="120" supporttimeoutseconds="10" startreputation="0" minreputation="-50000" maxreputation="50000" flagginglosesreputation="false" reputationafterflagginghostile="-1" flaggedplayersgainreputationfromgatheringandpve="true">
@@ -1157,7 +1157,40 @@
       </BuildingOnCraftedItem>
     </DurabilityLoss>
     <ItemLoss>
-    <AliveToDead>
+      <ThrownOutAvalonRoads>
+        <Destroyed>
+          <EquipmentItem tier="1" percentage="0" />
+          <EquipmentItem tier="2" percentage="0" />
+          <EquipmentItem tier="3" percentage="0" />
+          <EquipmentItem tier="4" percentage="0" />
+          <EquipmentItem tier="5" percentage="0" />
+          <EquipmentItem tier="6" percentage="0" />
+          <EquipmentItem tier="7" percentage="0" />
+          <EquipmentItem tier="8" percentage="0" />
+        </Destroyed>
+        <DurabilityLoss>
+          <Item tier="1" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="2" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="3" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="4" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="5" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="6" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="7" minpercent="0.2" maxpercent="0.4" />
+          <Item tier="8" minpercent="0.2" maxpercent="0.4" />
+        </DurabilityLoss>
+        <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
+        <StackLoss>
+          <StackableItem tier="1" percentage="0.3" />
+          <StackableItem tier="2" percentage="0.3" />
+          <StackableItem tier="3" percentage="0.3" />
+          <StackableItem tier="4" percentage="0.3" />
+          <StackableItem tier="5" percentage="0.3" />
+          <StackableItem tier="6" percentage="0.3" />
+          <StackableItem tier="7" percentage="0.3" />
+          <StackableItem tier="8" percentage="0.3" />
+        </StackLoss>
+      </ThrownOutAvalonRoads>
+      <AliveToDead>
         <Destroyed>
           <EquipmentItem tier="1" percentage="0.3" />
           <EquipmentItem tier="2" percentage="0.3" />
@@ -1189,67 +1222,67 @@
           <StackableItem tier="7" percentage="0.37" />
           <StackableItem tier="8" percentage="0.37" />
         </StackLoss>
-		<DestructionMultiplier>
-		  <DestructionModifier attackers="1" durabilitylossmod="1.00" />
-		  <DestructionModifier attackers="2" durabilitylossmod="1.15" />
-		  <DestructionModifier attackers="3" durabilitylossmod="1.30" />
-		  <DestructionModifier attackers="4" durabilitylossmod="1.45" />
-		  <DestructionModifier attackers="5" durabilitylossmod="1.60" />
-      <DestructionModifier attackers="6" durabilitylossmod="1.75" />
-      <DestructionModifier attackers="7" durabilitylossmod="1.90" />
-      <DestructionModifier attackers="8" durabilitylossmod="2.05" />
-      <DestructionModifier attackers="9" durabilitylossmod="2.20" />
-      <DestructionModifier attackers="10" durabilitylossmod="2.35" />
-      <DestructionModifier attackers="11" durabilitylossmod="2.50" />
-		</DestructionMultiplier>
-    </AliveToDead>
-    <AliveToKO silverdropcapperitem="700">
-      <Destroyed>
-        <EquipmentItem tier="1" percentage="0" />
-        <EquipmentItem tier="2" percentage="0" />
-        <EquipmentItem tier="3" percentage="0" />
-        <EquipmentItem tier="4" percentage="0" />
-        <EquipmentItem tier="5" percentage="0" />
-        <EquipmentItem tier="6" percentage="0" />
-        <EquipmentItem tier="7" percentage="0" />
-        <EquipmentItem tier="8" percentage="0" />
-      </Destroyed>
-      <DurabilityLoss>
-        <Item tier="1" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="2" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="3" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="4" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="5" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="6" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="7" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-        <Item tier="8" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
-      </DurabilityLoss>
-      <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
-      <StackLoss>
-        <StackableItem tier="1" percentage="0" />
-        <StackableItem tier="2" percentage="0" />
-        <StackableItem tier="3" percentage="0" />
-        <StackableItem tier="4" percentage="0" />
-        <StackableItem tier="5" percentage="0" />
-        <StackableItem tier="6" percentage="0" />
-        <StackableItem tier="7" percentage="0" />
-        <StackableItem tier="8" percentage="0" />
-      </StackLoss>
-	  <DestructionMultiplier>
-      <DestructionModifier attackers="1" durabilitylossmod="1.00" />
-      <DestructionModifier attackers="2" durabilitylossmod="1.15" />
-      <DestructionModifier attackers="3" durabilitylossmod="1.30" />
-      <DestructionModifier attackers="4" durabilitylossmod="1.45" />
-      <DestructionModifier attackers="5" durabilitylossmod="1.60" />
-      <DestructionModifier attackers="6" durabilitylossmod="1.75" />
-      <DestructionModifier attackers="7" durabilitylossmod="1.90" />
-      <DestructionModifier attackers="8" durabilitylossmod="2.05" />
-      <DestructionModifier attackers="9" durabilitylossmod="2.20" />
-      <DestructionModifier attackers="10" durabilitylossmod="2.35" />
-      <DestructionModifier attackers="11" durabilitylossmod="2.50" />
-	  </DestructionMultiplier>
-    </AliveToKO>
-    <KOToDead>
+        <DestructionMultiplier>
+          <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+          <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+          <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+          <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+          <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+          <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+          <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+          <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+          <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+          <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+          <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+        </DestructionMultiplier>
+      </AliveToDead>
+      <AliveToKO silverdropcapperitem="700">
+        <Destroyed>
+          <EquipmentItem tier="1" percentage="0" />
+          <EquipmentItem tier="2" percentage="0" />
+          <EquipmentItem tier="3" percentage="0" />
+          <EquipmentItem tier="4" percentage="0" />
+          <EquipmentItem tier="5" percentage="0" />
+          <EquipmentItem tier="6" percentage="0" />
+          <EquipmentItem tier="7" percentage="0" />
+          <EquipmentItem tier="8" percentage="0" />
+        </Destroyed>
+        <DurabilityLoss>
+          <Item tier="1" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="2" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="3" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="4" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="5" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="6" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="7" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+          <Item tier="8" minpercent="0.05" maxpercent="0.05" minimumpercentremaining="0.01"/>
+        </DurabilityLoss>
+        <!--Note: Stackloss value determines the percentage of the stack that is lost! 0.1 means 10% loss-->
+        <StackLoss>
+          <StackableItem tier="1" percentage="0" />
+          <StackableItem tier="2" percentage="0" />
+          <StackableItem tier="3" percentage="0" />
+          <StackableItem tier="4" percentage="0" />
+          <StackableItem tier="5" percentage="0" />
+          <StackableItem tier="6" percentage="0" />
+          <StackableItem tier="7" percentage="0" />
+          <StackableItem tier="8" percentage="0" />
+        </StackLoss>
+        <DestructionMultiplier>
+          <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+          <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+          <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+          <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+          <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+          <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+          <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+          <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+          <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+          <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+          <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+        </DestructionMultiplier>
+      </AliveToKO>
+      <KOToDead>
         <Destroyed>
           <EquipmentItem tier="1" percentage="0.3" />
           <EquipmentItem tier="2" percentage="0.3" />
@@ -1281,20 +1314,20 @@
           <StackableItem tier="7" percentage="0.37" />
           <StackableItem tier="8" percentage="0.37" />
         </StackLoss>
-	    <DestructionMultiplier>
-        <DestructionModifier attackers="1" durabilitylossmod="1.00" />
-        <DestructionModifier attackers="2" durabilitylossmod="1.15" />
-        <DestructionModifier attackers="3" durabilitylossmod="1.30" />
-        <DestructionModifier attackers="4" durabilitylossmod="1.45" />
-        <DestructionModifier attackers="5" durabilitylossmod="1.60" />
-        <DestructionModifier attackers="6" durabilitylossmod="1.75" />
-        <DestructionModifier attackers="7" durabilitylossmod="1.90" />
-        <DestructionModifier attackers="8" durabilitylossmod="2.05" />
-        <DestructionModifier attackers="9" durabilitylossmod="2.20" />
-        <DestructionModifier attackers="10" durabilitylossmod="2.35" />
-        <DestructionModifier attackers="11" durabilitylossmod="2.50" />
-	    </DestructionMultiplier>
-    </KOToDead>
+        <DestructionMultiplier>
+          <DestructionModifier attackers="1" durabilitylossmod="1.00" />
+          <DestructionModifier attackers="2" durabilitylossmod="1.15" />
+          <DestructionModifier attackers="3" durabilitylossmod="1.30" />
+          <DestructionModifier attackers="4" durabilitylossmod="1.45" />
+          <DestructionModifier attackers="5" durabilitylossmod="1.60" />
+          <DestructionModifier attackers="6" durabilitylossmod="1.75" />
+          <DestructionModifier attackers="7" durabilitylossmod="1.90" />
+          <DestructionModifier attackers="8" durabilitylossmod="2.05" />
+          <DestructionModifier attackers="9" durabilitylossmod="2.20" />
+          <DestructionModifier attackers="10" durabilitylossmod="2.35" />
+          <DestructionModifier attackers="11" durabilitylossmod="2.50" />
+        </DestructionMultiplier>
+      </KOToDead>
     </ItemLoss>
     <Repair>
       <Items>
@@ -1384,10 +1417,10 @@
     <WhisperCooldownInMs value="500"/>
   </ChatSettings>
   <PremiumPackages>
-   <PremiumPackage name="PREMIUMPACKAGEDAY30" days="30" goldcost="3000"/>
-   <PremiumPackage name="PREMIUMPACKAGEDAY90" days="90" goldcost="7350"/>
-   <PremiumPackage name="PREMIUMPACKAGEDAY180" days="180" goldcost="13750"/>
-   <PremiumPackage name="PREMIUMPACKAGEDAY360" days="360" goldcost="24500"/>
+   <PremiumPackage name="PREMIUMPACKAGEDAY30" days="30" goldcost="3000" goldcostswitch="3750"/>
+   <PremiumPackage name="PREMIUMPACKAGEDAY90" days="90" goldcost="7350" goldcostswitch="10500"/>
+   <PremiumPackage name="PREMIUMPACKAGEDAY180" days="180" goldcost="13750" goldcostswitch="19500"/>
+   <PremiumPackage name="PREMIUMPACKAGEDAY360" days="360" goldcost="24500" goldcostswitch="36000"/>
   </PremiumPackages>
   <PremiumLifeTimeRewards>
     <Reward days="7" title="@PREMIUM_STORE_BENEFIT_CONDITIONAL_FIRST_PURCHASE">
@@ -1395,30 +1428,35 @@
       <StatBonus attribute="learningpoints" change="500"/>
     </Reward>
   </PremiumLifeTimeRewards>
-  <GoldPurchasePackages>
-   <GoldPurchasePackage name="GOLDPACKAGE1" gold="750" price="4.95"/>
-   <GoldPurchasePackage name="GOLDPACKAGE2" gold="1750" price="9.95"/>
-   <GoldPurchasePackage name="GOLDPACKAGE3" gold="3750" price="19.95"/>
-   <GoldPurchasePackage name="GOLDPACKAGE4" gold="10000" price="49.95"/>
-   <GoldPurchasePackage name="GOLDPACKAGE5" gold="21000" price="99.95"/>
-  </GoldPurchasePackages>
   <ClusterDangerBonusTypes globalmoblootfactor="0.9" globalmobsilverlootfactor="0.9">
-    <ClusterDangerBonus type="safe"                   icon="safe"                  famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45"/>
-    <ClusterDangerBonus type="yellow"                 icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="red"                    icon="red"                   famefactor="3.3"  moblootfactor="2.25" mobsilverlootfactor="2.6"/>
-    <ClusterDangerBonus type="black"                  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell_nonlethal_2v2"     icon="hellnonlethal2v2"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="hell_nonlethal_5v5"     icon="hellnonlethal5v5"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="hell_nonlethal_10v10"   icon="hellnonlethal10v10"    famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="hell_lethal_2v2"        icon="helllethal2v2"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell_lethal_5v5"        icon="helllethal5v5"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="hell_lethal_10v10"      icon="helllethal10v10"       famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="corrupted_beginner"     icon="corruptedbeginner"     famefactor="3.2"  moblootfactor="1.33" mobsilverlootfactor="1.53"/>
-    <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="5.1"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="corrupted_pro"          icon="corruptedpro"          famefactor="3.5"  moblootfactor="2.6"  mobsilverlootfactor="3"/>
-    <ClusterDangerBonus type="expedition"             icon="safe"                  famefactor="1"    moblootfactor="0.5"  mobsilverlootfactor="0.5"/>
-    <ClusterDangerBonus type="tunnel"                 icon="black"                 famefactor="6"    moblootfactor="7.1"  mobsilverlootfactor="8.17"/>
-  </ClusterDangerBonusTypes>                                                                                          
+    <ClusterDangerBonus type="safe"                   icon="safe"                  famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15"/>
+    <ClusterDangerBonus type="yellow"                 icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"/>
+    <ClusterDangerBonus type="red"                    icon="red"                   famefactor="3.3"  moblootfactor="2.25" mobsilverlootfactor="2.6"  questscalingfactor="3.3"/>
+    <ClusterDangerBonus type="black"                  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"/>
+    <ClusterDangerBonus type="hell_nonlethal_2v2"     icon="hellnonlethal2v2"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"/>
+    <ClusterDangerBonus type="hell_nonlethal_5v5"     icon="hellnonlethal5v5"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"/>
+    <ClusterDangerBonus type="hell_nonlethal_10v10"   icon="hellnonlethal10v10"    famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"/>
+    <ClusterDangerBonus type="hell_lethal_2v2"        icon="helllethal2v2"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"/>
+    <ClusterDangerBonus type="hell_lethal_5v5"        icon="helllethal5v5"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"/>
+    <ClusterDangerBonus type="hell_lethal_10v10"      icon="helllethal10v10"       famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"/>
+    <ClusterDangerBonus type="corrupted_beginner"     icon="corruptedbeginner"     famefactor="3.2"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="3.2"/>
+    <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="5.1"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="5.1"/>
+    <ClusterDangerBonus type="corrupted_pro"          icon="corruptedpro"          famefactor="3.5"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="3.5"/>
+    <ClusterDangerBonus type="expedition"             icon="safe"                  famefactor="1"    moblootfactor="0.5"  mobsilverlootfactor="0.5"  questscalingfactor="1"  />
+    <ClusterDangerBonus type="tunnel"                 icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"/>
+    <ClusterDangerBonus type="mistsyellow"            icon="yellow"                famefactor="1.8"  moblootfactor="1.197" mobsilverlootfactor="1.377" questscalingfactor="1.8"/>
+    <ClusterDangerBonus type="mistsblack"             icon="black"                 famefactor="3.16" moblootfactor="2.34"  mobsilverlootfactor="2.7" questscalingfactor="3.16"/>    
+  </ClusterDangerBonusTypes>
+  <QuestScalingByClusterTier>
+    <Tier tier="1" scalingfactor="1"/>
+    <Tier tier="2" scalingfactor="1"/>
+    <Tier tier="3" scalingfactor="1"/>
+    <Tier tier="4" scalingfactor="1"/>
+    <Tier tier="5" scalingfactor="1.35"/>
+    <Tier tier="6" scalingfactor="1.85"/>
+    <Tier tier="7" scalingfactor="2.5"/>
+    <Tier tier="8" scalingfactor="3.4"/>
+  </QuestScalingByClusterTier>
   <AchievementHud tutorial_idletime_till_highlight="30"/>
   <SilverDropSettings
     prefab="COINS"
@@ -1432,6 +1470,7 @@
     />
   <buildingrenovationsettings downgradedelay="86400" destroydelay="86400" ownerdowngradedestroydelay="60" lootprotection="86400" lootlifetime="172800" />
   <constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400"/>
+  <!--ExitSettings are used for random dungeon exits-->
   <ExitSettings channeledexitusagetime="2" defaultexitusagedistance="5"/>
   <Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout ="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectspell="EXPEDITIONSPAWN" penaltyduration="900">
     <ExpeditionBonusRewardTimer>
@@ -1933,6 +1972,6 @@
       <ColorState color="063b00f2" name="@WORLDMAP_OVERLAY_CLUSTERVALUE_LEGEND_NAME_LOWEST"/>
     </ClusterValueColors>
   </ClusterValueVisualization>
-  <FurnituresPlacementRules openworldfurnituremindistance="10"/>
+  <FurnituresPlacementRules openworldfurnituremindistance="10" lootplacementblockadditionalborder="2"/>
   <BatchUseSkillBook maxfame="10000000"/>
 </AO-GameData>

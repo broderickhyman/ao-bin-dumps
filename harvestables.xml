@@ -248,16 +248,47 @@
     </ToolModifier>
     <Tier tier="3" item="T3_WOOD" tile="FOREST_GREEN_T3_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" notooltimefactor="2" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
       <Tiles>
-        <Biome name="Forest" green="FOREST_GREEN_T3_TREE_SPIRIT" red="FOREST_RED_T3_TREE_SPIRIT" dead="FOREST_DEAD_T3_TREE_SPIRIT"/>
+        <Biome name="Forest" green="FOREST_GREEN_T3_TREE_SPIRIT" red="FOREST_RED_T3_TREE_SPIRIT" dead="FOREST_DEAD_T3_TREE_SPIRIT"/>    
+        <Biome name="Mists" green="MISTS_GREEN_T3_TREE_SPIRIT" red="MISTS_RED_T3_TREE_SPIRIT" dead="MISTS_DEAD_T3_TREE_SPIRIT"/>       
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
     </Tier>
+    <Tier tier="4" item="T4_WOOD" tile="ROADS_T4_TREE_MISTSPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T4_TREE_MISTSPIRIT" red="MISTS_RED_T4_TREE_MISTSPIRIT" dead="MISTS_DEAD_T4_TREE_MISTSPIRIT"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T4_WOOD_SKILLBOOK" chance="0.002"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T4_WOOD_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_WOOD_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T4_WOOD_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_WOOD_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T4_WOOD_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_WOOD_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="5" item="T5_WOOD" tile="FOREST_RED_T5_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
       <Tiles>
         <Biome name="Forest" green="FOREST_RED_T5_TREE_SPIRIT" red="FOREST_RED_T5_TREE_SPIRIT" dead="FOREST_DEAD_T5_TREE_SPIRIT"/>
+        <Biome name="Mists" green="MISTS_GREEN_T5_TREE_MISTSPIRIT" red="MISTS_RED_T5_TREE_MISTSPIRIT" dead="MISTS_DEAD_T5_TREE_MISTSPIRIT"/>  
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -281,12 +312,42 @@
 			<LootListReference name="T5_WOOD_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+    </Tier>    
+    <Tier tier="6" item="T6_WOOD" tile="ROADS_T6_TREE_MISTSPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T6_TREE_MISTSPIRIT" red="MISTS_RED_T6_TREE_MISTSPIRIT" dead="MISTS_DEAD_T6_TREE_MISTSPIRIT"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T6_WOOD_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T6_WOOD_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T6_WOOD_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
     </Tier>
     <Tier tier="7" item="T7_WOOD" tile="FOREST_DEAD_T7_TREE_SPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="9">
       <Tiles>
         <Biome name="Forest" green="FOREST_RED_T7_TREE_SPIRIT" red="FOREST_RED_T7_TREE_SPIRIT" dead="FOREST_DEAD_T7_TREE_SPIRIT"/>
+        <Biome name="Mists" green="MISTS_GREEN_T6_TREE_MISTSPIRIT" red="MISTS_RED_T7_TREE_MISTSPIRIT" dead="MISTS_DEAD_T7_TREE_MISTSPIRIT"/>  
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -310,6 +371,35 @@
 			<LootListReference name="T7_WOOD_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+    </Tier>  
+    <Tier tier="8" item="T8_WOOD" tile="ROADS_T8_TREE_MISTSPIRIT" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="11">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T8_TREE_MISTSPIRIT" red="MISTS_RED_T8_TREE_MISTSPIRIT" dead="MISTS_DEAD_T8_TREE_MISTSPIRIT"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-11" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T8_WOOD_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T8_WOOD_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T8_WOOD_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
     </Tier>
   </Harvestable>
   <Harvestable name="WOOD_GUARDIAN" resource="WOOD">
@@ -393,13 +483,54 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
-    <Tier tier="5" item="T5_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
+    <Tier tier="4" item="T4_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
+      <Tiles>
+        <Biome name="Forest"   green="FOREST_GREEN_T4_WOOD_TREASURE"   red="FOREST_RED_T4_WOOD_TREASURE"   dead="FOREST_DEAD_T4_WOOD_TREASURE"/>
+        <Biome name="Highland" green="HIGHLAND_GREEN_T4_WOOD_TREASURE" red="HIGHLAND_RED_T4_WOOD_TREASURE" dead="HIGHLAND_DEAD_T4_WOOD_TREASURE"/>
+        <Biome name="Swamp"    green="SWAMP_GREEN_T4_WOOD_TREASURE"    red="SWAMP_RED_T4_WOOD_TREASURE"    dead="SWAMP_DEAD_T4_WOOD_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T4_WOOD_TREASURE"    red="MISTS_RED_T4_WOOD_TREASURE"    dead="MISTS_DEAD_T4_WOOD_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T4_WOOD_TREASURE"/>
+      </Tiles>
+	    <Loot>
+	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	<LootListReference name="T4_WOOD_SKILLBOOK" chance="0.001"/>
+	  </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="5" />
+      <Charge level="1-30" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="30" />
+      <RareState state="1" item="T4_WOOD_LEVEL1" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="2" item="T4_WOOD_LEVEL2" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="3" item="T4_WOOD_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T4_WOOD_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+    </Tier>
+	  <Tier tier="5" item="T5_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Forest"   green="FOREST_GREEN_T5_WOOD_TREASURE"   red="FOREST_RED_T5_WOOD_TREASURE"   dead="FOREST_DEAD_T5_WOOD_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T5_WOOD_TREASURE" red="HIGHLAND_RED_T5_WOOD_TREASURE" dead="HIGHLAND_DEAD_T5_WOOD_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T5_WOOD_TREASURE"    red="SWAMP_RED_T5_WOOD_TREASURE"    dead="SWAMP_DEAD_T5_WOOD_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T5_WOOD_TREASURE"    red="MISTS_RED_T5_WOOD_TREASURE"    dead="MISTS_DEAD_T5_WOOD_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T5_WOOD_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -423,14 +554,22 @@
 			<LootListReference name="T5_WOOD_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T5_WOOD_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T5_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="6" item="T6_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="10000" harvesttimeseconds="8" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Forest"   green="FOREST_GREEN_T6_WOOD_TREASURE"   red="FOREST_RED_T6_WOOD_TREASURE"   dead="FOREST_DEAD_T6_WOOD_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T6_WOOD_TREASURE" red="HIGHLAND_RED_T6_WOOD_TREASURE" dead="HIGHLAND_DEAD_T6_WOOD_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T6_WOOD_TREASURE"    red="SWAMP_RED_T6_WOOD_TREASURE"    dead="SWAMP_DEAD_T6_WOOD_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T6_WOOD_TREASURE"    red="MISTS_RED_T6_WOOD_TREASURE"    dead="MISTS_DEAD_T6_WOOD_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T6_WOOD_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -453,15 +592,23 @@
 			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 			<LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
 		</Loot>
-	  </RareState>		  
+	  </RareState>
+	    <RareState state="4" item="T6_WOOD_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T6_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="7" item="T7_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="40000" harvesttimeseconds="10" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Forest"   green="FOREST_GREEN_T7_WOOD_TREASURE"   red="FOREST_RED_T7_WOOD_TREASURE"   dead="FOREST_DEAD_T7_WOOD_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T7_WOOD_TREASURE" red="HIGHLAND_RED_T7_WOOD_TREASURE" dead="HIGHLAND_DEAD_T7_WOOD_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T7_WOOD_TREASURE"    red="SWAMP_RED_T7_WOOD_TREASURE"    dead="SWAMP_DEAD_T7_WOOD_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T7_WOOD_TREASURE"    red="MISTS_RED_T7_WOOD_TREASURE"    dead="MISTS_DEAD_T7_WOOD_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T7_WOOD_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -485,14 +632,22 @@
 			<LootListReference name="T7_WOOD_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T7_WOOD_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T7_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="8" item="T8_WOOD" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="48000" harvesttimeseconds="15" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Forest"   green="FOREST_GREEN_T8_WOOD_TREASURE"   red="FOREST_RED_T8_WOOD_TREASURE"   dead="FOREST_DEAD_T8_WOOD_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T8_WOOD_TREASURE" red="HIGHLAND_RED_T8_WOOD_TREASURE" dead="HIGHLAND_DEAD_T8_WOOD_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T8_WOOD_TREASURE"    red="SWAMP_RED_T8_WOOD_TREASURE"    dead="SWAMP_DEAD_T8_WOOD_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T8_WOOD_TREASURE"    red="MISTS_RED_T8_WOOD_TREASURE"    dead="MISTS_DEAD_T8_WOOD_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T8_WOOD_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -511,6 +666,12 @@
 		</Loot>
 	  </RareState>
       <RareState state="3" item="T8_WOOD_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T8_WOOD_LEVEL4" >
 		<Loot>
 			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 			<LootListReference name="T8_WOOD_SKILLBOOK" chance="0.001"/>
@@ -690,15 +851,46 @@
     <Tier tier="3" item="T3_ROCK" tile="HIGHLAND_GREEN_T3_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" notooltimefactor="2" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T3_ROCK_ELEMENTAL" red="HIGHLAND_RED_T3_ROCK_ELEMENTAL" dead="HIGHLAND_DEAD_T3_ROCK_ELEMENTAL"/>
+        <Biome name="Mists" green="MISTS_GREEN_T3_ROCK_ELEMENTAL" red="MISTS_RED_T3_ROCK_ELEMENTAL" dead="MISTS_DEAD_T3_ROCK_ELEMENTAL"/>
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="3" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="3" />
     </Tier>
+    <Tier tier="4" item="T4_ROCK" tile="ROADS_T4_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T4_ROCK_ELEMENTAL" red="MISTS_RED_T4_ROCK_ELEMENTAL" dead="MISTS_DEAD_T4_ROCK_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T4_ROCK_SKILLBOOK" chance="0.002"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T4_ROCK_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ROCK_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T4_ROCK_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ROCK_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T4_ROCK_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ROCK_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="5" item="T5_ROCK" tile="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T5_ROCK_ELEMENTAL" red="HIGHLAND_RED_T5_ROCK_ELEMENTAL" dead="HIGHLAND_DEAD_T5_ROCK_ELEMENTAL"/>
+        <Biome name="Mists" green="MISTS_GREEN_T5_ROCK_ELEMENTAL" red="MISTS_RED_T5_ROCK_ELEMENTAL" dead="MISTS_DEAD_T5_ROCK_ELEMENTAL"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -723,9 +915,39 @@
 		</Loot>
 	  </RareState>
     </Tier>
+    <Tier tier="6" item="T6_ROCK" tile="ROADS_T6_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T6_ROCK_ELEMENTAL" red="MISTS_RED_T6_ROCK_ELEMENTAL" dead="MISTS_DEAD_T6_ROCK_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T6_ROCK_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T6_ROCK_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T6_ROCK_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T6_ROCK_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="7" item="T7_ROCK" tile="HIGHLAND_GREEN_T7_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="9">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T7_ROCK_ELEMENTAL" red="HIGHLAND_RED_T7_ROCK_ELEMENTAL" dead="HIGHLAND_DEAD_T7_ROCK_ELEMENTAL"/>
+        <Biome name="Mists" green="MISTS_GREEN_T7_ROCK_ELEMENTAL" red="MISTS_RED_T7_ROCK_ELEMENTAL" dead="MISTS_DEAD_T7_ROCK_ELEMENTAL"/>
       </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
@@ -752,6 +974,35 @@
 		</Loot>
 	  </RareState>
     </Tier>
+    <Tier tier="8" item="T8_ROCK" tile="ROADS_T8_ROCK_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="11">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T8_ROCK_ELEMENTAL" red="MISTS_RED_T8_ROCK_ELEMENTAL" dead="MISTS_DEAD_T8_ROCK_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T8_ROCK_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-11" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T8_ROCK_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T8_ROCK_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T8_ROCK_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ROCK_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+    </Tier>    
   </Harvestable>
   <Harvestable name="ROCK_CRITTER_RANDOM_DUNGEON" resource="ROCK">
     <ToolModifier>
@@ -867,13 +1118,48 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
+	  <Tier tier="4" item="T4_ROCK" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
+      <Tiles>
+        <Biome name="Forest"   green="FOREST_GREEN_T4_ROCK_TREASURE"   red="FOREST_RED_T4_ROCK_TREASURE"   dead="FOREST_DEAD_T4_ROCK_TREASURE"/>
+        <Biome name="Highland" green="HIGHLAND_GREEN_T4_ROCK_TREASURE" red="HIGHLAND_RED_T4_ROCK_TREASURE" dead="HIGHLAND_DEAD_T4_ROCK_TREASURE"/>
+        <Biome name="Mountain" green="MOUNTAIN_GREEN_T4_ROCK_TREASURE" red="MOUNTAIN_RED_T4_ROCK_TREASURE" dead="MOUNTAIN_DEAD_T4_ROCK_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T4_ROCK_TREASURE"    red="MISTS_RED_T4_ROCK_TREASURE"    dead="MISTS_DEAD_T4_ROCK_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T4_ROCK_TREASURE"/>
+      </Tiles>
+	    <Loot>
+	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	<LootListReference name="T4_ROCK_SKILLBOOK" chance="0.001"/>
+	  </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-30" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="30" />
+      <RareState state="1" item="T4_ROCK_LEVEL1" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ROCK_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="2" item="T4_ROCK_LEVEL2" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ROCK_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="3" item="T4_ROCK_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ROCK_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+    </Tier>
     <Tier tier="5" item="T5_ROCK" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Forest"   green="FOREST_GREEN_T5_ROCK_TREASURE"   red="FOREST_RED_T5_ROCK_TREASURE"   dead="FOREST_DEAD_T5_ROCK_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T5_ROCK_TREASURE" red="HIGHLAND_RED_T5_ROCK_TREASURE" dead="HIGHLAND_DEAD_T5_ROCK_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T5_ROCK_TREASURE" red="MOUNTAIN_RED_T5_ROCK_TREASURE" dead="MOUNTAIN_DEAD_T5_ROCK_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T5_ROCK_TREASURE"    red="MISTS_RED_T5_ROCK_TREASURE"    dead="MISTS_DEAD_T5_ROCK_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T5_ROCK_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -903,8 +1189,10 @@
         <Biome name="Forest"   green="FOREST_GREEN_T6_ROCK_TREASURE"   red="FOREST_RED_T6_ROCK_TREASURE"   dead="FOREST_DEAD_T6_ROCK_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T6_ROCK_TREASURE" red="HIGHLAND_RED_T6_ROCK_TREASURE" dead="HIGHLAND_DEAD_T6_ROCK_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T6_ROCK_TREASURE" red="MOUNTAIN_RED_T6_ROCK_TREASURE" dead="MOUNTAIN_DEAD_T6_ROCK_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T6_ROCK_TREASURE"    red="MISTS_RED_T6_ROCK_TREASURE"    dead="MISTS_DEAD_T6_ROCK_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T6_ROCK_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -934,8 +1222,10 @@
         <Biome name="Forest"   green="FOREST_GREEN_T7_ROCK_TREASURE"   red="FOREST_RED_T7_ROCK_TREASURE"   dead="FOREST_DEAD_T7_ROCK_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T7_ROCK_TREASURE" red="HIGHLAND_RED_T7_ROCK_TREASURE" dead="HIGHLAND_DEAD_T7_ROCK_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T7_ROCK_TREASURE" red="MOUNTAIN_RED_T7_ROCK_TREASURE" dead="MOUNTAIN_DEAD_T7_ROCK_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T7_ROCK_TREASURE"    red="MISTS_RED_T7_ROCK_TREASURE"    dead="MISTS_DEAD_T7_ROCK_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T7_ROCK_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -965,8 +1255,10 @@
         <Biome name="Forest"   green="FOREST_GREEN_T8_ROCK_TREASURE"   red="FOREST_RED_T8_ROCK_TREASURE"   dead="FOREST_DEAD_T8_ROCK_TREASURE"/>
         <Biome name="Highland" green="HIGHLAND_GREEN_T8_ROCK_TREASURE" red="HIGHLAND_RED_T8_ROCK_TREASURE" dead="HIGHLAND_DEAD_T8_ROCK_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T8_ROCK_TREASURE" red="MOUNTAIN_RED_T8_ROCK_TREASURE" dead="MOUNTAIN_DEAD_T8_ROCK_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T8_ROCK_TREASURE"    red="MISTS_RED_T8_ROCK_TREASURE"    dead="MISTS_DEAD_T8_ROCK_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T8_ROCK_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_ROCK_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1158,10 +1450,45 @@
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
     <Tier tier="3" item="T3_FIBER" tile="SWAMP_GREEN_T3_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T3_FIBER_DRYAD" red="MISTS_RED_T3_FIBER_DRYAD" dead="MISTS_DEAD_T3_FIBER_DRYAD"/>
+      </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
     </Tier>
+    <Tier tier="4" item="T4_FIBER" tile="ROADS_T4_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T4_FIBER_DRYAD" red="MISTS_RED_T4_FIBER_DRYAD" dead="MISTS_DEAD_T4_FIBER_DRYAD"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T4_FIBER_SKILLBOOK" chance="0.002"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T4_FIBER_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_FIBER_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T4_FIBER_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_FIBER_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T4_FIBER_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_FIBER_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="5" item="T5_FIBER" tile="SWAMP_GREEN_T5_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T5_FIBER_DRYAD" red="MISTS_RED_T5_FIBER_DRYAD" dead="MISTS_DEAD_T5_FIBER_DRYAD"/>
+      </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
@@ -1187,7 +1514,39 @@
 		</Loot>
 	  </RareState>
     </Tier>
+    <Tier tier="6" item="T6_FIBER" tile="ROADS_T6_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T6_FIBER_DRYAD" red="MISTS_RED_T6_FIBER_DRYAD" dead="MISTS_DEAD_T6_FIBER_DRYAD"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T6_FIBER_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T6_FIBER_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T6_FIBER_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="7" item="T7_FIBER" tile="SWAMP_GREEN_T7_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="9">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T7_FIBER_DRYAD" red="MISTS_RED_T7_FIBER_DRYAD" dead="MISTS_DEAD_T7_FIBER_DRYAD"/>
+      </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_FIBER_SKILLBOOK" chance="0.001"/>
@@ -1212,6 +1571,35 @@
 			<LootListReference name="T7_FIBER_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+    </Tier>
+    <Tier tier="8" item="T8_FIBER" tile="ROADS_T8_FIBER_DRYAD" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="11">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T8_FIBER_DRYAD" red="MISTS_RED_T8_FIBER_DRYAD" dead="MISTS_DEAD_T8_FIBER_DRYAD"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-11" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T8_FIBER_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T8_FIBER_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T8_FIBER_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
     </Tier>
   </Harvestable>
   <Harvestable name="FIBER_GUARDIAN" resource="FIBER">
@@ -1295,13 +1683,54 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
+    <Tier tier="4" item="T4_FIBER" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="6" requirestool="true" startcharges="30">
+      <Tiles>
+        <Biome name="Mountain" green="MOUNTAIN_GREEN_T4_FIBER_TREASURE" red="MOUNTAIN_RED_T4_FIBER_TREASURE" dead="MOUNTAIN_DEAD_T4_FIBER_TREASURE"/>
+        <Biome name="Steppe"   green="STEPPE_GREEN_T4_FIBER_TREASURE"   red="STEPPE_RED_T4_FIBER_TREASURE"   dead="STEPPE_DEAD_T4_FIBER_TREASURE"/>
+        <Biome name="Swamp"    green="SWAMP_GREEN_T4_FIBER_TREASURE"    red="SWAMP_RED_T4_FIBER_TREASURE"    dead="SWAMP_DEAD_T4_FIBER_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T4_FIBER_TREASURE"    red="MISTS_RED_T4_FIBER_TREASURE"    dead="MISTS_DEAD_T4_FIBER_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T4_FIBER_TREASURE"/>
+      </Tiles>
+	    <Loot>
+	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	<LootListReference name="T4_FIBER_SKILLBOOK" chance="0.001"/>
+	  </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-30" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="30" />
+      <RareState state="1" item="T4_FIBER_LEVEL1" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="2" item="T4_FIBER_LEVEL2" >
+		<Loot>
+		    <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+		    <LootListReference name="T4_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="3" item="T4_FIBER_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T4_FIBER_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+    </Tier>
     <Tier tier="5" item="T5_FIBER" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="6" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T5_FIBER_TREASURE" red="MOUNTAIN_RED_T5_FIBER_TREASURE" dead="MOUNTAIN_DEAD_T5_FIBER_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T5_FIBER_TREASURE"   red="STEPPE_RED_T5_FIBER_TREASURE"   dead="STEPPE_DEAD_T5_FIBER_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T5_FIBER_TREASURE"    red="SWAMP_RED_T5_FIBER_TREASURE"    dead="SWAMP_DEAD_T5_FIBER_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T5_FIBER_TREASURE"    red="MISTS_RED_T5_FIBER_TREASURE"    dead="MISTS_DEAD_T5_FIBER_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T5_FIBER_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1313,7 +1742,7 @@
 			<LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
-	  <RareState state="2" item="T5_FIBER_LEVEL2" >
+	    <RareState state="2" item="T5_FIBER_LEVEL2" >
 		<Loot>
 		    <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 		    <LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
@@ -1325,14 +1754,22 @@
 			<LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T5_FIBER_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T5_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="6" item="T6_FIBER" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="8" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T6_FIBER_TREASURE" red="MOUNTAIN_RED_T6_FIBER_TREASURE" dead="MOUNTAIN_DEAD_T6_FIBER_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T6_FIBER_TREASURE"   red="STEPPE_RED_T6_FIBER_TREASURE"   dead="STEPPE_DEAD_T6_FIBER_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T6_FIBER_TREASURE"    red="SWAMP_RED_T6_FIBER_TREASURE"    dead="SWAMP_DEAD_T6_FIBER_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T6_FIBER_TREASURE"    red="MISTS_RED_T6_FIBER_TREASURE"    dead="MISTS_DEAD_T6_FIBER_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T6_FIBER_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1356,14 +1793,22 @@
 			<LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T6_FIBER_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T6_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="7" item="T7_FIBER" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="10" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T7_FIBER_TREASURE" red="MOUNTAIN_RED_T7_FIBER_TREASURE" dead="MOUNTAIN_DEAD_T7_FIBER_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T7_FIBER_TREASURE"   red="STEPPE_RED_T7_FIBER_TREASURE"   dead="STEPPE_DEAD_T7_FIBER_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T7_FIBER_TREASURE"    red="SWAMP_RED_T7_FIBER_TREASURE"    dead="SWAMP_DEAD_T7_FIBER_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T7_FIBER_TREASURE"    red="MISTS_RED_T7_FIBER_TREASURE"    dead="MISTS_DEAD_T7_FIBER_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T7_FIBER_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_FIBER_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1387,14 +1832,22 @@
 			<LootListReference name="T7_FIBER_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T7_FIBER_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T7_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="8" item="T8_FIBER" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="86400" harvesttimeseconds="15" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T8_FIBER_TREASURE" red="MOUNTAIN_RED_T8_FIBER_TREASURE" dead="MOUNTAIN_DEAD_T8_FIBER_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T8_FIBER_TREASURE"   red="STEPPE_RED_T8_FIBER_TREASURE"   dead="STEPPE_DEAD_T8_FIBER_TREASURE"/>
         <Biome name="Swamp"    green="SWAMP_GREEN_T8_FIBER_TREASURE"    red="SWAMP_RED_T8_FIBER_TREASURE"    dead="SWAMP_DEAD_T8_FIBER_TREASURE"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T8_FIBER_TREASURE"    red="MISTS_RED_T8_FIBER_TREASURE"    dead="MISTS_DEAD_T8_FIBER_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T8_FIBER_TREASURE"/>
       </Tiles>
-	  <Loot>
+  	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1413,6 +1866,12 @@
 		</Loot>
 	  </RareState>
       <RareState state="3" item="T8_FIBER_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T8_FIBER_LEVEL4" >
 		<Loot>
 			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 			<LootListReference name="T8_FIBER_SKILLBOOK" chance="0.001"/>
@@ -1442,6 +1901,7 @@
         <Biome name="Highland" green="T1_HIDE_HILLMARMOT" red="T1_HIDE_HILLMARMOT" dead="T1_HIDE_HILLMARMOT"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T1_HIDE_TOAD" red="SWAMP_GREEN_T1_HIDE_TOAD" dead="SWAMP_GREEN_T1_HIDE_TOAD"/>
         <Biome name="Roads" none="FOREST_GREEN_T1_HIDE_RABBIT"/>
+        <Biome name="Mists" green="MISTS_GREEN_T1_HIDE_WOLPERTINGER" red="MISTS_GREEN_T1_HIDE_WOLPERTINGER" dead="MISTS_GREEN_T1_HIDE_WOLPERTINGER"/>
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" />
       <Charge level="1-2" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" />
@@ -1452,6 +1912,7 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T2_HIDE_IMPALA" red="STEPPE_GREEN_T2_HIDE_IMPALA" dead="STEPPE_GREEN_T2_HIDE_IMPALA"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T2_HIDE_SNAKE" red="SWAMP_GREEN_T2_HIDE_SNAKE" dead="SWAMP_GREEN_T2_HIDE_SNAKE"/>
         <Biome name="Roads" none="FOREST_GREEN_T2_HIDE_FOX"/>
+        <Biome name="Mists" green="MISTS_GREEN_T2_HIDE_FOX" red="MISTS_GREEN_T2_HIDE_FOX" dead="MISTS_GREEN_T2_HIDE_FOX"/>
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -1462,6 +1923,7 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T3_HIDE_MOABIRD" red="STEPPE_GREEN_T3_HIDE_MOABIRD" dead="STEPPE_GREEN_T3_HIDE_MOABIRD"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T3_HIDE_GIANTTOAD" red="SWAMP_GREEN_T3_HIDE_GIANTTOAD" dead="SWAMP_GREEN_T3_HIDE_GIANTTOAD"/>
         <Biome name="Roads" none="FOREST_GREEN_T3_HIDE_WOLF"/>
+        <Biome name="Mists" green="MISTS_GREEN_T3_HIDE_DEER" red="MISTS_GREEN_T3_HIDE_DEER" dead="MISTS_GREEN_T3_HIDE_DEER"/>
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
@@ -1472,31 +1934,32 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T4_HIDE_GIANTSTAG" red="STEPPE_GREEN_T4_HIDE_GIANTSTAG" dead="STEPPE_GREEN_T4_HIDE_GIANTSTAG"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T4_HIDE_MONITORLIZARD" red="SWAMP_GREEN_T4_HIDE_MONITORLIZARD" dead="SWAMP_GREEN_T4_HIDE_MONITORLIZARD"/>
         <Biome name="Roads" none="FOREST_GREEN_T4_HIDE_BOAR"/>
+        <Biome name="Mists" green="MISTS_GREEN_T4_HIDE_STAG" red="MISTS_GREEN_T4_HIDE_STAG" dead="MISTS_GREEN_T4_HIDE_STAG"/>
       </Tiles>
-	  <Loot>
-	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
-	  	<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
-	  </Loot>
+	    <Loot>
+	  	  <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	  <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+	    </Loot>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <RareState state="1" item="T4_HIDE_LEVEL1" >
-		<Loot>
-			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
-			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
-		</Loot>
-	  </RareState>
+		    <Loot>
+			    <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			   <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+		    </Loot>
+	    </RareState>
       <RareState state="2" item="T4_HIDE_LEVEL2" >
-		<Loot>
-			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
-			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
-		</Loot>
-	  </RareState>
+		    <Loot>
+			    <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			    <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+		    </Loot>
+	    </RareState>
       <RareState state="3" item="T4_HIDE_LEVEL3" >
-		<Loot>
-			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
-			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
-		</Loot>
-	  </RareState>
+		    <Loot>
+			    <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			    <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+		    </Loot>
+	    </RareState>
     </Tier>
     <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" tile="T5_HIDE" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000">
       <Tiles>
@@ -1504,8 +1967,9 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T5_HIDE_TERRORBIRD" red="STEPPE_GREEN_T5_HIDE_TERRORBIRD" dead="STEPPE_GREEN_T5_HIDE_TERRORBIRD"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T5_HIDE_GIANTSNAKE" red="SWAMP_GREEN_T5_HIDE_GIANTSNAKE" dead="SWAMP_GREEN_T5_HIDE_GIANTSNAKE"/>
         <Biome name="Roads" none="FOREST_GREEN_T5_HIDE_BEAR"/>
+        <Biome name="Mists" green="MISTS_GREEN_T5_HIDE_OWL" red="MISTS_GREEN_T5_HIDE_OWL" dead="MISTS_GREEN_T5_HIDE_OWL"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1536,8 +2000,9 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T6_HIDE_DESERTWOLF" red="STEPPE_GREEN_T6_HIDE_DESERTWOLF" dead="STEPPE_GREEN_T6_HIDE_DESERTWOLF"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON" red="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON" dead="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON"/>
         <Biome name="Roads" none="FOREST_GREEN_T6_HIDE_DIREWOLF"/>
+        <Biome name="Mists" green="MISTS_GREEN_T6_HIDE_HOUND" red="MISTS_GREEN_T6_HIDE_HOUND" dead="MISTS_GREEN_T6_HIDE_HOUND"/>
       </Tiles>
-	  <Loot>
+  	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1568,8 +2033,9 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T7_HIDE_RHINO_SMALL" red="STEPPE_GREEN_T7_HIDE_RHINO_SMALL" dead="STEPPE_GREEN_T7_HIDE_RHINO_SMALL"/>
         <Biome name="Swamp" green="FOREST_GREEN_T7_HIDE_DIREBOAR_SMALL" red="FOREST_GREEN_T7_HIDE_DIREBOAR_SMALL" dead="FOREST_GREEN_T7_HIDE_DIREBOAR_SMALL"/>
         <Biome name="Roads" none="FOREST_GREEN_T7_HIDE_DIREBOAR_SMALL"/>
+        <Biome name="Mists" green="MISTS_GREEN_T7_HIDE_MISTBEAR" red="MISTS_GREEN_T7_HIDE_MISTBEAR" dead="MISTS_GREEN_T7_HIDE_MISTBEAR"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1600,8 +2066,9 @@
         <Biome name="Steppe" green="STEPPE_GREEN_T7_HIDE_MAMMOTH" red="STEPPE_GREEN_T7_HIDE_MAMMOTH" dead="STEPPE_GREEN_T7_HIDE_MAMMOTH"/>
         <Biome name="Swamp" green="FOREST_GREEN_T8_HIDE_DIREBEAR_SMALL" red="FOREST_GREEN_T8_HIDE_DIREBEAR_SMALL" dead="FOREST_GREEN_T8_HIDE_DIREBEAR_SMALL"/>
         <Biome name="Roads" none="FOREST_GREEN_T8_HIDE_DIREBEAR_SMALL"/>
+        <Biome name="Mists" green="MISTS_GREEN_T8_HIDE_DRAGONHAWK" red="MISTS_GREEN_T8_HIDE_DRAGONHAWK" dead="MISTS_GREEN_T8_HIDE_DRAGONHAWK"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1679,10 +2146,45 @@
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
     <Tier tier="3" item="T3_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" tile="STEPPE_GREEN_T3_HIDE_COUGAR" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T3_HIDE_COUGAR" red="MISTS_RED_T3_HIDE_COUGAR" dead="MISTS_DEAD_T3_HIDE_COUGAR"/>
+      </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
     </Tier>
+    <Tier tier="4" item="T4_HIDE" tile="ROADS_T4_HIDE_COUGAR" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="3">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T4_HIDE_COUGAR" red="MISTS_RED_T4_HIDE_COUGAR" dead="MISTS_DEAD_T4_HIDE_COUGAR"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T4_HIDE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T4_HIDE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T4_HIDE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_HIDE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" tile="STEPPE_GREEN_T5_HIDE_COUGAR" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T5_HIDE_COUGAR" red="MISTS_RED_T5_HIDE_COUGAR" dead="MISTS_DEAD_T5_HIDE_COUGAR"/>
+      </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_HIDE_SKILLBOOK" chance="0.001"/>
@@ -1708,7 +2210,39 @@
 		</Loot>
 	  </RareState>
     </Tier>
+    <Tier tier="6" item="T6_HIDE" tile="ROADS_T6_HIDE_COUGAR" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T6_HIDE_COUGAR" red="MISTS_RED_T6_HIDE_COUGAR" dead="MISTS_DEAD_T6_HIDE_COUGAR"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T6_HIDE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T6_HIDE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T6_HIDE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" tile="STEPPE_GREEN_T7_HIDE_COUGAR" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="9">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T7_HIDE_COUGAR" red="MISTS_RED_T7_HIDE_COUGAR" dead="MISTS_DEAD_T7_HIDE_COUGAR"/>
+      </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
@@ -1733,6 +2267,35 @@
 			<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+    </Tier>
+    <Tier tier="8" item="T8_HIDE" tile="ROADS_T8_HIDE_COUGAR" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="11">
+      <Tiles>
+        <Biome name="Mists" green="MISTS_GREEN_T8_HIDE_COUGAR" red="MISTS_RED_T8_HIDE_COUGAR" dead="MISTS_DEAD_T8_HIDE_COUGAR"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-11" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T8_HIDE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T8_HIDE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T8_HIDE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
     </Tier>
   </Harvestable>
   <Harvestable name="HIDE_GUARDIAN" resource="HIDE">
@@ -1808,13 +2371,55 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
+    <Tier tier="4" item="T4_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10">
+      <Tiles>
+        <Biome name="Forest" green="FOREST_GREEN_T4_HIDE_BOAR_TREASURE" red="FOREST_GREEN_T4_HIDE_BOAR_TREASURE" dead="FOREST_GREEN_T4_HIDE_BOAR_TREASURE"/>
+        <Biome name="Steppe" green="STEPPE_GREEN_T4_HIDE_GIANTSTAG_TREASURE" red="STEPPE_GREEN_T4_HIDE_GIANTSTAG_TREASURE" dead="STEPPE_GREEN_T4_HIDE_GIANTSTAG_TREASURE"/>
+        <Biome name="Swamp" green="SWAMP_GREEN_T4_HIDE_MONITORLIZARD_TREASURE" red="SWAMP_GREEN_T4_HIDE_MONITORLIZARD_TREASURE" dead="SWAMP_GREEN_T4_HIDE_MONITORLIZARD_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T4_HIDE_BOAR_TREASURE"/>
+        <Biome name="Mists" green="MISTS_GREEN_T4_HIDE_STAG_TREASURE" red="MISTS_GREEN_T4_HIDE_STAG_TREASURE" dead="MISTS_GREEN_T4_HIDE_STAG_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T4_HIDE_BOAR_TREASURE"/>
+      </Tiles>
+	    <Loot>
+	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.001"/>
+	  </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-30" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="30" />
+      <RareState state="1" item="T4_HIDE_LEVEL1" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="2" item="T4_HIDE_LEVEL2" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="3" item="T4_HIDE_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T4_HIDE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+    </Tier>
     <Tier tier="5" item="T5_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="6" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10">
       <Tiles>
         <Biome name="Forest" green="FOREST_GREEN_T5_HIDE_BEAR_TREASURE" red="FOREST_GREEN_T5_HIDE_BEAR_TREASURE" dead="FOREST_GREEN_T5_HIDE_BEAR_TREASURE"/>
         <Biome name="Steppe" green="STEPPE_GREEN_T5_HIDE_TERRORBIRD_TREASURE" red="STEPPE_GREEN_T5_HIDE_TERRORBIRD_TREASURE" dead="STEPPE_GREEN_T5_HIDE_TERRORBIRD_TREASURE"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T5_HIDE_GIANTSNAKE_TREASURE" red="SWAMP_GREEN_T5_HIDE_GIANTSNAKE_TREASURE" dead="SWAMP_GREEN_T5_HIDE_GIANTSNAKE_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T5_HIDE_BEAR_TREASURE"/>
+        <Biome name="Mists" green="MISTS_GREEN_T5_HIDE_OWL_TREASURE" red="MISTS_GREEN_T5_HIDE_OWL_TREASURE" dead="MISTS_GREEN_T5_HIDE_OWL_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1838,14 +2443,22 @@
 			<LootListReference name="T5_HIDE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T5_HIDE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T5_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="6" item="T6_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="8" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10">
       <Tiles>
         <Biome name="Forest" green="FOREST_GREEN_T6_HIDE_DIREWOLF_TREASURE" red="FOREST_GREEN_T6_HIDE_DIREWOLF_TREASURE" dead="FOREST_GREEN_T6_HIDE_DIREWOLF_TREASURE"/>
         <Biome name="Steppe" green="STEPPE_GREEN_T6_HIDE_DESERTWOLF_TREASURE" red="STEPPE_GREEN_T6_HIDE_DESERTWOLF_TREASURE" dead="STEPPE_GREEN_T6_HIDE_DESERTWOLF_TREASURE"/>
         <Biome name="Swamp" green="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON_TREASURE" red="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON_TREASURE" dead="SWAMP_GREEN_T6_HIDE_SWAMPDRAGON_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T6_HIDE_DIREWOLF_TREASURE"/>
+        <Biome name="Mists" green="MISTS_GREEN_T6_HIDE_HOUND_TREASURE" red="MISTS_GREEN_T6_HIDE_HOUND_TREASURE" dead="MISTS_GREEN_T6_HIDE_HOUND_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1869,14 +2482,22 @@
 			<LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T6_HIDE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T6_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="7" item="T7_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="10" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10">
       <Tiles>
         <Biome name="Forest" green="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE" red="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE" dead="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE"/>
         <Biome name="Steppe" green="STEPPE_GREEN_T7_HIDE_RHINO_TREASURE" red="STEPPE_GREEN_T7_HIDE_RHINO_TREASURE" dead="STEPPE_GREEN_T7_HIDE_RHINO_TREASURE"/>
         <Biome name="Swamp" green="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE" red="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE" dead="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T7_HIDE_DIREBOAR_TREASURE"/>
+        <Biome name="Mists" green="MISTS_GREEN_T7_HIDE_MISTBEAR" red="MISTS_GREEN_T7_HIDE_MISTBEAR" dead="MISTS_GREEN_T7_HIDE_MISTBEAR"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1900,14 +2521,22 @@
 			<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T7_HIDE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T7_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="8" item="T8_HIDE" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="15" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10">
       <Tiles>
         <Biome name="Forest" green="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE" red="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE" dead="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE"/>
         <Biome name="Steppe" green="STEPPE_GREEN_T8_HIDE_ANCIENTMAMMOTH_TREASURE" red="STEPPE_GREEN_T8_HIDE_ANCIENTMAMMOTH_TREASURE" dead="STEPPE_GREEN_T8_HIDE_ANCIENTMAMMOTH_TREASURE"/>
         <Biome name="Swamp" green="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE" red="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE" dead="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE"/>
+        <Biome name="Roads" none="FOREST_GREEN_T8_HIDE_DIREBEAR_TREASURE"/>
+        <Biome name="Mists" green="MISTS_GREEN_T8_HIDE_DRAGONHAWK_TREASURE" red="MISTS_GREEN_T8_HIDE_DRAGONHAWK_TREASURE" dead="MISTS_GREEN_T8_HIDE_DRAGONHAWK_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -1926,6 +2555,12 @@
 		</Loot>
 	  </RareState>
       <RareState state="3" item="T8_HIDE_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T8_HIDE_LEVEL4" >
 		<Loot>
 			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 			<LootListReference name="T8_HIDE_SKILLBOOK" chance="0.001"/>
@@ -2101,13 +2736,44 @@
     <Tier tier="3" item="T3_ORE" tile="MOUNTAIN_GREEN_T3_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="1.5" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="360" startcharges="3">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T3_ORE_ELEMENTAL" red="MOUNTAIN_RED_T3_ORE_ELEMENTAL" dead="MOUNTAIN_DEAD_T3_ORE_ELEMENTAL"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T3_ORE_ELEMENTAL"    red="MISTS_RED_T3_ORE_ELEMENTAL"    dead="MISTS_DEAD_T3_ORE_ELEMENTAL"/>
       </Tiles>
       <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
       <Charge level="1-3" yield="3" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
     </Tier>
+    <Tier tier="4" item="T4_ORE" tile="ROADS_T4_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="3">
+      <Tiles>
+        <Biome name="Mists"    green="MISTS_GREEN_T4_ORE_ELEMENTAL"    red="MISTS_RED_T4_ORE_ELEMENTAL"    dead="MISTS_DEAD_T4_ORE_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T4_ORE_SKILLBOOK" chance="0.002"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-3" yield="2" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T4_ORE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ORE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T4_ORE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ORE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T4_ORE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T4_ORE_SKILLBOOK" chance="0.002"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="5" item="T5_ORE" tile="T5_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_RED_T5_ORE_ELEMENTAL" red="MOUNTAIN_RED_T5_ORE_ELEMENTAL" dead="MOUNTAIN_DEAD_T5_ORE_ELEMENTAL"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T5_ORE_ELEMENTAL"    red="MISTS_RED_T5_ORE_ELEMENTAL"    dead="MISTS_DEAD_T5_ORE_ELEMENTAL"/>
       </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
@@ -2134,9 +2800,39 @@
 		</Loot>
 	  </RareState>
     </Tier>
+    <Tier tier="6" item="T6_ORE" tile="ROADS_T6_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="3" requirestool="true" decaytimeseconds="3600" decaytimewhenexhaustedseconds="3000" startcharges="5">
+      <Tiles>
+        <Biome name="Mists"    green="MISTS_GREEN_T6_ORE_ELEMENTAL"    red="MISTS_RED_T6_ORE_ELEMENTAL"    dead="MISTS_DEAD_T6_ORE_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-5" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T6_ORE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T6_ORE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T6_ORE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+    </Tier>
     <Tier tier="7" item="T7_ORE" tile="T7_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="9">
       <Tiles>
         <Biome name="Mountain" green="MOUNTAIN_DEAD_T7_ORE_ELEMENTAL" red="MOUNTAIN_DEAD_T7_ORE_ELEMENTAL" dead="MOUNTAIN_DEAD_T7_ORE_ELEMENTAL"/>
+        <Biome name="Mists"    green="MISTS_GREEN_T7_ORE_ELEMENTAL"    red="MISTS_RED_T7_ORE_ELEMENTAL"    dead="MISTS_DEAD_T7_ORE_ELEMENTAL"/>
       </Tiles>
 	  <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
@@ -2162,6 +2858,35 @@
 			<LootListReference name="T7_ORE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+    </Tier>
+    <Tier tier="8" item="T8_ORE" tile="ROADS_T8_ORE_ELEMENTAL" maxchargesperharvest="1" respawntimeseconds="0" harvesttimeseconds="5" requirestool="true" decaytimeseconds="86400" decaytimewhenexhaustedseconds="600" startcharges="11">
+      <Tiles>
+        <Biome name="Mists"    green="MISTS_GREEN_T8_ORE_ELEMENTAL"    red="MISTS_RED_T8_ORE_ELEMENTAL"    dead="MISTS_DEAD_T8_ORE_ELEMENTAL"/>
+      </Tiles>
+      <Loot>
+        <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+        <LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
+      </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-11" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <RareState state="1" item="T8_ORE_LEVEL1" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="2" item="T8_ORE_LEVEL2" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
+      <RareState state="3" item="T8_ORE_LEVEL3" >
+        <Loot>
+          <!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+          <LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
+        </Loot>
+      </RareState>
     </Tier>
   </Harvestable>
   <Harvestable name="ORE_GUARDIAN" resource="ORE">
@@ -2245,13 +2970,54 @@
       <Modifier tierdifference="6" timefactor="0.15" />
       <Modifier tierdifference="7" timefactor="0.15" />
     </ToolModifier>
+    <Tier tier="4" item="T4_ORE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
+      <Tiles>
+        <Biome name="Highland" green="HIGHLAND_GREEN_T4_ORE_TREASURE" red="HIGHLAND_RED_T4_ORE_TREASURE" dead="HIGHLAND_DEAD_T4_ORE_TREASURE"/>
+        <Biome name="Mountain" green="MOUNTAIN_GREEN_T4_ORE_TREASURE" red="MOUNTAIN_RED_T4_ORE_TREASURE" dead="MOUNTAIN_DEAD_T4_ORE_TREASURE"/>
+        <Biome name="Steppe"   green="STEPPE_GREEN_T4_ORE_TREASURE"   red="STEPPE_RED_T4_ORE_TREASURE"   dead="STEPPE_DEAD_T4_ORE_TREASURE"/>
+        <Biome name="Mists"   green="MISTS_GREEN_T4_ORE_TREASURE"   red="MISTS_RED_T4_ORE_TREASURE"   dead="MISTS_DEAD_T4_ORE_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T4_ORE_TREASURE"/>
+      </Tiles>
+	    <Loot>
+	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+	  	<LootListReference name="T4_ORE_SKILLBOOK" chance="0.001"/>
+	  </Loot>
+      <Charge level="0" gfxstate="0" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="1" />
+      <Charge level="1-30" yield="1" gfxstate="1" respawnfactormin="0.5" respawnfactormax="1.5" respawncharges="30" />
+      <RareState state="1" item="T4_ORE_LEVEL1" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="2" item="T4_ORE_LEVEL2" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+      <RareState state="3" item="T4_ORE_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T4_ORE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T4_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+    </Tier>
     <Tier tier="5" item="T5_ORE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="1500" harvesttimeseconds="6" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T5_ORE_TREASURE" red="HIGHLAND_RED_T5_ORE_TREASURE" dead="HIGHLAND_DEAD_T5_ORE_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T5_ORE_TREASURE" red="MOUNTAIN_RED_T5_ORE_TREASURE" dead="MOUNTAIN_DEAD_T5_ORE_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T5_ORE_TREASURE"   red="STEPPE_RED_T5_ORE_TREASURE"   dead="STEPPE_DEAD_T5_ORE_TREASURE"/>
+        <Biome name="Mists"   green="MISTS_GREEN_T5_ORE_TREASURE"   red="MISTS_RED_T5_ORE_TREASURE"   dead="MISTS_DEAD_T5_ORE_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T5_ORE_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T5_ORE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -2275,14 +3041,22 @@
 			<LootListReference name="T5_ORE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T5_ORE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T5_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="6" item="T6_ORE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="10000" harvesttimeseconds="8" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T6_ORE_TREASURE" red="HIGHLAND_RED_T6_ORE_TREASURE" dead="HIGHLAND_DEAD_T6_ORE_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T6_ORE_TREASURE" red="MOUNTAIN_RED_T6_ORE_TREASURE" dead="MOUNTAIN_DEAD_T6_ORE_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T6_ORE_TREASURE"   red="STEPPE_RED_T6_ORE_TREASURE"   dead="STEPPE_DEAD_T6_ORE_TREASURE"/>
+        <Biome name="Mists"   green="MISTS_GREEN_T6_ORE_TREASURE"   red="MISTS_RED_T6_ORE_TREASURE"   dead="MISTS_DEAD_T6_ORE_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T6_ORE_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -2306,14 +3080,22 @@
 			<LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T6_ORE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T6_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="7" item="T7_ORE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="40000" harvesttimeseconds="10" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T7_ORE_TREASURE" red="HIGHLAND_RED_T7_ORE_TREASURE" dead="HIGHLAND_DEAD_T7_ORE_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T7_ORE_TREASURE" red="MOUNTAIN_RED_T7_ORE_TREASURE" dead="MOUNTAIN_DEAD_T7_ORE_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T7_ORE_TREASURE"   red="STEPPE_RED_T7_ORE_TREASURE"   dead="STEPPE_DEAD_T7_ORE_TREASURE"/>
+        <Biome name="Mists"   green="MISTS_GREEN_T7_ORE_TREASURE"   red="MISTS_RED_T7_ORE_TREASURE"   dead="MISTS_DEAD_T7_ORE_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T7_ORE_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T7_ORE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -2337,14 +3119,22 @@
 			<LootListReference name="T7_ORE_SKILLBOOK" chance="0.001"/>
 		</Loot>
 	  </RareState>
+	    <RareState state="4" item="T7_ORE_LEVEL4" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T7_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
     </Tier>
     <Tier tier="8" item="T8_ORE" decaytimeseconds="86400" decaytimewhenexhaustedseconds="10" maxchargesperharvest="1" respawntimeseconds="48000" harvesttimeseconds="15" requirestool="true" startcharges="30">
       <Tiles>
         <Biome name="Highland" green="HIGHLAND_GREEN_T8_ORE_TREASURE" red="HIGHLAND_RED_T8_ORE_TREASURE" dead="HIGHLAND_DEAD_T8_ORE_TREASURE"/>
         <Biome name="Mountain" green="MOUNTAIN_GREEN_T8_ORE_TREASURE" red="MOUNTAIN_RED_T8_ORE_TREASURE" dead="MOUNTAIN_DEAD_T8_ORE_TREASURE"/>
         <Biome name="Steppe"   green="STEPPE_GREEN_T8_ORE_TREASURE"   red="STEPPE_RED_T8_ORE_TREASURE"   dead="STEPPE_DEAD_T8_ORE_TREASURE"/>
+        <Biome name="Mists"   green="MISTS_GREEN_T8_ORE_TREASURE"   red="MISTS_RED_T8_ORE_TREASURE"   dead="MISTS_DEAD_T8_ORE_TREASURE"/>
+        <Biome name="Roads"    none="ROADS_T8_ORE_TREASURE"/>
       </Tiles>
-	  <Loot>
+	    <Loot>
 	  	<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 	  	<LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
 	  </Loot>
@@ -2363,6 +3153,12 @@
 		</Loot>
 	  </RareState>
       <RareState state="3" item="T8_ORE_LEVEL3" >
+		<Loot>
+			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
+			<LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>
+		</Loot>
+	  </RareState>
+	    <RareState state="4" item="T8_ORE_LEVEL4" >
 		<Loot>
 			<!-- !!! DO NOT TOUCH !!! this is a nested lootlist to achieve the decimals required to account for the different yield/maxchargesperharvest !!!-->
 			<LootListReference name="T8_ORE_SKILLBOOK" chance="0.001"/>

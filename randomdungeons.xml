@@ -9,10 +9,18 @@
   </DungeonLifeTimes>
 
   <DifficultyLevels>
-    <difficulty level="1" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_01" silverfactor="1.4268" lootfactor="1.4268" mobfamefactor="1.276"/>
-    <difficulty level="2" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_02" silverfactor="1.8768" lootfactor="1.8768" mobfamefactor="1.6592"/>
-    <difficulty level="3" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_03" silverfactor="2.4332" lootfactor="2.4332" mobfamefactor="2.133"/>
-    <difficulty level="4" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_04" silverfactor="3.1832" lootfactor="3.1832" mobfamefactor="2.7416"/>     
+    <difficultygroup name="default">
+      <difficulty level="1" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_01" silverfactor="1.4268" lootfactor="1.4268" mobfamefactor="1.276" questscalingfactor="1.276"/>
+      <difficulty level="2" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_02" silverfactor="1.8768" lootfactor="1.8768" mobfamefactor="1.6592" questscalingfactor="1.6592"/>
+      <difficulty level="3" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_03" silverfactor="2.4332" lootfactor="2.4332" mobfamefactor="2.133" questscalingfactor="2.133"/>
+      <difficulty level="4" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_04" silverfactor="3.1832" lootfactor="3.1832" mobfamefactor="2.7416" questscalingfactor="2.7416"/>
+    </difficultygroup>
+    <difficultygroup name="mists">
+      <difficulty level="1" mobmodifier="MOB_MISTS_BUFF_01" silverfactor="1.16" lootfactor="1.16" mobfamefactor="1.16" questscalingfactor="1.16"/>
+      <difficulty level="2" mobmodifier="MOB_MISTS_BUFF_02" silverfactor="1.3456" lootfactor="1.3456" mobfamefactor="1.3456" questscalingfactor="1.3456"/>
+      <difficulty level="3" mobmodifier="MOB_MISTS_BUFF_03" silverfactor="1.5609" lootfactor="1.5609" mobfamefactor="1.5609" questscalingfactor="1.5609"/>
+      <difficulty level="4" mobmodifier="MOB_MISTS_BUFF_04" silverfactor="1.8106" lootfactor="1.8106" mobfamefactor="1.8106" questscalingfactor="1.8106"/>    
+    </difficultygroup>
   </DifficultyLevels>
   
   <RandomLevelRerolls>
@@ -55,6 +63,56 @@
       <level level="2" weight="135"/>
       <level level="3" weight="45"/>
       <level level="4" weight="15"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" rerolltimesecondsmin="3600" rerolltimesecondsmax="10800">
+      <level level="0" weight="9590"/>
+      <level level="1" weight="195"/>
+      <level level="2" weight="110"/>
+      <level level="3" weight="65"/>
+      <level level="4" weight="40"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" rerolltimesecondsmin="3600" rerolltimesecondsmax="10800">
+      <level level="0" weight="9590"/>
+      <level level="1" weight="195"/>
+      <level level="2" weight="110"/>
+      <level level="3" weight="65"/>
+      <level level="4" weight="40"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_OPEN_WORLD_MODE_BLACK_DUO" rerolltimesecondsmin="3600" rerolltimesecondsmax="10800">
+      <level level="0" weight="9590"/>
+      <level level="1" weight="195"/>
+      <level level="2" weight="110"/>
+      <level level="3" weight="65"/>
+      <level level="4" weight="40"/>
+    </RandomLevelReroll>
+    <!-- Reroll infos below here are only used directly by the mists.xml for rolling mob rarities inside the instances, those only roll once per instance startup (so avoid using timers/upgrade handling -->
+    <RandomLevelReroll name="MISTS_INSTANCE_MODE_YELLOW_SOLO" singlerollonly="true">
+      <level level="0" weight="9556"/>
+      <level level="1" weight="186"/>
+      <level level="2" weight="129"/>
+      <level level="3" weight="86"/>
+      <level level="4" weight="43"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_INSTANCE_MODE_BLACK_SOLO" singlerollonly="true">
+      <level level="0" weight="9556"/>
+      <level level="1" weight="186"/>
+      <level level="2" weight="129"/>
+      <level level="3" weight="86"/>
+      <level level="4" weight="43"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_INSTANCE_MODE_BLACK_DUO" singlerollonly="true">
+      <level level="0" weight="9779"/>
+      <level level="1" weight="93"/>
+      <level level="2" weight="64"/>
+      <level level="3" weight="43"/>
+      <level level="4" weight="21"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="ROADS_FIXED_DUNGEONS" singlerollonly="true">
+      <level level="0" weight="298"/>
+      <level level="1" weight="238"/>
+      <level level="2" weight="190"/>
+      <level level="3" weight="152"/>
+      <level level="4" weight="122"/>
     </RandomLevelReroll>
   </RandomLevelRerolls>
 
@@ -100,6 +158,7 @@
     <ClusterTypeMapping clustertype="TUNNEL_HIGH" dungeonclustertype="DUNGEON_RD_TUNNEL"/>
 
     <ClusterTypeMapping clustertype="TUNNEL_DEEP" dungeonclustertype="DUNGEON_RD_TUNNEL"/>
+    <ClusterTypeMapping clustertype="TUNNEL_DEEP_RAID" dungeonclustertype="DUNGEON_RD_TUNNEL"/>
 
     <ClusterTypeMapping clustertype="TUNNEL_HIDEOUT" dungeonclustertype="DUNGEON_BLACK"/>
     <ClusterTypeMapping clustertype="TUNNEL_HIDEOUT_DEEP" dungeonclustertype="DUNGEON_BLACK"/>
@@ -174,9 +233,9 @@
   
   <FixedExits>
     <!--Elite Dungeons-->
-    <FixedExit name="T6_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="6" />
-    <FixedExit name="T7_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="7" />
-    <FixedExit name="T8_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="8" />
+    <FixedExit name="T6_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="6"/>
+    <FixedExit name="T7_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="7"/>
+    <FixedExit name="T8_AVALON_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="86400" tier="8"/>
     
     <!--Mob Camps-->
     <FixedExit name="T3_HERETIC" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="0.1" activationtime="1200" cooldown="600" tier="4" />
@@ -239,58 +298,58 @@
     <FixedExit name="T8_PASSAGE" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="0.1" activationtime="1200" cooldown="600" tier="8" />
     
     <!--Roads-->
-    <FixedExit name="HER_T4_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4"/>
-    <FixedExit name="HER_T5_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5"/>
-    <FixedExit name="HER_T6_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6"/>
-    <FixedExit name="HER_T7_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7"/>
-    <FixedExit name="HER_T8_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8"/>
+    <FixedExit name="HER_T4_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T5_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T6_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T7_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T8_ROAD_SOLO" generatorName="HERETIC_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
 
-    <FixedExit name="KPR_T4_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4"/>
-    <FixedExit name="KPR_T5_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5"/>
-    <FixedExit name="KPR_T6_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6"/>
-    <FixedExit name="KPR_T7_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7"/>
-    <FixedExit name="KPR_T8_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8"/>
+    <FixedExit name="KPR_T4_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T5_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T6_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T7_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T8_ROAD_SOLO" generatorName="KEEPER_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
 
-    <FixedExit name="UND_T4_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4"/>
-    <FixedExit name="UND_T5_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5"/>
-    <FixedExit name="UND_T6_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6"/>
-    <FixedExit name="UND_T7_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7"/>
-    <FixedExit name="UND_T8_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8"/>
+    <FixedExit name="UND_T4_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T5_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T6_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T7_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T8_ROAD_SOLO" generatorName="UNDEAD_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
 
-    <FixedExit name="MOR_T4_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4"/>
-    <FixedExit name="MOR_T5_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5"/>
-    <FixedExit name="MOR_T6_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6"/>
-    <FixedExit name="MOR_T7_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7"/>
-    <FixedExit name="MOR_T8_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8"/>
-
-
-    <FixedExit name="HER_T4_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4"/>
-    <FixedExit name="HER_T5_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5"/>
-    <FixedExit name="HER_T6_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6"/>
-    <FixedExit name="HER_T7_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7"/>
-    <FixedExit name="HER_T8_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8"/>
-
-    <FixedExit name="KPR_T4_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4"/>
-    <FixedExit name="KPR_T5_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5"/>
-    <FixedExit name="KPR_T6_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6"/>
-    <FixedExit name="KPR_T7_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7"/>
-    <FixedExit name="KPR_T8_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8"/>
-
-    <FixedExit name="UND_T4_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4"/>
-    <FixedExit name="UND_T5_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5"/>
-    <FixedExit name="UND_T6_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6"/>
-    <FixedExit name="UND_T7_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7"/>
-    <FixedExit name="UND_T8_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8"/>
-
-    <FixedExit name="MOR_T4_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4"/>
-    <FixedExit name="MOR_T5_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5"/>
-    <FixedExit name="MOR_T6_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6"/>
-    <FixedExit name="MOR_T7_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7"/>
-    <FixedExit name="MOR_T8_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8"/>
+    <FixedExit name="MOR_T4_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T5_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T6_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T7_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T8_ROAD_SOLO" generatorName="MORGANA_RANDOM_DUNGEON_SOLO" maxfillratio="1" activationtime="60" cooldown="1800" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
 
 
-    <FixedExit name="AVA_T6_ROAD_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="18000" tier="6" />
-    <FixedExit name="AVA_T8_ROAD_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="18000" tier="8" />
+    <FixedExit name="HER_T4_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T5_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T6_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T7_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="HER_T8_ROAD_VETERAN" generatorName="HERETIC_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+
+    <FixedExit name="KPR_T4_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T5_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T6_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T7_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="KPR_T8_ROAD_VETERAN" generatorName="KEEPER_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+
+    <FixedExit name="UND_T4_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T5_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T6_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T7_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="UND_T8_ROAD_VETERAN" generatorName="UNDEAD_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+
+    <FixedExit name="MOR_T4_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="4" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T5_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="5" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T6_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T7_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="7" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+    <FixedExit name="MOR_T8_ROAD_VETERAN" generatorName="MORGANA_RANDOM_DUNGEON" maxfillratio="1" activationtime="60" cooldown="3600" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS"/>
+
+
+    <FixedExit name="AVA_T6_ROAD_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="18000" tier="6" randomlevelrerollref="ROADS_FIXED_DUNGEONS" />
+    <FixedExit name="AVA_T8_ROAD_ELITE" generatorName="AVALON_RANDOM_DUNGEON_ELITE" maxfillratio="1" activationtime="120" cooldown="18000" tier="8" randomlevelrerollref="ROADS_FIXED_DUNGEONS" />
   </FixedExits>
 
   <!-- ================================================================================================================ -->
@@ -304,11 +363,16 @@
 	  <!-- for Debug Cluster -->
       <Subtype name="SOLO">
         <ClusterTier tier="1" maxfillratio="0.5">
-          <RandomExit name="CORRUPTED_SOLO" weight="1" />
+          <RandomExit name="MISTS_SOLO_YELLOW" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="4" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
         </ClusterTier>
       </Subtype>
       <Subtype name="VETERAN">
         <ClusterTier tier="1" maxfillratio="0.5">
+          <RandomExit name="MISTS_SOLO_YELLOW" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="4" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
           <RandomExit name="CORRUPTED_SOLO" weight="1" />
           <RandomExit name="T6_KEEPER" weight="1" />
           <RandomExit name="T5_MORGANA" weight="0" />
@@ -319,29 +383,40 @@
       </Subtype>
 	  </Continent>
     <Continent name="Avalon">
+      <!--Solo is used for Hideout Road zones only, as those are manually placed in the hideout zone master templates-->
       <Subtype name="SOLO">
         <ClusterTier tier="4" maxfillratio="0.8">
-          <RandomExit name="CORRUPTED_SOLO" weight="10" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="5" />
+          <RandomExit name="T4_PORTAL_SOLO" weight="5" randomlevelrerollref="SOLO_ROYAL"/>
           
-          <RandomExit name="T4_PORTAL_SOLO" weight="40" />
-          <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>          
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.8">
-          <RandomExit name="CORRUPTED_SOLO" weight="10" />
-          
-          <RandomExit name="T5_PORTAL_SOLO" weight="40" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="5" />
+          <RandomExit name="T5_PORTAL_SOLO" weight="5" randomlevelrerollref="SOLO_ROYAL"/>
+
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           
@@ -351,12 +426,18 @@
 
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.8">
-          <RandomExit name="CORRUPTED_SOLO" weight="10" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="5" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="5" randomlevelrerollref="SOLO_ROYAL"/>
           
-          <RandomExit name="T6_PORTAL_SOLO" weight="40" />
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           
@@ -366,12 +447,18 @@
 
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.8">
-          <RandomExit name="CORRUPTED_SOLO" weight="10" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="5" />
+          <RandomExit name="T7_PORTAL_SOLO" weight="5" randomlevelrerollref="SOLO_ROYAL"/>
           
-          <RandomExit name="T7_PORTAL_SOLO" weight="40" />
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           
@@ -381,12 +468,17 @@
 
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.8">
-          <RandomExit name="CORRUPTED_SOLO" weight="10" />
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="5" />
+          <RandomExit name="T8_PORTAL_SOLO" weight="5" randomlevelrerollref="SOLO_ROYAL"/>
           
-          <RandomExit name="T8_PORTAL_SOLO" weight="40" />
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           
@@ -395,18 +487,149 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
         </ClusterTier>
-      </Subtype>      
+      </Subtype>
+      <!--those are the nodes distributed by the resource distribution system in the Roads-->
+      <Subtype name="VETERAN">
+        <ClusterTier tier="4" maxfillratio="0.67">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="5" maxfillratio="0.67">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.67">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+
+        </ClusterTier>
+        <ClusterTier tier="7" maxfillratio="0.67">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+
+        </ClusterTier>
+        <ClusterTier tier="8" maxfillratio="0.67">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+
+        </ClusterTier>
+      </Subtype>
+    </Continent>
+    <Continent name="Mists">
+      <Subtype name="SOLO">                
+        <ClusterTier tier="5" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_YELLOW" weight="48" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
+          
+          <RandomExit name="CORRUPTED_SOLO" weight="26" />
+          <RandomExit name="T5_PORTAL_ROYAL_SOLO" weight="26" randomlevelrerollref="SOLO_ROYAL"/>
+
+          <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
+          
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="34" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="17" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+          
+          <RandomExit name="CORRUPTED_SOLO" weight="28" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="28" randomlevelrerollref="SOLO_ROYAL"/>
+
+          <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
+        </ClusterTier>
+      </Subtype>
+      <Subtype name="VETERAN">
+        <ClusterTier tier="5" maxfillratio="0.0">
+          <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.0">
+          <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
+          <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
+        </ClusterTier>
+      </Subtype>
     </Continent>
 	  <Continent name="Royal">
       <Subtype name="SOLO">
-        <ClusterTier tier="3" maxfillratio="0.7">
+        <ClusterTier tier="3" maxfillratio="0.5">
           <RandomExit name="T2_PORTAL_ROYAL_SOLO" weight="0" randomlevelrerollref="T3_SOLO_ROYAL"/>
           <RandomExit name="T3_PORTAL_ROYAL_SOLO" weight="1" randomlevelrerollref="T3_SOLO_ROYAL"/>
 
           <RandomExit name="T2_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T3_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
         </ClusterTier>
-        <ClusterTier tier="4" maxfillratio="0.84">
+        <ClusterTier tier="4" maxfillratio="0.5">
 		      <RandomExit name="CORRUPTED_SOLO" weight="1" />
           <RandomExit name="T4_PORTAL_ROYAL_SOLO" weight="2" randomlevelrerollref="SOLO_ROYAL"/>
 
@@ -416,48 +639,44 @@
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.84">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T5_PORTAL_ROYAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
+          <RandomExit name="MISTS_SOLO_YELLOW" weight="52" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
+          <RandomExit name="CORRUPTED_SOLO" weight="22" />
+          <RandomExit name="T5_PORTAL_ROYAL_SOLO" weight="22" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
 
           <!--Spawns 6 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="7" />
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.78">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T6_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
+          <RandomExit name="MISTS_SOLO_BLACK" weight="35" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="11" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+          
+          <RandomExit name="CORRUPTED_SOLO" weight="25" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="25" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
           <!--Spawns 5 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="8" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.72">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T7_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
+          <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="12" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+          
+          <RandomExit name="CORRUPTED_SOLO" weight="23" />
+          <RandomExit name="T7_PORTAL_SOLO" weight="23" randomlevelrerollref="SOLO_ROYAL"/>
 
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
           <!--Spawns 5 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="9" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-        </ClusterTier>
-        <ClusterTier tier="8" maxfillratio="0.33">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          <RandomExit name="T8_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_ROYAL"/>
-          
-          <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
-          
-          <!--Spawns 3 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="8" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
         </ClusterTier>
@@ -563,17 +782,19 @@
     
     <Continent name="Outlands">
       <Subtype name="SOLO">
-        <ClusterTier tier="5" maxfillratio="0.84">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
+        <ClusterTier tier="5" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="12" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
           
-          <RandomExit name="T5_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
+          <RandomExit name="CORRUPTED_SOLO" weight="23" />          
+          <RandomExit name="T5_PORTAL_SOLO" weight="23" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="7" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
@@ -581,16 +802,18 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
         </ClusterTier>
-        <ClusterTier tier="6" maxfillratio="0.78">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
+        <ClusterTier tier="6" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="12" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
           
-          <RandomExit name="T6_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
+          <RandomExit name="CORRUPTED_SOLO" weight="23" />          
+          <RandomExit name="T6_PORTAL_SOLO" weight="23" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="8" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
@@ -598,15 +821,17 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
         </ClusterTier>
-        <ClusterTier tier="7" maxfillratio="0.72">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          
-          <RandomExit name="T7_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
+        <ClusterTier tier="7" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="12" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="23" />
+          <RandomExit name="T7_PORTAL_SOLO" weight="23" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="9" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
@@ -614,14 +839,16 @@
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
         </ClusterTier>
-        <ClusterTier tier="8" maxfillratio="0.66">
-          <RandomExit name="CORRUPTED_SOLO" weight="40" />
-          
-          <RandomExit name="T8_PORTAL_SOLO" weight="40" randomlevelrerollref="SOLO_OUTLANDS"/>
+        <ClusterTier tier="8" maxfillratio="0.75">
+          <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
+          <RandomExit name="MISTS_DUO_BLACK" weight="12" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
+
+          <RandomExit name="CORRUPTED_SOLO" weight="23" />
+          <RandomExit name="T8_PORTAL_SOLO" weight="23" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="8" />
+          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
           <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
@@ -781,7 +1008,8 @@
 
   <!-- Random Exit types -->
   <RandomExitVisualizations>
-    <!--HELLGATE TEST-->
+
+    <!-- Hellgates -->
     <Visualization name="HELLGATE_2V2_LETHAL">
       <fallback>
         <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" />
@@ -817,7 +1045,28 @@
         <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_10V10_NON_LETHAL" />        
       </fallback>      
     </Visualization>
-   
+
+    <!--Mists of Avalon-->
+
+    <Visualization name="MISTS_SOLO_YELLOW">
+      <fallback>
+        <prefab weight="1" name="SHARED_MIST_WISP_PORTAL_MOB" />
+      </fallback>
+    </Visualization>
+
+    <Visualization name="MISTS_SOLO_BLACK">
+      <fallback>
+        <prefab weight="1" name="SHARED_MIST_WISP_PORTAL_MOB" />
+      </fallback>
+    </Visualization>
+    
+    <Visualization name="MISTS_DUO_BLACK">
+      <fallback>
+        <prefab weight="1" name="SHARED_MIST_WISP_PORTAL_MOB" />
+      </fallback>
+    </Visualization>
+
+
     <!--Corrupted Dungeons-->
     <Visualization name="CORRUPTED_SOLO">
       <fallback>
@@ -826,18 +1075,18 @@
       <biome name="Forest">
         <subbiome name="Green">
           <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
-		  <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
-		  <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
-		  <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
-		  <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
-		  <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
-		  <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
         </subbiome>
       </biome>
       <biome name="Steppe">
@@ -914,6 +1163,28 @@
           <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
           <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
         </fallback>
+      </biome>
+      <biome name="Mists">
+        <fallback>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </fallback>
+        <subbiome name="Green">
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A_CORRUPT" />
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B_CORRUPT" />
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C_CORRUPT" />
+        </subbiome>
       </biome>
     </Visualization>
     <!--Solo-->
@@ -1184,69 +1455,69 @@
       <biome name="Forest">     
         <subbiome name="Green">
           <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
       <biome name="Steppe">     
         <subbiome name="Green">
           <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
       <biome name="Swamp">     
         <subbiome name="Green">
           <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
       <biome name="Highland">     
         <subbiome name="Green">
           <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
       <biome name="Mountain">     
@@ -1257,13 +1528,13 @@
         </subbiome>
         <subbiome name="Red">
           <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
         <subbiome name="Dead">
           <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		  <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		  <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </subbiome>
       </biome>
       <biome name="Roads">
@@ -1272,6 +1543,28 @@
           <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
           <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
         </fallback>
+      </biome>
+      <biome name="Mists">
+        <fallback>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </fallback>
+        <subbiome name="Green">
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />          
+        </subbiome>
+        <subbiome name="Red">
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+        </subbiome>
       </biome>
     </Visualization>
     <!--Event-->
@@ -1606,6 +1899,17 @@
           <prefab name="ROADS_RANDOM_EXIT_10x10_PORTAL" />
         </fallback>
       </biome>
+      <biome name="Mists">
+        <subbiome name="Green">
+          <prefab name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+        </subbiome>
+      </biome>
     </Visualization>
 
     <!--Elite-->
@@ -1735,6 +2039,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="HELLGATE_10V10_NON_LETHAL"/>
     </RandomExit>
+
     <!--  ##########################  -->
     <!-- ###  Corrupted Dungeons  ### -->
     <!--  ##########################  -->
@@ -1746,24 +2051,49 @@
       <Visualization ref="CORRUPTED_SOLO"/>
     </RandomExit>
 
+    <!--  ######################  -->
+    <!-- ###  MISTS OF AVALON ### -->
+    <!--  ######################  -->
+
+    <RandomExit name="MISTS_SOLO_YELLOW" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
+      <RandomDungeonGenerators>
+        <MistsGenerator mistsmode="MISTS_SOLO_YELLOW"/>
+      </RandomDungeonGenerators>
+      <Visualization ref="MISTS_SOLO_YELLOW"/>
+    </RandomExit>
+
+    <RandomExit name="MISTS_SOLO_BLACK" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
+      <RandomDungeonGenerators>
+        <MistsGenerator mistsmode="MISTS_SOLO_BLACK"/>
+      </RandomDungeonGenerators>
+      <Visualization ref="MISTS_SOLO_BLACK"/>
+    </RandomExit>
+    
+    <RandomExit name="MISTS_DUO_BLACK" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
+      <RandomDungeonGenerators>
+        <MistsGenerator mistsmode="MISTS_DUO_BLACK"/>
+      </RandomDungeonGenerators>
+      <Visualization ref="MISTS_DUO_BLACK"/>
+    </RandomExit>
+
     <!--  ############  -->
     <!-- ###  Solo  ### -->
     <!--  ############  -->  
     
     <!--Consumable-->
-    <RandomExit name="T2_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="60" lifetimeafterlastuse="60" >
+    <RandomExit name="T2_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="0" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T3_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T3_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T4_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T4_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
@@ -1772,7 +2102,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
@@ -1782,13 +2112,13 @@
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
     
-    <RandomExit name="T3_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T3_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>    
-    <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
@@ -1797,7 +2127,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
@@ -1806,7 +2136,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
@@ -1815,7 +2145,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
@@ -1824,7 +2154,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
@@ -1835,13 +2165,13 @@
     </RandomExit>
 
     <!--Portal-->
-    <RandomExit name="T3_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T3_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T4_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T4_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
@@ -1850,7 +2180,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T5_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T5_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
@@ -1859,7 +2189,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T6_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T6_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="6" weight="1" />
@@ -1868,7 +2198,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T7_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T7_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="7" weight="1" />
@@ -1877,7 +2207,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T8_PORTAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="90" >
+    <RandomExit name="T8_PORTAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="8" weight="1" />
@@ -1888,19 +2218,19 @@
     </RandomExit>
 
     <!--Portal - Quickly Closing Exits-->
-    <RandomExit name="T2_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="60" lifetimeafterlastuse="60" >
+    <RandomExit name="T2_PORTAL_ROYAL_SOLO" activationtime="0" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="2" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
-    <RandomExit name="T3_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T3_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>    
-    <RandomExit name="T4_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T4_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="4" weight="1" />
@@ -1909,7 +2239,7 @@
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>    
-    <RandomExit name="T5_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="120" lifetimeafterlastuse="60" >
+    <RandomExit name="T5_PORTAL_ROYAL_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_SOLO" tier="5" weight="1" />
