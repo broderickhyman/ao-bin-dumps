@@ -257,16 +257,16 @@
         "@diminishingreturnmax": "0.8",
         "@typefactorstun": "0.3",
         "@typefactorroot": "0.3",
-        "@typefactorknockback": "0.04",
+        "@typefactorknockback": "0.08",
         "@typefactorsilence": "0.3",
         "@typefactorslow": "0.3",
         "@typefactorforcedmovement": "0.3",
-        "@decreasetimestun": "20",
-        "@decreasetimeroot": "20",
-        "@decreasetimeknockback": "20",
-        "@decreasetimesilence": "20",
-        "@decreasetimeslow": "20",
-        "@decreasetimeforcedmovement": "20"
+        "@decreasetimestun": "15",
+        "@decreasetimeroot": "15",
+        "@decreasetimeknockback": "10",
+        "@decreasetimesilence": "15",
+        "@decreasetimeslow": "15",
+        "@decreasetimeforcedmovement": "15"
       },
       "ReflectedDamage": {
         "@maxReflectCapacityFactorOfMaxHp": "2"
@@ -274,7 +274,7 @@
       "Casting": {
         "@globaldisruptionfactor": "1",
         "@globalcastrangetolerance": "7",
-        "@minchanneldurationbeforecancelpossible": "0.5",
+        "@minchanneldurationbeforecancelpossible": "0.3",
         "@mintoggledurationbeforecancelpossible": "0.5"
       },
       "AoeEscalation": {
@@ -2968,6 +2968,124 @@
         }
       },
       "ItemLoss": {
+        "ThrownOutAvalonRoads": {
+          "Destroyed": {
+            "EquipmentItem": [
+              {
+                "@tier": "1",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "2",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "3",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "4",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "5",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "6",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "7",
+                "@percentage": "0"
+              },
+              {
+                "@tier": "8",
+                "@percentage": "0"
+              }
+            ]
+          },
+          "DurabilityLoss": {
+            "Item": [
+              {
+                "@tier": "1",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "2",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "3",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "4",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "5",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "6",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "7",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              },
+              {
+                "@tier": "8",
+                "@minpercent": "0.2",
+                "@maxpercent": "0.4"
+              }
+            ]
+          },
+          "StackLoss": {
+            "StackableItem": [
+              {
+                "@tier": "1",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "2",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "3",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "4",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "5",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "6",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "7",
+                "@percentage": "0.3"
+              },
+              {
+                "@tier": "8",
+                "@percentage": "0.3"
+              }
+            ]
+          }
+        },
         "AliveToDead": {
           "Destroyed": {
             "EquipmentItem": [
@@ -3770,22 +3888,26 @@
         {
           "@name": "PREMIUMPACKAGEDAY30",
           "@days": "30",
-          "@goldcost": "3000"
+          "@goldcost": "3000",
+          "@goldcostswitch": "3750"
         },
         {
           "@name": "PREMIUMPACKAGEDAY90",
           "@days": "90",
-          "@goldcost": "7350"
+          "@goldcost": "7350",
+          "@goldcostswitch": "10500"
         },
         {
           "@name": "PREMIUMPACKAGEDAY180",
           "@days": "180",
-          "@goldcost": "13750"
+          "@goldcost": "13750",
+          "@goldcostswitch": "19500"
         },
         {
           "@name": "PREMIUMPACKAGEDAY360",
           "@days": "360",
-          "@goldcost": "24500"
+          "@goldcost": "24500",
+          "@goldcostswitch": "36000"
         }
       ]
     },
@@ -3805,35 +3927,6 @@
         ]
       }
     },
-    "GoldPurchasePackages": {
-      "GoldPurchasePackage": [
-        {
-          "@name": "GOLDPACKAGE1",
-          "@gold": "750",
-          "@price": "4.95"
-        },
-        {
-          "@name": "GOLDPACKAGE2",
-          "@gold": "1750",
-          "@price": "9.95"
-        },
-        {
-          "@name": "GOLDPACKAGE3",
-          "@gold": "3750",
-          "@price": "19.95"
-        },
-        {
-          "@name": "GOLDPACKAGE4",
-          "@gold": "10000",
-          "@price": "49.95"
-        },
-        {
-          "@name": "GOLDPACKAGE5",
-          "@gold": "21000",
-          "@price": "99.95"
-        }
-      ]
-    },
     "ClusterDangerBonusTypes": {
       "@globalmoblootfactor": "0.9",
       "@globalmobsilverlootfactor": "0.9",
@@ -3843,105 +3936,172 @@
           "@icon": "safe",
           "@famefactor": "2.15",
           "@moblootfactor": "1.25",
-          "@mobsilverlootfactor": "1.45"
+          "@mobsilverlootfactor": "1.45",
+          "@questscalingfactor": "2.15"
         },
         {
           "@type": "yellow",
           "@icon": "yellow",
           "@famefactor": "2.4",
           "@moblootfactor": "1.33",
-          "@mobsilverlootfactor": "1.53"
+          "@mobsilverlootfactor": "1.53",
+          "@questscalingfactor": "2.4"
         },
         {
           "@type": "red",
           "@icon": "red",
           "@famefactor": "3.3",
           "@moblootfactor": "2.25",
-          "@mobsilverlootfactor": "2.6"
+          "@mobsilverlootfactor": "2.6",
+          "@questscalingfactor": "3.3"
         },
         {
           "@type": "black",
           "@icon": "black",
           "@famefactor": "4.2",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2"
         },
         {
           "@type": "hell_nonlethal_2v2",
           "@icon": "hellnonlethal2v2",
           "@famefactor": "2.4",
           "@moblootfactor": "1.33",
-          "@mobsilverlootfactor": "1.53"
+          "@mobsilverlootfactor": "1.53",
+          "@questscalingfactor": "2.4"
         },
         {
           "@type": "hell_nonlethal_5v5",
           "@icon": "hellnonlethal5v5",
           "@famefactor": "2.4",
           "@moblootfactor": "1.33",
-          "@mobsilverlootfactor": "1.53"
+          "@mobsilverlootfactor": "1.53",
+          "@questscalingfactor": "2.4"
         },
         {
           "@type": "hell_nonlethal_10v10",
           "@icon": "hellnonlethal10v10",
           "@famefactor": "2.4",
           "@moblootfactor": "1.33",
-          "@mobsilverlootfactor": "1.53"
+          "@mobsilverlootfactor": "1.53",
+          "@questscalingfactor": "2.4"
         },
         {
           "@type": "hell_lethal_2v2",
           "@icon": "helllethal2v2",
           "@famefactor": "4.2",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2"
         },
         {
           "@type": "hell_lethal_5v5",
           "@icon": "helllethal5v5",
           "@famefactor": "4.2",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2"
         },
         {
           "@type": "hell_lethal_10v10",
           "@icon": "helllethal10v10",
           "@famefactor": "4.2",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2"
         },
         {
           "@type": "corrupted_beginner",
           "@icon": "corruptedbeginner",
           "@famefactor": "3.2",
           "@moblootfactor": "1.33",
-          "@mobsilverlootfactor": "1.53"
+          "@mobsilverlootfactor": "1.53",
+          "@questscalingfactor": "3.2"
         },
         {
           "@type": "corrupted_intermediate",
           "@icon": "corruptedintermediate",
           "@famefactor": "5.1",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "5.1"
         },
         {
           "@type": "corrupted_pro",
           "@icon": "corruptedpro",
           "@famefactor": "3.5",
           "@moblootfactor": "2.6",
-          "@mobsilverlootfactor": "3"
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "3.5"
         },
         {
           "@type": "expedition",
           "@icon": "safe",
           "@famefactor": "1",
           "@moblootfactor": "0.5",
-          "@mobsilverlootfactor": "0.5"
+          "@mobsilverlootfactor": "0.5",
+          "@questscalingfactor": "1"
         },
         {
           "@type": "tunnel",
           "@icon": "black",
-          "@famefactor": "6",
-          "@moblootfactor": "7.1",
-          "@mobsilverlootfactor": "8.17"
+          "@famefactor": "4.2",
+          "@moblootfactor": "2.6",
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2"
+        },
+        {
+          "@type": "mistsyellow",
+          "@icon": "yellow",
+          "@famefactor": "1.8",
+          "@moblootfactor": "1.197",
+          "@mobsilverlootfactor": "1.377",
+          "@questscalingfactor": "1.8"
+        },
+        {
+          "@type": "mistsblack",
+          "@icon": "black",
+          "@famefactor": "3.16",
+          "@moblootfactor": "2.34",
+          "@mobsilverlootfactor": "2.7",
+          "@questscalingfactor": "3.16"
+        }
+      ]
+    },
+    "QuestScalingByClusterTier": {
+      "Tier": [
+        {
+          "@tier": "1",
+          "@scalingfactor": "1"
+        },
+        {
+          "@tier": "2",
+          "@scalingfactor": "1"
+        },
+        {
+          "@tier": "3",
+          "@scalingfactor": "1"
+        },
+        {
+          "@tier": "4",
+          "@scalingfactor": "1"
+        },
+        {
+          "@tier": "5",
+          "@scalingfactor": "1.35"
+        },
+        {
+          "@tier": "6",
+          "@scalingfactor": "1.85"
+        },
+        {
+          "@tier": "7",
+          "@scalingfactor": "2.5"
+        },
+        {
+          "@tier": "8",
+          "@scalingfactor": "3.4"
         }
       ]
     },
@@ -5717,7 +5877,8 @@
       }
     },
     "FurnituresPlacementRules": {
-      "@openworldfurnituremindistance": "10"
+      "@openworldfurnituremindistance": "10",
+      "@lootplacementblockadditionalborder": "2"
     },
     "BatchUseSkillBook": {
       "@maxfame": "10000000"

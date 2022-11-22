@@ -745,8 +745,151 @@
     <WeaponType name="bite_small"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
-  
-  <!-- CRITTER-->  
+
+  <!-- MISTS -->
+  <WwiseSwitchInfo name="MOB_WOLPERTINGER">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_wolpertinger"/>
+	<Size name="small"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="bite_small"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_FOX">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_mist_fox"/>
+	<Size name="small"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="bite_small"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_DEER">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_mist_deer"/>
+	<Size name="medium_ungulate"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="swoosh_small"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_STAG">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_mist_stag"/>
+	<Size name="medium_ungulate"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="swoosh_medium"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_OWL">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_owl_mist"/>
+	<Size name="wing_big"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="bite_medium"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+	
+  <WwiseSwitchInfo name="MOB_MIST_DIREBEAR">
+    <CharType name="mob"/>
+    <MobFaction name="hide"/>
+    <MobType name="hide_mist_direbear"/>
+    <Size name="heavy"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="claw_hide_big"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_HOUND">
+    <CharType name="mob"/>
+    <MobFaction name="hide"/>
+    <MobType name="hide_mist_hound"/>
+    <Size name="medium"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="bite_medium"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+	
+  <WwiseSwitchInfo name="MOB_MIST_DRAGONHAWK">
+    <CharType name="mob"/>
+    <MobFaction name="hide"/>
+    <MobType name="hide_dragonhawk"/>
+    <Size name="wing_medium"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="wind"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+	
+  <WwiseSwitchInfo name="MOB_MIST_GRIFFIN">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_griffon"/>
+	<Size name="medium"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="bite_medium"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_SPIDER_BOSS">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_spider"/>
+	<Size name="small"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="blade_small"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_MIST_SPIDER_BOSS">
+	<OnMobDied name="Die"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_FAIRYDRAGON">
+	<CharType name="mob"/>
+	<MobFaction name="hide"/>
+	<MobType name="hide_fairydragon"/>
+	<Size name="wing_small"/>
+	<ArmorType name="hide"/>
+	<WeaponType name="wind"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+	<!-- MIST WISPS-->
+  <WwiseSwitchInfo name="MOB_MIST_POWERCORE_HURT_WISP">
+	<CharType name="mob"/>
+	<MobFaction name="mist"/>
+	<MobType name="mist_wisp_hurt"/>
+	<Size name="small"/>
+	<ArmorType name="arcane"/>
+	<WeaponType name="arcane"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_MIST_POWERCORE_HURT_WISP">
+	<OnMobDied name="Die"/>
+	<OnMobViewInit name="Play_mob_loops"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="MOB_MIST_PORTAL_WISP">
+		<CharType name="mob"/>
+		<MobFaction name="mist"/>
+		<MobType name="mist_wisp_portal"/>
+		<Size name="small"/>
+		<ArmorType name="arcane"/>
+		<WeaponType name="arcane"/>
+		<MountType name="empty"/>
+	</WwiseSwitchInfo>
+	<WwiseEventInfo name ="MOB_MIST_PORTAL_WISP">
+		<OnMobDied name="Die"/>
+		<OnMobViewInit name="Play_mob_loops"/>
+	</WwiseEventInfo>
+
+	<!-- CRITTER-->  
   <WwiseSwitchInfo name="MOB_COUGAR">
     <CharType name="mob"/>
     <MobFaction name="critter"/>
@@ -3801,6 +3944,11 @@
     <OnCastInterrupted name="Stop_bolt_cone_cast" />
     <OnCastCanceled name="Stop_bolt_cone_cast" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_BOLT_MULTISHOT_CAST">
+	<OnCastStart name="Play_bolt_multishot_cast" />
+	<OnCastInterrupted name="Stop_bolt_multishot_cast" />
+	<OnCastCanceled name="Stop_bolt_multishot_cast" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_CAST_BIG">
     <OnCastStart name="Play_arrow_cast_big" />
   </WwiseEventInfo>
@@ -4657,6 +4805,9 @@
   <WwiseEventInfo name="SPELL_LIGHTNING_HIT_ADD">
     <OnCastFinished name="Play_lightning_impact_add" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_LIGHTNING_SPELLHIT_ADD">
+	<OnCastFinished name="Play_lightning_impact_add" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_LIGHTNING_CHAIN">
     <OnCastFinished name="Play_lightningbolt_chain" />
   </WwiseEventInfo>
@@ -4953,6 +5104,10 @@
     <OnCastFinished name="Play_cast_invisibility" />
     <OnSpellRemoved name="Play_end_invisibility" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_INVISIBILITY_ALLY">
+	<OnSpellHit name="Play_cast_invisibility" />
+	<OnSpellRemoved name="Play_end_invisibility" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_INVISIBILITY">
     <OnChannelingStart name="Play_undead_invisiblility" />
     <OnChannelingEnd name="Play_undead_invisibility_end" />
@@ -5038,7 +5193,65 @@
   <WwiseEventInfo name="SPELL_SELF_BUFF_NASTY_WOUND">
     <OnCastFinished name="Play_nasty_wound_swirl" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_CLEANSE_DASH">
+	 <OnCastFinished name="Play_melee_grounddash" />
+	 <OnSpellHit name="Play_cleanse_none" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARMOR_PREMONITION">
+	<OnSpellHit name="Play_premonition_buff_start" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_CAST_ROOT_SPIDERWEB">
+	<OnCastStart name="Play_cast_load_spiderweb" />
+	<OnCastCanceled name="Stop_cast_load_spiderweb" />
+	<OnCastInterrupted name="Stop_cast_load_spiderweb" />
+	<OnCastFinished name="Play_armor_spawn_web" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_PULL_THREAD">
+	<OnCastFinished name="Play_cast_armor_spider_thread" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_ARMOR_CHARGE_IN">
+	<OnCastStart name="Play_load_charge_dash" />
+	<OnCastCanceled name="Stop_load_charge_dash" />
+	<OnCastInterrupted name="Stop_load_charge_dash" />
+	<OnCastFinished name="Play_armor_charge_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_AFTER_IMAGE_TELEPORT" >
+	<OnCastFinished name="Play_teleport_swap" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_CAST_AFTER_IMAGE_RETURN" >
+	<OnCastFinished name="Play_teleport_cast" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_CAST_ARMOR_INVINCIBILITY" >
+	<OnCastFinished name="Play_start_armor_invincibility" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_ARMOR_DASH">
+	<OnCastFinished name="Play_melee_swoosh_dash_mob"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TRANSLUCENT">
+	<OnChannelingStart name="Play_translucent_invisibility_cast" />
+	<OnChannelingEnd name="Play_undead_invisibility_end" />
+	<OnChannelingInterrupted name="Play_undead_invisibility_end" />
+	<OnChannelingCancelled name="Play_undead_invisibility_end" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_WILDMAGIC_ROTATION_PING">
+	<OnSpellHit name="Play_rotation_timer" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_CAST_WILD_MAGIC_FIRE">
+	<OnCastFinished name="Play_fire_cast_small_q_searingflame"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_UI_LOOTCHEST_OPEN">
     <OnCastStart name="Play_ui_reward_open" />
   </WwiseEventInfo>
@@ -5203,9 +5416,9 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_EAGLE_LIGHTNING">
-    <OnCastStart name="Play_cast_load_damage_lightning" />
-    <OnCastCanceled name="Stop_cast_load_damage_lightning" />
-    <OnCastInterrupted name="Stop_cast_load_damage_lightning" />
+    <OnCastStart name="Play_eagle_cast_load_damage_lightning" />
+    <OnCastCanceled name="Stop_eagle_cast_load_damage_lightning" />
+    <OnCastInterrupted name="Stop_eagle_cast_load_damage_lightning" />
     <OnCastFinished name="Play_eagle_mount_spell_lightning" />
   </WwiseEventInfo>
 
@@ -5553,6 +5766,7 @@
     <!-- Hide-->
   <WwiseEventInfo name="SPELL_HIDE_WOLF_HOWL">
     <OnCastStart name="Play_cast_wolf_howl"/>
+	<OnCastFinished name="Play_mist_finish_howl_wave" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HIDE_WOLF_REND">
@@ -5568,11 +5782,125 @@
   <WwiseEventInfo name="SPELL_HIDE_BEARS_RAGE">
     <OnCastStart name="Play_mob_bear_cast_rage"/>
   </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HIDE_BEARS_RAGE_CASTFINISHED">
+    <OnCastFinished name="Play_mob_bear_cast_rage"/>
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HIDE_BEARS_SUNDERARMOR">
     <OnCastFinished name="Play_mob_bear_sunder_spell" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_HIDE_DEER_SKIP">
+	<OnCastFinished name="Play_mist_deer_skip_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HIDE_STAG_CHARGE">
+	<OnCastStart name="Play_hide_mist_stag_charge_load"/>
+	<OnCastFinished name="Play_mist_stag_charge" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HIDE_MIST_DIREWOLF_DASH_QUICK">
+    <OnCastStart name="Play_direwolf_mist_dash_load"/>
+    <OnCastFinished name="Play_mob_spider_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HIDE_MIST_DIREWOLF_DASH">
+	<OnCastStart name="Play_direwolf_mist_dash_load_long"/>
+	<OnCastCanceled name="Stop_direwolf_mist_dash_load_long" />
+	<OnCastInterrupted name="Stop_direwolf_mist_dash_load_long" />
+	<OnCastFinished name="Play_direwolf_mist_dash_cast_long" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_SPIDER_DASH">
+	<OnCastStart name="Play_mob_arcane_spider_dash"/>
+	<OnCastFinished name="Play_mob_spider_dash"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_SPIDER_SHOOT_WEB" >
+	<OnCastStart name="Play_spider_cast_load_B" />
+	<OnCastInterrupted name="Stop_spider_cast_load_B" />
+	<OnCastCanceled name="Stop_spider_cast_load_B" />
+	<OnCastFinished name="Play_spider_shoot_web_delayed" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_SPIDER_SHOOT_THREAD">
+	<OnCastFinished name="Play_spider_spit_thread"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_SPIDER_PULL">
+	<OnSpellHit name="Play_mob_spider_thread_pull"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_FLYING_DIVE">
+	<OnCastStart name="Play_mob_mist_load_dive"/>
+	<OnCastFinished name="Play_mob_mist_cast_dive"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_MIST_MOB_DRAGONHAWK_GUST">
+	<OnCastStart name="Play_dragonhawk_load_gust"/>
+	<OnCastFinished name="Play_dragonhawk_cast_gust"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_MIST_MOB_GRIFFIN_GUST">
+	<OnCastStart name="Play_griffon_load_gust"/>
+	<OnCastInterrupted name="Stop_griffon_load_gust" />
+	<OnCastCanceled name="Stop_griffon_load_gust" />
+	<OnCastFinished name="Play_griffon_cast_gust"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_MIST_MOB_GRIFFIN_ASCEND">
+	<OnCastFinished name="Play_griffon_ascend"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_GRIFFIN_DIVE">
+	<OnCastFinished name="Play_melee_swoosh_dash"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_GRIFFIN_DIVE_IMPACT">
+	<OnSpellHit name="Play_mob_avalon_captain_ground_hit"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_GRIFFIN_REND">
+	<OnCastFinished name="Play_griffon_rend_claws"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_MIST_MOB_DIREBEAR_SMASH">
+	<OnCastStart name="Play_direbear_mist_cast_smash"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_FAIRYDRAGON_CAST_ETHEREAL">
+	<OnCastStart name="Play_mob_fairydragon_cast_ethereal"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_FAIRYDRAGON_CHANNELSTART_ETHEREAL">
+	<OnChannelingStart name="Play_mob_fairydragon_cast_ethereal"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_MOB_FAIRYDRAGON_BLINK">
+	<OnCastFinished name="Play_mob_fairydragon_cast_blink"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_MIST_MOB_FAIRYDRAGON_CAST_MAGIC">
+	<OnCastStart name="Play_fairydragon_cast_load"/>
+  </WwiseEventInfo>
+	
+	<!--Mist Wisps-->
+  <WwiseEventInfo name="SPELL_MIST_PORTAL_WISP_TALK">
+ 	<OnCastFinished name="Play_mist_portal_wisp_talk" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_PORTAL_WISP_WAKEUP">
+	<OnSpellHit name="Play_mist_portal_wisp_wakeup" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_PORTAL_WISP_FLEE">
+	<OnCastFinished name="Play_mist_portal_wisp_scared" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MIST_PORTAL_WISP_ESCAPE">
+	<OnSpellHit name="Play_mist_portal_wisp_escape" />
+  </WwiseEventInfo>
 
   <!-- Heretics-->
   
@@ -5628,6 +5956,13 @@
   <WwiseEventInfo name="SPELL_HERETIC_ARCHER_FLEE">
     <OnCastStart name="Play_mob_heretic_archer_flee_load" />
     <OnCastFinished name="Play_mob_heretic_archer_flee"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_MAGE_CAST_FIRE_MINE">
+	<OnCastStart name="Play_fire_cast_load_big" />
+	<OnCastInterrupted name="Stop_fire_cast_load_big" />
+	<OnCastCanceled name="Stop_fire_cast_load_big" />
+	<OnCastFinished name="Play_fire_cast_medium_fireball" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_HEALER_SHIELD">
@@ -5693,7 +6028,16 @@
   <WwiseEventInfo name="SPELL_HERETIC_GIBSON_KNOCKBACK">
     <OnSpellHit name="Play_gibson_knockback" />
   </WwiseEventInfo>
- 
+
+  <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_STRIKE">
+	<OnCastStart name="Play_heretic_woodgatherer_strike_load_climax" />
+	<OnCastCanceled name="Stop_heretic_woodgatherer_strike_load_climax" />
+	<OnCastInterrupted name="Stop_heretic_woodgatherer_strike_load_climax" />
+	<OnSpellHit>
+	  <ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_WHIRLWIND_VO">
   	<OnCastStart name="Play_lumberjack_boss_vo_whirlwind"/>
     <OnCastFinished name="Play_melee_spin" />
@@ -5715,6 +6059,15 @@
     <OnCastStart name="Play_alarmtrap_alarm_long" />
     <OnCastCanceled name="Stop_alarmtrap_alarm_long" />
     <OnCastInterrupted name="Stop_alarmtrap_alarm_long" />  
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_SCAVENGER_THROW">
+	<OnCastStart name="Play_heretic_scavenger_throw_load_climax" />
+	<OnCastCanceled name="Stop_heretic_scavenger_throw_load_climax" />
+	<OnCastInterrupted name="Stop_heretic_scavenger_throw_load_climax" />
+	<OnSpellHit>
+		<ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_BRAWLER_MINIBOSS_HAMMER">
@@ -6805,6 +7158,13 @@
     <OnChannelingInterrupted name="Stop_mob_avalon_mage_laser_beam" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_AVALON_PIKEMAN_BLOCK_CHANNEL">
+	<OnChannelingStart name="Play_mob_avalon_shadow_bond_loop" />
+	<OnChannelingEnd name="Stop_mob_avalon_shadow_bond_loop" />
+	<OnChannelingCancelled name="Stop_mob_avalon_shadow_bond_loop" />
+	<OnChannelingInterrupted name="Stop_mob_avalon_shadow_bond_loop" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_AVALON_CLERIC_CAST_SMOKE">
     <OnCastStart name="Play_mob_avalon_cleric_debuff_castandvo" />
     <OnCastInterrupted name="Stop_mob_avalon_cleric_debuff_castandvo" />
@@ -6959,6 +7319,10 @@
 
   <WwiseEventInfo name="SPELL_AVALON_ONCASTFINISHED_LOAD_SHORT">
     <OnCastFinished name="Play_grail_cast_load_short" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_SELFBUFF_CASTFINISHED">
+	<OnCastFinished name="Play_grail_buff_impact" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_AVALON_LOAD_3S_CAST_BIG">
@@ -8390,6 +8754,45 @@
     <GlobalEnvironmentEffect name="castle"/>
   </WwiseClusterStateOverwrite>
 
+  <!--Mist City-->
+  <WwiseClusterStateOverwrite clustername="5000_CTY_.*_.*_T1_NON">
+	<Environment name="City"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="crystalrealm"/>
+  </WwiseClusterStateOverwrite>
+	
+  <WwiseClusterStateOverwrite clustername="5001_CTY_.*_.*_T1_NON">
+	<Environment name="City"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="crystalrealm"/>
+  </WwiseClusterStateOverwrite>
+
+  <!--Mist City Bank-->
+  <WwiseClusterStateOverwrite clustername="5002_CTY_.*_.*_T7_NON">
+	<Environment name="City"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="hall_of_fame"/>
+  </WwiseClusterStateOverwrite>
+
+  <!--Mist City Auctionhouse-->
+    <WwiseClusterStateOverwrite clustername="5003_CTY_.*_.*_T7_NON">
+	<Environment name="City"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="hall_of_fame"/>
+  </WwiseClusterStateOverwrite>
+
   <!--Passages-->
   <WwiseClusterStateOverwrite clustername="PSG-.*_PGU_.*_*">
     <Environment name="PassageUnderground"/>
@@ -8490,8 +8893,130 @@
     <Music name="World"/>
     <GlobalEnvironmentEffect name="forest"/>
   </WwiseClusterStateOverwrite>
-  
-    <!--***********************************************************-->
+	
+  <!--Mists Bioms -->
+  <!--Old  Mists e.g. 
+	@MISTS@559d4e96-21d4-4b3c-a0d7-695c88608e05
+	MISTS-STANDARD-09_MIS_MI_GRN_T5_UND_MIS
+	MISTS-STANDARD-07_MIS_MI_GRN_T6_HER_MIS 
+	
+  <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_GRN_*">
+	<Environment name="World"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="World"/>
+	<GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+	
+  <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_RED_*">
+	<Environment name="World"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Red"/>
+	<MobFaction name="None"/>
+	<Music name="World"/>
+	<GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+	
+  <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_DED_*">
+	<Environment name="World"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="World"/>
+	<GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_NON_*">
+	<Environment name="World"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="World"/>
+	<GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_AUTO_*">
+	<Environment name="World"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Mists"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="World"/>
+	<GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite>
+	
+  <WwiseClusterStateOverwrite clustername="MISTS-TEST-*">
+    <Environment name="World"/>
+    <SubEnvironment name="None"/>
+    <Biom name="Mists"/>
+    <SubBiom name="Green"/>
+    <MobFaction name="None"/>
+    <Music name="World"/>
+    <GlobalEnvironmentEffect name="forest"/>
+  </WwiseClusterStateOverwrite> -->
+
+	<!--New   Mists e.g. 
+	SOLO-YELLOW-COMMON-01_MIS_MI_GRN_T5_UND_MIS
+	SOLO-YELLOW-COMMON-01_MIS_MI_RED_T5_UND_MIS
+	SOLO-YELLOW-COMMON-01_MIS_MI_DED_T5_UND_MIS -->
+	
+	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_GRN_.*">
+		<Environment name="World"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_RED_.*">
+		<Environment name="World"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Red"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_DED_.*">
+		<Environment name="World"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Dead"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_NON_.*">
+		<Environment name="World"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_AUTO_.*">
+		<Environment name="World"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+
+	<!--***********************************************************-->
   <!--**    Cluster State Overwrites for Tutorial Clusters     ***-->
   <!--***********************************************************-->
 

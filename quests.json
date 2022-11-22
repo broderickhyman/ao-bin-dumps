@@ -2779,57 +2779,6 @@
         }
       },
       {
-        "@uniquename": "MISSION_GUILD_FINDER",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_TITLE",
-        "@offertext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "commander",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@previousquests": "",
-        "@requiresonlyonepreviousquest": "false",
-        "@completetext": "@MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED_COMPLETIONTEXT",
-        "variables": {
-          "dynamiccluster": {
-            "@name": "LOCATION_A",
-            "distancetocluster": {
-              "@mindistance": "0",
-              "@maxdistance": "1"
-            }
-          },
-          "dynamicquestgiver": {
-            "@name": "ROYALEXPLORER",
-            "distancefromquestgiver": {
-              "@mindistance": "0",
-              "@maxdistance": "3"
-            },
-            "questgivertag": {
-              "@tag": "ROYALEXPLORER"
-            }
-          }
-        },
-        "tasks": {
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "GUILDFINDERINTRO_01"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": null
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
         "@uniquename": "MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER",
         "@mobfaction": "ROYALARMY",
         "@title": "@MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER_TITLE",
@@ -8096,6 +8045,50 @@
           }
         },
         "rewards": ""
+      },
+      {
+        "@uniquename": "MISSION_GUILD_FINDER",
+        "@title": "@MISSIONS_GUILD_FINDER_TITLE",
+        "@offertext": "@MISSIONS_GUILD_FINDER_OFFERTEXT",
+        "@progresstext": "@MISSIONS_GUILD_FINDER_PROGRESSTEXT",
+        "@completetext": "@MISSIONS_GUILD_FINDER_COMPLETIONTEXT",
+        "@questtimeout": "3600000",
+        "@priority": "1",
+        "@tags": "adventurer",
+        "@mobfaction": "ROYALARMY",
+        "@minlevel": "1",
+        "@maxlevel": "2",
+        "@onceonly": "true",
+        "@cancelable": "true",
+        "variables": {
+          "dynamiccluster": {
+            "@name": "LOCATION_A",
+            "distancetocluster": {
+              "@mindistance": "0",
+              "@maxdistance": "1"
+            }
+          }
+        },
+        "tasks": {
+          "extendedcompletionstep": {
+            "preactions": {
+              "openhintbox": [
+                {
+                  "@uniquename": "GUILDFINDERINTRO_01",
+                  "@displayonplatform": "desktop"
+                },
+                {
+                  "@uniquename": "GUILDFINDERINTRO_01",
+                  "@displayonplatform": "mobile"
+                }
+              ]
+            },
+            "missions": {
+              "gotoquestgiver": null
+            }
+          }
+        },
+        "rewards": ""
       }
     ],
     "playerfactionquest": [
@@ -12252,6 +12245,158 @@
           "missionitemloss": null,
           "playerdeath": null,
           "changeflagging": null
+        }
+      }
+    ],
+    "localquest": [
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_MEDIUM_HERETIC",
+        "@name": "@LOCAL_QUEST_CAMP_MEDIUM_HERETIC",
+        "@type": "mobcampquestbig",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "2275",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "HERETIC",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "2768",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "233",
+            "@scalewithclusterquestfactor": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_MEDIUM_UNDEAD",
+        "@name": "@LOCAL_QUEST_CAMP_MEDIUM_UNDEAD",
+        "@type": "mobcampquestbig",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "2275",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "UNDEAD",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "2768",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "233",
+            "@scalewithclusterquestfactor": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_MEDIUM_MORGANA",
+        "@name": "@LOCAL_QUEST_CAMP_MEDIUM_MORGANA",
+        "@type": "mobcampquestbig",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "2275",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "MORGANA",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "2768",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "233",
+            "@scalewithclusterquestfactor": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_SMALL_HERETIC",
+        "@name": "@LOCAL_QUEST_CAMP_SMALL_HERETIC",
+        "@type": "mobcampquestsmall",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "1040",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "HERETIC",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "1265",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "106",
+            "@scalewithclusterquestfactor": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_SMALL_UNDEAD",
+        "@name": "@LOCAL_QUEST_CAMP_SMALL_UNDEAD",
+        "@type": "mobcampquestsmall",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "1040",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "UNDEAD",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "1265",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "106",
+            "@scalewithclusterquestfactor": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "LOCAL_QUEST_MISTS_SMALL_MORGANA",
+        "@name": "@LOCAL_QUEST_CAMP_SMALL_MORGANA",
+        "@type": "mobcampquestsmall",
+        "@visibleonminimapbeforevisit": "false",
+        "missions": {
+          "killmobfame": {
+            "@value": "1040",
+            "@scalewithclusterquestfactor": "true",
+            "@faction": "MORGANA",
+            "@countpartykillsinsamelocalquestarea": "true"
+          }
+        },
+        "rewards": {
+          "pvekillfame": {
+            "@tier": "4",
+            "@points": "1265",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "mistsfactionstanding": {
+            "@points": "106",
+            "@scalewithclusterquestfactor": "true"
+          }
         }
       }
     ]

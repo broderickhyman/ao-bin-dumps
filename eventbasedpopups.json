@@ -1069,8 +1069,152 @@
               }
             }
           }
+        },
+        {
+          "@uniquename": "GUILD_FINDER_INFO",
+          "@priority": "10",
+          "@type": "GuildFinder",
+          "@title": "@EVENT_BASED_POPUPS_GUILD_FINDER_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_GUILD_FINDER_DESCRIPTION",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER",
+          "categories": {
+            "category": [
+              {
+                "@name": "GameFeature"
+              },
+              {
+                "@name": "Advertisement"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "ClusterChange"
+            }
+          },
+          "conditions": {
+            "and": {
+              "not": {
+                "IfIsInGuild": null
+              },
+              "IfTutorialCompleted": null,
+              "IfAccountAgeDays": {
+                "@value": "30",
+                "@operation": "lessOrEqual"
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "GUILD_FINDER_INFO",
+                "@frequency": "Days",
+                "@operation": "equals",
+                "@timefactor": "7",
+                "@amount": "0"
+              }
+            }
+          }
+        },
+        {
+          "@uniquename": "GUILD_FINDER_VETERAN_INFO",
+          "@priority": "10",
+          "@type": "GuildFinder",
+          "@title": "@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_DESCRIPTION",
+          "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER",
+          "categories": {
+            "category": [
+              {
+                "@name": "GameFeature"
+              },
+              {
+                "@name": "Advertisement"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "ClusterChange"
+            }
+          },
+          "conditions": {
+            "and": {
+              "not": {
+                "IfIsInGuild": null
+              },
+              "IfTutorialCompleted": null,
+              "IfAccountAgeDays": {
+                "@value": "30",
+                "@operation": "greater"
+              },
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "GUILD_FINDER_VETERAN_INFO",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "28",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "GUILD_FINDER_INFO",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
         }
-      ]
+      ],
+      "lootchestpopup": {
+        "@uniquename": "TWITCH_DROPS",
+        "@type": "LootChests",
+        "@guitemplate": "LootChests",
+        "@priority": "0",
+        "@title": "@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS",
+        "@description": "@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS",
+        "@rewardstitle": "@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS",
+        "@buttontext": "@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS",
+        "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS",
+        "@flagpath": "Gui/EventBasedPopups/icons_shop_flag_purple_big",
+        "@flagiconpath": "Gui/EventBasedPopups/icon_twitch_drops",
+        "categories": {
+          "category": {
+            "@name": "Advertisement"
+          }
+        },
+        "triggers": {
+          "trigger": {
+            "@action": "GameLogin"
+          }
+        },
+        "conditions": {
+          "and": {
+            "IfTutorialCompleted": null,
+            "not": {
+              "IfIsGuestAccount": null
+            },
+            "IfHasSeenPopup": {
+              "@uniquename": "TWITCH_DROPS",
+              "@frequency": "Days",
+              "@operation": "equals",
+              "@timefactor": "7",
+              "@amount": "0"
+            }
+          }
+        },
+        "possibledrops": {
+          "item": [
+            {
+              "@itemid": "UNIQUE_UNLOCK_SKIN_GIANTSTAG_ALPACA_BROWN"
+            },
+            {
+              "@itemid": "UNIQUE_UNLOCK_SKIN_HORSE_UNICORN_AMETHYST"
+            },
+            {
+              "@itemid": "UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST"
+            }
+          ]
+        }
+      }
     }
   }
 }

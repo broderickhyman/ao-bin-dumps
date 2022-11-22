@@ -569,5 +569,71 @@
                 </and>
             </conditions>
         </popup>
+
+        <popup uniquename="GUILD_FINDER_INFO" priority="10" type="GuildFinder" title="@EVENT_BASED_POPUPS_GUILD_FINDER_TITLE"
+               description="@EVENT_BASED_POPUPS_GUILD_FINDER_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER">
+            <categories>
+                <category name="GameFeature" />
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <not>
+                        <IfIsInGuild />
+                    </not>
+                    <IfTutorialCompleted />
+                    <IfAccountAgeDays value="30" operation="lessOrEqual" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_INFO" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+
+        <popup uniquename="GUILD_FINDER_VETERAN_INFO" priority="10" type="GuildFinder" title="@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_TITLE"
+               description="@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER">
+            <categories>
+                <category name="GameFeature" />
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <not>
+                        <IfIsInGuild />
+                    </not>
+                    <IfTutorialCompleted />
+                    <IfAccountAgeDays value="30" operation="greater" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_VETERAN_INFO" frequency="Days" operation="equals" timefactor="28" amount="0" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_INFO" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+        
+        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChests" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttontext="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS" flagpath="Gui/EventBasedPopups/icons_shop_flag_purple_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+              <and>
+                <IfTutorialCompleted />
+                <not>
+                  <IfIsGuestAccount/>
+                </not>
+                <IfHasSeenPopup uniquename="TWITCH_DROPS" frequency="Days" operation="equals" timefactor="7" amount="0"/> 
+            </and>
+            </conditions>
+            <possibledrops>
+                <item itemid="UNIQUE_UNLOCK_SKIN_GIANTSTAG_ALPACA_BROWN" />
+                <item itemid="UNIQUE_UNLOCK_SKIN_HORSE_UNICORN_AMETHYST" />
+                <item itemid="UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST" />
+            </possibledrops>
+        </lootchestpopup>
     </popups>
 </eventbasedpopups>

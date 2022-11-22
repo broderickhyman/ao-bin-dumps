@@ -426,8 +426,8 @@
     <hint uniquename="GUILDFINDERINTRO_04" title="@HINT_TITLE_GUILDFINDERINTRO_ADVANCED" infotext="@HINT_INFO_GUILDFINDERINTRO_04" nexthint="GUILDFINDERINTRO_05" blockworldinteraction="true" triggerui="guildfinderfiltersearch" mobileposition="BottomRight" requiredgui="GuildFinder" />
     <hint uniquename="GUILDFINDERINTRO_05" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_05" nexthint="GUILDFINDERINTRO_06" blockworldinteraction="true" triggerui="guildfinderrecommendations" mobileposition="BottomRight" requiredgui="GuildFinder" />
     <hint uniquename="GUILDFINDERINTRO_06" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_06" nexthint="GUILDFINDERINTRO_07" blockworldinteraction="false" triggerui="guildfinderrecommendationsselectlanguage" mobileposition="BottomRight" requiredgui="GuildFinder" />
-    <hint uniquename="GUILDFINDERINTRO_07" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_07" nexthint="GUILDFINDERINTRO_08" blockworldinteraction="true" triggerui="guildfinderrecommendationsresults" mobileposition="BottomRight" requiredgui="GuildFinder" />
-    <hint uniquename="GUILDFINDERINTRO_08" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_08" nexthint="GUILDFINDERINTRO_09" blockworldinteraction="true" triggerui="guildfinderrecommendationsmoreinfo" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <hint uniquename="GUILDFINDERINTRO_07" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_07" nexthint="GUILDFINDERINTRO_09" blockworldinteraction="true" triggerui="guildfinderrecommendationsresults" mobileposition="BottomRight" requiredgui="GuildFinder" />
+    <!--<hint uniquename="GUILDFINDERINTRO_08" title="@HINT_TITLE_GUILDFINDERINTRO_RECOMMENDATIONS" infotext="@HINT_INFO_GUILDFINDERINTRO_08" nexthint="GUILDFINDERINTRO_09" blockworldinteraction="true" triggerui="guildfinderrecommendationsmoreinfo" mobileposition="BottomRight" requiredgui="GuildFinder" />-->
     <hint uniquename="GUILDFINDERINTRO_09" title="@HINT_TITLE_GUILDFINDERINTRO_GUILD_FINDER" infotext="@HINT_INFO_GUILDFINDERINTRO_09" completebutton="true" blockworldinteraction="true" triggerui="guildfinderend" mobileposition="BottomRight" />
 
     <!--<hint uniquename="OPTIONS" title="@HINT_TITLE_T2_TUTORIAL_OPTIONS" infotext="@HINT_INFO_T2_TUTORIAL_OPTIONS"  completebutton="true"  />-->
@@ -1041,11 +1041,53 @@
         </entry>
     </hint>
 
+    <!-- LOCAL QUESTS -->
+    <hint uniquename="LOCAL_QUESTS_TUTORIAL" explanation="VerticalTemplate" title="@TUTORIAL_LOCAL_QUESTS_INFO_TITLE" blockworldinteraction="true">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLocalQuests" scale="1.2">
+            <content title="@TUTORIAL_LOCAL_QUESTS_INFO_WHAT_ARE_TITLE" text="@TUTORIAL_LOCAL_QUESTS_INFO_WHAT_ARE_TEXT" />
+        </entry>
+      <entry imagepath="Gui/TutorialExplanations/TutorialLocalQuestsMap" scale="1.2">
+        <content title="@TUTORIAL_LOCAL_QUESTS_INFO_MAP_TITLE" text="@TUTORIAL_LOCAL_QUESTS_INFO_MAP_TEXT" />
+      </entry>
+    </hint>
+  
+
+    <!-- AUTO RESPEC -->
+    <hint uniquename="AUTO_RESPEC" explanation="VerticalTemplate" title="@TUTORIAL_AUTO_RESPEC_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTORESPEC1" scale="1.2">
+            <content title="@TUTORIAL_AUTO_RESPEC_CONTENT_1_TITLE" text="@TUTORIAL_AUTO_RESPEC_CONTENT_1_TEXT" />
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTORESPEC2" scale="1.2">
+            <content title="@TUTORIAL_AUTO_RESPEC_CONTENT_2_TITLE" text="@TUTORIAL_AUTO_RESPEC_CONTENT_2_TEXT" />
+        </entry>
+    </hint>
+
+    <!-- AUTO LEARN -->
+    <hint uniquename="AUTO_LEARN" explanation="VerticalTemplate" title="@TUTORIAL_AUTO_LEARN_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN" scale="2.1">
+            <content title="@TUTORIAL_AUTO_LEARN_CONTENT_TITLE" text="@TUTORIAL_AUTO_LEARN_CONTENT_TEXT" />
+        </entry>
+    </hint>
+
+    <!-- GUILD JOIN -->
+    <hint uniquename="GUILD_JOIN" explanation="GuildJoin" title="@TUTORIAL_GUILD_JOIN_TITLE" dontshow_decisiontag="GuildJoin" >
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildJoinChat" scale="1.2">
+            <content title="@TUTORIAL_GUILD_JOIN_CHAT_TITLE" text="@TUTORIAL_GUILD_JOIN_CHAT_TEXT" />
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildJoinDiscord" scale="1.2">
+            <content title="@TUTORIAL_GUILD_JOIN_DISCORD_TITLE" text="@TUTORIAL_GUILD_JOIN_DISCORD_TEXT" />
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildJoinMemberMail" scale="1.2">
+            <content title="@TUTORIAL_GUILD_JOIN_MEMBER_MAIL_TITLE" text="@TUTORIAL_GUILD_JOIN_MEMBER_MAIL_TEXT" />
+        </entry>
+    </hint>
+
     <!-- STARTGEAR -->
     <startgear>
         <item itemid="T1_ARMOR_LEATHER_SET1" />
         <item itemid="T1_SHOES_LEATHER_SET1" />
     </startgear>
+
 </tutorial>
 
 

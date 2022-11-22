@@ -8,6 +8,103 @@
     "@xsi:noNamespaceSchemaLocation": "steamachievements.xsd",
     "achievement": [
       {
+        "@name": "SA_EXPLORATION_MISTS_ENTER",
+        "gotocluster": {
+          "@clustertype": "Mists"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_MISTS_FIND_CITY",
+        "or": {
+          "gotocluster": [
+            {
+              "@clusterdirect": "5000"
+            },
+            {
+              "@clusterdirect": "5001"
+            },
+            {
+              "@clusterdirect": "5002"
+            },
+            {
+              "@clusterdirect": "5003"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_MISTS_CITY_FRIENDLY",
+        "havemistcitystandingrank": {
+          "@rank": "2"
+        }
+      },
+      {
+        "@name": "SA_PVE_MISTS_HUNTER",
+        "@hidden": "true",
+        "or": [
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_SPIDER",
+                "@count": "1"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "@name": "SA_PVP_CASTLE_CAPTURE_01",
         "lootcastlechest": {
           "@castletype": "MEDIUMCASTLE",
