@@ -7789,7 +7789,7 @@
       {
         "@name": "MELEE_MEDIUMCAST",
         "OnCastStart": {
-          "@name": "Play_melee_swoosh_medium_noauto"
+          "@name": "Play_melee_swoosh_medium"
         }
       },
       {
@@ -9490,6 +9490,15 @@
           "@name": "Play_arrow_poison"
         },
         "OnProjectileHit": {
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "SPELL_ARROW_POISON_CAST_SPELLHIT",
+        "OnCastFinished": {
+          "@name": "Play_arrow_poison"
+        },
+        "OnSpellHit": {
           "ImpactType": null
         }
       },
@@ -14727,7 +14736,7 @@
       {
         "@name": "DEMON_HER_THIEF_KNIVES",
         "OnCastStart": {
-          "@name": "Play_eagle_mount_spell_castfinished"
+          "@name": "Play_melee_swoosh_medium_noauto"
         },
         "OnCastFinished": {
           "@name": "Play_demon_her_thief_fan_of_knives"
