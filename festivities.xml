@@ -4,6 +4,15 @@
   <!-- mail local needs to be @<ID>_SUBJECT and @<ID>_TEXT -->
   <!-- From now on please add new events at the top of this file. -->
   <fixedevents>
+    <event uniquename="XMAS2022" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022_DESC" image="activities_event_xmas" showinactivityboard="true">
+      <activeflag name="christmas" />
+      <mail mailid="MAIL_XMAS_2022" sender="Albion Online">
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_YELLOW_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_GREEN_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_RED_NONTRADABLE" amount="5" />
+        <attacheditem id="UNIQUE_CONSUMABLE_EVENT_WINTER_2017" amount="50" />
+      </mail>
+    </event>
     <event uniquename="HALLOWEEN2022" title="@FIXED_EVENT_HALLOWEEN_2022" description="@FIXED_EVENT_HALLOWEEN_2022_DESC" image="activities_event_halloween" showinactivityboard="true">
       <activeflag name="halloween" />
     </event>
@@ -42,6 +51,9 @@
       </event>
       <event uniquename="ROAMING_MOBS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_ROAMING_MOBS_TITLE" description="@DYNAMIC_EVENT_ROAMING_MOBS_DESCRIPTION" image="activities_event_roaming_mobs">
         <buff spell="DYNAMIC_EVENT_ROAMING_MOBS" />
+      </event>
+      <event uniquename="FAME" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="0" title="@DYNAMIC_EVENT_FAME_TITLE" description="@DYNAMIC_EVENT_FAME_DESCRIPTION" image="activities_event_fame_week">
+        <buff spell="FAMEBONUS25" />
       </event>
       <!--<event uniquename="TREASURE_SPAWNS" cooldowndays="7" mindurationdays="1" maxdurationdays="1" weight="1" title="@DYNAMIC_EVENT_HELLGATE_TITLE" description="@DYNAMIC_EVENT_HELLGATE_DESCRIPTION" image="activities_event_hellgates">
         <activeflag name="treasureevent"/>
